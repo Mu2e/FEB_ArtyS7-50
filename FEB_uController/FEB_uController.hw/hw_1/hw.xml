@@ -1,0 +1,785 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Product Version: Vivado v2022.2 (64-bit)                     -->
+<!--                                                              -->
+<!-- Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.        -->
+
+<hwsession version="1" minor="2">
+  <device name="xc7s50_0" gui_info="dashboard1=hw_ila_1[xc7s50_0/hw_ila_1/Settings=ILA_SETTINGS_1;xc7s50_0/hw_ila_1/Status=ILA_STATUS_1;xc7s50_0/hw_ila_1/Trigger Setup=ILA_TRIGGER_1;xc7s50_0/hw_ila_1/Waveform=ILA_WAVE_1;xc7s50_0/hw_ila_1/Capture Setup=ILA_CAPTURE_1;],dashboard2=hw_ila_2[xc7s50_0/hw_ila_2/Trigger Setup=ILA_TRIGGER_1;xc7s50_0/hw_ila_2/Status=ILA_STATUS_1;xc7s50_0/hw_ila_2/Settings=ILA_SETTINGS_1;xc7s50_0/hw_ila_2/Capture Setup=ILA_CAPTURE_1;xc7s50_0/hw_ila_2/Waveform=ILA_WAVE_1;]"/>
+  <ObjectList object_type="hw_device" gui_info="">
+    <Object name="xc7s50_0" gui_info="">
+      <Properties Property="FULL_PROBES.FILE" value="$_project_name_.runs/impl_1/uController_wrapper.ltx"/>
+      <Properties Property="PROBES.FILE" value="$_project_name_.runs/impl_1/uController_wrapper.ltx"/>
+      <Properties Property="PROGRAM.HW_BITSTREAM" value="$_project_name_.runs/impl_1/uController_wrapper.bit"/>
+      <Properties Property="SLR.COUNT" value="1"/>
+    </Object>
+  </ObjectList>
+  <ObjectList object_type="hw_ila" gui_info="">
+    <Object name="uController_i/system_ila_0/U0/ila_lib" gui_info="">
+      <Properties Property="CONTROL.TRIGGER_CONDITION" value="OR"/>
+      <Properties Property="CONTROL.TRIGGER_POSITION" value="256"/>
+      <Properties Property="CORE_REFRESH_RATE_MS" value="500"/>
+    </Object>
+    <Object name="u_ila_0" gui_info="">
+      <Properties Property="CONTROL.DATA_DEPTH" value="512"/>
+      <Properties Property="CONTROL.TRIGGER_CONDITION" value="OR"/>
+      <Properties Property="CONTROL.TRIGGER_POSITION" value="8"/>
+      <Properties Property="CONTROL.WINDOW_COUNT" value="1"/>
+      <Properties Property="CORE_REFRESH_RATE_MS" value="500"/>
+    </Object>
+  </ObjectList>
+  <ObjectList object_type="hw_probe" gui_info="">
+    <Object name="uController_i/FEB_fabric_0/U0/Trigger_logic/BeamOn" gui_info=""/>
+    <Object name="uController_i/FEB_fabric_0/U0/Trigger_logic/FlashEn" gui_info=""/>
+    <Object name="uController_i/FEB_fabric_0/U0/Trigger_logic/GateCounter[8:0]" gui_info=""/>
+    <Object name="uController_i/FEB_fabric_0/U0/Trigger_logic/LEDSrc" gui_info=""/>
+    <Object name="uController_i/FEB_fabric_0/U0/Trigger_logic/PulseSel" gui_info=""/>
+    <Object name="uController_i/FEB_fabric_0/U0/Trigger_logic/SlfTrgEn" gui_info=""/>
+    <Object name="uController_i/FEB_fabric_0/U0/Trigger_logic/TrigReq" gui_info="Trigger Setup=0"/>
+    <Object name="uController_i/FEB_fabric_0/U0/Trigger_logic/TurnOnTime[8:0]" gui_info=""/>
+    <Object name="uController_i/FEB_fabric_0/U0/Trigger_logic/uBunchGuard" gui_info=""/>
+    <Object name="uController_i/system_ila_0/U0/probe0_1" gui_info=""/>
+    <Object name="uController_i/system_ila_0/U0/probe1_1" gui_info="Trigger Setup=0"/>
+    <Object name="uController_i/system_ila_0/U0/probe2_1[1:0]" gui_info=""/>
+    <Object name="uController_i/system_ila_0/U0/probe3_1[11:0]" gui_info=""/>
+    <Object name="uController_i/system_ila_0/U0/probe4_1" gui_info=""/>
+    <Object name="uController_i/system_ila_0/U0/probe5_1" gui_info=""/>
+    <Object name="uController_i/system_ila_0/U0/probe6_1[15:0]" gui_info=""/>
+  </ObjectList>
+  <probeset name="hw project" active="false">
+    <probe type="ila" busType="net" source="netlist" spec="ILA_V2_RT">
+      <probeOptions Id="DebugProbeParams">
+        <Option Id="CAPTURE_COMPARE_VALUE" value="eq1&apos;bX"/>
+        <Option Id="COMPARE_VALUE.0" value="eq1&apos;bX"/>
+        <Option Id="DISPLAY_AS_ENUM" value="1"/>
+        <Option Id="DISPLAY_HINT" value=""/>
+        <Option Id="DISPLAY_RADIX" value="HEX"/>
+        <Option Id="DISPLAY_VISIBILITY" value=""/>
+        <Option Id="HW_ILA" value="hw_ila_2"/>
+        <Option Id="LINK_TO_WAVEFORM" value="1"/>
+        <Option Id="MAP" value="probe13[0]"/>
+        <Option Id="NAME.CUSTOM" value=""/>
+        <Option Id="NAME.SELECT" value="Long"/>
+        <Option Id="SOURCE" value="netlist"/>
+        <Option Id="TRIGGER_COMPARE_VALUE" value="eq1&apos;bX"/>
+        <Option Id="WAVEFORM_STYLE" value="Digital"/>
+      </probeOptions>
+      <nets>
+        <net name="PulseSel_0_OBUF"/>
+      </nets>
+    </probe>
+    <probe type="ila" busType="net" source="netlist" spec="ILA_V2_RT">
+      <probeOptions Id="DebugProbeParams">
+        <Option Id="CAPTURE_COMPARE_VALUE" value="eq1&apos;bX"/>
+        <Option Id="COMPARE_VALUE.0" value="eq1&apos;bX"/>
+        <Option Id="DISPLAY_AS_ENUM" value="1"/>
+        <Option Id="DISPLAY_HINT" value=""/>
+        <Option Id="DISPLAY_RADIX" value="HEX"/>
+        <Option Id="DISPLAY_VISIBILITY" value=""/>
+        <Option Id="HW_ILA" value="hw_ila_2"/>
+        <Option Id="LINK_TO_WAVEFORM" value="1"/>
+        <Option Id="MAP" value="probe13[0]"/>
+        <Option Id="NAME.CUSTOM" value=""/>
+        <Option Id="NAME.SELECT" value="Short"/>
+        <Option Id="SOURCE" value="netlist"/>
+        <Option Id="TRIGGER_COMPARE_VALUE" value="eq1&apos;bX"/>
+        <Option Id="WAVEFORM_STYLE" value="Digital"/>
+      </probeOptions>
+      <nets>
+        <net name="uController_i/FEB_fabric_0/U0/LEDSrc"/>
+      </nets>
+    </probe>
+    <probe type="ila" busType="net" source="netlist" spec="ILA_V2_RT">
+      <probeOptions Id="DebugProbeParams">
+        <Option Id="CAPTURE_COMPARE_VALUE" value="eq1&apos;bX"/>
+        <Option Id="COMPARE_VALUE.0" value="eq1&apos;bX"/>
+        <Option Id="DISPLAY_AS_ENUM" value="1"/>
+        <Option Id="DISPLAY_HINT" value=""/>
+        <Option Id="DISPLAY_RADIX" value="HEX"/>
+        <Option Id="DISPLAY_VISIBILITY" value=""/>
+        <Option Id="HW_ILA" value="hw_ila_2"/>
+        <Option Id="LINK_TO_WAVEFORM" value="1"/>
+        <Option Id="MAP" value="probe8[0]"/>
+        <Option Id="NAME.CUSTOM" value=""/>
+        <Option Id="NAME.SELECT" value="Short"/>
+        <Option Id="SOURCE" value="netlist"/>
+        <Option Id="TRIGGER_COMPARE_VALUE" value="eq1&apos;bX"/>
+        <Option Id="WAVEFORM_STYLE" value="Digital"/>
+      </probeOptions>
+      <nets>
+        <net name="uController_i/FEB_fabric_0/U0/Trigger_logic/BeamOn"/>
+      </nets>
+    </probe>
+    <probe type="ila" busType="net" source="netlist" spec="ILA_V2_RT">
+      <probeOptions Id="DebugProbeParams">
+        <Option Id="CAPTURE_COMPARE_VALUE" value="eq1&apos;bX"/>
+        <Option Id="COMPARE_VALUE.0" value="eq1&apos;bX"/>
+        <Option Id="DISPLAY_AS_ENUM" value="1"/>
+        <Option Id="DISPLAY_HINT" value=""/>
+        <Option Id="DISPLAY_RADIX" value="HEX"/>
+        <Option Id="DISPLAY_VISIBILITY" value=""/>
+        <Option Id="HW_ILA" value="hw_ila_2"/>
+        <Option Id="LINK_TO_WAVEFORM" value="1"/>
+        <Option Id="MAP" value="probe9[0]"/>
+        <Option Id="NAME.CUSTOM" value=""/>
+        <Option Id="NAME.SELECT" value="Short"/>
+        <Option Id="SOURCE" value="netlist"/>
+        <Option Id="TRIGGER_COMPARE_VALUE" value="eq1&apos;bX"/>
+        <Option Id="WAVEFORM_STYLE" value="Digital"/>
+      </probeOptions>
+      <nets>
+        <net name="uController_i/FEB_fabric_0/U0/Trigger_logic/FlashEn"/>
+      </nets>
+    </probe>
+    <probe type="ila" busType="net" source="netlist" spec="ILA_V2_RT">
+      <probeOptions Id="DebugProbeParams">
+        <Option Id="CAPTURE_COMPARE_VALUE" value="eq1&apos;bX"/>
+        <Option Id="COMPARE_VALUE.0" value="eq1&apos;bX"/>
+        <Option Id="DISPLAY_AS_ENUM" value="1"/>
+        <Option Id="DISPLAY_HINT" value=""/>
+        <Option Id="DISPLAY_RADIX" value="HEX"/>
+        <Option Id="DISPLAY_VISIBILITY" value=""/>
+        <Option Id="HW_ILA" value="hw_ila_2"/>
+        <Option Id="LINK_TO_WAVEFORM" value="1"/>
+        <Option Id="MAP" value="probe10[0]"/>
+        <Option Id="NAME.CUSTOM" value=""/>
+        <Option Id="NAME.SELECT" value="Short"/>
+        <Option Id="SOURCE" value="netlist"/>
+        <Option Id="TRIGGER_COMPARE_VALUE" value="eq1&apos;bX"/>
+        <Option Id="WAVEFORM_STYLE" value="Digital"/>
+      </probeOptions>
+      <nets>
+        <net name="uController_i/FEB_fabric_0/U0/Trigger_logic/FlashGate"/>
+      </nets>
+    </probe>
+    <probe type="ila" busType="net" source="netlist" spec="ILA_V2_RT">
+      <probeOptions Id="DebugProbeParams">
+        <Option Id="CAPTURE_COMPARE_VALUE" value="eq1&apos;bX"/>
+        <Option Id="COMPARE_VALUE.0" value="eq1&apos;bX"/>
+        <Option Id="DISPLAY_AS_ENUM" value="1"/>
+        <Option Id="DISPLAY_HINT" value=""/>
+        <Option Id="DISPLAY_RADIX" value="HEX"/>
+        <Option Id="DISPLAY_VISIBILITY" value=""/>
+        <Option Id="HW_ILA" value="hw_ila_2"/>
+        <Option Id="LINK_TO_WAVEFORM" value="1"/>
+        <Option Id="MAP" value="probe11[0]"/>
+        <Option Id="NAME.CUSTOM" value=""/>
+        <Option Id="NAME.SELECT" value="Short"/>
+        <Option Id="SOURCE" value="netlist"/>
+        <Option Id="TRIGGER_COMPARE_VALUE" value="eq1&apos;bX"/>
+        <Option Id="WAVEFORM_STYLE" value="Digital"/>
+      </probeOptions>
+      <nets>
+        <net name="uController_i/FEB_fabric_0/U0/Trigger_logic/GPO"/>
+      </nets>
+    </probe>
+    <probe type="ila" busType="bus" source="netlist" spec="ILA_V2_RT">
+      <probeOptions Id="DebugProbeParams">
+        <Option Id="CAPTURE_COMPARE_VALUE" value="eq3&apos;hX"/>
+        <Option Id="COMPARE_VALUE.0" value="eq3&apos;hX"/>
+        <Option Id="DISPLAY_AS_ENUM" value="1"/>
+        <Option Id="DISPLAY_HINT" value=""/>
+        <Option Id="DISPLAY_RADIX" value="HEX"/>
+        <Option Id="DISPLAY_VISIBILITY" value=""/>
+        <Option Id="HW_ILA" value="hw_ila_2"/>
+        <Option Id="LINK_TO_WAVEFORM" value="1"/>
+        <Option Id="MAP" value="probe1[2:0]"/>
+        <Option Id="NAME.CUSTOM" value=""/>
+        <Option Id="NAME.SELECT" value="Short"/>
+        <Option Id="SOURCE" value="netlist"/>
+        <Option Id="TRIGGER_COMPARE_VALUE" value="eq3&apos;hX"/>
+        <Option Id="WAVEFORM_STYLE" value="Digital"/>
+      </probeOptions>
+      <nets>
+        <net name="uController_i/FEB_fabric_0/U0/Trigger_logic/GPOCount[2]"/>
+        <net name="uController_i/FEB_fabric_0/U0/Trigger_logic/GPOCount[1]"/>
+        <net name="uController_i/FEB_fabric_0/U0/Trigger_logic/GPOCount[0]"/>
+      </nets>
+    </probe>
+    <probe type="ila" busType="bus" source="netlist" spec="ILA_V2_RT">
+      <probeOptions Id="DebugProbeParams">
+        <Option Id="CAPTURE_COMPARE_VALUE" value="eq9&apos;hXXX"/>
+        <Option Id="COMPARE_VALUE.0" value="eq9&apos;hXXX"/>
+        <Option Id="DISPLAY_AS_ENUM" value="1"/>
+        <Option Id="DISPLAY_HINT" value=""/>
+        <Option Id="DISPLAY_RADIX" value="HEX"/>
+        <Option Id="DISPLAY_VISIBILITY" value=""/>
+        <Option Id="HW_ILA" value="hw_ila_2"/>
+        <Option Id="LINK_TO_WAVEFORM" value="1"/>
+        <Option Id="MAP" value="probe0[8:0]"/>
+        <Option Id="NAME.CUSTOM" value=""/>
+        <Option Id="NAME.SELECT" value="Short"/>
+        <Option Id="SOURCE" value="netlist"/>
+        <Option Id="TRIGGER_COMPARE_VALUE" value="eq9&apos;hXXX"/>
+        <Option Id="WAVEFORM_STYLE" value="Digital"/>
+      </probeOptions>
+      <nets>
+        <net name="uController_i/FEB_fabric_0/U0/Trigger_logic/GateCounter[8]"/>
+        <net name="uController_i/FEB_fabric_0/U0/Trigger_logic/GateCounter[7]"/>
+        <net name="uController_i/FEB_fabric_0/U0/Trigger_logic/GateCounter[6]"/>
+        <net name="uController_i/FEB_fabric_0/U0/Trigger_logic/GateCounter[5]"/>
+        <net name="uController_i/FEB_fabric_0/U0/Trigger_logic/GateCounter[4]"/>
+        <net name="uController_i/FEB_fabric_0/U0/Trigger_logic/GateCounter[3]"/>
+        <net name="uController_i/FEB_fabric_0/U0/Trigger_logic/GateCounter[2]"/>
+        <net name="uController_i/FEB_fabric_0/U0/Trigger_logic/GateCounter[1]"/>
+        <net name="uController_i/FEB_fabric_0/U0/Trigger_logic/GateCounter[0]"/>
+      </nets>
+    </probe>
+    <probe type="ila" busType="net" source="netlist" spec="ILA_V2_RT">
+      <probeOptions Id="DebugProbeParams">
+        <Option Id="CAPTURE_COMPARE_VALUE" value="eq1&apos;bX"/>
+        <Option Id="COMPARE_VALUE.0" value="eq1&apos;bX"/>
+        <Option Id="DISPLAY_AS_ENUM" value="1"/>
+        <Option Id="DISPLAY_HINT" value=""/>
+        <Option Id="DISPLAY_RADIX" value="HEX"/>
+        <Option Id="DISPLAY_VISIBILITY" value=""/>
+        <Option Id="HW_ILA" value="hw_ila_2"/>
+        <Option Id="LINK_TO_WAVEFORM" value="1"/>
+        <Option Id="MAP" value="probe12[0]"/>
+        <Option Id="NAME.CUSTOM" value=""/>
+        <Option Id="NAME.SELECT" value="Short"/>
+        <Option Id="SOURCE" value="netlist"/>
+        <Option Id="TRIGGER_COMPARE_VALUE" value="eq1&apos;bX"/>
+        <Option Id="WAVEFORM_STYLE" value="Digital"/>
+      </probeOptions>
+      <nets>
+        <net name="uController_i/FEB_fabric_0/U0/Trigger_logic/LEDSrc"/>
+      </nets>
+    </probe>
+    <probe type="ila" busType="bus" source="netlist" spec="ILA_V2_RT">
+      <probeOptions Id="DebugProbeParams">
+        <Option Id="CAPTURE_COMPARE_VALUE" value="eq9&apos;hXXX"/>
+        <Option Id="COMPARE_VALUE.0" value="eq9&apos;hXXX"/>
+        <Option Id="DISPLAY_AS_ENUM" value="1"/>
+        <Option Id="DISPLAY_HINT" value=""/>
+        <Option Id="DISPLAY_RADIX" value="HEX"/>
+        <Option Id="DISPLAY_VISIBILITY" value=""/>
+        <Option Id="HW_ILA" value="hw_ila_2"/>
+        <Option Id="LINK_TO_WAVEFORM" value="1"/>
+        <Option Id="MAP" value="probe5[8:0]"/>
+        <Option Id="NAME.CUSTOM" value=""/>
+        <Option Id="NAME.SELECT" value="Short"/>
+        <Option Id="SOURCE" value="netlist"/>
+        <Option Id="TRIGGER_COMPARE_VALUE" value="eq9&apos;hXXX"/>
+        <Option Id="WAVEFORM_STYLE" value="Digital"/>
+      </probeOptions>
+      <nets>
+        <net name="uController_i/FEB_fabric_0/U0/Trigger_logic/LEDTime[8]"/>
+        <net name="uController_i/FEB_fabric_0/U0/Trigger_logic/LEDTime[7]"/>
+        <net name="uController_i/FEB_fabric_0/U0/Trigger_logic/LEDTime[6]"/>
+        <net name="uController_i/FEB_fabric_0/U0/Trigger_logic/LEDTime[5]"/>
+        <net name="uController_i/FEB_fabric_0/U0/Trigger_logic/LEDTime[4]"/>
+        <net name="uController_i/FEB_fabric_0/U0/Trigger_logic/LEDTime[3]"/>
+        <net name="uController_i/FEB_fabric_0/U0/Trigger_logic/LEDTime[2]"/>
+        <net name="uController_i/FEB_fabric_0/U0/Trigger_logic/LEDTime[1]"/>
+        <net name="uController_i/FEB_fabric_0/U0/Trigger_logic/LEDTime[0]"/>
+      </nets>
+    </probe>
+    <probe type="ila" busType="net" source="netlist" spec="ILA_V2_RT">
+      <probeOptions Id="DebugProbeParams">
+        <Option Id="CAPTURE_COMPARE_VALUE" value="eq1&apos;bX"/>
+        <Option Id="COMPARE_VALUE.0" value="eq1&apos;bX"/>
+        <Option Id="DISPLAY_AS_ENUM" value="1"/>
+        <Option Id="DISPLAY_HINT" value=""/>
+        <Option Id="DISPLAY_RADIX" value="HEX"/>
+        <Option Id="DISPLAY_VISIBILITY" value=""/>
+        <Option Id="HW_ILA" value="hw_ila_2"/>
+        <Option Id="LINK_TO_WAVEFORM" value="1"/>
+        <Option Id="MAP" value="probe13[0]"/>
+        <Option Id="NAME.CUSTOM" value=""/>
+        <Option Id="NAME.SELECT" value="Short"/>
+        <Option Id="SOURCE" value="netlist"/>
+        <Option Id="TRIGGER_COMPARE_VALUE" value="eq1&apos;bX"/>
+        <Option Id="WAVEFORM_STYLE" value="Digital"/>
+      </probeOptions>
+      <nets>
+        <net name="uController_i/FEB_fabric_0/U0/Trigger_logic/PulseSel"/>
+      </nets>
+    </probe>
+    <probe type="ila" busType="bus" source="netlist" spec="ILA_V2_RT">
+      <probeOptions Id="DebugProbeParams">
+        <Option Id="CAPTURE_COMPARE_VALUE" value="eq24&apos;hXX_XXXX"/>
+        <Option Id="COMPARE_VALUE.0" value="eq24&apos;hXX_XXXX"/>
+        <Option Id="DISPLAY_AS_ENUM" value="1"/>
+        <Option Id="DISPLAY_HINT" value=""/>
+        <Option Id="DISPLAY_RADIX" value="HEX"/>
+        <Option Id="DISPLAY_VISIBILITY" value=""/>
+        <Option Id="HW_ILA" value="hw_ila_2"/>
+        <Option Id="LINK_TO_WAVEFORM" value="1"/>
+        <Option Id="MAP" value="probe6[23:0]"/>
+        <Option Id="NAME.CUSTOM" value=""/>
+        <Option Id="NAME.SELECT" value="Short"/>
+        <Option Id="SOURCE" value="netlist"/>
+        <Option Id="TRIGGER_COMPARE_VALUE" value="eq24&apos;hXX_XXXX"/>
+        <Option Id="WAVEFORM_STYLE" value="Digital"/>
+      </probeOptions>
+      <nets>
+        <net name="uController_i/FEB_fabric_0/U0/Trigger_logic/Rx1DatReg[23]"/>
+        <net name="uController_i/FEB_fabric_0/U0/Trigger_logic/Rx1DatReg[22]"/>
+        <net name="uController_i/FEB_fabric_0/U0/Trigger_logic/Rx1DatReg[21]"/>
+        <net name="uController_i/FEB_fabric_0/U0/Trigger_logic/Rx1DatReg[20]"/>
+        <net name="uController_i/FEB_fabric_0/U0/Trigger_logic/Rx1DatReg[19]"/>
+        <net name="uController_i/FEB_fabric_0/U0/Trigger_logic/Rx1DatReg[18]"/>
+        <net name="uController_i/FEB_fabric_0/U0/Trigger_logic/Rx1DatReg[17]"/>
+        <net name="uController_i/FEB_fabric_0/U0/Trigger_logic/Rx1DatReg[16]"/>
+        <net name="uController_i/FEB_fabric_0/U0/Trigger_logic/Rx1DatReg[15]"/>
+        <net name="uController_i/FEB_fabric_0/U0/Trigger_logic/Rx1DatReg[14]"/>
+        <net name="uController_i/FEB_fabric_0/U0/Trigger_logic/Rx1DatReg[13]"/>
+        <net name="uController_i/FEB_fabric_0/U0/Trigger_logic/Rx1DatReg[12]"/>
+        <net name="uController_i/FEB_fabric_0/U0/Trigger_logic/Rx1DatReg[11]"/>
+        <net name="uController_i/FEB_fabric_0/U0/Trigger_logic/Rx1DatReg[10]"/>
+        <net name="uController_i/FEB_fabric_0/U0/Trigger_logic/Rx1DatReg[9]"/>
+        <net name="uController_i/FEB_fabric_0/U0/Trigger_logic/Rx1DatReg[8]"/>
+        <net name="uController_i/FEB_fabric_0/U0/Trigger_logic/Rx1DatReg[7]"/>
+        <net name="uController_i/FEB_fabric_0/U0/Trigger_logic/Rx1DatReg[6]"/>
+        <net name="uController_i/FEB_fabric_0/U0/Trigger_logic/Rx1DatReg[5]"/>
+        <net name="uController_i/FEB_fabric_0/U0/Trigger_logic/Rx1DatReg[4]"/>
+        <net name="uController_i/FEB_fabric_0/U0/Trigger_logic/Rx1DatReg[3]"/>
+        <net name="uController_i/FEB_fabric_0/U0/Trigger_logic/Rx1DatReg[2]"/>
+        <net name="uController_i/FEB_fabric_0/U0/Trigger_logic/Rx1DatReg[1]"/>
+        <net name="uController_i/FEB_fabric_0/U0/Trigger_logic/Rx1DatReg[0]"/>
+      </nets>
+    </probe>
+    <probe type="ila" busType="net" source="netlist" spec="ILA_V2_RT">
+      <probeOptions Id="DebugProbeParams">
+        <Option Id="CAPTURE_COMPARE_VALUE" value="eq1&apos;bX"/>
+        <Option Id="COMPARE_VALUE.0" value="eq1&apos;bX"/>
+        <Option Id="DISPLAY_AS_ENUM" value="1"/>
+        <Option Id="DISPLAY_HINT" value=""/>
+        <Option Id="DISPLAY_RADIX" value="HEX"/>
+        <Option Id="DISPLAY_VISIBILITY" value=""/>
+        <Option Id="HW_ILA" value="hw_ila_2"/>
+        <Option Id="LINK_TO_WAVEFORM" value="1"/>
+        <Option Id="MAP" value="probe14[0]"/>
+        <Option Id="NAME.CUSTOM" value=""/>
+        <Option Id="NAME.SELECT" value="Short"/>
+        <Option Id="SOURCE" value="netlist"/>
+        <Option Id="TRIGGER_COMPARE_VALUE" value="eq1&apos;bX"/>
+        <Option Id="WAVEFORM_STYLE" value="Digital"/>
+      </probeOptions>
+      <nets>
+        <net name="uController_i/FEB_fabric_0/U0/Trigger_logic/SlfTrgEn"/>
+      </nets>
+    </probe>
+    <probe type="ila" busType="net" source="netlist" spec="ILA_V2_RT">
+      <probeOptions Id="DebugProbeParams">
+        <Option Id="CAPTURE_COMPARE_VALUE" value="eq1&apos;bX"/>
+        <Option Id="COMPARE_VALUE.0" value="eq1&apos;bX"/>
+        <Option Id="DISPLAY_AS_ENUM" value="1"/>
+        <Option Id="DISPLAY_HINT" value=""/>
+        <Option Id="DISPLAY_RADIX" value="HEX"/>
+        <Option Id="DISPLAY_VISIBILITY" value=""/>
+        <Option Id="HW_ILA" value="hw_ila_2"/>
+        <Option Id="LINK_TO_WAVEFORM" value="1"/>
+        <Option Id="MAP" value="probe15[0]"/>
+        <Option Id="NAME.CUSTOM" value=""/>
+        <Option Id="NAME.SELECT" value="Short"/>
+        <Option Id="SOURCE" value="netlist"/>
+        <Option Id="TRIGGER_COMPARE_VALUE" value="eq1&apos;bX"/>
+        <Option Id="WAVEFORM_STYLE" value="Digital"/>
+      </probeOptions>
+      <nets>
+        <net name="uController_i/FEB_fabric_0/U0/Trigger_logic/TmgSrcSel"/>
+      </nets>
+    </probe>
+    <probe type="ila" busType="net" source="netlist" spec="ILA_V2_RT">
+      <probeOptions Id="DebugProbeParams">
+        <Option Id="CAPTURE_COMPARE_VALUE" value="eq1&apos;bX"/>
+        <Option Id="COMPARE_VALUE.0" value="eq1&apos;b1"/>
+        <Option Id="DISPLAY_AS_ENUM" value="1"/>
+        <Option Id="DISPLAY_HINT" value=""/>
+        <Option Id="DISPLAY_RADIX" value="HEX"/>
+        <Option Id="DISPLAY_VISIBILITY" value=""/>
+        <Option Id="HW_ILA" value="hw_ila_2"/>
+        <Option Id="LINK_TO_WAVEFORM" value="1"/>
+        <Option Id="MAP" value="probe16[0]"/>
+        <Option Id="NAME.CUSTOM" value=""/>
+        <Option Id="NAME.SELECT" value="Short"/>
+        <Option Id="SOURCE" value="netlist"/>
+        <Option Id="TRIGGER_COMPARE_VALUE" value="eq1&apos;b1"/>
+        <Option Id="WAVEFORM_STYLE" value="Digital"/>
+      </probeOptions>
+      <nets>
+        <net name="uController_i/FEB_fabric_0/U0/Trigger_logic/TrigReq"/>
+      </nets>
+    </probe>
+    <probe type="ila" busType="net" source="netlist" spec="ILA_V2_RT">
+      <probeOptions Id="DebugProbeParams">
+        <Option Id="CAPTURE_COMPARE_VALUE" value="eq1&apos;bX"/>
+        <Option Id="COMPARE_VALUE.0" value="eq1&apos;bX"/>
+        <Option Id="DISPLAY_AS_ENUM" value="1"/>
+        <Option Id="DISPLAY_HINT" value=""/>
+        <Option Id="DISPLAY_RADIX" value="HEX"/>
+        <Option Id="DISPLAY_VISIBILITY" value=""/>
+        <Option Id="HW_ILA" value="hw_ila_2"/>
+        <Option Id="LINK_TO_WAVEFORM" value="1"/>
+        <Option Id="MAP" value="probe17[0]"/>
+        <Option Id="NAME.CUSTOM" value=""/>
+        <Option Id="NAME.SELECT" value="Short"/>
+        <Option Id="SOURCE" value="netlist"/>
+        <Option Id="TRIGGER_COMPARE_VALUE" value="eq1&apos;bX"/>
+        <Option Id="WAVEFORM_STYLE" value="Digital"/>
+      </probeOptions>
+      <nets>
+        <net name="uController_i/FEB_fabric_0/U0/Trigger_logic/TrigReqD"/>
+      </nets>
+    </probe>
+    <probe type="ila" busType="bus" source="netlist" spec="ILA_V2_RT">
+      <probeOptions Id="DebugProbeParams">
+        <Option Id="CAPTURE_COMPARE_VALUE" value="eq12&apos;hXXX"/>
+        <Option Id="COMPARE_VALUE.0" value="eq12&apos;hXXX"/>
+        <Option Id="DISPLAY_AS_ENUM" value="1"/>
+        <Option Id="DISPLAY_HINT" value=""/>
+        <Option Id="DISPLAY_RADIX" value="HEX"/>
+        <Option Id="DISPLAY_VISIBILITY" value=""/>
+        <Option Id="HW_ILA" value="hw_ila_2"/>
+        <Option Id="LINK_TO_WAVEFORM" value="1"/>
+        <Option Id="MAP" value="probe3[11:0]"/>
+        <Option Id="NAME.CUSTOM" value=""/>
+        <Option Id="NAME.SELECT" value="Short"/>
+        <Option Id="SOURCE" value="netlist"/>
+        <Option Id="TRIGGER_COMPARE_VALUE" value="eq12&apos;hXXX"/>
+        <Option Id="WAVEFORM_STYLE" value="Digital"/>
+      </probeOptions>
+      <nets>
+        <net name="uController_i/FEB_fabric_0/U0/Trigger_logic/TrigType[11]"/>
+        <net name="uController_i/FEB_fabric_0/U0/Trigger_logic/TrigType[10]"/>
+        <net name="uController_i/FEB_fabric_0/U0/Trigger_logic/TrigType[9]"/>
+        <net name="uController_i/FEB_fabric_0/U0/Trigger_logic/TrigType[8]"/>
+        <net name="uController_i/FEB_fabric_0/U0/Trigger_logic/TrigType[7]"/>
+        <net name="uController_i/FEB_fabric_0/U0/Trigger_logic/TrigType[6]"/>
+        <net name="uController_i/FEB_fabric_0/U0/Trigger_logic/TrigType[5]"/>
+        <net name="uController_i/FEB_fabric_0/U0/Trigger_logic/TrigType[4]"/>
+        <net name="uController_i/FEB_fabric_0/U0/Trigger_logic/TrigType[3]"/>
+        <net name="uController_i/FEB_fabric_0/U0/Trigger_logic/TrigType[2]"/>
+        <net name="uController_i/FEB_fabric_0/U0/Trigger_logic/TrigType[1]"/>
+        <net name="uController_i/FEB_fabric_0/U0/Trigger_logic/TrigType[0]"/>
+      </nets>
+    </probe>
+    <probe type="ila" busType="bus" source="netlist" spec="ILA_V2_RT">
+      <probeOptions Id="DebugProbeParams">
+        <Option Id="CAPTURE_COMPARE_VALUE" value="eq9&apos;hXXX"/>
+        <Option Id="COMPARE_VALUE.0" value="eq9&apos;hXXX"/>
+        <Option Id="DISPLAY_AS_ENUM" value="1"/>
+        <Option Id="DISPLAY_HINT" value=""/>
+        <Option Id="DISPLAY_RADIX" value="HEX"/>
+        <Option Id="DISPLAY_VISIBILITY" value=""/>
+        <Option Id="HW_ILA" value="hw_ila_2"/>
+        <Option Id="LINK_TO_WAVEFORM" value="1"/>
+        <Option Id="MAP" value="probe2[8:0]"/>
+        <Option Id="NAME.CUSTOM" value=""/>
+        <Option Id="NAME.SELECT" value="Short"/>
+        <Option Id="SOURCE" value="netlist"/>
+        <Option Id="TRIGGER_COMPARE_VALUE" value="eq9&apos;hXXX"/>
+        <Option Id="WAVEFORM_STYLE" value="Digital"/>
+      </probeOptions>
+      <nets>
+        <net name="uController_i/FEB_fabric_0/U0/Trigger_logic/TurnOffTime[8]"/>
+        <net name="uController_i/FEB_fabric_0/U0/Trigger_logic/TurnOffTime[7]"/>
+        <net name="uController_i/FEB_fabric_0/U0/Trigger_logic/TurnOffTime[6]"/>
+        <net name="uController_i/FEB_fabric_0/U0/Trigger_logic/TurnOffTime[5]"/>
+        <net name="uController_i/FEB_fabric_0/U0/Trigger_logic/TurnOffTime[4]"/>
+        <net name="uController_i/FEB_fabric_0/U0/Trigger_logic/TurnOffTime[3]"/>
+        <net name="uController_i/FEB_fabric_0/U0/Trigger_logic/TurnOffTime[2]"/>
+        <net name="uController_i/FEB_fabric_0/U0/Trigger_logic/TurnOffTime[1]"/>
+        <net name="uController_i/FEB_fabric_0/U0/Trigger_logic/TurnOffTime[0]"/>
+      </nets>
+    </probe>
+    <probe type="ila" busType="bus" source="netlist" spec="ILA_V2_RT">
+      <probeOptions Id="DebugProbeParams">
+        <Option Id="CAPTURE_COMPARE_VALUE" value="eq9&apos;hXXX"/>
+        <Option Id="COMPARE_VALUE.0" value="eq9&apos;hXXX"/>
+        <Option Id="DISPLAY_AS_ENUM" value="1"/>
+        <Option Id="DISPLAY_HINT" value=""/>
+        <Option Id="DISPLAY_RADIX" value="HEX"/>
+        <Option Id="DISPLAY_VISIBILITY" value=""/>
+        <Option Id="HW_ILA" value="hw_ila_2"/>
+        <Option Id="LINK_TO_WAVEFORM" value="1"/>
+        <Option Id="MAP" value="probe7[8:0]"/>
+        <Option Id="NAME.CUSTOM" value=""/>
+        <Option Id="NAME.SELECT" value="Short"/>
+        <Option Id="SOURCE" value="netlist"/>
+        <Option Id="TRIGGER_COMPARE_VALUE" value="eq9&apos;hXXX"/>
+        <Option Id="WAVEFORM_STYLE" value="Digital"/>
+      </probeOptions>
+      <nets>
+        <net name="uController_i/FEB_fabric_0/U0/Trigger_logic/TurnOnTime[8]"/>
+        <net name="uController_i/FEB_fabric_0/U0/Trigger_logic/TurnOnTime[7]"/>
+        <net name="uController_i/FEB_fabric_0/U0/Trigger_logic/TurnOnTime[6]"/>
+        <net name="uController_i/FEB_fabric_0/U0/Trigger_logic/TurnOnTime[5]"/>
+        <net name="uController_i/FEB_fabric_0/U0/Trigger_logic/TurnOnTime[4]"/>
+        <net name="uController_i/FEB_fabric_0/U0/Trigger_logic/TurnOnTime[3]"/>
+        <net name="uController_i/FEB_fabric_0/U0/Trigger_logic/TurnOnTime[2]"/>
+        <net name="uController_i/FEB_fabric_0/U0/Trigger_logic/TurnOnTime[1]"/>
+        <net name="uController_i/FEB_fabric_0/U0/Trigger_logic/TurnOnTime[0]"/>
+      </nets>
+    </probe>
+    <probe type="ila" busType="net" source="netlist" spec="ILA_V2_RT">
+      <probeOptions Id="DebugProbeParams">
+        <Option Id="CAPTURE_COMPARE_VALUE" value="eq1&apos;bX"/>
+        <Option Id="COMPARE_VALUE.0" value="eq1&apos;bX"/>
+        <Option Id="DISPLAY_AS_ENUM" value="1"/>
+        <Option Id="DISPLAY_HINT" value=""/>
+        <Option Id="DISPLAY_RADIX" value="HEX"/>
+        <Option Id="DISPLAY_VISIBILITY" value=""/>
+        <Option Id="HW_ILA" value="hw_ila_2"/>
+        <Option Id="LINK_TO_WAVEFORM" value="1"/>
+        <Option Id="MAP" value="probe18[0]"/>
+        <Option Id="NAME.CUSTOM" value=""/>
+        <Option Id="NAME.SELECT" value="Short"/>
+        <Option Id="SOURCE" value="netlist"/>
+        <Option Id="TRIGGER_COMPARE_VALUE" value="eq1&apos;bX"/>
+        <Option Id="WAVEFORM_STYLE" value="Digital"/>
+      </probeOptions>
+      <nets>
+        <net name="uController_i/FEB_fabric_0/U0/Trigger_logic/uBunchGuard"/>
+      </nets>
+    </probe>
+    <probe type="ila" busType="net" source="netlist" spec="ILA_V2_RT">
+      <probeOptions Id="DebugProbeParams">
+        <Option Id="CAPTURE_COMPARE_VALUE" value="eq1&apos;bX"/>
+        <Option Id="COMPARE_VALUE.0" value="eq1&apos;bX"/>
+        <Option Id="DISPLAY_AS_ENUM" value="1"/>
+        <Option Id="DISPLAY_HINT" value=""/>
+        <Option Id="DISPLAY_RADIX" value="HEX"/>
+        <Option Id="DISPLAY_VISIBILITY" value=""/>
+        <Option Id="HW_ILA" value="hw_ila_2"/>
+        <Option Id="LINK_TO_WAVEFORM" value="1"/>
+        <Option Id="MAP" value="probe19[0]"/>
+        <Option Id="NAME.CUSTOM" value=""/>
+        <Option Id="NAME.SELECT" value="Short"/>
+        <Option Id="SOURCE" value="netlist"/>
+        <Option Id="TRIGGER_COMPARE_VALUE" value="eq1&apos;bX"/>
+        <Option Id="WAVEFORM_STYLE" value="Digital"/>
+      </probeOptions>
+      <nets>
+        <net name="uController_i/FEB_fabric_0/U0/Trigger_logic/uBunchWrt"/>
+      </nets>
+    </probe>
+    <probe type="ila" busType="bus" source="netlist" spec="ILA_V2_RT">
+      <probeOptions Id="DebugProbeParams">
+        <Option Id="CAPTURE_COMPARE_VALUE" value="eq32&apos;hXXXX_XXXX"/>
+        <Option Id="COMPARE_VALUE.0" value="eq32&apos;hXXXX_XXXX"/>
+        <Option Id="DISPLAY_AS_ENUM" value="1"/>
+        <Option Id="DISPLAY_HINT" value=""/>
+        <Option Id="DISPLAY_RADIX" value="HEX"/>
+        <Option Id="DISPLAY_VISIBILITY" value=""/>
+        <Option Id="HW_ILA" value="hw_ila_2"/>
+        <Option Id="LINK_TO_WAVEFORM" value="1"/>
+        <Option Id="MAP" value="probe4[31:0]"/>
+        <Option Id="NAME.CUSTOM" value=""/>
+        <Option Id="NAME.SELECT" value="Short"/>
+        <Option Id="SOURCE" value="netlist"/>
+        <Option Id="TRIGGER_COMPARE_VALUE" value="eq32&apos;hXXXX_XXXX"/>
+        <Option Id="WAVEFORM_STYLE" value="Digital"/>
+      </probeOptions>
+      <nets>
+        <net name="uController_i/FEB_fabric_0/U0/Trigger_logic/uBunch[31]"/>
+        <net name="uController_i/FEB_fabric_0/U0/Trigger_logic/uBunch[30]"/>
+        <net name="uController_i/FEB_fabric_0/U0/Trigger_logic/uBunch[29]"/>
+        <net name="uController_i/FEB_fabric_0/U0/Trigger_logic/uBunch[28]"/>
+        <net name="uController_i/FEB_fabric_0/U0/Trigger_logic/uBunch[27]"/>
+        <net name="uController_i/FEB_fabric_0/U0/Trigger_logic/uBunch[26]"/>
+        <net name="uController_i/FEB_fabric_0/U0/Trigger_logic/uBunch[25]"/>
+        <net name="uController_i/FEB_fabric_0/U0/Trigger_logic/uBunch[24]"/>
+        <net name="uController_i/FEB_fabric_0/U0/Trigger_logic/uBunch[23]"/>
+        <net name="uController_i/FEB_fabric_0/U0/Trigger_logic/uBunch[22]"/>
+        <net name="uController_i/FEB_fabric_0/U0/Trigger_logic/uBunch[21]"/>
+        <net name="uController_i/FEB_fabric_0/U0/Trigger_logic/uBunch[20]"/>
+        <net name="uController_i/FEB_fabric_0/U0/Trigger_logic/uBunch[19]"/>
+        <net name="uController_i/FEB_fabric_0/U0/Trigger_logic/uBunch[18]"/>
+        <net name="uController_i/FEB_fabric_0/U0/Trigger_logic/uBunch[17]"/>
+        <net name="uController_i/FEB_fabric_0/U0/Trigger_logic/uBunch[16]"/>
+        <net name="uController_i/FEB_fabric_0/U0/Trigger_logic/uBunch[15]"/>
+        <net name="uController_i/FEB_fabric_0/U0/Trigger_logic/uBunch[14]"/>
+        <net name="uController_i/FEB_fabric_0/U0/Trigger_logic/uBunch[13]"/>
+        <net name="uController_i/FEB_fabric_0/U0/Trigger_logic/uBunch[12]"/>
+        <net name="uController_i/FEB_fabric_0/U0/Trigger_logic/uBunch[11]"/>
+        <net name="uController_i/FEB_fabric_0/U0/Trigger_logic/uBunch[10]"/>
+        <net name="uController_i/FEB_fabric_0/U0/Trigger_logic/uBunch[9]"/>
+        <net name="uController_i/FEB_fabric_0/U0/Trigger_logic/uBunch[8]"/>
+        <net name="uController_i/FEB_fabric_0/U0/Trigger_logic/uBunch[7]"/>
+        <net name="uController_i/FEB_fabric_0/U0/Trigger_logic/uBunch[6]"/>
+        <net name="uController_i/FEB_fabric_0/U0/Trigger_logic/uBunch[5]"/>
+        <net name="uController_i/FEB_fabric_0/U0/Trigger_logic/uBunch[4]"/>
+        <net name="uController_i/FEB_fabric_0/U0/Trigger_logic/uBunch[3]"/>
+        <net name="uController_i/FEB_fabric_0/U0/Trigger_logic/uBunch[2]"/>
+        <net name="uController_i/FEB_fabric_0/U0/Trigger_logic/uBunch[1]"/>
+        <net name="uController_i/FEB_fabric_0/U0/Trigger_logic/uBunch[0]"/>
+      </nets>
+    </probe>
+    <probe type="ila" busType="net" source="netlist" spec="ILA_V2_RT">
+      <probeOptions Id="DebugProbeParams">
+        <Option Id="CAPTURE_COMPARE_VALUE" value="eq1&apos;bX"/>
+        <Option Id="COMPARE_VALUE.0" value="eq1&apos;bX"/>
+        <Option Id="DISPLAY_AS_ENUM" value="1"/>
+        <Option Id="DISPLAY_HINT" value=""/>
+        <Option Id="DISPLAY_RADIX" value="HEX"/>
+        <Option Id="DISPLAY_VISIBILITY" value=""/>
+        <Option Id="HW_ILA" value="hw_ila_1"/>
+        <Option Id="LINK_TO_WAVEFORM" value="1"/>
+        <Option Id="MAP" value="probe0[0]"/>
+        <Option Id="NAME.CUSTOM" value="FEB_AXI_Interface_0_CpldCS"/>
+        <Option Id="NAME.SELECT" value="Custom"/>
+        <Option Id="SOURCE" value="netlist"/>
+        <Option Id="TRIGGER_COMPARE_VALUE" value="eq1&apos;bX"/>
+        <Option Id="WAVEFORM_STYLE" value="Digital"/>
+      </probeOptions>
+      <nets>
+        <net name="uController_i/system_ila_0/U0/probe0_1"/>
+      </nets>
+    </probe>
+    <probe type="ila" busType="net" source="netlist" spec="ILA_V2_RT">
+      <probeOptions Id="DebugProbeParams">
+        <Option Id="CAPTURE_COMPARE_VALUE" value="eq1&apos;bX"/>
+        <Option Id="COMPARE_VALUE.0" value="eq1&apos;bB"/>
+        <Option Id="DISPLAY_AS_ENUM" value="1"/>
+        <Option Id="DISPLAY_HINT" value=""/>
+        <Option Id="DISPLAY_RADIX" value="HEX"/>
+        <Option Id="DISPLAY_VISIBILITY" value=""/>
+        <Option Id="HW_ILA" value="hw_ila_1"/>
+        <Option Id="LINK_TO_WAVEFORM" value="1"/>
+        <Option Id="MAP" value="probe1[0]"/>
+        <Option Id="NAME.CUSTOM" value="FEB_AXI_Interface_0_CpldRst"/>
+        <Option Id="NAME.SELECT" value="Custom"/>
+        <Option Id="SOURCE" value="netlist"/>
+        <Option Id="TRIGGER_COMPARE_VALUE" value="eq1&apos;bB"/>
+        <Option Id="WAVEFORM_STYLE" value="Digital"/>
+      </probeOptions>
+      <nets>
+        <net name="uController_i/system_ila_0/U0/probe1_1"/>
+      </nets>
+    </probe>
+    <probe type="ila" busType="bus" source="netlist" spec="ILA_V2_RT">
+      <probeOptions Id="DebugProbeParams">
+        <Option Id="CAPTURE_COMPARE_VALUE" value="eq2&apos;hX"/>
+        <Option Id="COMPARE_VALUE.0" value="eq2&apos;hX"/>
+        <Option Id="DISPLAY_AS_ENUM" value="1"/>
+        <Option Id="DISPLAY_HINT" value=""/>
+        <Option Id="DISPLAY_RADIX" value="HEX"/>
+        <Option Id="DISPLAY_VISIBILITY" value=""/>
+        <Option Id="HW_ILA" value="hw_ila_1"/>
+        <Option Id="LINK_TO_WAVEFORM" value="1"/>
+        <Option Id="MAP" value="probe2[1:0]"/>
+        <Option Id="NAME.CUSTOM" value="FEB_AXI_Interface_0_GA"/>
+        <Option Id="NAME.SELECT" value="Custom"/>
+        <Option Id="SOURCE" value="netlist"/>
+        <Option Id="TRIGGER_COMPARE_VALUE" value="eq2&apos;hX"/>
+        <Option Id="WAVEFORM_STYLE" value="Digital"/>
+      </probeOptions>
+      <nets>
+        <net name="uController_i/system_ila_0/U0/probe2_1[1]"/>
+        <net name="uController_i/system_ila_0/U0/probe2_1[0]"/>
+      </nets>
+    </probe>
+    <probe type="ila" busType="bus" source="netlist" spec="ILA_V2_RT">
+      <probeOptions Id="DebugProbeParams">
+        <Option Id="CAPTURE_COMPARE_VALUE" value="eq12&apos;hXXX"/>
+        <Option Id="COMPARE_VALUE.0" value="eq12&apos;hXXX"/>
+        <Option Id="DISPLAY_AS_ENUM" value="1"/>
+        <Option Id="DISPLAY_HINT" value=""/>
+        <Option Id="DISPLAY_RADIX" value="HEX"/>
+        <Option Id="DISPLAY_VISIBILITY" value=""/>
+        <Option Id="HW_ILA" value="hw_ila_1"/>
+        <Option Id="LINK_TO_WAVEFORM" value="1"/>
+        <Option Id="MAP" value="probe3[11:0]"/>
+        <Option Id="NAME.CUSTOM" value="FEB_AXI_Interface_0_uCA"/>
+        <Option Id="NAME.SELECT" value="Custom"/>
+        <Option Id="SOURCE" value="netlist"/>
+        <Option Id="TRIGGER_COMPARE_VALUE" value="eq12&apos;hXXX"/>
+        <Option Id="WAVEFORM_STYLE" value="Digital"/>
+      </probeOptions>
+      <nets>
+        <net name="uController_i/system_ila_0/U0/probe3_1[11]"/>
+        <net name="uController_i/system_ila_0/U0/probe3_1[10]"/>
+        <net name="uController_i/system_ila_0/U0/probe3_1[9]"/>
+        <net name="uController_i/system_ila_0/U0/probe3_1[8]"/>
+        <net name="uController_i/system_ila_0/U0/probe3_1[7]"/>
+        <net name="uController_i/system_ila_0/U0/probe3_1[6]"/>
+        <net name="uController_i/system_ila_0/U0/probe3_1[5]"/>
+        <net name="uController_i/system_ila_0/U0/probe3_1[4]"/>
+        <net name="uController_i/system_ila_0/U0/probe3_1[3]"/>
+        <net name="uController_i/system_ila_0/U0/probe3_1[2]"/>
+        <net name="uController_i/system_ila_0/U0/probe3_1[1]"/>
+        <net name="uController_i/system_ila_0/U0/probe3_1[0]"/>
+      </nets>
+    </probe>
+    <probe type="ila" busType="net" source="netlist" spec="ILA_V2_RT">
+      <probeOptions Id="DebugProbeParams">
+        <Option Id="CAPTURE_COMPARE_VALUE" value="eq1&apos;bX"/>
+        <Option Id="COMPARE_VALUE.0" value="eq1&apos;bX"/>
+        <Option Id="DISPLAY_AS_ENUM" value="1"/>
+        <Option Id="DISPLAY_HINT" value=""/>
+        <Option Id="DISPLAY_RADIX" value="HEX"/>
+        <Option Id="DISPLAY_VISIBILITY" value=""/>
+        <Option Id="HW_ILA" value="hw_ila_1"/>
+        <Option Id="LINK_TO_WAVEFORM" value="1"/>
+        <Option Id="MAP" value="probe4[0]"/>
+        <Option Id="NAME.CUSTOM" value="FEB_AXI_Interface_0_uCRd"/>
+        <Option Id="NAME.SELECT" value="Custom"/>
+        <Option Id="SOURCE" value="netlist"/>
+        <Option Id="TRIGGER_COMPARE_VALUE" value="eq1&apos;bX"/>
+        <Option Id="WAVEFORM_STYLE" value="Digital"/>
+      </probeOptions>
+      <nets>
+        <net name="uController_i/system_ila_0/U0/probe4_1"/>
+      </nets>
+    </probe>
+    <probe type="ila" busType="net" source="netlist" spec="ILA_V2_RT">
+      <probeOptions Id="DebugProbeParams">
+        <Option Id="CAPTURE_COMPARE_VALUE" value="eq1&apos;bX"/>
+        <Option Id="COMPARE_VALUE.0" value="eq1&apos;bX"/>
+        <Option Id="DISPLAY_AS_ENUM" value="1"/>
+        <Option Id="DISPLAY_HINT" value=""/>
+        <Option Id="DISPLAY_RADIX" value="HEX"/>
+        <Option Id="DISPLAY_VISIBILITY" value=""/>
+        <Option Id="HW_ILA" value="hw_ila_1"/>
+        <Option Id="LINK_TO_WAVEFORM" value="1"/>
+        <Option Id="MAP" value="probe5[0]"/>
+        <Option Id="NAME.CUSTOM" value="FEB_AXI_Interface_0_uCWr"/>
+        <Option Id="NAME.SELECT" value="Custom"/>
+        <Option Id="SOURCE" value="netlist"/>
+        <Option Id="TRIGGER_COMPARE_VALUE" value="eq1&apos;bX"/>
+        <Option Id="WAVEFORM_STYLE" value="Digital"/>
+      </probeOptions>
+      <nets>
+        <net name="uController_i/system_ila_0/U0/probe5_1"/>
+      </nets>
+    </probe>
+    <probe type="ila" busType="bus" source="netlist" spec="ILA_V2_RT">
+      <probeOptions Id="DebugProbeParams">
+        <Option Id="CAPTURE_COMPARE_VALUE" value="eq16&apos;hXXXX"/>
+        <Option Id="COMPARE_VALUE.0" value="eq16&apos;hXXXX"/>
+        <Option Id="DISPLAY_AS_ENUM" value="1"/>
+        <Option Id="DISPLAY_HINT" value=""/>
+        <Option Id="DISPLAY_RADIX" value="HEX"/>
+        <Option Id="DISPLAY_VISIBILITY" value=""/>
+        <Option Id="HW_ILA" value="hw_ila_1"/>
+        <Option Id="LINK_TO_WAVEFORM" value="1"/>
+        <Option Id="MAP" value="probe6[15:0]"/>
+        <Option Id="NAME.CUSTOM" value="Net"/>
+        <Option Id="NAME.SELECT" value="Custom"/>
+        <Option Id="SOURCE" value="netlist"/>
+        <Option Id="TRIGGER_COMPARE_VALUE" value="eq16&apos;hXXXX"/>
+        <Option Id="WAVEFORM_STYLE" value="Digital"/>
+      </probeOptions>
+      <nets>
+        <net name="uController_i/system_ila_0/U0/probe6_1[15]"/>
+        <net name="uController_i/system_ila_0/U0/probe6_1[14]"/>
+        <net name="uController_i/system_ila_0/U0/probe6_1[13]"/>
+        <net name="uController_i/system_ila_0/U0/probe6_1[12]"/>
+        <net name="uController_i/system_ila_0/U0/probe6_1[11]"/>
+        <net name="uController_i/system_ila_0/U0/probe6_1[10]"/>
+        <net name="uController_i/system_ila_0/U0/probe6_1[9]"/>
+        <net name="uController_i/system_ila_0/U0/probe6_1[8]"/>
+        <net name="uController_i/system_ila_0/U0/probe6_1[7]"/>
+        <net name="uController_i/system_ila_0/U0/probe6_1[6]"/>
+        <net name="uController_i/system_ila_0/U0/probe6_1[5]"/>
+        <net name="uController_i/system_ila_0/U0/probe6_1[4]"/>
+        <net name="uController_i/system_ila_0/U0/probe6_1[3]"/>
+        <net name="uController_i/system_ila_0/U0/probe6_1[2]"/>
+        <net name="uController_i/system_ila_0/U0/probe6_1[1]"/>
+        <net name="uController_i/system_ila_0/U0/probe6_1[0]"/>
+      </nets>
+    </probe>
+  </probeset>
+</hwsession>

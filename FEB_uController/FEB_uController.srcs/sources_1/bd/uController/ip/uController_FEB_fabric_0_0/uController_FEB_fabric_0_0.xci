@@ -1,0 +1,77 @@
+{
+  "schema": "xilinx.com:schema:json_instance:1.0",
+  "ip_inst": {
+    "xci_name": "uController_FEB_fabric_0_0",
+    "cell_name": "FEB_fabric_0",
+    "component_reference": "fnal.gov:user:FEB_fabric:1.0",
+    "ip_revision": "7",
+    "gen_directory": "../../../../../../FEB_uController.gen/sources_1/bd/uController/ip/uController_FEB_fabric_0_0",
+    "parameters": {
+      "component_parameters": {
+        "Component_Name": [ { "value": "uController_FEB_fabric_0_0", "resolve_type": "user", "usage": "all" } ]
+      },
+      "project_parameters": {
+        "ARCHITECTURE": [ { "value": "spartan7" } ],
+        "BASE_BOARD_PART": [ { "value": "digilentinc.com:arty-s7-50:part0:1.1" } ],
+        "BOARD_CONNECTIONS": [ { "value": "" } ],
+        "DEVICE": [ { "value": "xc7s50" } ],
+        "PACKAGE": [ { "value": "csga324" } ],
+        "PREFHDL": [ { "value": "VHDL" } ],
+        "SILICON_REVISION": [ { "value": "" } ],
+        "SIMULATOR_LANGUAGE": [ { "value": "MIXED" } ],
+        "SPEEDGRADE": [ { "value": "-1" } ],
+        "STATIC_POWER": [ { "value": "" } ],
+        "TEMPERATURE_GRADE": [ { "value": "" } ],
+        "USE_RDI_CUSTOMIZATION": [ { "value": "TRUE" } ],
+        "USE_RDI_GENERATION": [ { "value": "TRUE" } ]
+      },
+      "runtime_parameters": {
+        "IPCONTEXT": [ { "value": "IP_Integrator" } ],
+        "IPREVISION": [ { "value": "7" } ],
+        "MANAGED": [ { "value": "TRUE" } ],
+        "OUTPUTDIR": [ { "value": "../../../../../../FEB_uController.gen/sources_1/bd/uController/ip/uController_FEB_fabric_0_0" } ],
+        "SELECTEDSIMMODEL": [ { "value": "" } ],
+        "SHAREDDIR": [ { "value": "../../ipshared" } ],
+        "SWVERSION": [ { "value": "2022.2" } ],
+        "SYNTHESISFLOW": [ { "value": "GLOBAL" } ]
+      }
+    },
+    "boundary": {
+      "ports": {
+        "Clk_80MHz": [ { "direction": "in" } ],
+        "Clk_100MHz": [ { "direction": "in" } ],
+        "Clk_200MHz": [ { "direction": "in" } ],
+        "SysClk": [ { "direction": "in" } ],
+        "DDR_DATA": [ { "direction": "inout", "size_left": "15", "size_right": "0" } ],
+        "DDR_ADDR": [ { "direction": "out", "size_left": "13", "size_right": "0" } ],
+        "BA": [ { "direction": "out", "size_left": "2", "size_right": "0" } ],
+        "DDR_CKE": [ { "direction": "out", "size_left": "0", "size_right": "0" } ],
+        "ODT": [ { "direction": "out", "size_left": "0", "size_right": "0" } ],
+        "CS": [ { "direction": "out", "size_left": "0", "size_right": "0" } ],
+        "DM": [ { "direction": "out", "size_left": "1", "size_right": "0" } ],
+        "RAS": [ { "direction": "out" } ],
+        "CAS": [ { "direction": "out" } ],
+        "DDR_WE": [ { "direction": "out" } ],
+        "DDR_CLKP": [ { "direction": "out", "size_left": "0", "size_right": "0" } ],
+        "DDR_CLKN": [ { "direction": "out", "size_left": "0", "size_right": "0" } ],
+        "LDQS_P": [ { "direction": "inout" } ],
+        "LDQS_N": [ { "direction": "inout" } ],
+        "UDQS_P": [ { "direction": "inout" } ],
+        "UDQS_N": [ { "direction": "inout" } ],
+        "DDR_RESET_N": [ { "direction": "out" } ],
+        "CpldRst": [ { "direction": "in" } ],
+        "CpldCS": [ { "direction": "in" } ],
+        "uCRd": [ { "direction": "in" } ],
+        "uCWr": [ { "direction": "in" } ],
+        "uCA": [ { "direction": "in", "size_left": "11", "size_right": "0" } ],
+        "uCD": [ { "direction": "in", "size_left": "15", "size_right": "0" } ],
+        "GA": [ { "direction": "in", "size_left": "1", "size_right": "0" } ],
+        "GPI0_N": [ { "direction": "in" } ],
+        "GPI0_P": [ { "direction": "in" } ],
+        "GPI1": [ { "direction": "in" } ],
+        "PulseSel": [ { "direction": "out" } ],
+        "Pulse": [ { "direction": "out" } ]
+      }
+    }
+  }
+}
