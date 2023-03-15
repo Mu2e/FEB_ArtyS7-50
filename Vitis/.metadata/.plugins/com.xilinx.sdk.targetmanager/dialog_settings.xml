@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<section name="Workbench">
+	<item key="Datapath_system-bitFile" value="C:\v22.2\Vitis\Datapath\_ide\bitstream\uController_wrapper_ILA2.bit"/>
+	<item key="Datapath_system-bmmFile" value="C:\v22.2\Vitis\Datapath\_ide\bitstream\uController_wrapper_ILA2.mmi"/>
+	<item key="Datapath_system-target" value="Local"/>
+	<item key="Datapath_system-device" value="Auto Detect"/>
+	<item key="Datapath_system-partial_bit" value="false"/>
+	<item key="Datapath_system-skip_rev_check" value="false"/>
+	<item key="programfpga.sdxproject" value="Datapath_system"/>
+	<item key="Datapath_system-microblaze_0-initElf" value="bootloop"/>
+	<item key="devices_info_Local" value="{&quot;cables&quot;:[{&quot;name&quot;:&quot;Digilent Arty S7 - 50 210352B59CF7A&quot;,&quot;indexContextMap&quot;:{&quot;2&quot;:&quot;jsn-Arty S7 - 50-210352B59CF7A-0362f093-0&quot;}}]}"/>
+</section>
