@@ -1,0 +1,1517 @@
+#-----------------------------------------------------------
+# Vivado v2022.2 (64-bit)
+# SW Build 3671981 on Fri Oct 14 05:00:03 MDT 2022
+# IP Build 3669848 on Fri Oct 14 08:30:02 MDT 2022
+# Start of session at: Wed Mar 15 11:47:51 2023
+# Process ID: 286380
+# Current directory: C:/v22.2/FEB_fabric/FEB_fabric.runs/synth_1
+# Command line: vivado.exe -log FEB_fabric.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source FEB_fabric.tcl
+# Log file: C:/v22.2/FEB_fabric/FEB_fabric.runs/synth_1/FEB_fabric.vds
+# Journal file: C:/v22.2/FEB_fabric/FEB_fabric.runs/synth_1\vivado.jou
+# Running On: CD-135239, OS: Windows, CPU Frequency: 3600 MHz, CPU Physical cores: 8, Host memory: 34287 MB
+#-----------------------------------------------------------
+source FEB_fabric.tcl -notrace
+create_project: Time (s): cpu = 00:00:05 ; elapsed = 00:00:06 . Memory (MB): peak = 1039.426 ; gain = 154.414
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1700] Loaded user IP repository 'c:/v22.2/feb_fabric'.
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'C:/Xilinx/Vivado/2022.2/data/ip'.
+WARNING: [IP_Flow 19-1663] Duplicate IP found for 'fnal.gov:user:FEB_fabric:1.0'. The one found in IP location 'c:/v22.2/feb_fabric' will take precedence over the same IP in location c:/v22.2/feb_fabric/FEB_ARTY.srcs
+Command: read_checkpoint -auto_incremental -incremental C:/v22.2/FEB_fabric/FEB_fabric.srcs/utils_1/imports/synth_1/FEB_fabric.dcp
+INFO: [Vivado 12-5825] Read reference checkpoint from C:/v22.2/FEB_fabric/FEB_fabric.srcs/utils_1/imports/synth_1/FEB_fabric.dcp for incremental synthesis
+INFO: [Vivado 12-7989] Please ensure there are no constraint changes
+Command: synth_design -top FEB_fabric -part xc7s50csga324-1
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xc7s50'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7s50'
+INFO: [Device 21-403] Loading part xc7s50csga324-1
+INFO: [Designutils 20-5440] No compile time benefit to using incremental synthesis; A full resynthesis will be run
+INFO: [Designutils 20-4379] Flow is switching to default flow due to incremental criteria not met. If you would like to alter this behaviour and have the flow terminate instead, please set the following parameter config_implementation {autoIncr.Synth.RejectBehavior Terminate}
+INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 2 processes.
+INFO: [Synth 8-7078] Launching helper process for spawning children vivado processes
+INFO: [Synth 8-7075] Helper process launched with PID 209824
+INFO: [Synth 8-11241] undeclared symbol 'REGCCE', assumed default net type 'wire' [C:/Xilinx/Vivado/2022.2/data/verilog/src/unimacro/BRAM_SINGLE_MACRO.v:2170]
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:07 ; elapsed = 00:00:08 . Memory (MB): peak = 1877.898 ; gain = 408.930
+---------------------------------------------------------------------------------
+WARNING: [Synth 8-10729] formal port 'pulsesel' of mode 'inout' cannot be associated with actual port 'pulsesel' of mode 'buffer' [C:/v22.2/FEB_fabric/FEB_fabric.srcs/sources_1/new/FEB_top_ARTY.vhd:371]
+INFO: [Synth 8-638] synthesizing module 'FEB_fabric' [C:/v22.2/FEB_fabric/FEB_fabric.srcs/sources_1/new/FEB_top_ARTY.vhd:94]
+	Parameter DIFF_TERM bound to: 1 - type: bool 
+	Parameter IBUF_LOW_PWR bound to: 0 - type: bool 
+	Parameter IOSTANDARD bound to: DEFAULT - type: string 
+INFO: [Synth 8-113] binding component instance 'GPI0DiffIn' to cell 'IBUFDS' [C:/v22.2/FEB_fabric/FEB_fabric.srcs/sources_1/new/FEB_top_ARTY.vhd:232]
+INFO: [Synth 8-3491] module 'AFE_Interface_Sim' declared at 'C:/v22.2/FEB_fabric/FEB_fabric.srcs/sources_1/new/AFE_Interface_Sim.vhd:10' bound to instance 'AFE_Interface' of component 'AFE_Interface_Sim' [C:/v22.2/FEB_fabric/FEB_fabric.srcs/sources_1/new/FEB_top_ARTY.vhd:279]
+INFO: [Synth 8-638] synthesizing module 'AFE_Interface_Sim' [C:/v22.2/FEB_fabric/FEB_fabric.srcs/sources_1/new/AFE_Interface_Sim.vhd:23]
+INFO: [Synth 8-256] done synthesizing module 'AFE_Interface_Sim' (0#1) [C:/v22.2/FEB_fabric/FEB_fabric.srcs/sources_1/new/AFE_Interface_Sim.vhd:23]
+WARNING: [Synth 8-5640] Port 'icd' is missing in component declaration [C:/v22.2/FEB_fabric/FEB_fabric.srcs/sources_1/new/Proj_Def.vhd:357]
+INFO: [Synth 8-3491] module 'AFE_DataPath' declared at 'C:/v22.2/FEB_fabric/FEB_fabric.srcs/sources_1/new/AFE_DataPath.vhd:36' bound to instance 'AFE_DataPath_inst' of component 'AFE_DataPath' [C:/v22.2/FEB_fabric/FEB_fabric.srcs/sources_1/new/FEB_top_ARTY.vhd:292]
+INFO: [Synth 8-638] synthesizing module 'AFE_DataPath' [C:/v22.2/FEB_fabric/FEB_fabric.srcs/sources_1/new/AFE_DataPath.vhd:80]
+INFO: [Synth 8-3491] module 'AFE_Pipeline' declared at 'C:/v22.2/FEB_fabric/FEB_fabric.srcs/sources_1/new/AFE_Pipeline.vhd:10' bound to instance 'AFE_Pipeline_inst' of component 'AFE_Pipeline' [C:/v22.2/FEB_fabric/FEB_fabric.srcs/sources_1/new/AFE_DataPath.vhd:121]
+INFO: [Synth 8-638] synthesizing module 'AFE_Pipeline' [C:/v22.2/FEB_fabric/FEB_fabric.srcs/sources_1/new/AFE_Pipeline.vhd:26]
+INFO: [Synth 8-3491] module 'AFE_DP_Pipeline' declared at 'c:/v22.2/FEB_fabric/feb_arty.tmp/feb_fabric_v1_0_project/FEB_fabric_v1_0_project.gen/sources_1/ip/AFE_DP_Pipeline/synth/AFE_DP_Pipeline.vhd:59' bound to instance 'Pipeline' of component 'AFE_DP_Pipeline' [C:/v22.2/FEB_fabric/FEB_fabric.srcs/sources_1/new/AFE_Pipeline.vhd:45]
+INFO: [Synth 8-638] synthesizing module 'AFE_DP_Pipeline' [c:/v22.2/FEB_fabric/feb_arty.tmp/feb_fabric_v1_0_project/FEB_fabric_v1_0_project.gen/sources_1/ip/AFE_DP_Pipeline/synth/AFE_DP_Pipeline.vhd:71]
+	Parameter C_FAMILY bound to: spartan7 - type: string 
+	Parameter C_XDEVICEFAMILY bound to: spartan7 - type: string 
+	Parameter C_ELABORATION_DIR bound to: ./ - type: string 
+	Parameter C_INTERFACE_TYPE bound to: 0 - type: integer 
+	Parameter C_AXI_TYPE bound to: 1 - type: integer 
+	Parameter C_AXI_SLAVE_TYPE bound to: 0 - type: integer 
+	Parameter C_USE_BRAM_BLOCK bound to: 0 - type: integer 
+	Parameter C_ENABLE_32BIT_ADDRESS bound to: 0 - type: integer 
+	Parameter C_CTRL_ECC_ALGO bound to: NONE - type: string 
+	Parameter C_HAS_AXI_ID bound to: 0 - type: integer 
+	Parameter C_AXI_ID_WIDTH bound to: 4 - type: integer 
+	Parameter C_MEM_TYPE bound to: 1 - type: integer 
+	Parameter C_BYTE_SIZE bound to: 9 - type: integer 
+	Parameter C_ALGORITHM bound to: 1 - type: integer 
+	Parameter C_PRIM_TYPE bound to: 1 - type: integer 
+	Parameter C_LOAD_INIT_FILE bound to: 0 - type: integer 
+	Parameter C_INIT_FILE_NAME bound to: no_coe_file_loaded - type: string 
+	Parameter C_INIT_FILE bound to: AFE_DP_Pipeline.mem - type: string 
+	Parameter C_USE_DEFAULT_DATA bound to: 0 - type: integer 
+	Parameter C_DEFAULT_DATA bound to: 0 - type: string 
+	Parameter C_HAS_RSTA bound to: 0 - type: integer 
+	Parameter C_RST_PRIORITY_A bound to: CE - type: string 
+	Parameter C_RSTRAM_A bound to: 0 - type: integer 
+	Parameter C_INITA_VAL bound to: 0 - type: string 
+	Parameter C_HAS_ENA bound to: 0 - type: integer 
+	Parameter C_HAS_REGCEA bound to: 0 - type: integer 
+	Parameter C_USE_BYTE_WEA bound to: 0 - type: integer 
+	Parameter C_WEA_WIDTH bound to: 1 - type: integer 
+	Parameter C_WRITE_MODE_A bound to: NO_CHANGE - type: string 
+	Parameter C_WRITE_WIDTH_A bound to: 112 - type: integer 
+	Parameter C_READ_WIDTH_A bound to: 112 - type: integer 
+	Parameter C_WRITE_DEPTH_A bound to: 256 - type: integer 
+	Parameter C_READ_DEPTH_A bound to: 256 - type: integer 
+	Parameter C_ADDRA_WIDTH bound to: 8 - type: integer 
+	Parameter C_HAS_RSTB bound to: 0 - type: integer 
+	Parameter C_RST_PRIORITY_B bound to: CE - type: string 
+	Parameter C_RSTRAM_B bound to: 0 - type: integer 
+	Parameter C_INITB_VAL bound to: 0 - type: string 
+	Parameter C_HAS_ENB bound to: 0 - type: integer 
+	Parameter C_HAS_REGCEB bound to: 0 - type: integer 
+	Parameter C_USE_BYTE_WEB bound to: 0 - type: integer 
+	Parameter C_WEB_WIDTH bound to: 1 - type: integer 
+	Parameter C_WRITE_MODE_B bound to: WRITE_FIRST - type: string 
+	Parameter C_WRITE_WIDTH_B bound to: 112 - type: integer 
+	Parameter C_READ_WIDTH_B bound to: 112 - type: integer 
+	Parameter C_WRITE_DEPTH_B bound to: 256 - type: integer 
+	Parameter C_READ_DEPTH_B bound to: 256 - type: integer 
+	Parameter C_ADDRB_WIDTH bound to: 8 - type: integer 
+	Parameter C_HAS_MEM_OUTPUT_REGS_A bound to: 0 - type: integer 
+	Parameter C_HAS_MEM_OUTPUT_REGS_B bound to: 1 - type: integer 
+	Parameter C_HAS_MUX_OUTPUT_REGS_A bound to: 0 - type: integer 
+	Parameter C_HAS_MUX_OUTPUT_REGS_B bound to: 0 - type: integer 
+	Parameter C_MUX_PIPELINE_STAGES bound to: 0 - type: integer 
+	Parameter C_HAS_SOFTECC_INPUT_REGS_A bound to: 0 - type: integer 
+	Parameter C_HAS_SOFTECC_OUTPUT_REGS_B bound to: 0 - type: integer 
+	Parameter C_USE_SOFTECC bound to: 0 - type: integer 
+	Parameter C_USE_ECC bound to: 0 - type: integer 
+	Parameter C_EN_ECC_PIPE bound to: 0 - type: integer 
+	Parameter C_READ_LATENCY_A bound to: 1 - type: integer 
+	Parameter C_READ_LATENCY_B bound to: 1 - type: integer 
+	Parameter C_HAS_INJECTERR bound to: 0 - type: integer 
+	Parameter C_SIM_COLLISION_CHECK bound to: ALL - type: string 
+	Parameter C_COMMON_CLK bound to: 0 - type: integer 
+	Parameter C_DISABLE_WARN_BHV_COLL bound to: 0 - type: integer 
+	Parameter C_EN_SLEEP_PIN bound to: 0 - type: integer 
+	Parameter C_USE_URAM bound to: 0 - type: integer 
+	Parameter C_EN_RDADDRA_CHG bound to: 0 - type: integer 
+	Parameter C_EN_RDADDRB_CHG bound to: 0 - type: integer 
+	Parameter C_EN_DEEPSLEEP_PIN bound to: 0 - type: integer 
+	Parameter C_EN_SHUTDOWN_PIN bound to: 0 - type: integer 
+	Parameter C_EN_SAFETY_CKT bound to: 0 - type: integer 
+	Parameter C_DISABLE_WARN_BHV_RANGE bound to: 0 - type: integer 
+	Parameter C_COUNT_36K_BRAM bound to: 2 - type: string 
+	Parameter C_COUNT_18K_BRAM bound to: 0 - type: string 
+	Parameter C_EST_POWER_SUMMARY bound to: Estimated Power for IP     :     13.369 mW - type: string 
+INFO: [Synth 8-3491] module 'blk_mem_gen_v8_4_5' declared at 'c:/v22.2/FEB_fabric/feb_arty.tmp/feb_fabric_v1_0_project/FEB_fabric_v1_0_project.gen/sources_1/ip/SCFIFO_1Kx16/hdl/blk_mem_gen_v8_4_vhsyn_rfs.vhd:195321' bound to instance 'U0' of component 'blk_mem_gen_v8_4_5' [c:/v22.2/FEB_fabric/feb_arty.tmp/feb_fabric_v1_0_project/FEB_fabric_v1_0_project.gen/sources_1/ip/AFE_DP_Pipeline/synth/AFE_DP_Pipeline.vhd:239]
+INFO: [Synth 8-256] done synthesizing module 'AFE_DP_Pipeline' (0#1) [c:/v22.2/FEB_fabric/feb_arty.tmp/feb_fabric_v1_0_project/FEB_fabric_v1_0_project.gen/sources_1/ip/AFE_DP_Pipeline/synth/AFE_DP_Pipeline.vhd:71]
+INFO: [Synth 8-3491] module 'AFE_DP_Pipeline' declared at 'c:/v22.2/FEB_fabric/feb_arty.tmp/feb_fabric_v1_0_project/FEB_fabric_v1_0_project.gen/sources_1/ip/AFE_DP_Pipeline/synth/AFE_DP_Pipeline.vhd:59' bound to instance 'Pipeline' of component 'AFE_DP_Pipeline' [C:/v22.2/FEB_fabric/FEB_fabric.srcs/sources_1/new/AFE_Pipeline.vhd:45]
+INFO: [Synth 8-256] done synthesizing module 'AFE_Pipeline' (0#1) [C:/v22.2/FEB_fabric/FEB_fabric.srcs/sources_1/new/AFE_Pipeline.vhd:26]
+INFO: [Synth 8-3491] module 'DPRAM_1Kx16' declared at 'c:/v22.2/FEB_fabric/feb_arty.tmp/feb_fabric_v1_0_project/FEB_fabric_v1_0_project.gen/sources_1/ip/DPRAM_1Kx16/synth/DPRAM_1Kx16.vhd:59' bound to instance 'AFEBuff' of component 'DPRAM_1Kx16' [C:/v22.2/FEB_fabric/FEB_fabric.srcs/sources_1/new/AFE_DataPath.vhd:230]
+INFO: [Synth 8-638] synthesizing module 'DPRAM_1Kx16' [c:/v22.2/FEB_fabric/feb_arty.tmp/feb_fabric_v1_0_project/FEB_fabric_v1_0_project.gen/sources_1/ip/DPRAM_1Kx16/synth/DPRAM_1Kx16.vhd:71]
+	Parameter C_FAMILY bound to: spartan7 - type: string 
+	Parameter C_XDEVICEFAMILY bound to: spartan7 - type: string 
+	Parameter C_ELABORATION_DIR bound to: ./ - type: string 
+	Parameter C_INTERFACE_TYPE bound to: 0 - type: integer 
+	Parameter C_AXI_TYPE bound to: 1 - type: integer 
+	Parameter C_AXI_SLAVE_TYPE bound to: 0 - type: integer 
+	Parameter C_USE_BRAM_BLOCK bound to: 0 - type: integer 
+	Parameter C_ENABLE_32BIT_ADDRESS bound to: 0 - type: integer 
+	Parameter C_CTRL_ECC_ALGO bound to: NONE - type: string 
+	Parameter C_HAS_AXI_ID bound to: 0 - type: integer 
+	Parameter C_AXI_ID_WIDTH bound to: 4 - type: integer 
+	Parameter C_MEM_TYPE bound to: 1 - type: integer 
+	Parameter C_BYTE_SIZE bound to: 9 - type: integer 
+	Parameter C_ALGORITHM bound to: 1 - type: integer 
+	Parameter C_PRIM_TYPE bound to: 1 - type: integer 
+	Parameter C_LOAD_INIT_FILE bound to: 0 - type: integer 
+	Parameter C_INIT_FILE_NAME bound to: no_coe_file_loaded - type: string 
+	Parameter C_INIT_FILE bound to: DPRAM_1Kx16.mem - type: string 
+	Parameter C_USE_DEFAULT_DATA bound to: 0 - type: integer 
+	Parameter C_DEFAULT_DATA bound to: 0 - type: string 
+	Parameter C_HAS_RSTA bound to: 0 - type: integer 
+	Parameter C_RST_PRIORITY_A bound to: CE - type: string 
+	Parameter C_RSTRAM_A bound to: 0 - type: integer 
+	Parameter C_INITA_VAL bound to: 0 - type: string 
+	Parameter C_HAS_ENA bound to: 0 - type: integer 
+	Parameter C_HAS_REGCEA bound to: 0 - type: integer 
+	Parameter C_USE_BYTE_WEA bound to: 0 - type: integer 
+	Parameter C_WEA_WIDTH bound to: 1 - type: integer 
+	Parameter C_WRITE_MODE_A bound to: WRITE_FIRST - type: string 
+	Parameter C_WRITE_WIDTH_A bound to: 16 - type: integer 
+	Parameter C_READ_WIDTH_A bound to: 16 - type: integer 
+	Parameter C_WRITE_DEPTH_A bound to: 1024 - type: integer 
+	Parameter C_READ_DEPTH_A bound to: 1024 - type: integer 
+	Parameter C_ADDRA_WIDTH bound to: 10 - type: integer 
+	Parameter C_HAS_RSTB bound to: 0 - type: integer 
+	Parameter C_RST_PRIORITY_B bound to: CE - type: string 
+	Parameter C_RSTRAM_B bound to: 0 - type: integer 
+	Parameter C_INITB_VAL bound to: 0 - type: string 
+	Parameter C_HAS_ENB bound to: 0 - type: integer 
+	Parameter C_HAS_REGCEB bound to: 0 - type: integer 
+	Parameter C_USE_BYTE_WEB bound to: 0 - type: integer 
+	Parameter C_WEB_WIDTH bound to: 1 - type: integer 
+	Parameter C_WRITE_MODE_B bound to: WRITE_FIRST - type: string 
+	Parameter C_WRITE_WIDTH_B bound to: 16 - type: integer 
+	Parameter C_READ_WIDTH_B bound to: 16 - type: integer 
+	Parameter C_WRITE_DEPTH_B bound to: 1024 - type: integer 
+	Parameter C_READ_DEPTH_B bound to: 1024 - type: integer 
+	Parameter C_ADDRB_WIDTH bound to: 10 - type: integer 
+	Parameter C_HAS_MEM_OUTPUT_REGS_A bound to: 0 - type: integer 
+	Parameter C_HAS_MEM_OUTPUT_REGS_B bound to: 1 - type: integer 
+	Parameter C_HAS_MUX_OUTPUT_REGS_A bound to: 0 - type: integer 
+	Parameter C_HAS_MUX_OUTPUT_REGS_B bound to: 0 - type: integer 
+	Parameter C_MUX_PIPELINE_STAGES bound to: 0 - type: integer 
+	Parameter C_HAS_SOFTECC_INPUT_REGS_A bound to: 0 - type: integer 
+	Parameter C_HAS_SOFTECC_OUTPUT_REGS_B bound to: 0 - type: integer 
+	Parameter C_USE_SOFTECC bound to: 0 - type: integer 
+	Parameter C_USE_ECC bound to: 0 - type: integer 
+	Parameter C_EN_ECC_PIPE bound to: 0 - type: integer 
+	Parameter C_READ_LATENCY_A bound to: 1 - type: integer 
+	Parameter C_READ_LATENCY_B bound to: 1 - type: integer 
+	Parameter C_HAS_INJECTERR bound to: 0 - type: integer 
+	Parameter C_SIM_COLLISION_CHECK bound to: NONE - type: string 
+	Parameter C_COMMON_CLK bound to: 0 - type: integer 
+	Parameter C_DISABLE_WARN_BHV_COLL bound to: 0 - type: integer 
+	Parameter C_EN_SLEEP_PIN bound to: 0 - type: integer 
+	Parameter C_USE_URAM bound to: 0 - type: integer 
+	Parameter C_EN_RDADDRA_CHG bound to: 0 - type: integer 
+	Parameter C_EN_RDADDRB_CHG bound to: 0 - type: integer 
+	Parameter C_EN_DEEPSLEEP_PIN bound to: 0 - type: integer 
+	Parameter C_EN_SHUTDOWN_PIN bound to: 0 - type: integer 
+	Parameter C_EN_SAFETY_CKT bound to: 0 - type: integer 
+	Parameter C_DISABLE_WARN_BHV_RANGE bound to: 0 - type: integer 
+	Parameter C_COUNT_36K_BRAM bound to: 0 - type: string 
+	Parameter C_COUNT_18K_BRAM bound to: 1 - type: string 
+	Parameter C_EST_POWER_SUMMARY bound to: Estimated Power for IP     :     2.87285 mW - type: string 
+INFO: [Synth 8-3491] module 'blk_mem_gen_v8_4_5' declared at 'c:/v22.2/FEB_fabric/feb_arty.tmp/feb_fabric_v1_0_project/FEB_fabric_v1_0_project.gen/sources_1/ip/SCFIFO_1Kx16/hdl/blk_mem_gen_v8_4_vhsyn_rfs.vhd:195321' bound to instance 'U0' of component 'blk_mem_gen_v8_4_5' [c:/v22.2/FEB_fabric/feb_arty.tmp/feb_fabric_v1_0_project/FEB_fabric_v1_0_project.gen/sources_1/ip/DPRAM_1Kx16/synth/DPRAM_1Kx16.vhd:239]
+INFO: [Synth 8-256] done synthesizing module 'DPRAM_1Kx16' (0#1) [c:/v22.2/FEB_fabric/feb_arty.tmp/feb_fabric_v1_0_project/FEB_fabric_v1_0_project.gen/sources_1/ip/DPRAM_1Kx16/synth/DPRAM_1Kx16.vhd:71]
+INFO: [Synth 8-3491] module 'DPRAM_1Kx16' declared at 'c:/v22.2/FEB_fabric/feb_arty.tmp/feb_fabric_v1_0_project/FEB_fabric_v1_0_project.gen/sources_1/ip/DPRAM_1Kx16/synth/DPRAM_1Kx16.vhd:59' bound to instance 'AFEBuff' of component 'DPRAM_1Kx16' [C:/v22.2/FEB_fabric/FEB_fabric.srcs/sources_1/new/AFE_DataPath.vhd:230]
+INFO: [Synth 8-3491] module 'DPRAM_1Kx16' declared at 'c:/v22.2/FEB_fabric/feb_arty.tmp/feb_fabric_v1_0_project/FEB_fabric_v1_0_project.gen/sources_1/ip/DPRAM_1Kx16/synth/DPRAM_1Kx16.vhd:59' bound to instance 'AFEBuff' of component 'DPRAM_1Kx16' [C:/v22.2/FEB_fabric/FEB_fabric.srcs/sources_1/new/AFE_DataPath.vhd:230]
+INFO: [Synth 8-3491] module 'DPRAM_1Kx16' declared at 'c:/v22.2/FEB_fabric/feb_arty.tmp/feb_fabric_v1_0_project/FEB_fabric_v1_0_project.gen/sources_1/ip/DPRAM_1Kx16/synth/DPRAM_1Kx16.vhd:59' bound to instance 'AFEBuff' of component 'DPRAM_1Kx16' [C:/v22.2/FEB_fabric/FEB_fabric.srcs/sources_1/new/AFE_DataPath.vhd:230]
+INFO: [Synth 8-3491] module 'DPRAM_1Kx16' declared at 'c:/v22.2/FEB_fabric/feb_arty.tmp/feb_fabric_v1_0_project/FEB_fabric_v1_0_project.gen/sources_1/ip/DPRAM_1Kx16/synth/DPRAM_1Kx16.vhd:59' bound to instance 'AFEBuff' of component 'DPRAM_1Kx16' [C:/v22.2/FEB_fabric/FEB_fabric.srcs/sources_1/new/AFE_DataPath.vhd:230]
+INFO: [Synth 8-3491] module 'DPRAM_1Kx16' declared at 'c:/v22.2/FEB_fabric/feb_arty.tmp/feb_fabric_v1_0_project/FEB_fabric_v1_0_project.gen/sources_1/ip/DPRAM_1Kx16/synth/DPRAM_1Kx16.vhd:59' bound to instance 'AFEBuff' of component 'DPRAM_1Kx16' [C:/v22.2/FEB_fabric/FEB_fabric.srcs/sources_1/new/AFE_DataPath.vhd:230]
+INFO: [Synth 8-3491] module 'DPRAM_1Kx16' declared at 'c:/v22.2/FEB_fabric/feb_arty.tmp/feb_fabric_v1_0_project/FEB_fabric_v1_0_project.gen/sources_1/ip/DPRAM_1Kx16/synth/DPRAM_1Kx16.vhd:59' bound to instance 'AFEBuff' of component 'DPRAM_1Kx16' [C:/v22.2/FEB_fabric/FEB_fabric.srcs/sources_1/new/AFE_DataPath.vhd:230]
+INFO: [Synth 8-3491] module 'DPRAM_1Kx16' declared at 'c:/v22.2/FEB_fabric/feb_arty.tmp/feb_fabric_v1_0_project/FEB_fabric_v1_0_project.gen/sources_1/ip/DPRAM_1Kx16/synth/DPRAM_1Kx16.vhd:59' bound to instance 'AFEBuff' of component 'DPRAM_1Kx16' [C:/v22.2/FEB_fabric/FEB_fabric.srcs/sources_1/new/AFE_DataPath.vhd:230]
+INFO: [Synth 8-3491] module 'DPRAM_1Kx16' declared at 'c:/v22.2/FEB_fabric/feb_arty.tmp/feb_fabric_v1_0_project/FEB_fabric_v1_0_project.gen/sources_1/ip/DPRAM_1Kx16/synth/DPRAM_1Kx16.vhd:59' bound to instance 'AFEBuff' of component 'DPRAM_1Kx16' [C:/v22.2/FEB_fabric/FEB_fabric.srcs/sources_1/new/AFE_DataPath.vhd:230]
+INFO: [Synth 8-3491] module 'DPRAM_1Kx16' declared at 'c:/v22.2/FEB_fabric/feb_arty.tmp/feb_fabric_v1_0_project/FEB_fabric_v1_0_project.gen/sources_1/ip/DPRAM_1Kx16/synth/DPRAM_1Kx16.vhd:59' bound to instance 'AFEBuff' of component 'DPRAM_1Kx16' [C:/v22.2/FEB_fabric/FEB_fabric.srcs/sources_1/new/AFE_DataPath.vhd:230]
+INFO: [Synth 8-3491] module 'DPRAM_1Kx16' declared at 'c:/v22.2/FEB_fabric/feb_arty.tmp/feb_fabric_v1_0_project/FEB_fabric_v1_0_project.gen/sources_1/ip/DPRAM_1Kx16/synth/DPRAM_1Kx16.vhd:59' bound to instance 'AFEBuff' of component 'DPRAM_1Kx16' [C:/v22.2/FEB_fabric/FEB_fabric.srcs/sources_1/new/AFE_DataPath.vhd:230]
+INFO: [Synth 8-3491] module 'DPRAM_1Kx16' declared at 'c:/v22.2/FEB_fabric/feb_arty.tmp/feb_fabric_v1_0_project/FEB_fabric_v1_0_project.gen/sources_1/ip/DPRAM_1Kx16/synth/DPRAM_1Kx16.vhd:59' bound to instance 'AFEBuff' of component 'DPRAM_1Kx16' [C:/v22.2/FEB_fabric/FEB_fabric.srcs/sources_1/new/AFE_DataPath.vhd:230]
+INFO: [Synth 8-3491] module 'DPRAM_1Kx16' declared at 'c:/v22.2/FEB_fabric/feb_arty.tmp/feb_fabric_v1_0_project/FEB_fabric_v1_0_project.gen/sources_1/ip/DPRAM_1Kx16/synth/DPRAM_1Kx16.vhd:59' bound to instance 'AFEBuff' of component 'DPRAM_1Kx16' [C:/v22.2/FEB_fabric/FEB_fabric.srcs/sources_1/new/AFE_DataPath.vhd:230]
+INFO: [Synth 8-3491] module 'DPRAM_1Kx16' declared at 'c:/v22.2/FEB_fabric/feb_arty.tmp/feb_fabric_v1_0_project/FEB_fabric_v1_0_project.gen/sources_1/ip/DPRAM_1Kx16/synth/DPRAM_1Kx16.vhd:59' bound to instance 'AFEBuff' of component 'DPRAM_1Kx16' [C:/v22.2/FEB_fabric/FEB_fabric.srcs/sources_1/new/AFE_DataPath.vhd:230]
+INFO: [Synth 8-3491] module 'DPRAM_1Kx16' declared at 'c:/v22.2/FEB_fabric/feb_arty.tmp/feb_fabric_v1_0_project/FEB_fabric_v1_0_project.gen/sources_1/ip/DPRAM_1Kx16/synth/DPRAM_1Kx16.vhd:59' bound to instance 'AFEBuff' of component 'DPRAM_1Kx16' [C:/v22.2/FEB_fabric/FEB_fabric.srcs/sources_1/new/AFE_DataPath.vhd:230]
+INFO: [Synth 8-3491] module 'DPRAM_1Kx16' declared at 'c:/v22.2/FEB_fabric/feb_arty.tmp/feb_fabric_v1_0_project/FEB_fabric_v1_0_project.gen/sources_1/ip/DPRAM_1Kx16/synth/DPRAM_1Kx16.vhd:59' bound to instance 'AFEBuff' of component 'DPRAM_1Kx16' [C:/v22.2/FEB_fabric/FEB_fabric.srcs/sources_1/new/AFE_DataPath.vhd:230]
+INFO: [Synth 8-256] done synthesizing module 'AFE_DataPath' (0#1) [C:/v22.2/FEB_fabric/FEB_fabric.srcs/sources_1/new/AFE_DataPath.vhd:80]
+WARNING: [Synth 8-5640] Port 'icd' is missing in component declaration [C:/v22.2/FEB_fabric/FEB_fabric.srcs/sources_1/new/Proj_Def.vhd:452]
+INFO: [Synth 8-3491] module 'Trigger' declared at 'C:/v22.2/FEB_fabric/FEB_fabric.srcs/sources_1/new/Trigger.vhd:10' bound to instance 'Trigger_logic' of component 'Trigger' [C:/v22.2/FEB_fabric/FEB_fabric.srcs/sources_1/new/FEB_top_ARTY.vhd:344]
+INFO: [Synth 8-638] synthesizing module 'Trigger' [C:/v22.2/FEB_fabric/FEB_fabric.srcs/sources_1/new/Trigger.vhd:45]
+INFO: [Synth 8-256] done synthesizing module 'Trigger' (0#1) [C:/v22.2/FEB_fabric/FEB_fabric.srcs/sources_1/new/Trigger.vhd:45]
+WARNING: [Synth 8-5640] Port 'icd' is missing in component declaration [C:/v22.2/FEB_fabric/FEB_fabric.srcs/sources_1/new/Proj_Def.vhd:485]
+INFO: [Synth 8-3491] module 'EventBuilder' declared at 'C:/v22.2/FEB_fabric/FEB_fabric.srcs/sources_1/new/EventBuilder.vhd:26' bound to instance 'EventBuilder_logic' of component 'EventBuilder' [C:/v22.2/FEB_fabric/FEB_fabric.srcs/sources_1/new/FEB_top_ARTY.vhd:379]
+INFO: [Synth 8-638] synthesizing module 'EventBuilder' [C:/v22.2/FEB_fabric/FEB_fabric.srcs/sources_1/new/EventBuilder.vhd:50]
+WARNING: [Synth 8-5640] Port 'wr_rst_busy' is missing in component declaration [C:/v22.2/FEB_fabric/FEB_fabric.srcs/sources_1/new/Proj_Def.vhd:697]
+WARNING: [Synth 8-5640] Port 'rd_rst_busy' is missing in component declaration [C:/v22.2/FEB_fabric/FEB_fabric.srcs/sources_1/new/Proj_Def.vhd:697]
+INFO: [Synth 8-3491] module 'SCFIFO_32x256' declared at 'c:/v22.2/FEB_fabric/feb_arty.tmp/feb_fabric_v1_0_project/FEB_fabric_v1_0_project.gen/sources_1/ip/SCFIFO_32x256/synth/SCFIFO_32x256.vhd:59' bound to instance 'uBunchBuffer' of component 'SCFIFO_32x256' [C:/v22.2/FEB_fabric/FEB_fabric.srcs/sources_1/new/EventBuilder.vhd:87]
+INFO: [Synth 8-638] synthesizing module 'SCFIFO_32x256' [c:/v22.2/FEB_fabric/feb_arty.tmp/feb_fabric_v1_0_project/FEB_fabric_v1_0_project.gen/sources_1/ip/SCFIFO_32x256/synth/SCFIFO_32x256.vhd:74]
+	Parameter C_COMMON_CLOCK bound to: 1 - type: integer 
+	Parameter C_SELECT_XPM bound to: 0 - type: integer 
+	Parameter C_COUNT_TYPE bound to: 0 - type: integer 
+	Parameter C_DATA_COUNT_WIDTH bound to: 11 - type: integer 
+	Parameter C_DEFAULT_VALUE bound to: BlankString - type: string 
+	Parameter C_DIN_WIDTH bound to: 32 - type: integer 
+	Parameter C_DOUT_RST_VAL bound to: 0 - type: string 
+	Parameter C_DOUT_WIDTH bound to: 32 - type: integer 
+	Parameter C_ENABLE_RLOCS bound to: 0 - type: integer 
+	Parameter C_FAMILY bound to: spartan7 - type: string 
+	Parameter C_FULL_FLAGS_RST_VAL bound to: 1 - type: integer 
+	Parameter C_HAS_ALMOST_EMPTY bound to: 0 - type: integer 
+	Parameter C_HAS_ALMOST_FULL bound to: 0 - type: integer 
+	Parameter C_HAS_BACKUP bound to: 0 - type: integer 
+	Parameter C_HAS_DATA_COUNT bound to: 0 - type: integer 
+	Parameter C_HAS_INT_CLK bound to: 0 - type: integer 
+	Parameter C_HAS_MEMINIT_FILE bound to: 0 - type: integer 
+	Parameter C_HAS_OVERFLOW bound to: 0 - type: integer 
+	Parameter C_HAS_RD_DATA_COUNT bound to: 0 - type: integer 
+	Parameter C_HAS_RD_RST bound to: 0 - type: integer 
+	Parameter C_HAS_RST bound to: 1 - type: integer 
+	Parameter C_HAS_SRST bound to: 0 - type: integer 
+	Parameter C_HAS_UNDERFLOW bound to: 0 - type: integer 
+	Parameter C_HAS_VALID bound to: 0 - type: integer 
+	Parameter C_HAS_WR_ACK bound to: 0 - type: integer 
+	Parameter C_HAS_WR_DATA_COUNT bound to: 0 - type: integer 
+	Parameter C_HAS_WR_RST bound to: 0 - type: integer 
+	Parameter C_IMPLEMENTATION_TYPE bound to: 0 - type: integer 
+	Parameter C_INIT_WR_PNTR_VAL bound to: 0 - type: integer 
+	Parameter C_MEMORY_TYPE bound to: 1 - type: integer 
+	Parameter C_MIF_FILE_NAME bound to: BlankString - type: string 
+	Parameter C_OPTIMIZATION_MODE bound to: 0 - type: integer 
+	Parameter C_OVERFLOW_LOW bound to: 0 - type: integer 
+	Parameter C_PRELOAD_LATENCY bound to: 0 - type: integer 
+	Parameter C_PRELOAD_REGS bound to: 1 - type: integer 
+	Parameter C_PRIM_FIFO_TYPE bound to: 1kx36 - type: string 
+	Parameter C_PROG_EMPTY_THRESH_ASSERT_VAL bound to: 4 - type: integer 
+	Parameter C_PROG_EMPTY_THRESH_NEGATE_VAL bound to: 5 - type: integer 
+	Parameter C_PROG_EMPTY_TYPE bound to: 0 - type: integer 
+	Parameter C_PROG_FULL_THRESH_ASSERT_VAL bound to: 1023 - type: integer 
+	Parameter C_PROG_FULL_THRESH_NEGATE_VAL bound to: 1022 - type: integer 
+	Parameter C_PROG_FULL_TYPE bound to: 0 - type: integer 
+	Parameter C_RD_DATA_COUNT_WIDTH bound to: 11 - type: integer 
+	Parameter C_RD_DEPTH bound to: 1024 - type: integer 
+	Parameter C_RD_FREQ bound to: 1 - type: integer 
+	Parameter C_RD_PNTR_WIDTH bound to: 10 - type: integer 
+	Parameter C_UNDERFLOW_LOW bound to: 0 - type: integer 
+	Parameter C_USE_DOUT_RST bound to: 1 - type: integer 
+	Parameter C_USE_ECC bound to: 0 - type: integer 
+	Parameter C_USE_EMBEDDED_REG bound to: 0 - type: integer 
+	Parameter C_USE_PIPELINE_REG bound to: 0 - type: integer 
+	Parameter C_POWER_SAVING_MODE bound to: 0 - type: integer 
+	Parameter C_USE_FIFO16_FLAGS bound to: 0 - type: integer 
+	Parameter C_USE_FWFT_DATA_COUNT bound to: 1 - type: integer 
+	Parameter C_VALID_LOW bound to: 0 - type: integer 
+	Parameter C_WR_ACK_LOW bound to: 0 - type: integer 
+	Parameter C_WR_DATA_COUNT_WIDTH bound to: 11 - type: integer 
+	Parameter C_WR_DEPTH bound to: 1024 - type: integer 
+	Parameter C_WR_FREQ bound to: 1 - type: integer 
+	Parameter C_WR_PNTR_WIDTH bound to: 10 - type: integer 
+	Parameter C_WR_RESPONSE_LATENCY bound to: 1 - type: integer 
+	Parameter C_MSGON_VAL bound to: 1 - type: integer 
+	Parameter C_ENABLE_RST_SYNC bound to: 1 - type: integer 
+	Parameter C_EN_SAFETY_CKT bound to: 1 - type: integer 
+	Parameter C_ERROR_INJECTION_TYPE bound to: 0 - type: integer 
+	Parameter C_SYNCHRONIZER_STAGE bound to: 2 - type: integer 
+	Parameter C_INTERFACE_TYPE bound to: 0 - type: integer 
+	Parameter C_AXI_TYPE bound to: 1 - type: integer 
+	Parameter C_HAS_AXI_WR_CHANNEL bound to: 1 - type: integer 
+	Parameter C_HAS_AXI_RD_CHANNEL bound to: 1 - type: integer 
+	Parameter C_HAS_SLAVE_CE bound to: 0 - type: integer 
+	Parameter C_HAS_MASTER_CE bound to: 0 - type: integer 
+	Parameter C_ADD_NGC_CONSTRAINT bound to: 0 - type: integer 
+	Parameter C_USE_COMMON_OVERFLOW bound to: 0 - type: integer 
+	Parameter C_USE_COMMON_UNDERFLOW bound to: 0 - type: integer 
+	Parameter C_USE_DEFAULT_SETTINGS bound to: 0 - type: integer 
+	Parameter C_AXI_ID_WIDTH bound to: 1 - type: integer 
+	Parameter C_AXI_ADDR_WIDTH bound to: 32 - type: integer 
+	Parameter C_AXI_DATA_WIDTH bound to: 64 - type: integer 
+	Parameter C_AXI_LEN_WIDTH bound to: 8 - type: integer 
+	Parameter C_AXI_LOCK_WIDTH bound to: 1 - type: integer 
+	Parameter C_HAS_AXI_ID bound to: 0 - type: integer 
+	Parameter C_HAS_AXI_AWUSER bound to: 0 - type: integer 
+	Parameter C_HAS_AXI_WUSER bound to: 0 - type: integer 
+	Parameter C_HAS_AXI_BUSER bound to: 0 - type: integer 
+	Parameter C_HAS_AXI_ARUSER bound to: 0 - type: integer 
+	Parameter C_HAS_AXI_RUSER bound to: 0 - type: integer 
+	Parameter C_AXI_ARUSER_WIDTH bound to: 1 - type: integer 
+	Parameter C_AXI_AWUSER_WIDTH bound to: 1 - type: integer 
+	Parameter C_AXI_WUSER_WIDTH bound to: 1 - type: integer 
+	Parameter C_AXI_BUSER_WIDTH bound to: 1 - type: integer 
+	Parameter C_AXI_RUSER_WIDTH bound to: 1 - type: integer 
+	Parameter C_HAS_AXIS_TDATA bound to: 1 - type: integer 
+	Parameter C_HAS_AXIS_TID bound to: 0 - type: integer 
+	Parameter C_HAS_AXIS_TDEST bound to: 0 - type: integer 
+	Parameter C_HAS_AXIS_TUSER bound to: 1 - type: integer 
+	Parameter C_HAS_AXIS_TREADY bound to: 1 - type: integer 
+	Parameter C_HAS_AXIS_TLAST bound to: 0 - type: integer 
+	Parameter C_HAS_AXIS_TSTRB bound to: 0 - type: integer 
+	Parameter C_HAS_AXIS_TKEEP bound to: 0 - type: integer 
+	Parameter C_AXIS_TDATA_WIDTH bound to: 8 - type: integer 
+	Parameter C_AXIS_TID_WIDTH bound to: 1 - type: integer 
+	Parameter C_AXIS_TDEST_WIDTH bound to: 1 - type: integer 
+	Parameter C_AXIS_TUSER_WIDTH bound to: 4 - type: integer 
+	Parameter C_AXIS_TSTRB_WIDTH bound to: 1 - type: integer 
+	Parameter C_AXIS_TKEEP_WIDTH bound to: 1 - type: integer 
+	Parameter C_WACH_TYPE bound to: 0 - type: integer 
+	Parameter C_WDCH_TYPE bound to: 0 - type: integer 
+	Parameter C_WRCH_TYPE bound to: 0 - type: integer 
+	Parameter C_RACH_TYPE bound to: 0 - type: integer 
+	Parameter C_RDCH_TYPE bound to: 0 - type: integer 
+	Parameter C_AXIS_TYPE bound to: 0 - type: integer 
+	Parameter C_IMPLEMENTATION_TYPE_WACH bound to: 1 - type: integer 
+	Parameter C_IMPLEMENTATION_TYPE_WDCH bound to: 1 - type: integer 
+	Parameter C_IMPLEMENTATION_TYPE_WRCH bound to: 1 - type: integer 
+	Parameter C_IMPLEMENTATION_TYPE_RACH bound to: 1 - type: integer 
+	Parameter C_IMPLEMENTATION_TYPE_RDCH bound to: 1 - type: integer 
+	Parameter C_IMPLEMENTATION_TYPE_AXIS bound to: 1 - type: integer 
+	Parameter C_APPLICATION_TYPE_WACH bound to: 0 - type: integer 
+	Parameter C_APPLICATION_TYPE_WDCH bound to: 0 - type: integer 
+	Parameter C_APPLICATION_TYPE_WRCH bound to: 0 - type: integer 
+	Parameter C_APPLICATION_TYPE_RACH bound to: 0 - type: integer 
+	Parameter C_APPLICATION_TYPE_RDCH bound to: 0 - type: integer 
+	Parameter C_APPLICATION_TYPE_AXIS bound to: 0 - type: integer 
+	Parameter C_PRIM_FIFO_TYPE_WACH bound to: 512x36 - type: string 
+	Parameter C_PRIM_FIFO_TYPE_WDCH bound to: 1kx36 - type: string 
+	Parameter C_PRIM_FIFO_TYPE_WRCH bound to: 512x36 - type: string 
+	Parameter C_PRIM_FIFO_TYPE_RACH bound to: 512x36 - type: string 
+	Parameter C_PRIM_FIFO_TYPE_RDCH bound to: 1kx36 - type: string 
+	Parameter C_PRIM_FIFO_TYPE_AXIS bound to: 1kx18 - type: string 
+	Parameter C_USE_ECC_WACH bound to: 0 - type: integer 
+	Parameter C_USE_ECC_WDCH bound to: 0 - type: integer 
+	Parameter C_USE_ECC_WRCH bound to: 0 - type: integer 
+	Parameter C_USE_ECC_RACH bound to: 0 - type: integer 
+	Parameter C_USE_ECC_RDCH bound to: 0 - type: integer 
+	Parameter C_USE_ECC_AXIS bound to: 0 - type: integer 
+	Parameter C_ERROR_INJECTION_TYPE_WACH bound to: 0 - type: integer 
+	Parameter C_ERROR_INJECTION_TYPE_WDCH bound to: 0 - type: integer 
+	Parameter C_ERROR_INJECTION_TYPE_WRCH bound to: 0 - type: integer 
+	Parameter C_ERROR_INJECTION_TYPE_RACH bound to: 0 - type: integer 
+	Parameter C_ERROR_INJECTION_TYPE_RDCH bound to: 0 - type: integer 
+	Parameter C_ERROR_INJECTION_TYPE_AXIS bound to: 0 - type: integer 
+	Parameter C_DIN_WIDTH_WACH bound to: 1 - type: integer 
+	Parameter C_DIN_WIDTH_WDCH bound to: 64 - type: integer 
+	Parameter C_DIN_WIDTH_WRCH bound to: 2 - type: integer 
+	Parameter C_DIN_WIDTH_RACH bound to: 32 - type: integer 
+	Parameter C_DIN_WIDTH_RDCH bound to: 64 - type: integer 
+	Parameter C_DIN_WIDTH_AXIS bound to: 1 - type: integer 
+	Parameter C_WR_DEPTH_WACH bound to: 16 - type: integer 
+	Parameter C_WR_DEPTH_WDCH bound to: 1024 - type: integer 
+	Parameter C_WR_DEPTH_WRCH bound to: 16 - type: integer 
+	Parameter C_WR_DEPTH_RACH bound to: 16 - type: integer 
+	Parameter C_WR_DEPTH_RDCH bound to: 1024 - type: integer 
+	Parameter C_WR_DEPTH_AXIS bound to: 1024 - type: integer 
+	Parameter C_WR_PNTR_WIDTH_WACH bound to: 4 - type: integer 
+	Parameter C_WR_PNTR_WIDTH_WDCH bound to: 10 - type: integer 
+	Parameter C_WR_PNTR_WIDTH_WRCH bound to: 4 - type: integer 
+	Parameter C_WR_PNTR_WIDTH_RACH bound to: 4 - type: integer 
+	Parameter C_WR_PNTR_WIDTH_RDCH bound to: 10 - type: integer 
+	Parameter C_WR_PNTR_WIDTH_AXIS bound to: 10 - type: integer 
+	Parameter C_HAS_DATA_COUNTS_WACH bound to: 0 - type: integer 
+	Parameter C_HAS_DATA_COUNTS_WDCH bound to: 0 - type: integer 
+	Parameter C_HAS_DATA_COUNTS_WRCH bound to: 0 - type: integer 
+	Parameter C_HAS_DATA_COUNTS_RACH bound to: 0 - type: integer 
+	Parameter C_HAS_DATA_COUNTS_RDCH bound to: 0 - type: integer 
+	Parameter C_HAS_DATA_COUNTS_AXIS bound to: 0 - type: integer 
+	Parameter C_HAS_PROG_FLAGS_WACH bound to: 0 - type: integer 
+	Parameter C_HAS_PROG_FLAGS_WDCH bound to: 0 - type: integer 
+	Parameter C_HAS_PROG_FLAGS_WRCH bound to: 0 - type: integer 
+	Parameter C_HAS_PROG_FLAGS_RACH bound to: 0 - type: integer 
+	Parameter C_HAS_PROG_FLAGS_RDCH bound to: 0 - type: integer 
+	Parameter C_HAS_PROG_FLAGS_AXIS bound to: 0 - type: integer 
+	Parameter C_PROG_FULL_TYPE_WACH bound to: 0 - type: integer 
+	Parameter C_PROG_FULL_TYPE_WDCH bound to: 0 - type: integer 
+	Parameter C_PROG_FULL_TYPE_WRCH bound to: 0 - type: integer 
+	Parameter C_PROG_FULL_TYPE_RACH bound to: 0 - type: integer 
+	Parameter C_PROG_FULL_TYPE_RDCH bound to: 0 - type: integer 
+	Parameter C_PROG_FULL_TYPE_AXIS bound to: 0 - type: integer 
+	Parameter C_PROG_FULL_THRESH_ASSERT_VAL_WACH bound to: 1023 - type: integer 
+	Parameter C_PROG_FULL_THRESH_ASSERT_VAL_WDCH bound to: 1023 - type: integer 
+	Parameter C_PROG_FULL_THRESH_ASSERT_VAL_WRCH bound to: 1023 - type: integer 
+	Parameter C_PROG_FULL_THRESH_ASSERT_VAL_RACH bound to: 1023 - type: integer 
+	Parameter C_PROG_FULL_THRESH_ASSERT_VAL_RDCH bound to: 1023 - type: integer 
+	Parameter C_PROG_FULL_THRESH_ASSERT_VAL_AXIS bound to: 1023 - type: integer 
+	Parameter C_PROG_EMPTY_TYPE_WACH bound to: 0 - type: integer 
+	Parameter C_PROG_EMPTY_TYPE_WDCH bound to: 0 - type: integer 
+	Parameter C_PROG_EMPTY_TYPE_WRCH bound to: 0 - type: integer 
+	Parameter C_PROG_EMPTY_TYPE_RACH bound to: 0 - type: integer 
+	Parameter C_PROG_EMPTY_TYPE_RDCH bound to: 0 - type: integer 
+	Parameter C_PROG_EMPTY_TYPE_AXIS bound to: 0 - type: integer 
+	Parameter C_PROG_EMPTY_THRESH_ASSERT_VAL_WACH bound to: 1022 - type: integer 
+	Parameter C_PROG_EMPTY_THRESH_ASSERT_VAL_WDCH bound to: 1022 - type: integer 
+	Parameter C_PROG_EMPTY_THRESH_ASSERT_VAL_WRCH bound to: 1022 - type: integer 
+	Parameter C_PROG_EMPTY_THRESH_ASSERT_VAL_RACH bound to: 1022 - type: integer 
+	Parameter C_PROG_EMPTY_THRESH_ASSERT_VAL_RDCH bound to: 1022 - type: integer 
+	Parameter C_PROG_EMPTY_THRESH_ASSERT_VAL_AXIS bound to: 1022 - type: integer 
+	Parameter C_REG_SLICE_MODE_WACH bound to: 0 - type: integer 
+	Parameter C_REG_SLICE_MODE_WDCH bound to: 0 - type: integer 
+	Parameter C_REG_SLICE_MODE_WRCH bound to: 0 - type: integer 
+	Parameter C_REG_SLICE_MODE_RACH bound to: 0 - type: integer 
+	Parameter C_REG_SLICE_MODE_RDCH bound to: 0 - type: integer 
+	Parameter C_REG_SLICE_MODE_AXIS bound to: 0 - type: integer 
+INFO: [Synth 8-3491] module 'fifo_generator_v13_2_7' declared at 'c:/v22.2/FEB_fabric/feb_arty.tmp/feb_fabric_v1_0_project/FEB_fabric_v1_0_project.gen/sources_1/ip/SCFIFO_1Kx16/hdl/fifo_generator_v13_2_vhsyn_rfs.vhd:38604' bound to instance 'U0' of component 'fifo_generator_v13_2_7' [c:/v22.2/FEB_fabric/feb_arty.tmp/feb_fabric_v1_0_project/FEB_fabric_v1_0_project.gen/sources_1/ip/SCFIFO_32x256/synth/SCFIFO_32x256.vhd:542]
+INFO: [Synth 8-6157] synthesizing module 'xpm_cdc_sync_rst' [C:/Xilinx/Vivado/2022.2/data/ip/xpm/xpm_cdc/hdl/xpm_cdc.sv:1058]
+INFO: [Synth 8-6155] done synthesizing module 'xpm_cdc_sync_rst' (0#1) [C:/Xilinx/Vivado/2022.2/data/ip/xpm/xpm_cdc/hdl/xpm_cdc.sv:1058]
+INFO: [Synth 8-256] done synthesizing module 'SCFIFO_32x256' (0#1) [c:/v22.2/FEB_fabric/feb_arty.tmp/feb_fabric_v1_0_project/FEB_fabric_v1_0_project.gen/sources_1/ip/SCFIFO_32x256/synth/SCFIFO_32x256.vhd:74]
+WARNING: [Synth 8-5640] Port 'wr_rst_busy' is missing in component declaration [C:/v22.2/FEB_fabric/FEB_fabric.srcs/sources_1/new/Proj_Def.vhd:706]
+WARNING: [Synth 8-5640] Port 'rd_rst_busy' is missing in component declaration [C:/v22.2/FEB_fabric/FEB_fabric.srcs/sources_1/new/Proj_Def.vhd:706]
+INFO: [Synth 8-3491] module 'SCFIFO_1Kx16' declared at 'c:/v22.2/FEB_fabric/feb_arty.tmp/feb_fabric_v1_0_project/FEB_fabric_v1_0_project.gen/sources_1/ip/SCFIFO_1Kx16/synth/SCFIFO_1Kx16.vhd:59' bound to instance 'EventBuff' of component 'SCFIFO_1kx16' [C:/v22.2/FEB_fabric/FEB_fabric.srcs/sources_1/new/EventBuilder.vhd:100]
+INFO: [Synth 8-638] synthesizing module 'SCFIFO_1Kx16' [c:/v22.2/FEB_fabric/feb_arty.tmp/feb_fabric_v1_0_project/FEB_fabric_v1_0_project.gen/sources_1/ip/SCFIFO_1Kx16/synth/SCFIFO_1Kx16.vhd:75]
+	Parameter C_COMMON_CLOCK bound to: 1 - type: integer 
+	Parameter C_SELECT_XPM bound to: 0 - type: integer 
+	Parameter C_COUNT_TYPE bound to: 0 - type: integer 
+	Parameter C_DATA_COUNT_WIDTH bound to: 11 - type: integer 
+	Parameter C_DEFAULT_VALUE bound to: BlankString - type: string 
+	Parameter C_DIN_WIDTH bound to: 16 - type: integer 
+	Parameter C_DOUT_RST_VAL bound to: 0 - type: string 
+	Parameter C_DOUT_WIDTH bound to: 16 - type: integer 
+	Parameter C_ENABLE_RLOCS bound to: 0 - type: integer 
+	Parameter C_FAMILY bound to: spartan7 - type: string 
+	Parameter C_FULL_FLAGS_RST_VAL bound to: 1 - type: integer 
+	Parameter C_HAS_ALMOST_EMPTY bound to: 0 - type: integer 
+	Parameter C_HAS_ALMOST_FULL bound to: 0 - type: integer 
+	Parameter C_HAS_BACKUP bound to: 0 - type: integer 
+	Parameter C_HAS_DATA_COUNT bound to: 1 - type: integer 
+	Parameter C_HAS_INT_CLK bound to: 0 - type: integer 
+	Parameter C_HAS_MEMINIT_FILE bound to: 0 - type: integer 
+	Parameter C_HAS_OVERFLOW bound to: 0 - type: integer 
+	Parameter C_HAS_RD_DATA_COUNT bound to: 0 - type: integer 
+	Parameter C_HAS_RD_RST bound to: 0 - type: integer 
+	Parameter C_HAS_RST bound to: 1 - type: integer 
+	Parameter C_HAS_SRST bound to: 0 - type: integer 
+	Parameter C_HAS_UNDERFLOW bound to: 0 - type: integer 
+	Parameter C_HAS_VALID bound to: 0 - type: integer 
+	Parameter C_HAS_WR_ACK bound to: 0 - type: integer 
+	Parameter C_HAS_WR_DATA_COUNT bound to: 0 - type: integer 
+	Parameter C_HAS_WR_RST bound to: 0 - type: integer 
+	Parameter C_IMPLEMENTATION_TYPE bound to: 0 - type: integer 
+	Parameter C_INIT_WR_PNTR_VAL bound to: 0 - type: integer 
+	Parameter C_MEMORY_TYPE bound to: 1 - type: integer 
+	Parameter C_MIF_FILE_NAME bound to: BlankString - type: string 
+	Parameter C_OPTIMIZATION_MODE bound to: 0 - type: integer 
+	Parameter C_OVERFLOW_LOW bound to: 0 - type: integer 
+	Parameter C_PRELOAD_LATENCY bound to: 0 - type: integer 
+	Parameter C_PRELOAD_REGS bound to: 1 - type: integer 
+	Parameter C_PRIM_FIFO_TYPE bound to: 1kx18 - type: string 
+	Parameter C_PROG_EMPTY_THRESH_ASSERT_VAL bound to: 4 - type: integer 
+	Parameter C_PROG_EMPTY_THRESH_NEGATE_VAL bound to: 5 - type: integer 
+	Parameter C_PROG_EMPTY_TYPE bound to: 0 - type: integer 
+	Parameter C_PROG_FULL_THRESH_ASSERT_VAL bound to: 1023 - type: integer 
+	Parameter C_PROG_FULL_THRESH_NEGATE_VAL bound to: 1022 - type: integer 
+	Parameter C_PROG_FULL_TYPE bound to: 0 - type: integer 
+	Parameter C_RD_DATA_COUNT_WIDTH bound to: 11 - type: integer 
+	Parameter C_RD_DEPTH bound to: 1024 - type: integer 
+	Parameter C_RD_FREQ bound to: 1 - type: integer 
+	Parameter C_RD_PNTR_WIDTH bound to: 10 - type: integer 
+	Parameter C_UNDERFLOW_LOW bound to: 0 - type: integer 
+	Parameter C_USE_DOUT_RST bound to: 1 - type: integer 
+	Parameter C_USE_ECC bound to: 0 - type: integer 
+	Parameter C_USE_EMBEDDED_REG bound to: 0 - type: integer 
+	Parameter C_USE_PIPELINE_REG bound to: 0 - type: integer 
+	Parameter C_POWER_SAVING_MODE bound to: 0 - type: integer 
+	Parameter C_USE_FIFO16_FLAGS bound to: 0 - type: integer 
+	Parameter C_USE_FWFT_DATA_COUNT bound to: 1 - type: integer 
+	Parameter C_VALID_LOW bound to: 0 - type: integer 
+	Parameter C_WR_ACK_LOW bound to: 0 - type: integer 
+	Parameter C_WR_DATA_COUNT_WIDTH bound to: 11 - type: integer 
+	Parameter C_WR_DEPTH bound to: 1024 - type: integer 
+	Parameter C_WR_FREQ bound to: 1 - type: integer 
+	Parameter C_WR_PNTR_WIDTH bound to: 10 - type: integer 
+	Parameter C_WR_RESPONSE_LATENCY bound to: 1 - type: integer 
+	Parameter C_MSGON_VAL bound to: 1 - type: integer 
+	Parameter C_ENABLE_RST_SYNC bound to: 1 - type: integer 
+	Parameter C_EN_SAFETY_CKT bound to: 1 - type: integer 
+	Parameter C_ERROR_INJECTION_TYPE bound to: 0 - type: integer 
+	Parameter C_SYNCHRONIZER_STAGE bound to: 2 - type: integer 
+	Parameter C_INTERFACE_TYPE bound to: 0 - type: integer 
+	Parameter C_AXI_TYPE bound to: 1 - type: integer 
+	Parameter C_HAS_AXI_WR_CHANNEL bound to: 1 - type: integer 
+	Parameter C_HAS_AXI_RD_CHANNEL bound to: 1 - type: integer 
+	Parameter C_HAS_SLAVE_CE bound to: 0 - type: integer 
+	Parameter C_HAS_MASTER_CE bound to: 0 - type: integer 
+	Parameter C_ADD_NGC_CONSTRAINT bound to: 0 - type: integer 
+	Parameter C_USE_COMMON_OVERFLOW bound to: 0 - type: integer 
+	Parameter C_USE_COMMON_UNDERFLOW bound to: 0 - type: integer 
+	Parameter C_USE_DEFAULT_SETTINGS bound to: 0 - type: integer 
+	Parameter C_AXI_ID_WIDTH bound to: 1 - type: integer 
+	Parameter C_AXI_ADDR_WIDTH bound to: 32 - type: integer 
+	Parameter C_AXI_DATA_WIDTH bound to: 64 - type: integer 
+	Parameter C_AXI_LEN_WIDTH bound to: 8 - type: integer 
+	Parameter C_AXI_LOCK_WIDTH bound to: 1 - type: integer 
+	Parameter C_HAS_AXI_ID bound to: 0 - type: integer 
+	Parameter C_HAS_AXI_AWUSER bound to: 0 - type: integer 
+	Parameter C_HAS_AXI_WUSER bound to: 0 - type: integer 
+	Parameter C_HAS_AXI_BUSER bound to: 0 - type: integer 
+	Parameter C_HAS_AXI_ARUSER bound to: 0 - type: integer 
+	Parameter C_HAS_AXI_RUSER bound to: 0 - type: integer 
+	Parameter C_AXI_ARUSER_WIDTH bound to: 1 - type: integer 
+	Parameter C_AXI_AWUSER_WIDTH bound to: 1 - type: integer 
+	Parameter C_AXI_WUSER_WIDTH bound to: 1 - type: integer 
+	Parameter C_AXI_BUSER_WIDTH bound to: 1 - type: integer 
+	Parameter C_AXI_RUSER_WIDTH bound to: 1 - type: integer 
+	Parameter C_HAS_AXIS_TDATA bound to: 1 - type: integer 
+	Parameter C_HAS_AXIS_TID bound to: 0 - type: integer 
+	Parameter C_HAS_AXIS_TDEST bound to: 0 - type: integer 
+	Parameter C_HAS_AXIS_TUSER bound to: 1 - type: integer 
+	Parameter C_HAS_AXIS_TREADY bound to: 1 - type: integer 
+	Parameter C_HAS_AXIS_TLAST bound to: 0 - type: integer 
+	Parameter C_HAS_AXIS_TSTRB bound to: 0 - type: integer 
+	Parameter C_HAS_AXIS_TKEEP bound to: 0 - type: integer 
+	Parameter C_AXIS_TDATA_WIDTH bound to: 8 - type: integer 
+	Parameter C_AXIS_TID_WIDTH bound to: 1 - type: integer 
+	Parameter C_AXIS_TDEST_WIDTH bound to: 1 - type: integer 
+	Parameter C_AXIS_TUSER_WIDTH bound to: 4 - type: integer 
+	Parameter C_AXIS_TSTRB_WIDTH bound to: 1 - type: integer 
+	Parameter C_AXIS_TKEEP_WIDTH bound to: 1 - type: integer 
+	Parameter C_WACH_TYPE bound to: 0 - type: integer 
+	Parameter C_WDCH_TYPE bound to: 0 - type: integer 
+	Parameter C_WRCH_TYPE bound to: 0 - type: integer 
+	Parameter C_RACH_TYPE bound to: 0 - type: integer 
+	Parameter C_RDCH_TYPE bound to: 0 - type: integer 
+	Parameter C_AXIS_TYPE bound to: 0 - type: integer 
+	Parameter C_IMPLEMENTATION_TYPE_WACH bound to: 1 - type: integer 
+	Parameter C_IMPLEMENTATION_TYPE_WDCH bound to: 1 - type: integer 
+	Parameter C_IMPLEMENTATION_TYPE_WRCH bound to: 1 - type: integer 
+	Parameter C_IMPLEMENTATION_TYPE_RACH bound to: 1 - type: integer 
+	Parameter C_IMPLEMENTATION_TYPE_RDCH bound to: 1 - type: integer 
+	Parameter C_IMPLEMENTATION_TYPE_AXIS bound to: 1 - type: integer 
+	Parameter C_APPLICATION_TYPE_WACH bound to: 0 - type: integer 
+	Parameter C_APPLICATION_TYPE_WDCH bound to: 0 - type: integer 
+	Parameter C_APPLICATION_TYPE_WRCH bound to: 0 - type: integer 
+	Parameter C_APPLICATION_TYPE_RACH bound to: 0 - type: integer 
+	Parameter C_APPLICATION_TYPE_RDCH bound to: 0 - type: integer 
+	Parameter C_APPLICATION_TYPE_AXIS bound to: 0 - type: integer 
+	Parameter C_PRIM_FIFO_TYPE_WACH bound to: 512x36 - type: string 
+	Parameter C_PRIM_FIFO_TYPE_WDCH bound to: 1kx36 - type: string 
+	Parameter C_PRIM_FIFO_TYPE_WRCH bound to: 512x36 - type: string 
+	Parameter C_PRIM_FIFO_TYPE_RACH bound to: 512x36 - type: string 
+	Parameter C_PRIM_FIFO_TYPE_RDCH bound to: 1kx36 - type: string 
+	Parameter C_PRIM_FIFO_TYPE_AXIS bound to: 1kx18 - type: string 
+	Parameter C_USE_ECC_WACH bound to: 0 - type: integer 
+	Parameter C_USE_ECC_WDCH bound to: 0 - type: integer 
+	Parameter C_USE_ECC_WRCH bound to: 0 - type: integer 
+	Parameter C_USE_ECC_RACH bound to: 0 - type: integer 
+	Parameter C_USE_ECC_RDCH bound to: 0 - type: integer 
+	Parameter C_USE_ECC_AXIS bound to: 0 - type: integer 
+	Parameter C_ERROR_INJECTION_TYPE_WACH bound to: 0 - type: integer 
+	Parameter C_ERROR_INJECTION_TYPE_WDCH bound to: 0 - type: integer 
+	Parameter C_ERROR_INJECTION_TYPE_WRCH bound to: 0 - type: integer 
+	Parameter C_ERROR_INJECTION_TYPE_RACH bound to: 0 - type: integer 
+	Parameter C_ERROR_INJECTION_TYPE_RDCH bound to: 0 - type: integer 
+	Parameter C_ERROR_INJECTION_TYPE_AXIS bound to: 0 - type: integer 
+	Parameter C_DIN_WIDTH_WACH bound to: 1 - type: integer 
+	Parameter C_DIN_WIDTH_WDCH bound to: 64 - type: integer 
+	Parameter C_DIN_WIDTH_WRCH bound to: 2 - type: integer 
+	Parameter C_DIN_WIDTH_RACH bound to: 32 - type: integer 
+	Parameter C_DIN_WIDTH_RDCH bound to: 64 - type: integer 
+	Parameter C_DIN_WIDTH_AXIS bound to: 1 - type: integer 
+	Parameter C_WR_DEPTH_WACH bound to: 16 - type: integer 
+	Parameter C_WR_DEPTH_WDCH bound to: 1024 - type: integer 
+	Parameter C_WR_DEPTH_WRCH bound to: 16 - type: integer 
+	Parameter C_WR_DEPTH_RACH bound to: 16 - type: integer 
+	Parameter C_WR_DEPTH_RDCH bound to: 1024 - type: integer 
+	Parameter C_WR_DEPTH_AXIS bound to: 1024 - type: integer 
+	Parameter C_WR_PNTR_WIDTH_WACH bound to: 4 - type: integer 
+	Parameter C_WR_PNTR_WIDTH_WDCH bound to: 10 - type: integer 
+	Parameter C_WR_PNTR_WIDTH_WRCH bound to: 4 - type: integer 
+	Parameter C_WR_PNTR_WIDTH_RACH bound to: 4 - type: integer 
+	Parameter C_WR_PNTR_WIDTH_RDCH bound to: 10 - type: integer 
+	Parameter C_WR_PNTR_WIDTH_AXIS bound to: 10 - type: integer 
+	Parameter C_HAS_DATA_COUNTS_WACH bound to: 0 - type: integer 
+	Parameter C_HAS_DATA_COUNTS_WDCH bound to: 0 - type: integer 
+	Parameter C_HAS_DATA_COUNTS_WRCH bound to: 0 - type: integer 
+	Parameter C_HAS_DATA_COUNTS_RACH bound to: 0 - type: integer 
+	Parameter C_HAS_DATA_COUNTS_RDCH bound to: 0 - type: integer 
+	Parameter C_HAS_DATA_COUNTS_AXIS bound to: 0 - type: integer 
+	Parameter C_HAS_PROG_FLAGS_WACH bound to: 0 - type: integer 
+	Parameter C_HAS_PROG_FLAGS_WDCH bound to: 0 - type: integer 
+	Parameter C_HAS_PROG_FLAGS_WRCH bound to: 0 - type: integer 
+	Parameter C_HAS_PROG_FLAGS_RACH bound to: 0 - type: integer 
+	Parameter C_HAS_PROG_FLAGS_RDCH bound to: 0 - type: integer 
+	Parameter C_HAS_PROG_FLAGS_AXIS bound to: 0 - type: integer 
+	Parameter C_PROG_FULL_TYPE_WACH bound to: 0 - type: integer 
+	Parameter C_PROG_FULL_TYPE_WDCH bound to: 0 - type: integer 
+	Parameter C_PROG_FULL_TYPE_WRCH bound to: 0 - type: integer 
+	Parameter C_PROG_FULL_TYPE_RACH bound to: 0 - type: integer 
+	Parameter C_PROG_FULL_TYPE_RDCH bound to: 0 - type: integer 
+	Parameter C_PROG_FULL_TYPE_AXIS bound to: 0 - type: integer 
+	Parameter C_PROG_FULL_THRESH_ASSERT_VAL_WACH bound to: 1023 - type: integer 
+	Parameter C_PROG_FULL_THRESH_ASSERT_VAL_WDCH bound to: 1023 - type: integer 
+	Parameter C_PROG_FULL_THRESH_ASSERT_VAL_WRCH bound to: 1023 - type: integer 
+	Parameter C_PROG_FULL_THRESH_ASSERT_VAL_RACH bound to: 1023 - type: integer 
+	Parameter C_PROG_FULL_THRESH_ASSERT_VAL_RDCH bound to: 1023 - type: integer 
+	Parameter C_PROG_FULL_THRESH_ASSERT_VAL_AXIS bound to: 1023 - type: integer 
+	Parameter C_PROG_EMPTY_TYPE_WACH bound to: 0 - type: integer 
+	Parameter C_PROG_EMPTY_TYPE_WDCH bound to: 0 - type: integer 
+	Parameter C_PROG_EMPTY_TYPE_WRCH bound to: 0 - type: integer 
+	Parameter C_PROG_EMPTY_TYPE_RACH bound to: 0 - type: integer 
+	Parameter C_PROG_EMPTY_TYPE_RDCH bound to: 0 - type: integer 
+	Parameter C_PROG_EMPTY_TYPE_AXIS bound to: 0 - type: integer 
+	Parameter C_PROG_EMPTY_THRESH_ASSERT_VAL_WACH bound to: 1022 - type: integer 
+	Parameter C_PROG_EMPTY_THRESH_ASSERT_VAL_WDCH bound to: 1022 - type: integer 
+	Parameter C_PROG_EMPTY_THRESH_ASSERT_VAL_WRCH bound to: 1022 - type: integer 
+	Parameter C_PROG_EMPTY_THRESH_ASSERT_VAL_RACH bound to: 1022 - type: integer 
+	Parameter C_PROG_EMPTY_THRESH_ASSERT_VAL_RDCH bound to: 1022 - type: integer 
+	Parameter C_PROG_EMPTY_THRESH_ASSERT_VAL_AXIS bound to: 1022 - type: integer 
+	Parameter C_REG_SLICE_MODE_WACH bound to: 0 - type: integer 
+	Parameter C_REG_SLICE_MODE_WDCH bound to: 0 - type: integer 
+	Parameter C_REG_SLICE_MODE_WRCH bound to: 0 - type: integer 
+	Parameter C_REG_SLICE_MODE_RACH bound to: 0 - type: integer 
+	Parameter C_REG_SLICE_MODE_RDCH bound to: 0 - type: integer 
+	Parameter C_REG_SLICE_MODE_AXIS bound to: 0 - type: integer 
+INFO: [Synth 8-3491] module 'fifo_generator_v13_2_7' declared at 'c:/v22.2/FEB_fabric/feb_arty.tmp/feb_fabric_v1_0_project/FEB_fabric_v1_0_project.gen/sources_1/ip/SCFIFO_1Kx16/hdl/fifo_generator_v13_2_vhsyn_rfs.vhd:38604' bound to instance 'U0' of component 'fifo_generator_v13_2_7' [c:/v22.2/FEB_fabric/feb_arty.tmp/feb_fabric_v1_0_project/FEB_fabric_v1_0_project.gen/sources_1/ip/SCFIFO_1Kx16/synth/SCFIFO_1Kx16.vhd:543]
+INFO: [Synth 8-256] done synthesizing module 'SCFIFO_1Kx16' (0#1) [c:/v22.2/FEB_fabric/feb_arty.tmp/feb_fabric_v1_0_project/FEB_fabric_v1_0_project.gen/sources_1/ip/SCFIFO_1Kx16/synth/SCFIFO_1Kx16.vhd:75]
+INFO: [Synth 8-256] done synthesizing module 'EventBuilder' (0#1) [C:/v22.2/FEB_fabric/FEB_fabric.srcs/sources_1/new/EventBuilder.vhd:50]
+	Parameter DATA_WIDTH bound to: 16 - type: integer 
+	Parameter DDR3L_ADDR bound to: 14 - type: integer 
+	Parameter APP_ADDR bound to: 28 - type: integer 
+INFO: [Synth 8-3491] module 'DDR_Interface' declared at 'C:/v22.2/FEB_fabric/FEB_fabric.srcs/sources_1/new/DDR_Interface .vhd:26' bound to instance 'DDR_Interface_inst' of component 'DDR_Interface' [C:/v22.2/FEB_fabric/FEB_fabric.srcs/sources_1/new/FEB_top_ARTY.vhd:401]
+INFO: [Synth 8-638] synthesizing module 'DDR_Interface' [C:/v22.2/FEB_fabric/FEB_fabric.srcs/sources_1/new/DDR_Interface .vhd:80]
+	Parameter DATA_WIDTH bound to: 16 - type: integer 
+	Parameter DDR3L_ADDR bound to: 14 - type: integer 
+	Parameter APP_ADDR bound to: 28 - type: integer 
+WARNING: [Synth 8-5640] Port 'wr_rst_busy' is missing in component declaration [C:/v22.2/FEB_fabric/FEB_fabric.srcs/sources_1/new/Proj_Def.vhd:697]
+WARNING: [Synth 8-5640] Port 'rd_rst_busy' is missing in component declaration [C:/v22.2/FEB_fabric/FEB_fabric.srcs/sources_1/new/Proj_Def.vhd:697]
+INFO: [Synth 8-3491] module 'SCFIFO_32x256' declared at 'c:/v22.2/FEB_fabric/feb_arty.tmp/feb_fabric_v1_0_project/FEB_fabric_v1_0_project.gen/sources_1/ip/SCFIFO_32x256/synth/SCFIFO_32x256.vhd:59' bound to instance 'DDRAddrBuff' of component 'SCFIFO_32x256' [C:/v22.2/FEB_fabric/FEB_fabric.srcs/sources_1/new/DDR_Interface .vhd:154]
+WARNING: [Synth 8-5640] Port 'wr_rst_busy' is missing in component declaration [C:/v22.2/FEB_fabric/FEB_fabric.srcs/sources_1/new/Proj_Def.vhd:706]
+WARNING: [Synth 8-5640] Port 'rd_rst_busy' is missing in component declaration [C:/v22.2/FEB_fabric/FEB_fabric.srcs/sources_1/new/Proj_Def.vhd:706]
+INFO: [Synth 8-3491] module 'SCFIFO_1Kx16' declared at 'c:/v22.2/FEB_fabric/feb_arty.tmp/feb_fabric_v1_0_project/FEB_fabric_v1_0_project.gen/sources_1/ip/SCFIFO_1Kx16/synth/SCFIFO_1Kx16.vhd:59' bound to instance 'DDRRdBuff' of component 'SCFIFO_1kx16' [C:/v22.2/FEB_fabric/FEB_fabric.srcs/sources_1/new/DDR_Interface .vhd:167]
+INFO: [Synth 8-3491] module 'DDR3LController' declared at 'C:/v22.2/FEB_fabric/FEB_fabric.runs/synth_1/.Xil/Vivado-286380-CD-135239/realtime/DDR3LController_stub.vhdl:5' bound to instance 'DDR_Controller' of component 'DDR3LController' [C:/v22.2/FEB_fabric/FEB_fabric.srcs/sources_1/new/DDR_Interface .vhd:201]
+INFO: [Synth 8-638] synthesizing module 'DDR3LController' [C:/v22.2/FEB_fabric/FEB_fabric.runs/synth_1/.Xil/Vivado-286380-CD-135239/realtime/DDR3LController_stub.vhdl:51]
+INFO: [Synth 8-256] done synthesizing module 'DDR_Interface' (0#1) [C:/v22.2/FEB_fabric/FEB_fabric.srcs/sources_1/new/DDR_Interface .vhd:80]
+INFO: [Synth 8-256] done synthesizing module 'FEB_fabric' (0#1) [C:/v22.2/FEB_fabric/FEB_fabric.srcs/sources_1/new/FEB_top_ARTY.vhd:94]
+WARNING: [Synth 8-6014] Unused sequential element dout_AFE1_reg[0] was removed.  [C:/v22.2/FEB_fabric/FEB_fabric.srcs/sources_1/new/AFE_Interface_Sim.vhd:53]
+WARNING: [Synth 8-6014] Unused sequential element dout_AFE1_reg[1] was removed.  [C:/v22.2/FEB_fabric/FEB_fabric.srcs/sources_1/new/AFE_Interface_Sim.vhd:53]
+WARNING: [Synth 8-6014] Unused sequential element dout_AFE1_reg[2] was removed.  [C:/v22.2/FEB_fabric/FEB_fabric.srcs/sources_1/new/AFE_Interface_Sim.vhd:53]
+WARNING: [Synth 8-6014] Unused sequential element dout_AFE1_reg[3] was removed.  [C:/v22.2/FEB_fabric/FEB_fabric.srcs/sources_1/new/AFE_Interface_Sim.vhd:53]
+WARNING: [Synth 8-6014] Unused sequential element dout_AFE1_reg[4] was removed.  [C:/v22.2/FEB_fabric/FEB_fabric.srcs/sources_1/new/AFE_Interface_Sim.vhd:53]
+WARNING: [Synth 8-6014] Unused sequential element dout_AFE1_reg[5] was removed.  [C:/v22.2/FEB_fabric/FEB_fabric.srcs/sources_1/new/AFE_Interface_Sim.vhd:53]
+WARNING: [Synth 8-6014] Unused sequential element dout_AFE1_reg[6] was removed.  [C:/v22.2/FEB_fabric/FEB_fabric.srcs/sources_1/new/AFE_Interface_Sim.vhd:53]
+WARNING: [Synth 8-6014] Unused sequential element dout_AFE1_reg[7] was removed.  [C:/v22.2/FEB_fabric/FEB_fabric.srcs/sources_1/new/AFE_Interface_Sim.vhd:53]
+WARNING: [Synth 8-6014] Unused sequential element Gen_Two_AFEs[0].Gen_Eight_Chans[0].In_Seq_Stat_reg[0] was removed.  [C:/v22.2/FEB_fabric/FEB_fabric.srcs/sources_1/new/AFE_DataPath.vhd:252]
+WARNING: [Synth 8-6014] Unused sequential element Gen_Two_AFEs[0].Gen_Eight_Chans[1].In_Seq_Stat_reg[0] was removed.  [C:/v22.2/FEB_fabric/FEB_fabric.srcs/sources_1/new/AFE_DataPath.vhd:252]
+WARNING: [Synth 8-6014] Unused sequential element Gen_Two_AFEs[0].Gen_Eight_Chans[2].In_Seq_Stat_reg[0] was removed.  [C:/v22.2/FEB_fabric/FEB_fabric.srcs/sources_1/new/AFE_DataPath.vhd:252]
+WARNING: [Synth 8-6014] Unused sequential element Gen_Two_AFEs[0].Gen_Eight_Chans[3].In_Seq_Stat_reg[0] was removed.  [C:/v22.2/FEB_fabric/FEB_fabric.srcs/sources_1/new/AFE_DataPath.vhd:252]
+WARNING: [Synth 8-6014] Unused sequential element Gen_Two_AFEs[0].Gen_Eight_Chans[4].In_Seq_Stat_reg[0] was removed.  [C:/v22.2/FEB_fabric/FEB_fabric.srcs/sources_1/new/AFE_DataPath.vhd:252]
+WARNING: [Synth 8-6014] Unused sequential element Gen_Two_AFEs[0].Gen_Eight_Chans[5].In_Seq_Stat_reg[0] was removed.  [C:/v22.2/FEB_fabric/FEB_fabric.srcs/sources_1/new/AFE_DataPath.vhd:252]
+WARNING: [Synth 8-6014] Unused sequential element Gen_Two_AFEs[0].Gen_Eight_Chans[6].In_Seq_Stat_reg[0] was removed.  [C:/v22.2/FEB_fabric/FEB_fabric.srcs/sources_1/new/AFE_DataPath.vhd:252]
+WARNING: [Synth 8-6014] Unused sequential element Gen_Two_AFEs[0].Gen_Eight_Chans[7].In_Seq_Stat_reg[0] was removed.  [C:/v22.2/FEB_fabric/FEB_fabric.srcs/sources_1/new/AFE_DataPath.vhd:252]
+WARNING: [Synth 8-6014] Unused sequential element Gen_Two_AFEs[1].Gen_Eight_Chans[0].In_Seq_Stat_reg[1] was removed.  [C:/v22.2/FEB_fabric/FEB_fabric.srcs/sources_1/new/AFE_DataPath.vhd:252]
+WARNING: [Synth 8-6014] Unused sequential element Gen_Two_AFEs[1].Gen_Eight_Chans[1].In_Seq_Stat_reg[1] was removed.  [C:/v22.2/FEB_fabric/FEB_fabric.srcs/sources_1/new/AFE_DataPath.vhd:252]
+WARNING: [Synth 8-6014] Unused sequential element Gen_Two_AFEs[1].Gen_Eight_Chans[2].In_Seq_Stat_reg[1] was removed.  [C:/v22.2/FEB_fabric/FEB_fabric.srcs/sources_1/new/AFE_DataPath.vhd:252]
+WARNING: [Synth 8-6014] Unused sequential element Gen_Two_AFEs[1].Gen_Eight_Chans[3].In_Seq_Stat_reg[1] was removed.  [C:/v22.2/FEB_fabric/FEB_fabric.srcs/sources_1/new/AFE_DataPath.vhd:252]
+WARNING: [Synth 8-6014] Unused sequential element Gen_Two_AFEs[1].Gen_Eight_Chans[4].In_Seq_Stat_reg[1] was removed.  [C:/v22.2/FEB_fabric/FEB_fabric.srcs/sources_1/new/AFE_DataPath.vhd:252]
+WARNING: [Synth 8-6014] Unused sequential element Gen_Two_AFEs[1].Gen_Eight_Chans[5].In_Seq_Stat_reg[1] was removed.  [C:/v22.2/FEB_fabric/FEB_fabric.srcs/sources_1/new/AFE_DataPath.vhd:252]
+WARNING: [Synth 8-6014] Unused sequential element Gen_Two_AFEs[1].Gen_Eight_Chans[6].In_Seq_Stat_reg[1] was removed.  [C:/v22.2/FEB_fabric/FEB_fabric.srcs/sources_1/new/AFE_DataPath.vhd:252]
+WARNING: [Synth 8-6014] Unused sequential element Gen_Two_AFEs[1].Gen_Eight_Chans[7].In_Seq_Stat_reg[1] was removed.  [C:/v22.2/FEB_fabric/FEB_fabric.srcs/sources_1/new/AFE_DataPath.vhd:252]
+INFO: [Synth 8-6071] Mark debug on the nets applies keep_hierarchy on instance 'Trigger_logic'. This will prevent further optimization [C:/v22.2/FEB_fabric/FEB_fabric.srcs/sources_1/new/FEB_top_ARTY.vhd:344]
+WARNING: [Synth 8-6014] Unused sequential element RxIn_reg[Clr_Err] was removed.  [C:/v22.2/FEB_fabric/FEB_fabric.srcs/sources_1/new/Trigger.vhd:100]
+WARNING: [Synth 8-6014] Unused sequential element Read_Seq_Stat_reg was removed.  [C:/v22.2/FEB_fabric/FEB_fabric.srcs/sources_1/new/EventBuilder.vhd:148]
+WARNING: [Synth 8-3848] Net rstDDRRdBuff in module/entity DDR_Interface does not have driver. [C:/v22.2/FEB_fabric/FEB_fabric.srcs/sources_1/new/DDR_Interface .vhd:131]
+WARNING: [Synth 8-6014] Unused sequential element uRDDL_reg was removed.  [C:/v22.2/FEB_fabric/FEB_fabric.srcs/sources_1/new/FEB_top_ARTY.vhd:216]
+WARNING: [Synth 8-6014] Unused sequential element uAddrReg_reg was removed.  [C:/v22.2/FEB_fabric/FEB_fabric.srcs/sources_1/new/FEB_top_ARTY.vhd:217]
+WARNING: [Synth 8-3848] Net PipelineSet in module/entity FEB_fabric does not have driver. [C:/v22.2/FEB_fabric/FEB_fabric.srcs/sources_1/new/FEB_top_ARTY.vhd:153]
+WARNING: [Synth 8-7129] Port ALMOST_FULL_I in module output_blk__parameterized0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port PROG_FULL_I in module output_blk__parameterized0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port ALMOST_EMPTY_I in module output_blk__parameterized0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port PROG_EMPTY_I in module output_blk__parameterized0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port WR_ACK_I in module output_blk__parameterized0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port VALID_I in module output_blk__parameterized0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port OVERFLOW_I in module output_blk__parameterized0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port UNDERFLOW_I in module output_blk__parameterized0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port WR_DATA_COUNT_I[10] in module output_blk__parameterized0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port WR_DATA_COUNT_I[9] in module output_blk__parameterized0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port WR_DATA_COUNT_I[8] in module output_blk__parameterized0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port WR_DATA_COUNT_I[7] in module output_blk__parameterized0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port WR_DATA_COUNT_I[6] in module output_blk__parameterized0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port WR_DATA_COUNT_I[5] in module output_blk__parameterized0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port WR_DATA_COUNT_I[4] in module output_blk__parameterized0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port WR_DATA_COUNT_I[3] in module output_blk__parameterized0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port WR_DATA_COUNT_I[2] in module output_blk__parameterized0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port WR_DATA_COUNT_I[1] in module output_blk__parameterized0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port WR_DATA_COUNT_I[0] in module output_blk__parameterized0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port RD_DATA_COUNT_I[10] in module output_blk__parameterized0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port RD_DATA_COUNT_I[9] in module output_blk__parameterized0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port RD_DATA_COUNT_I[8] in module output_blk__parameterized0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port RD_DATA_COUNT_I[7] in module output_blk__parameterized0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port RD_DATA_COUNT_I[6] in module output_blk__parameterized0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port RD_DATA_COUNT_I[5] in module output_blk__parameterized0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port RD_DATA_COUNT_I[4] in module output_blk__parameterized0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port RD_DATA_COUNT_I[3] in module output_blk__parameterized0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port RD_DATA_COUNT_I[2] in module output_blk__parameterized0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port RD_DATA_COUNT_I[1] in module output_blk__parameterized0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port RD_DATA_COUNT_I[0] in module output_blk__parameterized0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port SBITERR_I in module output_blk__parameterized0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port DBITERR_I in module output_blk__parameterized0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port RST_FULL_FF in module wr_status_flags_ss is either unconnected or has no load
+WARNING: [Synth 8-7129] Port WR_RST in module wr_status_flags_ss is either unconnected or has no load
+WARNING: [Synth 8-7129] Port SRST in module wr_status_flags_ss is either unconnected or has no load
+WARNING: [Synth 8-7129] Port SAFETY_CKT_WR_RST in module wr_status_flags_ss is either unconnected or has no load
+WARNING: [Synth 8-7129] Port WR_PNTR_PLUS2[9] in module wr_status_flags_ss is either unconnected or has no load
+WARNING: [Synth 8-7129] Port WR_PNTR_PLUS2[8] in module wr_status_flags_ss is either unconnected or has no load
+WARNING: [Synth 8-7129] Port WR_PNTR_PLUS2[7] in module wr_status_flags_ss is either unconnected or has no load
+WARNING: [Synth 8-7129] Port WR_PNTR_PLUS2[6] in module wr_status_flags_ss is either unconnected or has no load
+WARNING: [Synth 8-7129] Port WR_PNTR_PLUS2[5] in module wr_status_flags_ss is either unconnected or has no load
+WARNING: [Synth 8-7129] Port WR_PNTR_PLUS2[4] in module wr_status_flags_ss is either unconnected or has no load
+WARNING: [Synth 8-7129] Port WR_PNTR_PLUS2[3] in module wr_status_flags_ss is either unconnected or has no load
+WARNING: [Synth 8-7129] Port WR_PNTR_PLUS2[2] in module wr_status_flags_ss is either unconnected or has no load
+WARNING: [Synth 8-7129] Port WR_PNTR_PLUS2[1] in module wr_status_flags_ss is either unconnected or has no load
+WARNING: [Synth 8-7129] Port WR_PNTR_PLUS2[0] in module wr_status_flags_ss is either unconnected or has no load
+WARNING: [Synth 8-7129] Port WR_PNTR_PLUS3[9] in module wr_status_flags_ss is either unconnected or has no load
+WARNING: [Synth 8-7129] Port WR_PNTR_PLUS3[8] in module wr_status_flags_ss is either unconnected or has no load
+WARNING: [Synth 8-7129] Port WR_PNTR_PLUS3[7] in module wr_status_flags_ss is either unconnected or has no load
+WARNING: [Synth 8-7129] Port WR_PNTR_PLUS3[6] in module wr_status_flags_ss is either unconnected or has no load
+WARNING: [Synth 8-7129] Port WR_PNTR_PLUS3[5] in module wr_status_flags_ss is either unconnected or has no load
+WARNING: [Synth 8-7129] Port WR_PNTR_PLUS3[4] in module wr_status_flags_ss is either unconnected or has no load
+WARNING: [Synth 8-7129] Port WR_PNTR_PLUS3[3] in module wr_status_flags_ss is either unconnected or has no load
+WARNING: [Synth 8-7129] Port WR_PNTR_PLUS3[2] in module wr_status_flags_ss is either unconnected or has no load
+WARNING: [Synth 8-7129] Port WR_PNTR_PLUS3[1] in module wr_status_flags_ss is either unconnected or has no load
+WARNING: [Synth 8-7129] Port WR_PNTR_PLUS3[0] in module wr_status_flags_ss is either unconnected or has no load
+WARNING: [Synth 8-7129] Port RST in module wr_bin_cntr is either unconnected or has no load
+WARNING: [Synth 8-7129] Port WR_EN_INTO_LOGIC in module wr_logic is either unconnected or has no load
+WARNING: [Synth 8-7129] Port WR_RST_INTO_LOGIC in module wr_logic is either unconnected or has no load
+WARNING: [Synth 8-7129] Port RD_EN in module wr_logic is either unconnected or has no load
+WARNING: [Synth 8-7129] Port WR_RST_BUSY in module wr_logic is either unconnected or has no load
+WARNING: [Synth 8-7129] Port EMPTY in module wr_logic is either unconnected or has no load
+WARNING: [Synth 8-7129] Port ALMOST_EMPTY in module wr_logic is either unconnected or has no load
+WARNING: [Synth 8-7129] Port PROG_FULL_THRESH[9] in module wr_logic is either unconnected or has no load
+WARNING: [Synth 8-7129] Port PROG_FULL_THRESH[8] in module wr_logic is either unconnected or has no load
+WARNING: [Synth 8-7129] Port PROG_FULL_THRESH[7] in module wr_logic is either unconnected or has no load
+WARNING: [Synth 8-7129] Port PROG_FULL_THRESH[6] in module wr_logic is either unconnected or has no load
+WARNING: [Synth 8-7129] Port PROG_FULL_THRESH[5] in module wr_logic is either unconnected or has no load
+WARNING: [Synth 8-7129] Port PROG_FULL_THRESH[4] in module wr_logic is either unconnected or has no load
+WARNING: [Synth 8-7129] Port PROG_FULL_THRESH[3] in module wr_logic is either unconnected or has no load
+WARNING: [Synth 8-7129] Port PROG_FULL_THRESH[2] in module wr_logic is either unconnected or has no load
+WARNING: [Synth 8-7129] Port PROG_FULL_THRESH[1] in module wr_logic is either unconnected or has no load
+WARNING: [Synth 8-7129] Port PROG_FULL_THRESH[0] in module wr_logic is either unconnected or has no load
+WARNING: [Synth 8-7129] Port PROG_FULL_THRESH_ASSERT[9] in module wr_logic is either unconnected or has no load
+WARNING: [Synth 8-7129] Port PROG_FULL_THRESH_ASSERT[8] in module wr_logic is either unconnected or has no load
+WARNING: [Synth 8-7129] Port PROG_FULL_THRESH_ASSERT[7] in module wr_logic is either unconnected or has no load
+WARNING: [Synth 8-7129] Port PROG_FULL_THRESH_ASSERT[6] in module wr_logic is either unconnected or has no load
+WARNING: [Synth 8-7129] Port PROG_FULL_THRESH_ASSERT[5] in module wr_logic is either unconnected or has no load
+WARNING: [Synth 8-7129] Port PROG_FULL_THRESH_ASSERT[4] in module wr_logic is either unconnected or has no load
+WARNING: [Synth 8-7129] Port PROG_FULL_THRESH_ASSERT[3] in module wr_logic is either unconnected or has no load
+WARNING: [Synth 8-7129] Port PROG_FULL_THRESH_ASSERT[2] in module wr_logic is either unconnected or has no load
+WARNING: [Synth 8-7129] Port PROG_FULL_THRESH_ASSERT[1] in module wr_logic is either unconnected or has no load
+WARNING: [Synth 8-7129] Port PROG_FULL_THRESH_ASSERT[0] in module wr_logic is either unconnected or has no load
+WARNING: [Synth 8-7129] Port PROG_FULL_THRESH_NEGATE[9] in module wr_logic is either unconnected or has no load
+WARNING: [Synth 8-7129] Port PROG_FULL_THRESH_NEGATE[8] in module wr_logic is either unconnected or has no load
+WARNING: [Synth 8-7129] Port PROG_FULL_THRESH_NEGATE[7] in module wr_logic is either unconnected or has no load
+WARNING: [Synth 8-7129] Port PROG_FULL_THRESH_NEGATE[6] in module wr_logic is either unconnected or has no load
+WARNING: [Synth 8-7129] Port PROG_FULL_THRESH_NEGATE[5] in module wr_logic is either unconnected or has no load
+WARNING: [Synth 8-7129] Port PROG_FULL_THRESH_NEGATE[4] in module wr_logic is either unconnected or has no load
+WARNING: [Synth 8-7129] Port PROG_FULL_THRESH_NEGATE[3] in module wr_logic is either unconnected or has no load
+WARNING: [Synth 8-7129] Port PROG_FULL_THRESH_NEGATE[2] in module wr_logic is either unconnected or has no load
+WARNING: [Synth 8-7129] Port PROG_FULL_THRESH_NEGATE[1] in module wr_logic is either unconnected or has no load
+WARNING: [Synth 8-7129] Port PROG_FULL_THRESH_NEGATE[0] in module wr_logic is either unconnected or has no load
+WARNING: [Synth 8-7129] Port RST in module updn_cntr is either unconnected or has no load
+WARNING: [Synth 8-7129] Port RD_RST in module rd_fwft is either unconnected or has no load
+WARNING: [Synth 8-7129] Port SAFETY_CKT_RD_RST in module rd_fwft is either unconnected or has no load
+WARNING: [Synth 8-7129] Port RAM_ALMOST_EMPTY in module rd_fwft is either unconnected or has no load
+WARNING: [Synth 8-7129] Port RD_RST in module rd_status_flags_ss is either unconnected or has no load
+WARNING: [Synth 8-7129] Port SAFETY_CKT_RD_RST in module rd_status_flags_ss is either unconnected or has no load
+WARNING: [Synth 8-7129] Port RD_PNTR_PLUS2[9] in module rd_status_flags_ss is either unconnected or has no load
+INFO: [Common 17-14] Message 'Synth 8-7129' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:48 ; elapsed = 00:00:49 . Memory (MB): peak = 2513.211 ; gain = 1044.242
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:48 ; elapsed = 00:00:50 . Memory (MB): peak = 2513.211 ; gain = 1044.242
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:48 ; elapsed = 00:00:50 . Memory (MB): peak = 2513.211 ; gain = 1044.242
+---------------------------------------------------------------------------------
+Netlist sorting complete. Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.377 . Memory (MB): peak = 2513.211 ; gain = 0.000
+INFO: [Netlist 29-17] Analyzing 105 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-570] Preparing netlist for logic optimization
+
+Processing XDC Constraints
+Initializing timing engine
+Parsing XDC File [c:/v22.2/FEB_fabric/ARTY.gen/sources_1/ip/DDR3LController/DDR3LController/DDR3LController_in_context.xdc] for cell 'DDR_Interface_inst/DDR_Controller'
+Finished Parsing XDC File [c:/v22.2/FEB_fabric/ARTY.gen/sources_1/ip/DDR3LController/DDR3LController/DDR3LController_in_context.xdc] for cell 'DDR_Interface_inst/DDR_Controller'
+Parsing XDC File [c:/v22.2/FEB_fabric/feb_arty.tmp/feb_fabric_v1_0_project/FEB_fabric_v1_0_project.gen/sources_1/ip/SCFIFO_1Kx16/SCFIFO_1Kx16.xdc] for cell 'DDR_Interface_inst/DDRRdBuff/U0'
+Finished Parsing XDC File [c:/v22.2/FEB_fabric/feb_arty.tmp/feb_fabric_v1_0_project/FEB_fabric_v1_0_project.gen/sources_1/ip/SCFIFO_1Kx16/SCFIFO_1Kx16.xdc] for cell 'DDR_Interface_inst/DDRRdBuff/U0'
+Parsing XDC File [c:/v22.2/FEB_fabric/feb_arty.tmp/feb_fabric_v1_0_project/FEB_fabric_v1_0_project.gen/sources_1/ip/SCFIFO_1Kx16/SCFIFO_1Kx16.xdc] for cell 'EventBuilder_logic/EventBuff/U0'
+Finished Parsing XDC File [c:/v22.2/FEB_fabric/feb_arty.tmp/feb_fabric_v1_0_project/FEB_fabric_v1_0_project.gen/sources_1/ip/SCFIFO_1Kx16/SCFIFO_1Kx16.xdc] for cell 'EventBuilder_logic/EventBuff/U0'
+Parsing XDC File [c:/v22.2/FEB_fabric/feb_arty.tmp/feb_fabric_v1_0_project/FEB_fabric_v1_0_project.gen/sources_1/ip/SCFIFO_32x256/SCFIFO_32x256.xdc] for cell 'DDR_Interface_inst/DDRAddrBuff/U0'
+Finished Parsing XDC File [c:/v22.2/FEB_fabric/feb_arty.tmp/feb_fabric_v1_0_project/FEB_fabric_v1_0_project.gen/sources_1/ip/SCFIFO_32x256/SCFIFO_32x256.xdc] for cell 'DDR_Interface_inst/DDRAddrBuff/U0'
+Parsing XDC File [c:/v22.2/FEB_fabric/feb_arty.tmp/feb_fabric_v1_0_project/FEB_fabric_v1_0_project.gen/sources_1/ip/SCFIFO_32x256/SCFIFO_32x256.xdc] for cell 'EventBuilder_logic/uBunchBuffer/U0'
+Finished Parsing XDC File [c:/v22.2/FEB_fabric/feb_arty.tmp/feb_fabric_v1_0_project/FEB_fabric_v1_0_project.gen/sources_1/ip/SCFIFO_32x256/SCFIFO_32x256.xdc] for cell 'EventBuilder_logic/uBunchBuffer/U0'
+Parsing XDC File [C:/v22.2/FEB_fabric/FEB_fabric.srcs/constrs_1/new/pinout.xdc]
+WARNING: [Vivado 12-507] No nets matched 'CpldRst_IBUF'. [C:/v22.2/FEB_fabric/FEB_fabric.srcs/constrs_1/new/pinout.xdc:71]
+Finished Parsing XDC File [C:/v22.2/FEB_fabric/FEB_fabric.srcs/constrs_1/new/pinout.xdc]
+WARNING: [Project 1-498] One or more constraints failed evaluation while reading constraint file [C:/v22.2/FEB_fabric/FEB_fabric.srcs/constrs_1/new/pinout.xdc] and the design contains unresolved black boxes. These constraints will be read post-synthesis (as long as their source constraint file is marked as used_in_implementation) and should be applied correctly then. You should review the constraints listed in the file [.Xil/FEB_fabric_propImpl.xdc] and check the run log file to verify that these constraints were correctly applied.
+INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [C:/v22.2/FEB_fabric/FEB_fabric.srcs/constrs_1/new/pinout.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/FEB_fabric_propImpl.xdc].
+Resolution: To avoid this warning, move constraints listed in [.Xil/FEB_fabric_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
+Parsing XDC File [C:/v22.2/FEB_fabric/FEB_fabric.srcs/constrs_1/new/timing.xdc]
+WARNING: [Vivado 12-627] No clocks matched 'clk_pll_i'. [C:/v22.2/FEB_fabric/FEB_fabric.srcs/constrs_1/new/timing.xdc:3]
+INFO: [Vivado 12-626] No clocks found. Please use 'create_clock' or 'create_generated_clock' command to create clocks. [C:/v22.2/FEB_fabric/FEB_fabric.srcs/constrs_1/new/timing.xdc:3]
+Finished Parsing XDC File [C:/v22.2/FEB_fabric/FEB_fabric.srcs/constrs_1/new/timing.xdc]
+WARNING: [Project 1-498] One or more constraints failed evaluation while reading constraint file [C:/v22.2/FEB_fabric/FEB_fabric.srcs/constrs_1/new/timing.xdc] and the design contains unresolved black boxes. These constraints will be read post-synthesis (as long as their source constraint file is marked as used_in_implementation) and should be applied correctly then. You should review the constraints listed in the file [.Xil/FEB_fabric_propImpl.xdc] and check the run log file to verify that these constraints were correctly applied.
+INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [C:/v22.2/FEB_fabric/FEB_fabric.srcs/constrs_1/new/timing.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/FEB_fabric_propImpl.xdc].
+Resolution: To avoid this warning, move constraints listed in [.Xil/FEB_fabric_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
+Parsing XDC File [C:/v22.2/FEB_fabric/FEB_fabric.runs/synth_1/dont_touch.xdc]
+Finished Parsing XDC File [C:/v22.2/FEB_fabric/FEB_fabric.runs/synth_1/dont_touch.xdc]
+INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [C:/v22.2/FEB_fabric/FEB_fabric.runs/synth_1/dont_touch.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/FEB_fabric_propImpl.xdc].
+Resolution: To avoid this warning, move constraints listed in [.Xil/FEB_fabric_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
+INFO: [Project 1-1714] 4 XPM XDC files have been applied to the design.
+Completed Processing XDC Constraints
+
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.003 . Memory (MB): peak = 2513.211 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.342 . Memory (MB): peak = 2513.211 ; gain = 0.000
+INFO: [Designutils 20-5440] No compile time benefit to using incremental synthesis; A full resynthesis will be run
+INFO: [Designutils 20-4379] Flow is switching to default flow due to incremental criteria not met. If you would like to alter this behaviour and have the flow terminate instead, please set the following parameter config_implementation {autoIncr.Synth.RejectBehavior Terminate}
+INFO: [Synth 8-11241] undeclared symbol 'REGCCE', assumed default net type 'wire' [C:/Xilinx/Vivado/2022.2/data/verilog/src/unimacro/BRAM_SINGLE_MACRO.v:2170]
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:01:01 ; elapsed = 00:01:03 . Memory (MB): peak = 2513.211 ; gain = 1044.242
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Loading Part and Timing Information
+---------------------------------------------------------------------------------
+Loading part: xc7s50csga324-1
+---------------------------------------------------------------------------------
+Finished Loading Part and Timing Information : Time (s): cpu = 00:01:01 ; elapsed = 00:01:03 . Memory (MB): peak = 2513.211 ; gain = 1044.242
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying 'set_property' XDC Constraints
+---------------------------------------------------------------------------------
+Applied set_property IO_BUFFER_TYPE = NONE for DDR_ADDR[0]. (constraint file  c:/v22.2/FEB_fabric/ARTY.gen/sources_1/ip/DDR3LController/DDR3LController/DDR3LController_in_context.xdc, line 3).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for DDR_ADDR[0]. (constraint file  c:/v22.2/FEB_fabric/ARTY.gen/sources_1/ip/DDR3LController/DDR3LController/DDR3LController_in_context.xdc, line 4).
+Applied set_property IO_BUFFER_TYPE = NONE for DDR_ADDR[10]. (constraint file  c:/v22.2/FEB_fabric/ARTY.gen/sources_1/ip/DDR3LController/DDR3LController/DDR3LController_in_context.xdc, line 5).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for DDR_ADDR[10]. (constraint file  c:/v22.2/FEB_fabric/ARTY.gen/sources_1/ip/DDR3LController/DDR3LController/DDR3LController_in_context.xdc, line 6).
+Applied set_property IO_BUFFER_TYPE = NONE for DDR_ADDR[11]. (constraint file  c:/v22.2/FEB_fabric/ARTY.gen/sources_1/ip/DDR3LController/DDR3LController/DDR3LController_in_context.xdc, line 7).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for DDR_ADDR[11]. (constraint file  c:/v22.2/FEB_fabric/ARTY.gen/sources_1/ip/DDR3LController/DDR3LController/DDR3LController_in_context.xdc, line 8).
+Applied set_property IO_BUFFER_TYPE = NONE for DDR_ADDR[12]. (constraint file  c:/v22.2/FEB_fabric/ARTY.gen/sources_1/ip/DDR3LController/DDR3LController/DDR3LController_in_context.xdc, line 9).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for DDR_ADDR[12]. (constraint file  c:/v22.2/FEB_fabric/ARTY.gen/sources_1/ip/DDR3LController/DDR3LController/DDR3LController_in_context.xdc, line 10).
+Applied set_property IO_BUFFER_TYPE = NONE for DDR_ADDR[13]. (constraint file  c:/v22.2/FEB_fabric/ARTY.gen/sources_1/ip/DDR3LController/DDR3LController/DDR3LController_in_context.xdc, line 11).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for DDR_ADDR[13]. (constraint file  c:/v22.2/FEB_fabric/ARTY.gen/sources_1/ip/DDR3LController/DDR3LController/DDR3LController_in_context.xdc, line 12).
+Applied set_property IO_BUFFER_TYPE = NONE for DDR_ADDR[1]. (constraint file  c:/v22.2/FEB_fabric/ARTY.gen/sources_1/ip/DDR3LController/DDR3LController/DDR3LController_in_context.xdc, line 13).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for DDR_ADDR[1]. (constraint file  c:/v22.2/FEB_fabric/ARTY.gen/sources_1/ip/DDR3LController/DDR3LController/DDR3LController_in_context.xdc, line 14).
+Applied set_property IO_BUFFER_TYPE = NONE for DDR_ADDR[2]. (constraint file  c:/v22.2/FEB_fabric/ARTY.gen/sources_1/ip/DDR3LController/DDR3LController/DDR3LController_in_context.xdc, line 15).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for DDR_ADDR[2]. (constraint file  c:/v22.2/FEB_fabric/ARTY.gen/sources_1/ip/DDR3LController/DDR3LController/DDR3LController_in_context.xdc, line 16).
+Applied set_property IO_BUFFER_TYPE = NONE for DDR_ADDR[3]. (constraint file  c:/v22.2/FEB_fabric/ARTY.gen/sources_1/ip/DDR3LController/DDR3LController/DDR3LController_in_context.xdc, line 17).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for DDR_ADDR[3]. (constraint file  c:/v22.2/FEB_fabric/ARTY.gen/sources_1/ip/DDR3LController/DDR3LController/DDR3LController_in_context.xdc, line 18).
+Applied set_property IO_BUFFER_TYPE = NONE for DDR_ADDR[4]. (constraint file  c:/v22.2/FEB_fabric/ARTY.gen/sources_1/ip/DDR3LController/DDR3LController/DDR3LController_in_context.xdc, line 19).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for DDR_ADDR[4]. (constraint file  c:/v22.2/FEB_fabric/ARTY.gen/sources_1/ip/DDR3LController/DDR3LController/DDR3LController_in_context.xdc, line 20).
+Applied set_property IO_BUFFER_TYPE = NONE for DDR_ADDR[5]. (constraint file  c:/v22.2/FEB_fabric/ARTY.gen/sources_1/ip/DDR3LController/DDR3LController/DDR3LController_in_context.xdc, line 21).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for DDR_ADDR[5]. (constraint file  c:/v22.2/FEB_fabric/ARTY.gen/sources_1/ip/DDR3LController/DDR3LController/DDR3LController_in_context.xdc, line 22).
+Applied set_property IO_BUFFER_TYPE = NONE for DDR_ADDR[6]. (constraint file  c:/v22.2/FEB_fabric/ARTY.gen/sources_1/ip/DDR3LController/DDR3LController/DDR3LController_in_context.xdc, line 23).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for DDR_ADDR[6]. (constraint file  c:/v22.2/FEB_fabric/ARTY.gen/sources_1/ip/DDR3LController/DDR3LController/DDR3LController_in_context.xdc, line 24).
+Applied set_property IO_BUFFER_TYPE = NONE for DDR_ADDR[7]. (constraint file  c:/v22.2/FEB_fabric/ARTY.gen/sources_1/ip/DDR3LController/DDR3LController/DDR3LController_in_context.xdc, line 25).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for DDR_ADDR[7]. (constraint file  c:/v22.2/FEB_fabric/ARTY.gen/sources_1/ip/DDR3LController/DDR3LController/DDR3LController_in_context.xdc, line 26).
+Applied set_property IO_BUFFER_TYPE = NONE for DDR_ADDR[8]. (constraint file  c:/v22.2/FEB_fabric/ARTY.gen/sources_1/ip/DDR3LController/DDR3LController/DDR3LController_in_context.xdc, line 27).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for DDR_ADDR[8]. (constraint file  c:/v22.2/FEB_fabric/ARTY.gen/sources_1/ip/DDR3LController/DDR3LController/DDR3LController_in_context.xdc, line 28).
+Applied set_property IO_BUFFER_TYPE = NONE for DDR_ADDR[9]. (constraint file  c:/v22.2/FEB_fabric/ARTY.gen/sources_1/ip/DDR3LController/DDR3LController/DDR3LController_in_context.xdc, line 29).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for DDR_ADDR[9]. (constraint file  c:/v22.2/FEB_fabric/ARTY.gen/sources_1/ip/DDR3LController/DDR3LController/DDR3LController_in_context.xdc, line 30).
+Applied set_property IO_BUFFER_TYPE = NONE for BA[0]. (constraint file  c:/v22.2/FEB_fabric/ARTY.gen/sources_1/ip/DDR3LController/DDR3LController/DDR3LController_in_context.xdc, line 31).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for BA[0]. (constraint file  c:/v22.2/FEB_fabric/ARTY.gen/sources_1/ip/DDR3LController/DDR3LController/DDR3LController_in_context.xdc, line 32).
+Applied set_property IO_BUFFER_TYPE = NONE for BA[1]. (constraint file  c:/v22.2/FEB_fabric/ARTY.gen/sources_1/ip/DDR3LController/DDR3LController/DDR3LController_in_context.xdc, line 33).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for BA[1]. (constraint file  c:/v22.2/FEB_fabric/ARTY.gen/sources_1/ip/DDR3LController/DDR3LController/DDR3LController_in_context.xdc, line 34).
+Applied set_property IO_BUFFER_TYPE = NONE for BA[2]. (constraint file  c:/v22.2/FEB_fabric/ARTY.gen/sources_1/ip/DDR3LController/DDR3LController/DDR3LController_in_context.xdc, line 35).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for BA[2]. (constraint file  c:/v22.2/FEB_fabric/ARTY.gen/sources_1/ip/DDR3LController/DDR3LController/DDR3LController_in_context.xdc, line 36).
+Applied set_property IO_BUFFER_TYPE = NONE for CAS. (constraint file  c:/v22.2/FEB_fabric/ARTY.gen/sources_1/ip/DDR3LController/DDR3LController/DDR3LController_in_context.xdc, line 37).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for CAS. (constraint file  c:/v22.2/FEB_fabric/ARTY.gen/sources_1/ip/DDR3LController/DDR3LController/DDR3LController_in_context.xdc, line 38).
+Applied set_property IO_BUFFER_TYPE = NONE for DDR_CLKN[0]. (constraint file  c:/v22.2/FEB_fabric/ARTY.gen/sources_1/ip/DDR3LController/DDR3LController/DDR3LController_in_context.xdc, line 39).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for DDR_CLKN[0]. (constraint file  c:/v22.2/FEB_fabric/ARTY.gen/sources_1/ip/DDR3LController/DDR3LController/DDR3LController_in_context.xdc, line 40).
+Applied set_property IO_BUFFER_TYPE = NONE for DDR_CLKP[0]. (constraint file  c:/v22.2/FEB_fabric/ARTY.gen/sources_1/ip/DDR3LController/DDR3LController/DDR3LController_in_context.xdc, line 41).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for DDR_CLKP[0]. (constraint file  c:/v22.2/FEB_fabric/ARTY.gen/sources_1/ip/DDR3LController/DDR3LController/DDR3LController_in_context.xdc, line 42).
+Applied set_property IO_BUFFER_TYPE = NONE for DDR_CKE[0]. (constraint file  c:/v22.2/FEB_fabric/ARTY.gen/sources_1/ip/DDR3LController/DDR3LController/DDR3LController_in_context.xdc, line 43).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for DDR_CKE[0]. (constraint file  c:/v22.2/FEB_fabric/ARTY.gen/sources_1/ip/DDR3LController/DDR3LController/DDR3LController_in_context.xdc, line 44).
+Applied set_property IO_BUFFER_TYPE = NONE for CS[0]. (constraint file  c:/v22.2/FEB_fabric/ARTY.gen/sources_1/ip/DDR3LController/DDR3LController/DDR3LController_in_context.xdc, line 45).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for CS[0]. (constraint file  c:/v22.2/FEB_fabric/ARTY.gen/sources_1/ip/DDR3LController/DDR3LController/DDR3LController_in_context.xdc, line 46).
+Applied set_property IO_BUFFER_TYPE = NONE for DM[0]. (constraint file  c:/v22.2/FEB_fabric/ARTY.gen/sources_1/ip/DDR3LController/DDR3LController/DDR3LController_in_context.xdc, line 47).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for DM[0]. (constraint file  c:/v22.2/FEB_fabric/ARTY.gen/sources_1/ip/DDR3LController/DDR3LController/DDR3LController_in_context.xdc, line 48).
+Applied set_property IO_BUFFER_TYPE = NONE for DM[1]. (constraint file  c:/v22.2/FEB_fabric/ARTY.gen/sources_1/ip/DDR3LController/DDR3LController/DDR3LController_in_context.xdc, line 49).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for DM[1]. (constraint file  c:/v22.2/FEB_fabric/ARTY.gen/sources_1/ip/DDR3LController/DDR3LController/DDR3LController_in_context.xdc, line 50).
+Applied set_property IO_BUFFER_TYPE = NONE for DDR_DATA[0]. (constraint file  c:/v22.2/FEB_fabric/ARTY.gen/sources_1/ip/DDR3LController/DDR3LController/DDR3LController_in_context.xdc, line 51).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for DDR_DATA[0]. (constraint file  c:/v22.2/FEB_fabric/ARTY.gen/sources_1/ip/DDR3LController/DDR3LController/DDR3LController_in_context.xdc, line 52).
+Applied set_property IO_BUFFER_TYPE = NONE for DDR_DATA[10]. (constraint file  c:/v22.2/FEB_fabric/ARTY.gen/sources_1/ip/DDR3LController/DDR3LController/DDR3LController_in_context.xdc, line 53).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for DDR_DATA[10]. (constraint file  c:/v22.2/FEB_fabric/ARTY.gen/sources_1/ip/DDR3LController/DDR3LController/DDR3LController_in_context.xdc, line 54).
+Applied set_property IO_BUFFER_TYPE = NONE for DDR_DATA[11]. (constraint file  c:/v22.2/FEB_fabric/ARTY.gen/sources_1/ip/DDR3LController/DDR3LController/DDR3LController_in_context.xdc, line 55).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for DDR_DATA[11]. (constraint file  c:/v22.2/FEB_fabric/ARTY.gen/sources_1/ip/DDR3LController/DDR3LController/DDR3LController_in_context.xdc, line 56).
+Applied set_property IO_BUFFER_TYPE = NONE for DDR_DATA[12]. (constraint file  c:/v22.2/FEB_fabric/ARTY.gen/sources_1/ip/DDR3LController/DDR3LController/DDR3LController_in_context.xdc, line 57).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for DDR_DATA[12]. (constraint file  c:/v22.2/FEB_fabric/ARTY.gen/sources_1/ip/DDR3LController/DDR3LController/DDR3LController_in_context.xdc, line 58).
+Applied set_property IO_BUFFER_TYPE = NONE for DDR_DATA[13]. (constraint file  c:/v22.2/FEB_fabric/ARTY.gen/sources_1/ip/DDR3LController/DDR3LController/DDR3LController_in_context.xdc, line 59).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for DDR_DATA[13]. (constraint file  c:/v22.2/FEB_fabric/ARTY.gen/sources_1/ip/DDR3LController/DDR3LController/DDR3LController_in_context.xdc, line 60).
+Applied set_property IO_BUFFER_TYPE = NONE for DDR_DATA[14]. (constraint file  c:/v22.2/FEB_fabric/ARTY.gen/sources_1/ip/DDR3LController/DDR3LController/DDR3LController_in_context.xdc, line 61).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for DDR_DATA[14]. (constraint file  c:/v22.2/FEB_fabric/ARTY.gen/sources_1/ip/DDR3LController/DDR3LController/DDR3LController_in_context.xdc, line 62).
+Applied set_property IO_BUFFER_TYPE = NONE for DDR_DATA[15]. (constraint file  c:/v22.2/FEB_fabric/ARTY.gen/sources_1/ip/DDR3LController/DDR3LController/DDR3LController_in_context.xdc, line 63).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for DDR_DATA[15]. (constraint file  c:/v22.2/FEB_fabric/ARTY.gen/sources_1/ip/DDR3LController/DDR3LController/DDR3LController_in_context.xdc, line 64).
+Applied set_property IO_BUFFER_TYPE = NONE for DDR_DATA[1]. (constraint file  c:/v22.2/FEB_fabric/ARTY.gen/sources_1/ip/DDR3LController/DDR3LController/DDR3LController_in_context.xdc, line 65).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for DDR_DATA[1]. (constraint file  c:/v22.2/FEB_fabric/ARTY.gen/sources_1/ip/DDR3LController/DDR3LController/DDR3LController_in_context.xdc, line 66).
+Applied set_property IO_BUFFER_TYPE = NONE for DDR_DATA[2]. (constraint file  c:/v22.2/FEB_fabric/ARTY.gen/sources_1/ip/DDR3LController/DDR3LController/DDR3LController_in_context.xdc, line 67).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for DDR_DATA[2]. (constraint file  c:/v22.2/FEB_fabric/ARTY.gen/sources_1/ip/DDR3LController/DDR3LController/DDR3LController_in_context.xdc, line 68).
+Applied set_property IO_BUFFER_TYPE = NONE for DDR_DATA[3]. (constraint file  c:/v22.2/FEB_fabric/ARTY.gen/sources_1/ip/DDR3LController/DDR3LController/DDR3LController_in_context.xdc, line 69).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for DDR_DATA[3]. (constraint file  c:/v22.2/FEB_fabric/ARTY.gen/sources_1/ip/DDR3LController/DDR3LController/DDR3LController_in_context.xdc, line 70).
+Applied set_property IO_BUFFER_TYPE = NONE for DDR_DATA[4]. (constraint file  c:/v22.2/FEB_fabric/ARTY.gen/sources_1/ip/DDR3LController/DDR3LController/DDR3LController_in_context.xdc, line 71).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for DDR_DATA[4]. (constraint file  c:/v22.2/FEB_fabric/ARTY.gen/sources_1/ip/DDR3LController/DDR3LController/DDR3LController_in_context.xdc, line 72).
+Applied set_property IO_BUFFER_TYPE = NONE for DDR_DATA[5]. (constraint file  c:/v22.2/FEB_fabric/ARTY.gen/sources_1/ip/DDR3LController/DDR3LController/DDR3LController_in_context.xdc, line 73).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for DDR_DATA[5]. (constraint file  c:/v22.2/FEB_fabric/ARTY.gen/sources_1/ip/DDR3LController/DDR3LController/DDR3LController_in_context.xdc, line 74).
+Applied set_property IO_BUFFER_TYPE = NONE for DDR_DATA[6]. (constraint file  c:/v22.2/FEB_fabric/ARTY.gen/sources_1/ip/DDR3LController/DDR3LController/DDR3LController_in_context.xdc, line 75).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for DDR_DATA[6]. (constraint file  c:/v22.2/FEB_fabric/ARTY.gen/sources_1/ip/DDR3LController/DDR3LController/DDR3LController_in_context.xdc, line 76).
+Applied set_property IO_BUFFER_TYPE = NONE for DDR_DATA[7]. (constraint file  c:/v22.2/FEB_fabric/ARTY.gen/sources_1/ip/DDR3LController/DDR3LController/DDR3LController_in_context.xdc, line 77).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for DDR_DATA[7]. (constraint file  c:/v22.2/FEB_fabric/ARTY.gen/sources_1/ip/DDR3LController/DDR3LController/DDR3LController_in_context.xdc, line 78).
+Applied set_property IO_BUFFER_TYPE = NONE for DDR_DATA[8]. (constraint file  c:/v22.2/FEB_fabric/ARTY.gen/sources_1/ip/DDR3LController/DDR3LController/DDR3LController_in_context.xdc, line 79).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for DDR_DATA[8]. (constraint file  c:/v22.2/FEB_fabric/ARTY.gen/sources_1/ip/DDR3LController/DDR3LController/DDR3LController_in_context.xdc, line 80).
+Applied set_property IO_BUFFER_TYPE = NONE for DDR_DATA[9]. (constraint file  c:/v22.2/FEB_fabric/ARTY.gen/sources_1/ip/DDR3LController/DDR3LController/DDR3LController_in_context.xdc, line 81).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for DDR_DATA[9]. (constraint file  c:/v22.2/FEB_fabric/ARTY.gen/sources_1/ip/DDR3LController/DDR3LController/DDR3LController_in_context.xdc, line 82).
+Applied set_property IO_BUFFER_TYPE = NONE for UDQS_P. (constraint file  c:/v22.2/FEB_fabric/ARTY.gen/sources_1/ip/DDR3LController/DDR3LController/DDR3LController_in_context.xdc, line 83).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for UDQS_P. (constraint file  c:/v22.2/FEB_fabric/ARTY.gen/sources_1/ip/DDR3LController/DDR3LController/DDR3LController_in_context.xdc, line 84).
+Applied set_property IO_BUFFER_TYPE = NONE for UDQS_N. (constraint file  c:/v22.2/FEB_fabric/ARTY.gen/sources_1/ip/DDR3LController/DDR3LController/DDR3LController_in_context.xdc, line 85).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for UDQS_N. (constraint file  c:/v22.2/FEB_fabric/ARTY.gen/sources_1/ip/DDR3LController/DDR3LController/DDR3LController_in_context.xdc, line 86).
+Applied set_property IO_BUFFER_TYPE = NONE for LDQS_P. (constraint file  c:/v22.2/FEB_fabric/ARTY.gen/sources_1/ip/DDR3LController/DDR3LController/DDR3LController_in_context.xdc, line 87).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for LDQS_P. (constraint file  c:/v22.2/FEB_fabric/ARTY.gen/sources_1/ip/DDR3LController/DDR3LController/DDR3LController_in_context.xdc, line 88).
+Applied set_property IO_BUFFER_TYPE = NONE for LDQS_N. (constraint file  c:/v22.2/FEB_fabric/ARTY.gen/sources_1/ip/DDR3LController/DDR3LController/DDR3LController_in_context.xdc, line 89).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for LDQS_N. (constraint file  c:/v22.2/FEB_fabric/ARTY.gen/sources_1/ip/DDR3LController/DDR3LController/DDR3LController_in_context.xdc, line 90).
+Applied set_property IO_BUFFER_TYPE = NONE for ODT[0]. (constraint file  c:/v22.2/FEB_fabric/ARTY.gen/sources_1/ip/DDR3LController/DDR3LController/DDR3LController_in_context.xdc, line 91).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for ODT[0]. (constraint file  c:/v22.2/FEB_fabric/ARTY.gen/sources_1/ip/DDR3LController/DDR3LController/DDR3LController_in_context.xdc, line 92).
+Applied set_property IO_BUFFER_TYPE = NONE for RAS. (constraint file  c:/v22.2/FEB_fabric/ARTY.gen/sources_1/ip/DDR3LController/DDR3LController/DDR3LController_in_context.xdc, line 93).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for RAS. (constraint file  c:/v22.2/FEB_fabric/ARTY.gen/sources_1/ip/DDR3LController/DDR3LController/DDR3LController_in_context.xdc, line 94).
+Applied set_property IO_BUFFER_TYPE = NONE for DDR_RESET_N. (constraint file  c:/v22.2/FEB_fabric/ARTY.gen/sources_1/ip/DDR3LController/DDR3LController/DDR3LController_in_context.xdc, line 95).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for DDR_RESET_N. (constraint file  c:/v22.2/FEB_fabric/ARTY.gen/sources_1/ip/DDR3LController/DDR3LController/DDR3LController_in_context.xdc, line 96).
+Applied set_property IO_BUFFER_TYPE = NONE for DDR_WE. (constraint file  c:/v22.2/FEB_fabric/ARTY.gen/sources_1/ip/DDR3LController/DDR3LController/DDR3LController_in_context.xdc, line 97).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for DDR_WE. (constraint file  c:/v22.2/FEB_fabric/ARTY.gen/sources_1/ip/DDR3LController/DDR3LController/DDR3LController_in_context.xdc, line 98).
+Applied set_property IO_BUFFER_TYPE = NONE for Clk_100MHz. (constraint file  c:/v22.2/FEB_fabric/ARTY.gen/sources_1/ip/DDR3LController/DDR3LController/DDR3LController_in_context.xdc, line 99).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for Clk_100MHz. (constraint file  c:/v22.2/FEB_fabric/ARTY.gen/sources_1/ip/DDR3LController/DDR3LController/DDR3LController_in_context.xdc, line 100).
+Applied set_property KEEP_HIERARCHY = SOFT for DDR_Interface_inst/DDRRdBuff/U0. (constraint file  C:/v22.2/FEB_fabric/FEB_fabric.runs/synth_1/dont_touch.xdc, line 21).
+Applied set_property KEEP_HIERARCHY = SOFT for EventBuilder_logic/EventBuff/U0. (constraint file  C:/v22.2/FEB_fabric/FEB_fabric.runs/synth_1/dont_touch.xdc, line 21).
+Applied set_property KEEP_HIERARCHY = SOFT for DDR_Interface_inst/DDRAddrBuff/U0. (constraint file  C:/v22.2/FEB_fabric/FEB_fabric.runs/synth_1/dont_touch.xdc, line 24).
+Applied set_property KEEP_HIERARCHY = SOFT for EventBuilder_logic/uBunchBuffer/U0. (constraint file  C:/v22.2/FEB_fabric/FEB_fabric.runs/synth_1/dont_touch.xdc, line 24).
+Applied set_property KEEP_HIERARCHY = SOFT for EventBuilder_logic/EventBuff. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for DDR_Interface_inst/DDRRdBuff. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for EventBuilder_logic/uBunchBuffer. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for DDR_Interface_inst/DDRAddrBuff. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for AFE_DataPath_inst/\Gen_Two_AFEs[0].Gen_Eight_Chans[0].AFEBuff . (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for AFE_DataPath_inst/\Gen_Two_AFEs[0].Gen_Eight_Chans[1].AFEBuff . (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for AFE_DataPath_inst/\Gen_Two_AFEs[0].Gen_Eight_Chans[2].AFEBuff . (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for AFE_DataPath_inst/\Gen_Two_AFEs[0].Gen_Eight_Chans[3].AFEBuff . (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for AFE_DataPath_inst/\Gen_Two_AFEs[0].Gen_Eight_Chans[4].AFEBuff . (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for AFE_DataPath_inst/\Gen_Two_AFEs[0].Gen_Eight_Chans[5].AFEBuff . (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for AFE_DataPath_inst/\Gen_Two_AFEs[0].Gen_Eight_Chans[6].AFEBuff . (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for AFE_DataPath_inst/\Gen_Two_AFEs[0].Gen_Eight_Chans[7].AFEBuff . (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for AFE_DataPath_inst/\Gen_Two_AFEs[1].Gen_Eight_Chans[0].AFEBuff . (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for AFE_DataPath_inst/\Gen_Two_AFEs[1].Gen_Eight_Chans[1].AFEBuff . (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for AFE_DataPath_inst/\Gen_Two_AFEs[1].Gen_Eight_Chans[2].AFEBuff . (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for AFE_DataPath_inst/\Gen_Two_AFEs[1].Gen_Eight_Chans[3].AFEBuff . (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for AFE_DataPath_inst/\Gen_Two_AFEs[1].Gen_Eight_Chans[4].AFEBuff . (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for AFE_DataPath_inst/\Gen_Two_AFEs[1].Gen_Eight_Chans[5].AFEBuff . (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for AFE_DataPath_inst/\Gen_Two_AFEs[1].Gen_Eight_Chans[6].AFEBuff . (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for AFE_DataPath_inst/\Gen_Two_AFEs[1].Gen_Eight_Chans[7].AFEBuff . (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for AFE_DataPath_inst/AFE_Pipeline_inst/\Gen_Two_AFEs[0].Pipeline . (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for AFE_DataPath_inst/AFE_Pipeline_inst/\Gen_Two_AFEs[1].Pipeline . (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for DDR_Interface_inst/DDR_Controller. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for EventBuilder_logic/uBunchBuffer/U0/inst_fifo_gen/\gconvfifo.rf /\grf.rf /rstblk/\ngwrdrst.grst.g7serrst.gsckt_wrst.xpm_cdc_sync_rst_inst_wrst . (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for EventBuilder_logic/EventBuff/U0/inst_fifo_gen/\gconvfifo.rf /\grf.rf /rstblk/\ngwrdrst.grst.g7serrst.gsckt_wrst.xpm_cdc_sync_rst_inst_wrst . (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for DDR_Interface_inst/DDRAddrBuff/U0/inst_fifo_gen/\gconvfifo.rf /\grf.rf /rstblk/\ngwrdrst.grst.g7serrst.gsckt_wrst.xpm_cdc_sync_rst_inst_wrst . (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for DDR_Interface_inst/DDRRdBuff/U0/inst_fifo_gen/\gconvfifo.rf /\grf.rf /rstblk/\ngwrdrst.grst.g7serrst.gsckt_wrst.xpm_cdc_sync_rst_inst_wrst . (constraint file  auto generated constraint).
+---------------------------------------------------------------------------------
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:01:02 ; elapsed = 00:01:03 . Memory (MB): peak = 2513.211 ; gain = 1044.242
+---------------------------------------------------------------------------------
+INFO: [Synth 8-802] inferred FSM for state register 'Gen_Two_AFEs[0].Gen_Eight_Chans[0].Input_Seqs_reg[0][0]' in module 'AFE_DataPath'
+INFO: [Synth 8-802] inferred FSM for state register 'Gen_Two_AFEs[0].Gen_Eight_Chans[1].Input_Seqs_reg[0][1]' in module 'AFE_DataPath'
+INFO: [Synth 8-802] inferred FSM for state register 'Gen_Two_AFEs[0].Gen_Eight_Chans[2].Input_Seqs_reg[0][2]' in module 'AFE_DataPath'
+INFO: [Synth 8-802] inferred FSM for state register 'Gen_Two_AFEs[0].Gen_Eight_Chans[3].Input_Seqs_reg[0][3]' in module 'AFE_DataPath'
+INFO: [Synth 8-802] inferred FSM for state register 'Gen_Two_AFEs[0].Gen_Eight_Chans[4].Input_Seqs_reg[0][4]' in module 'AFE_DataPath'
+INFO: [Synth 8-802] inferred FSM for state register 'Gen_Two_AFEs[0].Gen_Eight_Chans[5].Input_Seqs_reg[0][5]' in module 'AFE_DataPath'
+INFO: [Synth 8-802] inferred FSM for state register 'Gen_Two_AFEs[0].Gen_Eight_Chans[6].Input_Seqs_reg[0][6]' in module 'AFE_DataPath'
+INFO: [Synth 8-802] inferred FSM for state register 'Gen_Two_AFEs[0].Gen_Eight_Chans[7].Input_Seqs_reg[0][7]' in module 'AFE_DataPath'
+INFO: [Synth 8-802] inferred FSM for state register 'Gen_Two_AFEs[1].Gen_Eight_Chans[0].Input_Seqs_reg[1][0]' in module 'AFE_DataPath'
+INFO: [Synth 8-802] inferred FSM for state register 'Gen_Two_AFEs[1].Gen_Eight_Chans[1].Input_Seqs_reg[1][1]' in module 'AFE_DataPath'
+INFO: [Synth 8-802] inferred FSM for state register 'Gen_Two_AFEs[1].Gen_Eight_Chans[2].Input_Seqs_reg[1][2]' in module 'AFE_DataPath'
+INFO: [Synth 8-802] inferred FSM for state register 'Gen_Two_AFEs[1].Gen_Eight_Chans[3].Input_Seqs_reg[1][3]' in module 'AFE_DataPath'
+INFO: [Synth 8-802] inferred FSM for state register 'Gen_Two_AFEs[1].Gen_Eight_Chans[4].Input_Seqs_reg[1][4]' in module 'AFE_DataPath'
+INFO: [Synth 8-802] inferred FSM for state register 'Gen_Two_AFEs[1].Gen_Eight_Chans[5].Input_Seqs_reg[1][5]' in module 'AFE_DataPath'
+INFO: [Synth 8-802] inferred FSM for state register 'Gen_Two_AFEs[1].Gen_Eight_Chans[6].Input_Seqs_reg[1][6]' in module 'AFE_DataPath'
+INFO: [Synth 8-802] inferred FSM for state register 'Gen_Two_AFEs[1].Gen_Eight_Chans[7].Input_Seqs_reg[1][7]' in module 'AFE_DataPath'
+INFO: [Synth 8-802] inferred FSM for state register 'gpregsm1.curr_fwft_state_reg' in module 'rd_fwft'
+INFO: [Synth 8-802] inferred FSM for state register 'Event_Builder_reg' in module 'EventBuilder'
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+                    idle |                              001 |                              000
+               increment |                              110 |                              001
+               wrtchanno |                              100 |                              010
+            wrttimestamp |                              101 |                              011
+                 wrthits |                              011 |                              100
+             wrthitwdcnt |                              010 |                              101
+              ldnxtwrtad |                              000 |                              110
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 'Gen_Two_AFEs[0].Gen_Eight_Chans[0].Input_Seqs_reg[0][0]' using encoding 'sequential' in module 'AFE_DataPath'
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+                    idle |                              001 |                              000
+               increment |                              110 |                              001
+               wrtchanno |                              100 |                              010
+            wrttimestamp |                              101 |                              011
+                 wrthits |                              011 |                              100
+             wrthitwdcnt |                              010 |                              101
+              ldnxtwrtad |                              000 |                              110
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 'Gen_Two_AFEs[0].Gen_Eight_Chans[1].Input_Seqs_reg[0][1]' using encoding 'sequential' in module 'AFE_DataPath'
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+                    idle |                              001 |                              000
+               increment |                              110 |                              001
+               wrtchanno |                              100 |                              010
+            wrttimestamp |                              101 |                              011
+                 wrthits |                              011 |                              100
+             wrthitwdcnt |                              010 |                              101
+              ldnxtwrtad |                              000 |                              110
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 'Gen_Two_AFEs[0].Gen_Eight_Chans[2].Input_Seqs_reg[0][2]' using encoding 'sequential' in module 'AFE_DataPath'
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+                    idle |                              001 |                              000
+               increment |                              110 |                              001
+               wrtchanno |                              100 |                              010
+            wrttimestamp |                              101 |                              011
+                 wrthits |                              011 |                              100
+             wrthitwdcnt |                              010 |                              101
+              ldnxtwrtad |                              000 |                              110
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 'Gen_Two_AFEs[0].Gen_Eight_Chans[3].Input_Seqs_reg[0][3]' using encoding 'sequential' in module 'AFE_DataPath'
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+                    idle |                              001 |                              000
+               increment |                              110 |                              001
+               wrtchanno |                              100 |                              010
+            wrttimestamp |                              101 |                              011
+                 wrthits |                              011 |                              100
+             wrthitwdcnt |                              010 |                              101
+              ldnxtwrtad |                              000 |                              110
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 'Gen_Two_AFEs[0].Gen_Eight_Chans[4].Input_Seqs_reg[0][4]' using encoding 'sequential' in module 'AFE_DataPath'
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+                    idle |                              001 |                              000
+               increment |                              110 |                              001
+               wrtchanno |                              100 |                              010
+            wrttimestamp |                              101 |                              011
+                 wrthits |                              011 |                              100
+             wrthitwdcnt |                              010 |                              101
+              ldnxtwrtad |                              000 |                              110
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 'Gen_Two_AFEs[0].Gen_Eight_Chans[5].Input_Seqs_reg[0][5]' using encoding 'sequential' in module 'AFE_DataPath'
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+                    idle |                              001 |                              000
+               increment |                              110 |                              001
+               wrtchanno |                              100 |                              010
+            wrttimestamp |                              101 |                              011
+                 wrthits |                              011 |                              100
+             wrthitwdcnt |                              010 |                              101
+              ldnxtwrtad |                              000 |                              110
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 'Gen_Two_AFEs[0].Gen_Eight_Chans[6].Input_Seqs_reg[0][6]' using encoding 'sequential' in module 'AFE_DataPath'
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+                    idle |                              001 |                              000
+               increment |                              110 |                              001
+               wrtchanno |                              100 |                              010
+            wrttimestamp |                              101 |                              011
+                 wrthits |                              011 |                              100
+             wrthitwdcnt |                              010 |                              101
+              ldnxtwrtad |                              000 |                              110
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 'Gen_Two_AFEs[0].Gen_Eight_Chans[7].Input_Seqs_reg[0][7]' using encoding 'sequential' in module 'AFE_DataPath'
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+                    idle |                              001 |                              000
+               increment |                              110 |                              001
+               wrtchanno |                              100 |                              010
+            wrttimestamp |                              101 |                              011
+                 wrthits |                              011 |                              100
+             wrthitwdcnt |                              010 |                              101
+              ldnxtwrtad |                              000 |                              110
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 'Gen_Two_AFEs[1].Gen_Eight_Chans[0].Input_Seqs_reg[1][0]' using encoding 'sequential' in module 'AFE_DataPath'
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+                    idle |                              001 |                              000
+               increment |                              110 |                              001
+               wrtchanno |                              100 |                              010
+            wrttimestamp |                              101 |                              011
+                 wrthits |                              011 |                              100
+             wrthitwdcnt |                              010 |                              101
+              ldnxtwrtad |                              000 |                              110
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 'Gen_Two_AFEs[1].Gen_Eight_Chans[1].Input_Seqs_reg[1][1]' using encoding 'sequential' in module 'AFE_DataPath'
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+                    idle |                              001 |                              000
+               increment |                              110 |                              001
+               wrtchanno |                              100 |                              010
+            wrttimestamp |                              101 |                              011
+                 wrthits |                              011 |                              100
+             wrthitwdcnt |                              010 |                              101
+              ldnxtwrtad |                              000 |                              110
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 'Gen_Two_AFEs[1].Gen_Eight_Chans[2].Input_Seqs_reg[1][2]' using encoding 'sequential' in module 'AFE_DataPath'
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+                    idle |                              001 |                              000
+               increment |                              110 |                              001
+               wrtchanno |                              100 |                              010
+            wrttimestamp |                              101 |                              011
+                 wrthits |                              011 |                              100
+             wrthitwdcnt |                              010 |                              101
+              ldnxtwrtad |                              000 |                              110
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 'Gen_Two_AFEs[1].Gen_Eight_Chans[3].Input_Seqs_reg[1][3]' using encoding 'sequential' in module 'AFE_DataPath'
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+                    idle |                              001 |                              000
+               increment |                              110 |                              001
+               wrtchanno |                              100 |                              010
+            wrttimestamp |                              101 |                              011
+                 wrthits |                              011 |                              100
+             wrthitwdcnt |                              010 |                              101
+              ldnxtwrtad |                              000 |                              110
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 'Gen_Two_AFEs[1].Gen_Eight_Chans[4].Input_Seqs_reg[1][4]' using encoding 'sequential' in module 'AFE_DataPath'
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+                    idle |                              001 |                              000
+               increment |                              110 |                              001
+               wrtchanno |                              100 |                              010
+            wrttimestamp |                              101 |                              011
+                 wrthits |                              011 |                              100
+             wrthitwdcnt |                              010 |                              101
+              ldnxtwrtad |                              000 |                              110
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 'Gen_Two_AFEs[1].Gen_Eight_Chans[5].Input_Seqs_reg[1][5]' using encoding 'sequential' in module 'AFE_DataPath'
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+                    idle |                              001 |                              000
+               increment |                              110 |                              001
+               wrtchanno |                              100 |                              010
+            wrttimestamp |                              101 |                              011
+                 wrthits |                              011 |                              100
+             wrthitwdcnt |                              010 |                              101
+              ldnxtwrtad |                              000 |                              110
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 'Gen_Two_AFEs[1].Gen_Eight_Chans[6].Input_Seqs_reg[1][6]' using encoding 'sequential' in module 'AFE_DataPath'
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+                    idle |                              001 |                              000
+               increment |                              110 |                              001
+               wrtchanno |                              100 |                              010
+            wrttimestamp |                              101 |                              011
+                 wrthits |                              011 |                              100
+             wrthitwdcnt |                              010 |                              101
+              ldnxtwrtad |                              000 |                              110
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 'Gen_Two_AFEs[1].Gen_Eight_Chans[7].Input_Seqs_reg[1][7]' using encoding 'sequential' in module 'AFE_DataPath'
+INFO: [Synth 8-6159] Found Keep on FSM register 'gpregsm1.curr_fwft_state_reg' in module 'rd_fwft', re-encoding will not be performed
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+                 invalid |                               00 |                               00
+            stage1_valid |                               10 |                               10
+       both_stages_valid |                               11 |                               11
+            stage2_valid |                               01 |                               01
+---------------------------------------------------------------------------------------------------
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+                    idle |                    0001000000000 |                             0000
+             check_mask0 |                    0000000000001 |                             0100
+               check_ovf |                    0000000000010 |                             0001
+            add_wd_count |                    0000000010000 |                             0010
+              incr_chan0 |                    0000000000100 |                             0011
+              wdcountwrt |                    0000000001000 |                             0101
+             wrtubunchhi |                    1000000000000 |                             0110
+             wrtubunchlo |                    0010000000000 |                             0111
+             check_mask1 |                    0100000000000 |                             1001
+                   wait1 |                    0000100000000 |                             1010
+                   wait2 |                    0000010000000 |                             1011
+                 wrtdata |                    0000000100000 |                             1100
+              incr_chan1 |                    0000001000000 |                             1000
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 'Event_Builder_reg' using encoding 'one-hot' in module 'EventBuilder'
+WARNING: [Synth 8-327] inferring latch for variable 'DDR3_en_reg' [C:/v22.2/FEB_fabric/FEB_fabric.srcs/sources_1/new/DDR_Interface .vhd:159]
+WARNING: [Synth 8-327] inferring latch for variable 'DDR3_addr_reg' [C:/v22.2/FEB_fabric/FEB_fabric.srcs/sources_1/new/DDR_Interface .vhd:222]
+WARNING: [Synth 8-327] inferring latch for variable 'DDR3_cmd_reg' [C:/v22.2/FEB_fabric/FEB_fabric.srcs/sources_1/new/DDR_Interface .vhd:223]
+WARNING: [Synth 8-327] inferring latch for variable 'DDR3_wrt_data_reg' [C:/v22.2/FEB_fabric/FEB_fabric.srcs/sources_1/new/DDR_Interface .vhd:226]
+WARNING: [Synth 8-327] inferring latch for variable 'DRAMRdBuffDat_reg' [C:/v22.2/FEB_fabric/FEB_fabric.srcs/sources_1/new/DDR_Interface .vhd:173]
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:01:05 ; elapsed = 00:01:07 . Memory (MB): peak = 2513.211 ; gain = 1044.242
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start RTL Component Statistics 
+---------------------------------------------------------------------------------
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input   16 Bit       Adders := 1     
+	   3 Input   14 Bit       Adders := 16    
+	   2 Input   12 Bit       Adders := 3     
+	   2 Input   11 Bit       Adders := 2     
+	   2 Input   10 Bit       Adders := 41    
+	   3 Input   10 Bit       Adders := 1     
+	   2 Input    9 Bit       Adders := 4     
+	   2 Input    8 Bit       Adders := 4     
+	   2 Input    5 Bit       Adders := 2     
+	   2 Input    4 Bit       Adders := 17    
+	   2 Input    3 Bit       Adders := 2     
++---XORs : 
+	   2 Input      1 Bit         XORs := 170   
++---Registers : 
+	               32 Bit    Registers := 3     
+	               24 Bit    Registers := 2     
+	               16 Bit    Registers := 21    
+	               14 Bit    Registers := 56    
+	               12 Bit    Registers := 4     
+	               11 Bit    Registers := 2     
+	               10 Bit    Registers := 112   
+	                9 Bit    Registers := 6     
+	                8 Bit    Registers := 6     
+	                5 Bit    Registers := 14    
+	                4 Bit    Registers := 20    
+	                3 Bit    Registers := 2     
+	                2 Bit    Registers := 22    
+	                1 Bit    Registers := 129   
++---Muxes : 
+	   2 Input   32 Bit        Muxes := 3     
+	   2 Input   24 Bit        Muxes := 2     
+	   2 Input   20 Bit        Muxes := 1     
+	   6 Input   16 Bit        Muxes := 16    
+	   2 Input   16 Bit        Muxes := 9     
+	   4 Input   16 Bit        Muxes := 1     
+	   2 Input   14 Bit        Muxes := 16    
+	  13 Input   13 Bit        Muxes := 1     
+	   2 Input   13 Bit        Muxes := 8     
+	   2 Input   12 Bit        Muxes := 7     
+	   5 Input   10 Bit        Muxes := 16    
+	   2 Input   10 Bit        Muxes := 41    
+	   2 Input    9 Bit        Muxes := 11    
+	   2 Input    8 Bit        Muxes := 16    
+	   2 Input    5 Bit        Muxes := 2     
+	   2 Input    4 Bit        Muxes := 16    
+	   7 Input    3 Bit        Muxes := 16    
+	   2 Input    3 Bit        Muxes := 83    
+	   2 Input    2 Bit        Muxes := 42    
+	   4 Input    2 Bit        Muxes := 4     
+	   5 Input    2 Bit        Muxes := 4     
+	   2 Input    1 Bit        Muxes := 223   
+	   7 Input    1 Bit        Muxes := 32    
+	   5 Input    1 Bit        Muxes := 32    
+	   3 Input    1 Bit        Muxes := 52    
+	   6 Input    1 Bit        Muxes := 16    
+	   4 Input    1 Bit        Muxes := 8     
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Part Resource Summary
+---------------------------------------------------------------------------------
+Part Resources:
+DSPs: 120 (col length:60)
+BRAMs: 150 (col length: RAMB18 60 RAMB36 30)
+---------------------------------------------------------------------------------
+Finished Part Resource Summary
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Cross Boundary and Area Optimization
+---------------------------------------------------------------------------------
+WARNING: [Synth 8-7080] Parallel synthesis criteria is not met
+---------------------------------------------------------------------------------
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:01:17 ; elapsed = 00:01:19 . Memory (MB): peak = 2513.211 ; gain = 1044.242
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying XDC Timing Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:01:22 ; elapsed = 00:01:25 . Memory (MB): peak = 2513.211 ; gain = 1044.242
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Timing Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Timing Optimization : Time (s): cpu = 00:01:23 ; elapsed = 00:01:25 . Memory (MB): peak = 2513.211 ; gain = 1044.242
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Technology Mapping
+---------------------------------------------------------------------------------
+WARNING: [Synth 8-3332] Sequential element (AFE_DataPath_inst/FSM_sequential_Gen_Two_AFEs[0].Gen_Eight_Chans[0].Input_Seqs_reg[0][0][2]) is unused and will be removed from module FEB_fabric.
+WARNING: [Synth 8-3332] Sequential element (AFE_DataPath_inst/FSM_sequential_Gen_Two_AFEs[0].Gen_Eight_Chans[0].Input_Seqs_reg[0][0][1]) is unused and will be removed from module FEB_fabric.
+WARNING: [Synth 8-3332] Sequential element (AFE_DataPath_inst/FSM_sequential_Gen_Two_AFEs[0].Gen_Eight_Chans[0].Input_Seqs_reg[0][0][0]) is unused and will be removed from module FEB_fabric.
+WARNING: [Synth 8-3332] Sequential element (AFE_DataPath_inst/FSM_sequential_Gen_Two_AFEs[0].Gen_Eight_Chans[1].Input_Seqs_reg[0][1][2]) is unused and will be removed from module FEB_fabric.
+WARNING: [Synth 8-3332] Sequential element (AFE_DataPath_inst/FSM_sequential_Gen_Two_AFEs[0].Gen_Eight_Chans[1].Input_Seqs_reg[0][1][1]) is unused and will be removed from module FEB_fabric.
+WARNING: [Synth 8-3332] Sequential element (AFE_DataPath_inst/FSM_sequential_Gen_Two_AFEs[0].Gen_Eight_Chans[1].Input_Seqs_reg[0][1][0]) is unused and will be removed from module FEB_fabric.
+WARNING: [Synth 8-3332] Sequential element (AFE_DataPath_inst/FSM_sequential_Gen_Two_AFEs[0].Gen_Eight_Chans[2].Input_Seqs_reg[0][2][2]) is unused and will be removed from module FEB_fabric.
+WARNING: [Synth 8-3332] Sequential element (AFE_DataPath_inst/FSM_sequential_Gen_Two_AFEs[0].Gen_Eight_Chans[2].Input_Seqs_reg[0][2][1]) is unused and will be removed from module FEB_fabric.
+WARNING: [Synth 8-3332] Sequential element (AFE_DataPath_inst/FSM_sequential_Gen_Two_AFEs[0].Gen_Eight_Chans[2].Input_Seqs_reg[0][2][0]) is unused and will be removed from module FEB_fabric.
+WARNING: [Synth 8-3332] Sequential element (AFE_DataPath_inst/FSM_sequential_Gen_Two_AFEs[0].Gen_Eight_Chans[3].Input_Seqs_reg[0][3][2]) is unused and will be removed from module FEB_fabric.
+WARNING: [Synth 8-3332] Sequential element (AFE_DataPath_inst/FSM_sequential_Gen_Two_AFEs[0].Gen_Eight_Chans[3].Input_Seqs_reg[0][3][1]) is unused and will be removed from module FEB_fabric.
+WARNING: [Synth 8-3332] Sequential element (AFE_DataPath_inst/FSM_sequential_Gen_Two_AFEs[0].Gen_Eight_Chans[3].Input_Seqs_reg[0][3][0]) is unused and will be removed from module FEB_fabric.
+WARNING: [Synth 8-3332] Sequential element (AFE_DataPath_inst/FSM_sequential_Gen_Two_AFEs[0].Gen_Eight_Chans[4].Input_Seqs_reg[0][4][2]) is unused and will be removed from module FEB_fabric.
+WARNING: [Synth 8-3332] Sequential element (AFE_DataPath_inst/FSM_sequential_Gen_Two_AFEs[0].Gen_Eight_Chans[4].Input_Seqs_reg[0][4][1]) is unused and will be removed from module FEB_fabric.
+WARNING: [Synth 8-3332] Sequential element (AFE_DataPath_inst/FSM_sequential_Gen_Two_AFEs[0].Gen_Eight_Chans[4].Input_Seqs_reg[0][4][0]) is unused and will be removed from module FEB_fabric.
+WARNING: [Synth 8-3332] Sequential element (AFE_DataPath_inst/FSM_sequential_Gen_Two_AFEs[0].Gen_Eight_Chans[5].Input_Seqs_reg[0][5][2]) is unused and will be removed from module FEB_fabric.
+WARNING: [Synth 8-3332] Sequential element (AFE_DataPath_inst/FSM_sequential_Gen_Two_AFEs[0].Gen_Eight_Chans[5].Input_Seqs_reg[0][5][1]) is unused and will be removed from module FEB_fabric.
+WARNING: [Synth 8-3332] Sequential element (AFE_DataPath_inst/FSM_sequential_Gen_Two_AFEs[0].Gen_Eight_Chans[5].Input_Seqs_reg[0][5][0]) is unused and will be removed from module FEB_fabric.
+WARNING: [Synth 8-3332] Sequential element (AFE_DataPath_inst/FSM_sequential_Gen_Two_AFEs[0].Gen_Eight_Chans[6].Input_Seqs_reg[0][6][2]) is unused and will be removed from module FEB_fabric.
+WARNING: [Synth 8-3332] Sequential element (AFE_DataPath_inst/FSM_sequential_Gen_Two_AFEs[0].Gen_Eight_Chans[6].Input_Seqs_reg[0][6][1]) is unused and will be removed from module FEB_fabric.
+WARNING: [Synth 8-3332] Sequential element (AFE_DataPath_inst/FSM_sequential_Gen_Two_AFEs[0].Gen_Eight_Chans[6].Input_Seqs_reg[0][6][0]) is unused and will be removed from module FEB_fabric.
+WARNING: [Synth 8-3332] Sequential element (AFE_DataPath_inst/FSM_sequential_Gen_Two_AFEs[0].Gen_Eight_Chans[7].Input_Seqs_reg[0][7][2]) is unused and will be removed from module FEB_fabric.
+WARNING: [Synth 8-3332] Sequential element (AFE_DataPath_inst/FSM_sequential_Gen_Two_AFEs[0].Gen_Eight_Chans[7].Input_Seqs_reg[0][7][1]) is unused and will be removed from module FEB_fabric.
+WARNING: [Synth 8-3332] Sequential element (AFE_DataPath_inst/FSM_sequential_Gen_Two_AFEs[0].Gen_Eight_Chans[7].Input_Seqs_reg[0][7][0]) is unused and will be removed from module FEB_fabric.
+WARNING: [Synth 8-3332] Sequential element (AFE_DataPath_inst/FSM_sequential_Gen_Two_AFEs[1].Gen_Eight_Chans[0].Input_Seqs_reg[1][0][2]) is unused and will be removed from module FEB_fabric.
+WARNING: [Synth 8-3332] Sequential element (AFE_DataPath_inst/FSM_sequential_Gen_Two_AFEs[1].Gen_Eight_Chans[0].Input_Seqs_reg[1][0][1]) is unused and will be removed from module FEB_fabric.
+WARNING: [Synth 8-3332] Sequential element (AFE_DataPath_inst/FSM_sequential_Gen_Two_AFEs[1].Gen_Eight_Chans[0].Input_Seqs_reg[1][0][0]) is unused and will be removed from module FEB_fabric.
+WARNING: [Synth 8-3332] Sequential element (AFE_DataPath_inst/FSM_sequential_Gen_Two_AFEs[1].Gen_Eight_Chans[1].Input_Seqs_reg[1][1][2]) is unused and will be removed from module FEB_fabric.
+WARNING: [Synth 8-3332] Sequential element (AFE_DataPath_inst/FSM_sequential_Gen_Two_AFEs[1].Gen_Eight_Chans[1].Input_Seqs_reg[1][1][1]) is unused and will be removed from module FEB_fabric.
+WARNING: [Synth 8-3332] Sequential element (AFE_DataPath_inst/FSM_sequential_Gen_Two_AFEs[1].Gen_Eight_Chans[1].Input_Seqs_reg[1][1][0]) is unused and will be removed from module FEB_fabric.
+WARNING: [Synth 8-3332] Sequential element (AFE_DataPath_inst/FSM_sequential_Gen_Two_AFEs[1].Gen_Eight_Chans[2].Input_Seqs_reg[1][2][2]) is unused and will be removed from module FEB_fabric.
+WARNING: [Synth 8-3332] Sequential element (AFE_DataPath_inst/FSM_sequential_Gen_Two_AFEs[1].Gen_Eight_Chans[2].Input_Seqs_reg[1][2][1]) is unused and will be removed from module FEB_fabric.
+WARNING: [Synth 8-3332] Sequential element (AFE_DataPath_inst/FSM_sequential_Gen_Two_AFEs[1].Gen_Eight_Chans[2].Input_Seqs_reg[1][2][0]) is unused and will be removed from module FEB_fabric.
+WARNING: [Synth 8-3332] Sequential element (AFE_DataPath_inst/FSM_sequential_Gen_Two_AFEs[1].Gen_Eight_Chans[3].Input_Seqs_reg[1][3][2]) is unused and will be removed from module FEB_fabric.
+WARNING: [Synth 8-3332] Sequential element (AFE_DataPath_inst/FSM_sequential_Gen_Two_AFEs[1].Gen_Eight_Chans[3].Input_Seqs_reg[1][3][1]) is unused and will be removed from module FEB_fabric.
+WARNING: [Synth 8-3332] Sequential element (AFE_DataPath_inst/FSM_sequential_Gen_Two_AFEs[1].Gen_Eight_Chans[3].Input_Seqs_reg[1][3][0]) is unused and will be removed from module FEB_fabric.
+WARNING: [Synth 8-3332] Sequential element (AFE_DataPath_inst/FSM_sequential_Gen_Two_AFEs[1].Gen_Eight_Chans[4].Input_Seqs_reg[1][4][2]) is unused and will be removed from module FEB_fabric.
+WARNING: [Synth 8-3332] Sequential element (AFE_DataPath_inst/FSM_sequential_Gen_Two_AFEs[1].Gen_Eight_Chans[4].Input_Seqs_reg[1][4][1]) is unused and will be removed from module FEB_fabric.
+WARNING: [Synth 8-3332] Sequential element (AFE_DataPath_inst/FSM_sequential_Gen_Two_AFEs[1].Gen_Eight_Chans[4].Input_Seqs_reg[1][4][0]) is unused and will be removed from module FEB_fabric.
+WARNING: [Synth 8-3332] Sequential element (AFE_DataPath_inst/FSM_sequential_Gen_Two_AFEs[1].Gen_Eight_Chans[5].Input_Seqs_reg[1][5][2]) is unused and will be removed from module FEB_fabric.
+WARNING: [Synth 8-3332] Sequential element (AFE_DataPath_inst/FSM_sequential_Gen_Two_AFEs[1].Gen_Eight_Chans[5].Input_Seqs_reg[1][5][1]) is unused and will be removed from module FEB_fabric.
+WARNING: [Synth 8-3332] Sequential element (AFE_DataPath_inst/FSM_sequential_Gen_Two_AFEs[1].Gen_Eight_Chans[5].Input_Seqs_reg[1][5][0]) is unused and will be removed from module FEB_fabric.
+WARNING: [Synth 8-3332] Sequential element (AFE_DataPath_inst/FSM_sequential_Gen_Two_AFEs[1].Gen_Eight_Chans[6].Input_Seqs_reg[1][6][2]) is unused and will be removed from module FEB_fabric.
+WARNING: [Synth 8-3332] Sequential element (AFE_DataPath_inst/FSM_sequential_Gen_Two_AFEs[1].Gen_Eight_Chans[6].Input_Seqs_reg[1][6][1]) is unused and will be removed from module FEB_fabric.
+WARNING: [Synth 8-3332] Sequential element (AFE_DataPath_inst/FSM_sequential_Gen_Two_AFEs[1].Gen_Eight_Chans[6].Input_Seqs_reg[1][6][0]) is unused and will be removed from module FEB_fabric.
+WARNING: [Synth 8-3332] Sequential element (AFE_DataPath_inst/FSM_sequential_Gen_Two_AFEs[1].Gen_Eight_Chans[7].Input_Seqs_reg[1][7][2]) is unused and will be removed from module FEB_fabric.
+WARNING: [Synth 8-3332] Sequential element (AFE_DataPath_inst/FSM_sequential_Gen_Two_AFEs[1].Gen_Eight_Chans[7].Input_Seqs_reg[1][7][1]) is unused and will be removed from module FEB_fabric.
+WARNING: [Synth 8-3332] Sequential element (AFE_DataPath_inst/FSM_sequential_Gen_Two_AFEs[1].Gen_Eight_Chans[7].Input_Seqs_reg[1][7][0]) is unused and will be removed from module FEB_fabric.
+WARNING: [Synth 8-3332] Sequential element (EventBuilder_logic/FSM_onehot_Event_Builder_reg[12]) is unused and will be removed from module FEB_fabric.
+WARNING: [Synth 8-3332] Sequential element (EventBuilder_logic/FSM_onehot_Event_Builder_reg[11]) is unused and will be removed from module FEB_fabric.
+WARNING: [Synth 8-3332] Sequential element (EventBuilder_logic/FSM_onehot_Event_Builder_reg[10]) is unused and will be removed from module FEB_fabric.
+WARNING: [Synth 8-3332] Sequential element (EventBuilder_logic/FSM_onehot_Event_Builder_reg[9]) is unused and will be removed from module FEB_fabric.
+WARNING: [Synth 8-3332] Sequential element (EventBuilder_logic/FSM_onehot_Event_Builder_reg[8]) is unused and will be removed from module FEB_fabric.
+WARNING: [Synth 8-3332] Sequential element (EventBuilder_logic/FSM_onehot_Event_Builder_reg[7]) is unused and will be removed from module FEB_fabric.
+WARNING: [Synth 8-3332] Sequential element (EventBuilder_logic/FSM_onehot_Event_Builder_reg[6]) is unused and will be removed from module FEB_fabric.
+WARNING: [Synth 8-3332] Sequential element (EventBuilder_logic/FSM_onehot_Event_Builder_reg[5]) is unused and will be removed from module FEB_fabric.
+WARNING: [Synth 8-3332] Sequential element (EventBuilder_logic/FSM_onehot_Event_Builder_reg[4]) is unused and will be removed from module FEB_fabric.
+WARNING: [Synth 8-3332] Sequential element (EventBuilder_logic/FSM_onehot_Event_Builder_reg[3]) is unused and will be removed from module FEB_fabric.
+WARNING: [Synth 8-3332] Sequential element (EventBuilder_logic/FSM_onehot_Event_Builder_reg[2]) is unused and will be removed from module FEB_fabric.
+WARNING: [Synth 8-3332] Sequential element (EventBuilder_logic/FSM_onehot_Event_Builder_reg[1]) is unused and will be removed from module FEB_fabric.
+WARNING: [Synth 8-3332] Sequential element (EventBuilder_logic/FSM_onehot_Event_Builder_reg[0]) is unused and will be removed from module FEB_fabric.
+---------------------------------------------------------------------------------
+Finished Technology Mapping : Time (s): cpu = 00:01:23 ; elapsed = 00:01:26 . Memory (MB): peak = 2513.211 ; gain = 1044.242
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Final Netlist Cleanup
+---------------------------------------------------------------------------------
+WARNING: [Synth 8-3295] tying undriven pin DDR_Interface_inst/DDRRdBuff:rst to constant 0
+---------------------------------------------------------------------------------
+Finished IO Insertion : Time (s): cpu = 00:01:27 ; elapsed = 00:01:30 . Memory (MB): peak = 2513.211 ; gain = 1044.242
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Instances
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Instances : Time (s): cpu = 00:01:27 ; elapsed = 00:01:30 . Memory (MB): peak = 2513.211 ; gain = 1044.242
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Rebuilding User Hierarchy
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:01:27 ; elapsed = 00:01:30 . Memory (MB): peak = 2513.211 ; gain = 1044.242
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Ports
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Ports : Time (s): cpu = 00:01:27 ; elapsed = 00:01:30 . Memory (MB): peak = 2513.211 ; gain = 1044.242
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:01:27 ; elapsed = 00:01:30 . Memory (MB): peak = 2513.211 ; gain = 1044.242
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Nets
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Nets : Time (s): cpu = 00:01:27 ; elapsed = 00:01:30 . Memory (MB): peak = 2513.211 ; gain = 1044.242
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Writing Synthesis Report
+---------------------------------------------------------------------------------
+
+Report BlackBoxes: 
++------+----------------+----------+
+|      |BlackBox name   |Instances |
++------+----------------+----------+
+|1     |DDR3LController |         1|
++------+----------------+----------+
+
+Report Cell Usage: 
++------+---------------------+------+
+|      |Cell                 |Count |
++------+---------------------+------+
+|1     |DDR3LController_bbox |     1|
+|2     |BUFG                 |     2|
+|3     |CARRY4               |     7|
+|4     |LUT1                 |    71|
+|5     |LUT2                 |    39|
+|6     |LUT3                 |    23|
+|7     |LUT4                 |   134|
+|8     |LUT5                 |    55|
+|9     |LUT6                 |    59|
+|10    |MUXCY                |    80|
+|11    |FDCE                 |   119|
+|12    |FDPE                 |     6|
+|13    |FDRE                 |   236|
+|14    |FDSE                 |    48|
+|15    |LD                   |     1|
+|16    |IBUF                 |    31|
+|17    |IBUFDS               |     1|
+|18    |OBUF                 |     2|
++------+---------------------+------+
+---------------------------------------------------------------------------------
+Finished Writing Synthesis Report : Time (s): cpu = 00:01:27 ; elapsed = 00:01:30 . Memory (MB): peak = 2513.211 ; gain = 1044.242
+---------------------------------------------------------------------------------
+Synthesis finished with 0 errors, 0 critical warnings and 2511 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:32 ; elapsed = 00:01:22 . Memory (MB): peak = 2513.211 ; gain = 1044.242
+Synthesis Optimization Complete : Time (s): cpu = 00:01:28 ; elapsed = 00:01:30 . Memory (MB): peak = 2513.211 ; gain = 1044.242
+INFO: [Project 1-571] Translating synthesized netlist
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.022 . Memory (MB): peak = 2513.211 ; gain = 0.000
+INFO: [Netlist 29-17] Analyzing 89 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-140] Inserted 1 IBUFs to IO ports without IO buffers.
+INFO: [Opt 31-138] Pushed 1 inverter(s) to 1 load pin(s).
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 2513.211 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+  A total of 33 instances were transformed.
+  (MUXCY,XORCY) => CARRY4: 32 instances
+  LD => LDCE (inverted pins: G): 1 instance 
+
+Synth Design complete, checksum: a0398df5
+INFO: [Common 17-83] Releasing license: Synthesis
+130 Infos, 215 Warnings, 0 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:01:32 ; elapsed = 00:01:42 . Memory (MB): peak = 2513.211 ; gain = 1415.191
+INFO: [Common 17-1381] The checkpoint 'C:/v22.2/FEB_fabric/FEB_fabric.runs/synth_1/FEB_fabric.dcp' has been generated.
+INFO: [runtcl-4] Executing : report_utilization -file FEB_fabric_utilization_synth.rpt -pb FEB_fabric_utilization_synth.pb
+INFO: [Common 17-206] Exiting Vivado at Wed Mar 15 11:49:47 2023...
