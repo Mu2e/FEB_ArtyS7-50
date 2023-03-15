@@ -42,8 +42,8 @@
 #########
 #Simulation logic analyzer
 #########
-!*.wcfg
-!*.coe
+*.wcfg
+*.coe
 #########
 #MIG
 #########
@@ -69,13 +69,13 @@
 #########
 #Journal - files
 #########
-!*.jou
+*.jou
 #########
 #Reports
 #########
-!*.rpt
-!*.txt
-!*.vdi
+*.rpt
+*.txt
+*.vdi
 #########
 #C-files
 #########
