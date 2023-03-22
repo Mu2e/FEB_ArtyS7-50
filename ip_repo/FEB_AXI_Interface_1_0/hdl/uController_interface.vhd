@@ -18,6 +18,7 @@ port(
 	-- Microcontroller data and address buses
 	uCA 					: out std_logic_vector(11 downto 0);
 	uCD 					: out std_logic_vector(15 downto 0);
+	iuCD 					: in std_logic_vector(15 downto 0);
 	-- Geographic address pins
 	GA 						: out std_logic_vector(1 downto 0);
 	
@@ -54,6 +55,7 @@ architecture Behavioural of uController_interface is
 --  -- Geographic address pins
 -- signal GA 					: std_logic_vector(1 downto 0);
 
+
 begin
 
 	CpldRst		<= AXI_control(0);
@@ -65,4 +67,6 @@ begin
 	uCA			<= AXI_uCA(11 downto 0);
 	uCD         <= AXI_uCD(15 downto 0);
 	
+	AXI_output(15 downto 0)			<= iuCD;
+	AXI_output(31 downto 16)		<= (others => '0');
 end Behavioural;

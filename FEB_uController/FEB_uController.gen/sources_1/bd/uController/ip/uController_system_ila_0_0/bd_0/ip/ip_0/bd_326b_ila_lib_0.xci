@@ -6266,7 +6266,7 @@
         "MANAGED": [ { "value": "TRUE" } ],
         "OUTPUTDIR": [ { "value": "." } ],
         "SELECTEDSIMMODEL": [ { "value": "" } ],
-        "SHAREDDIR": [ { "value": "../../../../../ipshared" } ],
+        "SHAREDDIR": [ { "value": "../../../../../../../../../FEB_uController.srcs/sources_1/bd/uController/ipshared" } ],
         "SWVERSION": [ { "value": "2022.2" } ],
         "SYNTHESISFLOW": [ { "value": "GLOBAL" } ]
       }

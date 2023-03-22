@@ -7,32 +7,48 @@
 #include "uC_probes.h"
 #include "Proj_Def.h"
 
+//============= AFE Interface SIM ==============
+void SetAFEDelay(int time); // Default 100 x 12.5 ns
+void SetAFEActiveTime(int time); // Default 200 x 12.5 ns
+
+//============= TRIGGER LOGIC ==============
 // Flash gate enable bit: FlashEn <= uCD(0);
 // Choose between LED and flashgate: PulseSel <= uCD(1);
 // Select source for LED flasher pulse: LEDSrc <= uCD(2);
 void FlashCtrl();
-
 // Register for determining the turn on time
 void TurnOnTime(int time);
-
 // Register for determining the turn off time
 void TurnOffTime(int time);
-
 void LEDTime();
-
 // Trigger control register bits
+//TmgSrcSel <= uCD(0);
+//SlfTrgEn <= uCD(1);
 void TrgEn(int trigger);
-
 // Counter for timing the flash gate.
 void StartGateCounter();
-
+void BeamOn();
+void BeamOff();
 //"Turn on" in this case means reducing the SiPM voltage, "turn off"
 //means restoring to its nominal value
 void FlashGate(); // NOT IMPLEMENTED
-
+void Pulse();     // NOT IMPLEMENTED
 void SetFM(int RxOutDone, int Rx1Dat20, int Rx1Dat21, int Rx1Dat20LSB, int value);
-
-void BeamOn();
-void BeamOff();
-
 void SetTrigReq();
+
+//============= AFE DataPath LOGIC ==============
+void SetADCSmplCntrAd(int ADCSmplCntr);
+void SetCrtlNPortN(int ControllerNo, int PortNo);
+void SetBeamOnLength(int BeamOnLength);
+void SetBeamOffLength(int BeamOffLength);
+void SetPipeline(int Pipeline);
+void SerdesRst();      // NOT IMPLEMENTED
+void PedAvgReq();
+void SetInputMask(int InputMask);
+void PedReg(int ped);
+void ThreshReg();	// NOT IMPLEMENTED
+
+//============= Event Builder LOGIC ==============
+
+//============= Exclude DDR LOGIC ==============
+void ReadEventBuff();

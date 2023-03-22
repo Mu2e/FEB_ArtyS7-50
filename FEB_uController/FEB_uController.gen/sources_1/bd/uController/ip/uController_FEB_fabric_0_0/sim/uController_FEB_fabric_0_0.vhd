@@ -47,7 +47,7 @@
 -- DO NOT MODIFY THIS FILE.
 
 -- IP VLNV: fnal.gov:user:FEB_fabric:1.0
--- IP Revision: 7
+-- IP Revision: 9
 
 LIBRARY ieee;
 USE ieee.std_logic_1164.ALL;
@@ -85,6 +85,7 @@ ENTITY uController_FEB_fabric_0_0 IS
     uCWr : IN STD_LOGIC;
     uCA : IN STD_LOGIC_VECTOR(11 DOWNTO 0);
     uCD : IN STD_LOGIC_VECTOR(15 DOWNTO 0);
+    iuCD : OUT STD_LOGIC_VECTOR(15 DOWNTO 0);
     GA : IN STD_LOGIC_VECTOR(1 DOWNTO 0);
     GPI0_N : IN STD_LOGIC;
     GPI0_P : IN STD_LOGIC;
@@ -126,6 +127,7 @@ ARCHITECTURE uController_FEB_fabric_0_0_arch OF uController_FEB_fabric_0_0 IS
       uCWr : IN STD_LOGIC;
       uCA : IN STD_LOGIC_VECTOR(11 DOWNTO 0);
       uCD : IN STD_LOGIC_VECTOR(15 DOWNTO 0);
+      iuCD : OUT STD_LOGIC_VECTOR(15 DOWNTO 0);
       GA : IN STD_LOGIC_VECTOR(1 DOWNTO 0);
       GPI0_N : IN STD_LOGIC;
       GPI0_P : IN STD_LOGIC;
@@ -164,6 +166,7 @@ BEGIN
       uCWr => uCWr,
       uCA => uCA,
       uCD => uCD,
+      iuCD => iuCD,
       GA => GA,
       GPI0_N => GPI0_N,
       GPI0_P => GPI0_P,

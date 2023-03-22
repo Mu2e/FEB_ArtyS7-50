@@ -4,7 +4,7 @@
     "xci_name": "uController_FEB_fabric_0_0",
     "cell_name": "FEB_fabric_0",
     "component_reference": "fnal.gov:user:FEB_fabric:1.0",
-    "ip_revision": "7",
+    "ip_revision": "9",
     "gen_directory": "../../../../../../FEB_uController.gen/sources_1/bd/uController/ip/uController_FEB_fabric_0_0",
     "parameters": {
       "component_parameters": {
@@ -27,7 +27,7 @@
       },
       "runtime_parameters": {
         "IPCONTEXT": [ { "value": "IP_Integrator" } ],
-        "IPREVISION": [ { "value": "7" } ],
+        "IPREVISION": [ { "value": "9" } ],
         "MANAGED": [ { "value": "TRUE" } ],
         "OUTPUTDIR": [ { "value": "../../../../../../FEB_uController.gen/sources_1/bd/uController/ip/uController_FEB_fabric_0_0" } ],
         "SELECTEDSIMMODEL": [ { "value": "" } ],
@@ -65,6 +65,7 @@
         "uCWr": [ { "direction": "in" } ],
         "uCA": [ { "direction": "in", "size_left": "11", "size_right": "0" } ],
         "uCD": [ { "direction": "in", "size_left": "15", "size_right": "0" } ],
+        "iuCD": [ { "direction": "out", "size_left": "15", "size_right": "0" } ],
         "GA": [ { "direction": "in", "size_left": "1", "size_right": "0" } ],
         "GPI0_N": [ { "direction": "in" } ],
         "GPI0_P": [ { "direction": "in" } ],

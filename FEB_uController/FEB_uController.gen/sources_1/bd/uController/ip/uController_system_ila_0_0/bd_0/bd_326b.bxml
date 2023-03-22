@@ -2,10 +2,10 @@
 <Root MajorVersion="0" MinorVersion="40">
   <CompositeFile CompositeFileTopName="bd_326b" CanBeSetAsTop="true" CanDisplayChildGraph="true">
     <Description>Composite Fileset</Description>
-    <Generation Name="SYNTHESIS" State="GENERATED" Timestamp="1678899275"/>
-    <Generation Name="IMPLEMENTATION" State="GENERATED" Timestamp="1678899275"/>
-    <Generation Name="SIMULATION" State="GENERATED" Timestamp="1678899275"/>
-    <Generation Name="HW_HANDOFF" State="GENERATED" Timestamp="1678899275"/>
+    <Generation Name="SYNTHESIS" State="GENERATED" Timestamp="1679507291"/>
+    <Generation Name="IMPLEMENTATION" State="GENERATED" Timestamp="1679507291"/>
+    <Generation Name="SIMULATION" State="GENERATED" Timestamp="1679507291"/>
+    <Generation Name="HW_HANDOFF" State="GENERATED" Timestamp="1679507291"/>
     <FileCollection Name="SOURCES" Type="SOURCES">
       <File Name="synth\bd_326b.vhd" Type="VHDL">
         <Properties IsEditable="false" IsVisible="true" IsNetlistSimulation="false" Timestamp="0" IsTrackable="false" IsStatusTracked="false"/>
@@ -14,6 +14,12 @@
         <ProcessingOrder Val="NORMAL"/>
       </File>
       <File Name="sim\bd_326b.vhd" Type="VHDL">
+        <Properties IsEditable="false" IsVisible="true" IsNetlistSimulation="false" Timestamp="0" IsTrackable="false" IsStatusTracked="false"/>
+        <Library Name="xil_defaultlib"/>
+        <UsedIn Val="SIMULATION"/>
+        <ProcessingOrder Val="NORMAL"/>
+      </File>
+      <File Name="sim\bd_326b.protoinst">
         <Properties IsEditable="false" IsVisible="true" IsNetlistSimulation="false" Timestamp="0" IsTrackable="false" IsStatusTracked="false"/>
         <Library Name="xil_defaultlib"/>
         <UsedIn Val="SIMULATION"/>
@@ -37,12 +43,6 @@
         <Properties IsEditable="false" IsVisible="true" IsNetlistSimulation="false" Timestamp="0" IsTrackable="false" IsStatusTracked="false"/>
         <Library Name="xil_defaultlib"/>
         <UsedIn Val="HW_HANDOFF"/>
-        <ProcessingOrder Val="NORMAL"/>
-      </File>
-      <File Name="sim\bd_326b.protoinst">
-        <Properties IsEditable="false" IsVisible="true" IsNetlistSimulation="false" Timestamp="0" IsTrackable="false" IsStatusTracked="false"/>
-        <Library Name="xil_defaultlib"/>
-        <UsedIn Val="SIMULATION"/>
         <ProcessingOrder Val="NORMAL"/>
       </File>
     </FileCollection>

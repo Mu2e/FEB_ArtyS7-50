@@ -32,8 +32,9 @@
         "m02_couplers": {}
       },
       "clk_wiz_1": "",
-      "FEB_AXI_Interface_0": "",
       "system_ila_0": "",
+      "FEB_AXI_Interface_0": "",
+      "system_ila_1": "",
       "FEB_fabric_0": ""
     },
     "interface_ports": {
@@ -1098,12 +1099,6 @@
           }
         }
       },
-      "FEB_AXI_Interface_0": {
-        "vlnv": "fnal.gov:user:FEB_AXI_Interface:1.0",
-        "xci_name": "uController_FEB_AXI_Interface_0_0",
-        "xci_path": "ip\\uController_FEB_AXI_Interface_0_0\\uController_FEB_AXI_Interface_0_0.xci",
-        "inst_hier_path": "FEB_AXI_Interface_0"
-      },
       "system_ila_0": {
         "vlnv": "xilinx.com:ip:system_ila:1.1",
         "xci_name": "uController_system_ila_0_0",
@@ -1135,6 +1130,29 @@
             "value": "0"
           },
           "C_PROBE6_TYPE": {
+            "value": "0"
+          }
+        }
+      },
+      "FEB_AXI_Interface_0": {
+        "vlnv": "fnal.gov:user:FEB_AXI_Interface:1.0",
+        "xci_name": "uController_FEB_AXI_Interface_0_0",
+        "xci_path": "ip\\uController_FEB_AXI_Interface_0_0\\uController_FEB_AXI_Interface_0_0.xci",
+        "inst_hier_path": "FEB_AXI_Interface_0"
+      },
+      "system_ila_1": {
+        "vlnv": "xilinx.com:ip:system_ila:1.1",
+        "xci_name": "uController_system_ila_1_0",
+        "xci_path": "ip\\uController_system_ila_1_0\\uController_system_ila_1_0.xci",
+        "inst_hier_path": "system_ila_1",
+        "parameters": {
+          "C_MON_TYPE": {
+            "value": "NATIVE"
+          },
+          "C_NUM_OF_PROBES": {
+            "value": "1"
+          },
+          "C_PROBE0_TYPE": {
             "value": "0"
           }
         }
@@ -1383,6 +1401,21 @@
           "RAS_0"
         ]
       },
+      "FEB_fabric_0_iuCD": {
+        "ports": [
+          "FEB_fabric_0/iuCD",
+          "FEB_AXI_Interface_0/iuCD",
+          "system_ila_1/probe0"
+        ],
+        "hdl_attributes": {
+          "DEBUG": {
+            "value": "true"
+          },
+          "MARK_DEBUG": {
+            "value": "true"
+          }
+        }
+      },
       "GPI0_N_0_1": {
         "ports": [
           "GPI0_N_0",
@@ -1466,8 +1499,9 @@
           "axi_uartlite_0/s_axi_aclk",
           "axi_gpio_0/s_axi_aclk",
           "microblaze_0_local_memory/LMB_Clk",
+          "system_ila_0/clk",
           "FEB_AXI_Interface_0/s00_axi_aclk",
-          "system_ila_0/clk"
+          "system_ila_1/clk"
         ]
       },
       "clk_wiz_0_clk_out3": {

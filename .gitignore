@@ -84,3 +84,7 @@
 !*.elf
 !*.bmm
 !*.xmp
+
+/FEB
+temp_xsdb_launch_script.tcl
+.metadata

@@ -41,5 +41,6 @@ void ClearWRDL();
 
 void uCA(int command);
 void uCD(int write_data);
+int iuCD();
 
 #endif

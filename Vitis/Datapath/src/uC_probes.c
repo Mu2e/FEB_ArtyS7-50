@@ -83,3 +83,11 @@ void uCD(int write_data)
 {
 	FEB_AXI_INTERFACE_mWriteReg (BASEADDR, REG2, write_data);
 }
+
+int iuCD()
+{
+	int read_data = 0;
+	read_data = FEB_AXI_INTERFACE_mReadReg (BASEADDR, REG3);
+	return read_data;
+
+}

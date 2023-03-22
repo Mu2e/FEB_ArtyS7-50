@@ -70,9 +70,7 @@ proc create_report { reportName command } {
   }
 }
 OPTRACE "synth_1" START { ROLLUP_AUTO }
-set_param chipscope.maxJobs 4
 set_param simulator.modelsimInstallPath C:/intelFPGA/20.1/modelsim_ae/win32aloem
-set_msg_config -id {Common 17-41} -limit 10000000
 OPTRACE "Creating in-memory project" START { }
 create_project -in_memory -part xc7s50csga324-1
 
@@ -100,6 +98,7 @@ read_vhdl -library work {
   C:/v22.2/FEB_fabric/FEB_fabric.srcs/sources_1/new/AFE_Pipeline.vhd
   {C:/v22.2/FEB_fabric/FEB_fabric.srcs/sources_1/new/DDR_Interface .vhd}
   C:/v22.2/FEB_fabric/FEB_fabric.srcs/sources_1/new/EventBuilder.vhd
+  C:/v22.2/FEB_fabric/FEB_fabric.srcs/sources_1/new/Exclude_DDR.vhd
   C:/v22.2/FEB_fabric/FEB_fabric.srcs/sources_1/new/Trigger.vhd
   C:/v22.2/FEB_fabric/FEB_fabric.srcs/sources_1/new/FEB_top_ARTY.vhd
 }

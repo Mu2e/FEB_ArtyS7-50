@@ -1,7 +1,7 @@
 --Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
 ----------------------------------------------------------------------------------
 --Tool Version: Vivado v.2022.2 (win64) Build 3671981 Fri Oct 14 05:00:03 MDT 2022
---Date        : Wed Mar 15 11:52:06 2023
+--Date        : Wed Mar 22 12:48:09 2023
 --Host        : CD-135239 running 64-bit major release  (build 9200)
 --Command     : generate_target uController.bd
 --Design      : uController
@@ -1637,7 +1637,7 @@ entity uController is
     usb_uart_txd : out STD_LOGIC
   );
   attribute CORE_GENERATION_INFO : string;
-  attribute CORE_GENERATION_INFO of uController : entity is "uController,IP_Integrator,{x_ipVendor=xilinx.com,x_ipLibrary=BlockDiagram,x_ipName=uController,x_ipVersion=1.00.a,x_ipLanguage=VHDL,numBlks=22,numReposBlks=16,numNonXlnxBlks=2,numHierBlks=6,maxHierDepth=1,numSysgenBlks=0,numHlsBlks=0,numHdlrefBlks=0,numPkgbdBlks=0,bdsource=USER,da_axi4_cnt=3,da_board_cnt=6,da_clkrst_cnt=3,da_mb_cnt=1,synth_mode=OOC_per_BD}";
+  attribute CORE_GENERATION_INFO of uController : entity is "uController,IP_Integrator,{x_ipVendor=xilinx.com,x_ipLibrary=BlockDiagram,x_ipName=uController,x_ipVersion=1.00.a,x_ipLanguage=VHDL,numBlks=23,numReposBlks=17,numNonXlnxBlks=2,numHierBlks=6,maxHierDepth=1,numSysgenBlks=0,numHlsBlks=0,numHdlrefBlks=0,numPkgbdBlks=0,bdsource=USER,da_axi4_cnt=3,da_board_cnt=6,da_clkrst_cnt=4,da_mb_cnt=1,synth_mode=OOC_per_BD}";
   attribute HW_HANDOFF : string;
   attribute HW_HANDOFF of uController : entity is "uController.hwdef";
 end uController;
@@ -1795,6 +1795,18 @@ architecture STRUCTURE of uController is
     clk_out1 : out STD_LOGIC
   );
   end component uController_clk_wiz_1_3;
+  component uController_system_ila_0_0 is
+  port (
+    clk : in STD_LOGIC;
+    probe0 : in STD_LOGIC_VECTOR ( 0 to 0 );
+    probe1 : in STD_LOGIC_VECTOR ( 0 to 0 );
+    probe2 : in STD_LOGIC_VECTOR ( 1 downto 0 );
+    probe3 : in STD_LOGIC_VECTOR ( 11 downto 0 );
+    probe4 : in STD_LOGIC_VECTOR ( 0 to 0 );
+    probe5 : in STD_LOGIC_VECTOR ( 0 to 0 );
+    probe6 : in STD_LOGIC_VECTOR ( 15 downto 0 )
+  );
+  end component uController_system_ila_0_0;
   component uController_FEB_AXI_Interface_0_0 is
   port (
     CpldRst : out STD_LOGIC;
@@ -1803,6 +1815,7 @@ architecture STRUCTURE of uController is
     uCWr : out STD_LOGIC;
     uCA : out STD_LOGIC_VECTOR ( 11 downto 0 );
     uCD : out STD_LOGIC_VECTOR ( 15 downto 0 );
+    iuCD : in STD_LOGIC_VECTOR ( 15 downto 0 );
     GA : out STD_LOGIC_VECTOR ( 1 downto 0 );
     s00_axi_aclk : in STD_LOGIC;
     s00_axi_aresetn : in STD_LOGIC;
@@ -1827,18 +1840,12 @@ architecture STRUCTURE of uController is
     s00_axi_rready : in STD_LOGIC
   );
   end component uController_FEB_AXI_Interface_0_0;
-  component uController_system_ila_0_0 is
+  component uController_system_ila_1_0 is
   port (
     clk : in STD_LOGIC;
-    probe0 : in STD_LOGIC_VECTOR ( 0 to 0 );
-    probe1 : in STD_LOGIC_VECTOR ( 0 to 0 );
-    probe2 : in STD_LOGIC_VECTOR ( 1 downto 0 );
-    probe3 : in STD_LOGIC_VECTOR ( 11 downto 0 );
-    probe4 : in STD_LOGIC_VECTOR ( 0 to 0 );
-    probe5 : in STD_LOGIC_VECTOR ( 0 to 0 );
-    probe6 : in STD_LOGIC_VECTOR ( 15 downto 0 )
+    probe0 : in STD_LOGIC_VECTOR ( 15 downto 0 )
   );
-  end component uController_system_ila_0_0;
+  end component uController_system_ila_1_0;
   component uController_FEB_fabric_0_0 is
   port (
     Clk_80MHz : in STD_LOGIC;
@@ -1868,6 +1875,7 @@ architecture STRUCTURE of uController is
     uCWr : in STD_LOGIC;
     uCA : in STD_LOGIC_VECTOR ( 11 downto 0 );
     uCD : in STD_LOGIC_VECTOR ( 15 downto 0 );
+    iuCD : out STD_LOGIC_VECTOR ( 15 downto 0 );
     GA : in STD_LOGIC_VECTOR ( 1 downto 0 );
     GPI0_N : in STD_LOGIC;
     GPI0_P : in STD_LOGIC;
@@ -1910,6 +1918,9 @@ architecture STRUCTURE of uController is
   signal FEB_fabric_0_Pulse : STD_LOGIC;
   signal FEB_fabric_0_PulseSel : STD_LOGIC;
   signal FEB_fabric_0_RAS : STD_LOGIC;
+  signal FEB_fabric_0_iuCD : STD_LOGIC_VECTOR ( 15 downto 0 );
+  attribute DEBUG of FEB_fabric_0_iuCD : signal is "true";
+  attribute MARK_DEBUG of FEB_fabric_0_iuCD : signal is std.standard.true;
   signal GPI0_N_0_1 : STD_LOGIC;
   signal GPI0_P_0_1 : STD_LOGIC;
   signal GPI1_0_1 : STD_LOGIC;
@@ -2087,6 +2098,7 @@ FEB_AXI_Interface_0: component uController_FEB_AXI_Interface_0_0
       CpldCS => FEB_AXI_Interface_0_CpldCS,
       CpldRst => FEB_AXI_Interface_0_CpldRst,
       GA(1 downto 0) => FEB_AXI_Interface_0_GA(1 downto 0),
+      iuCD(15 downto 0) => FEB_fabric_0_iuCD(15 downto 0),
       s00_axi_aclk => clk_wiz_0_clk_out2,
       s00_axi_araddr(3 downto 0) => microblaze_0_axi_periph_M02_AXI_ARADDR(3 downto 0),
       s00_axi_aresetn => rst_clk_wiz_0_100M_peripheral_aresetn(0),
@@ -2144,6 +2156,7 @@ FEB_fabric_0: component uController_FEB_fabric_0_0
       SysClk => clk_wiz_1_clk_out1,
       UDQS_N => UDQS_N_0,
       UDQS_P => UDQS_P_0,
+      iuCD(15 downto 0) => FEB_fabric_0_iuCD(15 downto 0),
       uCA(11 downto 0) => FEB_AXI_Interface_0_uCA(11 downto 0),
       uCD(15 downto 0) => Net(15 downto 0),
       uCRd => FEB_AXI_Interface_0_uCRd,
@@ -2413,5 +2426,10 @@ system_ila_0: component uController_system_ila_0_0
       probe4(0) => FEB_AXI_Interface_0_uCRd,
       probe5(0) => FEB_AXI_Interface_0_uCWr,
       probe6(15 downto 0) => Net(15 downto 0)
+    );
+system_ila_1: component uController_system_ila_1_0
+     port map (
+      clk => clk_wiz_0_clk_out2,
+      probe0(15 downto 0) => FEB_fabric_0_iuCD(15 downto 0)
     );
 end STRUCTURE;

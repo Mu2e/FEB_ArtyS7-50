@@ -68,7 +68,7 @@ int main()
 	colorLED(YELLOW);
     init_platform(); // Needed for the UART setup
     ResetCpld();
-    sleep(3);
+    sleep(2);
 	blinkLED(RED);
 /* CODE TO GENERATE THE uBUNCH
 	int RxOutDone = 1;
@@ -82,8 +82,16 @@ int main()
 	SetFM(RxOutDone, Rx1Dat20, Rx1Dat21, Rx1Dat20LSB, value);
 */
 
+	SetTrigReq();
 
-	xil_printf("Test finished!\n\n\r");
+//	PedAvgReq();
+	PedReg(2);
+	ReadEventBuff();
+	int prova = 1111;
+/*	for (int i = 0; i < 2048; i++)
+		{prova = iuCD();
+		xil_printf("%d\n", prova);}
+*/	xil_printf("Test finished!\n\n\r");
    	colorLED(VIOLET);
 
 

@@ -1,13 +1,20 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <section name="Workbench">
 	<section name="org.eclipse.ui.texteditor.FindReplaceDialog">
-		<item key="selection" value="&#x09;usleep(500000);"/>
+		<item key="selection" value="InputMaskAddr"/>
 		<item key="wrap" value="true"/>
 		<item key="casesensitive" value="false"/>
 		<item key="wholeword" value="false"/>
 		<item key="incremental" value="false"/>
 		<item key="isRegEx" value="false"/>
 		<list key="findhistory">
+			<item value="InputMaskAddr"/>
+			<item value="Pipe"/>
+			<item value="BeamOnLengthAd"/>
+			<item value="FEBAddresRegAd"/>
+			<item value="ADCSmplCntrAd"/>
+			<item value="CSRBroadCastAd"/>
+			<item value="0b0001110111"/>
 			<item value="&#x09;sleep(1);"/>
 			<item value="usleep(400);"/>
 		</list>
