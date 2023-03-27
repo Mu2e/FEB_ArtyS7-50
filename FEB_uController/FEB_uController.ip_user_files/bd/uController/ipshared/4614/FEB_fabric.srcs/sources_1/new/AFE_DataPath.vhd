@@ -125,6 +125,9 @@ attribute mark_debug of din_AFE 	 	 : signal is "true";
 attribute mark_debug of dout_AFE		 : signal is "true";
 attribute mark_debug of BufferIn 		 : signal is "true";
 attribute mark_debug of BufferWE		 : signal is "true";
+attribute mark_debug of BufferRdAdd 	 : signal is "true";
+attribute mark_debug of BufferOut		 : signal is "true";
+
 attribute mark_debug of BufferWrtAdd	 : signal is "true";
 attribute mark_debug of Input_Seqs 		 : signal is "true";
 
@@ -151,6 +154,7 @@ attribute mark_debug of BeamOffLength 	 : signal is "true";
 attribute mark_debug of ADCSmplCntReg  	 : signal is "true";
 attribute mark_debug of PipelineSet		 : signal is "true";
 attribute mark_debug of GateWidth		 : signal is "true";
+
 
 
 begin

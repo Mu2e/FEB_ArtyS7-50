@@ -81,6 +81,17 @@ signal SampleCount			: std_logic_vector(8 downto 0);
 
 attribute mark_debug : string;
 attribute mark_debug of Event_Builder : signal is "true";
+attribute mark_debug of EvBuffWrt	  : signal is "true";
+attribute mark_debug of EvBuffRd	  : signal is "true";
+attribute mark_debug of EvBuffDat	  : signal is "true";
+attribute mark_debug of EvBuffOut	  : signal is "true";
+attribute mark_debug of EvBuffWdsUsed : signal is "true";
+attribute mark_debug of AFE_Num	  	  : signal is "true";
+attribute mark_debug of Chan_Num 	  : signal is "true";
+attribute mark_debug of Read_Seq_Stat : signal is "true";
+attribute mark_debug of EventWdCnt 	  : signal is "true";
+attribute mark_debug of SampleCount	  : signal is "true";
+
 
 begin
 

@@ -153,3 +153,6 @@
 #define ReadEventBuffAd 0b1110101011
 #define SetAFEDelayAd 0b1110101100
 #define SetAFEActiveTimeAd 0b1110101101
+#define SetAFEPeriodTime 0b11110101110
+
+#define ThreshRegAddr00 0b0010010000

@@ -35,9 +35,9 @@ architecture Exclude_DDR_arch of Exclude_DDR is
 
 constant ReadEventBuff : AddrPtr := "11" & X"AB";
 
-attribute mark_debug : string;
-attribute mark_debug of EvBuffRd : signal is "true";
-attribute mark_debug of EvBuffOut : signal is "true";
+--attribute mark_debug : string;
+--attribute mark_debug of EvBuffRd : signal is "true";
+--attribute mark_debug of EvBuffOut : signal is "true";
 
 begin
 iuCD <= EvBuffOut;
@@ -49,13 +49,13 @@ begin
 	elsif rising_edge (SysClk) then 
 	
 	if WRDL = 1 and uCA(9 downto 0) = ReadEventBuff
-	then EvBuffRd <= '1';
+	then EvBuffRd <= uCD(0);
 	else EvBuffRd <= EvBuffRd;
 	end if;
 
 
 	end if;
-
+	
 	
 end process;
 end Exclude_DDR_arch;

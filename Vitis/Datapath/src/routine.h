@@ -10,6 +10,7 @@
 //============= AFE Interface SIM ==============
 void SetAFEDelay(int time); // Default 100 x 12.5 ns
 void SetAFEActiveTime(int time); // Default 200 x 12.5 ns
+void SetPeriod(int time); // Default 128 x 2 x 12.5 ns
 
 //============= TRIGGER LOGIC ==============
 // Flash gate enable bit: FlashEn <= uCD(0);
@@ -35,7 +36,7 @@ void FlashGate(); // NOT IMPLEMENTED
 void Pulse();     // NOT IMPLEMENTED
 void SetFM(int RxOutDone, int Rx1Dat20, int Rx1Dat21, int Rx1Dat20LSB, int value);
 void SetTrigReq();
-
+void uBunch(int value);
 //============= AFE DataPath LOGIC ==============
 void SetADCSmplCntrAd(int ADCSmplCntr);
 void SetCrtlNPortN(int ControllerNo, int PortNo);
@@ -46,9 +47,10 @@ void SerdesRst();      // NOT IMPLEMENTED
 void PedAvgReq();
 void SetInputMask(int InputMask);
 void PedReg(int ped);
-void ThreshReg();	// NOT IMPLEMENTED
+void SetThreshReg00(int treshold);
 
 //============= Event Builder LOGIC ==============
 
 //============= Exclude DDR LOGIC ==============
 void ReadEventBuff();
+void StopReadEventBuff();

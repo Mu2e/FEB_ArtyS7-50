@@ -9,7 +9,7 @@
    "Grouping and No Loops_TopLeft":"-110,-158",
    "Reduced Jogs_ScaleFactor":"0.499388",
    "Reduced Jogs_TopLeft":"-110,-186",
-   "guistr":"# # String gsaved with Nlview 7.0r6  2020-01-29 bk=1.5227 VDI=41 GEI=36 GUI=JA:10.0 non-TLS
+   "guistr":"# # String gsaved with Nlview 7.0r6  2020-01-29 bk=1.5227 VDI=41 GEI=36 GUI=JA:10.0 non-TLS-threadsafe
 #  -string -flagsOSRD
 preplace port rgb_led -pg 1 -lvl 8 -x 2350 -y 830 -defaultsOSRD
 preplace port led_4bits -pg 1 -lvl 8 -x 2350 -y 850 -defaultsOSRD

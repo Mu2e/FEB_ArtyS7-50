@@ -68,3 +68,13 @@ platform config -updatehw {C:/v22.2/FEB_uController/uController_wrapper_fixed.xs
 platform generate -domains 
 platform config -updatehw {C:/v22.2/FEB_uController/uController_wrapper_fixed.xsa}
 platform generate -domains 
+platform config -updatehw {C:/v22.2/FEB_uController/uController_wrapper_fixed2.xsa}
+platform generate -domains 
+platform config -updatehw {C:/v22.2/FEB_uController/uController_wrapper_EVBILA.xsa}
+platform generate -domains 
+platform config -updatehw {C:/v22.2/FEB_uController/uController_wrapper_EVBILA2.xsa}
+platform generate -domains 
+platform config -updatehw {C:/v22.2/FEB_uController/uController_wrapper_EVBILA3.xsa}
+platform generate -domains 
+platform config -updatehw {C:/v22.2/FEB_uController/uController_wrapper_newAFE.xsa}
+platform generate -domains 

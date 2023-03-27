@@ -23,6 +23,13 @@ void SetAFEActiveTime(int time) // Default 200 x 12.5 ns
     ClearWRDL();
 }
 
+void SetPeriod(int time) // Default 128 x 2 x 12.5 ns
+{
+	SetWRDL();
+    uCA(SetAFEPeriodTime);
+    uCD(time);
+    ClearWRDL();
+}
 
 // Flash gate enable bit: FlashEn <= uCD(0);
 // Choose between LED and flashgate: PulseSel <= uCD(1);
@@ -119,6 +126,17 @@ void SetTrigReq()
 
 }
 
+
+void uBunch(int value)
+{
+	int RxOutDone = 1;
+	int Rx1Dat20 = 0;
+	int Rx1Dat21 = 0;
+	int Rx1Dat20LSB = 1;
+	SetFM(RxOutDone, Rx1Dat20, Rx1Dat21, Rx1Dat20LSB, value);
+
+}
+
 void PedReg(int ped)
 {
 	SetWRDL();
@@ -186,12 +204,27 @@ void SetInputMask(int InputMask)
     ClearWRDL();
 }
 
-
+void SetThreshReg00(int treshold)
+{
+	SetWRDL();
+    uCA(ThreshRegAddr00);
+    uCD(treshold);
+    ClearWRDL();
+}
 
 // Function to activate the DDR-Exclude path
 void ReadEventBuff()
 {
 	SetWRDL();
     uCA(ReadEventBuffAd);
+    uCD(1);
+    ClearWRDL();
+}
+
+void StopReadEventBuff()
+{
+	SetWRDL();
+    uCA(ReadEventBuffAd);
+    uCD(0);
     ClearWRDL();
 }

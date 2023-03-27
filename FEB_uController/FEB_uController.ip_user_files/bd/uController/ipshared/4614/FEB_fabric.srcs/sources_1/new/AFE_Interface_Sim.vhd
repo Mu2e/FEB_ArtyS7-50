@@ -52,6 +52,10 @@ signal ActiveTime_c		: std_logic_vector(15 downto 0);
 constant SetAFEDelay : AddrPtr := "11" & X"AC";
 constant SetAFEActiveTime : AddrPtr := "11" & X"AD";
 
+attribute mark_debug : string;
+attribute mark_debug of delay : signal is "true";
+attribute mark_debug of ActiveTime : signal is "true";
+
 begin
 
 -- done <= "00", "11" after 50ns;

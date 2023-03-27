@@ -120,4 +120,20 @@ port map (
 	GA              => GA,
 	WRDL 			=> WRDL
 	);
+	
+	
+read_EvBuff: process
+begin
+	wait until rising_edge(CpldRst);
+	WRDL <= "01";
+	uCA(9 downto 0) <= "11" & X"AE";
+	uCD 			<= X"0040";	
+end process;	
+	
+	
+	
+	
+	
+	
+	
 end Behavioral;

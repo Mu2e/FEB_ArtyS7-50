@@ -42,7 +42,9 @@ signal d5_vec: std_logic_vector(13 downto 0) := "00000000000000"; -- 0x000
 signal d6_vec: std_logic_vector(13 downto 0) := "00101010111100"; -- 0x0ABC
 signal d7_vec: std_logic_vector(13 downto 0) := "00000000000000"; -- count up
 signal d8_vec: std_logic_vector(13 downto 0) := "11111110000000"; -- aka FCLK should be 0x3F80
-signal counter: std_logic_vector(7 downto 0):= "00000000";
+signal counter			: std_logic_vector(15 downto 0)	:= x"0000";
+signal period			: std_logic_vector(15 downto 0);
+signal tmp			    : signed(15 downto 0):= x"0000";
 signal delay 	  		: std_logic_vector(15 downto 0)	:= x"0064";
 signal ActiveTime 		: std_logic_vector(15 downto 0) := x"00C8";
 signal delay_c 	  		: std_logic_vector(15 downto 0);
@@ -51,6 +53,11 @@ signal ActiveTime_c		: std_logic_vector(15 downto 0);
 
 constant SetAFEDelay : AddrPtr := "11" & X"AC";
 constant SetAFEActiveTime : AddrPtr := "11" & X"AD";
+constant SetAFEPeriodTime : AddrPtr := "11" & X"AE";
+
+attribute mark_debug : string;
+attribute mark_debug of delay : signal is "true";
+attribute mark_debug of ActiveTime : signal is "true";
 
 begin
 
@@ -82,8 +89,9 @@ begin
 	dout_AFE1(3) <= d3_vec;
 	dout_AFE1(2) <= d2_vec;
 	dout_AFE1(1) <= d1_vec;
-	dout_AFE1(0) <= d0_vec;
-
+	dout_AFE1(0) <= d0_vec;	
+	tmp <= shift_left(signed(period), 1);
+	if (counter < period) then 
     d7_vec <= std_logic_vector(unsigned(d7_vec)+1);
 	d6_vec <= std_logic_vector(unsigned(d6_vec)+1);
 	d5_vec <= std_logic_vector(unsigned(d5_vec)+1);
@@ -91,8 +99,22 @@ begin
 	d3_vec <= std_logic_vector(unsigned(d3_vec)+1);
 	d2_vec <= std_logic_vector(unsigned(d2_vec)+1);
 	d1_vec <= std_logic_vector(unsigned(d1_vec)+1);
-	d0_vec <= std_logic_vector(unsigned(d0_vec)+1);	
-	counter <= counter + 1;
+	d0_vec <= std_logic_vector(unsigned(d0_vec)+1);
+	else 
+	d7_vec <= std_logic_vector(unsigned(d7_vec)-1);
+	d6_vec <= std_logic_vector(unsigned(d6_vec)-1);
+	d5_vec <= std_logic_vector(unsigned(d5_vec)-1);
+	d4_vec <= std_logic_vector(unsigned(d4_vec)-1);
+	d3_vec <= std_logic_vector(unsigned(d3_vec)-1);
+	d2_vec <= std_logic_vector(unsigned(d2_vec)-1);
+	d1_vec <= std_logic_vector(unsigned(d1_vec)-1);
+	d0_vec <= std_logic_vector(unsigned(d0_vec)-1);
+	end if;
+	if (counter = std_logic_vector(tmp)) then
+		counter <= x"0000";
+	else
+		counter <= counter + 1;
+	end if;
 	
 	ActiveTime <= ActiveTime - 1;
 	if ActiveTime = 1 then 
@@ -108,6 +130,8 @@ begin
 	if CpldRst = '0' then
 	delay_c 		<= x"0064"; -- 100
 	ActiveTime_c	<= x"00C8"; -- 200
+--	counter			<= x"0000";
+	period			<= x"0080";	--128
 	elsif rising_edge (SysClk) then 
 		if WRDL = 1 and uCA(9 downto 0) = SetAFEDelay 
 		then delay_c <= uCD; 
@@ -118,6 +142,12 @@ begin
 		then ActiveTime_c <= uCD; 
 		else ActiveTime_c <= ActiveTime_c;
 		end if;
+		
+		if WRDL = 1 and uCA(9 downto 0) = SetAFEPeriodTime 
+		then period <= uCD; 
+		else period <= period;
+		end if;
+		
 	end if;
 
 end process;
