@@ -36,6 +36,7 @@ architecture Behavioral of Datapath_Testbench is
 component AFE_Interface_Sim is
   Port (
 	Clk_80MHz			: in std_logic; 
+	Clk_100MHz			: in std_logic; 
 	SysClk				: in std_logic;
 -- Data output from the deserializer for AFE0 and AFE1 synchronized to 80 MHz clock
 	dout_AFE0			: out Array_8x14; 
@@ -65,11 +66,13 @@ constant Clk560MHz_period: time := 1.786ns; -- 80 MHz * 7 = 560MHz
 constant Clk10MHz_period: time := 100ns;
 constant Clk12MHz_period: time := 83ns;
 constant Clk15MHz_period: time := 67ns;
+constant HW_period: time := 78ns;
 
 signal reset	: std_logic := '1';
 signal ResetHi	: std_logic := '1';
 signal CpldRst	: std_logic := '1';
 signal Clk100MHz, Clk200MHz, Clk160MHz, Clk80MHz, Clk560MHz: std_logic := '0';
+signal HW_Clk : std_logic := '0';
 
 signal dout_AFE0			: Array_8x14; 
 signal dout_AFE1			: Array_8x14;
@@ -82,14 +85,18 @@ signal uCA 	  				  : std_logic_vector(11 downto 0);
 signal uCD 	  				  : std_logic_vector(15 downto 0);
 signal iuCD 	  			  : std_logic_vector(15 downto 0);
 signal GA 					  : std_logic_vector(1 downto 0);
-signal WRDL 		: std_logic_vector(1 downto 0):=(others => '0');
-
+signal WRDL 				  : std_logic_vector(1 downto 0):=(others => '0');
+signal counter				: std_logic_vector(15 downto 0):=(others => '0');
+	
+constant FillAFEemu : AddrPtr := "11" & X"AC";
+constant StartAFEemu : AddrPtr := "11" & X"AD";
+constant ResetAFEemu : AddrPtr := "11" & X"AE";
 
 begin
 
 --make the reset
 reset 	<= '1', '0' after 13ns;
-CpldRst <= '1', '0' after 12.5ns, '1' after 25ns;
+CpldRst <= '0', '1' after 25ns;
 ResetHi <= not CpldRst;
 
 
@@ -99,10 +106,12 @@ Clk100MHz  <= not Clk100MHz  after Clk100MHz_period/2;
 Clk160MHz <= not Clk160MHz after Clk160MHz_period/2;
 Clk200MHz <= not Clk200MHz after Clk200MHz_period/2;
 Clk560MHz <= not Clk560MHz after Clk560MHz_period/2;
+HW_Clk <= not HW_Clk after HW_period/2;
 
 AFE_Interface : AFE_Interface_Sim
 port map (
-	Clk_80MHz			=> Clk80MHz,	 
+	Clk_80MHz			=> Clk80MHz,	
+	Clk_100MHz			=> Clk100MHz,	
 	SysClk				=> Clk160MHz,		
 -- Data output from the deserializer for AFE0 and AFE1 synchronized to 80 MHz clock
 	dout_AFE0			=> dout_AFE0,	
@@ -121,19 +130,31 @@ port map (
 	WRDL 			=> WRDL
 	);
 	
-	
-read_EvBuff: process
+
+RAM: process(HW_Clk)
 begin
-	wait until rising_edge(CpldRst);
-	WRDL <= "01";
-	uCA(9 downto 0) <= "11" & X"AE";
-	uCD 			<= X"0040";	
+	counter <= counter + 1;
+	
+	if CpldRst = '0' then
+		uCA <= (others => '0');
+		uCD <= (others => '0');		
+		WRDL <= "00";	
+	else
+		if (counter < x"16") then 
+		--WRDL <= "01";
+		--uCA(9 downto 0) <= ResetAFEemu;
+		elsif (counter > x"50") then
+		WRDL <= "01";
+		uCA(9 downto 0) <= StartAFEemu;		
+		else 
+		WRDL <= "01";
+		uCA(9 downto 0) <= FillAFEemu;	
+		uCD <= counter;
+		end if;
+
+	end if;
 end process;	
-	
-	
-	
-	
-	
-	
-	
+		
+
+
 end Behavioral;

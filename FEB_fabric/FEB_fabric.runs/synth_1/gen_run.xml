@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<GenRun Id="synth_1" LaunchPart="xc7s50csga324-1" LaunchTime="1679928850" LaunchIncrCheckpoint="$PSRCDIR/utils_1/imports/synth_1/FEB_fabric.dcp">
+<GenRun Id="synth_1" LaunchPart="xc7s50csga324-1" LaunchTime="1680099338" LaunchIncrCheckpoint="$PSRCDIR/utils_1/imports/synth_1/FEB_fabric.dcp">
   <File Type="PA-TCL" Name="FEB_fabric.tcl"/>
   <File Type="RDS-PROPCONSTRS" Name="FEB_fabric_drc_synth.rpt"/>
   <File Type="REPORTS-TCL" Name="FEB_fabric_reports.tcl"/>
@@ -53,7 +53,7 @@
         <Attr Name="UsedIn" Val="simulation"/>
       </FileInfo>
     </File>
-    <File Path="$PSRCDIR/sources_1/new/AFE_Interface_Sim.vhd">
+    <File Path="$PSRCDIR/sources_1/new/AFE_Interface_Sim_easy.vhd">
       <FileInfo>
         <Attr Name="Library" Val="work"/>
         <Attr Name="UsedIn" Val="synthesis"/>
@@ -81,7 +81,7 @@
         <Attr Name="UsedIn" Val="simulation"/>
       </FileInfo>
     </File>
-    <File Path="$PSRCDIR/sources_1/new/Exclude_DDR.vhd">
+    <File Path="$PSRCDIR/sources_1/new/Exclude_EVB.vhd">
       <FileInfo>
         <Attr Name="Library" Val="work"/>
         <Attr Name="UsedIn" Val="synthesis"/>
@@ -102,10 +102,16 @@
         <Attr Name="UsedIn" Val="simulation"/>
       </FileInfo>
     </File>
+    <File Path="$PSRCDIR/sources_1/new/Exclude_DDR.vhd">
+      <FileInfo>
+        <Attr Name="Library" Val="work"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
     <File Path="$PSRCDIR/sources_1/new/FM_Deserializer.vhd">
       <FileInfo>
         <Attr Name="Library" Val="work"/>
-        <Attr Name="AutoDisabled" Val="1"/>
         <Attr Name="UsedIn" Val="synthesis"/>
         <Attr Name="UsedIn" Val="simulation"/>
       </FileInfo>
@@ -122,7 +128,12 @@
     <File Path="$PSRCDIR/sources_1/new/FM_Serializer.vhd">
       <FileInfo>
         <Attr Name="Library" Val="work"/>
-        <Attr Name="AutoDisabled" Val="1"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/ip/AFEemu.coe">
+      <FileInfo>
         <Attr Name="UsedIn" Val="synthesis"/>
         <Attr Name="UsedIn" Val="simulation"/>
       </FileInfo>
@@ -171,4 +182,5 @@
     <Step Id="synth_design"/>
   </Strategy>
   <BlockFileSet Type="BlockSrcs" Name="DDR3LController"/>
+  <BlockFileSet Type="BlockSrcs" Name="AFEemu"/>
 </GenRun>

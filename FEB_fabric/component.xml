@@ -27,7 +27,7 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>viewChecksum</spirit:name>
-            <spirit:value>2353ef40</spirit:value>
+            <spirit:value>d71c179c</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -52,7 +52,7 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>viewChecksum</spirit:name>
-            <spirit:value>daf165a2</spirit:value>
+            <spirit:value>72a87a07</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -74,14 +74,14 @@
         <spirit:name>xilinx_testbench</spirit:name>
         <spirit:displayName>Test Bench</spirit:displayName>
         <spirit:envIdentifier>:vivado.xilinx.com:simulation.testbench</spirit:envIdentifier>
-        <spirit:modelName>Exclude_DDR_Testbench</spirit:modelName>
+        <spirit:modelName>Datapath_Testbench</spirit:modelName>
         <spirit:fileSetRef>
           <spirit:localName>xilinx_testbench_view_fileset</spirit:localName>
         </spirit:fileSetRef>
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>viewChecksum</spirit:name>
-            <spirit:value>9e5326c7</spirit:value>
+            <spirit:value>bbdc7c41</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -592,6 +592,10 @@
         <spirit:userFileType>SCOPED_TO_CELLS_DDR3LController</spirit:userFileType>
       </spirit:file>
       <spirit:file>
+        <spirit:name>FEB_fabric.srcs/sources_1/ip/AFEemu.coe</spirit:name>
+        <spirit:userFileType>coe</spirit:userFileType>
+      </spirit:file>
+      <spirit:file>
         <spirit:name>FEB_fabric.srcs/constrs_1/new/pinout.xdc</spirit:name>
         <spirit:userFileType>xdc</spirit:userFileType>
       </spirit:file>
@@ -601,6 +605,10 @@
       </spirit:file>
       <spirit:file>
         <spirit:name>FEB_fabric.srcs/sources_1/ip/DDR3LController/DDR3LController.xci</spirit:name>
+        <spirit:userFileType>xci</spirit:userFileType>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>FEB_fabric.srcs/sources_1/ip/AFEemu/AFEemu.xci</spirit:name>
         <spirit:userFileType>xci</spirit:userFileType>
       </spirit:file>
       <spirit:file>
@@ -654,7 +662,7 @@
         <spirit:logicalName>work</spirit:logicalName>
       </spirit:file>
       <spirit:file>
-        <spirit:name>FEB_fabric.srcs/sources_1/new/Exclude_DDR.vhd</spirit:name>
+        <spirit:name>FEB_fabric.srcs/sources_1/new/Exclude_EVB.vhd</spirit:name>
         <spirit:fileType>vhdlSource</spirit:fileType>
         <spirit:logicalName>work</spirit:logicalName>
       </spirit:file>
@@ -666,7 +674,22 @@
       <spirit:file>
         <spirit:name>FEB_fabric.srcs/sources_1/new/FEB_top_ARTY.vhd</spirit:name>
         <spirit:fileType>vhdlSource</spirit:fileType>
-        <spirit:userFileType>CHECKSUM_5af97577</spirit:userFileType>
+        <spirit:logicalName>work</spirit:logicalName>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>FEB_fabric.srcs/sources_1/new/Exclude_DDR.vhd</spirit:name>
+        <spirit:fileType>vhdlSource</spirit:fileType>
+        <spirit:logicalName>work</spirit:logicalName>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>FEB_fabric.srcs/sources_1/new/FM_Deserializer.vhd</spirit:name>
+        <spirit:fileType>vhdlSource</spirit:fileType>
+        <spirit:logicalName>work</spirit:logicalName>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>FEB_fabric.srcs/sources_1/new/FM_Serializer.vhd</spirit:name>
+        <spirit:fileType>vhdlSource</spirit:fileType>
+        <spirit:userFileType>CHECKSUM_fc6aa5c5</spirit:userFileType>
         <spirit:logicalName>work</spirit:logicalName>
       </spirit:file>
     </spirit:fileSet>
@@ -707,7 +730,15 @@
         <spirit:userFileType>prj</spirit:userFileType>
       </spirit:file>
       <spirit:file>
+        <spirit:name>FEB_fabric.srcs/sources_1/ip/AFEemu.coe</spirit:name>
+        <spirit:userFileType>coe</spirit:userFileType>
+      </spirit:file>
+      <spirit:file>
         <spirit:name>FEB_fabric.srcs/sources_1/ip/DDR3LController/DDR3LController.xci</spirit:name>
+        <spirit:userFileType>xci</spirit:userFileType>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>FEB_fabric.srcs/sources_1/ip/AFEemu/AFEemu.xci</spirit:name>
         <spirit:userFileType>xci</spirit:userFileType>
       </spirit:file>
       <spirit:file>
@@ -761,7 +792,7 @@
         <spirit:logicalName>work</spirit:logicalName>
       </spirit:file>
       <spirit:file>
-        <spirit:name>FEB_fabric.srcs/sources_1/new/Exclude_DDR.vhd</spirit:name>
+        <spirit:name>FEB_fabric.srcs/sources_1/new/Exclude_EVB.vhd</spirit:name>
         <spirit:fileType>vhdlSource</spirit:fileType>
         <spirit:logicalName>work</spirit:logicalName>
       </spirit:file>
@@ -772,6 +803,21 @@
       </spirit:file>
       <spirit:file>
         <spirit:name>FEB_fabric.srcs/sources_1/new/FEB_top_ARTY.vhd</spirit:name>
+        <spirit:fileType>vhdlSource</spirit:fileType>
+        <spirit:logicalName>work</spirit:logicalName>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>FEB_fabric.srcs/sources_1/new/Exclude_DDR.vhd</spirit:name>
+        <spirit:fileType>vhdlSource</spirit:fileType>
+        <spirit:logicalName>work</spirit:logicalName>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>FEB_fabric.srcs/sources_1/new/FM_Deserializer.vhd</spirit:name>
+        <spirit:fileType>vhdlSource</spirit:fileType>
+        <spirit:logicalName>work</spirit:logicalName>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>FEB_fabric.srcs/sources_1/new/FM_Serializer.vhd</spirit:name>
         <spirit:fileType>vhdlSource</spirit:fileType>
         <spirit:logicalName>work</spirit:logicalName>
       </spirit:file>
@@ -818,10 +864,25 @@
     <spirit:fileSet>
       <spirit:name>xilinx_testbench_view_fileset</spirit:name>
       <spirit:file>
+        <spirit:name>FEB_fabric.srcs/sim_1/new/Datapath_Testbench.vhd</spirit:name>
+        <spirit:fileType>vhdlSource</spirit:fileType>
+        <spirit:userFileType>USED_IN_simulation</spirit:userFileType>
+        <spirit:userFileType>USED_IN_synthesis</spirit:userFileType>
+        <spirit:logicalName>work</spirit:logicalName>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>FEB_fabric.srcs/sim_1/new/Exclude_EVB_Testbench.vhd</spirit:name>
+        <spirit:fileType>vhdlSource</spirit:fileType>
+        <spirit:userFileType>USED_IN_simulation</spirit:userFileType>
+        <spirit:userFileType>USED_IN_synthesis</spirit:userFileType>
+        <spirit:logicalName>work</spirit:logicalName>
+      </spirit:file>
+      <spirit:file>
         <spirit:name>FEB_fabric.srcs/sim_1/new/Exclude_DDR_Testbench.vhd</spirit:name>
         <spirit:fileType>vhdlSource</spirit:fileType>
         <spirit:userFileType>USED_IN_simulation</spirit:userFileType>
         <spirit:userFileType>USED_IN_synthesis</spirit:userFileType>
+        <spirit:logicalName>work</spirit:logicalName>
       </spirit:file>
       <spirit:file>
         <spirit:name>Exclude_DDR_Testbench_behav.wcfg</spirit:name>
@@ -851,12 +912,12 @@
         <xilinx:xpmLibrary>XPM_CDC</xilinx:xpmLibrary>
         <xilinx:xpmLibrary>XPM_MEMORY</xilinx:xpmLibrary>
       </xilinx:xpmLibraries>
-      <xilinx:coreRevision>9</xilinx:coreRevision>
-      <xilinx:coreCreationDateTime>2023-03-17T21:36:30Z</xilinx:coreCreationDateTime>
+      <xilinx:coreRevision>14</xilinx:coreRevision>
+      <xilinx:coreCreationDateTime>2023-03-29T14:15:55Z</xilinx:coreCreationDateTime>
     </xilinx:coreExtensions>
     <xilinx:packagingInfo>
       <xilinx:xilinxVersion>2022.2</xilinx:xilinxVersion>
-      <xilinx:checksum xilinx:scope="fileGroups" xilinx:value="6460d52b"/>
+      <xilinx:checksum xilinx:scope="fileGroups" xilinx:value="aa788170"/>
       <xilinx:checksum xilinx:scope="ports" xilinx:value="546a06ff"/>
       <xilinx:checksum xilinx:scope="parameters" xilinx:value="0c9f42be"/>
     </xilinx:packagingInfo>

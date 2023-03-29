@@ -69,6 +69,7 @@ verilog xil_defaultlib --include "../../../../FEB_uController.gen/sources_1/bd/u
 "../../../bd/uController/ip/uController_FEB_fabric_0_0/FEB_fabric.srcs/sources_1/ip/DDR3LController/DDR3LController/user_design/rtl/ui/mig_7series_v4_2_ui_rd_data.v" \
 "../../../bd/uController/ip/uController_FEB_fabric_0_0/FEB_fabric.srcs/sources_1/ip/DDR3LController/DDR3LController/user_design/rtl/ui/mig_7series_v4_2_ui_top.v" \
 "../../../bd/uController/ip/uController_FEB_fabric_0_0/FEB_fabric.srcs/sources_1/ip/DDR3LController/DDR3LController/user_design/rtl/ui/mig_7series_v4_2_ui_wr_data.v" \
+"../../../bd/uController/ip/uController_FEB_fabric_0_0/FEB_fabric.srcs/sources_1/ip/AFEemu/sim/AFEemu.v" \
 "../../../bd/uController/ip/uController_FEB_fabric_0_0/FEB_fabric.srcs/sources_1/ip/SCFIFO_1Kx16/sim/SCFIFO_1Kx16.v" \
 "../../../bd/uController/ip/uController_FEB_fabric_0_0/FEB_fabric.srcs/sources_1/ip/SCFIFO_32x256/sim/SCFIFO_32x256.v" \
 "../../../bd/uController/ip/uController_FEB_fabric_0_0/FEB_fabric.srcs/sources_1/ip/DPRAM_1Kx16/sim/DPRAM_1Kx16.v" \

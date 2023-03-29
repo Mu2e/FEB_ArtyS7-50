@@ -18,15 +18,18 @@ vhdl xil_defaultlib  \
 "../../../bd/uController/ip/uController_FEB_fabric_0_0/FEB_fabric.srcs/sources_1/ip/DDR3LController/DDR3LController/user_design/rtl/phy/mig_7series_v4_2_ddr_phy_top.vhd" \
 "../../../bd/uController/ip/uController_FEB_fabric_0_0/FEB_fabric.srcs/sources_1/ip/DDR3LController/DDR3LController/user_design/rtl/DDR3LController_mig_sim.vhd" \
 "../../../bd/uController/ip/uController_FEB_fabric_0_0/FEB_fabric.srcs/sources_1/ip/DDR3LController/DDR3LController/user_design/rtl/DDR3LController.vhd" \
-"../../../bd/uController/ipshared/4614/FEB_fabric.srcs/sources_1/new/Proj_Def.vhd" \
-"../../../bd/uController/ipshared/4614/FEB_fabric.srcs/sources_1/new/AFE_DataPath.vhd" \
-"../../../bd/uController/ipshared/4614/FEB_fabric.srcs/sources_1/new/AFE_Interface_Sim.vhd" \
-"../../../bd/uController/ipshared/4614/FEB_fabric.srcs/sources_1/new/AFE_Pipeline.vhd" \
-"../../../bd/uController/ipshared/4614/FEB_fabric.srcs/sources_1/new/DDR_Interface .vhd" \
-"../../../bd/uController/ipshared/4614/FEB_fabric.srcs/sources_1/new/EventBuilder.vhd" \
-"../../../bd/uController/ipshared/4614/FEB_fabric.srcs/sources_1/new/Exclude_DDR.vhd" \
-"../../../bd/uController/ipshared/4614/FEB_fabric.srcs/sources_1/new/Trigger.vhd" \
-"../../../bd/uController/ipshared/4614/FEB_fabric.srcs/sources_1/new/FEB_top_ARTY.vhd" \
+"../../../bd/uController/ipshared/a65f/FEB_fabric.srcs/sources_1/new/Proj_Def.vhd" \
+"../../../bd/uController/ipshared/a65f/FEB_fabric.srcs/sources_1/new/AFE_DataPath.vhd" \
+"../../../bd/uController/ipshared/a65f/FEB_fabric.srcs/sources_1/new/AFE_Interface_Sim.vhd" \
+"../../../bd/uController/ipshared/a65f/FEB_fabric.srcs/sources_1/new/AFE_Pipeline.vhd" \
+"../../../bd/uController/ipshared/a65f/FEB_fabric.srcs/sources_1/new/DDR_Interface .vhd" \
+"../../../bd/uController/ipshared/a65f/FEB_fabric.srcs/sources_1/new/EventBuilder.vhd" \
+"../../../bd/uController/ipshared/a65f/FEB_fabric.srcs/sources_1/new/Exclude_EVB.vhd" \
+"../../../bd/uController/ipshared/a65f/FEB_fabric.srcs/sources_1/new/Trigger.vhd" \
+"../../../bd/uController/ipshared/a65f/FEB_fabric.srcs/sources_1/new/FEB_top_ARTY.vhd" \
+"../../../bd/uController/ipshared/a65f/FEB_fabric.srcs/sources_1/new/Exclude_DDR.vhd" \
+"../../../bd/uController/ipshared/a65f/FEB_fabric.srcs/sources_1/new/FM_Deserializer.vhd" \
+"../../../bd/uController/ipshared/a65f/FEB_fabric.srcs/sources_1/new/FM_Serializer.vhd" \
 "../../../bd/uController/ip/uController_FEB_fabric_0_0/sim/uController_FEB_fabric_0_0.vhd" \
 "../../../bd/uController/ip/uController_system_ila_1_0/bd_0/sim/bd_f23a.vhd" \
 "../../../bd/uController/ip/uController_system_ila_1_0/bd_0/ip/ip_0/sim/bd_f23a_ila_lib_0.vhd" \

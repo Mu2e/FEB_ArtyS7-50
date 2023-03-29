@@ -71,6 +71,7 @@ proc create_report { reportName command } {
 }
 OPTRACE "synth_1" START { ROLLUP_AUTO }
 set_param simulator.modelsimInstallPath C:/intelFPGA/20.1/modelsim_ae/win32aloem
+set_msg_config -id {Common 17-41} -limit 10000000
 OPTRACE "Creating in-memory project" START { }
 create_project -in_memory -part xc7s50csga324-1
 
@@ -91,16 +92,20 @@ set_property ip_output_repo c:/v22.2/FEB_fabric/FEB_fabric.cache/ip [current_pro
 set_property ip_cache_permissions {read write} [current_project]
 OPTRACE "Creating in-memory project" END { }
 OPTRACE "Adding files" START { }
+add_files C:/v22.2/FEB_fabric/FEB_fabric.srcs/sources_1/ip/AFEemu.coe
 read_vhdl -library work {
   C:/v22.2/FEB_fabric/FEB_fabric.srcs/sources_1/new/Proj_Def.vhd
   C:/v22.2/FEB_fabric/FEB_fabric.srcs/sources_1/new/AFE_DataPath.vhd
-  C:/v22.2/FEB_fabric/FEB_fabric.srcs/sources_1/new/AFE_Interface_Sim.vhd
+  C:/v22.2/FEB_fabric/FEB_fabric.srcs/sources_1/new/AFE_Interface_Sim_easy.vhd
   C:/v22.2/FEB_fabric/FEB_fabric.srcs/sources_1/new/AFE_Pipeline.vhd
   {C:/v22.2/FEB_fabric/FEB_fabric.srcs/sources_1/new/DDR_Interface .vhd}
   C:/v22.2/FEB_fabric/FEB_fabric.srcs/sources_1/new/EventBuilder.vhd
-  C:/v22.2/FEB_fabric/FEB_fabric.srcs/sources_1/new/Exclude_DDR.vhd
+  C:/v22.2/FEB_fabric/FEB_fabric.srcs/sources_1/new/Exclude_EVB.vhd
   C:/v22.2/FEB_fabric/FEB_fabric.srcs/sources_1/new/Trigger.vhd
   C:/v22.2/FEB_fabric/FEB_fabric.srcs/sources_1/new/FEB_top_ARTY.vhd
+  C:/v22.2/FEB_fabric/FEB_fabric.srcs/sources_1/new/Exclude_DDR.vhd
+  C:/v22.2/FEB_fabric/FEB_fabric.srcs/sources_1/new/FM_Deserializer.vhd
+  C:/v22.2/FEB_fabric/FEB_fabric.srcs/sources_1/new/FM_Serializer.vhd
 }
 read_ip -quiet C:/v22.2/FEB_fabric/FEB_fabric.srcs/sources_1/ip/SCFIFO_1Kx16/SCFIFO_1Kx16.xci
 set_property used_in_implementation false [get_files -all c:/v22.2/FEB_fabric/feb_arty.tmp/feb_fabric_v1_0_project/FEB_fabric_v1_0_project.gen/sources_1/ip/SCFIFO_1Kx16/SCFIFO_1Kx16.xdc]
@@ -117,6 +122,9 @@ set_property used_in_implementation false [get_files -all c:/v22.2/FEB_fabric/fe
 read_ip -quiet C:/v22.2/FEB_fabric/FEB_fabric.srcs/sources_1/ip/DDR3LController/DDR3LController.xci
 set_property used_in_implementation false [get_files -all c:/v22.2/FEB_fabric/ARTY.gen/sources_1/ip/DDR3LController/DDR3LController/user_design/constraints/DDR3LController.xdc]
 set_property used_in_implementation false [get_files -all c:/v22.2/FEB_fabric/ARTY.gen/sources_1/ip/DDR3LController/DDR3LController/user_design/constraints/DDR3LController_ooc.xdc]
+
+read_ip -quiet C:/v22.2/FEB_fabric/FEB_fabric.srcs/sources_1/ip/AFEemu/AFEemu.xci
+set_property used_in_implementation false [get_files -all c:/v22.2/FEB_fabric/FEB_fabric.gen/sources_1/ip/AFEemu/AFEemu_ooc.xdc]
 
 OPTRACE "Adding files" END { }
 # Mark all dcp files as not used in implementation to prevent them from being

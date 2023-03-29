@@ -8,29 +8,29 @@
 #include "routine.h"
 #include "Proj_Def.h"
 
-void SetAFEDelay(int time) // Default 100 x 12.5 ns
+//============= AFE Interface SIM ==============
+void FillAFEemu(int data)
 {
 	SetWRDL();
-    uCA(SetAFEDelayAd);
-    uCD(time);
+    uCA(FillAFEemuAd);
+	for (int i = 0; i < data; i++)
+	{	uCD(i);}
     ClearWRDL();
 }
-void SetAFEActiveTime(int time) // Default 200 x 12.5 ns
+void StartAFEemu()
 {
 	SetWRDL();
-    uCA(SetAFEActiveTimeAd);
-    uCD(time);
+    uCA(StartAFEemuAd);
+    ClearWRDL();
+}
+void ResetAFEemu()
+{
+	SetWRDL();
+    uCA(ResetAFEemuAd);
     ClearWRDL();
 }
 
-void SetPeriod(int time) // Default 128 x 2 x 12.5 ns
-{
-	SetWRDL();
-    uCA(SetAFEPeriodTime);
-    uCD(time);
-    ClearWRDL();
-}
-
+//============= TRIGGER LOGIC ==============
 // Flash gate enable bit: FlashEn <= uCD(0);
 // Choose between LED and flashgate: PulseSel <= uCD(1);
 // Select source for LED flasher pulse: LEDSrc <= uCD(2);
@@ -211,6 +211,14 @@ void SetThreshReg00(int treshold)
     uCD(treshold);
     ClearWRDL();
 }
+
+void ReadAFEBuff()
+{
+	SetWRDL();
+    uCA(ReadAFEBuffAd);
+    ClearWRDL();
+}
+
 
 // Function to activate the DDR-Exclude path
 void ReadEventBuff()

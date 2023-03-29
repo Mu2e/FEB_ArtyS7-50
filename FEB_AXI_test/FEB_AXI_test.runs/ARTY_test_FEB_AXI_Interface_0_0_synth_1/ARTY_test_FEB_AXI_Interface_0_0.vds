@@ -1,0 +1,318 @@
+#-----------------------------------------------------------
+# Vivado v2022.2 (64-bit)
+# SW Build 3671981 on Fri Oct 14 05:00:03 MDT 2022
+# IP Build 3669848 on Fri Oct 14 08:30:02 MDT 2022
+# Start of session at: Wed Mar 29 17:55:55 2023
+# Process ID: 787264
+# Current directory: C:/v22.2/FEB_AXI_test/FEB_AXI_test.runs/ARTY_test_FEB_AXI_Interface_0_0_synth_1
+# Command line: vivado.exe -log ARTY_test_FEB_AXI_Interface_0_0.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source ARTY_test_FEB_AXI_Interface_0_0.tcl
+# Log file: C:/v22.2/FEB_AXI_test/FEB_AXI_test.runs/ARTY_test_FEB_AXI_Interface_0_0_synth_1/ARTY_test_FEB_AXI_Interface_0_0.vds
+# Journal file: C:/v22.2/FEB_AXI_test/FEB_AXI_test.runs/ARTY_test_FEB_AXI_Interface_0_0_synth_1\vivado.jou
+# Running On: CD-135239, OS: Windows, CPU Frequency: 3600 MHz, CPU Physical cores: 8, Host memory: 34287 MB
+#-----------------------------------------------------------
+source ARTY_test_FEB_AXI_Interface_0_0.tcl -notrace
+create_project: Time (s): cpu = 00:00:06 ; elapsed = 00:00:06 . Memory (MB): peak = 1040.242 ; gain = 156.219
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1700] Loaded user IP repository 'c:/v22.2/ip_repo/FEB_AXI_Interface_1_0'.
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'C:/Xilinx/Vivado/2022.2/data/ip'.
+INFO: [IP_Flow 19-6924] IPCACHE: Running cache check for IP inst: ARTY_test_FEB_AXI_Interface_0_0
+Command: synth_design -top ARTY_test_FEB_AXI_Interface_0_0 -part xc7s50csga324-1 -incremental_mode off -mode out_of_context
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xc7s50'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7s50'
+INFO: [Device 21-403] Loading part xc7s50csga324-1
+INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 2 processes.
+INFO: [Synth 8-7078] Launching helper process for spawning children vivado processes
+INFO: [Synth 8-7075] Helper process launched with PID 787912
+INFO: [Synth 8-11241] undeclared symbol 'REGCCE', assumed default net type 'wire' [C:/Xilinx/Vivado/2022.2/data/verilog/src/unimacro/BRAM_SINGLE_MACRO.v:2170]
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:06 ; elapsed = 00:00:07 . Memory (MB): peak = 1855.656 ; gain = 408.750
+---------------------------------------------------------------------------------
+INFO: [Synth 8-638] synthesizing module 'ARTY_test_FEB_AXI_Interface_0_0' [c:/v22.2/FEB_AXI_test/FEB_AXI_test.gen/sources_1/bd/ARTY_test/ip/ARTY_test_FEB_AXI_Interface_0_0/synth/ARTY_test_FEB_AXI_Interface_0_0.vhd:93]
+	Parameter C_S00_AXI_DATA_WIDTH bound to: 32 - type: integer 
+	Parameter C_S00_AXI_ADDR_WIDTH bound to: 4 - type: integer 
+INFO: [Synth 8-3491] module 'FEB_AXI_Interface_v1_0' declared at 'c:/v22.2/FEB_AXI_test/FEB_AXI_test.gen/sources_1/bd/ARTY_test/ipshared/ff76/hdl/FEB_AXI_Interface_v1_0.vhd:5' bound to instance 'U0' of component 'FEB_AXI_Interface_v1_0' [c:/v22.2/FEB_AXI_test/FEB_AXI_test.gen/sources_1/bd/ARTY_test/ip/ARTY_test_FEB_AXI_Interface_0_0/synth/ARTY_test_FEB_AXI_Interface_0_0.vhd:165]
+INFO: [Synth 8-638] synthesizing module 'FEB_AXI_Interface_v1_0' [c:/v22.2/FEB_AXI_test/FEB_AXI_test.gen/sources_1/bd/ARTY_test/ipshared/ff76/hdl/FEB_AXI_Interface_v1_0.vhd:56]
+	Parameter C_S_AXI_DATA_WIDTH bound to: 32 - type: integer 
+	Parameter C_S_AXI_ADDR_WIDTH bound to: 4 - type: integer 
+INFO: [Synth 8-3491] module 'FEB_AXI_Interface_v1_0_S00_AXI' declared at 'c:/v22.2/FEB_AXI_test/FEB_AXI_test.gen/sources_1/bd/ARTY_test/ipshared/ff76/hdl/FEB_AXI_Interface_v1_0_S00_AXI.vhd:5' bound to instance 'FEB_AXI_Interface_v1_0_S00_AXI_inst' of component 'FEB_AXI_Interface_v1_0_S00_AXI' [c:/v22.2/FEB_AXI_test/FEB_AXI_test.gen/sources_1/bd/ARTY_test/ipshared/ff76/hdl/FEB_AXI_Interface_v1_0.vhd:131]
+INFO: [Synth 8-638] synthesizing module 'FEB_AXI_Interface_v1_0_S00_AXI' [c:/v22.2/FEB_AXI_test/FEB_AXI_test.gen/sources_1/bd/ARTY_test/ipshared/ff76/hdl/FEB_AXI_Interface_v1_0_S00_AXI.vhd:90]
+INFO: [Synth 8-226] default block is never used [c:/v22.2/FEB_AXI_test/FEB_AXI_test.gen/sources_1/bd/ARTY_test/ipshared/ff76/hdl/FEB_AXI_Interface_v1_0_S00_AXI.vhd:228]
+INFO: [Synth 8-226] default block is never used [c:/v22.2/FEB_AXI_test/FEB_AXI_test.gen/sources_1/bd/ARTY_test/ipshared/ff76/hdl/FEB_AXI_Interface_v1_0_S00_AXI.vhd:358]
+INFO: [Synth 8-256] done synthesizing module 'FEB_AXI_Interface_v1_0_S00_AXI' (0#1) [c:/v22.2/FEB_AXI_test/FEB_AXI_test.gen/sources_1/bd/ARTY_test/ipshared/ff76/hdl/FEB_AXI_Interface_v1_0_S00_AXI.vhd:90]
+INFO: [Synth 8-3491] module 'uController_interface' declared at 'c:/v22.2/FEB_AXI_test/FEB_AXI_test.gen/sources_1/bd/ARTY_test/ipshared/ff76/src/uController_interface.vhd:10' bound to instance 'uC_FEB_AXI_interface' of component 'uController_interface' [c:/v22.2/FEB_AXI_test/FEB_AXI_test.gen/sources_1/bd/ARTY_test/ipshared/ff76/hdl/FEB_AXI_Interface_v1_0.vhd:167]
+INFO: [Synth 8-638] synthesizing module 'uController_interface' [c:/v22.2/FEB_AXI_test/FEB_AXI_test.gen/sources_1/bd/ARTY_test/ipshared/ff76/src/uController_interface.vhd:46]
+INFO: [Synth 8-256] done synthesizing module 'uController_interface' (0#1) [c:/v22.2/FEB_AXI_test/FEB_AXI_test.gen/sources_1/bd/ARTY_test/ipshared/ff76/src/uController_interface.vhd:46]
+INFO: [Synth 8-256] done synthesizing module 'FEB_AXI_Interface_v1_0' (0#1) [c:/v22.2/FEB_AXI_test/FEB_AXI_test.gen/sources_1/bd/ARTY_test/ipshared/ff76/hdl/FEB_AXI_Interface_v1_0.vhd:56]
+INFO: [Synth 8-256] done synthesizing module 'ARTY_test_FEB_AXI_Interface_0_0' (0#1) [c:/v22.2/FEB_AXI_test/FEB_AXI_test.gen/sources_1/bd/ARTY_test/ip/ARTY_test_FEB_AXI_Interface_0_0/synth/ARTY_test_FEB_AXI_Interface_0_0.vhd:93]
+WARNING: [Synth 8-6014] Unused sequential element slv_reg3_reg was removed.  [c:/v22.2/FEB_AXI_test/FEB_AXI_test.gen/sources_1/bd/ARTY_test/ipshared/ff76/hdl/FEB_AXI_Interface_v1_0_S00_AXI.vhd:224]
+WARNING: [Synth 8-7129] Port AXI_clk in module uController_interface is either unconnected or has no load
+WARNING: [Synth 8-7129] Port AXI_rstn in module uController_interface is either unconnected or has no load
+WARNING: [Synth 8-7129] Port AXI_control[31] in module uController_interface is either unconnected or has no load
+WARNING: [Synth 8-7129] Port AXI_control[30] in module uController_interface is either unconnected or has no load
+WARNING: [Synth 8-7129] Port AXI_control[29] in module uController_interface is either unconnected or has no load
+WARNING: [Synth 8-7129] Port AXI_control[28] in module uController_interface is either unconnected or has no load
+WARNING: [Synth 8-7129] Port AXI_control[27] in module uController_interface is either unconnected or has no load
+WARNING: [Synth 8-7129] Port AXI_control[26] in module uController_interface is either unconnected or has no load
+WARNING: [Synth 8-7129] Port AXI_control[25] in module uController_interface is either unconnected or has no load
+WARNING: [Synth 8-7129] Port AXI_control[24] in module uController_interface is either unconnected or has no load
+WARNING: [Synth 8-7129] Port AXI_control[23] in module uController_interface is either unconnected or has no load
+WARNING: [Synth 8-7129] Port AXI_control[22] in module uController_interface is either unconnected or has no load
+WARNING: [Synth 8-7129] Port AXI_control[21] in module uController_interface is either unconnected or has no load
+WARNING: [Synth 8-7129] Port AXI_control[20] in module uController_interface is either unconnected or has no load
+WARNING: [Synth 8-7129] Port AXI_control[19] in module uController_interface is either unconnected or has no load
+WARNING: [Synth 8-7129] Port AXI_control[18] in module uController_interface is either unconnected or has no load
+WARNING: [Synth 8-7129] Port AXI_control[17] in module uController_interface is either unconnected or has no load
+WARNING: [Synth 8-7129] Port AXI_control[16] in module uController_interface is either unconnected or has no load
+WARNING: [Synth 8-7129] Port AXI_control[15] in module uController_interface is either unconnected or has no load
+WARNING: [Synth 8-7129] Port AXI_control[14] in module uController_interface is either unconnected or has no load
+WARNING: [Synth 8-7129] Port AXI_control[13] in module uController_interface is either unconnected or has no load
+WARNING: [Synth 8-7129] Port AXI_control[12] in module uController_interface is either unconnected or has no load
+WARNING: [Synth 8-7129] Port AXI_control[11] in module uController_interface is either unconnected or has no load
+WARNING: [Synth 8-7129] Port AXI_control[10] in module uController_interface is either unconnected or has no load
+WARNING: [Synth 8-7129] Port AXI_control[9] in module uController_interface is either unconnected or has no load
+WARNING: [Synth 8-7129] Port AXI_control[8] in module uController_interface is either unconnected or has no load
+WARNING: [Synth 8-7129] Port AXI_control[7] in module uController_interface is either unconnected or has no load
+WARNING: [Synth 8-7129] Port AXI_control[6] in module uController_interface is either unconnected or has no load
+WARNING: [Synth 8-7129] Port AXI_uCA[31] in module uController_interface is either unconnected or has no load
+WARNING: [Synth 8-7129] Port AXI_uCA[30] in module uController_interface is either unconnected or has no load
+WARNING: [Synth 8-7129] Port AXI_uCA[29] in module uController_interface is either unconnected or has no load
+WARNING: [Synth 8-7129] Port AXI_uCA[28] in module uController_interface is either unconnected or has no load
+WARNING: [Synth 8-7129] Port AXI_uCA[27] in module uController_interface is either unconnected or has no load
+WARNING: [Synth 8-7129] Port AXI_uCA[26] in module uController_interface is either unconnected or has no load
+WARNING: [Synth 8-7129] Port AXI_uCA[25] in module uController_interface is either unconnected or has no load
+WARNING: [Synth 8-7129] Port AXI_uCA[24] in module uController_interface is either unconnected or has no load
+WARNING: [Synth 8-7129] Port AXI_uCA[23] in module uController_interface is either unconnected or has no load
+WARNING: [Synth 8-7129] Port AXI_uCA[22] in module uController_interface is either unconnected or has no load
+WARNING: [Synth 8-7129] Port AXI_uCA[21] in module uController_interface is either unconnected or has no load
+WARNING: [Synth 8-7129] Port AXI_uCA[20] in module uController_interface is either unconnected or has no load
+WARNING: [Synth 8-7129] Port AXI_uCA[19] in module uController_interface is either unconnected or has no load
+WARNING: [Synth 8-7129] Port AXI_uCA[18] in module uController_interface is either unconnected or has no load
+WARNING: [Synth 8-7129] Port AXI_uCA[17] in module uController_interface is either unconnected or has no load
+WARNING: [Synth 8-7129] Port AXI_uCA[16] in module uController_interface is either unconnected or has no load
+WARNING: [Synth 8-7129] Port AXI_uCA[15] in module uController_interface is either unconnected or has no load
+WARNING: [Synth 8-7129] Port AXI_uCA[14] in module uController_interface is either unconnected or has no load
+WARNING: [Synth 8-7129] Port AXI_uCA[13] in module uController_interface is either unconnected or has no load
+WARNING: [Synth 8-7129] Port AXI_uCA[12] in module uController_interface is either unconnected or has no load
+WARNING: [Synth 8-7129] Port AXI_uCD[31] in module uController_interface is either unconnected or has no load
+WARNING: [Synth 8-7129] Port AXI_uCD[30] in module uController_interface is either unconnected or has no load
+WARNING: [Synth 8-7129] Port AXI_uCD[29] in module uController_interface is either unconnected or has no load
+WARNING: [Synth 8-7129] Port AXI_uCD[28] in module uController_interface is either unconnected or has no load
+WARNING: [Synth 8-7129] Port AXI_uCD[27] in module uController_interface is either unconnected or has no load
+WARNING: [Synth 8-7129] Port AXI_uCD[26] in module uController_interface is either unconnected or has no load
+WARNING: [Synth 8-7129] Port AXI_uCD[25] in module uController_interface is either unconnected or has no load
+WARNING: [Synth 8-7129] Port AXI_uCD[24] in module uController_interface is either unconnected or has no load
+WARNING: [Synth 8-7129] Port AXI_uCD[23] in module uController_interface is either unconnected or has no load
+WARNING: [Synth 8-7129] Port AXI_uCD[22] in module uController_interface is either unconnected or has no load
+WARNING: [Synth 8-7129] Port AXI_uCD[21] in module uController_interface is either unconnected or has no load
+WARNING: [Synth 8-7129] Port AXI_uCD[20] in module uController_interface is either unconnected or has no load
+WARNING: [Synth 8-7129] Port AXI_uCD[19] in module uController_interface is either unconnected or has no load
+WARNING: [Synth 8-7129] Port AXI_uCD[18] in module uController_interface is either unconnected or has no load
+WARNING: [Synth 8-7129] Port AXI_uCD[17] in module uController_interface is either unconnected or has no load
+WARNING: [Synth 8-7129] Port AXI_uCD[16] in module uController_interface is either unconnected or has no load
+WARNING: [Synth 8-7129] Port S_AXI_AWPROT[2] in module FEB_AXI_Interface_v1_0_S00_AXI is either unconnected or has no load
+WARNING: [Synth 8-7129] Port S_AXI_AWPROT[1] in module FEB_AXI_Interface_v1_0_S00_AXI is either unconnected or has no load
+WARNING: [Synth 8-7129] Port S_AXI_AWPROT[0] in module FEB_AXI_Interface_v1_0_S00_AXI is either unconnected or has no load
+WARNING: [Synth 8-7129] Port S_AXI_ARPROT[2] in module FEB_AXI_Interface_v1_0_S00_AXI is either unconnected or has no load
+WARNING: [Synth 8-7129] Port S_AXI_ARPROT[1] in module FEB_AXI_Interface_v1_0_S00_AXI is either unconnected or has no load
+WARNING: [Synth 8-7129] Port S_AXI_ARPROT[0] in module FEB_AXI_Interface_v1_0_S00_AXI is either unconnected or has no load
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:08 ; elapsed = 00:00:09 . Memory (MB): peak = 1950.379 ; gain = 503.473
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:08 ; elapsed = 00:00:09 . Memory (MB): peak = 1950.379 ; gain = 503.473
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:08 ; elapsed = 00:00:09 . Memory (MB): peak = 1950.379 ; gain = 503.473
+---------------------------------------------------------------------------------
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.010 . Memory (MB): peak = 1950.379 ; gain = 0.000
+INFO: [Project 1-570] Preparing netlist for logic optimization
+
+Processing XDC Constraints
+Initializing timing engine
+Completed Processing XDC Constraints
+
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2009.246 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.023 . Memory (MB): peak = 2009.246 ; gain = 0.000
+INFO: [Designutils 20-5008] Incremental synthesis strategy off
+INFO: [Synth 8-11241] undeclared symbol 'REGCCE', assumed default net type 'wire' [C:/Xilinx/Vivado/2022.2/data/verilog/src/unimacro/BRAM_SINGLE_MACRO.v:2170]
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:00:16 ; elapsed = 00:00:17 . Memory (MB): peak = 2009.246 ; gain = 562.340
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Loading Part and Timing Information
+---------------------------------------------------------------------------------
+Loading part: xc7s50csga324-1
+---------------------------------------------------------------------------------
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:16 ; elapsed = 00:00:17 . Memory (MB): peak = 2009.246 ; gain = 562.340
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying 'set_property' XDC Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:16 ; elapsed = 00:00:17 . Memory (MB): peak = 2009.246 ; gain = 562.340
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:16 ; elapsed = 00:00:17 . Memory (MB): peak = 2009.246 ; gain = 562.340
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start RTL Component Statistics 
+---------------------------------------------------------------------------------
+Detailed RTL Component Info : 
++---Registers : 
+	               32 Bit    Registers := 7     
+	                4 Bit    Registers := 2     
+	                2 Bit    Registers := 2     
+	                1 Bit    Registers := 6     
++---Muxes : 
+	   2 Input   32 Bit        Muxes := 3     
+	   4 Input   32 Bit        Muxes := 4     
+	   2 Input    1 Bit        Muxes := 5     
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Part Resource Summary
+---------------------------------------------------------------------------------
+Part Resources:
+DSPs: 120 (col length:60)
+BRAMs: 150 (col length: RAMB18 60 RAMB36 30)
+---------------------------------------------------------------------------------
+Finished Part Resource Summary
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Cross Boundary and Area Optimization
+---------------------------------------------------------------------------------
+WARNING: [Synth 8-7080] Parallel synthesis criteria is not met
+INFO: [Synth 8-3936] Found unconnected internal register 'U0/FEB_AXI_Interface_v1_0_S00_AXI_inst/FEB_uCD_reg' and it is trimmed from '32' to '16' bits. [c:/v22.2/FEB_AXI_test/FEB_AXI_test.gen/sources_1/bd/ARTY_test/ipshared/ff76/hdl/FEB_AXI_Interface_v1_0_S00_AXI.vhd:397]
+INFO: [Synth 8-3936] Found unconnected internal register 'U0/FEB_AXI_Interface_v1_0_S00_AXI_inst/FEB_uCA_reg' and it is trimmed from '32' to '12' bits. [c:/v22.2/FEB_AXI_test/FEB_AXI_test.gen/sources_1/bd/ARTY_test/ipshared/ff76/hdl/FEB_AXI_Interface_v1_0_S00_AXI.vhd:396]
+INFO: [Synth 8-3936] Found unconnected internal register 'U0/FEB_AXI_Interface_v1_0_S00_AXI_inst/FEB_control_reg' and it is trimmed from '32' to '6' bits. [c:/v22.2/FEB_AXI_test/FEB_AXI_test.gen/sources_1/bd/ARTY_test/ipshared/ff76/hdl/FEB_AXI_Interface_v1_0_S00_AXI.vhd:395]
+WARNING: [Synth 8-7129] Port s00_axi_awprot[2] in module ARTY_test_FEB_AXI_Interface_0_0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s00_axi_awprot[1] in module ARTY_test_FEB_AXI_Interface_0_0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s00_axi_awprot[0] in module ARTY_test_FEB_AXI_Interface_0_0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s00_axi_arprot[2] in module ARTY_test_FEB_AXI_Interface_0_0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s00_axi_arprot[1] in module ARTY_test_FEB_AXI_Interface_0_0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s00_axi_arprot[0] in module ARTY_test_FEB_AXI_Interface_0_0 is either unconnected or has no load
+---------------------------------------------------------------------------------
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:19 ; elapsed = 00:00:20 . Memory (MB): peak = 2009.246 ; gain = 562.340
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying XDC Timing Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:24 ; elapsed = 00:00:25 . Memory (MB): peak = 2009.246 ; gain = 562.340
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Timing Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Timing Optimization : Time (s): cpu = 00:00:24 ; elapsed = 00:00:25 . Memory (MB): peak = 2009.246 ; gain = 562.340
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Technology Mapping
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Technology Mapping : Time (s): cpu = 00:00:24 ; elapsed = 00:00:25 . Memory (MB): peak = 2009.246 ; gain = 562.340
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished IO Insertion : Time (s): cpu = 00:00:29 ; elapsed = 00:00:30 . Memory (MB): peak = 2009.246 ; gain = 562.340
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Instances
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:29 ; elapsed = 00:00:30 . Memory (MB): peak = 2009.246 ; gain = 562.340
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Rebuilding User Hierarchy
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:29 ; elapsed = 00:00:30 . Memory (MB): peak = 2009.246 ; gain = 562.340
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Ports
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:29 ; elapsed = 00:00:30 . Memory (MB): peak = 2009.246 ; gain = 562.340
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:29 ; elapsed = 00:00:30 . Memory (MB): peak = 2009.246 ; gain = 562.340
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Nets
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:29 ; elapsed = 00:00:30 . Memory (MB): peak = 2009.246 ; gain = 562.340
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Writing Synthesis Report
+---------------------------------------------------------------------------------
+
+Report BlackBoxes: 
++-+--------------+----------+
+| |BlackBox name |Instances |
++-+--------------+----------+
++-+--------------+----------+
+
+Report Cell Usage: 
++------+-----+------+
+|      |Cell |Count |
++------+-----+------+
+|1     |LUT1 |     1|
+|2     |LUT2 |     1|
+|3     |LUT3 |     1|
+|4     |LUT4 |    18|
+|5     |LUT5 |    16|
+|6     |LUT6 |    20|
+|7     |FDRE |   169|
+|8     |FDSE |     3|
++------+-----+------+
+---------------------------------------------------------------------------------
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:29 ; elapsed = 00:00:30 . Memory (MB): peak = 2009.246 ; gain = 562.340
+---------------------------------------------------------------------------------
+Synthesis finished with 0 errors, 0 critical warnings and 7 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:19 ; elapsed = 00:00:29 . Memory (MB): peak = 2009.246 ; gain = 503.473
+Synthesis Optimization Complete : Time (s): cpu = 00:00:29 ; elapsed = 00:00:30 . Memory (MB): peak = 2009.246 ; gain = 562.340
+INFO: [Project 1-571] Translating synthesized netlist
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.005 . Memory (MB): peak = 2009.246 ; gain = 0.000
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2009.246 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+Synth Design complete, checksum: 2936aebc
+INFO: [Common 17-83] Releasing license: Synthesis
+35 Infos, 78 Warnings, 0 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:00:33 ; elapsed = 00:00:42 . Memory (MB): peak = 2009.246 ; gain = 935.984
+INFO: [Common 17-1381] The checkpoint 'C:/v22.2/FEB_AXI_test/FEB_AXI_test.runs/ARTY_test_FEB_AXI_Interface_0_0_synth_1/ARTY_test_FEB_AXI_Interface_0_0.dcp' has been generated.
+INFO: [Coretcl 2-1648] Added synthesis output to IP cache for IP ARTY_test_FEB_AXI_Interface_0_0, cache-ID = 9b9836d8885dde48
+INFO: [Coretcl 2-1174] Renamed 2 cell refs.
+INFO: [Common 17-1381] The checkpoint 'C:/v22.2/FEB_AXI_test/FEB_AXI_test.runs/ARTY_test_FEB_AXI_Interface_0_0_synth_1/ARTY_test_FEB_AXI_Interface_0_0.dcp' has been generated.
+INFO: [runtcl-4] Executing : report_utilization -file ARTY_test_FEB_AXI_Interface_0_0_utilization_synth.rpt -pb ARTY_test_FEB_AXI_Interface_0_0_utilization_synth.pb
+INFO: [Common 17-206] Exiting Vivado at Wed Mar 29 17:56:52 2023...

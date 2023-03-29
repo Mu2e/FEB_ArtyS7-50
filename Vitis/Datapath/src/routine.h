@@ -8,9 +8,9 @@
 #include "Proj_Def.h"
 
 //============= AFE Interface SIM ==============
-void SetAFEDelay(int time); // Default 100 x 12.5 ns
-void SetAFEActiveTime(int time); // Default 200 x 12.5 ns
-void SetPeriod(int time); // Default 128 x 2 x 12.5 ns
+void FillAFEemu(int data);
+void StartAFEemu();
+void ResetAFEemu();
 
 //============= TRIGGER LOGIC ==============
 // Flash gate enable bit: FlashEn <= uCD(0);
@@ -50,6 +50,10 @@ void PedReg(int ped);
 void SetThreshReg00(int treshold);
 
 //============= Event Builder LOGIC ==============
+
+
+//============= Exclude Event Builder LOGIC ==============
+void ReadAFEBuff();
 
 //============= Exclude DDR LOGIC ==============
 void ReadEventBuff();

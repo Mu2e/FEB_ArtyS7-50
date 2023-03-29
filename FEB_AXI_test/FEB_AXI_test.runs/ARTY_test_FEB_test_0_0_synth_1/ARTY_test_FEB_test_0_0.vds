@@ -1,0 +1,287 @@
+#-----------------------------------------------------------
+# Vivado v2022.2 (64-bit)
+# SW Build 3671981 on Fri Oct 14 05:00:03 MDT 2022
+# IP Build 3669848 on Fri Oct 14 08:30:02 MDT 2022
+# Start of session at: Wed Mar 29 18:07:56 2023
+# Process ID: 783064
+# Current directory: C:/v22.2/FEB_AXI_test/FEB_AXI_test.runs/ARTY_test_FEB_test_0_0_synth_1
+# Command line: vivado.exe -log ARTY_test_FEB_test_0_0.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source ARTY_test_FEB_test_0_0.tcl
+# Log file: C:/v22.2/FEB_AXI_test/FEB_AXI_test.runs/ARTY_test_FEB_test_0_0_synth_1/ARTY_test_FEB_test_0_0.vds
+# Journal file: C:/v22.2/FEB_AXI_test/FEB_AXI_test.runs/ARTY_test_FEB_test_0_0_synth_1\vivado.jou
+# Running On: CD-135239, OS: Windows, CPU Frequency: 3600 MHz, CPU Physical cores: 8, Host memory: 34287 MB
+#-----------------------------------------------------------
+source ARTY_test_FEB_test_0_0.tcl -notrace
+create_project: Time (s): cpu = 00:00:05 ; elapsed = 00:00:06 . Memory (MB): peak = 1039.602 ; gain = 155.750
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1700] Loaded user IP repository 'c:/v22.2/ip_repo/FEB_AXI_Interface_1_0'.
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'C:/Xilinx/Vivado/2022.2/data/ip'.
+Command: synth_design -top ARTY_test_FEB_test_0_0 -part xc7s50csga324-1 -incremental_mode off -mode out_of_context
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xc7s50'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7s50'
+INFO: [Device 21-403] Loading part xc7s50csga324-1
+INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 2 processes.
+INFO: [Synth 8-7078] Launching helper process for spawning children vivado processes
+INFO: [Synth 8-7075] Helper process launched with PID 787004
+INFO: [Synth 8-11241] undeclared symbol 'REGCCE', assumed default net type 'wire' [C:/Xilinx/Vivado/2022.2/data/verilog/src/unimacro/BRAM_SINGLE_MACRO.v:2170]
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:04 ; elapsed = 00:00:05 . Memory (MB): peak = 1855.148 ; gain = 407.551
+---------------------------------------------------------------------------------
+INFO: [Synth 8-638] synthesizing module 'ARTY_test_FEB_test_0_0' [c:/v22.2/FEB_AXI_test/FEB_AXI_test.gen/sources_1/bd/ARTY_test/ip/ARTY_test_FEB_test_0_0/synth/ARTY_test_FEB_test_0_0.vhd:73]
+INFO: [Synth 8-3491] module 'FEB_test' declared at 'C:/v22.2/FEB_AXI_test/FEB_AXI_test.srcs/sources_1/new/FEB_test.vhd:31' bound to instance 'U0' of component 'FEB_test' [c:/v22.2/FEB_AXI_test/FEB_AXI_test.gen/sources_1/bd/ARTY_test/ip/ARTY_test_FEB_test_0_0/synth/ARTY_test_FEB_test_0_0.vhd:101]
+INFO: [Synth 8-638] synthesizing module 'FEB_test' [C:/v22.2/FEB_AXI_test/FEB_AXI_test.srcs/sources_1/new/FEB_test.vhd:52]
+INFO: [Synth 8-3491] module 'AFEemu' declared at 'C:/v22.2/FEB_AXI_test/FEB_AXI_test.runs/ARTY_test_FEB_test_0_0_synth_1/.Xil/Vivado-783064-CD-135239/realtime/AFEemu_stub.vhdl:5' bound to instance 'AFE' of component 'AFEemu' [C:/v22.2/FEB_AXI_test/FEB_AXI_test.srcs/sources_1/new/FEB_test.vhd:123]
+INFO: [Synth 8-638] synthesizing module 'AFEemu' [C:/v22.2/FEB_AXI_test/FEB_AXI_test.runs/ARTY_test_FEB_test_0_0_synth_1/.Xil/Vivado-783064-CD-135239/realtime/AFEemu_stub.vhdl:18]
+WARNING: [Synth 8-614] signal 'CpldRst' is read in the process but is not in the sensitivity list [C:/v22.2/FEB_AXI_test/FEB_AXI_test.srcs/sources_1/new/FEB_test.vhd:134]
+WARNING: [Synth 8-614] signal 'start' is read in the process but is not in the sensitivity list [C:/v22.2/FEB_AXI_test/FEB_AXI_test.srcs/sources_1/new/FEB_test.vhd:171]
+INFO: [Synth 8-256] done synthesizing module 'FEB_test' (0#1) [C:/v22.2/FEB_AXI_test/FEB_AXI_test.srcs/sources_1/new/FEB_test.vhd:52]
+INFO: [Synth 8-256] done synthesizing module 'ARTY_test_FEB_test_0_0' (0#1) [c:/v22.2/FEB_AXI_test/FEB_AXI_test.gen/sources_1/bd/ARTY_test/ip/ARTY_test_FEB_test_0_0/synth/ARTY_test_FEB_test_0_0.vhd:73]
+WARNING: [Synth 8-6014] Unused sequential element RDDL_reg was removed.  [C:/v22.2/FEB_AXI_test/FEB_AXI_test.srcs/sources_1/new/FEB_test.vhd:108]
+WARNING: [Synth 8-6014] Unused sequential element AddrReg_reg was removed.  [C:/v22.2/FEB_AXI_test/FEB_AXI_test.srcs/sources_1/new/FEB_test.vhd:109]
+WARNING: [Synth 8-3848] Net iuCD in module/entity FEB_test does not have driver. [C:/v22.2/FEB_AXI_test/FEB_AXI_test.srcs/sources_1/new/FEB_test.vhd:46]
+WARNING: [Synth 8-7129] Port iuCD[15] in module FEB_test is either unconnected or has no load
+WARNING: [Synth 8-7129] Port iuCD[14] in module FEB_test is either unconnected or has no load
+WARNING: [Synth 8-7129] Port iuCD[13] in module FEB_test is either unconnected or has no load
+WARNING: [Synth 8-7129] Port iuCD[12] in module FEB_test is either unconnected or has no load
+WARNING: [Synth 8-7129] Port iuCD[11] in module FEB_test is either unconnected or has no load
+WARNING: [Synth 8-7129] Port iuCD[10] in module FEB_test is either unconnected or has no load
+WARNING: [Synth 8-7129] Port iuCD[9] in module FEB_test is either unconnected or has no load
+WARNING: [Synth 8-7129] Port iuCD[8] in module FEB_test is either unconnected or has no load
+WARNING: [Synth 8-7129] Port iuCD[7] in module FEB_test is either unconnected or has no load
+WARNING: [Synth 8-7129] Port iuCD[6] in module FEB_test is either unconnected or has no load
+WARNING: [Synth 8-7129] Port iuCD[5] in module FEB_test is either unconnected or has no load
+WARNING: [Synth 8-7129] Port iuCD[4] in module FEB_test is either unconnected or has no load
+WARNING: [Synth 8-7129] Port iuCD[3] in module FEB_test is either unconnected or has no load
+WARNING: [Synth 8-7129] Port iuCD[2] in module FEB_test is either unconnected or has no load
+WARNING: [Synth 8-7129] Port iuCD[1] in module FEB_test is either unconnected or has no load
+WARNING: [Synth 8-7129] Port iuCD[0] in module FEB_test is either unconnected or has no load
+WARNING: [Synth 8-7129] Port Clk_200MHz in module FEB_test is either unconnected or has no load
+WARNING: [Synth 8-7129] Port uCRd in module FEB_test is either unconnected or has no load
+WARNING: [Synth 8-7129] Port uCA[11] in module FEB_test is either unconnected or has no load
+WARNING: [Synth 8-7129] Port uCA[10] in module FEB_test is either unconnected or has no load
+WARNING: [Synth 8-7129] Port uCD[15] in module FEB_test is either unconnected or has no load
+WARNING: [Synth 8-7129] Port uCD[14] in module FEB_test is either unconnected or has no load
+WARNING: [Synth 8-7129] Port GA[1] in module FEB_test is either unconnected or has no load
+WARNING: [Synth 8-7129] Port GA[0] in module FEB_test is either unconnected or has no load
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:06 ; elapsed = 00:00:06 . Memory (MB): peak = 1950.695 ; gain = 503.098
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:06 ; elapsed = 00:00:07 . Memory (MB): peak = 1950.695 ; gain = 503.098
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:06 ; elapsed = 00:00:07 . Memory (MB): peak = 1950.695 ; gain = 503.098
+---------------------------------------------------------------------------------
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.004 . Memory (MB): peak = 1950.695 ; gain = 0.000
+INFO: [Project 1-570] Preparing netlist for logic optimization
+
+Processing XDC Constraints
+Initializing timing engine
+Parsing XDC File [c:/v22.2/FEB_AXI_test/FEB_fabric.gen/sources_1/ip/AFEemu/AFEemu/AFEemu_in_context.xdc] for cell 'U0/AFE'
+Finished Parsing XDC File [c:/v22.2/FEB_AXI_test/FEB_fabric.gen/sources_1/ip/AFEemu/AFEemu/AFEemu_in_context.xdc] for cell 'U0/AFE'
+Parsing XDC File [C:/v22.2/FEB_AXI_test/FEB_AXI_test.runs/ARTY_test_FEB_test_0_0_synth_1/dont_touch.xdc]
+Finished Parsing XDC File [C:/v22.2/FEB_AXI_test/FEB_AXI_test.runs/ARTY_test_FEB_test_0_0_synth_1/dont_touch.xdc]
+Completed Processing XDC Constraints
+
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2015.695 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.016 . Memory (MB): peak = 2016.777 ; gain = 1.082
+INFO: [Designutils 20-5008] Incremental synthesis strategy off
+INFO: [Synth 8-11241] undeclared symbol 'REGCCE', assumed default net type 'wire' [C:/Xilinx/Vivado/2022.2/data/verilog/src/unimacro/BRAM_SINGLE_MACRO.v:2170]
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:00:12 ; elapsed = 00:00:14 . Memory (MB): peak = 2016.777 ; gain = 569.180
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Loading Part and Timing Information
+---------------------------------------------------------------------------------
+Loading part: xc7s50csga324-1
+---------------------------------------------------------------------------------
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:12 ; elapsed = 00:00:14 . Memory (MB): peak = 2016.777 ; gain = 569.180
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying 'set_property' XDC Constraints
+---------------------------------------------------------------------------------
+Applied set_property KEEP_HIERARCHY = SOFT for U0/AFE. (constraint file  auto generated constraint).
+---------------------------------------------------------------------------------
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:12 ; elapsed = 00:00:14 . Memory (MB): peak = 2016.777 ; gain = 569.180
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:13 ; elapsed = 00:00:14 . Memory (MB): peak = 2016.777 ; gain = 569.180
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start RTL Component Statistics 
+---------------------------------------------------------------------------------
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input   10 Bit       Adders := 2     
++---Registers : 
+	               14 Bit    Registers := 17    
+	               10 Bit    Registers := 2     
+	                2 Bit    Registers := 2     
+	                1 Bit    Registers := 2     
++---Muxes : 
+	   2 Input   14 Bit        Muxes := 18    
+	   2 Input   10 Bit        Muxes := 2     
+	   2 Input    2 Bit        Muxes := 1     
+	   2 Input    1 Bit        Muxes := 6     
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Part Resource Summary
+---------------------------------------------------------------------------------
+Part Resources:
+DSPs: 120 (col length:60)
+BRAMs: 150 (col length: RAMB18 60 RAMB36 30)
+---------------------------------------------------------------------------------
+Finished Part Resource Summary
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Cross Boundary and Area Optimization
+---------------------------------------------------------------------------------
+WARNING: [Synth 8-7080] Parallel synthesis criteria is not met
+WARNING: [Synth 8-7129] Port iuCD[15] in module ARTY_test_FEB_test_0_0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port iuCD[14] in module ARTY_test_FEB_test_0_0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port iuCD[13] in module ARTY_test_FEB_test_0_0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port iuCD[12] in module ARTY_test_FEB_test_0_0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port iuCD[11] in module ARTY_test_FEB_test_0_0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port iuCD[10] in module ARTY_test_FEB_test_0_0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port iuCD[9] in module ARTY_test_FEB_test_0_0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port iuCD[8] in module ARTY_test_FEB_test_0_0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port iuCD[7] in module ARTY_test_FEB_test_0_0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port iuCD[6] in module ARTY_test_FEB_test_0_0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port iuCD[5] in module ARTY_test_FEB_test_0_0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port iuCD[4] in module ARTY_test_FEB_test_0_0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port iuCD[3] in module ARTY_test_FEB_test_0_0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port iuCD[2] in module ARTY_test_FEB_test_0_0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port iuCD[1] in module ARTY_test_FEB_test_0_0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port iuCD[0] in module ARTY_test_FEB_test_0_0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port Clk_200MHz in module ARTY_test_FEB_test_0_0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port uCRd in module ARTY_test_FEB_test_0_0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port uCA[11] in module ARTY_test_FEB_test_0_0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port uCA[10] in module ARTY_test_FEB_test_0_0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port uCD[15] in module ARTY_test_FEB_test_0_0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port uCD[14] in module ARTY_test_FEB_test_0_0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port GA[1] in module ARTY_test_FEB_test_0_0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port GA[0] in module ARTY_test_FEB_test_0_0 is either unconnected or has no load
+---------------------------------------------------------------------------------
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:15 ; elapsed = 00:00:16 . Memory (MB): peak = 2016.777 ; gain = 569.180
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying XDC Timing Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:20 ; elapsed = 00:00:21 . Memory (MB): peak = 2016.777 ; gain = 569.180
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Timing Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Timing Optimization : Time (s): cpu = 00:00:20 ; elapsed = 00:00:21 . Memory (MB): peak = 2016.777 ; gain = 569.180
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Technology Mapping
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Technology Mapping : Time (s): cpu = 00:00:20 ; elapsed = 00:00:21 . Memory (MB): peak = 2016.777 ; gain = 569.180
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished IO Insertion : Time (s): cpu = 00:00:24 ; elapsed = 00:00:25 . Memory (MB): peak = 2016.777 ; gain = 569.180
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Instances
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:24 ; elapsed = 00:00:25 . Memory (MB): peak = 2016.777 ; gain = 569.180
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Rebuilding User Hierarchy
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:24 ; elapsed = 00:00:25 . Memory (MB): peak = 2016.777 ; gain = 569.180
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Ports
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:24 ; elapsed = 00:00:25 . Memory (MB): peak = 2016.777 ; gain = 569.180
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:24 ; elapsed = 00:00:25 . Memory (MB): peak = 2016.777 ; gain = 569.180
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Nets
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:24 ; elapsed = 00:00:25 . Memory (MB): peak = 2016.777 ; gain = 569.180
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Writing Synthesis Report
+---------------------------------------------------------------------------------
+
+Report BlackBoxes: 
++------+--------------+----------+
+|      |BlackBox name |Instances |
++------+--------------+----------+
+|1     |AFEemu        |         1|
++------+--------------+----------+
+
+Report Cell Usage: 
++------+------------+------+
+|      |Cell        |Count |
++------+------------+------+
+|1     |AFEemu_bbox |     1|
+|2     |LUT1        |     2|
+|3     |LUT2        |     5|
+|4     |LUT3        |     4|
+|5     |LUT4        |    23|
+|6     |LUT5        |     7|
+|7     |LUT6        |     7|
+|8     |FDCE        |   264|
++------+------------+------+
+---------------------------------------------------------------------------------
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:24 ; elapsed = 00:00:25 . Memory (MB): peak = 2016.777 ; gain = 569.180
+---------------------------------------------------------------------------------
+Synthesis finished with 0 errors, 0 critical warnings and 25 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:17 ; elapsed = 00:00:24 . Memory (MB): peak = 2016.777 ; gain = 503.098
+Synthesis Optimization Complete : Time (s): cpu = 00:00:24 ; elapsed = 00:00:26 . Memory (MB): peak = 2016.777 ; gain = 569.180
+INFO: [Project 1-571] Translating synthesized netlist
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.004 . Memory (MB): peak = 2016.777 ; gain = 0.000
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2016.777 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+Synth Design complete, checksum: dfe18c07
+INFO: [Common 17-83] Releasing license: Synthesis
+25 Infos, 54 Warnings, 0 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:00:28 ; elapsed = 00:00:37 . Memory (MB): peak = 2016.777 ; gain = 942.090
+INFO: [Coretcl 2-1174] Renamed 2 cell refs.
+INFO: [Common 17-1381] The checkpoint 'C:/v22.2/FEB_AXI_test/FEB_AXI_test.runs/ARTY_test_FEB_test_0_0_synth_1/ARTY_test_FEB_test_0_0.dcp' has been generated.
+INFO: [runtcl-4] Executing : report_utilization -file ARTY_test_FEB_test_0_0_utilization_synth.rpt -pb ARTY_test_FEB_test_0_0_utilization_synth.pb
+INFO: [Common 17-206] Exiting Vivado at Wed Mar 29 18:08:45 2023...

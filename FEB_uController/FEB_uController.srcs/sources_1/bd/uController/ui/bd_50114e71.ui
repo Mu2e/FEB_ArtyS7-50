@@ -2,8 +2,8 @@
    "ActiveEmotionalView":"Default View",
    "Color Coded_ScaleFactor":"0.507673",
    "Color Coded_TopLeft":"-110,-199",
-   "Default View_ScaleFactor":"1.01531",
-   "Default View_TopLeft":"1275,267",
+   "Default View_ScaleFactor":"0.624997",
+   "Default View_TopLeft":"-126,21",
    "ExpandedHierarchyInLayout":"",
    "Grouping and No Loops_ScaleFactor":"0.562759",
    "Grouping and No Loops_TopLeft":"-110,-158",
@@ -39,25 +39,25 @@ preplace portBus DDR_CLKP_0 -pg 1 -lvl 8 -x 2350 -y 260 -defaultsOSRD
 preplace portBus DDR_DATA_0 -pg 1 -lvl 8 -x 2350 -y 60 -defaultsOSRD
 preplace portBus DM_0 -pg 1 -lvl 8 -x 2350 -y 180 -defaultsOSRD
 preplace portBus ODT_0 -pg 1 -lvl 8 -x 2350 -y 140 -defaultsOSRD
-preplace inst microblaze_0 -pg 1 -lvl 4 -x 1080 -y 580 -defaultsOSRD
+preplace inst microblaze_0 -pg 1 -lvl 4 -x 1090 -y 580 -defaultsOSRD
 preplace inst clk_wiz_0 -pg 1 -lvl 1 -x 110 -y 520 -defaultsOSRD
 preplace inst axi_gpio_0 -pg 1 -lvl 6 -x 1910 -y 840 -defaultsOSRD
 preplace inst axi_uartlite_0 -pg 1 -lvl 6 -x 1910 -y 980 -defaultsOSRD
-preplace inst microblaze_0_local_memory -pg 1 -lvl 5 -x 1500 -y 590 -defaultsOSRD
-preplace inst mdm_1 -pg 1 -lvl 3 -x 710 -y 580 -defaultsOSRD
+preplace inst microblaze_0_local_memory -pg 1 -lvl 5 -x 1510 -y 590 -defaultsOSRD
+preplace inst mdm_1 -pg 1 -lvl 3 -x 720 -y 580 -defaultsOSRD
 preplace inst rst_clk_wiz_0_100M -pg 1 -lvl 2 -x 420 -y 550 -defaultsOSRD
-preplace inst microblaze_0_axi_periph -pg 1 -lvl 5 -x 1500 -y 840 -defaultsOSRD
-preplace inst clk_wiz_1 -pg 1 -lvl 5 -x 1500 -y 350 -defaultsOSRD
+preplace inst microblaze_0_axi_periph -pg 1 -lvl 5 -x 1510 -y 840 -defaultsOSRD
+preplace inst clk_wiz_1 -pg 1 -lvl 5 -x 1510 -y 350 -defaultsOSRD
 preplace inst system_ila_0 -pg 1 -lvl 7 -x 2210 -y 1100 -defaultsOSRD
 preplace inst FEB_AXI_Interface_0 -pg 1 -lvl 6 -x 1910 -y 660 -defaultsOSRD
 preplace inst system_ila_1 -pg 1 -lvl 7 -x 2210 -y 440 -defaultsOSRD
 preplace inst FEB_fabric_0 -pg 1 -lvl 6 -x 1910 -y 240 -defaultsOSRD
-preplace netloc FEB_AXI_Interface_0_CpldCS 1 5 2 1730 1060 2070
-preplace netloc FEB_AXI_Interface_0_CpldRst 1 5 2 1750 530 2110
-preplace netloc FEB_AXI_Interface_0_GA 1 5 2 1760 1090 2040
-preplace netloc FEB_AXI_Interface_0_uCA 1 5 2 1710 1110 2060
-preplace netloc FEB_AXI_Interface_0_uCRd 1 5 2 1740 1080 2090
-preplace netloc FEB_AXI_Interface_0_uCWr 1 5 2 1700 1100 2080
+preplace netloc FEB_AXI_Interface_0_CpldCS 1 5 2 1740 1060 2070
+preplace netloc FEB_AXI_Interface_0_CpldRst 1 5 2 1760 530 2110
+preplace netloc FEB_AXI_Interface_0_GA 1 5 2 1770 1090 2040
+preplace netloc FEB_AXI_Interface_0_uCA 1 5 2 1720 1110 2060
+preplace netloc FEB_AXI_Interface_0_uCRd 1 5 2 1750 1080 2090
+preplace netloc FEB_AXI_Interface_0_uCWr 1 5 2 1710 1100 2080
 preplace netloc FEB_fabric_0_BA 1 6 2 NJ 90 2330
 preplace netloc FEB_fabric_0_CAS 1 6 2 NJ 210 2330
 preplace netloc FEB_fabric_0_CS 1 6 2 NJ 150 2330
@@ -71,40 +71,40 @@ preplace netloc FEB_fabric_0_DM 1 6 2 NJ 170 2330
 preplace netloc FEB_fabric_0_ODT 1 6 2 NJ 130 2330
 preplace netloc FEB_fabric_0_Pulse 1 6 2 2050J 310 2320
 preplace netloc FEB_fabric_0_RAS 1 6 2 NJ 190 2330
-preplace netloc GPI0_N_0_1 1 0 6 NJ 250 240J 270 NJ 270 NJ 270 NJ 270 1690J
-preplace netloc GPI0_P_0_1 1 0 6 NJ 270 210J 280 NJ 280 NJ 280 NJ 280 1680J
-preplace netloc GPI1_0_1 1 0 6 NJ 420 NJ 420 NJ 420 NJ 420 NJ 420 1660J
-preplace netloc Net 1 5 2 1720 1120 2050
+preplace netloc GPI0_N_0_1 1 0 6 NJ 250 240J 270 NJ 270 NJ 270 NJ 270 1700J
+preplace netloc GPI0_P_0_1 1 0 6 NJ 270 210J 280 NJ 280 NJ 280 NJ 280 1690J
+preplace netloc GPI1_0_1 1 0 6 NJ 420 NJ 420 NJ 420 NJ 420 NJ 420 1670J
+preplace netloc Net 1 5 2 1730 1120 2050
 preplace netloc Net1 1 6 2 NJ 50 2330
 preplace netloc Net2 1 6 2 2040J 320 N
 preplace netloc Net3 1 6 2 NJ 290 2330
 preplace netloc Net4 1 6 2 NJ 350 2330
 preplace netloc Net5 1 6 2 NJ 330 2330
-preplace netloc clk_wiz_0_clk_out1 1 1 5 210 410 NJ 410 NJ 410 1350 110 N
-preplace netloc clk_wiz_0_clk_out2 1 1 6 230 450 NJ 450 840 490 1330 670 1680 1070 2100
-preplace netloc clk_wiz_0_clk_out3 1 1 5 200J 260 NJ 260 NJ 260 NJ 260 1650
+preplace netloc clk_wiz_0_clk_out1 1 1 5 210 410 NJ 410 NJ 410 1360 110 N
+preplace netloc clk_wiz_0_clk_out2 1 1 6 230 450 NJ 450 850 490 1340 670 1690 1070 2100
+preplace netloc clk_wiz_0_clk_out3 1 1 5 200J 260 NJ 260 NJ 260 NJ 260 1660
 preplace netloc clk_wiz_0_locked 1 1 1 220 550n
-preplace netloc clk_wiz_1_clk_out1 1 5 1 1660 170n
+preplace netloc clk_wiz_1_clk_out1 1 5 1 1670 170n
 preplace netloc ddr_clock_1 1 0 6 NJ 130 NJ 130 NJ 130 NJ 130 NJ 130 NJ
-preplace netloc mdm_1_debug_sys_rst 1 1 3 240 440 NJ 440 820
+preplace netloc mdm_1_debug_sys_rst 1 1 3 240 440 NJ 440 830
 preplace netloc reset_1 1 0 5 10 430 220 340 NJ 340 NJ 340 NJ
-preplace netloc rst_clk_wiz_0_100M_bus_struct_reset 1 2 3 590 470 NJ 470 1350J
-preplace netloc rst_clk_wiz_0_100M_mb_reset 1 2 2 N 510 830J
-preplace netloc rst_clk_wiz_0_100M_peripheral_aresetn 1 2 4 600 480 NJ 480 1340 680 1670
+preplace netloc rst_clk_wiz_0_100M_bus_struct_reset 1 2 3 590 470 NJ 470 1360J
+preplace netloc rst_clk_wiz_0_100M_mb_reset 1 2 2 N 510 840J
+preplace netloc rst_clk_wiz_0_100M_peripheral_aresetn 1 2 4 600 480 NJ 480 1350 680 1680
 preplace netloc sys_clock_1 1 0 1 NJ 530
 preplace netloc FEB_fabric_0_PulseSel 1 6 2 2100 360 2310J
-preplace netloc FEB_fabric_0_iuCD 1 5 2 1770 490 2040
+preplace netloc FEB_fabric_0_iuCD 1 5 2 1780 490 2040
 preplace netloc axi_gpio_0_GPIO 1 6 2 NJ 830 N
 preplace netloc axi_gpio_0_GPIO2 1 6 2 NJ 850 N
 preplace netloc axi_uartlite_0_UART 1 6 2 NJ 970 N
-preplace netloc microblaze_0_M_AXI_DP 1 4 1 1320 600n
+preplace netloc microblaze_0_M_AXI_DP 1 4 1 1330 600n
 preplace netloc microblaze_0_axi_periph_M00_AXI 1 5 1 N 820
-preplace netloc microblaze_0_axi_periph_M01_AXI 1 5 1 1660 840n
-preplace netloc microblaze_0_axi_periph_M02_AXI 1 5 1 1650 630n
+preplace netloc microblaze_0_axi_periph_M01_AXI 1 5 1 1670 840n
+preplace netloc microblaze_0_axi_periph_M02_AXI 1 5 1 1660 630n
 preplace netloc microblaze_0_debug 1 3 1 N 570
 preplace netloc microblaze_0_dlmb_1 1 4 1 N 560
 preplace netloc microblaze_0_ilmb_1 1 4 1 N 580
-levelinfo -pg 1 -10 110 420 710 1080 1500 1910 2210 2350
+levelinfo -pg 1 -10 110 420 720 1090 1510 1910 2210 2350
 pagesize -pg 1 -db -bbox -sgen -130 -10 2530 1230
 "
 }

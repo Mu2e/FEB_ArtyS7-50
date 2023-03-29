@@ -70,26 +70,41 @@ int main()
     ResetCpld();
     sleep(2);
 
-	SetAFEDelay(100);
-	SetAFEActiveTime(200);
-	SetPeriod(60);
+    ResetAFEemu();
+//    sleep(2);
+    FillAFEemu(1024);
+//    StartAFEemu();
+
+/*
+	// Diff_Reg(i)(k) <= signed(din_AFE(i)(k)) - Ped_Reg(i)(k);
+	PedReg(0);
+	// if Diff_Reg(i)(k) > IntTrgThresh(i)(k)
+	//then SlfTrgEdge(i)(k)(0) <= '1';
+	SetThreshReg00(20);
 
 	SetCrtlNPortN(21, 12);
-	SetThreshReg00(2000);
+	uBunch(0xDEAD);
+    sleep(2);
 	SetTrigReq();
-	PedReg(0);
-//	PedAvgReq();
+
+
 	colorLED(BLUE);
-/*    sleep(5);
-	ReadEventBuff();
+    //sleep(5);
+	ReadAFEBuff();
+
+
 	int prova = 1111;
-	for (int i = 0; i < 20000; i++)
+	for (int i = 0; i < 10; i++)
 		{prova = iuCD();
-		xil_printf("%d\n", prova);}
-*/	xil_printf("Test finished!\n\n\r");
+		//xil_printf("%d\n", prova);
+		if (prova != 0)
+			{xil_printf("%04X\n", prova);}
+
+		}
+	xil_printf("Test finished!\n\n\r");
 
 
-
+*/
    	colorLED(VIOLET);
     cleanup_platform();
     return 0;
