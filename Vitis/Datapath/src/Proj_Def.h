@@ -152,8 +152,10 @@
 
 #define ReadEventBuffAd 0b1110101011
 #define ReadAFEBuffAd 0b1110101101
-#define FillAFEemuAd 0b1110101100
+
+#define StopAFEemuAd 0b1110101100
 #define StartAFEemuAd 0b1110101101
 #define ResetAFEemuAd 0b11110101110
+#define ReadAFEemuAd 0b11110101111
 
 #define ThreshRegAddr00 0b0010010000

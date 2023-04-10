@@ -2,8 +2,8 @@
 # Vivado v2022.2 (64-bit)
 # SW Build 3671981 on Fri Oct 14 05:00:03 MDT 2022
 # IP Build 3669848 on Fri Oct 14 08:30:02 MDT 2022
-# Start of session at: Wed Mar 29 18:11:33 2023
-# Process ID: 786000
+# Start of session at: Mon Apr 10 15:43:47 2023
+# Process ID: 17056
 # Current directory: C:/v22.2/FEB_AXI_test/FEB_AXI_test.runs/synth_1
 # Command line: vivado.exe -log ARTY_test_wrapper.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source ARTY_test_wrapper.tcl
 # Log file: C:/v22.2/FEB_AXI_test/FEB_AXI_test.runs/synth_1/ARTY_test_wrapper.vds
@@ -11,11 +11,11 @@
 # Running On: CD-135239, OS: Windows, CPU Frequency: 3600 MHz, CPU Physical cores: 8, Host memory: 34287 MB
 #-----------------------------------------------------------
 source ARTY_test_wrapper.tcl -notrace
-create_project: Time (s): cpu = 00:00:05 ; elapsed = 00:00:06 . Memory (MB): peak = 1039.102 ; gain = 155.379
+create_project: Time (s): cpu = 00:00:06 ; elapsed = 00:00:06 . Memory (MB): peak = 1040.883 ; gain = 156.473
 INFO: [IP_Flow 19-234] Refreshing IP repositories
 INFO: [IP_Flow 19-1700] Loaded user IP repository 'c:/v22.2/ip_repo/FEB_AXI_Interface_1_0'.
 INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'C:/Xilinx/Vivado/2022.2/data/ip'.
-add_files: Time (s): cpu = 00:00:02 ; elapsed = 00:00:05 . Memory (MB): peak = 1083.996 ; gain = 15.035
+add_files: Time (s): cpu = 00:00:03 ; elapsed = 00:00:06 . Memory (MB): peak = 1127.891 ; gain = 58.668
 Command: read_checkpoint -auto_incremental -incremental C:/v22.2/FEB_AXI_test/FEB_AXI_test.srcs/utils_1/imports/synth_1/ARTY_test_wrapper.dcp
 INFO: [Vivado 12-5825] Read reference checkpoint from C:/v22.2/FEB_AXI_test/FEB_AXI_test.srcs/utils_1/imports/synth_1/ARTY_test_wrapper.dcp for incremental synthesis
 INFO: [Vivado 12-7989] Please ensure there are no constraint changes
@@ -28,30 +28,30 @@ INFO: [Designutils 20-5440] No compile time benefit to using incremental synthes
 INFO: [Designutils 20-4379] Flow is switching to default flow due to incremental criteria not met. If you would like to alter this behaviour and have the flow terminate instead, please set the following parameter config_implementation {autoIncr.Synth.RejectBehavior Terminate}
 INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 2 processes.
 INFO: [Synth 8-7078] Launching helper process for spawning children vivado processes
-INFO: [Synth 8-7075] Helper process launched with PID 788520
+INFO: [Synth 8-7075] Helper process launched with PID 21700
 INFO: [Synth 8-11241] undeclared symbol 'REGCCE', assumed default net type 'wire' [C:/Xilinx/Vivado/2022.2/data/verilog/src/unimacro/BRAM_SINGLE_MACRO.v:2170]
 ---------------------------------------------------------------------------------
-Starting RTL Elaboration : Time (s): cpu = 00:00:05 ; elapsed = 00:00:05 . Memory (MB): peak = 1884.746 ; gain = 407.730
+Starting RTL Elaboration : Time (s): cpu = 00:00:05 ; elapsed = 00:00:05 . Memory (MB): peak = 1921.402 ; gain = 408.398
 ---------------------------------------------------------------------------------
-INFO: [Synth 8-638] synthesizing module 'ARTY_test_wrapper' [c:/v22.2/FEB_AXI_test/FEB_AXI_test.gen/sources_1/bd/ARTY_test/hdl/ARTY_test_wrapper.vhd:25]
-INFO: [Synth 8-3491] module 'ARTY_test' declared at 'c:/v22.2/FEB_AXI_test/FEB_AXI_test.gen/sources_1/bd/ARTY_test/synth/ARTY_test.vhd:1607' bound to instance 'ARTY_test_i' of component 'ARTY_test' [c:/v22.2/FEB_AXI_test/FEB_AXI_test.gen/sources_1/bd/ARTY_test/hdl/ARTY_test_wrapper.vhd:37]
+INFO: [Synth 8-638] synthesizing module 'ARTY_test_wrapper' [C:/v22.2/FEB_AXI_test/FEB_AXI_test.gen/sources_1/bd/ARTY_test/hdl/ARTY_test_wrapper.vhd:25]
+INFO: [Synth 8-3491] module 'ARTY_test' declared at 'c:/v22.2/FEB_AXI_test/FEB_AXI_test.gen/sources_1/bd/ARTY_test/synth/ARTY_test.vhd:1607' bound to instance 'ARTY_test_i' of component 'ARTY_test' [C:/v22.2/FEB_AXI_test/FEB_AXI_test.gen/sources_1/bd/ARTY_test/hdl/ARTY_test_wrapper.vhd:37]
 INFO: [Synth 8-638] synthesizing module 'ARTY_test' [c:/v22.2/FEB_AXI_test/FEB_AXI_test.gen/sources_1/bd/ARTY_test/synth/ARTY_test.vhd:1622]
-INFO: [Synth 8-3491] module 'ARTY_test_FEB_AXI_Interface_0_0' declared at 'C:/v22.2/FEB_AXI_test/FEB_AXI_test.runs/synth_1/.Xil/Vivado-786000-CD-135239/realtime/ARTY_test_FEB_AXI_Interface_0_0_stub.vhdl:5' bound to instance 'FEB_AXI_Interface_0' of component 'ARTY_test_FEB_AXI_Interface_0_0' [c:/v22.2/FEB_AXI_test/FEB_AXI_test.gen/sources_1/bd/ARTY_test/synth/ARTY_test.vhd:1972]
-INFO: [Synth 8-638] synthesizing module 'ARTY_test_FEB_AXI_Interface_0_0' [C:/v22.2/FEB_AXI_test/FEB_AXI_test.runs/synth_1/.Xil/Vivado-786000-CD-135239/realtime/ARTY_test_FEB_AXI_Interface_0_0_stub.vhdl:40]
-INFO: [Synth 8-3491] module 'ARTY_test_FEB_test_0_0' declared at 'C:/v22.2/FEB_AXI_test/FEB_AXI_test.runs/synth_1/.Xil/Vivado-786000-CD-135239/realtime/ARTY_test_FEB_test_0_0_stub.vhdl:5' bound to instance 'FEB_test_0' of component 'ARTY_test_FEB_test_0_0' [c:/v22.2/FEB_AXI_test/FEB_AXI_test.gen/sources_1/bd/ARTY_test/synth/ARTY_test.vhd:2004]
-INFO: [Synth 8-638] synthesizing module 'ARTY_test_FEB_test_0_0' [C:/v22.2/FEB_AXI_test/FEB_AXI_test.runs/synth_1/.Xil/Vivado-786000-CD-135239/realtime/ARTY_test_FEB_test_0_0_stub.vhdl:23]
-INFO: [Synth 8-3491] module 'ARTY_test_axi_gpio_0_0' declared at 'C:/v22.2/FEB_AXI_test/FEB_AXI_test.runs/synth_1/.Xil/Vivado-786000-CD-135239/realtime/ARTY_test_axi_gpio_0_0_stub.vhdl:5' bound to instance 'axi_gpio_0' of component 'ARTY_test_axi_gpio_0_0' [c:/v22.2/FEB_AXI_test/FEB_AXI_test.gen/sources_1/bd/ARTY_test/synth/ARTY_test.vhd:2019]
-INFO: [Synth 8-638] synthesizing module 'ARTY_test_axi_gpio_0_0' [C:/v22.2/FEB_AXI_test/FEB_AXI_test.runs/synth_1/.Xil/Vivado-786000-CD-135239/realtime/ARTY_test_axi_gpio_0_0_stub.vhdl:31]
-INFO: [Synth 8-3491] module 'ARTY_test_axi_uartlite_0_0' declared at 'C:/v22.2/FEB_AXI_test/FEB_AXI_test.runs/synth_1/.Xil/Vivado-786000-CD-135239/realtime/ARTY_test_axi_uartlite_0_0_stub.vhdl:5' bound to instance 'axi_uartlite_0' of component 'ARTY_test_axi_uartlite_0_0' [c:/v22.2/FEB_AXI_test/FEB_AXI_test.gen/sources_1/bd/ARTY_test/synth/ARTY_test.vhd:2042]
-INFO: [Synth 8-638] synthesizing module 'ARTY_test_axi_uartlite_0_0' [C:/v22.2/FEB_AXI_test/FEB_AXI_test.runs/synth_1/.Xil/Vivado-786000-CD-135239/realtime/ARTY_test_axi_uartlite_0_0_stub.vhdl:33]
-INFO: [Synth 8-3491] module 'ARTY_test_clk_wiz_0_2' declared at 'C:/v22.2/FEB_AXI_test/FEB_AXI_test.runs/synth_1/.Xil/Vivado-786000-CD-135239/realtime/ARTY_test_clk_wiz_0_2_stub.vhdl:5' bound to instance 'clk_wiz_0' of component 'ARTY_test_clk_wiz_0_2' [c:/v22.2/FEB_AXI_test/FEB_AXI_test.gen/sources_1/bd/ARTY_test/synth/ARTY_test.vhd:2067]
-INFO: [Synth 8-638] synthesizing module 'ARTY_test_clk_wiz_0_2' [C:/v22.2/FEB_AXI_test/FEB_AXI_test.runs/synth_1/.Xil/Vivado-786000-CD-135239/realtime/ARTY_test_clk_wiz_0_2_stub.vhdl:17]
-INFO: [Synth 8-3491] module 'ARTY_test_clk_wiz_1_1' declared at 'C:/v22.2/FEB_AXI_test/FEB_AXI_test.runs/synth_1/.Xil/Vivado-786000-CD-135239/realtime/ARTY_test_clk_wiz_1_1_stub.vhdl:5' bound to instance 'clk_wiz_1' of component 'ARTY_test_clk_wiz_1_1' [c:/v22.2/FEB_AXI_test/FEB_AXI_test.gen/sources_1/bd/ARTY_test/synth/ARTY_test.vhd:2076]
-INFO: [Synth 8-638] synthesizing module 'ARTY_test_clk_wiz_1_1' [C:/v22.2/FEB_AXI_test/FEB_AXI_test.runs/synth_1/.Xil/Vivado-786000-CD-135239/realtime/ARTY_test_clk_wiz_1_1_stub.vhdl:14]
-INFO: [Synth 8-3491] module 'ARTY_test_mdm_1_0' declared at 'C:/v22.2/FEB_AXI_test/FEB_AXI_test.runs/synth_1/.Xil/Vivado-786000-CD-135239/realtime/ARTY_test_mdm_1_0_stub.vhdl:5' bound to instance 'mdm_1' of component 'ARTY_test_mdm_1_0' [c:/v22.2/FEB_AXI_test/FEB_AXI_test.gen/sources_1/bd/ARTY_test/synth/ARTY_test.vhd:2082]
-INFO: [Synth 8-638] synthesizing module 'ARTY_test_mdm_1_0' [C:/v22.2/FEB_AXI_test/FEB_AXI_test.runs/synth_1/.Xil/Vivado-786000-CD-135239/realtime/ARTY_test_mdm_1_0_stub.vhdl:21]
-INFO: [Synth 8-3491] module 'ARTY_test_microblaze_0_0' declared at 'C:/v22.2/FEB_AXI_test/FEB_AXI_test.runs/synth_1/.Xil/Vivado-786000-CD-135239/realtime/ARTY_test_microblaze_0_0_stub.vhdl:5' bound to instance 'microblaze_0' of component 'ARTY_test_microblaze_0_0' [c:/v22.2/FEB_AXI_test/FEB_AXI_test.gen/sources_1/bd/ARTY_test/synth/ARTY_test.vhd:2095]
-INFO: [Synth 8-638] synthesizing module 'ARTY_test_microblaze_0_0' [C:/v22.2/FEB_AXI_test/FEB_AXI_test.runs/synth_1/.Xil/Vivado-786000-CD-135239/realtime/ARTY_test_microblaze_0_0_stub.vhdl:63]
+INFO: [Synth 8-3491] module 'ARTY_test_FEB_AXI_Interface_0_0' declared at 'C:/v22.2/FEB_AXI_test/FEB_AXI_test.runs/synth_1/.Xil/Vivado-17056-CD-135239/realtime/ARTY_test_FEB_AXI_Interface_0_0_stub.vhdl:5' bound to instance 'FEB_AXI_Interface_0' of component 'ARTY_test_FEB_AXI_Interface_0_0' [c:/v22.2/FEB_AXI_test/FEB_AXI_test.gen/sources_1/bd/ARTY_test/synth/ARTY_test.vhd:2003]
+INFO: [Synth 8-638] synthesizing module 'ARTY_test_FEB_AXI_Interface_0_0' [C:/v22.2/FEB_AXI_test/FEB_AXI_test.runs/synth_1/.Xil/Vivado-17056-CD-135239/realtime/ARTY_test_FEB_AXI_Interface_0_0_stub.vhdl:40]
+INFO: [Synth 8-3491] module 'ARTY_test_FEB_test_0_0' declared at 'C:/v22.2/FEB_AXI_test/FEB_AXI_test.runs/synth_1/.Xil/Vivado-17056-CD-135239/realtime/ARTY_test_FEB_test_0_0_stub.vhdl:5' bound to instance 'FEB_test_0' of component 'ARTY_test_FEB_test_0_0' [c:/v22.2/FEB_AXI_test/FEB_AXI_test.gen/sources_1/bd/ARTY_test/synth/ARTY_test.vhd:2035]
+INFO: [Synth 8-638] synthesizing module 'ARTY_test_FEB_test_0_0' [C:/v22.2/FEB_AXI_test/FEB_AXI_test.runs/synth_1/.Xil/Vivado-17056-CD-135239/realtime/ARTY_test_FEB_test_0_0_stub.vhdl:23]
+INFO: [Synth 8-3491] module 'ARTY_test_axi_gpio_0_0' declared at 'C:/v22.2/FEB_AXI_test/FEB_AXI_test.runs/synth_1/.Xil/Vivado-17056-CD-135239/realtime/ARTY_test_axi_gpio_0_0_stub.vhdl:5' bound to instance 'axi_gpio_0' of component 'ARTY_test_axi_gpio_0_0' [c:/v22.2/FEB_AXI_test/FEB_AXI_test.gen/sources_1/bd/ARTY_test/synth/ARTY_test.vhd:2050]
+INFO: [Synth 8-638] synthesizing module 'ARTY_test_axi_gpio_0_0' [C:/v22.2/FEB_AXI_test/FEB_AXI_test.runs/synth_1/.Xil/Vivado-17056-CD-135239/realtime/ARTY_test_axi_gpio_0_0_stub.vhdl:31]
+INFO: [Synth 8-3491] module 'ARTY_test_axi_uartlite_0_0' declared at 'C:/v22.2/FEB_AXI_test/FEB_AXI_test.runs/synth_1/.Xil/Vivado-17056-CD-135239/realtime/ARTY_test_axi_uartlite_0_0_stub.vhdl:5' bound to instance 'axi_uartlite_0' of component 'ARTY_test_axi_uartlite_0_0' [c:/v22.2/FEB_AXI_test/FEB_AXI_test.gen/sources_1/bd/ARTY_test/synth/ARTY_test.vhd:2073]
+INFO: [Synth 8-638] synthesizing module 'ARTY_test_axi_uartlite_0_0' [C:/v22.2/FEB_AXI_test/FEB_AXI_test.runs/synth_1/.Xil/Vivado-17056-CD-135239/realtime/ARTY_test_axi_uartlite_0_0_stub.vhdl:33]
+INFO: [Synth 8-3491] module 'ARTY_test_clk_wiz_0_2' declared at 'C:/v22.2/FEB_AXI_test/FEB_AXI_test.runs/synth_1/.Xil/Vivado-17056-CD-135239/realtime/ARTY_test_clk_wiz_0_2_stub.vhdl:5' bound to instance 'clk_wiz_0' of component 'ARTY_test_clk_wiz_0_2' [c:/v22.2/FEB_AXI_test/FEB_AXI_test.gen/sources_1/bd/ARTY_test/synth/ARTY_test.vhd:2098]
+INFO: [Synth 8-638] synthesizing module 'ARTY_test_clk_wiz_0_2' [C:/v22.2/FEB_AXI_test/FEB_AXI_test.runs/synth_1/.Xil/Vivado-17056-CD-135239/realtime/ARTY_test_clk_wiz_0_2_stub.vhdl:17]
+INFO: [Synth 8-3491] module 'ARTY_test_clk_wiz_1_1' declared at 'C:/v22.2/FEB_AXI_test/FEB_AXI_test.runs/synth_1/.Xil/Vivado-17056-CD-135239/realtime/ARTY_test_clk_wiz_1_1_stub.vhdl:5' bound to instance 'clk_wiz_1' of component 'ARTY_test_clk_wiz_1_1' [c:/v22.2/FEB_AXI_test/FEB_AXI_test.gen/sources_1/bd/ARTY_test/synth/ARTY_test.vhd:2107]
+INFO: [Synth 8-638] synthesizing module 'ARTY_test_clk_wiz_1_1' [C:/v22.2/FEB_AXI_test/FEB_AXI_test.runs/synth_1/.Xil/Vivado-17056-CD-135239/realtime/ARTY_test_clk_wiz_1_1_stub.vhdl:14]
+INFO: [Synth 8-3491] module 'ARTY_test_mdm_1_0' declared at 'C:/v22.2/FEB_AXI_test/FEB_AXI_test.runs/synth_1/.Xil/Vivado-17056-CD-135239/realtime/ARTY_test_mdm_1_0_stub.vhdl:5' bound to instance 'mdm_1' of component 'ARTY_test_mdm_1_0' [c:/v22.2/FEB_AXI_test/FEB_AXI_test.gen/sources_1/bd/ARTY_test/synth/ARTY_test.vhd:2113]
+INFO: [Synth 8-638] synthesizing module 'ARTY_test_mdm_1_0' [C:/v22.2/FEB_AXI_test/FEB_AXI_test.runs/synth_1/.Xil/Vivado-17056-CD-135239/realtime/ARTY_test_mdm_1_0_stub.vhdl:21]
+INFO: [Synth 8-3491] module 'ARTY_test_microblaze_0_0' declared at 'C:/v22.2/FEB_AXI_test/FEB_AXI_test.runs/synth_1/.Xil/Vivado-17056-CD-135239/realtime/ARTY_test_microblaze_0_0_stub.vhdl:5' bound to instance 'microblaze_0' of component 'ARTY_test_microblaze_0_0' [c:/v22.2/FEB_AXI_test/FEB_AXI_test.gen/sources_1/bd/ARTY_test/synth/ARTY_test.vhd:2126]
+INFO: [Synth 8-638] synthesizing module 'ARTY_test_microblaze_0_0' [C:/v22.2/FEB_AXI_test/FEB_AXI_test.runs/synth_1/.Xil/Vivado-17056-CD-135239/realtime/ARTY_test_microblaze_0_0_stub.vhdl:63]
 INFO: [Synth 8-638] synthesizing module 'ARTY_test_microblaze_0_axi_periph_0' [c:/v22.2/FEB_AXI_test/FEB_AXI_test.gen/sources_1/bd/ARTY_test/synth/ARTY_test.vhd:1083]
 INFO: [Synth 8-638] synthesizing module 'm00_couplers_imp_1TG3NC6' [c:/v22.2/FEB_AXI_test/FEB_AXI_test.gen/sources_1/bd/ARTY_test/synth/ARTY_test.vhd:57]
 INFO: [Synth 8-256] done synthesizing module 'm00_couplers_imp_1TG3NC6' (0#1) [c:/v22.2/FEB_AXI_test/FEB_AXI_test.gen/sources_1/bd/ARTY_test/synth/ARTY_test.vhd:57]
@@ -61,25 +61,27 @@ INFO: [Synth 8-638] synthesizing module 'm02_couplers_imp_187HU6V' [c:/v22.2/FEB
 INFO: [Synth 8-256] done synthesizing module 'm02_couplers_imp_187HU6V' (0#1) [c:/v22.2/FEB_AXI_test/FEB_AXI_test.gen/sources_1/bd/ARTY_test/synth/ARTY_test.vhd:263]
 INFO: [Synth 8-638] synthesizing module 's00_couplers_imp_W4MWMY' [c:/v22.2/FEB_AXI_test/FEB_AXI_test.gen/sources_1/bd/ARTY_test/synth/ARTY_test.vhd:932]
 INFO: [Synth 8-256] done synthesizing module 's00_couplers_imp_W4MWMY' (0#1) [c:/v22.2/FEB_AXI_test/FEB_AXI_test.gen/sources_1/bd/ARTY_test/synth/ARTY_test.vhd:932]
-INFO: [Synth 8-3491] module 'ARTY_test_xbar_0' declared at 'C:/v22.2/FEB_AXI_test/FEB_AXI_test.runs/synth_1/.Xil/Vivado-786000-CD-135239/realtime/ARTY_test_xbar_0_stub.vhdl:5' bound to instance 'xbar' of component 'ARTY_test_xbar_0' [c:/v22.2/FEB_AXI_test/FEB_AXI_test.gen/sources_1/bd/ARTY_test/synth/ARTY_test.vhd:1523]
-INFO: [Synth 8-638] synthesizing module 'ARTY_test_xbar_0' [C:/v22.2/FEB_AXI_test/FEB_AXI_test.runs/synth_1/.Xil/Vivado-786000-CD-135239/realtime/ARTY_test_xbar_0_stub.vhdl:51]
+INFO: [Synth 8-3491] module 'ARTY_test_xbar_0' declared at 'C:/v22.2/FEB_AXI_test/FEB_AXI_test.runs/synth_1/.Xil/Vivado-17056-CD-135239/realtime/ARTY_test_xbar_0_stub.vhdl:5' bound to instance 'xbar' of component 'ARTY_test_xbar_0' [c:/v22.2/FEB_AXI_test/FEB_AXI_test.gen/sources_1/bd/ARTY_test/synth/ARTY_test.vhd:1523]
+INFO: [Synth 8-638] synthesizing module 'ARTY_test_xbar_0' [C:/v22.2/FEB_AXI_test/FEB_AXI_test.runs/synth_1/.Xil/Vivado-17056-CD-135239/realtime/ARTY_test_xbar_0_stub.vhdl:51]
 INFO: [Synth 8-256] done synthesizing module 'ARTY_test_microblaze_0_axi_periph_0' (0#1) [c:/v22.2/FEB_AXI_test/FEB_AXI_test.gen/sources_1/bd/ARTY_test/synth/ARTY_test.vhd:1083]
 INFO: [Synth 8-638] synthesizing module 'microblaze_0_local_memory_imp_16VK4WE' [c:/v22.2/FEB_AXI_test/FEB_AXI_test.gen/sources_1/bd/ARTY_test/synth/ARTY_test.vhd:353]
-INFO: [Synth 8-3491] module 'ARTY_test_dlmb_bram_if_cntlr_0' declared at 'C:/v22.2/FEB_AXI_test/FEB_AXI_test.runs/synth_1/.Xil/Vivado-786000-CD-135239/realtime/ARTY_test_dlmb_bram_if_cntlr_0_stub.vhdl:5' bound to instance 'dlmb_bram_if_cntlr' of component 'ARTY_test_dlmb_bram_if_cntlr_0' [c:/v22.2/FEB_AXI_test/FEB_AXI_test.gen/sources_1/bd/ARTY_test/synth/ARTY_test.vhd:567]
-INFO: [Synth 8-638] synthesizing module 'ARTY_test_dlmb_bram_if_cntlr_0' [C:/v22.2/FEB_AXI_test/FEB_AXI_test.runs/synth_1/.Xil/Vivado-786000-CD-135239/realtime/ARTY_test_dlmb_bram_if_cntlr_0_stub.vhdl:31]
-INFO: [Synth 8-3491] module 'ARTY_test_dlmb_v10_0' declared at 'C:/v22.2/FEB_AXI_test/FEB_AXI_test.runs/synth_1/.Xil/Vivado-786000-CD-135239/realtime/ARTY_test_dlmb_v10_0_stub.vhdl:5' bound to instance 'dlmb_v10' of component 'ARTY_test_dlmb_v10_0' [c:/v22.2/FEB_AXI_test/FEB_AXI_test.gen/sources_1/bd/ARTY_test/synth/ARTY_test.vhd:621]
-INFO: [Synth 8-638] synthesizing module 'ARTY_test_dlmb_v10_0' [C:/v22.2/FEB_AXI_test/FEB_AXI_test.runs/synth_1/.Xil/Vivado-786000-CD-135239/realtime/ARTY_test_dlmb_v10_0_stub.vhdl:36]
-INFO: [Synth 8-3491] module 'ARTY_test_ilmb_bram_if_cntlr_0' declared at 'C:/v22.2/FEB_AXI_test/FEB_AXI_test.runs/synth_1/.Xil/Vivado-786000-CD-135239/realtime/ARTY_test_ilmb_bram_if_cntlr_0_stub.vhdl:5' bound to instance 'ilmb_bram_if_cntlr' of component 'ARTY_test_ilmb_bram_if_cntlr_0' [c:/v22.2/FEB_AXI_test/FEB_AXI_test.gen/sources_1/bd/ARTY_test/synth/ARTY_test.vhd:649]
-INFO: [Synth 8-638] synthesizing module 'ARTY_test_ilmb_bram_if_cntlr_0' [C:/v22.2/FEB_AXI_test/FEB_AXI_test.runs/synth_1/.Xil/Vivado-786000-CD-135239/realtime/ARTY_test_ilmb_bram_if_cntlr_0_stub.vhdl:31]
-INFO: [Synth 8-3491] module 'ARTY_test_ilmb_v10_0' declared at 'C:/v22.2/FEB_AXI_test/FEB_AXI_test.runs/synth_1/.Xil/Vivado-786000-CD-135239/realtime/ARTY_test_ilmb_v10_0_stub.vhdl:5' bound to instance 'ilmb_v10' of component 'ARTY_test_ilmb_v10_0' [c:/v22.2/FEB_AXI_test/FEB_AXI_test.gen/sources_1/bd/ARTY_test/synth/ARTY_test.vhd:703]
-INFO: [Synth 8-638] synthesizing module 'ARTY_test_ilmb_v10_0' [C:/v22.2/FEB_AXI_test/FEB_AXI_test.runs/synth_1/.Xil/Vivado-786000-CD-135239/realtime/ARTY_test_ilmb_v10_0_stub.vhdl:36]
-INFO: [Synth 8-3491] module 'ARTY_test_lmb_bram_0' declared at 'C:/v22.2/FEB_AXI_test/FEB_AXI_test.runs/synth_1/.Xil/Vivado-786000-CD-135239/realtime/ARTY_test_lmb_bram_0_stub.vhdl:5' bound to instance 'lmb_bram' of component 'ARTY_test_lmb_bram_0' [c:/v22.2/FEB_AXI_test/FEB_AXI_test.gen/sources_1/bd/ARTY_test/synth/ARTY_test.vhd:731]
-INFO: [Synth 8-638] synthesizing module 'ARTY_test_lmb_bram_0' [C:/v22.2/FEB_AXI_test/FEB_AXI_test.runs/synth_1/.Xil/Vivado-786000-CD-135239/realtime/ARTY_test_lmb_bram_0_stub.vhdl:27]
+INFO: [Synth 8-3491] module 'ARTY_test_dlmb_bram_if_cntlr_0' declared at 'C:/v22.2/FEB_AXI_test/FEB_AXI_test.runs/synth_1/.Xil/Vivado-17056-CD-135239/realtime/ARTY_test_dlmb_bram_if_cntlr_0_stub.vhdl:5' bound to instance 'dlmb_bram_if_cntlr' of component 'ARTY_test_dlmb_bram_if_cntlr_0' [c:/v22.2/FEB_AXI_test/FEB_AXI_test.gen/sources_1/bd/ARTY_test/synth/ARTY_test.vhd:567]
+INFO: [Synth 8-638] synthesizing module 'ARTY_test_dlmb_bram_if_cntlr_0' [C:/v22.2/FEB_AXI_test/FEB_AXI_test.runs/synth_1/.Xil/Vivado-17056-CD-135239/realtime/ARTY_test_dlmb_bram_if_cntlr_0_stub.vhdl:31]
+INFO: [Synth 8-3491] module 'ARTY_test_dlmb_v10_0' declared at 'C:/v22.2/FEB_AXI_test/FEB_AXI_test.runs/synth_1/.Xil/Vivado-17056-CD-135239/realtime/ARTY_test_dlmb_v10_0_stub.vhdl:5' bound to instance 'dlmb_v10' of component 'ARTY_test_dlmb_v10_0' [c:/v22.2/FEB_AXI_test/FEB_AXI_test.gen/sources_1/bd/ARTY_test/synth/ARTY_test.vhd:621]
+INFO: [Synth 8-638] synthesizing module 'ARTY_test_dlmb_v10_0' [C:/v22.2/FEB_AXI_test/FEB_AXI_test.runs/synth_1/.Xil/Vivado-17056-CD-135239/realtime/ARTY_test_dlmb_v10_0_stub.vhdl:36]
+INFO: [Synth 8-3491] module 'ARTY_test_ilmb_bram_if_cntlr_0' declared at 'C:/v22.2/FEB_AXI_test/FEB_AXI_test.runs/synth_1/.Xil/Vivado-17056-CD-135239/realtime/ARTY_test_ilmb_bram_if_cntlr_0_stub.vhdl:5' bound to instance 'ilmb_bram_if_cntlr' of component 'ARTY_test_ilmb_bram_if_cntlr_0' [c:/v22.2/FEB_AXI_test/FEB_AXI_test.gen/sources_1/bd/ARTY_test/synth/ARTY_test.vhd:649]
+INFO: [Synth 8-638] synthesizing module 'ARTY_test_ilmb_bram_if_cntlr_0' [C:/v22.2/FEB_AXI_test/FEB_AXI_test.runs/synth_1/.Xil/Vivado-17056-CD-135239/realtime/ARTY_test_ilmb_bram_if_cntlr_0_stub.vhdl:31]
+INFO: [Synth 8-3491] module 'ARTY_test_ilmb_v10_0' declared at 'C:/v22.2/FEB_AXI_test/FEB_AXI_test.runs/synth_1/.Xil/Vivado-17056-CD-135239/realtime/ARTY_test_ilmb_v10_0_stub.vhdl:5' bound to instance 'ilmb_v10' of component 'ARTY_test_ilmb_v10_0' [c:/v22.2/FEB_AXI_test/FEB_AXI_test.gen/sources_1/bd/ARTY_test/synth/ARTY_test.vhd:703]
+INFO: [Synth 8-638] synthesizing module 'ARTY_test_ilmb_v10_0' [C:/v22.2/FEB_AXI_test/FEB_AXI_test.runs/synth_1/.Xil/Vivado-17056-CD-135239/realtime/ARTY_test_ilmb_v10_0_stub.vhdl:36]
+INFO: [Synth 8-3491] module 'ARTY_test_lmb_bram_0' declared at 'C:/v22.2/FEB_AXI_test/FEB_AXI_test.runs/synth_1/.Xil/Vivado-17056-CD-135239/realtime/ARTY_test_lmb_bram_0_stub.vhdl:5' bound to instance 'lmb_bram' of component 'ARTY_test_lmb_bram_0' [c:/v22.2/FEB_AXI_test/FEB_AXI_test.gen/sources_1/bd/ARTY_test/synth/ARTY_test.vhd:731]
+INFO: [Synth 8-638] synthesizing module 'ARTY_test_lmb_bram_0' [C:/v22.2/FEB_AXI_test/FEB_AXI_test.runs/synth_1/.Xil/Vivado-17056-CD-135239/realtime/ARTY_test_lmb_bram_0_stub.vhdl:27]
 INFO: [Synth 8-256] done synthesizing module 'microblaze_0_local_memory_imp_16VK4WE' (0#1) [c:/v22.2/FEB_AXI_test/FEB_AXI_test.gen/sources_1/bd/ARTY_test/synth/ARTY_test.vhd:353]
-INFO: [Synth 8-3491] module 'ARTY_test_rst_clk_wiz_0_100M_0' declared at 'C:/v22.2/FEB_AXI_test/FEB_AXI_test.runs/synth_1/.Xil/Vivado-786000-CD-135239/realtime/ARTY_test_rst_clk_wiz_0_100M_0_stub.vhdl:5' bound to instance 'rst_clk_wiz_0_100M' of component 'ARTY_test_rst_clk_wiz_0_100M_0' [c:/v22.2/FEB_AXI_test/FEB_AXI_test.gen/sources_1/bd/ARTY_test/synth/ARTY_test.vhd:2259]
-INFO: [Synth 8-638] synthesizing module 'ARTY_test_rst_clk_wiz_0_100M_0' [C:/v22.2/FEB_AXI_test/FEB_AXI_test.runs/synth_1/.Xil/Vivado-786000-CD-135239/realtime/ARTY_test_rst_clk_wiz_0_100M_0_stub.vhdl:21]
+INFO: [Synth 8-3491] module 'ARTY_test_rst_clk_wiz_0_100M_0' declared at 'C:/v22.2/FEB_AXI_test/FEB_AXI_test.runs/synth_1/.Xil/Vivado-17056-CD-135239/realtime/ARTY_test_rst_clk_wiz_0_100M_0_stub.vhdl:5' bound to instance 'rst_clk_wiz_0_100M' of component 'ARTY_test_rst_clk_wiz_0_100M_0' [c:/v22.2/FEB_AXI_test/FEB_AXI_test.gen/sources_1/bd/ARTY_test/synth/ARTY_test.vhd:2290]
+INFO: [Synth 8-638] synthesizing module 'ARTY_test_rst_clk_wiz_0_100M_0' [C:/v22.2/FEB_AXI_test/FEB_AXI_test.runs/synth_1/.Xil/Vivado-17056-CD-135239/realtime/ARTY_test_rst_clk_wiz_0_100M_0_stub.vhdl:21]
+INFO: [Synth 8-3491] module 'ARTY_test_system_ila_0_0' declared at 'C:/v22.2/FEB_AXI_test/FEB_AXI_test.runs/synth_1/.Xil/Vivado-17056-CD-135239/realtime/ARTY_test_system_ila_0_0_stub.vhdl:5' bound to instance 'system_ila_0' of component 'ARTY_test_system_ila_0_0' [c:/v22.2/FEB_AXI_test/FEB_AXI_test.gen/sources_1/bd/ARTY_test/synth/ARTY_test.vhd:2303]
+INFO: [Synth 8-638] synthesizing module 'ARTY_test_system_ila_0_0' [C:/v22.2/FEB_AXI_test/FEB_AXI_test.runs/synth_1/.Xil/Vivado-17056-CD-135239/realtime/ARTY_test_system_ila_0_0_stub.vhdl:20]
 INFO: [Synth 8-256] done synthesizing module 'ARTY_test' (0#1) [c:/v22.2/FEB_AXI_test/FEB_AXI_test.gen/sources_1/bd/ARTY_test/synth/ARTY_test.vhd:1622]
-INFO: [Synth 8-256] done synthesizing module 'ARTY_test_wrapper' (0#1) [c:/v22.2/FEB_AXI_test/FEB_AXI_test.gen/sources_1/bd/ARTY_test/hdl/ARTY_test_wrapper.vhd:25]
+INFO: [Synth 8-256] done synthesizing module 'ARTY_test_wrapper' (0#1) [C:/v22.2/FEB_AXI_test/FEB_AXI_test.gen/sources_1/bd/ARTY_test/hdl/ARTY_test_wrapper.vhd:25]
 WARNING: [Synth 8-7129] Port M_ACLK in module s00_couplers_imp_W4MWMY is either unconnected or has no load
 WARNING: [Synth 8-7129] Port M_ARESETN in module s00_couplers_imp_W4MWMY is either unconnected or has no load
 WARNING: [Synth 8-7129] Port S_ACLK in module s00_couplers_imp_W4MWMY is either unconnected or has no load
@@ -105,18 +107,18 @@ WARNING: [Synth 8-7129] Port M02_ARESETN in module ARTY_test_microblaze_0_axi_pe
 WARNING: [Synth 8-7129] Port S00_ACLK in module ARTY_test_microblaze_0_axi_periph_0 is either unconnected or has no load
 WARNING: [Synth 8-7129] Port S00_ARESETN in module ARTY_test_microblaze_0_axi_periph_0 is either unconnected or has no load
 ---------------------------------------------------------------------------------
-Finished RTL Elaboration : Time (s): cpu = 00:00:07 ; elapsed = 00:00:07 . Memory (MB): peak = 1984.348 ; gain = 507.332
+Finished RTL Elaboration : Time (s): cpu = 00:00:07 ; elapsed = 00:00:07 . Memory (MB): peak = 2021.051 ; gain = 508.047
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:07 ; elapsed = 00:00:07 . Memory (MB): peak = 1984.348 ; gain = 507.332
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:07 ; elapsed = 00:00:07 . Memory (MB): peak = 2021.051 ; gain = 508.047
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:07 ; elapsed = 00:00:07 . Memory (MB): peak = 1984.348 ; gain = 507.332
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:07 ; elapsed = 00:00:07 . Memory (MB): peak = 2021.051 ; gain = 508.047
 ---------------------------------------------------------------------------------
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.030 . Memory (MB): peak = 1984.348 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.028 . Memory (MB): peak = 2021.051 ; gain = 0.000
 INFO: [Project 1-570] Preparing netlist for logic optimization
 
 Processing XDC Constraints
@@ -149,30 +151,53 @@ Parsing XDC File [c:/v22.2/FEB_AXI_test/FEB_AXI_test.gen/sources_1/bd/ARTY_test/
 Finished Parsing XDC File [c:/v22.2/FEB_AXI_test/FEB_AXI_test.gen/sources_1/bd/ARTY_test/ip/ARTY_test_clk_wiz_0_2/ARTY_test_clk_wiz_0_2/ARTY_test_clk_wiz_0_2_in_context.xdc] for cell 'ARTY_test_i/clk_wiz_0'
 Parsing XDC File [c:/v22.2/FEB_AXI_test/FEB_AXI_test.gen/sources_1/bd/ARTY_test/ip/ARTY_test_clk_wiz_1_1/ARTY_test_clk_wiz_1_1/ARTY_test_clk_wiz_1_1_in_context.xdc] for cell 'ARTY_test_i/clk_wiz_1'
 Finished Parsing XDC File [c:/v22.2/FEB_AXI_test/FEB_AXI_test.gen/sources_1/bd/ARTY_test/ip/ARTY_test_clk_wiz_1_1/ARTY_test_clk_wiz_1_1/ARTY_test_clk_wiz_1_1_in_context.xdc] for cell 'ARTY_test_i/clk_wiz_1'
+Parsing XDC File [c:/v22.2/FEB_AXI_test/FEB_AXI_test.gen/sources_1/bd/ARTY_test/ip/ARTY_test_system_ila_0_0/ARTY_test_system_ila_0_0/ARTY_test_system_ila_0_0_in_context.xdc] for cell 'ARTY_test_i/system_ila_0'
+Finished Parsing XDC File [c:/v22.2/FEB_AXI_test/FEB_AXI_test.gen/sources_1/bd/ARTY_test/ip/ARTY_test_system_ila_0_0/ARTY_test_system_ila_0_0/ARTY_test_system_ila_0_0_in_context.xdc] for cell 'ARTY_test_i/system_ila_0'
 Parsing XDC File [c:/v22.2/FEB_AXI_test/FEB_AXI_test.gen/sources_1/bd/ARTY_test/ip/ARTY_test_FEB_test_0_0/ARTY_test_FEB_test_0_0/ARTY_test_FEB_test_0_0_in_context.xdc] for cell 'ARTY_test_i/FEB_test_0'
 Finished Parsing XDC File [c:/v22.2/FEB_AXI_test/FEB_AXI_test.gen/sources_1/bd/ARTY_test/ip/ARTY_test_FEB_test_0_0/ARTY_test_FEB_test_0_0/ARTY_test_FEB_test_0_0_in_context.xdc] for cell 'ARTY_test_i/FEB_test_0'
+Parsing XDC File [C:/v22.2/FEB_AXI_test/FEB_AXI_test.srcs/constrs_1/new/pinout.xdc]
+WARNING: [Vivado 12-507] No nets matched 'ARTY_test_i/FEB_test_0/U0/counter[7]'. [C:/v22.2/FEB_AXI_test/FEB_AXI_test.srcs/constrs_1/new/pinout.xdc:44]
+WARNING: [Vivado 12-507] No nets matched 'ARTY_test_i/FEB_test_0/U0/counter[9]'. [C:/v22.2/FEB_AXI_test/FEB_AXI_test.srcs/constrs_1/new/pinout.xdc:45]
+WARNING: [Vivado 12-507] No nets matched 'ARTY_test_i/FEB_test_0/U0/counter[13]'. [C:/v22.2/FEB_AXI_test/FEB_AXI_test.srcs/constrs_1/new/pinout.xdc:46]
+WARNING: [Vivado 12-507] No nets matched 'ARTY_test_i/FEB_test_0/U0/counter[2]'. [C:/v22.2/FEB_AXI_test/FEB_AXI_test.srcs/constrs_1/new/pinout.xdc:47]
+WARNING: [Vivado 12-507] No nets matched 'ARTY_test_i/FEB_test_0/U0/counter[3]'. [C:/v22.2/FEB_AXI_test/FEB_AXI_test.srcs/constrs_1/new/pinout.xdc:48]
+WARNING: [Vivado 12-507] No nets matched 'ARTY_test_i/FEB_test_0/U0/counter[6]'. [C:/v22.2/FEB_AXI_test/FEB_AXI_test.srcs/constrs_1/new/pinout.xdc:49]
+WARNING: [Vivado 12-507] No nets matched 'ARTY_test_i/FEB_test_0/U0/counter[14]'. [C:/v22.2/FEB_AXI_test/FEB_AXI_test.srcs/constrs_1/new/pinout.xdc:50]
+WARNING: [Vivado 12-507] No nets matched 'ARTY_test_i/FEB_test_0/U0/counter[15]'. [C:/v22.2/FEB_AXI_test/FEB_AXI_test.srcs/constrs_1/new/pinout.xdc:51]
+WARNING: [Vivado 12-507] No nets matched 'ARTY_test_i/FEB_test_0/U0/counter[5]'. [C:/v22.2/FEB_AXI_test/FEB_AXI_test.srcs/constrs_1/new/pinout.xdc:52]
+WARNING: [Vivado 12-507] No nets matched 'ARTY_test_i/FEB_test_0/U0/counter[10]'. [C:/v22.2/FEB_AXI_test/FEB_AXI_test.srcs/constrs_1/new/pinout.xdc:53]
+WARNING: [Vivado 12-507] No nets matched 'ARTY_test_i/FEB_test_0/U0/counter[0]'. [C:/v22.2/FEB_AXI_test/FEB_AXI_test.srcs/constrs_1/new/pinout.xdc:54]
+WARNING: [Vivado 12-507] No nets matched 'ARTY_test_i/FEB_test_0/U0/counter[1]'. [C:/v22.2/FEB_AXI_test/FEB_AXI_test.srcs/constrs_1/new/pinout.xdc:55]
+WARNING: [Vivado 12-507] No nets matched 'ARTY_test_i/FEB_test_0/U0/counter[4]'. [C:/v22.2/FEB_AXI_test/FEB_AXI_test.srcs/constrs_1/new/pinout.xdc:56]
+WARNING: [Vivado 12-507] No nets matched 'ARTY_test_i/FEB_test_0/U0/counter[8]'. [C:/v22.2/FEB_AXI_test/FEB_AXI_test.srcs/constrs_1/new/pinout.xdc:57]
+WARNING: [Vivado 12-507] No nets matched 'ARTY_test_i/FEB_test_0/U0/counter[11]'. [C:/v22.2/FEB_AXI_test/FEB_AXI_test.srcs/constrs_1/new/pinout.xdc:58]
+WARNING: [Vivado 12-507] No nets matched 'ARTY_test_i/FEB_test_0/U0/counter[12]'. [C:/v22.2/FEB_AXI_test/FEB_AXI_test.srcs/constrs_1/new/pinout.xdc:59]
+Finished Parsing XDC File [C:/v22.2/FEB_AXI_test/FEB_AXI_test.srcs/constrs_1/new/pinout.xdc]
+WARNING: [Project 1-498] One or more constraints failed evaluation while reading constraint file [C:/v22.2/FEB_AXI_test/FEB_AXI_test.srcs/constrs_1/new/pinout.xdc] and the design contains unresolved black boxes. These constraints will be read post-synthesis (as long as their source constraint file is marked as used_in_implementation) and should be applied correctly then. You should review the constraints listed in the file [.Xil/ARTY_test_wrapper_propImpl.xdc] and check the run log file to verify that these constraints were correctly applied.
+INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [C:/v22.2/FEB_AXI_test/FEB_AXI_test.srcs/constrs_1/new/pinout.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/ARTY_test_wrapper_propImpl.xdc].
+Resolution: To avoid this warning, move constraints listed in [.Xil/ARTY_test_wrapper_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
 Parsing XDC File [C:/v22.2/FEB_AXI_test/FEB_AXI_test.runs/synth_1/dont_touch.xdc]
 Finished Parsing XDC File [C:/v22.2/FEB_AXI_test/FEB_AXI_test.runs/synth_1/dont_touch.xdc]
 Completed Processing XDC Constraints
 
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1985.844 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2021.051 ; gain = 0.000
 INFO: [Project 1-111] Unisim Transformation Summary:
 No Unisim elements were transformed.
 
-Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.007 . Memory (MB): peak = 1985.844 ; gain = 0.000
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.006 . Memory (MB): peak = 2021.051 ; gain = 0.000
 WARNING: [Timing 38-316] Clock period '20.000' specified during out-of-context synthesis of instance 'ARTY_test_i/microblaze_0_local_memory/lmb_bram' at clock pin 'clka' is different from the actual clock period '10.000', this can lead to different synthesis results.
 INFO: [Designutils 20-5440] No compile time benefit to using incremental synthesis; A full resynthesis will be run
 INFO: [Designutils 20-4379] Flow is switching to default flow due to incremental criteria not met. If you would like to alter this behaviour and have the flow terminate instead, please set the following parameter config_implementation {autoIncr.Synth.RejectBehavior Terminate}
 INFO: [Synth 8-11241] undeclared symbol 'REGCCE', assumed default net type 'wire' [C:/Xilinx/Vivado/2022.2/data/verilog/src/unimacro/BRAM_SINGLE_MACRO.v:2170]
 ---------------------------------------------------------------------------------
-Finished Constraint Validation : Time (s): cpu = 00:00:14 ; elapsed = 00:00:14 . Memory (MB): peak = 1985.984 ; gain = 508.969
+Finished Constraint Validation : Time (s): cpu = 00:00:14 ; elapsed = 00:00:14 . Memory (MB): peak = 2021.051 ; gain = 508.047
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Loading Part and Timing Information
 ---------------------------------------------------------------------------------
 Loading part: xc7s50csga324-1
 ---------------------------------------------------------------------------------
-Finished Loading Part and Timing Information : Time (s): cpu = 00:00:14 ; elapsed = 00:00:14 . Memory (MB): peak = 1985.984 ; gain = 508.969
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:14 ; elapsed = 00:00:14 . Memory (MB): peak = 2021.051 ; gain = 508.047
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Applying 'set_property' XDC Constraints
@@ -195,12 +220,13 @@ Applied set_property KEEP_HIERARCHY = SOFT for ARTY_test_i/microblaze_0_axi_peri
 Applied set_property KEEP_HIERARCHY = SOFT for ARTY_test_i/FEB_AXI_Interface_0. (constraint file  auto generated constraint).
 Applied set_property KEEP_HIERARCHY = SOFT for ARTY_test_i/clk_wiz_0. (constraint file  auto generated constraint).
 Applied set_property KEEP_HIERARCHY = SOFT for ARTY_test_i/clk_wiz_1. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for ARTY_test_i/system_ila_0. (constraint file  auto generated constraint).
 Applied set_property KEEP_HIERARCHY = SOFT for ARTY_test_i/FEB_test_0. (constraint file  auto generated constraint).
 ---------------------------------------------------------------------------------
-Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:14 ; elapsed = 00:00:14 . Memory (MB): peak = 1985.984 ; gain = 508.969
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:14 ; elapsed = 00:00:14 . Memory (MB): peak = 2021.051 ; gain = 508.047
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:14 ; elapsed = 00:00:15 . Memory (MB): peak = 1985.984 ; gain = 508.969
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:14 ; elapsed = 00:00:14 . Memory (MB): peak = 2021.051 ; gain = 508.047
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start RTL Component Statistics 
@@ -231,25 +257,25 @@ WARNING: [Synth 8-7129] Port M02_ARESETN in module ARTY_test_microblaze_0_axi_pe
 WARNING: [Synth 8-7129] Port S00_ACLK in module ARTY_test_microblaze_0_axi_periph_0 is either unconnected or has no load
 WARNING: [Synth 8-7129] Port S00_ARESETN in module ARTY_test_microblaze_0_axi_periph_0 is either unconnected or has no load
 ---------------------------------------------------------------------------------
-Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:16 ; elapsed = 00:00:16 . Memory (MB): peak = 1985.984 ; gain = 508.969
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:16 ; elapsed = 00:00:16 . Memory (MB): peak = 2021.051 ; gain = 508.047
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Applying XDC Timing Constraints
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:20 ; elapsed = 00:00:21 . Memory (MB): peak = 1985.984 ; gain = 508.969
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:20 ; elapsed = 00:00:20 . Memory (MB): peak = 2021.051 ; gain = 508.047
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Timing Optimization
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Timing Optimization : Time (s): cpu = 00:00:20 ; elapsed = 00:00:21 . Memory (MB): peak = 1985.984 ; gain = 508.969
+Finished Timing Optimization : Time (s): cpu = 00:00:20 ; elapsed = 00:00:20 . Memory (MB): peak = 2021.051 ; gain = 508.047
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Technology Mapping
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Technology Mapping : Time (s): cpu = 00:00:20 ; elapsed = 00:00:21 . Memory (MB): peak = 1993.816 ; gain = 516.801
+Finished Technology Mapping : Time (s): cpu = 00:00:20 ; elapsed = 00:00:20 . Memory (MB): peak = 2021.051 ; gain = 508.047
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start IO Insertion
@@ -267,37 +293,37 @@ Start Final Netlist Cleanup
 Finished Final Netlist Cleanup
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished IO Insertion : Time (s): cpu = 00:00:25 ; elapsed = 00:00:25 . Memory (MB): peak = 1999.547 ; gain = 522.531
+Finished IO Insertion : Time (s): cpu = 00:00:24 ; elapsed = 00:00:25 . Memory (MB): peak = 2021.051 ; gain = 508.047
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Instances
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Instances : Time (s): cpu = 00:00:25 ; elapsed = 00:00:25 . Memory (MB): peak = 1999.547 ; gain = 522.531
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:24 ; elapsed = 00:00:25 . Memory (MB): peak = 2021.051 ; gain = 508.047
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Rebuilding User Hierarchy
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:25 ; elapsed = 00:00:26 . Memory (MB): peak = 1999.547 ; gain = 522.531
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:24 ; elapsed = 00:00:25 . Memory (MB): peak = 2021.051 ; gain = 508.047
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Ports
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Ports : Time (s): cpu = 00:00:25 ; elapsed = 00:00:26 . Memory (MB): peak = 1999.547 ; gain = 522.531
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:24 ; elapsed = 00:00:25 . Memory (MB): peak = 2021.051 ; gain = 508.047
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:25 ; elapsed = 00:00:26 . Memory (MB): peak = 1999.547 ; gain = 522.531
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:24 ; elapsed = 00:00:25 . Memory (MB): peak = 2021.051 ; gain = 508.047
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Nets
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Nets : Time (s): cpu = 00:00:25 ; elapsed = 00:00:26 . Memory (MB): peak = 1999.547 ; gain = 522.531
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:24 ; elapsed = 00:00:25 . Memory (MB): peak = 2021.051 ; gain = 508.047
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Writing Synthesis Report
@@ -317,11 +343,12 @@ Report BlackBoxes:
 |8     |ARTY_test_mdm_1_0               |         1|
 |9     |ARTY_test_microblaze_0_0        |         1|
 |10    |ARTY_test_rst_clk_wiz_0_100M_0  |         1|
-|11    |ARTY_test_dlmb_bram_if_cntlr_0  |         1|
-|12    |ARTY_test_dlmb_v10_0            |         1|
-|13    |ARTY_test_ilmb_bram_if_cntlr_0  |         1|
-|14    |ARTY_test_ilmb_v10_0            |         1|
-|15    |ARTY_test_lmb_bram_0            |         1|
+|11    |ARTY_test_system_ila_0_0        |         1|
+|12    |ARTY_test_dlmb_bram_if_cntlr_0  |         1|
+|13    |ARTY_test_dlmb_v10_0            |         1|
+|14    |ARTY_test_ilmb_bram_if_cntlr_0  |         1|
+|15    |ARTY_test_ilmb_v10_0            |         1|
+|16    |ARTY_test_lmb_bram_0            |         1|
 +------+--------------------------------+----------+
 
 Report Cell Usage: 
@@ -342,29 +369,32 @@ Report Cell Usage:
 |12    |ARTY_test_mdm_1_0_bbox               |     1|
 |13    |ARTY_test_microblaze_0_0_bbox        |     1|
 |14    |ARTY_test_rst_clk_wiz_0_100M_0_bbox  |     1|
-|15    |ARTY_test_xbar_0_bbox                |     1|
-|16    |IBUF                                 |     3|
-|17    |OBUF                                 |     7|
+|15    |ARTY_test_system_ila_0_0_bbox        |     1|
+|16    |ARTY_test_xbar_0_bbox                |     1|
+|17    |IBUF                                 |     3|
+|18    |OBUF                                 |     7|
 +------+-------------------------------------+------+
 ---------------------------------------------------------------------------------
-Finished Writing Synthesis Report : Time (s): cpu = 00:00:25 ; elapsed = 00:00:26 . Memory (MB): peak = 1999.547 ; gain = 522.531
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:24 ; elapsed = 00:00:25 . Memory (MB): peak = 2021.051 ; gain = 508.047
 ---------------------------------------------------------------------------------
 Synthesis finished with 0 errors, 0 critical warnings and 9 warnings.
-Synthesis Optimization Runtime : Time (s): cpu = 00:00:17 ; elapsed = 00:00:24 . Memory (MB): peak = 1999.547 ; gain = 520.895
-Synthesis Optimization Complete : Time (s): cpu = 00:00:25 ; elapsed = 00:00:26 . Memory (MB): peak = 1999.547 ; gain = 522.531
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:15 ; elapsed = 00:00:23 . Memory (MB): peak = 2021.051 ; gain = 508.047
+Synthesis Optimization Complete : Time (s): cpu = 00:00:24 ; elapsed = 00:00:25 . Memory (MB): peak = 2021.051 ; gain = 508.047
 INFO: [Project 1-571] Translating synthesized netlist
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.019 . Memory (MB): peak = 2011.609 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.019 . Memory (MB): peak = 2021.051 ; gain = 0.000
 INFO: [Project 1-570] Preparing netlist for logic optimization
 INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2015.289 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2023.207 ; gain = 0.000
 INFO: [Project 1-111] Unisim Transformation Summary:
 No Unisim elements were transformed.
 
-Synth Design complete, checksum: f51931ff
+Synth Design complete, checksum: fef3a1e1
 INFO: [Common 17-83] Releasing license: Synthesis
-70 Infos, 34 Warnings, 0 Critical Warnings and 0 Errors encountered.
+73 Infos, 51 Warnings, 0 Critical Warnings and 0 Errors encountered.
 synth_design completed successfully
-synth_design: Time (s): cpu = 00:00:28 ; elapsed = 00:00:36 . Memory (MB): peak = 2015.289 ; gain = 913.188
+synth_design: Time (s): cpu = 00:00:27 ; elapsed = 00:00:35 . Memory (MB): peak = 2023.207 ; gain = 881.762
+INFO: [Common 17-600] The following parameters have non-default value.
+tcl.collectionResultDisplayLimit
 INFO: [Common 17-1381] The checkpoint 'C:/v22.2/FEB_AXI_test/FEB_AXI_test.runs/synth_1/ARTY_test_wrapper.dcp' has been generated.
 INFO: [runtcl-4] Executing : report_utilization -file ARTY_test_wrapper_utilization_synth.rpt -pb ARTY_test_wrapper_utilization_synth.pb
-INFO: [Common 17-206] Exiting Vivado at Wed Mar 29 18:12:26 2023...
+INFO: [Common 17-206] Exiting Vivado at Mon Apr 10 15:44:41 2023...

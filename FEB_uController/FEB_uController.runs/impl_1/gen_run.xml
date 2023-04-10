@@ -2,79 +2,61 @@
 <GenRun Id="impl_1" LaunchPart="xc7s50csga324-1" LaunchTime="1680100616">
   <File Type="ROUTE-PWR" Name="uController_wrapper_power_routed.rpt"/>
   <File Type="PA-TCL" Name="uController_wrapper.tcl"/>
-  <File Type="BITSTR-MMI" Name="uController_wrapper.mmi"/>
-  <File Type="OPT-METHODOLOGY-DRC" Name="uController_wrapper_methodology_drc_opted.rpt"/>
-  <File Type="INIT-TIMING" Name="uController_wrapper_timing_summary_init.rpt"/>
   <File Type="ROUTE-PWR-SUM" Name="uController_wrapper_power_summary_routed.pb"/>
   <File Type="REPORTS-TCL" Name="uController_wrapper_reports.tcl"/>
-  <File Type="OPT-TIMING" Name="uController_wrapper_timing_summary_opted.rpt"/>
-  <File Type="OPT-DCP" Name="uController_wrapper_opt.dcp"/>
+  <File Type="BITSTR-MSK" Name="uController_wrapper.msk"/>
+  <File Type="ROUTE-CLK" Name="uController_wrapper_clock_utilization_routed.rpt"/>
+  <File Type="RDI-RDI" Name="uController_wrapper.vdi"/>
+  <File Type="BG-BIT" Name="uController_wrapper.bit"/>
+  <File Type="BG-DRC" Name="uController_wrapper.drc"/>
+  <File Type="BG-BGN" Name="uController_wrapper.bgn"/>
+  <File Type="BG-BIN" Name="uController_wrapper.bin"/>
+  <File Type="BITSTR-RBT" Name="uController_wrapper.rbt"/>
+  <File Type="BITSTR-NKY" Name="uController_wrapper.nky"/>
+  <File Type="BITSTR-BMM" Name="uController_wrapper_bd.bmm"/>
+  <File Type="BITSTR-MMI" Name="uController_wrapper.mmi"/>
+  <File Type="ROUTE-METHODOLOGY-DRC" Name="uController_wrapper_methodology_drc_routed.rpt"/>
+  <File Type="BITSTR-SYSDEF" Name="uController_wrapper.sysdef"/>
+  <File Type="BITSTR-LTX" Name="debug_nets.ltx"/>
+  <File Type="BITSTR-LTX" Name="uController_wrapper.ltx"/>
+  <File Type="WBT-USG" Name="usage_statistics_webtalk.html"/>
   <File Type="OPT-DRC" Name="uController_wrapper_drc_opted.rpt"/>
   <File Type="OPT-HWDEF" Name="uController_wrapper.hwdef"/>
-  <File Type="PWROPT-DCP" Name="uController_wrapper_pwropt.dcp"/>
-  <File Type="PWROPT-DRC" Name="uController_wrapper_drc_pwropted.rpt"/>
-  <File Type="PWROPT-TIMING" Name="uController_wrapper_timing_summary_pwropted.rpt"/>
-  <File Type="PLACE-DCP" Name="uController_wrapper_placed.dcp"/>
   <File Type="PLACE-IO" Name="uController_wrapper_io_placed.rpt"/>
-  <File Type="PLACE-CLK" Name="uController_wrapper_clock_utilization_placed.rpt"/>
   <File Type="PLACE-UTIL" Name="uController_wrapper_utilization_placed.rpt"/>
   <File Type="PLACE-UTIL-PB" Name="uController_wrapper_utilization_placed.pb"/>
   <File Type="PLACE-CTRL" Name="uController_wrapper_control_sets_placed.rpt"/>
-  <File Type="PLACE-SIMILARITY" Name="uController_wrapper_incremental_reuse_placed.rpt"/>
   <File Type="PLACE-PRE-SIMILARITY" Name="uController_wrapper_incremental_reuse_pre_placed.rpt"/>
-  <File Type="BG-BIN" Name="uController_wrapper.bin"/>
-  <File Type="PLACE-TIMING" Name="uController_wrapper_timing_summary_placed.rpt"/>
-  <File Type="POSTPLACE-PWROPT-DCP" Name="uController_wrapper_postplace_pwropt.dcp"/>
-  <File Type="BITSTR-MSK" Name="uController_wrapper.msk"/>
-  <File Type="POSTPLACE-PWROPT-TIMING" Name="uController_wrapper_timing_summary_postplace_pwropted.rpt"/>
-  <File Type="PHYSOPT-DCP" Name="uController_wrapper_physopt.dcp"/>
-  <File Type="PHYSOPT-DRC" Name="uController_wrapper_drc_physopted.rpt"/>
-  <File Type="BITSTR-RBT" Name="uController_wrapper.rbt"/>
-  <File Type="PHYSOPT-TIMING" Name="uController_wrapper_timing_summary_physopted.rpt"/>
-  <File Type="ROUTE-ERROR-DCP" Name="uController_wrapper_routed_error.dcp"/>
-  <File Type="ROUTE-DCP" Name="uController_wrapper_routed.dcp"/>
-  <File Type="ROUTE-BLACKBOX-DCP" Name="uController_wrapper_routed_bb.dcp"/>
   <File Type="ROUTE-DRC" Name="uController_wrapper_drc_routed.rpt"/>
   <File Type="ROUTE-DRC-PB" Name="uController_wrapper_drc_routed.pb"/>
-  <File Type="ROUTE-DRC-RPX" Name="uController_wrapper_drc_routed.rpx"/>
-  <File Type="ROUTE-METHODOLOGY-DRC" Name="uController_wrapper_methodology_drc_routed.rpt"/>
-  <File Type="ROUTE-METHODOLOGY-DRC-RPX" Name="uController_wrapper_methodology_drc_routed.rpx"/>
-  <File Type="ROUTE-METHODOLOGY-DRC-PB" Name="uController_wrapper_methodology_drc_routed.pb"/>
   <File Type="ROUTE-PWR-RPX" Name="uController_wrapper_power_routed.rpx"/>
   <File Type="ROUTE-STATUS" Name="uController_wrapper_route_status.rpt"/>
   <File Type="ROUTE-STATUS-PB" Name="uController_wrapper_route_status.pb"/>
+  <File Type="ROUTE-DCP" Name="uController_wrapper_routed.dcp"/>
+  <File Type="ROUTE-ERROR-DCP" Name="uController_wrapper_routed_error.dcp"/>
+  <File Type="ROUTE-BLACKBOX-DCP" Name="uController_wrapper_routed_bb.dcp"/>
   <File Type="ROUTE-TIMINGSUMMARY" Name="uController_wrapper_timing_summary_routed.rpt"/>
   <File Type="ROUTE-TIMING-PB" Name="uController_wrapper_timing_summary_routed.pb"/>
   <File Type="ROUTE-TIMING-RPX" Name="uController_wrapper_timing_summary_routed.rpx"/>
-  <File Type="ROUTE-SIMILARITY" Name="uController_wrapper_incremental_reuse_routed.rpt"/>
-  <File Type="ROUTE-CLK" Name="uController_wrapper_clock_utilization_routed.rpt"/>
   <File Type="ROUTE-BUS-SKEW" Name="uController_wrapper_bus_skew_routed.rpt"/>
   <File Type="ROUTE-BUS-SKEW-PB" Name="uController_wrapper_bus_skew_routed.pb"/>
   <File Type="ROUTE-BUS-SKEW-RPX" Name="uController_wrapper_bus_skew_routed.rpx"/>
+  <File Type="OPT-DCP" Name="uController_wrapper_opt.dcp"/>
+  <File Type="PLACE-DCP" Name="uController_wrapper_placed.dcp"/>
+  <File Type="PWROPT-DCP" Name="uController_wrapper_pwropt.dcp"/>
+  <File Type="POSTPLACE-PWROPT-DCP" Name="uController_wrapper_postplace_pwropt.dcp"/>
+  <File Type="PHYSOPT-DCP" Name="uController_wrapper_physopt.dcp"/>
   <File Type="POSTROUTE-PHYSOPT-DCP" Name="uController_wrapper_postroute_physopt.dcp"/>
   <File Type="POSTROUTE-PHYSOPT-BLACKBOX-DCP" Name="uController_wrapper_postroute_physopt_bb.dcp"/>
-  <File Type="POSTROUTE-PHYSOPT-TIMING" Name="uController_wrapper_timing_summary_postroute_physopted.rpt"/>
-  <File Type="POSTROUTE-PHYSOPT-TIMING-PB" Name="uController_wrapper_timing_summary_postroute_physopted.pb"/>
-  <File Type="POSTROUTE-PHYSOPT-TIMING-RPX" Name="uController_wrapper_timing_summary_postroute_physopted.rpx"/>
-  <File Type="POSTROUTE-PHYSOPT-BUS-SKEW" Name="uController_wrapper_bus_skew_postroute_physopted.rpt"/>
-  <File Type="BG-BIT" Name="uController_wrapper.bit"/>
-  <File Type="POSTROUTE-PHYSOPT-BUS-SKEW-PB" Name="uController_wrapper_bus_skew_postroute_physopted.pb"/>
-  <File Type="POSTROUTE-PHYSOPT-BUS-SKEW-RPX" Name="uController_wrapper_bus_skew_postroute_physopted.rpx"/>
-  <File Type="BITSTR-NKY" Name="uController_wrapper.nky"/>
-  <File Type="BITSTR-BMM" Name="uController_wrapper_bd.bmm"/>
+  <File Type="ROUTE-METHODOLOGY-DRC-PB" Name="uController_wrapper_methodology_drc_routed.pb"/>
+  <File Type="ROUTE-DRC-RPX" Name="uController_wrapper_drc_routed.rpx"/>
+  <File Type="ROUTE-METHODOLOGY-DRC-RPX" Name="uController_wrapper_methodology_drc_routed.rpx"/>
   <File Type="PDI-FILE" Name="uController_wrapper.pdi"/>
   <File Type="RCFI_FILE" Name="uController_wrapper.rcfi"/>
   <File Type="CFI_FILE" Name="uController_wrapper.cfi"/>
   <File Type="RNPI_FILE" Name="uController_wrapper.rnpi"/>
   <File Type="NPI_FILE" Name="uController_wrapper.npi"/>
   <File Type="RBD_FILE" Name="uController_wrapper.rbd"/>
-  <File Type="BITSTR-LTX" Name="debug_nets.ltx"/>
-  <File Type="BITSTR-LTX" Name="uController_wrapper.ltx"/>
-  <File Type="BITSTR-SYSDEF" Name="uController_wrapper.sysdef"/>
-  <File Type="BG-BGN" Name="uController_wrapper.bgn"/>
-  <File Type="BG-DRC" Name="uController_wrapper.drc"/>
-  <File Type="RDI-RDI" Name="uController_wrapper.vdi"/>
-  <File Type="WBT-USG" Name="usage_statistics_webtalk.html"/>
   <File Type="ROUTE-RQS" Name="uController_wrapper_routed.rqs"/>
   <File Type="POSTROUTE-PHYSOPT-RQS" Name="uController_wrapper_postroute_physopted.rqs"/>
   <File Type="ROUTE-RQS-RPT" Name="route_report_qor_suggestions_0.rpt"/>
@@ -131,6 +113,7 @@
     <Step Id="route_design"/>
     <Step Id="post_route_phys_opt_design"/>
     <Step Id="write_bitstream"/>
+    <Step Id="write_device_image"/>
   </Strategy>
   <BlockFileSet Type="BlockSrcs" Name="uController"/>
 </GenRun>

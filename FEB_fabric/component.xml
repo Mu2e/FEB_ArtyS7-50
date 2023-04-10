@@ -22,12 +22,15 @@
           <spirit:localName>xilinx_anylanguagesynthesis_xilinx_com_ip_blk_mem_gen_8_4__ref_view_fileset</spirit:localName>
         </spirit:fileSetRef>
         <spirit:fileSetRef>
+          <spirit:localName>xilinx_anylanguagesynthesis_xilinx_com_ip_ila_6_2__ref_view_fileset</spirit:localName>
+        </spirit:fileSetRef>
+        <spirit:fileSetRef>
           <spirit:localName>xilinx_anylanguagesynthesis_view_fileset</spirit:localName>
         </spirit:fileSetRef>
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>viewChecksum</spirit:name>
-            <spirit:value>d71c179c</spirit:value>
+            <spirit:value>7ec4fdab</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -47,12 +50,15 @@
           <spirit:localName>xilinx_anylanguagebehavioralsimulation_xilinx_com_ip_blk_mem_gen_8_4__ref_view_fileset</spirit:localName>
         </spirit:fileSetRef>
         <spirit:fileSetRef>
+          <spirit:localName>xilinx_anylanguagebehavioralsimulation_xilinx_com_ip_ila_6_2__ref_view_fileset</spirit:localName>
+        </spirit:fileSetRef>
+        <spirit:fileSetRef>
           <spirit:localName>xilinx_anylanguagebehavioralsimulation_view_fileset</spirit:localName>
         </spirit:fileSetRef>
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>viewChecksum</spirit:name>
-            <spirit:value>72a87a07</spirit:value>
+            <spirit:value>25ba09fa</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -612,6 +618,26 @@
         <spirit:userFileType>xci</spirit:userFileType>
       </spirit:file>
       <spirit:file>
+        <spirit:name>FEB_fabric.srcs/sources_1/ip/AFEemu_ila/AFEemu_ila.xci</spirit:name>
+        <spirit:userFileType>xci</spirit:userFileType>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>FEB_fabric.srcs/sources_1/ip/AFE_DataPath_ila0/AFE_DataPath_ila0.xci</spirit:name>
+        <spirit:userFileType>xci</spirit:userFileType>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>FEB_fabric.srcs/sources_1/ip/AFE_DataPath_ila1/AFE_DataPath_ila1.xci</spirit:name>
+        <spirit:userFileType>xci</spirit:userFileType>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>FEB_fabric.srcs/sources_1/ip/AFE_DataPath_ila2/AFE_DataPath_ila2.xci</spirit:name>
+        <spirit:userFileType>xci</spirit:userFileType>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>FEB_fabric.srcs/sources_1/ip/AFE_DataPath_ila3/AFE_DataPath_ila3.xci</spirit:name>
+        <spirit:userFileType>xci</spirit:userFileType>
+      </spirit:file>
+      <spirit:file>
         <spirit:name>FEB_fabric.srcs/sources_1/ip/SCFIFO_1Kx16/SCFIFO_1Kx16.xci</spirit:name>
         <spirit:userFileType>xci</spirit:userFileType>
         <spirit:userFileType>CELL_NAME_EventBuilder_logic/EventBuff</spirit:userFileType>
@@ -630,6 +656,11 @@
         <spirit:name>FEB_fabric.srcs/sources_1/ip/AFE_DP_Pipeline/AFE_DP_Pipeline.xci</spirit:name>
         <spirit:userFileType>xci</spirit:userFileType>
         <spirit:userFileType>CELL_NAME_AFE_DataPath_inst/AFE_Pipeline_inst/Gen_Two_AFEs[0].Pipeline</spirit:userFileType>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>FEB_fabric.srcs/sources_1/ip/Trigger_ila/Trigger_ila.xci</spirit:name>
+        <spirit:userFileType>xci</spirit:userFileType>
+        <spirit:userFileType>CELL_NAME_Trigger_logic/trigger_ila</spirit:userFileType>
       </spirit:file>
       <spirit:file>
         <spirit:name>FEB_fabric.srcs/sources_1/new/Proj_Def.vhd</spirit:name>
@@ -724,6 +755,16 @@
       </spirit:vendorExtensions>
     </spirit:fileSet>
     <spirit:fileSet>
+      <spirit:name>xilinx_anylanguagesynthesis_xilinx_com_ip_ila_6_2__ref_view_fileset</spirit:name>
+      <spirit:vendorExtensions>
+        <xilinx:subCoreRef>
+          <xilinx:componentRef xilinx:vendor="xilinx.com" xilinx:library="ip" xilinx:name="ila" xilinx:version="6.2">
+            <xilinx:mode xilinx:name="create_mode"/>
+          </xilinx:componentRef>
+        </xilinx:subCoreRef>
+      </spirit:vendorExtensions>
+    </spirit:fileSet>
+    <spirit:fileSet>
       <spirit:name>xilinx_anylanguagebehavioralsimulation_view_fileset</spirit:name>
       <spirit:file>
         <spirit:name>FEB_fabric.srcs/sources_1/ip/DDR3LController/mig_b.prj</spirit:name>
@@ -739,6 +780,26 @@
       </spirit:file>
       <spirit:file>
         <spirit:name>FEB_fabric.srcs/sources_1/ip/AFEemu/AFEemu.xci</spirit:name>
+        <spirit:userFileType>xci</spirit:userFileType>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>FEB_fabric.srcs/sources_1/ip/AFEemu_ila/AFEemu_ila.xci</spirit:name>
+        <spirit:userFileType>xci</spirit:userFileType>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>FEB_fabric.srcs/sources_1/ip/AFE_DataPath_ila0/AFE_DataPath_ila0.xci</spirit:name>
+        <spirit:userFileType>xci</spirit:userFileType>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>FEB_fabric.srcs/sources_1/ip/AFE_DataPath_ila1/AFE_DataPath_ila1.xci</spirit:name>
+        <spirit:userFileType>xci</spirit:userFileType>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>FEB_fabric.srcs/sources_1/ip/AFE_DataPath_ila2/AFE_DataPath_ila2.xci</spirit:name>
+        <spirit:userFileType>xci</spirit:userFileType>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>FEB_fabric.srcs/sources_1/ip/AFE_DataPath_ila3/AFE_DataPath_ila3.xci</spirit:name>
         <spirit:userFileType>xci</spirit:userFileType>
       </spirit:file>
       <spirit:file>
@@ -760,6 +821,11 @@
         <spirit:name>FEB_fabric.srcs/sources_1/ip/AFE_DP_Pipeline/AFE_DP_Pipeline.xci</spirit:name>
         <spirit:userFileType>xci</spirit:userFileType>
         <spirit:userFileType>CELL_NAME_AFE_DataPath_inst/AFE_Pipeline_inst/Gen_Two_AFEs[0].Pipeline</spirit:userFileType>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>FEB_fabric.srcs/sources_1/ip/Trigger_ila/Trigger_ila.xci</spirit:name>
+        <spirit:userFileType>xci</spirit:userFileType>
+        <spirit:userFileType>CELL_NAME_Trigger_logic/trigger_ila</spirit:userFileType>
       </spirit:file>
       <spirit:file>
         <spirit:name>FEB_fabric.srcs/sources_1/new/Proj_Def.vhd</spirit:name>
@@ -853,6 +919,16 @@
       </spirit:vendorExtensions>
     </spirit:fileSet>
     <spirit:fileSet>
+      <spirit:name>xilinx_anylanguagebehavioralsimulation_xilinx_com_ip_ila_6_2__ref_view_fileset</spirit:name>
+      <spirit:vendorExtensions>
+        <xilinx:subCoreRef>
+          <xilinx:componentRef xilinx:vendor="xilinx.com" xilinx:library="ip" xilinx:name="ila" xilinx:version="6.2">
+            <xilinx:mode xilinx:name="create_mode"/>
+          </xilinx:componentRef>
+        </xilinx:subCoreRef>
+      </spirit:vendorExtensions>
+    </spirit:fileSet>
+    <spirit:fileSet>
       <spirit:name>xilinx_xpgui_view_fileset</spirit:name>
       <spirit:file>
         <spirit:name>xgui/FEB_fabric_v1_0.tcl</spirit:name>
@@ -912,12 +988,12 @@
         <xilinx:xpmLibrary>XPM_CDC</xilinx:xpmLibrary>
         <xilinx:xpmLibrary>XPM_MEMORY</xilinx:xpmLibrary>
       </xilinx:xpmLibraries>
-      <xilinx:coreRevision>14</xilinx:coreRevision>
-      <xilinx:coreCreationDateTime>2023-03-29T14:15:55Z</xilinx:coreCreationDateTime>
+      <xilinx:coreRevision>16</xilinx:coreRevision>
+      <xilinx:coreCreationDateTime>2023-04-10T22:51:44Z</xilinx:coreCreationDateTime>
     </xilinx:coreExtensions>
     <xilinx:packagingInfo>
       <xilinx:xilinxVersion>2022.2</xilinx:xilinxVersion>
-      <xilinx:checksum xilinx:scope="fileGroups" xilinx:value="aa788170"/>
+      <xilinx:checksum xilinx:scope="fileGroups" xilinx:value="f9438c5e"/>
       <xilinx:checksum xilinx:scope="ports" xilinx:value="546a06ff"/>
       <xilinx:checksum xilinx:scope="parameters" xilinx:value="0c9f42be"/>
     </xilinx:packagingInfo>

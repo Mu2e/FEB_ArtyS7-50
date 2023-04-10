@@ -70,6 +70,9 @@ proc create_report { reportName command } {
   }
 }
 OPTRACE "synth_1" START { ROLLUP_AUTO }
+set_param tcl.collectionResultDisplayLimit 0
+set_param chipscope.maxJobs 4
+set_param xicom.use_bs_reader 1
 set_param simulator.modelsimInstallPath C:/intelFPGA/20.1/modelsim_ae/win32aloem
 OPTRACE "Creating in-memory project" START { }
 create_project -in_memory -part xc7s50csga324-1
@@ -91,8 +94,8 @@ set_property ip_output_repo c:/v22.2/FEB_AXI_test/FEB_AXI_test.cache/ip [current
 set_property ip_cache_permissions {read write} [current_project]
 OPTRACE "Creating in-memory project" END { }
 OPTRACE "Adding files" START { }
-add_files c:/v22.2/FEB_AXI_test/FEB_AXI_test.srcs/sources_1/ip/AFEemu.coe
-read_vhdl -library xil_defaultlib c:/v22.2/FEB_AXI_test/FEB_AXI_test.gen/sources_1/bd/ARTY_test/hdl/ARTY_test_wrapper.vhd
+add_files C:/v22.2/FEB_AXI_test/FEB_AXI_test.srcs/sources_1/ip/AFEemu.coe
+read_vhdl -library xil_defaultlib C:/v22.2/FEB_AXI_test/FEB_AXI_test.gen/sources_1/bd/ARTY_test/hdl/ARTY_test_wrapper.vhd
 add_files C:/v22.2/FEB_AXI_test/FEB_AXI_test.srcs/sources_1/bd/ARTY_test/ARTY_test.bd
 set_property used_in_implementation false [get_files -all c:/v22.2/FEB_AXI_test/FEB_AXI_test.gen/sources_1/bd/ARTY_test/ip/ARTY_test_axi_gpio_0_0/ARTY_test_axi_gpio_0_0_board.xdc]
 set_property used_in_implementation false [get_files -all c:/v22.2/FEB_AXI_test/FEB_AXI_test.gen/sources_1/bd/ARTY_test/ip/ARTY_test_axi_gpio_0_0/ARTY_test_axi_gpio_0_0_ooc.xdc]
@@ -120,11 +123,23 @@ set_property used_in_implementation false [get_files -all c:/v22.2/FEB_AXI_test/
 set_property used_in_implementation false [get_files -all c:/v22.2/FEB_AXI_test/FEB_AXI_test.gen/sources_1/bd/ARTY_test/ip/ARTY_test_clk_wiz_1_1/ARTY_test_clk_wiz_1_1_board.xdc]
 set_property used_in_implementation false [get_files -all c:/v22.2/FEB_AXI_test/FEB_AXI_test.gen/sources_1/bd/ARTY_test/ip/ARTY_test_clk_wiz_1_1/ARTY_test_clk_wiz_1_1.xdc]
 set_property used_in_implementation false [get_files -all c:/v22.2/FEB_AXI_test/FEB_AXI_test.gen/sources_1/bd/ARTY_test/ip/ARTY_test_clk_wiz_1_1/ARTY_test_clk_wiz_1_1_ooc.xdc]
+set_property used_in_synthesis false [get_files -all c:/v22.2/FEB_AXI_test/FEB_AXI_test.gen/sources_1/bd/ARTY_test/ip/ARTY_test_system_ila_0_0/bd_0/ip/ip_0/ila_v6_2/constraints/ila_impl.xdc]
+set_property used_in_implementation false [get_files -all c:/v22.2/FEB_AXI_test/FEB_AXI_test.gen/sources_1/bd/ARTY_test/ip/ARTY_test_system_ila_0_0/bd_0/ip/ip_0/ila_v6_2/constraints/ila_impl.xdc]
+set_property used_in_implementation false [get_files -all c:/v22.2/FEB_AXI_test/FEB_AXI_test.gen/sources_1/bd/ARTY_test/ip/ARTY_test_system_ila_0_0/bd_0/ip/ip_0/ila_v6_2/constraints/ila.xdc]
+set_property used_in_implementation false [get_files -all c:/v22.2/FEB_AXI_test/FEB_AXI_test.gen/sources_1/bd/ARTY_test/ip/ARTY_test_system_ila_0_0/bd_0/ip/ip_0/bd_61e0_ila_lib_0_ooc.xdc]
+set_property used_in_implementation false [get_files -all c:/v22.2/FEB_AXI_test/FEB_AXI_test.gen/sources_1/bd/ARTY_test/ip/ARTY_test_system_ila_0_0/bd_0/bd_61e0_ooc.xdc]
+set_property used_in_implementation false [get_files -all c:/v22.2/FEB_AXI_test/FEB_AXI_test.gen/sources_1/bd/ARTY_test/ip/ARTY_test_system_ila_0_0/ARTY_test_system_ila_0_0_ooc.xdc]
 set_property used_in_implementation false [get_files -all c:/v22.2/FEB_AXI_test/FEB_AXI_test.gen/sources_1/bd/ARTY_test/ARTY_test_ooc.xdc]
 set_property used_in_implementation false [get_files -all c:/v22.2/FEB_AXI_test/FEB_AXI_test.gen/sources_1/bd/ARTY_test/ip/ARTY_test_microblaze_0_0/data/mb_bootloop_le.elf]
 
 read_ip -quiet C:/v22.2/FEB_AXI_test/FEB_AXI_test.srcs/sources_1/ip/AFEemu/AFEemu.xci
 set_property used_in_implementation false [get_files -all c:/v22.2/FEB_AXI_test/FEB_fabric.gen/sources_1/ip/AFEemu/AFEemu_ooc.xdc]
+
+read_ip -quiet C:/v22.2/FEB_AXI_test/FEB_AXI_test.srcs/sources_1/ip/AFEemu_ila/AFEemu_ila.xci
+set_property used_in_synthesis false [get_files -all c:/v22.2/FEB_AXI_test/FEB_AXI_test.gen/sources_1/ip/AFEemu_ila/ila_v6_2/constraints/ila_impl.xdc]
+set_property used_in_implementation false [get_files -all c:/v22.2/FEB_AXI_test/FEB_AXI_test.gen/sources_1/ip/AFEemu_ila/ila_v6_2/constraints/ila_impl.xdc]
+set_property used_in_implementation false [get_files -all c:/v22.2/FEB_AXI_test/FEB_AXI_test.gen/sources_1/ip/AFEemu_ila/ila_v6_2/constraints/ila.xdc]
+set_property used_in_implementation false [get_files -all c:/v22.2/FEB_AXI_test/FEB_AXI_test.gen/sources_1/ip/AFEemu_ila/AFEemu_ila_ooc.xdc]
 
 OPTRACE "Adding files" END { }
 # Mark all dcp files as not used in implementation to prevent them from being
@@ -135,6 +150,9 @@ OPTRACE "Adding files" END { }
 foreach dcp [get_files -quiet -all -filter file_type=="Design\ Checkpoint"] {
   set_property used_in_implementation false $dcp
 }
+read_xdc C:/v22.2/FEB_AXI_test/FEB_AXI_test.srcs/constrs_1/new/pinout.xdc
+set_property used_in_implementation false [get_files C:/v22.2/FEB_AXI_test/FEB_AXI_test.srcs/constrs_1/new/pinout.xdc]
+
 read_xdc dont_touch.xdc
 set_property used_in_implementation false [get_files dont_touch.xdc]
 set_param ips.enableIPCacheLiteLoad 1

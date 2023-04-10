@@ -47,7 +47,7 @@
 -- DO NOT MODIFY THIS FILE.
 
 -- IP VLNV: fnal.gov:user:FEB_fabric:1.0
--- IP Revision: 14
+-- IP Revision: 16
 
 LIBRARY ieee;
 USE ieee.std_logic_1164.ALL;

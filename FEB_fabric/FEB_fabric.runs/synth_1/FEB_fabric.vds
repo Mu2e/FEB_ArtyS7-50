@@ -2,8 +2,8 @@
 # Vivado v2022.2 (64-bit)
 # SW Build 3671981 on Fri Oct 14 05:00:03 MDT 2022
 # IP Build 3669848 on Fri Oct 14 08:30:02 MDT 2022
-# Start of session at: Wed Mar 29 09:15:41 2023
-# Process ID: 725884
+# Start of session at: Mon Apr 10 17:45:16 2023
+# Process ID: 22688
 # Current directory: C:/v22.2/FEB_fabric/FEB_fabric.runs/synth_1
 # Command line: vivado.exe -log FEB_fabric.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source FEB_fabric.tcl
 # Log file: C:/v22.2/FEB_fabric/FEB_fabric.runs/synth_1/FEB_fabric.vds
@@ -11,7 +11,7 @@
 # Running On: CD-135239, OS: Windows, CPU Frequency: 3600 MHz, CPU Physical cores: 8, Host memory: 34287 MB
 #-----------------------------------------------------------
 source FEB_fabric.tcl -notrace
-create_project: Time (s): cpu = 00:00:05 ; elapsed = 00:00:06 . Memory (MB): peak = 1039.102 ; gain = 154.828
+create_project: Time (s): cpu = 00:00:05 ; elapsed = 00:00:06 . Memory (MB): peak = 1039.465 ; gain = 155.133
 INFO: [IP_Flow 19-234] Refreshing IP repositories
 INFO: [IP_Flow 19-1700] Loaded user IP repository 'c:/v22.2/feb_fabric'.
 INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'C:/Xilinx/Vivado/2022.2/data/ip'.
@@ -28,22 +28,28 @@ INFO: [Designutils 20-5440] No compile time benefit to using incremental synthes
 INFO: [Designutils 20-4379] Flow is switching to default flow due to incremental criteria not met. If you would like to alter this behaviour and have the flow terminate instead, please set the following parameter config_implementation {autoIncr.Synth.RejectBehavior Terminate}
 INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 2 processes.
 INFO: [Synth 8-7078] Launching helper process for spawning children vivado processes
-INFO: [Synth 8-7075] Helper process launched with PID 720312
+INFO: [Synth 8-7075] Helper process launched with PID 13852
 INFO: [Synth 8-11241] undeclared symbol 'REGCCE', assumed default net type 'wire' [C:/Xilinx/Vivado/2022.2/data/verilog/src/unimacro/BRAM_SINGLE_MACRO.v:2170]
 ---------------------------------------------------------------------------------
-Starting RTL Elaboration : Time (s): cpu = 00:00:08 ; elapsed = 00:00:08 . Memory (MB): peak = 1879.531 ; gain = 409.391
+Starting RTL Elaboration : Time (s): cpu = 00:00:07 ; elapsed = 00:00:08 . Memory (MB): peak = 1932.402 ; gain = 408.492
 ---------------------------------------------------------------------------------
 INFO: [Synth 8-638] synthesizing module 'FEB_fabric' [C:/v22.2/FEB_fabric/FEB_fabric.srcs/sources_1/new/FEB_top_ARTY.vhd:95]
 	Parameter DIFF_TERM bound to: 1 - type: bool 
 	Parameter IBUF_LOW_PWR bound to: 0 - type: bool 
 	Parameter IOSTANDARD bound to: DEFAULT - type: string 
 INFO: [Synth 8-113] binding component instance 'GPI0DiffIn' to cell 'IBUFDS' [C:/v22.2/FEB_fabric/FEB_fabric.srcs/sources_1/new/FEB_top_ARTY.vhd:227]
-INFO: [Synth 8-3491] module 'AFE_Interface_Sim' declared at 'C:/v22.2/FEB_fabric/FEB_fabric.srcs/sources_1/new/AFE_Interface_Sim_easy.vhd:10' bound to instance 'AFE_Interface' of component 'AFE_Interface_Sim' [C:/v22.2/FEB_fabric/FEB_fabric.srcs/sources_1/new/FEB_top_ARTY.vhd:274]
-INFO: [Synth 8-638] synthesizing module 'AFE_Interface_Sim' [C:/v22.2/FEB_fabric/FEB_fabric.srcs/sources_1/new/AFE_Interface_Sim_easy.vhd:35]
-INFO: [Synth 8-256] done synthesizing module 'AFE_Interface_Sim' (0#1) [C:/v22.2/FEB_fabric/FEB_fabric.srcs/sources_1/new/AFE_Interface_Sim_easy.vhd:35]
-INFO: [Synth 8-3491] module 'AFE_DataPath' declared at 'C:/v22.2/FEB_fabric/FEB_fabric.srcs/sources_1/new/AFE_DataPath.vhd:36' bound to instance 'AFE_DataPath_inst' of component 'AFE_DataPath' [C:/v22.2/FEB_fabric/FEB_fabric.srcs/sources_1/new/FEB_top_ARTY.vhd:297]
+INFO: [Synth 8-3491] module 'AFE_Interface_Sim' declared at 'C:/v22.2/FEB_fabric/FEB_fabric.srcs/sources_1/new/AFE_Interface_Sim.vhd:10' bound to instance 'AFE_Interface' of component 'AFE_Interface_Sim' [C:/v22.2/FEB_fabric/FEB_fabric.srcs/sources_1/new/FEB_top_ARTY.vhd:274]
+INFO: [Synth 8-638] synthesizing module 'AFE_Interface_Sim' [C:/v22.2/FEB_fabric/FEB_fabric.srcs/sources_1/new/AFE_Interface_Sim.vhd:36]
+INFO: [Synth 8-3491] module 'AFEemu' declared at 'C:/v22.2/FEB_fabric/FEB_fabric.runs/synth_1/.Xil/Vivado-22688-CD-135239/realtime/AFEemu_stub.vhdl:5' bound to instance 'AFE' of component 'AFEemu' [C:/v22.2/FEB_fabric/FEB_fabric.srcs/sources_1/new/AFE_Interface_Sim.vhd:129]
+INFO: [Synth 8-638] synthesizing module 'AFEemu' [C:/v22.2/FEB_fabric/FEB_fabric.runs/synth_1/.Xil/Vivado-22688-CD-135239/realtime/AFEemu_stub.vhdl:18]
+WARNING: [Synth 8-614] signal 'uCD' is read in the process but is not in the sensitivity list [C:/v22.2/FEB_fabric/FEB_fabric.srcs/sources_1/new/AFE_Interface_Sim.vhd:194]
+WARNING: [Synth 8-614] signal 'AFEemudout' is read in the process but is not in the sensitivity list [C:/v22.2/FEB_fabric/FEB_fabric.srcs/sources_1/new/AFE_Interface_Sim.vhd:194]
+INFO: [Synth 8-3491] module 'AFEemu_ila' declared at 'C:/v22.2/FEB_fabric/FEB_fabric.runs/synth_1/.Xil/Vivado-22688-CD-135239/realtime/AFEemu_ila_stub.vhdl:5' bound to instance 'AFEemu_ila_inst' of component 'AFEemu_ila' [C:/v22.2/FEB_fabric/FEB_fabric.srcs/sources_1/new/AFE_Interface_Sim.vhd:264]
+INFO: [Synth 8-638] synthesizing module 'AFEemu_ila' [C:/v22.2/FEB_fabric/FEB_fabric.runs/synth_1/.Xil/Vivado-22688-CD-135239/realtime/AFEemu_ila_stub.vhdl:18]
+INFO: [Synth 8-256] done synthesizing module 'AFE_Interface_Sim' (0#1) [C:/v22.2/FEB_fabric/FEB_fabric.srcs/sources_1/new/AFE_Interface_Sim.vhd:36]
+INFO: [Synth 8-3491] module 'AFE_DataPath' declared at 'C:/v22.2/FEB_fabric/FEB_fabric.srcs/sources_1/new/AFE_DataPath.vhd:36' bound to instance 'AFE_DataPath_inst' of component 'AFE_DataPath' [C:/v22.2/FEB_fabric/FEB_fabric.srcs/sources_1/new/FEB_top_ARTY.vhd:298]
 INFO: [Synth 8-638] synthesizing module 'AFE_DataPath' [C:/v22.2/FEB_fabric/FEB_fabric.srcs/sources_1/new/AFE_DataPath.vhd:73]
-INFO: [Synth 8-3491] module 'AFE_Pipeline' declared at 'C:/v22.2/FEB_fabric/FEB_fabric.srcs/sources_1/new/AFE_Pipeline.vhd:10' bound to instance 'AFE_Pipeline_inst' of component 'AFE_Pipeline' [C:/v22.2/FEB_fabric/FEB_fabric.srcs/sources_1/new/AFE_DataPath.vhd:161]
+INFO: [Synth 8-3491] module 'AFE_Pipeline' declared at 'C:/v22.2/FEB_fabric/FEB_fabric.srcs/sources_1/new/AFE_Pipeline.vhd:10' bound to instance 'AFE_Pipeline_inst' of component 'AFE_Pipeline' [C:/v22.2/FEB_fabric/FEB_fabric.srcs/sources_1/new/AFE_DataPath.vhd:162]
 INFO: [Synth 8-638] synthesizing module 'AFE_Pipeline' [C:/v22.2/FEB_fabric/FEB_fabric.srcs/sources_1/new/AFE_Pipeline.vhd:26]
 INFO: [Synth 8-3491] module 'AFE_DP_Pipeline' declared at 'c:/v22.2/FEB_fabric/feb_arty.tmp/feb_fabric_v1_0_project/FEB_fabric_v1_0_project.gen/sources_1/ip/AFE_DP_Pipeline/synth/AFE_DP_Pipeline.vhd:59' bound to instance 'Pipeline' of component 'AFE_DP_Pipeline' [C:/v22.2/FEB_fabric/FEB_fabric.srcs/sources_1/new/AFE_Pipeline.vhd:45]
 INFO: [Synth 8-638] synthesizing module 'AFE_DP_Pipeline' [c:/v22.2/FEB_fabric/feb_arty.tmp/feb_fabric_v1_0_project/FEB_fabric_v1_0_project.gen/sources_1/ip/AFE_DP_Pipeline/synth/AFE_DP_Pipeline.vhd:71]
@@ -126,7 +132,7 @@ INFO: [Synth 8-3491] module 'blk_mem_gen_v8_4_5' declared at 'c:/v22.2/FEB_fabri
 INFO: [Synth 8-256] done synthesizing module 'AFE_DP_Pipeline' (0#1) [c:/v22.2/FEB_fabric/feb_arty.tmp/feb_fabric_v1_0_project/FEB_fabric_v1_0_project.gen/sources_1/ip/AFE_DP_Pipeline/synth/AFE_DP_Pipeline.vhd:71]
 INFO: [Synth 8-3491] module 'AFE_DP_Pipeline' declared at 'c:/v22.2/FEB_fabric/feb_arty.tmp/feb_fabric_v1_0_project/FEB_fabric_v1_0_project.gen/sources_1/ip/AFE_DP_Pipeline/synth/AFE_DP_Pipeline.vhd:59' bound to instance 'Pipeline' of component 'AFE_DP_Pipeline' [C:/v22.2/FEB_fabric/FEB_fabric.srcs/sources_1/new/AFE_Pipeline.vhd:45]
 INFO: [Synth 8-256] done synthesizing module 'AFE_Pipeline' (0#1) [C:/v22.2/FEB_fabric/FEB_fabric.srcs/sources_1/new/AFE_Pipeline.vhd:26]
-INFO: [Synth 8-3491] module 'DPRAM_1Kx16' declared at 'c:/v22.2/FEB_fabric/feb_arty.tmp/feb_fabric_v1_0_project/FEB_fabric_v1_0_project.gen/sources_1/ip/DPRAM_1Kx16/synth/DPRAM_1Kx16.vhd:59' bound to instance 'AFEBuff' of component 'DPRAM_1Kx16' [C:/v22.2/FEB_fabric/FEB_fabric.srcs/sources_1/new/AFE_DataPath.vhd:317]
+INFO: [Synth 8-3491] module 'DPRAM_1Kx16' declared at 'c:/v22.2/FEB_fabric/feb_arty.tmp/feb_fabric_v1_0_project/FEB_fabric_v1_0_project.gen/sources_1/ip/DPRAM_1Kx16/synth/DPRAM_1Kx16.vhd:59' bound to instance 'AFEBuff' of component 'DPRAM_1Kx16' [C:/v22.2/FEB_fabric/FEB_fabric.srcs/sources_1/new/AFE_DataPath.vhd:318]
 INFO: [Synth 8-638] synthesizing module 'DPRAM_1Kx16' [c:/v22.2/FEB_fabric/feb_arty.tmp/feb_fabric_v1_0_project/FEB_fabric_v1_0_project.gen/sources_1/ip/DPRAM_1Kx16/synth/DPRAM_1Kx16.vhd:71]
 	Parameter C_FAMILY bound to: spartan7 - type: string 
 	Parameter C_XDEVICEFAMILY bound to: spartan7 - type: string 
@@ -205,29 +211,29 @@ INFO: [Synth 8-638] synthesizing module 'DPRAM_1Kx16' [c:/v22.2/FEB_fabric/feb_a
 	Parameter C_EST_POWER_SUMMARY bound to: Estimated Power for IP     :     2.87285 mW - type: string 
 INFO: [Synth 8-3491] module 'blk_mem_gen_v8_4_5' declared at 'c:/v22.2/FEB_fabric/feb_arty.tmp/feb_fabric_v1_0_project/FEB_fabric_v1_0_project.gen/sources_1/ip/SCFIFO_1Kx16/hdl/blk_mem_gen_v8_4_vhsyn_rfs.vhd:195321' bound to instance 'U0' of component 'blk_mem_gen_v8_4_5' [c:/v22.2/FEB_fabric/feb_arty.tmp/feb_fabric_v1_0_project/FEB_fabric_v1_0_project.gen/sources_1/ip/DPRAM_1Kx16/synth/DPRAM_1Kx16.vhd:239]
 INFO: [Synth 8-256] done synthesizing module 'DPRAM_1Kx16' (0#1) [c:/v22.2/FEB_fabric/feb_arty.tmp/feb_fabric_v1_0_project/FEB_fabric_v1_0_project.gen/sources_1/ip/DPRAM_1Kx16/synth/DPRAM_1Kx16.vhd:71]
-INFO: [Synth 8-3491] module 'DPRAM_1Kx16' declared at 'c:/v22.2/FEB_fabric/feb_arty.tmp/feb_fabric_v1_0_project/FEB_fabric_v1_0_project.gen/sources_1/ip/DPRAM_1Kx16/synth/DPRAM_1Kx16.vhd:59' bound to instance 'AFEBuff' of component 'DPRAM_1Kx16' [C:/v22.2/FEB_fabric/FEB_fabric.srcs/sources_1/new/AFE_DataPath.vhd:317]
-INFO: [Synth 8-3491] module 'DPRAM_1Kx16' declared at 'c:/v22.2/FEB_fabric/feb_arty.tmp/feb_fabric_v1_0_project/FEB_fabric_v1_0_project.gen/sources_1/ip/DPRAM_1Kx16/synth/DPRAM_1Kx16.vhd:59' bound to instance 'AFEBuff' of component 'DPRAM_1Kx16' [C:/v22.2/FEB_fabric/FEB_fabric.srcs/sources_1/new/AFE_DataPath.vhd:317]
-INFO: [Synth 8-3491] module 'DPRAM_1Kx16' declared at 'c:/v22.2/FEB_fabric/feb_arty.tmp/feb_fabric_v1_0_project/FEB_fabric_v1_0_project.gen/sources_1/ip/DPRAM_1Kx16/synth/DPRAM_1Kx16.vhd:59' bound to instance 'AFEBuff' of component 'DPRAM_1Kx16' [C:/v22.2/FEB_fabric/FEB_fabric.srcs/sources_1/new/AFE_DataPath.vhd:317]
-INFO: [Synth 8-3491] module 'DPRAM_1Kx16' declared at 'c:/v22.2/FEB_fabric/feb_arty.tmp/feb_fabric_v1_0_project/FEB_fabric_v1_0_project.gen/sources_1/ip/DPRAM_1Kx16/synth/DPRAM_1Kx16.vhd:59' bound to instance 'AFEBuff' of component 'DPRAM_1Kx16' [C:/v22.2/FEB_fabric/FEB_fabric.srcs/sources_1/new/AFE_DataPath.vhd:317]
-INFO: [Synth 8-3491] module 'DPRAM_1Kx16' declared at 'c:/v22.2/FEB_fabric/feb_arty.tmp/feb_fabric_v1_0_project/FEB_fabric_v1_0_project.gen/sources_1/ip/DPRAM_1Kx16/synth/DPRAM_1Kx16.vhd:59' bound to instance 'AFEBuff' of component 'DPRAM_1Kx16' [C:/v22.2/FEB_fabric/FEB_fabric.srcs/sources_1/new/AFE_DataPath.vhd:317]
-INFO: [Synth 8-3491] module 'DPRAM_1Kx16' declared at 'c:/v22.2/FEB_fabric/feb_arty.tmp/feb_fabric_v1_0_project/FEB_fabric_v1_0_project.gen/sources_1/ip/DPRAM_1Kx16/synth/DPRAM_1Kx16.vhd:59' bound to instance 'AFEBuff' of component 'DPRAM_1Kx16' [C:/v22.2/FEB_fabric/FEB_fabric.srcs/sources_1/new/AFE_DataPath.vhd:317]
-INFO: [Synth 8-3491] module 'DPRAM_1Kx16' declared at 'c:/v22.2/FEB_fabric/feb_arty.tmp/feb_fabric_v1_0_project/FEB_fabric_v1_0_project.gen/sources_1/ip/DPRAM_1Kx16/synth/DPRAM_1Kx16.vhd:59' bound to instance 'AFEBuff' of component 'DPRAM_1Kx16' [C:/v22.2/FEB_fabric/FEB_fabric.srcs/sources_1/new/AFE_DataPath.vhd:317]
-INFO: [Synth 8-3491] module 'DPRAM_1Kx16' declared at 'c:/v22.2/FEB_fabric/feb_arty.tmp/feb_fabric_v1_0_project/FEB_fabric_v1_0_project.gen/sources_1/ip/DPRAM_1Kx16/synth/DPRAM_1Kx16.vhd:59' bound to instance 'AFEBuff' of component 'DPRAM_1Kx16' [C:/v22.2/FEB_fabric/FEB_fabric.srcs/sources_1/new/AFE_DataPath.vhd:317]
-INFO: [Synth 8-3491] module 'DPRAM_1Kx16' declared at 'c:/v22.2/FEB_fabric/feb_arty.tmp/feb_fabric_v1_0_project/FEB_fabric_v1_0_project.gen/sources_1/ip/DPRAM_1Kx16/synth/DPRAM_1Kx16.vhd:59' bound to instance 'AFEBuff' of component 'DPRAM_1Kx16' [C:/v22.2/FEB_fabric/FEB_fabric.srcs/sources_1/new/AFE_DataPath.vhd:317]
-INFO: [Synth 8-3491] module 'DPRAM_1Kx16' declared at 'c:/v22.2/FEB_fabric/feb_arty.tmp/feb_fabric_v1_0_project/FEB_fabric_v1_0_project.gen/sources_1/ip/DPRAM_1Kx16/synth/DPRAM_1Kx16.vhd:59' bound to instance 'AFEBuff' of component 'DPRAM_1Kx16' [C:/v22.2/FEB_fabric/FEB_fabric.srcs/sources_1/new/AFE_DataPath.vhd:317]
-INFO: [Synth 8-3491] module 'DPRAM_1Kx16' declared at 'c:/v22.2/FEB_fabric/feb_arty.tmp/feb_fabric_v1_0_project/FEB_fabric_v1_0_project.gen/sources_1/ip/DPRAM_1Kx16/synth/DPRAM_1Kx16.vhd:59' bound to instance 'AFEBuff' of component 'DPRAM_1Kx16' [C:/v22.2/FEB_fabric/FEB_fabric.srcs/sources_1/new/AFE_DataPath.vhd:317]
-INFO: [Synth 8-3491] module 'DPRAM_1Kx16' declared at 'c:/v22.2/FEB_fabric/feb_arty.tmp/feb_fabric_v1_0_project/FEB_fabric_v1_0_project.gen/sources_1/ip/DPRAM_1Kx16/synth/DPRAM_1Kx16.vhd:59' bound to instance 'AFEBuff' of component 'DPRAM_1Kx16' [C:/v22.2/FEB_fabric/FEB_fabric.srcs/sources_1/new/AFE_DataPath.vhd:317]
-INFO: [Synth 8-3491] module 'DPRAM_1Kx16' declared at 'c:/v22.2/FEB_fabric/feb_arty.tmp/feb_fabric_v1_0_project/FEB_fabric_v1_0_project.gen/sources_1/ip/DPRAM_1Kx16/synth/DPRAM_1Kx16.vhd:59' bound to instance 'AFEBuff' of component 'DPRAM_1Kx16' [C:/v22.2/FEB_fabric/FEB_fabric.srcs/sources_1/new/AFE_DataPath.vhd:317]
-INFO: [Synth 8-3491] module 'DPRAM_1Kx16' declared at 'c:/v22.2/FEB_fabric/feb_arty.tmp/feb_fabric_v1_0_project/FEB_fabric_v1_0_project.gen/sources_1/ip/DPRAM_1Kx16/synth/DPRAM_1Kx16.vhd:59' bound to instance 'AFEBuff' of component 'DPRAM_1Kx16' [C:/v22.2/FEB_fabric/FEB_fabric.srcs/sources_1/new/AFE_DataPath.vhd:317]
-INFO: [Synth 8-3491] module 'DPRAM_1Kx16' declared at 'c:/v22.2/FEB_fabric/feb_arty.tmp/feb_fabric_v1_0_project/FEB_fabric_v1_0_project.gen/sources_1/ip/DPRAM_1Kx16/synth/DPRAM_1Kx16.vhd:59' bound to instance 'AFEBuff' of component 'DPRAM_1Kx16' [C:/v22.2/FEB_fabric/FEB_fabric.srcs/sources_1/new/AFE_DataPath.vhd:317]
+INFO: [Synth 8-3491] module 'DPRAM_1Kx16' declared at 'c:/v22.2/FEB_fabric/feb_arty.tmp/feb_fabric_v1_0_project/FEB_fabric_v1_0_project.gen/sources_1/ip/DPRAM_1Kx16/synth/DPRAM_1Kx16.vhd:59' bound to instance 'AFEBuff' of component 'DPRAM_1Kx16' [C:/v22.2/FEB_fabric/FEB_fabric.srcs/sources_1/new/AFE_DataPath.vhd:318]
+INFO: [Synth 8-3491] module 'DPRAM_1Kx16' declared at 'c:/v22.2/FEB_fabric/feb_arty.tmp/feb_fabric_v1_0_project/FEB_fabric_v1_0_project.gen/sources_1/ip/DPRAM_1Kx16/synth/DPRAM_1Kx16.vhd:59' bound to instance 'AFEBuff' of component 'DPRAM_1Kx16' [C:/v22.2/FEB_fabric/FEB_fabric.srcs/sources_1/new/AFE_DataPath.vhd:318]
+INFO: [Synth 8-3491] module 'DPRAM_1Kx16' declared at 'c:/v22.2/FEB_fabric/feb_arty.tmp/feb_fabric_v1_0_project/FEB_fabric_v1_0_project.gen/sources_1/ip/DPRAM_1Kx16/synth/DPRAM_1Kx16.vhd:59' bound to instance 'AFEBuff' of component 'DPRAM_1Kx16' [C:/v22.2/FEB_fabric/FEB_fabric.srcs/sources_1/new/AFE_DataPath.vhd:318]
+INFO: [Synth 8-3491] module 'DPRAM_1Kx16' declared at 'c:/v22.2/FEB_fabric/feb_arty.tmp/feb_fabric_v1_0_project/FEB_fabric_v1_0_project.gen/sources_1/ip/DPRAM_1Kx16/synth/DPRAM_1Kx16.vhd:59' bound to instance 'AFEBuff' of component 'DPRAM_1Kx16' [C:/v22.2/FEB_fabric/FEB_fabric.srcs/sources_1/new/AFE_DataPath.vhd:318]
+INFO: [Synth 8-3491] module 'DPRAM_1Kx16' declared at 'c:/v22.2/FEB_fabric/feb_arty.tmp/feb_fabric_v1_0_project/FEB_fabric_v1_0_project.gen/sources_1/ip/DPRAM_1Kx16/synth/DPRAM_1Kx16.vhd:59' bound to instance 'AFEBuff' of component 'DPRAM_1Kx16' [C:/v22.2/FEB_fabric/FEB_fabric.srcs/sources_1/new/AFE_DataPath.vhd:318]
+INFO: [Synth 8-3491] module 'DPRAM_1Kx16' declared at 'c:/v22.2/FEB_fabric/feb_arty.tmp/feb_fabric_v1_0_project/FEB_fabric_v1_0_project.gen/sources_1/ip/DPRAM_1Kx16/synth/DPRAM_1Kx16.vhd:59' bound to instance 'AFEBuff' of component 'DPRAM_1Kx16' [C:/v22.2/FEB_fabric/FEB_fabric.srcs/sources_1/new/AFE_DataPath.vhd:318]
+INFO: [Synth 8-3491] module 'DPRAM_1Kx16' declared at 'c:/v22.2/FEB_fabric/feb_arty.tmp/feb_fabric_v1_0_project/FEB_fabric_v1_0_project.gen/sources_1/ip/DPRAM_1Kx16/synth/DPRAM_1Kx16.vhd:59' bound to instance 'AFEBuff' of component 'DPRAM_1Kx16' [C:/v22.2/FEB_fabric/FEB_fabric.srcs/sources_1/new/AFE_DataPath.vhd:318]
+INFO: [Synth 8-3491] module 'DPRAM_1Kx16' declared at 'c:/v22.2/FEB_fabric/feb_arty.tmp/feb_fabric_v1_0_project/FEB_fabric_v1_0_project.gen/sources_1/ip/DPRAM_1Kx16/synth/DPRAM_1Kx16.vhd:59' bound to instance 'AFEBuff' of component 'DPRAM_1Kx16' [C:/v22.2/FEB_fabric/FEB_fabric.srcs/sources_1/new/AFE_DataPath.vhd:318]
+INFO: [Synth 8-3491] module 'DPRAM_1Kx16' declared at 'c:/v22.2/FEB_fabric/feb_arty.tmp/feb_fabric_v1_0_project/FEB_fabric_v1_0_project.gen/sources_1/ip/DPRAM_1Kx16/synth/DPRAM_1Kx16.vhd:59' bound to instance 'AFEBuff' of component 'DPRAM_1Kx16' [C:/v22.2/FEB_fabric/FEB_fabric.srcs/sources_1/new/AFE_DataPath.vhd:318]
+INFO: [Synth 8-3491] module 'DPRAM_1Kx16' declared at 'c:/v22.2/FEB_fabric/feb_arty.tmp/feb_fabric_v1_0_project/FEB_fabric_v1_0_project.gen/sources_1/ip/DPRAM_1Kx16/synth/DPRAM_1Kx16.vhd:59' bound to instance 'AFEBuff' of component 'DPRAM_1Kx16' [C:/v22.2/FEB_fabric/FEB_fabric.srcs/sources_1/new/AFE_DataPath.vhd:318]
+INFO: [Synth 8-3491] module 'DPRAM_1Kx16' declared at 'c:/v22.2/FEB_fabric/feb_arty.tmp/feb_fabric_v1_0_project/FEB_fabric_v1_0_project.gen/sources_1/ip/DPRAM_1Kx16/synth/DPRAM_1Kx16.vhd:59' bound to instance 'AFEBuff' of component 'DPRAM_1Kx16' [C:/v22.2/FEB_fabric/FEB_fabric.srcs/sources_1/new/AFE_DataPath.vhd:318]
+INFO: [Synth 8-3491] module 'DPRAM_1Kx16' declared at 'c:/v22.2/FEB_fabric/feb_arty.tmp/feb_fabric_v1_0_project/FEB_fabric_v1_0_project.gen/sources_1/ip/DPRAM_1Kx16/synth/DPRAM_1Kx16.vhd:59' bound to instance 'AFEBuff' of component 'DPRAM_1Kx16' [C:/v22.2/FEB_fabric/FEB_fabric.srcs/sources_1/new/AFE_DataPath.vhd:318]
+INFO: [Synth 8-3491] module 'DPRAM_1Kx16' declared at 'c:/v22.2/FEB_fabric/feb_arty.tmp/feb_fabric_v1_0_project/FEB_fabric_v1_0_project.gen/sources_1/ip/DPRAM_1Kx16/synth/DPRAM_1Kx16.vhd:59' bound to instance 'AFEBuff' of component 'DPRAM_1Kx16' [C:/v22.2/FEB_fabric/FEB_fabric.srcs/sources_1/new/AFE_DataPath.vhd:318]
+INFO: [Synth 8-3491] module 'DPRAM_1Kx16' declared at 'c:/v22.2/FEB_fabric/feb_arty.tmp/feb_fabric_v1_0_project/FEB_fabric_v1_0_project.gen/sources_1/ip/DPRAM_1Kx16/synth/DPRAM_1Kx16.vhd:59' bound to instance 'AFEBuff' of component 'DPRAM_1Kx16' [C:/v22.2/FEB_fabric/FEB_fabric.srcs/sources_1/new/AFE_DataPath.vhd:318]
+INFO: [Synth 8-3491] module 'DPRAM_1Kx16' declared at 'c:/v22.2/FEB_fabric/feb_arty.tmp/feb_fabric_v1_0_project/FEB_fabric_v1_0_project.gen/sources_1/ip/DPRAM_1Kx16/synth/DPRAM_1Kx16.vhd:59' bound to instance 'AFEBuff' of component 'DPRAM_1Kx16' [C:/v22.2/FEB_fabric/FEB_fabric.srcs/sources_1/new/AFE_DataPath.vhd:318]
 INFO: [Synth 8-256] done synthesizing module 'AFE_DataPath' (0#1) [C:/v22.2/FEB_fabric/FEB_fabric.srcs/sources_1/new/AFE_DataPath.vhd:73]
-INFO: [Synth 8-3491] module 'Trigger' declared at 'C:/v22.2/FEB_fabric/FEB_fabric.srcs/sources_1/new/Trigger.vhd:10' bound to instance 'Trigger_logic' of component 'Trigger' [C:/v22.2/FEB_fabric/FEB_fabric.srcs/sources_1/new/FEB_top_ARTY.vhd:342]
+INFO: [Synth 8-3491] module 'Trigger' declared at 'C:/v22.2/FEB_fabric/FEB_fabric.srcs/sources_1/new/Trigger.vhd:10' bound to instance 'Trigger_logic' of component 'Trigger' [C:/v22.2/FEB_fabric/FEB_fabric.srcs/sources_1/new/FEB_top_ARTY.vhd:343]
 INFO: [Synth 8-638] synthesizing module 'Trigger' [C:/v22.2/FEB_fabric/FEB_fabric.srcs/sources_1/new/Trigger.vhd:42]
 INFO: [Synth 8-256] done synthesizing module 'Trigger' (0#1) [C:/v22.2/FEB_fabric/FEB_fabric.srcs/sources_1/new/Trigger.vhd:42]
-INFO: [Synth 8-3491] module 'Exclude_EVB' declared at 'C:/v22.2/FEB_fabric/FEB_fabric.srcs/sources_1/new/Exclude_EVB.vhd:10' bound to instance 'data_back_AFE' of component 'Exclude_EVB' [C:/v22.2/FEB_fabric/FEB_fabric.srcs/sources_1/new/FEB_top_ARTY.vhd:375]
+INFO: [Synth 8-3491] module 'Exclude_EVB' declared at 'C:/v22.2/FEB_fabric/FEB_fabric.srcs/sources_1/new/Exclude_EVB.vhd:10' bound to instance 'data_back_AFE' of component 'Exclude_EVB' [C:/v22.2/FEB_fabric/FEB_fabric.srcs/sources_1/new/FEB_top_ARTY.vhd:376]
 INFO: [Synth 8-638] synthesizing module 'Exclude_EVB' [C:/v22.2/FEB_fabric/FEB_fabric.srcs/sources_1/new/Exclude_EVB.vhd:34]
 INFO: [Synth 8-256] done synthesizing module 'Exclude_EVB' (0#1) [C:/v22.2/FEB_fabric/FEB_fabric.srcs/sources_1/new/Exclude_EVB.vhd:34]
-INFO: [Synth 8-3491] module 'EventBuilder' declared at 'C:/v22.2/FEB_fabric/FEB_fabric.srcs/sources_1/new/EventBuilder.vhd:26' bound to instance 'EventBuilder_logic' of component 'EventBuilder' [C:/v22.2/FEB_fabric/FEB_fabric.srcs/sources_1/new/FEB_top_ARTY.vhd:398]
+INFO: [Synth 8-3491] module 'EventBuilder' declared at 'C:/v22.2/FEB_fabric/FEB_fabric.srcs/sources_1/new/EventBuilder.vhd:26' bound to instance 'EventBuilder_logic' of component 'EventBuilder' [C:/v22.2/FEB_fabric/FEB_fabric.srcs/sources_1/new/FEB_top_ARTY.vhd:399]
 INFO: [Synth 8-638] synthesizing module 'EventBuilder' [C:/v22.2/FEB_fabric/FEB_fabric.srcs/sources_1/new/EventBuilder.vhd:48]
 WARNING: [Synth 8-5640] Port 'wr_rst_busy' is missing in component declaration [C:/v22.2/FEB_fabric/FEB_fabric.srcs/sources_1/new/Proj_Def.vhd:756]
 WARNING: [Synth 8-5640] Port 'rd_rst_busy' is missing in component declaration [C:/v22.2/FEB_fabric/FEB_fabric.srcs/sources_1/new/Proj_Def.vhd:756]
@@ -651,7 +657,7 @@ INFO: [Synth 8-256] done synthesizing module 'EventBuilder' (0#1) [C:/v22.2/FEB_
 	Parameter DATA_WIDTH bound to: 16 - type: integer 
 	Parameter DDR3L_ADDR bound to: 14 - type: integer 
 	Parameter APP_ADDR bound to: 28 - type: integer 
-INFO: [Synth 8-3491] module 'DDR_Interface' declared at 'C:/v22.2/FEB_fabric/FEB_fabric.srcs/sources_1/new/DDR_Interface .vhd:26' bound to instance 'DDR_Interface_inst' of component 'DDR_Interface' [C:/v22.2/FEB_fabric/FEB_fabric.srcs/sources_1/new/FEB_top_ARTY.vhd:443]
+INFO: [Synth 8-3491] module 'DDR_Interface' declared at 'C:/v22.2/FEB_fabric/FEB_fabric.srcs/sources_1/new/DDR_Interface .vhd:26' bound to instance 'DDR_Interface_inst' of component 'DDR_Interface' [C:/v22.2/FEB_fabric/FEB_fabric.srcs/sources_1/new/FEB_top_ARTY.vhd:444]
 INFO: [Synth 8-638] synthesizing module 'DDR_Interface' [C:/v22.2/FEB_fabric/FEB_fabric.srcs/sources_1/new/DDR_Interface .vhd:80]
 	Parameter DATA_WIDTH bound to: 16 - type: integer 
 	Parameter DDR3L_ADDR bound to: 14 - type: integer 
@@ -662,47 +668,29 @@ INFO: [Synth 8-3491] module 'SCFIFO_32x256' declared at 'c:/v22.2/FEB_fabric/feb
 WARNING: [Synth 8-5640] Port 'wr_rst_busy' is missing in component declaration [C:/v22.2/FEB_fabric/FEB_fabric.srcs/sources_1/new/Proj_Def.vhd:765]
 WARNING: [Synth 8-5640] Port 'rd_rst_busy' is missing in component declaration [C:/v22.2/FEB_fabric/FEB_fabric.srcs/sources_1/new/Proj_Def.vhd:765]
 INFO: [Synth 8-3491] module 'SCFIFO_1Kx16' declared at 'c:/v22.2/FEB_fabric/feb_arty.tmp/feb_fabric_v1_0_project/FEB_fabric_v1_0_project.gen/sources_1/ip/SCFIFO_1Kx16/synth/SCFIFO_1Kx16.vhd:59' bound to instance 'DDRRdBuff' of component 'SCFIFO_1kx16' [C:/v22.2/FEB_fabric/FEB_fabric.srcs/sources_1/new/DDR_Interface .vhd:167]
-INFO: [Synth 8-3491] module 'DDR3LController' declared at 'C:/v22.2/FEB_fabric/FEB_fabric.runs/synth_1/.Xil/Vivado-725884-CD-135239/realtime/DDR3LController_stub.vhdl:5' bound to instance 'DDR_Controller' of component 'DDR3LController' [C:/v22.2/FEB_fabric/FEB_fabric.srcs/sources_1/new/DDR_Interface .vhd:201]
-INFO: [Synth 8-638] synthesizing module 'DDR3LController' [C:/v22.2/FEB_fabric/FEB_fabric.runs/synth_1/.Xil/Vivado-725884-CD-135239/realtime/DDR3LController_stub.vhdl:51]
+INFO: [Synth 8-3491] module 'DDR3LController' declared at 'C:/v22.2/FEB_fabric/FEB_fabric.runs/synth_1/.Xil/Vivado-22688-CD-135239/realtime/DDR3LController_stub.vhdl:5' bound to instance 'DDR_Controller' of component 'DDR3LController' [C:/v22.2/FEB_fabric/FEB_fabric.srcs/sources_1/new/DDR_Interface .vhd:201]
+INFO: [Synth 8-638] synthesizing module 'DDR3LController' [C:/v22.2/FEB_fabric/FEB_fabric.runs/synth_1/.Xil/Vivado-22688-CD-135239/realtime/DDR3LController_stub.vhdl:51]
 INFO: [Synth 8-256] done synthesizing module 'DDR_Interface' (0#1) [C:/v22.2/FEB_fabric/FEB_fabric.srcs/sources_1/new/DDR_Interface .vhd:80]
 INFO: [Synth 8-256] done synthesizing module 'FEB_fabric' (0#1) [C:/v22.2/FEB_fabric/FEB_fabric.srcs/sources_1/new/FEB_top_ARTY.vhd:95]
-WARNING: [Synth 8-3848] Net iuCD in module/entity AFE_Interface_Sim does not have driver. [C:/v22.2/FEB_fabric/FEB_fabric.srcs/sources_1/new/AFE_Interface_Sim_easy.vhd:27]
-INFO: [Synth 8-6071] Mark debug on the nets applies keep_hierarchy on instance 'AFE_DataPath_inst'. This will prevent further optimization [C:/v22.2/FEB_fabric/FEB_fabric.srcs/sources_1/new/FEB_top_ARTY.vhd:297]
-INFO: [Synth 8-6071] Mark debug on the nets applies keep_hierarchy on instance 'Gen_Two_AFEs[0].Gen_Eight_Chans[0].AFEBuff'. This will prevent further optimization [C:/v22.2/FEB_fabric/FEB_fabric.srcs/sources_1/new/AFE_DataPath.vhd:317]
-INFO: [Synth 8-6071] Mark debug on the nets applies keep_hierarchy on instance 'Gen_Two_AFEs[0].Gen_Eight_Chans[1].AFEBuff'. This will prevent further optimization [C:/v22.2/FEB_fabric/FEB_fabric.srcs/sources_1/new/AFE_DataPath.vhd:317]
-INFO: [Synth 8-6071] Mark debug on the nets applies keep_hierarchy on instance 'Gen_Two_AFEs[0].Gen_Eight_Chans[2].AFEBuff'. This will prevent further optimization [C:/v22.2/FEB_fabric/FEB_fabric.srcs/sources_1/new/AFE_DataPath.vhd:317]
-INFO: [Synth 8-6071] Mark debug on the nets applies keep_hierarchy on instance 'Gen_Two_AFEs[0].Gen_Eight_Chans[3].AFEBuff'. This will prevent further optimization [C:/v22.2/FEB_fabric/FEB_fabric.srcs/sources_1/new/AFE_DataPath.vhd:317]
-INFO: [Synth 8-6071] Mark debug on the nets applies keep_hierarchy on instance 'Gen_Two_AFEs[0].Gen_Eight_Chans[4].AFEBuff'. This will prevent further optimization [C:/v22.2/FEB_fabric/FEB_fabric.srcs/sources_1/new/AFE_DataPath.vhd:317]
-INFO: [Synth 8-6071] Mark debug on the nets applies keep_hierarchy on instance 'Gen_Two_AFEs[0].Gen_Eight_Chans[5].AFEBuff'. This will prevent further optimization [C:/v22.2/FEB_fabric/FEB_fabric.srcs/sources_1/new/AFE_DataPath.vhd:317]
-INFO: [Synth 8-6071] Mark debug on the nets applies keep_hierarchy on instance 'Gen_Two_AFEs[0].Gen_Eight_Chans[6].AFEBuff'. This will prevent further optimization [C:/v22.2/FEB_fabric/FEB_fabric.srcs/sources_1/new/AFE_DataPath.vhd:317]
-INFO: [Synth 8-6071] Mark debug on the nets applies keep_hierarchy on instance 'Gen_Two_AFEs[0].Gen_Eight_Chans[7].AFEBuff'. This will prevent further optimization [C:/v22.2/FEB_fabric/FEB_fabric.srcs/sources_1/new/AFE_DataPath.vhd:317]
-INFO: [Synth 8-6071] Mark debug on the nets applies keep_hierarchy on instance 'Gen_Two_AFEs[1].Gen_Eight_Chans[0].AFEBuff'. This will prevent further optimization [C:/v22.2/FEB_fabric/FEB_fabric.srcs/sources_1/new/AFE_DataPath.vhd:317]
-INFO: [Synth 8-6071] Mark debug on the nets applies keep_hierarchy on instance 'Gen_Two_AFEs[1].Gen_Eight_Chans[1].AFEBuff'. This will prevent further optimization [C:/v22.2/FEB_fabric/FEB_fabric.srcs/sources_1/new/AFE_DataPath.vhd:317]
-INFO: [Synth 8-6071] Mark debug on the nets applies keep_hierarchy on instance 'Gen_Two_AFEs[1].Gen_Eight_Chans[2].AFEBuff'. This will prevent further optimization [C:/v22.2/FEB_fabric/FEB_fabric.srcs/sources_1/new/AFE_DataPath.vhd:317]
-INFO: [Synth 8-6071] Mark debug on the nets applies keep_hierarchy on instance 'Gen_Two_AFEs[1].Gen_Eight_Chans[3].AFEBuff'. This will prevent further optimization [C:/v22.2/FEB_fabric/FEB_fabric.srcs/sources_1/new/AFE_DataPath.vhd:317]
-INFO: [Synth 8-6071] Mark debug on the nets applies keep_hierarchy on instance 'Gen_Two_AFEs[1].Gen_Eight_Chans[4].AFEBuff'. This will prevent further optimization [C:/v22.2/FEB_fabric/FEB_fabric.srcs/sources_1/new/AFE_DataPath.vhd:317]
-INFO: [Synth 8-6071] Mark debug on the nets applies keep_hierarchy on instance 'Gen_Two_AFEs[1].Gen_Eight_Chans[5].AFEBuff'. This will prevent further optimization [C:/v22.2/FEB_fabric/FEB_fabric.srcs/sources_1/new/AFE_DataPath.vhd:317]
-INFO: [Synth 8-6071] Mark debug on the nets applies keep_hierarchy on instance 'Gen_Two_AFEs[1].Gen_Eight_Chans[6].AFEBuff'. This will prevent further optimization [C:/v22.2/FEB_fabric/FEB_fabric.srcs/sources_1/new/AFE_DataPath.vhd:317]
-INFO: [Synth 8-6071] Mark debug on the nets applies keep_hierarchy on instance 'Gen_Two_AFEs[1].Gen_Eight_Chans[7].AFEBuff'. This will prevent further optimization [C:/v22.2/FEB_fabric/FEB_fabric.srcs/sources_1/new/AFE_DataPath.vhd:317]
-INFO: [Synth 8-6071] Mark debug on the nets applies keep_hierarchy on instance 'AFE_Pipeline_inst'. This will prevent further optimization [C:/v22.2/FEB_fabric/FEB_fabric.srcs/sources_1/new/AFE_DataPath.vhd:161]
-WARNING: [Synth 8-6014] Unused sequential element Gen_Two_AFEs[0].Gen_Eight_Chans[0].In_Seq_Stat_reg[0] was removed.  [C:/v22.2/FEB_fabric/FEB_fabric.srcs/sources_1/new/AFE_DataPath.vhd:339]
-WARNING: [Synth 8-6014] Unused sequential element Gen_Two_AFEs[0].Gen_Eight_Chans[1].In_Seq_Stat_reg[0] was removed.  [C:/v22.2/FEB_fabric/FEB_fabric.srcs/sources_1/new/AFE_DataPath.vhd:339]
-WARNING: [Synth 8-6014] Unused sequential element Gen_Two_AFEs[0].Gen_Eight_Chans[2].In_Seq_Stat_reg[0] was removed.  [C:/v22.2/FEB_fabric/FEB_fabric.srcs/sources_1/new/AFE_DataPath.vhd:339]
-WARNING: [Synth 8-6014] Unused sequential element Gen_Two_AFEs[0].Gen_Eight_Chans[3].In_Seq_Stat_reg[0] was removed.  [C:/v22.2/FEB_fabric/FEB_fabric.srcs/sources_1/new/AFE_DataPath.vhd:339]
-WARNING: [Synth 8-6014] Unused sequential element Gen_Two_AFEs[0].Gen_Eight_Chans[4].In_Seq_Stat_reg[0] was removed.  [C:/v22.2/FEB_fabric/FEB_fabric.srcs/sources_1/new/AFE_DataPath.vhd:339]
-WARNING: [Synth 8-6014] Unused sequential element Gen_Two_AFEs[0].Gen_Eight_Chans[5].In_Seq_Stat_reg[0] was removed.  [C:/v22.2/FEB_fabric/FEB_fabric.srcs/sources_1/new/AFE_DataPath.vhd:339]
-WARNING: [Synth 8-6014] Unused sequential element Gen_Two_AFEs[0].Gen_Eight_Chans[6].In_Seq_Stat_reg[0] was removed.  [C:/v22.2/FEB_fabric/FEB_fabric.srcs/sources_1/new/AFE_DataPath.vhd:339]
-WARNING: [Synth 8-6014] Unused sequential element Gen_Two_AFEs[0].Gen_Eight_Chans[7].In_Seq_Stat_reg[0] was removed.  [C:/v22.2/FEB_fabric/FEB_fabric.srcs/sources_1/new/AFE_DataPath.vhd:339]
-WARNING: [Synth 8-6014] Unused sequential element Gen_Two_AFEs[1].Gen_Eight_Chans[0].In_Seq_Stat_reg[1] was removed.  [C:/v22.2/FEB_fabric/FEB_fabric.srcs/sources_1/new/AFE_DataPath.vhd:339]
-WARNING: [Synth 8-6014] Unused sequential element Gen_Two_AFEs[1].Gen_Eight_Chans[1].In_Seq_Stat_reg[1] was removed.  [C:/v22.2/FEB_fabric/FEB_fabric.srcs/sources_1/new/AFE_DataPath.vhd:339]
-WARNING: [Synth 8-6014] Unused sequential element Gen_Two_AFEs[1].Gen_Eight_Chans[2].In_Seq_Stat_reg[1] was removed.  [C:/v22.2/FEB_fabric/FEB_fabric.srcs/sources_1/new/AFE_DataPath.vhd:339]
-WARNING: [Synth 8-6014] Unused sequential element Gen_Two_AFEs[1].Gen_Eight_Chans[3].In_Seq_Stat_reg[1] was removed.  [C:/v22.2/FEB_fabric/FEB_fabric.srcs/sources_1/new/AFE_DataPath.vhd:339]
-WARNING: [Synth 8-6014] Unused sequential element Gen_Two_AFEs[1].Gen_Eight_Chans[4].In_Seq_Stat_reg[1] was removed.  [C:/v22.2/FEB_fabric/FEB_fabric.srcs/sources_1/new/AFE_DataPath.vhd:339]
-WARNING: [Synth 8-6014] Unused sequential element Gen_Two_AFEs[1].Gen_Eight_Chans[5].In_Seq_Stat_reg[1] was removed.  [C:/v22.2/FEB_fabric/FEB_fabric.srcs/sources_1/new/AFE_DataPath.vhd:339]
-WARNING: [Synth 8-6014] Unused sequential element Gen_Two_AFEs[1].Gen_Eight_Chans[6].In_Seq_Stat_reg[1] was removed.  [C:/v22.2/FEB_fabric/FEB_fabric.srcs/sources_1/new/AFE_DataPath.vhd:339]
-WARNING: [Synth 8-6014] Unused sequential element Gen_Two_AFEs[1].Gen_Eight_Chans[7].In_Seq_Stat_reg[1] was removed.  [C:/v22.2/FEB_fabric/FEB_fabric.srcs/sources_1/new/AFE_DataPath.vhd:339]
-INFO: [Synth 8-6071] Mark debug on the nets applies keep_hierarchy on instance 'Trigger_logic'. This will prevent further optimization [C:/v22.2/FEB_fabric/FEB_fabric.srcs/sources_1/new/FEB_top_ARTY.vhd:342]
-WARNING: [Synth 8-6014] Unused sequential element RxIn_reg[Clr_Err] was removed.  [C:/v22.2/FEB_fabric/FEB_fabric.srcs/sources_1/new/Trigger.vhd:97]
+WARNING: [Synth 8-3848] Net iuCD in module/entity AFE_Interface_Sim does not have driver. [C:/v22.2/FEB_fabric/FEB_fabric.srcs/sources_1/new/AFE_Interface_Sim.vhd:27]
+WARNING: [Synth 8-6014] Unused sequential element Gen_Two_AFEs[0].Gen_Eight_Chans[0].In_Seq_Stat_reg[0] was removed.  [C:/v22.2/FEB_fabric/FEB_fabric.srcs/sources_1/new/AFE_DataPath.vhd:340]
+WARNING: [Synth 8-6014] Unused sequential element Gen_Two_AFEs[0].Gen_Eight_Chans[1].In_Seq_Stat_reg[0] was removed.  [C:/v22.2/FEB_fabric/FEB_fabric.srcs/sources_1/new/AFE_DataPath.vhd:340]
+WARNING: [Synth 8-6014] Unused sequential element Gen_Two_AFEs[0].Gen_Eight_Chans[2].In_Seq_Stat_reg[0] was removed.  [C:/v22.2/FEB_fabric/FEB_fabric.srcs/sources_1/new/AFE_DataPath.vhd:340]
+WARNING: [Synth 8-6014] Unused sequential element Gen_Two_AFEs[0].Gen_Eight_Chans[3].In_Seq_Stat_reg[0] was removed.  [C:/v22.2/FEB_fabric/FEB_fabric.srcs/sources_1/new/AFE_DataPath.vhd:340]
+WARNING: [Synth 8-6014] Unused sequential element Gen_Two_AFEs[0].Gen_Eight_Chans[4].In_Seq_Stat_reg[0] was removed.  [C:/v22.2/FEB_fabric/FEB_fabric.srcs/sources_1/new/AFE_DataPath.vhd:340]
+WARNING: [Synth 8-6014] Unused sequential element Gen_Two_AFEs[0].Gen_Eight_Chans[5].In_Seq_Stat_reg[0] was removed.  [C:/v22.2/FEB_fabric/FEB_fabric.srcs/sources_1/new/AFE_DataPath.vhd:340]
+WARNING: [Synth 8-6014] Unused sequential element Gen_Two_AFEs[0].Gen_Eight_Chans[6].In_Seq_Stat_reg[0] was removed.  [C:/v22.2/FEB_fabric/FEB_fabric.srcs/sources_1/new/AFE_DataPath.vhd:340]
+WARNING: [Synth 8-6014] Unused sequential element Gen_Two_AFEs[0].Gen_Eight_Chans[7].In_Seq_Stat_reg[0] was removed.  [C:/v22.2/FEB_fabric/FEB_fabric.srcs/sources_1/new/AFE_DataPath.vhd:340]
+WARNING: [Synth 8-6014] Unused sequential element Gen_Two_AFEs[1].Gen_Eight_Chans[0].In_Seq_Stat_reg[1] was removed.  [C:/v22.2/FEB_fabric/FEB_fabric.srcs/sources_1/new/AFE_DataPath.vhd:340]
+WARNING: [Synth 8-6014] Unused sequential element Gen_Two_AFEs[1].Gen_Eight_Chans[1].In_Seq_Stat_reg[1] was removed.  [C:/v22.2/FEB_fabric/FEB_fabric.srcs/sources_1/new/AFE_DataPath.vhd:340]
+WARNING: [Synth 8-6014] Unused sequential element Gen_Two_AFEs[1].Gen_Eight_Chans[2].In_Seq_Stat_reg[1] was removed.  [C:/v22.2/FEB_fabric/FEB_fabric.srcs/sources_1/new/AFE_DataPath.vhd:340]
+WARNING: [Synth 8-6014] Unused sequential element Gen_Two_AFEs[1].Gen_Eight_Chans[3].In_Seq_Stat_reg[1] was removed.  [C:/v22.2/FEB_fabric/FEB_fabric.srcs/sources_1/new/AFE_DataPath.vhd:340]
+WARNING: [Synth 8-6014] Unused sequential element Gen_Two_AFEs[1].Gen_Eight_Chans[4].In_Seq_Stat_reg[1] was removed.  [C:/v22.2/FEB_fabric/FEB_fabric.srcs/sources_1/new/AFE_DataPath.vhd:340]
+WARNING: [Synth 8-6014] Unused sequential element Gen_Two_AFEs[1].Gen_Eight_Chans[5].In_Seq_Stat_reg[1] was removed.  [C:/v22.2/FEB_fabric/FEB_fabric.srcs/sources_1/new/AFE_DataPath.vhd:340]
+WARNING: [Synth 8-6014] Unused sequential element Gen_Two_AFEs[1].Gen_Eight_Chans[6].In_Seq_Stat_reg[1] was removed.  [C:/v22.2/FEB_fabric/FEB_fabric.srcs/sources_1/new/AFE_DataPath.vhd:340]
+WARNING: [Synth 8-6014] Unused sequential element Gen_Two_AFEs[1].Gen_Eight_Chans[7].In_Seq_Stat_reg[1] was removed.  [C:/v22.2/FEB_fabric/FEB_fabric.srcs/sources_1/new/AFE_DataPath.vhd:340]
+INFO: [Synth 8-6071] Mark debug on the nets applies keep_hierarchy on instance 'Trigger_logic'. This will prevent further optimization [C:/v22.2/FEB_fabric/FEB_fabric.srcs/sources_1/new/FEB_top_ARTY.vhd:343]
+WARNING: [Synth 8-6014] Unused sequential element RxIn_reg[Clr_Err] was removed.  [C:/v22.2/FEB_fabric/FEB_fabric.srcs/sources_1/new/Trigger.vhd:108]
 WARNING: [Synth 8-3848] Net BufferRdAdd[0][1] in module/entity Exclude_EVB does not have driver. [C:/v22.2/FEB_fabric/FEB_fabric.srcs/sources_1/new/Exclude_EVB.vhd:17]
 WARNING: [Synth 8-3848] Net BufferRdAdd[0][2] in module/entity Exclude_EVB does not have driver. [C:/v22.2/FEB_fabric/FEB_fabric.srcs/sources_1/new/Exclude_EVB.vhd:17]
 WARNING: [Synth 8-3848] Net BufferRdAdd[0][3] in module/entity Exclude_EVB does not have driver. [C:/v22.2/FEB_fabric/FEB_fabric.srcs/sources_1/new/Exclude_EVB.vhd:17]
@@ -718,7 +706,7 @@ WARNING: [Synth 8-3848] Net BufferRdAdd[1][4] in module/entity Exclude_EVB does 
 WARNING: [Synth 8-3848] Net BufferRdAdd[1][5] in module/entity Exclude_EVB does not have driver. [C:/v22.2/FEB_fabric/FEB_fabric.srcs/sources_1/new/Exclude_EVB.vhd:17]
 WARNING: [Synth 8-3848] Net BufferRdAdd[1][6] in module/entity Exclude_EVB does not have driver. [C:/v22.2/FEB_fabric/FEB_fabric.srcs/sources_1/new/Exclude_EVB.vhd:17]
 WARNING: [Synth 8-3848] Net BufferRdAdd[1][7] in module/entity Exclude_EVB does not have driver. [C:/v22.2/FEB_fabric/FEB_fabric.srcs/sources_1/new/Exclude_EVB.vhd:17]
-INFO: [Synth 8-6071] Mark debug on the nets applies keep_hierarchy on instance 'EventBuilder_logic'. This will prevent further optimization [C:/v22.2/FEB_fabric/FEB_fabric.srcs/sources_1/new/FEB_top_ARTY.vhd:398]
+INFO: [Synth 8-6071] Mark debug on the nets applies keep_hierarchy on instance 'EventBuilder_logic'. This will prevent further optimization [C:/v22.2/FEB_fabric/FEB_fabric.srcs/sources_1/new/FEB_top_ARTY.vhd:399]
 INFO: [Synth 8-6071] Mark debug on the nets applies keep_hierarchy on instance 'EventBuff'. This will prevent further optimization [C:/v22.2/FEB_fabric/FEB_fabric.srcs/sources_1/new/EventBuilder.vhd:112]
 WARNING: [Synth 8-3848] Net uBunchRd in module/entity EventBuilder does not have driver. [C:/v22.2/FEB_fabric/FEB_fabric.srcs/sources_1/new/EventBuilder.vhd:57]
 WARNING: [Synth 8-3848] Net rstDDRRdBuff in module/entity DDR_Interface does not have driver. [C:/v22.2/FEB_fabric/FEB_fabric.srcs/sources_1/new/DDR_Interface .vhd:131]
@@ -828,18 +816,18 @@ WARNING: [Synth 8-7129] Port SAFETY_CKT_RD_RST in module rd_status_flags_ss is e
 WARNING: [Synth 8-7129] Port RD_PNTR_PLUS2[9] in module rd_status_flags_ss is either unconnected or has no load
 INFO: [Common 17-14] Message 'Synth 8-7129' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
 ---------------------------------------------------------------------------------
-Finished RTL Elaboration : Time (s): cpu = 00:00:50 ; elapsed = 00:00:51 . Memory (MB): peak = 2515.730 ; gain = 1045.590
+Finished RTL Elaboration : Time (s): cpu = 00:00:47 ; elapsed = 00:00:48 . Memory (MB): peak = 2566.484 ; gain = 1042.574
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:50 ; elapsed = 00:00:51 . Memory (MB): peak = 2515.730 ; gain = 1045.590
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:47 ; elapsed = 00:00:48 . Memory (MB): peak = 2566.484 ; gain = 1042.574
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:50 ; elapsed = 00:00:51 . Memory (MB): peak = 2515.730 ; gain = 1045.590
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:47 ; elapsed = 00:00:48 . Memory (MB): peak = 2566.484 ; gain = 1042.574
 ---------------------------------------------------------------------------------
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.380 . Memory (MB): peak = 2515.730 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.371 . Memory (MB): peak = 2566.484 ; gain = 0.000
 INFO: [Netlist 29-17] Analyzing 105 Unisim elements for replacement
 INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
 INFO: [Project 1-570] Preparing netlist for logic optimization
@@ -848,6 +836,10 @@ Processing XDC Constraints
 Initializing timing engine
 Parsing XDC File [c:/v22.2/FEB_fabric/ARTY.gen/sources_1/ip/DDR3LController/DDR3LController/DDR3LController_in_context.xdc] for cell 'DDR_Interface_inst/DDR_Controller'
 Finished Parsing XDC File [c:/v22.2/FEB_fabric/ARTY.gen/sources_1/ip/DDR3LController/DDR3LController/DDR3LController_in_context.xdc] for cell 'DDR_Interface_inst/DDR_Controller'
+Parsing XDC File [c:/v22.2/FEB_fabric/FEB_fabric.gen/sources_1/ip/AFEemu/AFEemu/AFEemu_in_context.xdc] for cell 'AFE_Interface/AFE'
+Finished Parsing XDC File [c:/v22.2/FEB_fabric/FEB_fabric.gen/sources_1/ip/AFEemu/AFEemu/AFEemu_in_context.xdc] for cell 'AFE_Interface/AFE'
+Parsing XDC File [c:/v22.2/FEB_fabric/FEB_fabric.gen/sources_1/ip/AFEemu_ila/AFEemu_ila/AFEemu_ila_in_context.xdc] for cell 'AFE_Interface/generateILA.AFEemu_ila_inst'
+Finished Parsing XDC File [c:/v22.2/FEB_fabric/FEB_fabric.gen/sources_1/ip/AFEemu_ila/AFEemu_ila/AFEemu_ila_in_context.xdc] for cell 'AFE_Interface/generateILA.AFEemu_ila_inst'
 Parsing XDC File [c:/v22.2/FEB_fabric/feb_arty.tmp/feb_fabric_v1_0_project/FEB_fabric_v1_0_project.gen/sources_1/ip/SCFIFO_1Kx16/SCFIFO_1Kx16.xdc] for cell 'DDR_Interface_inst/DDRRdBuff/U0'
 Finished Parsing XDC File [c:/v22.2/FEB_fabric/feb_arty.tmp/feb_fabric_v1_0_project/FEB_fabric_v1_0_project.gen/sources_1/ip/SCFIFO_1Kx16/SCFIFO_1Kx16.xdc] for cell 'DDR_Interface_inst/DDRRdBuff/U0'
 Parsing XDC File [c:/v22.2/FEB_fabric/feb_arty.tmp/feb_fabric_v1_0_project/FEB_fabric_v1_0_project.gen/sources_1/ip/SCFIFO_1Kx16/SCFIFO_1Kx16.xdc] for cell 'EventBuilder_logic/EventBuff/U0'
@@ -876,23 +868,25 @@ Resolution: To avoid this warning, move constraints listed in [.Xil/FEB_fabric_p
 INFO: [Project 1-1714] 4 XPM XDC files have been applied to the design.
 Completed Processing XDC Constraints
 
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.003 . Memory (MB): peak = 2515.730 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.003 . Memory (MB): peak = 2566.484 ; gain = 0.000
 INFO: [Project 1-111] Unisim Transformation Summary:
 No Unisim elements were transformed.
 
-Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.347 . Memory (MB): peak = 2515.730 ; gain = 0.000
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.334 . Memory (MB): peak = 2566.484 ; gain = 0.000
+WARNING: [Timing 38-316] Clock period '20.000' specified during out-of-context synthesis of instance 'AFE_Interface/AFE' at clock pin 'clkb' is different from the actual clock period '6.250', this can lead to different synthesis results.
+WARNING: [Timing 38-316] Clock period '10.000' specified during out-of-context synthesis of instance 'AFE_Interface/generateILA.AFEemu_ila_inst' at clock pin 'clk' is different from the actual clock period '6.250', this can lead to different synthesis results.
 INFO: [Designutils 20-5440] No compile time benefit to using incremental synthesis; A full resynthesis will be run
 INFO: [Designutils 20-4379] Flow is switching to default flow due to incremental criteria not met. If you would like to alter this behaviour and have the flow terminate instead, please set the following parameter config_implementation {autoIncr.Synth.RejectBehavior Terminate}
 INFO: [Synth 8-11241] undeclared symbol 'REGCCE', assumed default net type 'wire' [C:/Xilinx/Vivado/2022.2/data/verilog/src/unimacro/BRAM_SINGLE_MACRO.v:2170]
 ---------------------------------------------------------------------------------
-Finished Constraint Validation : Time (s): cpu = 00:01:04 ; elapsed = 00:01:05 . Memory (MB): peak = 2515.730 ; gain = 1045.590
+Finished Constraint Validation : Time (s): cpu = 00:01:01 ; elapsed = 00:01:03 . Memory (MB): peak = 2566.484 ; gain = 1042.574
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Loading Part and Timing Information
 ---------------------------------------------------------------------------------
 Loading part: xc7s50csga324-1
 ---------------------------------------------------------------------------------
-Finished Loading Part and Timing Information : Time (s): cpu = 00:01:04 ; elapsed = 00:01:05 . Memory (MB): peak = 2515.730 ; gain = 1045.590
+Finished Loading Part and Timing Information : Time (s): cpu = 00:01:01 ; elapsed = 00:01:03 . Memory (MB): peak = 2566.484 ; gain = 1042.574
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Applying 'set_property' XDC Constraints
@@ -995,10 +989,10 @@ Applied set_property IO_BUFFER_TYPE = NONE for DDR_WE. (constraint file  c:/v22.
 Applied set_property CLOCK_BUFFER_TYPE = NONE for DDR_WE. (constraint file  c:/v22.2/FEB_fabric/ARTY.gen/sources_1/ip/DDR3LController/DDR3LController/DDR3LController_in_context.xdc, line 98).
 Applied set_property IO_BUFFER_TYPE = NONE for Clk_100MHz. (constraint file  c:/v22.2/FEB_fabric/ARTY.gen/sources_1/ip/DDR3LController/DDR3LController/DDR3LController_in_context.xdc, line 99).
 Applied set_property CLOCK_BUFFER_TYPE = NONE for Clk_100MHz. (constraint file  c:/v22.2/FEB_fabric/ARTY.gen/sources_1/ip/DDR3LController/DDR3LController/DDR3LController_in_context.xdc, line 100).
-Applied set_property KEEP_HIERARCHY = SOFT for DDR_Interface_inst/DDRRdBuff/U0. (constraint file  C:/v22.2/FEB_fabric/FEB_fabric.runs/synth_1/dont_touch.xdc, line 21).
-Applied set_property KEEP_HIERARCHY = SOFT for EventBuilder_logic/EventBuff/U0. (constraint file  C:/v22.2/FEB_fabric/FEB_fabric.runs/synth_1/dont_touch.xdc, line 21).
-Applied set_property KEEP_HIERARCHY = SOFT for DDR_Interface_inst/DDRAddrBuff/U0. (constraint file  C:/v22.2/FEB_fabric/FEB_fabric.runs/synth_1/dont_touch.xdc, line 24).
-Applied set_property KEEP_HIERARCHY = SOFT for EventBuilder_logic/uBunchBuffer/U0. (constraint file  C:/v22.2/FEB_fabric/FEB_fabric.runs/synth_1/dont_touch.xdc, line 24).
+Applied set_property KEEP_HIERARCHY = SOFT for DDR_Interface_inst/DDRRdBuff/U0. (constraint file  C:/v22.2/FEB_fabric/FEB_fabric.runs/synth_1/dont_touch.xdc, line 24).
+Applied set_property KEEP_HIERARCHY = SOFT for EventBuilder_logic/EventBuff/U0. (constraint file  C:/v22.2/FEB_fabric/FEB_fabric.runs/synth_1/dont_touch.xdc, line 24).
+Applied set_property KEEP_HIERARCHY = SOFT for DDR_Interface_inst/DDRAddrBuff/U0. (constraint file  C:/v22.2/FEB_fabric/FEB_fabric.runs/synth_1/dont_touch.xdc, line 27).
+Applied set_property KEEP_HIERARCHY = SOFT for EventBuilder_logic/uBunchBuffer/U0. (constraint file  C:/v22.2/FEB_fabric/FEB_fabric.runs/synth_1/dont_touch.xdc, line 27).
 Applied set_property KEEP_HIERARCHY = SOFT for EventBuilder_logic/EventBuff. (constraint file  auto generated constraint).
 Applied set_property KEEP_HIERARCHY = SOFT for DDR_Interface_inst/DDRRdBuff. (constraint file  auto generated constraint).
 Applied set_property KEEP_HIERARCHY = SOFT for EventBuilder_logic/uBunchBuffer. (constraint file  auto generated constraint).
@@ -1022,13 +1016,16 @@ Applied set_property KEEP_HIERARCHY = SOFT for AFE_DataPath_inst/\Gen_Two_AFEs[1
 Applied set_property KEEP_HIERARCHY = SOFT for AFE_DataPath_inst/AFE_Pipeline_inst/\Gen_Two_AFEs[0].Pipeline . (constraint file  auto generated constraint).
 Applied set_property KEEP_HIERARCHY = SOFT for AFE_DataPath_inst/AFE_Pipeline_inst/\Gen_Two_AFEs[1].Pipeline . (constraint file  auto generated constraint).
 Applied set_property KEEP_HIERARCHY = SOFT for DDR_Interface_inst/DDR_Controller. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for AFE_Interface/AFE. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for AFE_Interface/\generateILA.AFEemu_ila_inst . (constraint file  auto generated constraint).
 Applied set_property KEEP_HIERARCHY = SOFT for EventBuilder_logic/uBunchBuffer/U0/inst_fifo_gen/\gconvfifo.rf /\grf.rf /rstblk/\ngwrdrst.grst.g7serrst.gsckt_wrst.xpm_cdc_sync_rst_inst_wrst . (constraint file  auto generated constraint).
 Applied set_property KEEP_HIERARCHY = SOFT for EventBuilder_logic/EventBuff/U0/inst_fifo_gen/\gconvfifo.rf /\grf.rf /rstblk/\ngwrdrst.grst.g7serrst.gsckt_wrst.xpm_cdc_sync_rst_inst_wrst . (constraint file  auto generated constraint).
 Applied set_property KEEP_HIERARCHY = SOFT for DDR_Interface_inst/DDRAddrBuff/U0/inst_fifo_gen/\gconvfifo.rf /\grf.rf /rstblk/\ngwrdrst.grst.g7serrst.gsckt_wrst.xpm_cdc_sync_rst_inst_wrst . (constraint file  auto generated constraint).
 Applied set_property KEEP_HIERARCHY = SOFT for DDR_Interface_inst/DDRRdBuff/U0/inst_fifo_gen/\gconvfifo.rf /\grf.rf /rstblk/\ngwrdrst.grst.g7serrst.gsckt_wrst.xpm_cdc_sync_rst_inst_wrst . (constraint file  auto generated constraint).
 ---------------------------------------------------------------------------------
-Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:01:04 ; elapsed = 00:01:05 . Memory (MB): peak = 2515.730 ; gain = 1045.590
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:01:01 ; elapsed = 00:01:03 . Memory (MB): peak = 2566.484 ; gain = 1042.574
 ---------------------------------------------------------------------------------
+INFO: [Synth 8-802] inferred FSM for state register 'prev_state_reg' in module 'AFE_Interface_Sim'
 INFO: [Synth 8-802] inferred FSM for state register 'Gen_Two_AFEs[0].Gen_Eight_Chans[0].Input_Seqs_reg[0][0]' in module 'AFE_DataPath'
 INFO: [Synth 8-802] inferred FSM for state register 'Gen_Two_AFEs[0].Gen_Eight_Chans[1].Input_Seqs_reg[0][1]' in module 'AFE_DataPath'
 INFO: [Synth 8-802] inferred FSM for state register 'Gen_Two_AFEs[0].Gen_Eight_Chans[2].Input_Seqs_reg[0][2]' in module 'AFE_DataPath'
@@ -1046,214 +1043,207 @@ INFO: [Synth 8-802] inferred FSM for state register 'Gen_Two_AFEs[1].Gen_Eight_C
 INFO: [Synth 8-802] inferred FSM for state register 'Gen_Two_AFEs[1].Gen_Eight_Chans[6].Input_Seqs_reg[1][6]' in module 'AFE_DataPath'
 INFO: [Synth 8-802] inferred FSM for state register 'Gen_Two_AFEs[1].Gen_Eight_Chans[7].Input_Seqs_reg[1][7]' in module 'AFE_DataPath'
 INFO: [Synth 8-802] inferred FSM for state register 'gpregsm1.curr_fwft_state_reg' in module 'rd_fwft'
-INFO: [Synth 8-6159] Found Keep on FSM register 'Gen_Two_AFEs[0].Gen_Eight_Chans[0].Input_Seqs_reg[0][0]' in module 'AFE_DataPath', re-encoding will not be performed
 ---------------------------------------------------------------------------------------------------
                    State |                     New Encoding |                Previous Encoding 
 ---------------------------------------------------------------------------------------------------
-*
-                    idle |                              000 |                              000
-               increment |                              001 |                              001
-               wrtchanno |                              010 |                              010
-            wrttimestamp |                              011 |                              011
-                 wrthits |                              100 |                              100
-             wrthitwdcnt |                              101 |                              101
-              ldnxtwrtad |                              110 |                              110
+                   reset |                               00 |                               00
+                readback |                               01 |                               11
+                    stop |                               10 |                               10
+                   start |                               11 |                               01
 ---------------------------------------------------------------------------------------------------
-INFO: [Synth 8-6159] Found Keep on FSM register 'Gen_Two_AFEs[0].Gen_Eight_Chans[1].Input_Seqs_reg[0][1]' in module 'AFE_DataPath', re-encoding will not be performed
+INFO: [Synth 8-3354] encoded FSM with state register 'prev_state_reg' using encoding 'sequential' in module 'AFE_Interface_Sim'
 ---------------------------------------------------------------------------------------------------
                    State |                     New Encoding |                Previous Encoding 
 ---------------------------------------------------------------------------------------------------
-*
-                    idle |                              000 |                              000
-               increment |                              001 |                              001
-               wrtchanno |                              010 |                              010
-            wrttimestamp |                              011 |                              011
-                 wrthits |                              100 |                              100
-             wrthitwdcnt |                              101 |                              101
-              ldnxtwrtad |                              110 |                              110
+                    idle |                              001 |                              000
+               increment |                              110 |                              001
+               wrtchanno |                              100 |                              010
+            wrttimestamp |                              101 |                              011
+                 wrthits |                              011 |                              100
+             wrthitwdcnt |                              010 |                              101
+              ldnxtwrtad |                              000 |                              110
 ---------------------------------------------------------------------------------------------------
-INFO: [Synth 8-6159] Found Keep on FSM register 'Gen_Two_AFEs[0].Gen_Eight_Chans[2].Input_Seqs_reg[0][2]' in module 'AFE_DataPath', re-encoding will not be performed
----------------------------------------------------------------------------------------------------
-                   State |                     New Encoding |                Previous Encoding 
----------------------------------------------------------------------------------------------------
-*
-                    idle |                              000 |                              000
-               increment |                              001 |                              001
-               wrtchanno |                              010 |                              010
-            wrttimestamp |                              011 |                              011
-                 wrthits |                              100 |                              100
-             wrthitwdcnt |                              101 |                              101
-              ldnxtwrtad |                              110 |                              110
----------------------------------------------------------------------------------------------------
-INFO: [Synth 8-6159] Found Keep on FSM register 'Gen_Two_AFEs[0].Gen_Eight_Chans[3].Input_Seqs_reg[0][3]' in module 'AFE_DataPath', re-encoding will not be performed
+INFO: [Synth 8-3354] encoded FSM with state register 'Gen_Two_AFEs[0].Gen_Eight_Chans[0].Input_Seqs_reg[0][0]' using encoding 'sequential' in module 'AFE_DataPath'
 ---------------------------------------------------------------------------------------------------
                    State |                     New Encoding |                Previous Encoding 
 ---------------------------------------------------------------------------------------------------
-*
-                    idle |                              000 |                              000
-               increment |                              001 |                              001
-               wrtchanno |                              010 |                              010
-            wrttimestamp |                              011 |                              011
-                 wrthits |                              100 |                              100
-             wrthitwdcnt |                              101 |                              101
-              ldnxtwrtad |                              110 |                              110
+                    idle |                              001 |                              000
+               increment |                              110 |                              001
+               wrtchanno |                              100 |                              010
+            wrttimestamp |                              101 |                              011
+                 wrthits |                              011 |                              100
+             wrthitwdcnt |                              010 |                              101
+              ldnxtwrtad |                              000 |                              110
 ---------------------------------------------------------------------------------------------------
-INFO: [Synth 8-6159] Found Keep on FSM register 'Gen_Two_AFEs[0].Gen_Eight_Chans[4].Input_Seqs_reg[0][4]' in module 'AFE_DataPath', re-encoding will not be performed
----------------------------------------------------------------------------------------------------
-                   State |                     New Encoding |                Previous Encoding 
----------------------------------------------------------------------------------------------------
-*
-                    idle |                              000 |                              000
-               increment |                              001 |                              001
-               wrtchanno |                              010 |                              010
-            wrttimestamp |                              011 |                              011
-                 wrthits |                              100 |                              100
-             wrthitwdcnt |                              101 |                              101
-              ldnxtwrtad |                              110 |                              110
----------------------------------------------------------------------------------------------------
-INFO: [Synth 8-6159] Found Keep on FSM register 'Gen_Two_AFEs[0].Gen_Eight_Chans[5].Input_Seqs_reg[0][5]' in module 'AFE_DataPath', re-encoding will not be performed
+INFO: [Synth 8-3354] encoded FSM with state register 'Gen_Two_AFEs[0].Gen_Eight_Chans[1].Input_Seqs_reg[0][1]' using encoding 'sequential' in module 'AFE_DataPath'
 ---------------------------------------------------------------------------------------------------
                    State |                     New Encoding |                Previous Encoding 
 ---------------------------------------------------------------------------------------------------
-*
-                    idle |                              000 |                              000
-               increment |                              001 |                              001
-               wrtchanno |                              010 |                              010
-            wrttimestamp |                              011 |                              011
-                 wrthits |                              100 |                              100
-             wrthitwdcnt |                              101 |                              101
-              ldnxtwrtad |                              110 |                              110
+                    idle |                              001 |                              000
+               increment |                              110 |                              001
+               wrtchanno |                              100 |                              010
+            wrttimestamp |                              101 |                              011
+                 wrthits |                              011 |                              100
+             wrthitwdcnt |                              010 |                              101
+              ldnxtwrtad |                              000 |                              110
 ---------------------------------------------------------------------------------------------------
-INFO: [Synth 8-6159] Found Keep on FSM register 'Gen_Two_AFEs[0].Gen_Eight_Chans[6].Input_Seqs_reg[0][6]' in module 'AFE_DataPath', re-encoding will not be performed
----------------------------------------------------------------------------------------------------
-                   State |                     New Encoding |                Previous Encoding 
----------------------------------------------------------------------------------------------------
-*
-                    idle |                              000 |                              000
-               increment |                              001 |                              001
-               wrtchanno |                              010 |                              010
-            wrttimestamp |                              011 |                              011
-                 wrthits |                              100 |                              100
-             wrthitwdcnt |                              101 |                              101
-              ldnxtwrtad |                              110 |                              110
----------------------------------------------------------------------------------------------------
-INFO: [Synth 8-6159] Found Keep on FSM register 'Gen_Two_AFEs[0].Gen_Eight_Chans[7].Input_Seqs_reg[0][7]' in module 'AFE_DataPath', re-encoding will not be performed
+INFO: [Synth 8-3354] encoded FSM with state register 'Gen_Two_AFEs[0].Gen_Eight_Chans[2].Input_Seqs_reg[0][2]' using encoding 'sequential' in module 'AFE_DataPath'
 ---------------------------------------------------------------------------------------------------
                    State |                     New Encoding |                Previous Encoding 
 ---------------------------------------------------------------------------------------------------
-*
-                    idle |                              000 |                              000
-               increment |                              001 |                              001
-               wrtchanno |                              010 |                              010
-            wrttimestamp |                              011 |                              011
-                 wrthits |                              100 |                              100
-             wrthitwdcnt |                              101 |                              101
-              ldnxtwrtad |                              110 |                              110
+                    idle |                              001 |                              000
+               increment |                              110 |                              001
+               wrtchanno |                              100 |                              010
+            wrttimestamp |                              101 |                              011
+                 wrthits |                              011 |                              100
+             wrthitwdcnt |                              010 |                              101
+              ldnxtwrtad |                              000 |                              110
 ---------------------------------------------------------------------------------------------------
-INFO: [Synth 8-6159] Found Keep on FSM register 'Gen_Two_AFEs[1].Gen_Eight_Chans[0].Input_Seqs_reg[1][0]' in module 'AFE_DataPath', re-encoding will not be performed
----------------------------------------------------------------------------------------------------
-                   State |                     New Encoding |                Previous Encoding 
----------------------------------------------------------------------------------------------------
-*
-                    idle |                              000 |                              000
-               increment |                              001 |                              001
-               wrtchanno |                              010 |                              010
-            wrttimestamp |                              011 |                              011
-                 wrthits |                              100 |                              100
-             wrthitwdcnt |                              101 |                              101
-              ldnxtwrtad |                              110 |                              110
----------------------------------------------------------------------------------------------------
-INFO: [Synth 8-6159] Found Keep on FSM register 'Gen_Two_AFEs[1].Gen_Eight_Chans[1].Input_Seqs_reg[1][1]' in module 'AFE_DataPath', re-encoding will not be performed
+INFO: [Synth 8-3354] encoded FSM with state register 'Gen_Two_AFEs[0].Gen_Eight_Chans[3].Input_Seqs_reg[0][3]' using encoding 'sequential' in module 'AFE_DataPath'
 ---------------------------------------------------------------------------------------------------
                    State |                     New Encoding |                Previous Encoding 
 ---------------------------------------------------------------------------------------------------
-*
-                    idle |                              000 |                              000
-               increment |                              001 |                              001
-               wrtchanno |                              010 |                              010
-            wrttimestamp |                              011 |                              011
-                 wrthits |                              100 |                              100
-             wrthitwdcnt |                              101 |                              101
-              ldnxtwrtad |                              110 |                              110
+                    idle |                              001 |                              000
+               increment |                              110 |                              001
+               wrtchanno |                              100 |                              010
+            wrttimestamp |                              101 |                              011
+                 wrthits |                              011 |                              100
+             wrthitwdcnt |                              010 |                              101
+              ldnxtwrtad |                              000 |                              110
 ---------------------------------------------------------------------------------------------------
-INFO: [Synth 8-6159] Found Keep on FSM register 'Gen_Two_AFEs[1].Gen_Eight_Chans[2].Input_Seqs_reg[1][2]' in module 'AFE_DataPath', re-encoding will not be performed
----------------------------------------------------------------------------------------------------
-                   State |                     New Encoding |                Previous Encoding 
----------------------------------------------------------------------------------------------------
-*
-                    idle |                              000 |                              000
-               increment |                              001 |                              001
-               wrtchanno |                              010 |                              010
-            wrttimestamp |                              011 |                              011
-                 wrthits |                              100 |                              100
-             wrthitwdcnt |                              101 |                              101
-              ldnxtwrtad |                              110 |                              110
----------------------------------------------------------------------------------------------------
-INFO: [Synth 8-6159] Found Keep on FSM register 'Gen_Two_AFEs[1].Gen_Eight_Chans[3].Input_Seqs_reg[1][3]' in module 'AFE_DataPath', re-encoding will not be performed
+INFO: [Synth 8-3354] encoded FSM with state register 'Gen_Two_AFEs[0].Gen_Eight_Chans[4].Input_Seqs_reg[0][4]' using encoding 'sequential' in module 'AFE_DataPath'
 ---------------------------------------------------------------------------------------------------
                    State |                     New Encoding |                Previous Encoding 
 ---------------------------------------------------------------------------------------------------
-*
-                    idle |                              000 |                              000
-               increment |                              001 |                              001
-               wrtchanno |                              010 |                              010
-            wrttimestamp |                              011 |                              011
-                 wrthits |                              100 |                              100
-             wrthitwdcnt |                              101 |                              101
-              ldnxtwrtad |                              110 |                              110
+                    idle |                              001 |                              000
+               increment |                              110 |                              001
+               wrtchanno |                              100 |                              010
+            wrttimestamp |                              101 |                              011
+                 wrthits |                              011 |                              100
+             wrthitwdcnt |                              010 |                              101
+              ldnxtwrtad |                              000 |                              110
 ---------------------------------------------------------------------------------------------------
-INFO: [Synth 8-6159] Found Keep on FSM register 'Gen_Two_AFEs[1].Gen_Eight_Chans[4].Input_Seqs_reg[1][4]' in module 'AFE_DataPath', re-encoding will not be performed
----------------------------------------------------------------------------------------------------
-                   State |                     New Encoding |                Previous Encoding 
----------------------------------------------------------------------------------------------------
-*
-                    idle |                              000 |                              000
-               increment |                              001 |                              001
-               wrtchanno |                              010 |                              010
-            wrttimestamp |                              011 |                              011
-                 wrthits |                              100 |                              100
-             wrthitwdcnt |                              101 |                              101
-              ldnxtwrtad |                              110 |                              110
----------------------------------------------------------------------------------------------------
-INFO: [Synth 8-6159] Found Keep on FSM register 'Gen_Two_AFEs[1].Gen_Eight_Chans[5].Input_Seqs_reg[1][5]' in module 'AFE_DataPath', re-encoding will not be performed
+INFO: [Synth 8-3354] encoded FSM with state register 'Gen_Two_AFEs[0].Gen_Eight_Chans[5].Input_Seqs_reg[0][5]' using encoding 'sequential' in module 'AFE_DataPath'
 ---------------------------------------------------------------------------------------------------
                    State |                     New Encoding |                Previous Encoding 
 ---------------------------------------------------------------------------------------------------
-*
-                    idle |                              000 |                              000
-               increment |                              001 |                              001
-               wrtchanno |                              010 |                              010
-            wrttimestamp |                              011 |                              011
-                 wrthits |                              100 |                              100
-             wrthitwdcnt |                              101 |                              101
-              ldnxtwrtad |                              110 |                              110
+                    idle |                              001 |                              000
+               increment |                              110 |                              001
+               wrtchanno |                              100 |                              010
+            wrttimestamp |                              101 |                              011
+                 wrthits |                              011 |                              100
+             wrthitwdcnt |                              010 |                              101
+              ldnxtwrtad |                              000 |                              110
 ---------------------------------------------------------------------------------------------------
-INFO: [Synth 8-6159] Found Keep on FSM register 'Gen_Two_AFEs[1].Gen_Eight_Chans[6].Input_Seqs_reg[1][6]' in module 'AFE_DataPath', re-encoding will not be performed
----------------------------------------------------------------------------------------------------
-                   State |                     New Encoding |                Previous Encoding 
----------------------------------------------------------------------------------------------------
-*
-                    idle |                              000 |                              000
-               increment |                              001 |                              001
-               wrtchanno |                              010 |                              010
-            wrttimestamp |                              011 |                              011
-                 wrthits |                              100 |                              100
-             wrthitwdcnt |                              101 |                              101
-              ldnxtwrtad |                              110 |                              110
----------------------------------------------------------------------------------------------------
-INFO: [Synth 8-6159] Found Keep on FSM register 'Gen_Two_AFEs[1].Gen_Eight_Chans[7].Input_Seqs_reg[1][7]' in module 'AFE_DataPath', re-encoding will not be performed
+INFO: [Synth 8-3354] encoded FSM with state register 'Gen_Two_AFEs[0].Gen_Eight_Chans[6].Input_Seqs_reg[0][6]' using encoding 'sequential' in module 'AFE_DataPath'
 ---------------------------------------------------------------------------------------------------
                    State |                     New Encoding |                Previous Encoding 
 ---------------------------------------------------------------------------------------------------
-*
-                    idle |                              000 |                              000
-               increment |                              001 |                              001
-               wrtchanno |                              010 |                              010
-            wrttimestamp |                              011 |                              011
-                 wrthits |                              100 |                              100
-             wrthitwdcnt |                              101 |                              101
-              ldnxtwrtad |                              110 |                              110
+                    idle |                              001 |                              000
+               increment |                              110 |                              001
+               wrtchanno |                              100 |                              010
+            wrttimestamp |                              101 |                              011
+                 wrthits |                              011 |                              100
+             wrthitwdcnt |                              010 |                              101
+              ldnxtwrtad |                              000 |                              110
 ---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 'Gen_Two_AFEs[0].Gen_Eight_Chans[7].Input_Seqs_reg[0][7]' using encoding 'sequential' in module 'AFE_DataPath'
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+                    idle |                              001 |                              000
+               increment |                              110 |                              001
+               wrtchanno |                              100 |                              010
+            wrttimestamp |                              101 |                              011
+                 wrthits |                              011 |                              100
+             wrthitwdcnt |                              010 |                              101
+              ldnxtwrtad |                              000 |                              110
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 'Gen_Two_AFEs[1].Gen_Eight_Chans[0].Input_Seqs_reg[1][0]' using encoding 'sequential' in module 'AFE_DataPath'
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+                    idle |                              001 |                              000
+               increment |                              110 |                              001
+               wrtchanno |                              100 |                              010
+            wrttimestamp |                              101 |                              011
+                 wrthits |                              011 |                              100
+             wrthitwdcnt |                              010 |                              101
+              ldnxtwrtad |                              000 |                              110
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 'Gen_Two_AFEs[1].Gen_Eight_Chans[1].Input_Seqs_reg[1][1]' using encoding 'sequential' in module 'AFE_DataPath'
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+                    idle |                              001 |                              000
+               increment |                              110 |                              001
+               wrtchanno |                              100 |                              010
+            wrttimestamp |                              101 |                              011
+                 wrthits |                              011 |                              100
+             wrthitwdcnt |                              010 |                              101
+              ldnxtwrtad |                              000 |                              110
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 'Gen_Two_AFEs[1].Gen_Eight_Chans[2].Input_Seqs_reg[1][2]' using encoding 'sequential' in module 'AFE_DataPath'
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+                    idle |                              001 |                              000
+               increment |                              110 |                              001
+               wrtchanno |                              100 |                              010
+            wrttimestamp |                              101 |                              011
+                 wrthits |                              011 |                              100
+             wrthitwdcnt |                              010 |                              101
+              ldnxtwrtad |                              000 |                              110
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 'Gen_Two_AFEs[1].Gen_Eight_Chans[3].Input_Seqs_reg[1][3]' using encoding 'sequential' in module 'AFE_DataPath'
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+                    idle |                              001 |                              000
+               increment |                              110 |                              001
+               wrtchanno |                              100 |                              010
+            wrttimestamp |                              101 |                              011
+                 wrthits |                              011 |                              100
+             wrthitwdcnt |                              010 |                              101
+              ldnxtwrtad |                              000 |                              110
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 'Gen_Two_AFEs[1].Gen_Eight_Chans[4].Input_Seqs_reg[1][4]' using encoding 'sequential' in module 'AFE_DataPath'
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+                    idle |                              001 |                              000
+               increment |                              110 |                              001
+               wrtchanno |                              100 |                              010
+            wrttimestamp |                              101 |                              011
+                 wrthits |                              011 |                              100
+             wrthitwdcnt |                              010 |                              101
+              ldnxtwrtad |                              000 |                              110
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 'Gen_Two_AFEs[1].Gen_Eight_Chans[5].Input_Seqs_reg[1][5]' using encoding 'sequential' in module 'AFE_DataPath'
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+                    idle |                              001 |                              000
+               increment |                              110 |                              001
+               wrtchanno |                              100 |                              010
+            wrttimestamp |                              101 |                              011
+                 wrthits |                              011 |                              100
+             wrthitwdcnt |                              010 |                              101
+              ldnxtwrtad |                              000 |                              110
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 'Gen_Two_AFEs[1].Gen_Eight_Chans[6].Input_Seqs_reg[1][6]' using encoding 'sequential' in module 'AFE_DataPath'
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+                    idle |                              001 |                              000
+               increment |                              110 |                              001
+               wrtchanno |                              100 |                              010
+            wrttimestamp |                              101 |                              011
+                 wrthits |                              011 |                              100
+             wrthitwdcnt |                              010 |                              101
+              ldnxtwrtad |                              000 |                              110
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 'Gen_Two_AFEs[1].Gen_Eight_Chans[7].Input_Seqs_reg[1][7]' using encoding 'sequential' in module 'AFE_DataPath'
 INFO: [Synth 8-6159] Found Keep on FSM register 'gpregsm1.curr_fwft_state_reg' in module 'rd_fwft', re-encoding will not be performed
 ---------------------------------------------------------------------------------------------------
                    State |                     New Encoding |                Previous Encoding 
@@ -1269,21 +1259,19 @@ WARNING: [Synth 8-327] inferring latch for variable 'DDR3_en_reg' [C:/v22.2/FEB_
 WARNING: [Synth 8-327] inferring latch for variable 'DDR3_wrt_data_reg' [C:/v22.2/FEB_fabric/FEB_fabric.srcs/sources_1/new/DDR_Interface .vhd:226]
 WARNING: [Synth 8-327] inferring latch for variable 'DRAMRdBuffDat_reg' [C:/v22.2/FEB_fabric/FEB_fabric.srcs/sources_1/new/DDR_Interface .vhd:173]
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 2 : Time (s): cpu = 00:01:07 ; elapsed = 00:01:09 . Memory (MB): peak = 2515.730 ; gain = 1045.590
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:01:05 ; elapsed = 00:01:07 . Memory (MB): peak = 2566.484 ; gain = 1042.574
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start RTL Component Statistics 
 ---------------------------------------------------------------------------------
 Detailed RTL Component Info : 
 +---Adders : 
-	   2 Input   16 Bit       Adders := 16    
 	   3 Input   14 Bit       Adders := 16    
 	   2 Input   12 Bit       Adders := 3     
 	   2 Input   11 Bit       Adders := 2     
-	   2 Input   10 Bit       Adders := 41    
+	   2 Input   10 Bit       Adders := 42    
 	   2 Input    9 Bit       Adders := 2     
 	   2 Input    8 Bit       Adders := 4     
-	   2 Input    7 Bit       Adders := 1     
 	   2 Input    5 Bit       Adders := 2     
 	   2 Input    4 Bit       Adders := 17    
 	   2 Input    3 Bit       Adders := 1     
@@ -1292,44 +1280,44 @@ Detailed RTL Component Info :
 +---Registers : 
 	               32 Bit    Registers := 3     
 	               24 Bit    Registers := 2     
-	               16 Bit    Registers := 35    
-	               14 Bit    Registers := 49    
-	               12 Bit    Registers := 8     
+	               16 Bit    Registers := 20    
+	               14 Bit    Registers := 48    
+	               12 Bit    Registers := 6     
 	               11 Bit    Registers := 2     
-	               10 Bit    Registers := 81    
+	               10 Bit    Registers := 82    
 	                9 Bit    Registers := 4     
 	                8 Bit    Registers := 3     
-	                7 Bit    Registers := 1     
 	                5 Bit    Registers := 16    
 	                4 Bit    Registers := 21    
 	                3 Bit    Registers := 1     
-	                2 Bit    Registers := 21    
-	                1 Bit    Registers := 140   
+	                2 Bit    Registers := 20    
+	                1 Bit    Registers := 126   
 +---Muxes : 
 	   2 Input   32 Bit        Muxes := 3     
 	   2 Input   24 Bit        Muxes := 2     
 	   2 Input   20 Bit        Muxes := 1     
-	   3 Input   16 Bit        Muxes := 16    
-	   2 Input   16 Bit        Muxes := 16    
-	   2 Input   14 Bit        Muxes := 32    
-	   2 Input   12 Bit        Muxes := 1     
-	   2 Input   10 Bit        Muxes := 80    
-	   6 Input   10 Bit        Muxes := 16    
-	   4 Input   10 Bit        Muxes := 32    
-	   7 Input   10 Bit        Muxes := 16    
+	   6 Input   16 Bit        Muxes := 16    
+	   4 Input   14 Bit        Muxes := 2     
+	   2 Input   14 Bit        Muxes := 16    
+	   2 Input   12 Bit        Muxes := 7     
+	   2 Input   10 Bit        Muxes := 17    
+	   4 Input   10 Bit        Muxes := 2     
+	   5 Input   10 Bit        Muxes := 16    
 	   2 Input    9 Bit        Muxes := 1     
 	   2 Input    8 Bit        Muxes := 4     
-	   2 Input    5 Bit        Muxes := 4     
-	   4 Input    4 Bit        Muxes := 16    
+	   2 Input    5 Bit        Muxes := 2     
 	   2 Input    4 Bit        Muxes := 16    
-	   8 Input    3 Bit        Muxes := 16    
-	   2 Input    3 Bit        Muxes := 50    
-	   4 Input    2 Bit        Muxes := 20    
-	   2 Input    2 Bit        Muxes := 58    
-	   5 Input    2 Bit        Muxes := 20    
-	   2 Input    1 Bit        Muxes := 87    
-	   3 Input    1 Bit        Muxes := 4     
-	   4 Input    1 Bit        Muxes := 8     
+	   7 Input    3 Bit        Muxes := 16    
+	   2 Input    3 Bit        Muxes := 82    
+	   4 Input    2 Bit        Muxes := 7     
+	   2 Input    2 Bit        Muxes := 53    
+	   5 Input    2 Bit        Muxes := 4     
+	   2 Input    1 Bit        Muxes := 85    
+	   4 Input    1 Bit        Muxes := 9     
+	   7 Input    1 Bit        Muxes := 32    
+	   5 Input    1 Bit        Muxes := 32    
+	   3 Input    1 Bit        Muxes := 52    
+	   6 Input    1 Bit        Muxes := 16    
 ---------------------------------------------------------------------------------
 Finished RTL Component Statistics 
 ---------------------------------------------------------------------------------
@@ -1346,127 +1334,172 @@ Finished Part Resource Summary
 Start Cross Boundary and Area Optimization
 ---------------------------------------------------------------------------------
 WARNING: [Synth 8-7080] Parallel synthesis criteria is not met
+WARNING: [Synth 8-3332] Sequential element (FSM_sequential_Gen_Two_AFEs[0].Gen_Eight_Chans[1].Input_Seqs_reg[0][1][2]) is unused and will be removed from module AFE_DataPath.
+WARNING: [Synth 8-3332] Sequential element (FSM_sequential_Gen_Two_AFEs[0].Gen_Eight_Chans[1].Input_Seqs_reg[0][1][1]) is unused and will be removed from module AFE_DataPath.
+WARNING: [Synth 8-3332] Sequential element (FSM_sequential_Gen_Two_AFEs[0].Gen_Eight_Chans[1].Input_Seqs_reg[0][1][0]) is unused and will be removed from module AFE_DataPath.
+WARNING: [Synth 8-3332] Sequential element (FSM_sequential_Gen_Two_AFEs[0].Gen_Eight_Chans[2].Input_Seqs_reg[0][2][2]) is unused and will be removed from module AFE_DataPath.
+WARNING: [Synth 8-3332] Sequential element (FSM_sequential_Gen_Two_AFEs[0].Gen_Eight_Chans[2].Input_Seqs_reg[0][2][1]) is unused and will be removed from module AFE_DataPath.
+WARNING: [Synth 8-3332] Sequential element (FSM_sequential_Gen_Two_AFEs[0].Gen_Eight_Chans[2].Input_Seqs_reg[0][2][0]) is unused and will be removed from module AFE_DataPath.
+WARNING: [Synth 8-3332] Sequential element (FSM_sequential_Gen_Two_AFEs[0].Gen_Eight_Chans[3].Input_Seqs_reg[0][3][2]) is unused and will be removed from module AFE_DataPath.
+WARNING: [Synth 8-3332] Sequential element (FSM_sequential_Gen_Two_AFEs[0].Gen_Eight_Chans[3].Input_Seqs_reg[0][3][1]) is unused and will be removed from module AFE_DataPath.
+WARNING: [Synth 8-3332] Sequential element (FSM_sequential_Gen_Two_AFEs[0].Gen_Eight_Chans[3].Input_Seqs_reg[0][3][0]) is unused and will be removed from module AFE_DataPath.
+WARNING: [Synth 8-3332] Sequential element (FSM_sequential_Gen_Two_AFEs[0].Gen_Eight_Chans[4].Input_Seqs_reg[0][4][2]) is unused and will be removed from module AFE_DataPath.
+WARNING: [Synth 8-3332] Sequential element (FSM_sequential_Gen_Two_AFEs[0].Gen_Eight_Chans[4].Input_Seqs_reg[0][4][1]) is unused and will be removed from module AFE_DataPath.
+WARNING: [Synth 8-3332] Sequential element (FSM_sequential_Gen_Two_AFEs[0].Gen_Eight_Chans[4].Input_Seqs_reg[0][4][0]) is unused and will be removed from module AFE_DataPath.
+WARNING: [Synth 8-3332] Sequential element (FSM_sequential_Gen_Two_AFEs[0].Gen_Eight_Chans[5].Input_Seqs_reg[0][5][2]) is unused and will be removed from module AFE_DataPath.
+WARNING: [Synth 8-3332] Sequential element (FSM_sequential_Gen_Two_AFEs[0].Gen_Eight_Chans[5].Input_Seqs_reg[0][5][1]) is unused and will be removed from module AFE_DataPath.
+WARNING: [Synth 8-3332] Sequential element (FSM_sequential_Gen_Two_AFEs[0].Gen_Eight_Chans[5].Input_Seqs_reg[0][5][0]) is unused and will be removed from module AFE_DataPath.
+WARNING: [Synth 8-3332] Sequential element (FSM_sequential_Gen_Two_AFEs[0].Gen_Eight_Chans[6].Input_Seqs_reg[0][6][2]) is unused and will be removed from module AFE_DataPath.
+WARNING: [Synth 8-3332] Sequential element (FSM_sequential_Gen_Two_AFEs[0].Gen_Eight_Chans[6].Input_Seqs_reg[0][6][1]) is unused and will be removed from module AFE_DataPath.
+WARNING: [Synth 8-3332] Sequential element (FSM_sequential_Gen_Two_AFEs[0].Gen_Eight_Chans[6].Input_Seqs_reg[0][6][0]) is unused and will be removed from module AFE_DataPath.
+WARNING: [Synth 8-3332] Sequential element (FSM_sequential_Gen_Two_AFEs[0].Gen_Eight_Chans[7].Input_Seqs_reg[0][7][2]) is unused and will be removed from module AFE_DataPath.
+WARNING: [Synth 8-3332] Sequential element (FSM_sequential_Gen_Two_AFEs[0].Gen_Eight_Chans[7].Input_Seqs_reg[0][7][1]) is unused and will be removed from module AFE_DataPath.
+WARNING: [Synth 8-3332] Sequential element (FSM_sequential_Gen_Two_AFEs[0].Gen_Eight_Chans[7].Input_Seqs_reg[0][7][0]) is unused and will be removed from module AFE_DataPath.
+WARNING: [Synth 8-3332] Sequential element (FSM_sequential_Gen_Two_AFEs[1].Gen_Eight_Chans[0].Input_Seqs_reg[1][0][2]) is unused and will be removed from module AFE_DataPath.
+WARNING: [Synth 8-3332] Sequential element (FSM_sequential_Gen_Two_AFEs[1].Gen_Eight_Chans[0].Input_Seqs_reg[1][0][1]) is unused and will be removed from module AFE_DataPath.
+WARNING: [Synth 8-3332] Sequential element (FSM_sequential_Gen_Two_AFEs[1].Gen_Eight_Chans[0].Input_Seqs_reg[1][0][0]) is unused and will be removed from module AFE_DataPath.
+WARNING: [Synth 8-3332] Sequential element (FSM_sequential_Gen_Two_AFEs[1].Gen_Eight_Chans[1].Input_Seqs_reg[1][1][2]) is unused and will be removed from module AFE_DataPath.
+WARNING: [Synth 8-3332] Sequential element (FSM_sequential_Gen_Two_AFEs[1].Gen_Eight_Chans[1].Input_Seqs_reg[1][1][1]) is unused and will be removed from module AFE_DataPath.
+WARNING: [Synth 8-3332] Sequential element (FSM_sequential_Gen_Two_AFEs[1].Gen_Eight_Chans[1].Input_Seqs_reg[1][1][0]) is unused and will be removed from module AFE_DataPath.
+WARNING: [Synth 8-3332] Sequential element (FSM_sequential_Gen_Two_AFEs[1].Gen_Eight_Chans[2].Input_Seqs_reg[1][2][2]) is unused and will be removed from module AFE_DataPath.
+WARNING: [Synth 8-3332] Sequential element (FSM_sequential_Gen_Two_AFEs[1].Gen_Eight_Chans[2].Input_Seqs_reg[1][2][1]) is unused and will be removed from module AFE_DataPath.
+WARNING: [Synth 8-3332] Sequential element (FSM_sequential_Gen_Two_AFEs[1].Gen_Eight_Chans[2].Input_Seqs_reg[1][2][0]) is unused and will be removed from module AFE_DataPath.
+WARNING: [Synth 8-3332] Sequential element (FSM_sequential_Gen_Two_AFEs[1].Gen_Eight_Chans[3].Input_Seqs_reg[1][3][2]) is unused and will be removed from module AFE_DataPath.
+WARNING: [Synth 8-3332] Sequential element (FSM_sequential_Gen_Two_AFEs[1].Gen_Eight_Chans[3].Input_Seqs_reg[1][3][1]) is unused and will be removed from module AFE_DataPath.
+WARNING: [Synth 8-3332] Sequential element (FSM_sequential_Gen_Two_AFEs[1].Gen_Eight_Chans[3].Input_Seqs_reg[1][3][0]) is unused and will be removed from module AFE_DataPath.
+WARNING: [Synth 8-3332] Sequential element (FSM_sequential_Gen_Two_AFEs[1].Gen_Eight_Chans[4].Input_Seqs_reg[1][4][2]) is unused and will be removed from module AFE_DataPath.
+WARNING: [Synth 8-3332] Sequential element (FSM_sequential_Gen_Two_AFEs[1].Gen_Eight_Chans[4].Input_Seqs_reg[1][4][1]) is unused and will be removed from module AFE_DataPath.
+WARNING: [Synth 8-3332] Sequential element (FSM_sequential_Gen_Two_AFEs[1].Gen_Eight_Chans[4].Input_Seqs_reg[1][4][0]) is unused and will be removed from module AFE_DataPath.
+WARNING: [Synth 8-3332] Sequential element (FSM_sequential_Gen_Two_AFEs[1].Gen_Eight_Chans[5].Input_Seqs_reg[1][5][2]) is unused and will be removed from module AFE_DataPath.
+WARNING: [Synth 8-3332] Sequential element (FSM_sequential_Gen_Two_AFEs[1].Gen_Eight_Chans[5].Input_Seqs_reg[1][5][1]) is unused and will be removed from module AFE_DataPath.
+WARNING: [Synth 8-3332] Sequential element (FSM_sequential_Gen_Two_AFEs[1].Gen_Eight_Chans[5].Input_Seqs_reg[1][5][0]) is unused and will be removed from module AFE_DataPath.
+WARNING: [Synth 8-3332] Sequential element (FSM_sequential_Gen_Two_AFEs[1].Gen_Eight_Chans[6].Input_Seqs_reg[1][6][2]) is unused and will be removed from module AFE_DataPath.
+WARNING: [Synth 8-3332] Sequential element (FSM_sequential_Gen_Two_AFEs[1].Gen_Eight_Chans[6].Input_Seqs_reg[1][6][1]) is unused and will be removed from module AFE_DataPath.
+WARNING: [Synth 8-3332] Sequential element (FSM_sequential_Gen_Two_AFEs[1].Gen_Eight_Chans[6].Input_Seqs_reg[1][6][0]) is unused and will be removed from module AFE_DataPath.
+WARNING: [Synth 8-3332] Sequential element (FSM_sequential_Gen_Two_AFEs[1].Gen_Eight_Chans[7].Input_Seqs_reg[1][7][2]) is unused and will be removed from module AFE_DataPath.
+WARNING: [Synth 8-3332] Sequential element (FSM_sequential_Gen_Two_AFEs[1].Gen_Eight_Chans[7].Input_Seqs_reg[1][7][1]) is unused and will be removed from module AFE_DataPath.
+WARNING: [Synth 8-3332] Sequential element (FSM_sequential_Gen_Two_AFEs[1].Gen_Eight_Chans[7].Input_Seqs_reg[1][7][0]) is unused and will be removed from module AFE_DataPath.
 ---------------------------------------------------------------------------------
-Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:01:16 ; elapsed = 00:01:18 . Memory (MB): peak = 2515.730 ; gain = 1045.590
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:01:10 ; elapsed = 00:01:12 . Memory (MB): peak = 2566.484 ; gain = 1042.574
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Applying XDC Timing Constraints
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Applying XDC Timing Constraints : Time (s): cpu = 00:01:21 ; elapsed = 00:01:23 . Memory (MB): peak = 2515.730 ; gain = 1045.590
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:01:15 ; elapsed = 00:01:17 . Memory (MB): peak = 2566.484 ; gain = 1042.574
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Timing Optimization
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Timing Optimization : Time (s): cpu = 00:01:22 ; elapsed = 00:01:24 . Memory (MB): peak = 2515.730 ; gain = 1045.590
+Finished Timing Optimization : Time (s): cpu = 00:01:16 ; elapsed = 00:01:18 . Memory (MB): peak = 2566.484 ; gain = 1042.574
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Technology Mapping
 ---------------------------------------------------------------------------------
-INFO: [Synth 8-4765] Removing register instance (\Gen_Two_AFEs[1].Gen_Eight_Chans[0].PipelineWrtEn_reg[1] ) from module (AFE_Pipeline) as it is equivalent to (\Gen_Two_AFEs[1].Gen_Eight_Chans[7].PipelineWrtEn_reg[1] ) and driving same net [C:/v22.2/FEB_fabric/FEB_fabric.srcs/sources_1/new/AFE_Pipeline.vhd:48]
-INFO: [Synth 8-4765] Removing register instance (\Gen_Two_AFEs[1].Gen_Eight_Chans[1].PipelineWrtEn_reg[1] ) from module (AFE_Pipeline) as it is equivalent to (\Gen_Two_AFEs[1].Gen_Eight_Chans[7].PipelineWrtEn_reg[1] ) and driving same net [C:/v22.2/FEB_fabric/FEB_fabric.srcs/sources_1/new/AFE_Pipeline.vhd:77]
-INFO: [Synth 8-4765] Removing register instance (\Gen_Two_AFEs[1].Gen_Eight_Chans[2].PipelineWrtEn_reg[1] ) from module (AFE_Pipeline) as it is equivalent to (\Gen_Two_AFEs[1].Gen_Eight_Chans[7].PipelineWrtEn_reg[1] ) and driving same net [C:/v22.2/FEB_fabric/FEB_fabric.srcs/sources_1/new/AFE_Pipeline.vhd:77]
-INFO: [Synth 8-4765] Removing register instance (\Gen_Two_AFEs[1].Gen_Eight_Chans[3].PipelineWrtEn_reg[1] ) from module (AFE_Pipeline) as it is equivalent to (\Gen_Two_AFEs[1].Gen_Eight_Chans[7].PipelineWrtEn_reg[1] ) and driving same net [C:/v22.2/FEB_fabric/FEB_fabric.srcs/sources_1/new/AFE_Pipeline.vhd:77]
-INFO: [Synth 8-4765] Removing register instance (\Gen_Two_AFEs[1].Gen_Eight_Chans[4].PipelineWrtEn_reg[1] ) from module (AFE_Pipeline) as it is equivalent to (\Gen_Two_AFEs[1].Gen_Eight_Chans[7].PipelineWrtEn_reg[1] ) and driving same net [C:/v22.2/FEB_fabric/FEB_fabric.srcs/sources_1/new/AFE_Pipeline.vhd:77]
-INFO: [Synth 8-4765] Removing register instance (\Gen_Two_AFEs[1].Gen_Eight_Chans[5].PipelineWrtEn_reg[1] ) from module (AFE_Pipeline) as it is equivalent to (\Gen_Two_AFEs[1].Gen_Eight_Chans[7].PipelineWrtEn_reg[1] ) and driving same net [C:/v22.2/FEB_fabric/FEB_fabric.srcs/sources_1/new/AFE_Pipeline.vhd:77]
-INFO: [Synth 8-4765] Removing register instance (\Gen_Two_AFEs[1].Gen_Eight_Chans[6].PipelineWrtEn_reg[1] ) from module (AFE_Pipeline) as it is equivalent to (\Gen_Two_AFEs[1].Gen_Eight_Chans[7].PipelineWrtEn_reg[1] ) and driving same net [C:/v22.2/FEB_fabric/FEB_fabric.srcs/sources_1/new/AFE_Pipeline.vhd:77]
-INFO: [Synth 8-4765] Removing register instance (\Gen_Two_AFEs[0].Gen_Eight_Chans[0].PipelineWrtEn_reg[0] ) from module (AFE_Pipeline) as it is equivalent to (\Gen_Two_AFEs[0].Gen_Eight_Chans[7].PipelineWrtEn_reg[0] ) and driving same net [C:/v22.2/FEB_fabric/FEB_fabric.srcs/sources_1/new/AFE_Pipeline.vhd:48]
-INFO: [Synth 8-4765] Removing register instance (\Gen_Two_AFEs[0].Gen_Eight_Chans[1].PipelineWrtEn_reg[0] ) from module (AFE_Pipeline) as it is equivalent to (\Gen_Two_AFEs[0].Gen_Eight_Chans[7].PipelineWrtEn_reg[0] ) and driving same net [C:/v22.2/FEB_fabric/FEB_fabric.srcs/sources_1/new/AFE_Pipeline.vhd:77]
-INFO: [Synth 8-4765] Removing register instance (\Gen_Two_AFEs[0].Gen_Eight_Chans[2].PipelineWrtEn_reg[0] ) from module (AFE_Pipeline) as it is equivalent to (\Gen_Two_AFEs[0].Gen_Eight_Chans[7].PipelineWrtEn_reg[0] ) and driving same net [C:/v22.2/FEB_fabric/FEB_fabric.srcs/sources_1/new/AFE_Pipeline.vhd:77]
-INFO: [Synth 8-4765] Removing register instance (\Gen_Two_AFEs[0].Gen_Eight_Chans[3].PipelineWrtEn_reg[0] ) from module (AFE_Pipeline) as it is equivalent to (\Gen_Two_AFEs[0].Gen_Eight_Chans[7].PipelineWrtEn_reg[0] ) and driving same net [C:/v22.2/FEB_fabric/FEB_fabric.srcs/sources_1/new/AFE_Pipeline.vhd:77]
-INFO: [Synth 8-4765] Removing register instance (\Gen_Two_AFEs[0].Gen_Eight_Chans[4].PipelineWrtEn_reg[0] ) from module (AFE_Pipeline) as it is equivalent to (\Gen_Two_AFEs[0].Gen_Eight_Chans[7].PipelineWrtEn_reg[0] ) and driving same net [C:/v22.2/FEB_fabric/FEB_fabric.srcs/sources_1/new/AFE_Pipeline.vhd:77]
-INFO: [Synth 8-4765] Removing register instance (\Gen_Two_AFEs[0].Gen_Eight_Chans[5].PipelineWrtEn_reg[0] ) from module (AFE_Pipeline) as it is equivalent to (\Gen_Two_AFEs[0].Gen_Eight_Chans[7].PipelineWrtEn_reg[0] ) and driving same net [C:/v22.2/FEB_fabric/FEB_fabric.srcs/sources_1/new/AFE_Pipeline.vhd:77]
-INFO: [Synth 8-4765] Removing register instance (\Gen_Two_AFEs[0].Gen_Eight_Chans[6].PipelineWrtEn_reg[0] ) from module (AFE_Pipeline) as it is equivalent to (\Gen_Two_AFEs[0].Gen_Eight_Chans[7].PipelineWrtEn_reg[0] ) and driving same net [C:/v22.2/FEB_fabric/FEB_fabric.srcs/sources_1/new/AFE_Pipeline.vhd:77]
-INFO: [Synth 8-4765] Removing register instance (\Gen_Two_AFEs[0].Gen_Eight_Chans[0].PipelineWrtAdd_reg[0][7] ) from module (AFE_Pipeline) as it is equivalent to (\Gen_Two_AFEs[0].Gen_Eight_Chans[7].PipelineWrtAdd_reg[0][7] ) and driving same net [C:/v22.2/FEB_fabric/FEB_fabric.srcs/sources_1/new/AFE_Pipeline.vhd:49]
-INFO: [Synth 8-4765] Removing register instance (\Gen_Two_AFEs[0].Gen_Eight_Chans[1].PipelineWrtAdd_reg[0][7] ) from module (AFE_Pipeline) as it is equivalent to (\Gen_Two_AFEs[0].Gen_Eight_Chans[7].PipelineWrtAdd_reg[0][7] ) and driving same net [C:/v22.2/FEB_fabric/FEB_fabric.srcs/sources_1/new/AFE_Pipeline.vhd:78]
-INFO: [Synth 8-4765] Removing register instance (\Gen_Two_AFEs[0].Gen_Eight_Chans[2].PipelineWrtAdd_reg[0][7] ) from module (AFE_Pipeline) as it is equivalent to (\Gen_Two_AFEs[0].Gen_Eight_Chans[7].PipelineWrtAdd_reg[0][7] ) and driving same net [C:/v22.2/FEB_fabric/FEB_fabric.srcs/sources_1/new/AFE_Pipeline.vhd:78]
-INFO: [Synth 8-4765] Removing register instance (\Gen_Two_AFEs[0].Gen_Eight_Chans[3].PipelineWrtAdd_reg[0][7] ) from module (AFE_Pipeline) as it is equivalent to (\Gen_Two_AFEs[0].Gen_Eight_Chans[7].PipelineWrtAdd_reg[0][7] ) and driving same net [C:/v22.2/FEB_fabric/FEB_fabric.srcs/sources_1/new/AFE_Pipeline.vhd:78]
-INFO: [Synth 8-4765] Removing register instance (\Gen_Two_AFEs[0].Gen_Eight_Chans[4].PipelineWrtAdd_reg[0][7] ) from module (AFE_Pipeline) as it is equivalent to (\Gen_Two_AFEs[0].Gen_Eight_Chans[7].PipelineWrtAdd_reg[0][7] ) and driving same net [C:/v22.2/FEB_fabric/FEB_fabric.srcs/sources_1/new/AFE_Pipeline.vhd:78]
-INFO: [Synth 8-4765] Removing register instance (\Gen_Two_AFEs[0].Gen_Eight_Chans[5].PipelineWrtAdd_reg[0][7] ) from module (AFE_Pipeline) as it is equivalent to (\Gen_Two_AFEs[0].Gen_Eight_Chans[7].PipelineWrtAdd_reg[0][7] ) and driving same net [C:/v22.2/FEB_fabric/FEB_fabric.srcs/sources_1/new/AFE_Pipeline.vhd:78]
-INFO: [Synth 8-4765] Removing register instance (\Gen_Two_AFEs[0].Gen_Eight_Chans[6].PipelineWrtAdd_reg[0][7] ) from module (AFE_Pipeline) as it is equivalent to (\Gen_Two_AFEs[0].Gen_Eight_Chans[7].PipelineWrtAdd_reg[0][7] ) and driving same net [C:/v22.2/FEB_fabric/FEB_fabric.srcs/sources_1/new/AFE_Pipeline.vhd:78]
-INFO: [Synth 8-4765] Removing register instance (\Gen_Two_AFEs[0].Gen_Eight_Chans[0].PipelineWrtAdd_reg[0][6] ) from module (AFE_Pipeline) as it is equivalent to (\Gen_Two_AFEs[0].Gen_Eight_Chans[7].PipelineWrtAdd_reg[0][6] ) and driving same net [C:/v22.2/FEB_fabric/FEB_fabric.srcs/sources_1/new/AFE_Pipeline.vhd:49]
-INFO: [Synth 8-4765] Removing register instance (\Gen_Two_AFEs[0].Gen_Eight_Chans[1].PipelineWrtAdd_reg[0][6] ) from module (AFE_Pipeline) as it is equivalent to (\Gen_Two_AFEs[0].Gen_Eight_Chans[7].PipelineWrtAdd_reg[0][6] ) and driving same net [C:/v22.2/FEB_fabric/FEB_fabric.srcs/sources_1/new/AFE_Pipeline.vhd:78]
-INFO: [Synth 8-4765] Removing register instance (\Gen_Two_AFEs[0].Gen_Eight_Chans[2].PipelineWrtAdd_reg[0][6] ) from module (AFE_Pipeline) as it is equivalent to (\Gen_Two_AFEs[0].Gen_Eight_Chans[7].PipelineWrtAdd_reg[0][6] ) and driving same net [C:/v22.2/FEB_fabric/FEB_fabric.srcs/sources_1/new/AFE_Pipeline.vhd:78]
-INFO: [Synth 8-4765] Removing register instance (\Gen_Two_AFEs[0].Gen_Eight_Chans[3].PipelineWrtAdd_reg[0][6] ) from module (AFE_Pipeline) as it is equivalent to (\Gen_Two_AFEs[0].Gen_Eight_Chans[7].PipelineWrtAdd_reg[0][6] ) and driving same net [C:/v22.2/FEB_fabric/FEB_fabric.srcs/sources_1/new/AFE_Pipeline.vhd:78]
-INFO: [Synth 8-4765] Removing register instance (\Gen_Two_AFEs[0].Gen_Eight_Chans[4].PipelineWrtAdd_reg[0][6] ) from module (AFE_Pipeline) as it is equivalent to (\Gen_Two_AFEs[0].Gen_Eight_Chans[7].PipelineWrtAdd_reg[0][6] ) and driving same net [C:/v22.2/FEB_fabric/FEB_fabric.srcs/sources_1/new/AFE_Pipeline.vhd:78]
-INFO: [Synth 8-4765] Removing register instance (\Gen_Two_AFEs[0].Gen_Eight_Chans[5].PipelineWrtAdd_reg[0][6] ) from module (AFE_Pipeline) as it is equivalent to (\Gen_Two_AFEs[0].Gen_Eight_Chans[7].PipelineWrtAdd_reg[0][6] ) and driving same net [C:/v22.2/FEB_fabric/FEB_fabric.srcs/sources_1/new/AFE_Pipeline.vhd:78]
-INFO: [Synth 8-4765] Removing register instance (\Gen_Two_AFEs[0].Gen_Eight_Chans[6].PipelineWrtAdd_reg[0][6] ) from module (AFE_Pipeline) as it is equivalent to (\Gen_Two_AFEs[0].Gen_Eight_Chans[7].PipelineWrtAdd_reg[0][6] ) and driving same net [C:/v22.2/FEB_fabric/FEB_fabric.srcs/sources_1/new/AFE_Pipeline.vhd:78]
-INFO: [Synth 8-4765] Removing register instance (\Gen_Two_AFEs[0].Gen_Eight_Chans[0].PipelineWrtAdd_reg[0][5] ) from module (AFE_Pipeline) as it is equivalent to (\Gen_Two_AFEs[0].Gen_Eight_Chans[7].PipelineWrtAdd_reg[0][5] ) and driving same net [C:/v22.2/FEB_fabric/FEB_fabric.srcs/sources_1/new/AFE_Pipeline.vhd:49]
-INFO: [Synth 8-4765] Removing register instance (\Gen_Two_AFEs[0].Gen_Eight_Chans[1].PipelineWrtAdd_reg[0][5] ) from module (AFE_Pipeline) as it is equivalent to (\Gen_Two_AFEs[0].Gen_Eight_Chans[7].PipelineWrtAdd_reg[0][5] ) and driving same net [C:/v22.2/FEB_fabric/FEB_fabric.srcs/sources_1/new/AFE_Pipeline.vhd:78]
-INFO: [Synth 8-4765] Removing register instance (\Gen_Two_AFEs[0].Gen_Eight_Chans[2].PipelineWrtAdd_reg[0][5] ) from module (AFE_Pipeline) as it is equivalent to (\Gen_Two_AFEs[0].Gen_Eight_Chans[7].PipelineWrtAdd_reg[0][5] ) and driving same net [C:/v22.2/FEB_fabric/FEB_fabric.srcs/sources_1/new/AFE_Pipeline.vhd:78]
-INFO: [Synth 8-4765] Removing register instance (\Gen_Two_AFEs[0].Gen_Eight_Chans[3].PipelineWrtAdd_reg[0][5] ) from module (AFE_Pipeline) as it is equivalent to (\Gen_Two_AFEs[0].Gen_Eight_Chans[7].PipelineWrtAdd_reg[0][5] ) and driving same net [C:/v22.2/FEB_fabric/FEB_fabric.srcs/sources_1/new/AFE_Pipeline.vhd:78]
-INFO: [Synth 8-4765] Removing register instance (\Gen_Two_AFEs[0].Gen_Eight_Chans[4].PipelineWrtAdd_reg[0][5] ) from module (AFE_Pipeline) as it is equivalent to (\Gen_Two_AFEs[0].Gen_Eight_Chans[7].PipelineWrtAdd_reg[0][5] ) and driving same net [C:/v22.2/FEB_fabric/FEB_fabric.srcs/sources_1/new/AFE_Pipeline.vhd:78]
-INFO: [Synth 8-4765] Removing register instance (\Gen_Two_AFEs[0].Gen_Eight_Chans[5].PipelineWrtAdd_reg[0][5] ) from module (AFE_Pipeline) as it is equivalent to (\Gen_Two_AFEs[0].Gen_Eight_Chans[7].PipelineWrtAdd_reg[0][5] ) and driving same net [C:/v22.2/FEB_fabric/FEB_fabric.srcs/sources_1/new/AFE_Pipeline.vhd:78]
-INFO: [Synth 8-4765] Removing register instance (\Gen_Two_AFEs[0].Gen_Eight_Chans[6].PipelineWrtAdd_reg[0][5] ) from module (AFE_Pipeline) as it is equivalent to (\Gen_Two_AFEs[0].Gen_Eight_Chans[7].PipelineWrtAdd_reg[0][5] ) and driving same net [C:/v22.2/FEB_fabric/FEB_fabric.srcs/sources_1/new/AFE_Pipeline.vhd:78]
-INFO: [Synth 8-4765] Removing register instance (\Gen_Two_AFEs[0].Gen_Eight_Chans[0].PipelineWrtAdd_reg[0][4] ) from module (AFE_Pipeline) as it is equivalent to (\Gen_Two_AFEs[0].Gen_Eight_Chans[7].PipelineWrtAdd_reg[0][4] ) and driving same net [C:/v22.2/FEB_fabric/FEB_fabric.srcs/sources_1/new/AFE_Pipeline.vhd:49]
-INFO: [Synth 8-4765] Removing register instance (\Gen_Two_AFEs[0].Gen_Eight_Chans[1].PipelineWrtAdd_reg[0][4] ) from module (AFE_Pipeline) as it is equivalent to (\Gen_Two_AFEs[0].Gen_Eight_Chans[7].PipelineWrtAdd_reg[0][4] ) and driving same net [C:/v22.2/FEB_fabric/FEB_fabric.srcs/sources_1/new/AFE_Pipeline.vhd:78]
-INFO: [Synth 8-4765] Removing register instance (\Gen_Two_AFEs[0].Gen_Eight_Chans[2].PipelineWrtAdd_reg[0][4] ) from module (AFE_Pipeline) as it is equivalent to (\Gen_Two_AFEs[0].Gen_Eight_Chans[7].PipelineWrtAdd_reg[0][4] ) and driving same net [C:/v22.2/FEB_fabric/FEB_fabric.srcs/sources_1/new/AFE_Pipeline.vhd:78]
-INFO: [Synth 8-4765] Removing register instance (\Gen_Two_AFEs[0].Gen_Eight_Chans[3].PipelineWrtAdd_reg[0][4] ) from module (AFE_Pipeline) as it is equivalent to (\Gen_Two_AFEs[0].Gen_Eight_Chans[7].PipelineWrtAdd_reg[0][4] ) and driving same net [C:/v22.2/FEB_fabric/FEB_fabric.srcs/sources_1/new/AFE_Pipeline.vhd:78]
-INFO: [Synth 8-4765] Removing register instance (\Gen_Two_AFEs[0].Gen_Eight_Chans[4].PipelineWrtAdd_reg[0][4] ) from module (AFE_Pipeline) as it is equivalent to (\Gen_Two_AFEs[0].Gen_Eight_Chans[7].PipelineWrtAdd_reg[0][4] ) and driving same net [C:/v22.2/FEB_fabric/FEB_fabric.srcs/sources_1/new/AFE_Pipeline.vhd:78]
-INFO: [Synth 8-4765] Removing register instance (\Gen_Two_AFEs[0].Gen_Eight_Chans[5].PipelineWrtAdd_reg[0][4] ) from module (AFE_Pipeline) as it is equivalent to (\Gen_Two_AFEs[0].Gen_Eight_Chans[7].PipelineWrtAdd_reg[0][4] ) and driving same net [C:/v22.2/FEB_fabric/FEB_fabric.srcs/sources_1/new/AFE_Pipeline.vhd:78]
-INFO: [Synth 8-4765] Removing register instance (\Gen_Two_AFEs[0].Gen_Eight_Chans[6].PipelineWrtAdd_reg[0][4] ) from module (AFE_Pipeline) as it is equivalent to (\Gen_Two_AFEs[0].Gen_Eight_Chans[7].PipelineWrtAdd_reg[0][4] ) and driving same net [C:/v22.2/FEB_fabric/FEB_fabric.srcs/sources_1/new/AFE_Pipeline.vhd:78]
-INFO: [Synth 8-4765] Removing register instance (\Gen_Two_AFEs[0].Gen_Eight_Chans[0].PipelineWrtAdd_reg[0][3] ) from module (AFE_Pipeline) as it is equivalent to (\Gen_Two_AFEs[0].Gen_Eight_Chans[7].PipelineWrtAdd_reg[0][3] ) and driving same net [C:/v22.2/FEB_fabric/FEB_fabric.srcs/sources_1/new/AFE_Pipeline.vhd:49]
-INFO: [Synth 8-4765] Removing register instance (\Gen_Two_AFEs[0].Gen_Eight_Chans[1].PipelineWrtAdd_reg[0][3] ) from module (AFE_Pipeline) as it is equivalent to (\Gen_Two_AFEs[0].Gen_Eight_Chans[7].PipelineWrtAdd_reg[0][3] ) and driving same net [C:/v22.2/FEB_fabric/FEB_fabric.srcs/sources_1/new/AFE_Pipeline.vhd:78]
-INFO: [Synth 8-4765] Removing register instance (\Gen_Two_AFEs[0].Gen_Eight_Chans[2].PipelineWrtAdd_reg[0][3] ) from module (AFE_Pipeline) as it is equivalent to (\Gen_Two_AFEs[0].Gen_Eight_Chans[7].PipelineWrtAdd_reg[0][3] ) and driving same net [C:/v22.2/FEB_fabric/FEB_fabric.srcs/sources_1/new/AFE_Pipeline.vhd:78]
-INFO: [Synth 8-4765] Removing register instance (\Gen_Two_AFEs[0].Gen_Eight_Chans[3].PipelineWrtAdd_reg[0][3] ) from module (AFE_Pipeline) as it is equivalent to (\Gen_Two_AFEs[0].Gen_Eight_Chans[7].PipelineWrtAdd_reg[0][3] ) and driving same net [C:/v22.2/FEB_fabric/FEB_fabric.srcs/sources_1/new/AFE_Pipeline.vhd:78]
-INFO: [Synth 8-4765] Removing register instance (\Gen_Two_AFEs[0].Gen_Eight_Chans[4].PipelineWrtAdd_reg[0][3] ) from module (AFE_Pipeline) as it is equivalent to (\Gen_Two_AFEs[0].Gen_Eight_Chans[7].PipelineWrtAdd_reg[0][3] ) and driving same net [C:/v22.2/FEB_fabric/FEB_fabric.srcs/sources_1/new/AFE_Pipeline.vhd:78]
-INFO: [Synth 8-4765] Removing register instance (\Gen_Two_AFEs[0].Gen_Eight_Chans[5].PipelineWrtAdd_reg[0][3] ) from module (AFE_Pipeline) as it is equivalent to (\Gen_Two_AFEs[0].Gen_Eight_Chans[7].PipelineWrtAdd_reg[0][3] ) and driving same net [C:/v22.2/FEB_fabric/FEB_fabric.srcs/sources_1/new/AFE_Pipeline.vhd:78]
-INFO: [Synth 8-4765] Removing register instance (\Gen_Two_AFEs[0].Gen_Eight_Chans[6].PipelineWrtAdd_reg[0][3] ) from module (AFE_Pipeline) as it is equivalent to (\Gen_Two_AFEs[0].Gen_Eight_Chans[7].PipelineWrtAdd_reg[0][3] ) and driving same net [C:/v22.2/FEB_fabric/FEB_fabric.srcs/sources_1/new/AFE_Pipeline.vhd:78]
-INFO: [Synth 8-4765] Removing register instance (\Gen_Two_AFEs[0].Gen_Eight_Chans[0].PipelineWrtAdd_reg[0][2] ) from module (AFE_Pipeline) as it is equivalent to (\Gen_Two_AFEs[0].Gen_Eight_Chans[7].PipelineWrtAdd_reg[0][2] ) and driving same net [C:/v22.2/FEB_fabric/FEB_fabric.srcs/sources_1/new/AFE_Pipeline.vhd:49]
-INFO: [Synth 8-4765] Removing register instance (\Gen_Two_AFEs[0].Gen_Eight_Chans[1].PipelineWrtAdd_reg[0][2] ) from module (AFE_Pipeline) as it is equivalent to (\Gen_Two_AFEs[0].Gen_Eight_Chans[7].PipelineWrtAdd_reg[0][2] ) and driving same net [C:/v22.2/FEB_fabric/FEB_fabric.srcs/sources_1/new/AFE_Pipeline.vhd:78]
-INFO: [Synth 8-4765] Removing register instance (\Gen_Two_AFEs[0].Gen_Eight_Chans[2].PipelineWrtAdd_reg[0][2] ) from module (AFE_Pipeline) as it is equivalent to (\Gen_Two_AFEs[0].Gen_Eight_Chans[7].PipelineWrtAdd_reg[0][2] ) and driving same net [C:/v22.2/FEB_fabric/FEB_fabric.srcs/sources_1/new/AFE_Pipeline.vhd:78]
-INFO: [Synth 8-4765] Removing register instance (\Gen_Two_AFEs[0].Gen_Eight_Chans[3].PipelineWrtAdd_reg[0][2] ) from module (AFE_Pipeline) as it is equivalent to (\Gen_Two_AFEs[0].Gen_Eight_Chans[7].PipelineWrtAdd_reg[0][2] ) and driving same net [C:/v22.2/FEB_fabric/FEB_fabric.srcs/sources_1/new/AFE_Pipeline.vhd:78]
-INFO: [Synth 8-4765] Removing register instance (\Gen_Two_AFEs[0].Gen_Eight_Chans[4].PipelineWrtAdd_reg[0][2] ) from module (AFE_Pipeline) as it is equivalent to (\Gen_Two_AFEs[0].Gen_Eight_Chans[7].PipelineWrtAdd_reg[0][2] ) and driving same net [C:/v22.2/FEB_fabric/FEB_fabric.srcs/sources_1/new/AFE_Pipeline.vhd:78]
-INFO: [Synth 8-4765] Removing register instance (\Gen_Two_AFEs[0].Gen_Eight_Chans[5].PipelineWrtAdd_reg[0][2] ) from module (AFE_Pipeline) as it is equivalent to (\Gen_Two_AFEs[0].Gen_Eight_Chans[7].PipelineWrtAdd_reg[0][2] ) and driving same net [C:/v22.2/FEB_fabric/FEB_fabric.srcs/sources_1/new/AFE_Pipeline.vhd:78]
-INFO: [Synth 8-4765] Removing register instance (\Gen_Two_AFEs[0].Gen_Eight_Chans[6].PipelineWrtAdd_reg[0][2] ) from module (AFE_Pipeline) as it is equivalent to (\Gen_Two_AFEs[0].Gen_Eight_Chans[7].PipelineWrtAdd_reg[0][2] ) and driving same net [C:/v22.2/FEB_fabric/FEB_fabric.srcs/sources_1/new/AFE_Pipeline.vhd:78]
-INFO: [Synth 8-4765] Removing register instance (\Gen_Two_AFEs[0].Gen_Eight_Chans[0].PipelineWrtAdd_reg[0][1] ) from module (AFE_Pipeline) as it is equivalent to (\Gen_Two_AFEs[0].Gen_Eight_Chans[7].PipelineWrtAdd_reg[0][1] ) and driving same net [C:/v22.2/FEB_fabric/FEB_fabric.srcs/sources_1/new/AFE_Pipeline.vhd:49]
-INFO: [Synth 8-4765] Removing register instance (\Gen_Two_AFEs[0].Gen_Eight_Chans[1].PipelineWrtAdd_reg[0][1] ) from module (AFE_Pipeline) as it is equivalent to (\Gen_Two_AFEs[0].Gen_Eight_Chans[7].PipelineWrtAdd_reg[0][1] ) and driving same net [C:/v22.2/FEB_fabric/FEB_fabric.srcs/sources_1/new/AFE_Pipeline.vhd:78]
-INFO: [Synth 8-4765] Removing register instance (\Gen_Two_AFEs[0].Gen_Eight_Chans[2].PipelineWrtAdd_reg[0][1] ) from module (AFE_Pipeline) as it is equivalent to (\Gen_Two_AFEs[0].Gen_Eight_Chans[7].PipelineWrtAdd_reg[0][1] ) and driving same net [C:/v22.2/FEB_fabric/FEB_fabric.srcs/sources_1/new/AFE_Pipeline.vhd:78]
-INFO: [Synth 8-4765] Removing register instance (\Gen_Two_AFEs[0].Gen_Eight_Chans[3].PipelineWrtAdd_reg[0][1] ) from module (AFE_Pipeline) as it is equivalent to (\Gen_Two_AFEs[0].Gen_Eight_Chans[7].PipelineWrtAdd_reg[0][1] ) and driving same net [C:/v22.2/FEB_fabric/FEB_fabric.srcs/sources_1/new/AFE_Pipeline.vhd:78]
-INFO: [Synth 8-4765] Removing register instance (\Gen_Two_AFEs[0].Gen_Eight_Chans[4].PipelineWrtAdd_reg[0][1] ) from module (AFE_Pipeline) as it is equivalent to (\Gen_Two_AFEs[0].Gen_Eight_Chans[7].PipelineWrtAdd_reg[0][1] ) and driving same net [C:/v22.2/FEB_fabric/FEB_fabric.srcs/sources_1/new/AFE_Pipeline.vhd:78]
-INFO: [Synth 8-4765] Removing register instance (\Gen_Two_AFEs[0].Gen_Eight_Chans[5].PipelineWrtAdd_reg[0][1] ) from module (AFE_Pipeline) as it is equivalent to (\Gen_Two_AFEs[0].Gen_Eight_Chans[7].PipelineWrtAdd_reg[0][1] ) and driving same net [C:/v22.2/FEB_fabric/FEB_fabric.srcs/sources_1/new/AFE_Pipeline.vhd:78]
-INFO: [Synth 8-4765] Removing register instance (\Gen_Two_AFEs[0].Gen_Eight_Chans[6].PipelineWrtAdd_reg[0][1] ) from module (AFE_Pipeline) as it is equivalent to (\Gen_Two_AFEs[0].Gen_Eight_Chans[7].PipelineWrtAdd_reg[0][1] ) and driving same net [C:/v22.2/FEB_fabric/FEB_fabric.srcs/sources_1/new/AFE_Pipeline.vhd:78]
-INFO: [Synth 8-4765] Removing register instance (\Gen_Two_AFEs[0].Gen_Eight_Chans[0].PipelineWrtAdd_reg[0][0] ) from module (AFE_Pipeline) as it is equivalent to (\Gen_Two_AFEs[0].Gen_Eight_Chans[7].PipelineWrtAdd_reg[0][0] ) and driving same net [C:/v22.2/FEB_fabric/FEB_fabric.srcs/sources_1/new/AFE_Pipeline.vhd:49]
-INFO: [Synth 8-4765] Removing register instance (\Gen_Two_AFEs[0].Gen_Eight_Chans[1].PipelineWrtAdd_reg[0][0] ) from module (AFE_Pipeline) as it is equivalent to (\Gen_Two_AFEs[0].Gen_Eight_Chans[7].PipelineWrtAdd_reg[0][0] ) and driving same net [C:/v22.2/FEB_fabric/FEB_fabric.srcs/sources_1/new/AFE_Pipeline.vhd:78]
-INFO: [Synth 8-4765] Removing register instance (\Gen_Two_AFEs[0].Gen_Eight_Chans[2].PipelineWrtAdd_reg[0][0] ) from module (AFE_Pipeline) as it is equivalent to (\Gen_Two_AFEs[0].Gen_Eight_Chans[7].PipelineWrtAdd_reg[0][0] ) and driving same net [C:/v22.2/FEB_fabric/FEB_fabric.srcs/sources_1/new/AFE_Pipeline.vhd:78]
-INFO: [Synth 8-4765] Removing register instance (\Gen_Two_AFEs[0].Gen_Eight_Chans[3].PipelineWrtAdd_reg[0][0] ) from module (AFE_Pipeline) as it is equivalent to (\Gen_Two_AFEs[0].Gen_Eight_Chans[7].PipelineWrtAdd_reg[0][0] ) and driving same net [C:/v22.2/FEB_fabric/FEB_fabric.srcs/sources_1/new/AFE_Pipeline.vhd:78]
-INFO: [Synth 8-4765] Removing register instance (\Gen_Two_AFEs[0].Gen_Eight_Chans[4].PipelineWrtAdd_reg[0][0] ) from module (AFE_Pipeline) as it is equivalent to (\Gen_Two_AFEs[0].Gen_Eight_Chans[7].PipelineWrtAdd_reg[0][0] ) and driving same net [C:/v22.2/FEB_fabric/FEB_fabric.srcs/sources_1/new/AFE_Pipeline.vhd:78]
-INFO: [Synth 8-4765] Removing register instance (\Gen_Two_AFEs[0].Gen_Eight_Chans[5].PipelineWrtAdd_reg[0][0] ) from module (AFE_Pipeline) as it is equivalent to (\Gen_Two_AFEs[0].Gen_Eight_Chans[7].PipelineWrtAdd_reg[0][0] ) and driving same net [C:/v22.2/FEB_fabric/FEB_fabric.srcs/sources_1/new/AFE_Pipeline.vhd:78]
-INFO: [Synth 8-4765] Removing register instance (\Gen_Two_AFEs[0].Gen_Eight_Chans[6].PipelineWrtAdd_reg[0][0] ) from module (AFE_Pipeline) as it is equivalent to (\Gen_Two_AFEs[0].Gen_Eight_Chans[7].PipelineWrtAdd_reg[0][0] ) and driving same net [C:/v22.2/FEB_fabric/FEB_fabric.srcs/sources_1/new/AFE_Pipeline.vhd:78]
-INFO: [Synth 8-4765] Removing register instance (\Gen_Two_AFEs[0].Gen_Eight_Chans[0].PipelineRdAdd_reg[0][7] ) from module (AFE_Pipeline) as it is equivalent to (\Gen_Two_AFEs[0].Gen_Eight_Chans[7].PipelineRdAdd_reg[0][7] ) and driving same net [C:/v22.2/FEB_fabric/FEB_fabric.srcs/sources_1/new/AFE_Pipeline.vhd:61]
-INFO: [Synth 8-4765] Removing register instance (\Gen_Two_AFEs[0].Gen_Eight_Chans[1].PipelineRdAdd_reg[0][7] ) from module (AFE_Pipeline) as it is equivalent to (\Gen_Two_AFEs[0].Gen_Eight_Chans[7].PipelineRdAdd_reg[0][7] ) and driving same net [C:/v22.2/FEB_fabric/FEB_fabric.srcs/sources_1/new/AFE_Pipeline.vhd:79]
-INFO: [Synth 8-4765] Removing register instance (\Gen_Two_AFEs[0].Gen_Eight_Chans[2].PipelineRdAdd_reg[0][7] ) from module (AFE_Pipeline) as it is equivalent to (\Gen_Two_AFEs[0].Gen_Eight_Chans[7].PipelineRdAdd_reg[0][7] ) and driving same net [C:/v22.2/FEB_fabric/FEB_fabric.srcs/sources_1/new/AFE_Pipeline.vhd:79]
-INFO: [Synth 8-4765] Removing register instance (\Gen_Two_AFEs[0].Gen_Eight_Chans[3].PipelineRdAdd_reg[0][7] ) from module (AFE_Pipeline) as it is equivalent to (\Gen_Two_AFEs[0].Gen_Eight_Chans[7].PipelineRdAdd_reg[0][7] ) and driving same net [C:/v22.2/FEB_fabric/FEB_fabric.srcs/sources_1/new/AFE_Pipeline.vhd:79]
-INFO: [Synth 8-4765] Removing register instance (\Gen_Two_AFEs[0].Gen_Eight_Chans[4].PipelineRdAdd_reg[0][7] ) from module (AFE_Pipeline) as it is equivalent to (\Gen_Two_AFEs[0].Gen_Eight_Chans[7].PipelineRdAdd_reg[0][7] ) and driving same net [C:/v22.2/FEB_fabric/FEB_fabric.srcs/sources_1/new/AFE_Pipeline.vhd:79]
-INFO: [Synth 8-4765] Removing register instance (\Gen_Two_AFEs[0].Gen_Eight_Chans[5].PipelineRdAdd_reg[0][7] ) from module (AFE_Pipeline) as it is equivalent to (\Gen_Two_AFEs[0].Gen_Eight_Chans[7].PipelineRdAdd_reg[0][7] ) and driving same net [C:/v22.2/FEB_fabric/FEB_fabric.srcs/sources_1/new/AFE_Pipeline.vhd:79]
-INFO: [Synth 8-4765] Removing register instance (\Gen_Two_AFEs[0].Gen_Eight_Chans[6].PipelineRdAdd_reg[0][7] ) from module (AFE_Pipeline) as it is equivalent to (\Gen_Two_AFEs[0].Gen_Eight_Chans[7].PipelineRdAdd_reg[0][7] ) and driving same net [C:/v22.2/FEB_fabric/FEB_fabric.srcs/sources_1/new/AFE_Pipeline.vhd:79]
-INFO: [Synth 8-4765] Removing register instance (\Gen_Two_AFEs[0].Gen_Eight_Chans[0].PipelineRdAdd_reg[0][6] ) from module (AFE_Pipeline) as it is equivalent to (\Gen_Two_AFEs[0].Gen_Eight_Chans[7].PipelineRdAdd_reg[0][6] ) and driving same net [C:/v22.2/FEB_fabric/FEB_fabric.srcs/sources_1/new/AFE_Pipeline.vhd:61]
-INFO: [Synth 8-4765] Removing register instance (\Gen_Two_AFEs[0].Gen_Eight_Chans[1].PipelineRdAdd_reg[0][6] ) from module (AFE_Pipeline) as it is equivalent to (\Gen_Two_AFEs[0].Gen_Eight_Chans[7].PipelineRdAdd_reg[0][6] ) and driving same net [C:/v22.2/FEB_fabric/FEB_fabric.srcs/sources_1/new/AFE_Pipeline.vhd:79]
-INFO: [Synth 8-4765] Removing register instance (\Gen_Two_AFEs[0].Gen_Eight_Chans[2].PipelineRdAdd_reg[0][6] ) from module (AFE_Pipeline) as it is equivalent to (\Gen_Two_AFEs[0].Gen_Eight_Chans[7].PipelineRdAdd_reg[0][6] ) and driving same net [C:/v22.2/FEB_fabric/FEB_fabric.srcs/sources_1/new/AFE_Pipeline.vhd:79]
-INFO: [Synth 8-4765] Removing register instance (\Gen_Two_AFEs[0].Gen_Eight_Chans[3].PipelineRdAdd_reg[0][6] ) from module (AFE_Pipeline) as it is equivalent to (\Gen_Two_AFEs[0].Gen_Eight_Chans[7].PipelineRdAdd_reg[0][6] ) and driving same net [C:/v22.2/FEB_fabric/FEB_fabric.srcs/sources_1/new/AFE_Pipeline.vhd:79]
-INFO: [Synth 8-4765] Removing register instance (\Gen_Two_AFEs[0].Gen_Eight_Chans[4].PipelineRdAdd_reg[0][6] ) from module (AFE_Pipeline) as it is equivalent to (\Gen_Two_AFEs[0].Gen_Eight_Chans[7].PipelineRdAdd_reg[0][6] ) and driving same net [C:/v22.2/FEB_fabric/FEB_fabric.srcs/sources_1/new/AFE_Pipeline.vhd:79]
-INFO: [Synth 8-4765] Removing register instance (\Gen_Two_AFEs[0].Gen_Eight_Chans[5].PipelineRdAdd_reg[0][6] ) from module (AFE_Pipeline) as it is equivalent to (\Gen_Two_AFEs[0].Gen_Eight_Chans[7].PipelineRdAdd_reg[0][6] ) and driving same net [C:/v22.2/FEB_fabric/FEB_fabric.srcs/sources_1/new/AFE_Pipeline.vhd:79]
-INFO: [Synth 8-4765] Removing register instance (\Gen_Two_AFEs[0].Gen_Eight_Chans[6].PipelineRdAdd_reg[0][6] ) from module (AFE_Pipeline) as it is equivalent to (\Gen_Two_AFEs[0].Gen_Eight_Chans[7].PipelineRdAdd_reg[0][6] ) and driving same net [C:/v22.2/FEB_fabric/FEB_fabric.srcs/sources_1/new/AFE_Pipeline.vhd:79]
-INFO: [Synth 8-4765] Removing register instance (\Gen_Two_AFEs[0].Gen_Eight_Chans[0].PipelineRdAdd_reg[0][5] ) from module (AFE_Pipeline) as it is equivalent to (\Gen_Two_AFEs[0].Gen_Eight_Chans[7].PipelineRdAdd_reg[0][5] ) and driving same net [C:/v22.2/FEB_fabric/FEB_fabric.srcs/sources_1/new/AFE_Pipeline.vhd:61]
-INFO: [Synth 8-4765] Removing register instance (\Gen_Two_AFEs[0].Gen_Eight_Chans[1].PipelineRdAdd_reg[0][5] ) from module (AFE_Pipeline) as it is equivalent to (\Gen_Two_AFEs[0].Gen_Eight_Chans[7].PipelineRdAdd_reg[0][5] ) and driving same net [C:/v22.2/FEB_fabric/FEB_fabric.srcs/sources_1/new/AFE_Pipeline.vhd:79]
-INFO: [Synth 8-4765] Removing register instance (\Gen_Two_AFEs[0].Gen_Eight_Chans[2].PipelineRdAdd_reg[0][5] ) from module (AFE_Pipeline) as it is equivalent to (\Gen_Two_AFEs[0].Gen_Eight_Chans[7].PipelineRdAdd_reg[0][5] ) and driving same net [C:/v22.2/FEB_fabric/FEB_fabric.srcs/sources_1/new/AFE_Pipeline.vhd:79]
-INFO: [Synth 8-4765] Removing register instance (\Gen_Two_AFEs[0].Gen_Eight_Chans[3].PipelineRdAdd_reg[0][5] ) from module (AFE_Pipeline) as it is equivalent to (\Gen_Two_AFEs[0].Gen_Eight_Chans[7].PipelineRdAdd_reg[0][5] ) and driving same net [C:/v22.2/FEB_fabric/FEB_fabric.srcs/sources_1/new/AFE_Pipeline.vhd:79]
-INFO: [Synth 8-4765] Removing register instance (\Gen_Two_AFEs[0].Gen_Eight_Chans[4].PipelineRdAdd_reg[0][5] ) from module (AFE_Pipeline) as it is equivalent to (\Gen_Two_AFEs[0].Gen_Eight_Chans[7].PipelineRdAdd_reg[0][5] ) and driving same net [C:/v22.2/FEB_fabric/FEB_fabric.srcs/sources_1/new/AFE_Pipeline.vhd:79]
-INFO: [Synth 8-4765] Removing register instance (\Gen_Two_AFEs[0].Gen_Eight_Chans[5].PipelineRdAdd_reg[0][5] ) from module (AFE_Pipeline) as it is equivalent to (\Gen_Two_AFEs[0].Gen_Eight_Chans[7].PipelineRdAdd_reg[0][5] ) and driving same net [C:/v22.2/FEB_fabric/FEB_fabric.srcs/sources_1/new/AFE_Pipeline.vhd:79]
-INFO: [Synth 8-4765] Removing register instance (\Gen_Two_AFEs[0].Gen_Eight_Chans[6].PipelineRdAdd_reg[0][5] ) from module (AFE_Pipeline) as it is equivalent to (\Gen_Two_AFEs[0].Gen_Eight_Chans[7].PipelineRdAdd_reg[0][5] ) and driving same net [C:/v22.2/FEB_fabric/FEB_fabric.srcs/sources_1/new/AFE_Pipeline.vhd:79]
-INFO: [Synth 8-4765] Removing register instance (\Gen_Two_AFEs[0].Gen_Eight_Chans[0].PipelineRdAdd_reg[0][4] ) from module (AFE_Pipeline) as it is equivalent to (\Gen_Two_AFEs[0].Gen_Eight_Chans[7].PipelineRdAdd_reg[0][4] ) and driving same net [C:/v22.2/FEB_fabric/FEB_fabric.srcs/sources_1/new/AFE_Pipeline.vhd:61]
-INFO: [Synth 8-4765] Removing register instance (\Gen_Two_AFEs[0].Gen_Eight_Chans[1].PipelineRdAdd_reg[0][4] ) from module (AFE_Pipeline) as it is equivalent to (\Gen_Two_AFEs[0].Gen_Eight_Chans[7].PipelineRdAdd_reg[0][4] ) and driving same net [C:/v22.2/FEB_fabric/FEB_fabric.srcs/sources_1/new/AFE_Pipeline.vhd:79]
-INFO: [Synth 8-4765] Removing register instance (\Gen_Two_AFEs[0].Gen_Eight_Chans[2].PipelineRdAdd_reg[0][4] ) from module (AFE_Pipeline) as it is equivalent to (\Gen_Two_AFEs[0].Gen_Eight_Chans[7].PipelineRdAdd_reg[0][4] ) and driving same net [C:/v22.2/FEB_fabric/FEB_fabric.srcs/sources_1/new/AFE_Pipeline.vhd:79]
-INFO: [Synth 8-4765] Removing register instance (\Gen_Two_AFEs[0].Gen_Eight_Chans[3].PipelineRdAdd_reg[0][4] ) from module (AFE_Pipeline) as it is equivalent to (\Gen_Two_AFEs[0].Gen_Eight_Chans[7].PipelineRdAdd_reg[0][4] ) and driving same net [C:/v22.2/FEB_fabric/FEB_fabric.srcs/sources_1/new/AFE_Pipeline.vhd:79]
-INFO: [Synth 8-4765] Removing register instance (\Gen_Two_AFEs[0].Gen_Eight_Chans[4].PipelineRdAdd_reg[0][4] ) from module (AFE_Pipeline) as it is equivalent to (\Gen_Two_AFEs[0].Gen_Eight_Chans[7].PipelineRdAdd_reg[0][4] ) and driving same net [C:/v22.2/FEB_fabric/FEB_fabric.srcs/sources_1/new/AFE_Pipeline.vhd:79]
-INFO: [Synth 8-4765] Removing register instance (\Gen_Two_AFEs[0].Gen_Eight_Chans[5].PipelineRdAdd_reg[0][4] ) from module (AFE_Pipeline) as it is equivalent to (\Gen_Two_AFEs[0].Gen_Eight_Chans[7].PipelineRdAdd_reg[0][4] ) and driving same net [C:/v22.2/FEB_fabric/FEB_fabric.srcs/sources_1/new/AFE_Pipeline.vhd:79]
-INFO: [Synth 8-4765] Removing register instance (\Gen_Two_AFEs[0].Gen_Eight_Chans[6].PipelineRdAdd_reg[0][4] ) from module (AFE_Pipeline) as it is equivalent to (\Gen_Two_AFEs[0].Gen_Eight_Chans[7].PipelineRdAdd_reg[0][4] ) and driving same net [C:/v22.2/FEB_fabric/FEB_fabric.srcs/sources_1/new/AFE_Pipeline.vhd:79]
-INFO: [Synth 8-4765] Removing register instance (\Gen_Two_AFEs[0].Gen_Eight_Chans[0].PipelineRdAdd_reg[0][3] ) from module (AFE_Pipeline) as it is equivalent to (\Gen_Two_AFEs[0].Gen_Eight_Chans[7].PipelineRdAdd_reg[0][3] ) and driving same net [C:/v22.2/FEB_fabric/FEB_fabric.srcs/sources_1/new/AFE_Pipeline.vhd:61]
-INFO: [Synth 8-4765] Removing register instance (\Gen_Two_AFEs[0].Gen_Eight_Chans[1].PipelineRdAdd_reg[0][3] ) from module (AFE_Pipeline) as it is equivalent to (\Gen_Two_AFEs[0].Gen_Eight_Chans[7].PipelineRdAdd_reg[0][3] ) and driving same net [C:/v22.2/FEB_fabric/FEB_fabric.srcs/sources_1/new/AFE_Pipeline.vhd:79]
+INFO: [Synth 8-4765] Removing register instance (\AFE_DataPath_inst/AFE_Pipeline_inst/Gen_Two_AFEs[0].Gen_Eight_Chans[0].PipelineWrtEn_reg[0] ) from module (FEB_fabric) as it is equivalent to (\AFE_DataPath_inst/AFE_Pipeline_inst/Gen_Two_AFEs[0].Gen_Eight_Chans[7].PipelineWrtEn_reg[0] ) and driving same net [C:/v22.2/FEB_fabric/FEB_fabric.srcs/sources_1/new/AFE_Pipeline.vhd:48]
+INFO: [Synth 8-4765] Removing register instance (\AFE_DataPath_inst/AFE_Pipeline_inst/Gen_Two_AFEs[0].Gen_Eight_Chans[1].PipelineWrtEn_reg[0] ) from module (FEB_fabric) as it is equivalent to (\AFE_DataPath_inst/AFE_Pipeline_inst/Gen_Two_AFEs[0].Gen_Eight_Chans[7].PipelineWrtEn_reg[0] ) and driving same net [C:/v22.2/FEB_fabric/FEB_fabric.srcs/sources_1/new/AFE_Pipeline.vhd:77]
+INFO: [Synth 8-4765] Removing register instance (\AFE_DataPath_inst/AFE_Pipeline_inst/Gen_Two_AFEs[0].Gen_Eight_Chans[2].PipelineWrtEn_reg[0] ) from module (FEB_fabric) as it is equivalent to (\AFE_DataPath_inst/AFE_Pipeline_inst/Gen_Two_AFEs[0].Gen_Eight_Chans[7].PipelineWrtEn_reg[0] ) and driving same net [C:/v22.2/FEB_fabric/FEB_fabric.srcs/sources_1/new/AFE_Pipeline.vhd:77]
+INFO: [Synth 8-4765] Removing register instance (\AFE_DataPath_inst/AFE_Pipeline_inst/Gen_Two_AFEs[0].Gen_Eight_Chans[3].PipelineWrtEn_reg[0] ) from module (FEB_fabric) as it is equivalent to (\AFE_DataPath_inst/AFE_Pipeline_inst/Gen_Two_AFEs[0].Gen_Eight_Chans[7].PipelineWrtEn_reg[0] ) and driving same net [C:/v22.2/FEB_fabric/FEB_fabric.srcs/sources_1/new/AFE_Pipeline.vhd:77]
+INFO: [Synth 8-4765] Removing register instance (\AFE_DataPath_inst/AFE_Pipeline_inst/Gen_Two_AFEs[0].Gen_Eight_Chans[4].PipelineWrtEn_reg[0] ) from module (FEB_fabric) as it is equivalent to (\AFE_DataPath_inst/AFE_Pipeline_inst/Gen_Two_AFEs[0].Gen_Eight_Chans[7].PipelineWrtEn_reg[0] ) and driving same net [C:/v22.2/FEB_fabric/FEB_fabric.srcs/sources_1/new/AFE_Pipeline.vhd:77]
+INFO: [Synth 8-4765] Removing register instance (\AFE_DataPath_inst/AFE_Pipeline_inst/Gen_Two_AFEs[0].Gen_Eight_Chans[5].PipelineWrtEn_reg[0] ) from module (FEB_fabric) as it is equivalent to (\AFE_DataPath_inst/AFE_Pipeline_inst/Gen_Two_AFEs[0].Gen_Eight_Chans[7].PipelineWrtEn_reg[0] ) and driving same net [C:/v22.2/FEB_fabric/FEB_fabric.srcs/sources_1/new/AFE_Pipeline.vhd:77]
+INFO: [Synth 8-4765] Removing register instance (\AFE_DataPath_inst/AFE_Pipeline_inst/Gen_Two_AFEs[0].Gen_Eight_Chans[6].PipelineWrtEn_reg[0] ) from module (FEB_fabric) as it is equivalent to (\AFE_DataPath_inst/AFE_Pipeline_inst/Gen_Two_AFEs[0].Gen_Eight_Chans[7].PipelineWrtEn_reg[0] ) and driving same net [C:/v22.2/FEB_fabric/FEB_fabric.srcs/sources_1/new/AFE_Pipeline.vhd:77]
+INFO: [Synth 8-4765] Removing register instance (\AFE_DataPath_inst/AFE_Pipeline_inst/Gen_Two_AFEs[0].Gen_Eight_Chans[0].PipelineWrtAdd_reg[0][7] ) from module (FEB_fabric) as it is equivalent to (\AFE_DataPath_inst/AFE_Pipeline_inst/Gen_Two_AFEs[0].Gen_Eight_Chans[7].PipelineWrtAdd_reg[0][7] ) and driving same net [C:/v22.2/FEB_fabric/FEB_fabric.srcs/sources_1/new/AFE_Pipeline.vhd:49]
+INFO: [Synth 8-4765] Removing register instance (\AFE_DataPath_inst/AFE_Pipeline_inst/Gen_Two_AFEs[0].Gen_Eight_Chans[1].PipelineWrtAdd_reg[0][7] ) from module (FEB_fabric) as it is equivalent to (\AFE_DataPath_inst/AFE_Pipeline_inst/Gen_Two_AFEs[0].Gen_Eight_Chans[7].PipelineWrtAdd_reg[0][7] ) and driving same net [C:/v22.2/FEB_fabric/FEB_fabric.srcs/sources_1/new/AFE_Pipeline.vhd:78]
+INFO: [Synth 8-4765] Removing register instance (\AFE_DataPath_inst/AFE_Pipeline_inst/Gen_Two_AFEs[0].Gen_Eight_Chans[2].PipelineWrtAdd_reg[0][7] ) from module (FEB_fabric) as it is equivalent to (\AFE_DataPath_inst/AFE_Pipeline_inst/Gen_Two_AFEs[0].Gen_Eight_Chans[7].PipelineWrtAdd_reg[0][7] ) and driving same net [C:/v22.2/FEB_fabric/FEB_fabric.srcs/sources_1/new/AFE_Pipeline.vhd:78]
+INFO: [Synth 8-4765] Removing register instance (\AFE_DataPath_inst/AFE_Pipeline_inst/Gen_Two_AFEs[0].Gen_Eight_Chans[3].PipelineWrtAdd_reg[0][7] ) from module (FEB_fabric) as it is equivalent to (\AFE_DataPath_inst/AFE_Pipeline_inst/Gen_Two_AFEs[0].Gen_Eight_Chans[7].PipelineWrtAdd_reg[0][7] ) and driving same net [C:/v22.2/FEB_fabric/FEB_fabric.srcs/sources_1/new/AFE_Pipeline.vhd:78]
+INFO: [Synth 8-4765] Removing register instance (\AFE_DataPath_inst/AFE_Pipeline_inst/Gen_Two_AFEs[0].Gen_Eight_Chans[4].PipelineWrtAdd_reg[0][7] ) from module (FEB_fabric) as it is equivalent to (\AFE_DataPath_inst/AFE_Pipeline_inst/Gen_Two_AFEs[0].Gen_Eight_Chans[7].PipelineWrtAdd_reg[0][7] ) and driving same net [C:/v22.2/FEB_fabric/FEB_fabric.srcs/sources_1/new/AFE_Pipeline.vhd:78]
+INFO: [Synth 8-4765] Removing register instance (\AFE_DataPath_inst/AFE_Pipeline_inst/Gen_Two_AFEs[0].Gen_Eight_Chans[5].PipelineWrtAdd_reg[0][7] ) from module (FEB_fabric) as it is equivalent to (\AFE_DataPath_inst/AFE_Pipeline_inst/Gen_Two_AFEs[0].Gen_Eight_Chans[7].PipelineWrtAdd_reg[0][7] ) and driving same net [C:/v22.2/FEB_fabric/FEB_fabric.srcs/sources_1/new/AFE_Pipeline.vhd:78]
+INFO: [Synth 8-4765] Removing register instance (\AFE_DataPath_inst/AFE_Pipeline_inst/Gen_Two_AFEs[0].Gen_Eight_Chans[6].PipelineWrtAdd_reg[0][7] ) from module (FEB_fabric) as it is equivalent to (\AFE_DataPath_inst/AFE_Pipeline_inst/Gen_Two_AFEs[0].Gen_Eight_Chans[7].PipelineWrtAdd_reg[0][7] ) and driving same net [C:/v22.2/FEB_fabric/FEB_fabric.srcs/sources_1/new/AFE_Pipeline.vhd:78]
+INFO: [Synth 8-4765] Removing register instance (\AFE_DataPath_inst/AFE_Pipeline_inst/Gen_Two_AFEs[0].Gen_Eight_Chans[0].PipelineWrtAdd_reg[0][6] ) from module (FEB_fabric) as it is equivalent to (\AFE_DataPath_inst/AFE_Pipeline_inst/Gen_Two_AFEs[0].Gen_Eight_Chans[7].PipelineWrtAdd_reg[0][6] ) and driving same net [C:/v22.2/FEB_fabric/FEB_fabric.srcs/sources_1/new/AFE_Pipeline.vhd:49]
+INFO: [Synth 8-4765] Removing register instance (\AFE_DataPath_inst/AFE_Pipeline_inst/Gen_Two_AFEs[0].Gen_Eight_Chans[1].PipelineWrtAdd_reg[0][6] ) from module (FEB_fabric) as it is equivalent to (\AFE_DataPath_inst/AFE_Pipeline_inst/Gen_Two_AFEs[0].Gen_Eight_Chans[7].PipelineWrtAdd_reg[0][6] ) and driving same net [C:/v22.2/FEB_fabric/FEB_fabric.srcs/sources_1/new/AFE_Pipeline.vhd:78]
+INFO: [Synth 8-4765] Removing register instance (\AFE_DataPath_inst/AFE_Pipeline_inst/Gen_Two_AFEs[0].Gen_Eight_Chans[2].PipelineWrtAdd_reg[0][6] ) from module (FEB_fabric) as it is equivalent to (\AFE_DataPath_inst/AFE_Pipeline_inst/Gen_Two_AFEs[0].Gen_Eight_Chans[7].PipelineWrtAdd_reg[0][6] ) and driving same net [C:/v22.2/FEB_fabric/FEB_fabric.srcs/sources_1/new/AFE_Pipeline.vhd:78]
+INFO: [Synth 8-4765] Removing register instance (\AFE_DataPath_inst/AFE_Pipeline_inst/Gen_Two_AFEs[0].Gen_Eight_Chans[3].PipelineWrtAdd_reg[0][6] ) from module (FEB_fabric) as it is equivalent to (\AFE_DataPath_inst/AFE_Pipeline_inst/Gen_Two_AFEs[0].Gen_Eight_Chans[7].PipelineWrtAdd_reg[0][6] ) and driving same net [C:/v22.2/FEB_fabric/FEB_fabric.srcs/sources_1/new/AFE_Pipeline.vhd:78]
+INFO: [Synth 8-4765] Removing register instance (\AFE_DataPath_inst/AFE_Pipeline_inst/Gen_Two_AFEs[0].Gen_Eight_Chans[4].PipelineWrtAdd_reg[0][6] ) from module (FEB_fabric) as it is equivalent to (\AFE_DataPath_inst/AFE_Pipeline_inst/Gen_Two_AFEs[0].Gen_Eight_Chans[7].PipelineWrtAdd_reg[0][6] ) and driving same net [C:/v22.2/FEB_fabric/FEB_fabric.srcs/sources_1/new/AFE_Pipeline.vhd:78]
+INFO: [Synth 8-4765] Removing register instance (\AFE_DataPath_inst/AFE_Pipeline_inst/Gen_Two_AFEs[0].Gen_Eight_Chans[5].PipelineWrtAdd_reg[0][6] ) from module (FEB_fabric) as it is equivalent to (\AFE_DataPath_inst/AFE_Pipeline_inst/Gen_Two_AFEs[0].Gen_Eight_Chans[7].PipelineWrtAdd_reg[0][6] ) and driving same net [C:/v22.2/FEB_fabric/FEB_fabric.srcs/sources_1/new/AFE_Pipeline.vhd:78]
+INFO: [Synth 8-4765] Removing register instance (\AFE_DataPath_inst/AFE_Pipeline_inst/Gen_Two_AFEs[0].Gen_Eight_Chans[6].PipelineWrtAdd_reg[0][6] ) from module (FEB_fabric) as it is equivalent to (\AFE_DataPath_inst/AFE_Pipeline_inst/Gen_Two_AFEs[0].Gen_Eight_Chans[7].PipelineWrtAdd_reg[0][6] ) and driving same net [C:/v22.2/FEB_fabric/FEB_fabric.srcs/sources_1/new/AFE_Pipeline.vhd:78]
+INFO: [Synth 8-4765] Removing register instance (\AFE_DataPath_inst/AFE_Pipeline_inst/Gen_Two_AFEs[0].Gen_Eight_Chans[0].PipelineWrtAdd_reg[0][5] ) from module (FEB_fabric) as it is equivalent to (\AFE_DataPath_inst/AFE_Pipeline_inst/Gen_Two_AFEs[0].Gen_Eight_Chans[7].PipelineWrtAdd_reg[0][5] ) and driving same net [C:/v22.2/FEB_fabric/FEB_fabric.srcs/sources_1/new/AFE_Pipeline.vhd:49]
+INFO: [Synth 8-4765] Removing register instance (\AFE_DataPath_inst/AFE_Pipeline_inst/Gen_Two_AFEs[0].Gen_Eight_Chans[1].PipelineWrtAdd_reg[0][5] ) from module (FEB_fabric) as it is equivalent to (\AFE_DataPath_inst/AFE_Pipeline_inst/Gen_Two_AFEs[0].Gen_Eight_Chans[7].PipelineWrtAdd_reg[0][5] ) and driving same net [C:/v22.2/FEB_fabric/FEB_fabric.srcs/sources_1/new/AFE_Pipeline.vhd:78]
+INFO: [Synth 8-4765] Removing register instance (\AFE_DataPath_inst/AFE_Pipeline_inst/Gen_Two_AFEs[0].Gen_Eight_Chans[2].PipelineWrtAdd_reg[0][5] ) from module (FEB_fabric) as it is equivalent to (\AFE_DataPath_inst/AFE_Pipeline_inst/Gen_Two_AFEs[0].Gen_Eight_Chans[7].PipelineWrtAdd_reg[0][5] ) and driving same net [C:/v22.2/FEB_fabric/FEB_fabric.srcs/sources_1/new/AFE_Pipeline.vhd:78]
+INFO: [Synth 8-4765] Removing register instance (\AFE_DataPath_inst/AFE_Pipeline_inst/Gen_Two_AFEs[0].Gen_Eight_Chans[3].PipelineWrtAdd_reg[0][5] ) from module (FEB_fabric) as it is equivalent to (\AFE_DataPath_inst/AFE_Pipeline_inst/Gen_Two_AFEs[0].Gen_Eight_Chans[7].PipelineWrtAdd_reg[0][5] ) and driving same net [C:/v22.2/FEB_fabric/FEB_fabric.srcs/sources_1/new/AFE_Pipeline.vhd:78]
+INFO: [Synth 8-4765] Removing register instance (\AFE_DataPath_inst/AFE_Pipeline_inst/Gen_Two_AFEs[0].Gen_Eight_Chans[4].PipelineWrtAdd_reg[0][5] ) from module (FEB_fabric) as it is equivalent to (\AFE_DataPath_inst/AFE_Pipeline_inst/Gen_Two_AFEs[0].Gen_Eight_Chans[7].PipelineWrtAdd_reg[0][5] ) and driving same net [C:/v22.2/FEB_fabric/FEB_fabric.srcs/sources_1/new/AFE_Pipeline.vhd:78]
+INFO: [Synth 8-4765] Removing register instance (\AFE_DataPath_inst/AFE_Pipeline_inst/Gen_Two_AFEs[0].Gen_Eight_Chans[5].PipelineWrtAdd_reg[0][5] ) from module (FEB_fabric) as it is equivalent to (\AFE_DataPath_inst/AFE_Pipeline_inst/Gen_Two_AFEs[0].Gen_Eight_Chans[7].PipelineWrtAdd_reg[0][5] ) and driving same net [C:/v22.2/FEB_fabric/FEB_fabric.srcs/sources_1/new/AFE_Pipeline.vhd:78]
+INFO: [Synth 8-4765] Removing register instance (\AFE_DataPath_inst/AFE_Pipeline_inst/Gen_Two_AFEs[0].Gen_Eight_Chans[6].PipelineWrtAdd_reg[0][5] ) from module (FEB_fabric) as it is equivalent to (\AFE_DataPath_inst/AFE_Pipeline_inst/Gen_Two_AFEs[0].Gen_Eight_Chans[7].PipelineWrtAdd_reg[0][5] ) and driving same net [C:/v22.2/FEB_fabric/FEB_fabric.srcs/sources_1/new/AFE_Pipeline.vhd:78]
+INFO: [Synth 8-4765] Removing register instance (\AFE_DataPath_inst/AFE_Pipeline_inst/Gen_Two_AFEs[0].Gen_Eight_Chans[0].PipelineWrtAdd_reg[0][4] ) from module (FEB_fabric) as it is equivalent to (\AFE_DataPath_inst/AFE_Pipeline_inst/Gen_Two_AFEs[0].Gen_Eight_Chans[7].PipelineWrtAdd_reg[0][4] ) and driving same net [C:/v22.2/FEB_fabric/FEB_fabric.srcs/sources_1/new/AFE_Pipeline.vhd:49]
+INFO: [Synth 8-4765] Removing register instance (\AFE_DataPath_inst/AFE_Pipeline_inst/Gen_Two_AFEs[0].Gen_Eight_Chans[1].PipelineWrtAdd_reg[0][4] ) from module (FEB_fabric) as it is equivalent to (\AFE_DataPath_inst/AFE_Pipeline_inst/Gen_Two_AFEs[0].Gen_Eight_Chans[7].PipelineWrtAdd_reg[0][4] ) and driving same net [C:/v22.2/FEB_fabric/FEB_fabric.srcs/sources_1/new/AFE_Pipeline.vhd:78]
+INFO: [Synth 8-4765] Removing register instance (\AFE_DataPath_inst/AFE_Pipeline_inst/Gen_Two_AFEs[0].Gen_Eight_Chans[2].PipelineWrtAdd_reg[0][4] ) from module (FEB_fabric) as it is equivalent to (\AFE_DataPath_inst/AFE_Pipeline_inst/Gen_Two_AFEs[0].Gen_Eight_Chans[7].PipelineWrtAdd_reg[0][4] ) and driving same net [C:/v22.2/FEB_fabric/FEB_fabric.srcs/sources_1/new/AFE_Pipeline.vhd:78]
+INFO: [Synth 8-4765] Removing register instance (\AFE_DataPath_inst/AFE_Pipeline_inst/Gen_Two_AFEs[0].Gen_Eight_Chans[3].PipelineWrtAdd_reg[0][4] ) from module (FEB_fabric) as it is equivalent to (\AFE_DataPath_inst/AFE_Pipeline_inst/Gen_Two_AFEs[0].Gen_Eight_Chans[7].PipelineWrtAdd_reg[0][4] ) and driving same net [C:/v22.2/FEB_fabric/FEB_fabric.srcs/sources_1/new/AFE_Pipeline.vhd:78]
+INFO: [Synth 8-4765] Removing register instance (\AFE_DataPath_inst/AFE_Pipeline_inst/Gen_Two_AFEs[0].Gen_Eight_Chans[4].PipelineWrtAdd_reg[0][4] ) from module (FEB_fabric) as it is equivalent to (\AFE_DataPath_inst/AFE_Pipeline_inst/Gen_Two_AFEs[0].Gen_Eight_Chans[7].PipelineWrtAdd_reg[0][4] ) and driving same net [C:/v22.2/FEB_fabric/FEB_fabric.srcs/sources_1/new/AFE_Pipeline.vhd:78]
+INFO: [Synth 8-4765] Removing register instance (\AFE_DataPath_inst/AFE_Pipeline_inst/Gen_Two_AFEs[0].Gen_Eight_Chans[5].PipelineWrtAdd_reg[0][4] ) from module (FEB_fabric) as it is equivalent to (\AFE_DataPath_inst/AFE_Pipeline_inst/Gen_Two_AFEs[0].Gen_Eight_Chans[7].PipelineWrtAdd_reg[0][4] ) and driving same net [C:/v22.2/FEB_fabric/FEB_fabric.srcs/sources_1/new/AFE_Pipeline.vhd:78]
+INFO: [Synth 8-4765] Removing register instance (\AFE_DataPath_inst/AFE_Pipeline_inst/Gen_Two_AFEs[0].Gen_Eight_Chans[6].PipelineWrtAdd_reg[0][4] ) from module (FEB_fabric) as it is equivalent to (\AFE_DataPath_inst/AFE_Pipeline_inst/Gen_Two_AFEs[0].Gen_Eight_Chans[7].PipelineWrtAdd_reg[0][4] ) and driving same net [C:/v22.2/FEB_fabric/FEB_fabric.srcs/sources_1/new/AFE_Pipeline.vhd:78]
+INFO: [Synth 8-4765] Removing register instance (\AFE_DataPath_inst/AFE_Pipeline_inst/Gen_Two_AFEs[0].Gen_Eight_Chans[0].PipelineWrtAdd_reg[0][3] ) from module (FEB_fabric) as it is equivalent to (\AFE_DataPath_inst/AFE_Pipeline_inst/Gen_Two_AFEs[0].Gen_Eight_Chans[7].PipelineWrtAdd_reg[0][3] ) and driving same net [C:/v22.2/FEB_fabric/FEB_fabric.srcs/sources_1/new/AFE_Pipeline.vhd:49]
+INFO: [Synth 8-4765] Removing register instance (\AFE_DataPath_inst/AFE_Pipeline_inst/Gen_Two_AFEs[0].Gen_Eight_Chans[1].PipelineWrtAdd_reg[0][3] ) from module (FEB_fabric) as it is equivalent to (\AFE_DataPath_inst/AFE_Pipeline_inst/Gen_Two_AFEs[0].Gen_Eight_Chans[7].PipelineWrtAdd_reg[0][3] ) and driving same net [C:/v22.2/FEB_fabric/FEB_fabric.srcs/sources_1/new/AFE_Pipeline.vhd:78]
+INFO: [Synth 8-4765] Removing register instance (\AFE_DataPath_inst/AFE_Pipeline_inst/Gen_Two_AFEs[0].Gen_Eight_Chans[2].PipelineWrtAdd_reg[0][3] ) from module (FEB_fabric) as it is equivalent to (\AFE_DataPath_inst/AFE_Pipeline_inst/Gen_Two_AFEs[0].Gen_Eight_Chans[7].PipelineWrtAdd_reg[0][3] ) and driving same net [C:/v22.2/FEB_fabric/FEB_fabric.srcs/sources_1/new/AFE_Pipeline.vhd:78]
+INFO: [Synth 8-4765] Removing register instance (\AFE_DataPath_inst/AFE_Pipeline_inst/Gen_Two_AFEs[0].Gen_Eight_Chans[3].PipelineWrtAdd_reg[0][3] ) from module (FEB_fabric) as it is equivalent to (\AFE_DataPath_inst/AFE_Pipeline_inst/Gen_Two_AFEs[0].Gen_Eight_Chans[7].PipelineWrtAdd_reg[0][3] ) and driving same net [C:/v22.2/FEB_fabric/FEB_fabric.srcs/sources_1/new/AFE_Pipeline.vhd:78]
+INFO: [Synth 8-4765] Removing register instance (\AFE_DataPath_inst/AFE_Pipeline_inst/Gen_Two_AFEs[0].Gen_Eight_Chans[4].PipelineWrtAdd_reg[0][3] ) from module (FEB_fabric) as it is equivalent to (\AFE_DataPath_inst/AFE_Pipeline_inst/Gen_Two_AFEs[0].Gen_Eight_Chans[7].PipelineWrtAdd_reg[0][3] ) and driving same net [C:/v22.2/FEB_fabric/FEB_fabric.srcs/sources_1/new/AFE_Pipeline.vhd:78]
+INFO: [Synth 8-4765] Removing register instance (\AFE_DataPath_inst/AFE_Pipeline_inst/Gen_Two_AFEs[0].Gen_Eight_Chans[5].PipelineWrtAdd_reg[0][3] ) from module (FEB_fabric) as it is equivalent to (\AFE_DataPath_inst/AFE_Pipeline_inst/Gen_Two_AFEs[0].Gen_Eight_Chans[7].PipelineWrtAdd_reg[0][3] ) and driving same net [C:/v22.2/FEB_fabric/FEB_fabric.srcs/sources_1/new/AFE_Pipeline.vhd:78]
+INFO: [Synth 8-4765] Removing register instance (\AFE_DataPath_inst/AFE_Pipeline_inst/Gen_Two_AFEs[0].Gen_Eight_Chans[6].PipelineWrtAdd_reg[0][3] ) from module (FEB_fabric) as it is equivalent to (\AFE_DataPath_inst/AFE_Pipeline_inst/Gen_Two_AFEs[0].Gen_Eight_Chans[7].PipelineWrtAdd_reg[0][3] ) and driving same net [C:/v22.2/FEB_fabric/FEB_fabric.srcs/sources_1/new/AFE_Pipeline.vhd:78]
+INFO: [Synth 8-4765] Removing register instance (\AFE_DataPath_inst/AFE_Pipeline_inst/Gen_Two_AFEs[0].Gen_Eight_Chans[0].PipelineWrtAdd_reg[0][2] ) from module (FEB_fabric) as it is equivalent to (\AFE_DataPath_inst/AFE_Pipeline_inst/Gen_Two_AFEs[0].Gen_Eight_Chans[7].PipelineWrtAdd_reg[0][2] ) and driving same net [C:/v22.2/FEB_fabric/FEB_fabric.srcs/sources_1/new/AFE_Pipeline.vhd:49]
+INFO: [Synth 8-4765] Removing register instance (\AFE_DataPath_inst/AFE_Pipeline_inst/Gen_Two_AFEs[0].Gen_Eight_Chans[1].PipelineWrtAdd_reg[0][2] ) from module (FEB_fabric) as it is equivalent to (\AFE_DataPath_inst/AFE_Pipeline_inst/Gen_Two_AFEs[0].Gen_Eight_Chans[7].PipelineWrtAdd_reg[0][2] ) and driving same net [C:/v22.2/FEB_fabric/FEB_fabric.srcs/sources_1/new/AFE_Pipeline.vhd:78]
+INFO: [Synth 8-4765] Removing register instance (\AFE_DataPath_inst/AFE_Pipeline_inst/Gen_Two_AFEs[0].Gen_Eight_Chans[2].PipelineWrtAdd_reg[0][2] ) from module (FEB_fabric) as it is equivalent to (\AFE_DataPath_inst/AFE_Pipeline_inst/Gen_Two_AFEs[0].Gen_Eight_Chans[7].PipelineWrtAdd_reg[0][2] ) and driving same net [C:/v22.2/FEB_fabric/FEB_fabric.srcs/sources_1/new/AFE_Pipeline.vhd:78]
+INFO: [Synth 8-4765] Removing register instance (\AFE_DataPath_inst/AFE_Pipeline_inst/Gen_Two_AFEs[0].Gen_Eight_Chans[3].PipelineWrtAdd_reg[0][2] ) from module (FEB_fabric) as it is equivalent to (\AFE_DataPath_inst/AFE_Pipeline_inst/Gen_Two_AFEs[0].Gen_Eight_Chans[7].PipelineWrtAdd_reg[0][2] ) and driving same net [C:/v22.2/FEB_fabric/FEB_fabric.srcs/sources_1/new/AFE_Pipeline.vhd:78]
+INFO: [Synth 8-4765] Removing register instance (\AFE_DataPath_inst/AFE_Pipeline_inst/Gen_Two_AFEs[0].Gen_Eight_Chans[4].PipelineWrtAdd_reg[0][2] ) from module (FEB_fabric) as it is equivalent to (\AFE_DataPath_inst/AFE_Pipeline_inst/Gen_Two_AFEs[0].Gen_Eight_Chans[7].PipelineWrtAdd_reg[0][2] ) and driving same net [C:/v22.2/FEB_fabric/FEB_fabric.srcs/sources_1/new/AFE_Pipeline.vhd:78]
+INFO: [Synth 8-4765] Removing register instance (\AFE_DataPath_inst/AFE_Pipeline_inst/Gen_Two_AFEs[0].Gen_Eight_Chans[5].PipelineWrtAdd_reg[0][2] ) from module (FEB_fabric) as it is equivalent to (\AFE_DataPath_inst/AFE_Pipeline_inst/Gen_Two_AFEs[0].Gen_Eight_Chans[7].PipelineWrtAdd_reg[0][2] ) and driving same net [C:/v22.2/FEB_fabric/FEB_fabric.srcs/sources_1/new/AFE_Pipeline.vhd:78]
+INFO: [Synth 8-4765] Removing register instance (\AFE_DataPath_inst/AFE_Pipeline_inst/Gen_Two_AFEs[0].Gen_Eight_Chans[6].PipelineWrtAdd_reg[0][2] ) from module (FEB_fabric) as it is equivalent to (\AFE_DataPath_inst/AFE_Pipeline_inst/Gen_Two_AFEs[0].Gen_Eight_Chans[7].PipelineWrtAdd_reg[0][2] ) and driving same net [C:/v22.2/FEB_fabric/FEB_fabric.srcs/sources_1/new/AFE_Pipeline.vhd:78]
+INFO: [Synth 8-4765] Removing register instance (\AFE_DataPath_inst/AFE_Pipeline_inst/Gen_Two_AFEs[0].Gen_Eight_Chans[0].PipelineWrtAdd_reg[0][1] ) from module (FEB_fabric) as it is equivalent to (\AFE_DataPath_inst/AFE_Pipeline_inst/Gen_Two_AFEs[0].Gen_Eight_Chans[7].PipelineWrtAdd_reg[0][1] ) and driving same net [C:/v22.2/FEB_fabric/FEB_fabric.srcs/sources_1/new/AFE_Pipeline.vhd:49]
+INFO: [Synth 8-4765] Removing register instance (\AFE_DataPath_inst/AFE_Pipeline_inst/Gen_Two_AFEs[0].Gen_Eight_Chans[1].PipelineWrtAdd_reg[0][1] ) from module (FEB_fabric) as it is equivalent to (\AFE_DataPath_inst/AFE_Pipeline_inst/Gen_Two_AFEs[0].Gen_Eight_Chans[7].PipelineWrtAdd_reg[0][1] ) and driving same net [C:/v22.2/FEB_fabric/FEB_fabric.srcs/sources_1/new/AFE_Pipeline.vhd:78]
+INFO: [Synth 8-4765] Removing register instance (\AFE_DataPath_inst/AFE_Pipeline_inst/Gen_Two_AFEs[0].Gen_Eight_Chans[2].PipelineWrtAdd_reg[0][1] ) from module (FEB_fabric) as it is equivalent to (\AFE_DataPath_inst/AFE_Pipeline_inst/Gen_Two_AFEs[0].Gen_Eight_Chans[7].PipelineWrtAdd_reg[0][1] ) and driving same net [C:/v22.2/FEB_fabric/FEB_fabric.srcs/sources_1/new/AFE_Pipeline.vhd:78]
+INFO: [Synth 8-4765] Removing register instance (\AFE_DataPath_inst/AFE_Pipeline_inst/Gen_Two_AFEs[0].Gen_Eight_Chans[3].PipelineWrtAdd_reg[0][1] ) from module (FEB_fabric) as it is equivalent to (\AFE_DataPath_inst/AFE_Pipeline_inst/Gen_Two_AFEs[0].Gen_Eight_Chans[7].PipelineWrtAdd_reg[0][1] ) and driving same net [C:/v22.2/FEB_fabric/FEB_fabric.srcs/sources_1/new/AFE_Pipeline.vhd:78]
+INFO: [Synth 8-4765] Removing register instance (\AFE_DataPath_inst/AFE_Pipeline_inst/Gen_Two_AFEs[0].Gen_Eight_Chans[4].PipelineWrtAdd_reg[0][1] ) from module (FEB_fabric) as it is equivalent to (\AFE_DataPath_inst/AFE_Pipeline_inst/Gen_Two_AFEs[0].Gen_Eight_Chans[7].PipelineWrtAdd_reg[0][1] ) and driving same net [C:/v22.2/FEB_fabric/FEB_fabric.srcs/sources_1/new/AFE_Pipeline.vhd:78]
+INFO: [Synth 8-4765] Removing register instance (\AFE_DataPath_inst/AFE_Pipeline_inst/Gen_Two_AFEs[0].Gen_Eight_Chans[5].PipelineWrtAdd_reg[0][1] ) from module (FEB_fabric) as it is equivalent to (\AFE_DataPath_inst/AFE_Pipeline_inst/Gen_Two_AFEs[0].Gen_Eight_Chans[7].PipelineWrtAdd_reg[0][1] ) and driving same net [C:/v22.2/FEB_fabric/FEB_fabric.srcs/sources_1/new/AFE_Pipeline.vhd:78]
+INFO: [Synth 8-4765] Removing register instance (\AFE_DataPath_inst/AFE_Pipeline_inst/Gen_Two_AFEs[0].Gen_Eight_Chans[6].PipelineWrtAdd_reg[0][1] ) from module (FEB_fabric) as it is equivalent to (\AFE_DataPath_inst/AFE_Pipeline_inst/Gen_Two_AFEs[0].Gen_Eight_Chans[7].PipelineWrtAdd_reg[0][1] ) and driving same net [C:/v22.2/FEB_fabric/FEB_fabric.srcs/sources_1/new/AFE_Pipeline.vhd:78]
+INFO: [Synth 8-4765] Removing register instance (\AFE_DataPath_inst/AFE_Pipeline_inst/Gen_Two_AFEs[0].Gen_Eight_Chans[0].PipelineWrtAdd_reg[0][0] ) from module (FEB_fabric) as it is equivalent to (\AFE_DataPath_inst/AFE_Pipeline_inst/Gen_Two_AFEs[0].Gen_Eight_Chans[7].PipelineWrtAdd_reg[0][0] ) and driving same net [C:/v22.2/FEB_fabric/FEB_fabric.srcs/sources_1/new/AFE_Pipeline.vhd:49]
+INFO: [Synth 8-4765] Removing register instance (\AFE_DataPath_inst/AFE_Pipeline_inst/Gen_Two_AFEs[0].Gen_Eight_Chans[1].PipelineWrtAdd_reg[0][0] ) from module (FEB_fabric) as it is equivalent to (\AFE_DataPath_inst/AFE_Pipeline_inst/Gen_Two_AFEs[0].Gen_Eight_Chans[7].PipelineWrtAdd_reg[0][0] ) and driving same net [C:/v22.2/FEB_fabric/FEB_fabric.srcs/sources_1/new/AFE_Pipeline.vhd:78]
+INFO: [Synth 8-4765] Removing register instance (\AFE_DataPath_inst/AFE_Pipeline_inst/Gen_Two_AFEs[0].Gen_Eight_Chans[2].PipelineWrtAdd_reg[0][0] ) from module (FEB_fabric) as it is equivalent to (\AFE_DataPath_inst/AFE_Pipeline_inst/Gen_Two_AFEs[0].Gen_Eight_Chans[7].PipelineWrtAdd_reg[0][0] ) and driving same net [C:/v22.2/FEB_fabric/FEB_fabric.srcs/sources_1/new/AFE_Pipeline.vhd:78]
+INFO: [Synth 8-4765] Removing register instance (\AFE_DataPath_inst/AFE_Pipeline_inst/Gen_Two_AFEs[0].Gen_Eight_Chans[3].PipelineWrtAdd_reg[0][0] ) from module (FEB_fabric) as it is equivalent to (\AFE_DataPath_inst/AFE_Pipeline_inst/Gen_Two_AFEs[0].Gen_Eight_Chans[7].PipelineWrtAdd_reg[0][0] ) and driving same net [C:/v22.2/FEB_fabric/FEB_fabric.srcs/sources_1/new/AFE_Pipeline.vhd:78]
+INFO: [Synth 8-4765] Removing register instance (\AFE_DataPath_inst/AFE_Pipeline_inst/Gen_Two_AFEs[0].Gen_Eight_Chans[4].PipelineWrtAdd_reg[0][0] ) from module (FEB_fabric) as it is equivalent to (\AFE_DataPath_inst/AFE_Pipeline_inst/Gen_Two_AFEs[0].Gen_Eight_Chans[7].PipelineWrtAdd_reg[0][0] ) and driving same net [C:/v22.2/FEB_fabric/FEB_fabric.srcs/sources_1/new/AFE_Pipeline.vhd:78]
+INFO: [Synth 8-4765] Removing register instance (\AFE_DataPath_inst/AFE_Pipeline_inst/Gen_Two_AFEs[0].Gen_Eight_Chans[5].PipelineWrtAdd_reg[0][0] ) from module (FEB_fabric) as it is equivalent to (\AFE_DataPath_inst/AFE_Pipeline_inst/Gen_Two_AFEs[0].Gen_Eight_Chans[7].PipelineWrtAdd_reg[0][0] ) and driving same net [C:/v22.2/FEB_fabric/FEB_fabric.srcs/sources_1/new/AFE_Pipeline.vhd:78]
+INFO: [Synth 8-4765] Removing register instance (\AFE_DataPath_inst/AFE_Pipeline_inst/Gen_Two_AFEs[0].Gen_Eight_Chans[6].PipelineWrtAdd_reg[0][0] ) from module (FEB_fabric) as it is equivalent to (\AFE_DataPath_inst/AFE_Pipeline_inst/Gen_Two_AFEs[0].Gen_Eight_Chans[7].PipelineWrtAdd_reg[0][0] ) and driving same net [C:/v22.2/FEB_fabric/FEB_fabric.srcs/sources_1/new/AFE_Pipeline.vhd:78]
+INFO: [Synth 8-4765] Removing register instance (\AFE_DataPath_inst/AFE_Pipeline_inst/Gen_Two_AFEs[0].Gen_Eight_Chans[0].PipelineRdAdd_reg[0][7] ) from module (FEB_fabric) as it is equivalent to (\AFE_DataPath_inst/AFE_Pipeline_inst/Gen_Two_AFEs[0].Gen_Eight_Chans[7].PipelineRdAdd_reg[0][7] ) and driving same net [C:/v22.2/FEB_fabric/FEB_fabric.srcs/sources_1/new/AFE_Pipeline.vhd:61]
+INFO: [Synth 8-4765] Removing register instance (\AFE_DataPath_inst/AFE_Pipeline_inst/Gen_Two_AFEs[0].Gen_Eight_Chans[1].PipelineRdAdd_reg[0][7] ) from module (FEB_fabric) as it is equivalent to (\AFE_DataPath_inst/AFE_Pipeline_inst/Gen_Two_AFEs[0].Gen_Eight_Chans[7].PipelineRdAdd_reg[0][7] ) and driving same net [C:/v22.2/FEB_fabric/FEB_fabric.srcs/sources_1/new/AFE_Pipeline.vhd:79]
+INFO: [Synth 8-4765] Removing register instance (\AFE_DataPath_inst/AFE_Pipeline_inst/Gen_Two_AFEs[0].Gen_Eight_Chans[2].PipelineRdAdd_reg[0][7] ) from module (FEB_fabric) as it is equivalent to (\AFE_DataPath_inst/AFE_Pipeline_inst/Gen_Two_AFEs[0].Gen_Eight_Chans[7].PipelineRdAdd_reg[0][7] ) and driving same net [C:/v22.2/FEB_fabric/FEB_fabric.srcs/sources_1/new/AFE_Pipeline.vhd:79]
+INFO: [Synth 8-4765] Removing register instance (\AFE_DataPath_inst/AFE_Pipeline_inst/Gen_Two_AFEs[0].Gen_Eight_Chans[3].PipelineRdAdd_reg[0][7] ) from module (FEB_fabric) as it is equivalent to (\AFE_DataPath_inst/AFE_Pipeline_inst/Gen_Two_AFEs[0].Gen_Eight_Chans[7].PipelineRdAdd_reg[0][7] ) and driving same net [C:/v22.2/FEB_fabric/FEB_fabric.srcs/sources_1/new/AFE_Pipeline.vhd:79]
+INFO: [Synth 8-4765] Removing register instance (\AFE_DataPath_inst/AFE_Pipeline_inst/Gen_Two_AFEs[0].Gen_Eight_Chans[4].PipelineRdAdd_reg[0][7] ) from module (FEB_fabric) as it is equivalent to (\AFE_DataPath_inst/AFE_Pipeline_inst/Gen_Two_AFEs[0].Gen_Eight_Chans[7].PipelineRdAdd_reg[0][7] ) and driving same net [C:/v22.2/FEB_fabric/FEB_fabric.srcs/sources_1/new/AFE_Pipeline.vhd:79]
+INFO: [Synth 8-4765] Removing register instance (\AFE_DataPath_inst/AFE_Pipeline_inst/Gen_Two_AFEs[0].Gen_Eight_Chans[5].PipelineRdAdd_reg[0][7] ) from module (FEB_fabric) as it is equivalent to (\AFE_DataPath_inst/AFE_Pipeline_inst/Gen_Two_AFEs[0].Gen_Eight_Chans[7].PipelineRdAdd_reg[0][7] ) and driving same net [C:/v22.2/FEB_fabric/FEB_fabric.srcs/sources_1/new/AFE_Pipeline.vhd:79]
+INFO: [Synth 8-4765] Removing register instance (\AFE_DataPath_inst/AFE_Pipeline_inst/Gen_Two_AFEs[0].Gen_Eight_Chans[6].PipelineRdAdd_reg[0][7] ) from module (FEB_fabric) as it is equivalent to (\AFE_DataPath_inst/AFE_Pipeline_inst/Gen_Two_AFEs[0].Gen_Eight_Chans[7].PipelineRdAdd_reg[0][7] ) and driving same net [C:/v22.2/FEB_fabric/FEB_fabric.srcs/sources_1/new/AFE_Pipeline.vhd:79]
+INFO: [Synth 8-4765] Removing register instance (\AFE_DataPath_inst/AFE_Pipeline_inst/Gen_Two_AFEs[0].Gen_Eight_Chans[0].PipelineRdAdd_reg[0][6] ) from module (FEB_fabric) as it is equivalent to (\AFE_DataPath_inst/AFE_Pipeline_inst/Gen_Two_AFEs[0].Gen_Eight_Chans[7].PipelineRdAdd_reg[0][6] ) and driving same net [C:/v22.2/FEB_fabric/FEB_fabric.srcs/sources_1/new/AFE_Pipeline.vhd:61]
+INFO: [Synth 8-4765] Removing register instance (\AFE_DataPath_inst/AFE_Pipeline_inst/Gen_Two_AFEs[0].Gen_Eight_Chans[1].PipelineRdAdd_reg[0][6] ) from module (FEB_fabric) as it is equivalent to (\AFE_DataPath_inst/AFE_Pipeline_inst/Gen_Two_AFEs[0].Gen_Eight_Chans[7].PipelineRdAdd_reg[0][6] ) and driving same net [C:/v22.2/FEB_fabric/FEB_fabric.srcs/sources_1/new/AFE_Pipeline.vhd:79]
+INFO: [Synth 8-4765] Removing register instance (\AFE_DataPath_inst/AFE_Pipeline_inst/Gen_Two_AFEs[0].Gen_Eight_Chans[2].PipelineRdAdd_reg[0][6] ) from module (FEB_fabric) as it is equivalent to (\AFE_DataPath_inst/AFE_Pipeline_inst/Gen_Two_AFEs[0].Gen_Eight_Chans[7].PipelineRdAdd_reg[0][6] ) and driving same net [C:/v22.2/FEB_fabric/FEB_fabric.srcs/sources_1/new/AFE_Pipeline.vhd:79]
+INFO: [Synth 8-4765] Removing register instance (\AFE_DataPath_inst/AFE_Pipeline_inst/Gen_Two_AFEs[0].Gen_Eight_Chans[3].PipelineRdAdd_reg[0][6] ) from module (FEB_fabric) as it is equivalent to (\AFE_DataPath_inst/AFE_Pipeline_inst/Gen_Two_AFEs[0].Gen_Eight_Chans[7].PipelineRdAdd_reg[0][6] ) and driving same net [C:/v22.2/FEB_fabric/FEB_fabric.srcs/sources_1/new/AFE_Pipeline.vhd:79]
+INFO: [Synth 8-4765] Removing register instance (\AFE_DataPath_inst/AFE_Pipeline_inst/Gen_Two_AFEs[0].Gen_Eight_Chans[4].PipelineRdAdd_reg[0][6] ) from module (FEB_fabric) as it is equivalent to (\AFE_DataPath_inst/AFE_Pipeline_inst/Gen_Two_AFEs[0].Gen_Eight_Chans[7].PipelineRdAdd_reg[0][6] ) and driving same net [C:/v22.2/FEB_fabric/FEB_fabric.srcs/sources_1/new/AFE_Pipeline.vhd:79]
+INFO: [Synth 8-4765] Removing register instance (\AFE_DataPath_inst/AFE_Pipeline_inst/Gen_Two_AFEs[0].Gen_Eight_Chans[5].PipelineRdAdd_reg[0][6] ) from module (FEB_fabric) as it is equivalent to (\AFE_DataPath_inst/AFE_Pipeline_inst/Gen_Two_AFEs[0].Gen_Eight_Chans[7].PipelineRdAdd_reg[0][6] ) and driving same net [C:/v22.2/FEB_fabric/FEB_fabric.srcs/sources_1/new/AFE_Pipeline.vhd:79]
+INFO: [Synth 8-4765] Removing register instance (\AFE_DataPath_inst/AFE_Pipeline_inst/Gen_Two_AFEs[0].Gen_Eight_Chans[6].PipelineRdAdd_reg[0][6] ) from module (FEB_fabric) as it is equivalent to (\AFE_DataPath_inst/AFE_Pipeline_inst/Gen_Two_AFEs[0].Gen_Eight_Chans[7].PipelineRdAdd_reg[0][6] ) and driving same net [C:/v22.2/FEB_fabric/FEB_fabric.srcs/sources_1/new/AFE_Pipeline.vhd:79]
+INFO: [Synth 8-4765] Removing register instance (\AFE_DataPath_inst/AFE_Pipeline_inst/Gen_Two_AFEs[0].Gen_Eight_Chans[0].PipelineRdAdd_reg[0][5] ) from module (FEB_fabric) as it is equivalent to (\AFE_DataPath_inst/AFE_Pipeline_inst/Gen_Two_AFEs[0].Gen_Eight_Chans[7].PipelineRdAdd_reg[0][5] ) and driving same net [C:/v22.2/FEB_fabric/FEB_fabric.srcs/sources_1/new/AFE_Pipeline.vhd:61]
+INFO: [Synth 8-4765] Removing register instance (\AFE_DataPath_inst/AFE_Pipeline_inst/Gen_Two_AFEs[0].Gen_Eight_Chans[1].PipelineRdAdd_reg[0][5] ) from module (FEB_fabric) as it is equivalent to (\AFE_DataPath_inst/AFE_Pipeline_inst/Gen_Two_AFEs[0].Gen_Eight_Chans[7].PipelineRdAdd_reg[0][5] ) and driving same net [C:/v22.2/FEB_fabric/FEB_fabric.srcs/sources_1/new/AFE_Pipeline.vhd:79]
+INFO: [Synth 8-4765] Removing register instance (\AFE_DataPath_inst/AFE_Pipeline_inst/Gen_Two_AFEs[0].Gen_Eight_Chans[2].PipelineRdAdd_reg[0][5] ) from module (FEB_fabric) as it is equivalent to (\AFE_DataPath_inst/AFE_Pipeline_inst/Gen_Two_AFEs[0].Gen_Eight_Chans[7].PipelineRdAdd_reg[0][5] ) and driving same net [C:/v22.2/FEB_fabric/FEB_fabric.srcs/sources_1/new/AFE_Pipeline.vhd:79]
+INFO: [Synth 8-4765] Removing register instance (\AFE_DataPath_inst/AFE_Pipeline_inst/Gen_Two_AFEs[0].Gen_Eight_Chans[3].PipelineRdAdd_reg[0][5] ) from module (FEB_fabric) as it is equivalent to (\AFE_DataPath_inst/AFE_Pipeline_inst/Gen_Two_AFEs[0].Gen_Eight_Chans[7].PipelineRdAdd_reg[0][5] ) and driving same net [C:/v22.2/FEB_fabric/FEB_fabric.srcs/sources_1/new/AFE_Pipeline.vhd:79]
+INFO: [Synth 8-4765] Removing register instance (\AFE_DataPath_inst/AFE_Pipeline_inst/Gen_Two_AFEs[0].Gen_Eight_Chans[4].PipelineRdAdd_reg[0][5] ) from module (FEB_fabric) as it is equivalent to (\AFE_DataPath_inst/AFE_Pipeline_inst/Gen_Two_AFEs[0].Gen_Eight_Chans[7].PipelineRdAdd_reg[0][5] ) and driving same net [C:/v22.2/FEB_fabric/FEB_fabric.srcs/sources_1/new/AFE_Pipeline.vhd:79]
+INFO: [Synth 8-4765] Removing register instance (\AFE_DataPath_inst/AFE_Pipeline_inst/Gen_Two_AFEs[0].Gen_Eight_Chans[5].PipelineRdAdd_reg[0][5] ) from module (FEB_fabric) as it is equivalent to (\AFE_DataPath_inst/AFE_Pipeline_inst/Gen_Two_AFEs[0].Gen_Eight_Chans[7].PipelineRdAdd_reg[0][5] ) and driving same net [C:/v22.2/FEB_fabric/FEB_fabric.srcs/sources_1/new/AFE_Pipeline.vhd:79]
+INFO: [Synth 8-4765] Removing register instance (\AFE_DataPath_inst/AFE_Pipeline_inst/Gen_Two_AFEs[0].Gen_Eight_Chans[6].PipelineRdAdd_reg[0][5] ) from module (FEB_fabric) as it is equivalent to (\AFE_DataPath_inst/AFE_Pipeline_inst/Gen_Two_AFEs[0].Gen_Eight_Chans[7].PipelineRdAdd_reg[0][5] ) and driving same net [C:/v22.2/FEB_fabric/FEB_fabric.srcs/sources_1/new/AFE_Pipeline.vhd:79]
+INFO: [Synth 8-4765] Removing register instance (\AFE_DataPath_inst/AFE_Pipeline_inst/Gen_Two_AFEs[0].Gen_Eight_Chans[0].PipelineRdAdd_reg[0][4] ) from module (FEB_fabric) as it is equivalent to (\AFE_DataPath_inst/AFE_Pipeline_inst/Gen_Two_AFEs[0].Gen_Eight_Chans[7].PipelineRdAdd_reg[0][4] ) and driving same net [C:/v22.2/FEB_fabric/FEB_fabric.srcs/sources_1/new/AFE_Pipeline.vhd:61]
+INFO: [Synth 8-4765] Removing register instance (\AFE_DataPath_inst/AFE_Pipeline_inst/Gen_Two_AFEs[0].Gen_Eight_Chans[1].PipelineRdAdd_reg[0][4] ) from module (FEB_fabric) as it is equivalent to (\AFE_DataPath_inst/AFE_Pipeline_inst/Gen_Two_AFEs[0].Gen_Eight_Chans[7].PipelineRdAdd_reg[0][4] ) and driving same net [C:/v22.2/FEB_fabric/FEB_fabric.srcs/sources_1/new/AFE_Pipeline.vhd:79]
+INFO: [Synth 8-4765] Removing register instance (\AFE_DataPath_inst/AFE_Pipeline_inst/Gen_Two_AFEs[0].Gen_Eight_Chans[2].PipelineRdAdd_reg[0][4] ) from module (FEB_fabric) as it is equivalent to (\AFE_DataPath_inst/AFE_Pipeline_inst/Gen_Two_AFEs[0].Gen_Eight_Chans[7].PipelineRdAdd_reg[0][4] ) and driving same net [C:/v22.2/FEB_fabric/FEB_fabric.srcs/sources_1/new/AFE_Pipeline.vhd:79]
+INFO: [Synth 8-4765] Removing register instance (\AFE_DataPath_inst/AFE_Pipeline_inst/Gen_Two_AFEs[0].Gen_Eight_Chans[3].PipelineRdAdd_reg[0][4] ) from module (FEB_fabric) as it is equivalent to (\AFE_DataPath_inst/AFE_Pipeline_inst/Gen_Two_AFEs[0].Gen_Eight_Chans[7].PipelineRdAdd_reg[0][4] ) and driving same net [C:/v22.2/FEB_fabric/FEB_fabric.srcs/sources_1/new/AFE_Pipeline.vhd:79]
+INFO: [Synth 8-4765] Removing register instance (\AFE_DataPath_inst/AFE_Pipeline_inst/Gen_Two_AFEs[0].Gen_Eight_Chans[4].PipelineRdAdd_reg[0][4] ) from module (FEB_fabric) as it is equivalent to (\AFE_DataPath_inst/AFE_Pipeline_inst/Gen_Two_AFEs[0].Gen_Eight_Chans[7].PipelineRdAdd_reg[0][4] ) and driving same net [C:/v22.2/FEB_fabric/FEB_fabric.srcs/sources_1/new/AFE_Pipeline.vhd:79]
+INFO: [Synth 8-4765] Removing register instance (\AFE_DataPath_inst/AFE_Pipeline_inst/Gen_Two_AFEs[0].Gen_Eight_Chans[5].PipelineRdAdd_reg[0][4] ) from module (FEB_fabric) as it is equivalent to (\AFE_DataPath_inst/AFE_Pipeline_inst/Gen_Two_AFEs[0].Gen_Eight_Chans[7].PipelineRdAdd_reg[0][4] ) and driving same net [C:/v22.2/FEB_fabric/FEB_fabric.srcs/sources_1/new/AFE_Pipeline.vhd:79]
+INFO: [Synth 8-4765] Removing register instance (\AFE_DataPath_inst/AFE_Pipeline_inst/Gen_Two_AFEs[0].Gen_Eight_Chans[6].PipelineRdAdd_reg[0][4] ) from module (FEB_fabric) as it is equivalent to (\AFE_DataPath_inst/AFE_Pipeline_inst/Gen_Two_AFEs[0].Gen_Eight_Chans[7].PipelineRdAdd_reg[0][4] ) and driving same net [C:/v22.2/FEB_fabric/FEB_fabric.srcs/sources_1/new/AFE_Pipeline.vhd:79]
+INFO: [Synth 8-4765] Removing register instance (\AFE_DataPath_inst/AFE_Pipeline_inst/Gen_Two_AFEs[0].Gen_Eight_Chans[0].PipelineRdAdd_reg[0][3] ) from module (FEB_fabric) as it is equivalent to (\AFE_DataPath_inst/AFE_Pipeline_inst/Gen_Two_AFEs[0].Gen_Eight_Chans[7].PipelineRdAdd_reg[0][3] ) and driving same net [C:/v22.2/FEB_fabric/FEB_fabric.srcs/sources_1/new/AFE_Pipeline.vhd:61]
+INFO: [Synth 8-4765] Removing register instance (\AFE_DataPath_inst/AFE_Pipeline_inst/Gen_Two_AFEs[0].Gen_Eight_Chans[1].PipelineRdAdd_reg[0][3] ) from module (FEB_fabric) as it is equivalent to (\AFE_DataPath_inst/AFE_Pipeline_inst/Gen_Two_AFEs[0].Gen_Eight_Chans[7].PipelineRdAdd_reg[0][3] ) and driving same net [C:/v22.2/FEB_fabric/FEB_fabric.srcs/sources_1/new/AFE_Pipeline.vhd:79]
+INFO: [Synth 8-4765] Removing register instance (\AFE_DataPath_inst/AFE_Pipeline_inst/Gen_Two_AFEs[0].Gen_Eight_Chans[2].PipelineRdAdd_reg[0][3] ) from module (FEB_fabric) as it is equivalent to (\AFE_DataPath_inst/AFE_Pipeline_inst/Gen_Two_AFEs[0].Gen_Eight_Chans[7].PipelineRdAdd_reg[0][3] ) and driving same net [C:/v22.2/FEB_fabric/FEB_fabric.srcs/sources_1/new/AFE_Pipeline.vhd:79]
+INFO: [Synth 8-4765] Removing register instance (\AFE_DataPath_inst/AFE_Pipeline_inst/Gen_Two_AFEs[0].Gen_Eight_Chans[3].PipelineRdAdd_reg[0][3] ) from module (FEB_fabric) as it is equivalent to (\AFE_DataPath_inst/AFE_Pipeline_inst/Gen_Two_AFEs[0].Gen_Eight_Chans[7].PipelineRdAdd_reg[0][3] ) and driving same net [C:/v22.2/FEB_fabric/FEB_fabric.srcs/sources_1/new/AFE_Pipeline.vhd:79]
+INFO: [Synth 8-4765] Removing register instance (\AFE_DataPath_inst/AFE_Pipeline_inst/Gen_Two_AFEs[0].Gen_Eight_Chans[4].PipelineRdAdd_reg[0][3] ) from module (FEB_fabric) as it is equivalent to (\AFE_DataPath_inst/AFE_Pipeline_inst/Gen_Two_AFEs[0].Gen_Eight_Chans[7].PipelineRdAdd_reg[0][3] ) and driving same net [C:/v22.2/FEB_fabric/FEB_fabric.srcs/sources_1/new/AFE_Pipeline.vhd:79]
+INFO: [Synth 8-4765] Removing register instance (\AFE_DataPath_inst/AFE_Pipeline_inst/Gen_Two_AFEs[0].Gen_Eight_Chans[5].PipelineRdAdd_reg[0][3] ) from module (FEB_fabric) as it is equivalent to (\AFE_DataPath_inst/AFE_Pipeline_inst/Gen_Two_AFEs[0].Gen_Eight_Chans[7].PipelineRdAdd_reg[0][3] ) and driving same net [C:/v22.2/FEB_fabric/FEB_fabric.srcs/sources_1/new/AFE_Pipeline.vhd:79]
+INFO: [Synth 8-4765] Removing register instance (\AFE_DataPath_inst/AFE_Pipeline_inst/Gen_Two_AFEs[0].Gen_Eight_Chans[6].PipelineRdAdd_reg[0][3] ) from module (FEB_fabric) as it is equivalent to (\AFE_DataPath_inst/AFE_Pipeline_inst/Gen_Two_AFEs[0].Gen_Eight_Chans[7].PipelineRdAdd_reg[0][3] ) and driving same net [C:/v22.2/FEB_fabric/FEB_fabric.srcs/sources_1/new/AFE_Pipeline.vhd:79]
+INFO: [Synth 8-4765] Removing register instance (\AFE_DataPath_inst/AFE_Pipeline_inst/Gen_Two_AFEs[0].Gen_Eight_Chans[0].PipelineRdAdd_reg[0][2] ) from module (FEB_fabric) as it is equivalent to (\AFE_DataPath_inst/AFE_Pipeline_inst/Gen_Two_AFEs[0].Gen_Eight_Chans[7].PipelineRdAdd_reg[0][2] ) and driving same net [C:/v22.2/FEB_fabric/FEB_fabric.srcs/sources_1/new/AFE_Pipeline.vhd:61]
+INFO: [Synth 8-4765] Removing register instance (\AFE_DataPath_inst/AFE_Pipeline_inst/Gen_Two_AFEs[0].Gen_Eight_Chans[1].PipelineRdAdd_reg[0][2] ) from module (FEB_fabric) as it is equivalent to (\AFE_DataPath_inst/AFE_Pipeline_inst/Gen_Two_AFEs[0].Gen_Eight_Chans[7].PipelineRdAdd_reg[0][2] ) and driving same net [C:/v22.2/FEB_fabric/FEB_fabric.srcs/sources_1/new/AFE_Pipeline.vhd:79]
 INFO: [Common 17-14] Message 'Synth 8-4765' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
 ---------------------------------------------------------------------------------
-Finished Technology Mapping : Time (s): cpu = 00:01:24 ; elapsed = 00:01:26 . Memory (MB): peak = 2515.730 ; gain = 1045.590
+Finished Technology Mapping : Time (s): cpu = 00:01:16 ; elapsed = 00:01:18 . Memory (MB): peak = 2566.484 ; gain = 1042.574
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start IO Insertion
@@ -1483,139 +1516,87 @@ Start Final Netlist Cleanup
 ---------------------------------------------------------------------------------
 Finished Final Netlist Cleanup
 ---------------------------------------------------------------------------------
-WARNING: [Synth 8-3295] tying undriven pin AFE_DataPath_inst:BufferRdAdd[0][1][9] to constant 0
-WARNING: [Synth 8-3295] tying undriven pin AFE_DataPath_inst:BufferRdAdd[0][1][8] to constant 0
-WARNING: [Synth 8-3295] tying undriven pin AFE_DataPath_inst:BufferRdAdd[0][1][7] to constant 0
-WARNING: [Synth 8-3295] tying undriven pin AFE_DataPath_inst:BufferRdAdd[0][1][6] to constant 0
-WARNING: [Synth 8-3295] tying undriven pin AFE_DataPath_inst:BufferRdAdd[0][1][5] to constant 0
-WARNING: [Synth 8-3295] tying undriven pin AFE_DataPath_inst:BufferRdAdd[0][1][4] to constant 0
-WARNING: [Synth 8-3295] tying undriven pin AFE_DataPath_inst:BufferRdAdd[0][1][3] to constant 0
-WARNING: [Synth 8-3295] tying undriven pin AFE_DataPath_inst:BufferRdAdd[0][1][2] to constant 0
-WARNING: [Synth 8-3295] tying undriven pin AFE_DataPath_inst:BufferRdAdd[0][1][1] to constant 0
-WARNING: [Synth 8-3295] tying undriven pin AFE_DataPath_inst:BufferRdAdd[0][1][0] to constant 0
-WARNING: [Synth 8-3295] tying undriven pin AFE_DataPath_inst:BufferRdAdd[0][2][9] to constant 0
-WARNING: [Synth 8-3295] tying undriven pin AFE_DataPath_inst:BufferRdAdd[0][2][8] to constant 0
-WARNING: [Synth 8-3295] tying undriven pin AFE_DataPath_inst:BufferRdAdd[0][2][7] to constant 0
-WARNING: [Synth 8-3295] tying undriven pin AFE_DataPath_inst:BufferRdAdd[0][2][6] to constant 0
-WARNING: [Synth 8-3295] tying undriven pin AFE_DataPath_inst:BufferRdAdd[0][2][5] to constant 0
-WARNING: [Synth 8-3295] tying undriven pin AFE_DataPath_inst:BufferRdAdd[0][2][4] to constant 0
-WARNING: [Synth 8-3295] tying undriven pin AFE_DataPath_inst:BufferRdAdd[0][2][3] to constant 0
-WARNING: [Synth 8-3295] tying undriven pin AFE_DataPath_inst:BufferRdAdd[0][2][2] to constant 0
-WARNING: [Synth 8-3295] tying undriven pin AFE_DataPath_inst:BufferRdAdd[0][2][1] to constant 0
-WARNING: [Synth 8-3295] tying undriven pin AFE_DataPath_inst:BufferRdAdd[0][2][0] to constant 0
-WARNING: [Synth 8-3295] tying undriven pin AFE_DataPath_inst:BufferRdAdd[0][3][9] to constant 0
-WARNING: [Synth 8-3295] tying undriven pin AFE_DataPath_inst:BufferRdAdd[0][3][8] to constant 0
-WARNING: [Synth 8-3295] tying undriven pin AFE_DataPath_inst:BufferRdAdd[0][3][7] to constant 0
-WARNING: [Synth 8-3295] tying undriven pin AFE_DataPath_inst:BufferRdAdd[0][3][6] to constant 0
-WARNING: [Synth 8-3295] tying undriven pin AFE_DataPath_inst:BufferRdAdd[0][3][5] to constant 0
-WARNING: [Synth 8-3295] tying undriven pin AFE_DataPath_inst:BufferRdAdd[0][3][4] to constant 0
-WARNING: [Synth 8-3295] tying undriven pin AFE_DataPath_inst:BufferRdAdd[0][3][3] to constant 0
-WARNING: [Synth 8-3295] tying undriven pin AFE_DataPath_inst:BufferRdAdd[0][3][2] to constant 0
-WARNING: [Synth 8-3295] tying undriven pin AFE_DataPath_inst:BufferRdAdd[0][3][1] to constant 0
-WARNING: [Synth 8-3295] tying undriven pin AFE_DataPath_inst:BufferRdAdd[0][3][0] to constant 0
-WARNING: [Synth 8-3295] tying undriven pin AFE_DataPath_inst:BufferRdAdd[0][4][9] to constant 0
-WARNING: [Synth 8-3295] tying undriven pin AFE_DataPath_inst:BufferRdAdd[0][4][8] to constant 0
-WARNING: [Synth 8-3295] tying undriven pin AFE_DataPath_inst:BufferRdAdd[0][4][7] to constant 0
-WARNING: [Synth 8-3295] tying undriven pin AFE_DataPath_inst:BufferRdAdd[0][4][6] to constant 0
-WARNING: [Synth 8-3295] tying undriven pin AFE_DataPath_inst:BufferRdAdd[0][4][5] to constant 0
-WARNING: [Synth 8-3295] tying undriven pin AFE_DataPath_inst:BufferRdAdd[0][4][4] to constant 0
-WARNING: [Synth 8-3295] tying undriven pin AFE_DataPath_inst:BufferRdAdd[0][4][3] to constant 0
-WARNING: [Synth 8-3295] tying undriven pin AFE_DataPath_inst:BufferRdAdd[0][4][2] to constant 0
-WARNING: [Synth 8-3295] tying undriven pin AFE_DataPath_inst:BufferRdAdd[0][4][1] to constant 0
-WARNING: [Synth 8-3295] tying undriven pin AFE_DataPath_inst:BufferRdAdd[0][4][0] to constant 0
-WARNING: [Synth 8-3295] tying undriven pin AFE_DataPath_inst:BufferRdAdd[0][5][9] to constant 0
-WARNING: [Synth 8-3295] tying undriven pin AFE_DataPath_inst:BufferRdAdd[0][5][8] to constant 0
-WARNING: [Synth 8-3295] tying undriven pin AFE_DataPath_inst:BufferRdAdd[0][5][7] to constant 0
-WARNING: [Synth 8-3295] tying undriven pin AFE_DataPath_inst:BufferRdAdd[0][5][6] to constant 0
-WARNING: [Synth 8-3295] tying undriven pin AFE_DataPath_inst:BufferRdAdd[0][5][5] to constant 0
-WARNING: [Synth 8-3295] tying undriven pin AFE_DataPath_inst:BufferRdAdd[0][5][4] to constant 0
-WARNING: [Synth 8-3295] tying undriven pin AFE_DataPath_inst:BufferRdAdd[0][5][3] to constant 0
-WARNING: [Synth 8-3295] tying undriven pin AFE_DataPath_inst:BufferRdAdd[0][5][2] to constant 0
-WARNING: [Synth 8-3295] tying undriven pin AFE_DataPath_inst:BufferRdAdd[0][5][1] to constant 0
-WARNING: [Synth 8-3295] tying undriven pin AFE_DataPath_inst:BufferRdAdd[0][5][0] to constant 0
-WARNING: [Synth 8-3295] tying undriven pin AFE_DataPath_inst:BufferRdAdd[0][6][9] to constant 0
-WARNING: [Synth 8-3295] tying undriven pin AFE_DataPath_inst:BufferRdAdd[0][6][8] to constant 0
-WARNING: [Synth 8-3295] tying undriven pin AFE_DataPath_inst:BufferRdAdd[0][6][7] to constant 0
-WARNING: [Synth 8-3295] tying undriven pin AFE_DataPath_inst:BufferRdAdd[0][6][6] to constant 0
-WARNING: [Synth 8-3295] tying undriven pin AFE_DataPath_inst:BufferRdAdd[0][6][5] to constant 0
-WARNING: [Synth 8-3295] tying undriven pin AFE_DataPath_inst:BufferRdAdd[0][6][4] to constant 0
-WARNING: [Synth 8-3295] tying undriven pin AFE_DataPath_inst:BufferRdAdd[0][6][3] to constant 0
-WARNING: [Synth 8-3295] tying undriven pin AFE_DataPath_inst:BufferRdAdd[0][6][2] to constant 0
-WARNING: [Synth 8-3295] tying undriven pin AFE_DataPath_inst:BufferRdAdd[0][6][1] to constant 0
-WARNING: [Synth 8-3295] tying undriven pin AFE_DataPath_inst:BufferRdAdd[0][6][0] to constant 0
-WARNING: [Synth 8-3295] tying undriven pin AFE_DataPath_inst:BufferRdAdd[0][7][9] to constant 0
-WARNING: [Synth 8-3295] tying undriven pin AFE_DataPath_inst:BufferRdAdd[0][7][8] to constant 0
-WARNING: [Synth 8-3295] tying undriven pin AFE_DataPath_inst:BufferRdAdd[0][7][7] to constant 0
-WARNING: [Synth 8-3295] tying undriven pin AFE_DataPath_inst:BufferRdAdd[0][7][6] to constant 0
-WARNING: [Synth 8-3295] tying undriven pin AFE_DataPath_inst:BufferRdAdd[0][7][5] to constant 0
-WARNING: [Synth 8-3295] tying undriven pin AFE_DataPath_inst:BufferRdAdd[0][7][4] to constant 0
-WARNING: [Synth 8-3295] tying undriven pin AFE_DataPath_inst:BufferRdAdd[0][7][3] to constant 0
-WARNING: [Synth 8-3295] tying undriven pin AFE_DataPath_inst:BufferRdAdd[0][7][2] to constant 0
-WARNING: [Synth 8-3295] tying undriven pin AFE_DataPath_inst:BufferRdAdd[0][7][1] to constant 0
-WARNING: [Synth 8-3295] tying undriven pin AFE_DataPath_inst:BufferRdAdd[0][7][0] to constant 0
-WARNING: [Synth 8-3295] tying undriven pin AFE_DataPath_inst:BufferRdAdd[1][0][9] to constant 0
-WARNING: [Synth 8-3295] tying undriven pin AFE_DataPath_inst:BufferRdAdd[1][0][8] to constant 0
-WARNING: [Synth 8-3295] tying undriven pin AFE_DataPath_inst:BufferRdAdd[1][0][7] to constant 0
-WARNING: [Synth 8-3295] tying undriven pin AFE_DataPath_inst:BufferRdAdd[1][0][6] to constant 0
-WARNING: [Synth 8-3295] tying undriven pin AFE_DataPath_inst:BufferRdAdd[1][0][5] to constant 0
-WARNING: [Synth 8-3295] tying undriven pin AFE_DataPath_inst:BufferRdAdd[1][0][4] to constant 0
-WARNING: [Synth 8-3295] tying undriven pin AFE_DataPath_inst:BufferRdAdd[1][0][3] to constant 0
-WARNING: [Synth 8-3295] tying undriven pin AFE_DataPath_inst:BufferRdAdd[1][0][2] to constant 0
-WARNING: [Synth 8-3295] tying undriven pin AFE_DataPath_inst:BufferRdAdd[1][0][1] to constant 0
-WARNING: [Synth 8-3295] tying undriven pin AFE_DataPath_inst:BufferRdAdd[1][0][0] to constant 0
-WARNING: [Synth 8-3295] tying undriven pin AFE_DataPath_inst:BufferRdAdd[1][1][9] to constant 0
-WARNING: [Synth 8-3295] tying undriven pin AFE_DataPath_inst:BufferRdAdd[1][1][8] to constant 0
-WARNING: [Synth 8-3295] tying undriven pin AFE_DataPath_inst:BufferRdAdd[1][1][7] to constant 0
-WARNING: [Synth 8-3295] tying undriven pin AFE_DataPath_inst:BufferRdAdd[1][1][6] to constant 0
-WARNING: [Synth 8-3295] tying undriven pin AFE_DataPath_inst:BufferRdAdd[1][1][5] to constant 0
-WARNING: [Synth 8-3295] tying undriven pin AFE_DataPath_inst:BufferRdAdd[1][1][4] to constant 0
-WARNING: [Synth 8-3295] tying undriven pin AFE_DataPath_inst:BufferRdAdd[1][1][3] to constant 0
-WARNING: [Synth 8-3295] tying undriven pin AFE_DataPath_inst:BufferRdAdd[1][1][2] to constant 0
-WARNING: [Synth 8-3295] tying undriven pin AFE_DataPath_inst:BufferRdAdd[1][1][1] to constant 0
-WARNING: [Synth 8-3295] tying undriven pin AFE_DataPath_inst:BufferRdAdd[1][1][0] to constant 0
-WARNING: [Synth 8-3295] tying undriven pin AFE_DataPath_inst:BufferRdAdd[1][2][9] to constant 0
-WARNING: [Synth 8-3295] tying undriven pin AFE_DataPath_inst:BufferRdAdd[1][2][8] to constant 0
-WARNING: [Synth 8-3295] tying undriven pin AFE_DataPath_inst:BufferRdAdd[1][2][7] to constant 0
-WARNING: [Synth 8-3295] tying undriven pin AFE_DataPath_inst:BufferRdAdd[1][2][6] to constant 0
-WARNING: [Synth 8-3295] tying undriven pin AFE_DataPath_inst:BufferRdAdd[1][2][5] to constant 0
-WARNING: [Synth 8-3295] tying undriven pin AFE_DataPath_inst:BufferRdAdd[1][2][4] to constant 0
-WARNING: [Synth 8-3295] tying undriven pin AFE_DataPath_inst:BufferRdAdd[1][2][3] to constant 0
-WARNING: [Synth 8-3295] tying undriven pin AFE_DataPath_inst:BufferRdAdd[1][2][2] to constant 0
-WARNING: [Synth 8-3295] tying undriven pin AFE_DataPath_inst:BufferRdAdd[1][2][1] to constant 0
-WARNING: [Synth 8-3295] tying undriven pin AFE_DataPath_inst:BufferRdAdd[1][2][0] to constant 0
-INFO: [Common 17-14] Message 'Synth 8-3295' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
+WARNING: [Synth 8-3295] tying undriven pin uBunchBuffer:rd_en to constant 0
+WARNING: [Synth 8-3295] tying undriven pin EvBuffDat_inferred:in0[15] to constant 0
+WARNING: [Synth 8-3295] tying undriven pin EvBuffDat_inferred:in0[14] to constant 0
+WARNING: [Synth 8-3295] tying undriven pin EvBuffDat_inferred:in0[13] to constant 0
+WARNING: [Synth 8-3295] tying undriven pin EvBuffDat_inferred:in0[12] to constant 0
+WARNING: [Synth 8-3295] tying undriven pin EvBuffDat_inferred:in0[11] to constant 0
+WARNING: [Synth 8-3295] tying undriven pin EvBuffDat_inferred:in0[10] to constant 0
+WARNING: [Synth 8-3295] tying undriven pin EvBuffDat_inferred:in0[9] to constant 0
+WARNING: [Synth 8-3295] tying undriven pin EvBuffDat_inferred:in0[8] to constant 0
+WARNING: [Synth 8-3295] tying undriven pin EvBuffDat_inferred:in0[7] to constant 0
+WARNING: [Synth 8-3295] tying undriven pin EvBuffDat_inferred:in0[6] to constant 0
+WARNING: [Synth 8-3295] tying undriven pin EvBuffDat_inferred:in0[5] to constant 0
+WARNING: [Synth 8-3295] tying undriven pin EvBuffDat_inferred:in0[4] to constant 0
+WARNING: [Synth 8-3295] tying undriven pin EvBuffDat_inferred:in0[3] to constant 0
+WARNING: [Synth 8-3295] tying undriven pin EvBuffDat_inferred:in0[2] to constant 0
+WARNING: [Synth 8-3295] tying undriven pin EvBuffDat_inferred:in0[1] to constant 0
+WARNING: [Synth 8-3295] tying undriven pin EvBuffDat_inferred:in0[0] to constant 0
+WARNING: [Synth 8-3295] tying undriven pin EvBuffWrt_inferred:in0 to constant 0
+WARNING: [Synth 8-3295] tying undriven pin Read_Seq_Stat_inferred:in0[3] to constant 0
+WARNING: [Synth 8-3295] tying undriven pin Read_Seq_Stat_inferred:in0[2] to constant 0
+WARNING: [Synth 8-3295] tying undriven pin Read_Seq_Stat_inferred:in0[1] to constant 0
+WARNING: [Synth 8-3295] tying undriven pin Read_Seq_Stat_inferred:in0[0] to constant 0
+WARNING: [Synth 8-3295] tying undriven pin EventWdCnt_inferred:in0[15] to constant 0
+WARNING: [Synth 8-3295] tying undriven pin EventWdCnt_inferred:in0[14] to constant 0
+WARNING: [Synth 8-3295] tying undriven pin EventWdCnt_inferred:in0[13] to constant 0
+WARNING: [Synth 8-3295] tying undriven pin EventWdCnt_inferred:in0[12] to constant 0
+WARNING: [Synth 8-3295] tying undriven pin EventWdCnt_inferred:in0[11] to constant 0
+WARNING: [Synth 8-3295] tying undriven pin EventWdCnt_inferred:in0[10] to constant 0
+WARNING: [Synth 8-3295] tying undriven pin EventWdCnt_inferred:in0[9] to constant 0
+WARNING: [Synth 8-3295] tying undriven pin EventWdCnt_inferred:in0[8] to constant 0
+WARNING: [Synth 8-3295] tying undriven pin EventWdCnt_inferred:in0[7] to constant 0
+WARNING: [Synth 8-3295] tying undriven pin EventWdCnt_inferred:in0[6] to constant 0
+WARNING: [Synth 8-3295] tying undriven pin EventWdCnt_inferred:in0[5] to constant 0
+WARNING: [Synth 8-3295] tying undriven pin EventWdCnt_inferred:in0[4] to constant 0
+WARNING: [Synth 8-3295] tying undriven pin EventWdCnt_inferred:in0[3] to constant 0
+WARNING: [Synth 8-3295] tying undriven pin EventWdCnt_inferred:in0[2] to constant 0
+WARNING: [Synth 8-3295] tying undriven pin EventWdCnt_inferred:in0[1] to constant 0
+WARNING: [Synth 8-3295] tying undriven pin EventWdCnt_inferred:in0[0] to constant 0
+WARNING: [Synth 8-3295] tying undriven pin SampleCount_inferred:in0[8] to constant 0
+WARNING: [Synth 8-3295] tying undriven pin SampleCount_inferred:in0[7] to constant 0
+WARNING: [Synth 8-3295] tying undriven pin SampleCount_inferred:in0[6] to constant 0
+WARNING: [Synth 8-3295] tying undriven pin SampleCount_inferred:in0[5] to constant 0
+WARNING: [Synth 8-3295] tying undriven pin SampleCount_inferred:in0[4] to constant 0
+WARNING: [Synth 8-3295] tying undriven pin SampleCount_inferred:in0[3] to constant 0
+WARNING: [Synth 8-3295] tying undriven pin SampleCount_inferred:in0[2] to constant 0
+WARNING: [Synth 8-3295] tying undriven pin SampleCount_inferred:in0[1] to constant 0
+WARNING: [Synth 8-3295] tying undriven pin SampleCount_inferred:in0[0] to constant 0
+WARNING: [Synth 8-3295] tying undriven pin EventBuilder_logic:EvBuffRd to constant 0
+WARNING: [Synth 8-3295] tying undriven pin DDR_Interface_inst/DDRRdBuff:rst to constant 0
 ---------------------------------------------------------------------------------
-Finished IO Insertion : Time (s): cpu = 00:01:29 ; elapsed = 00:01:31 . Memory (MB): peak = 2515.730 ; gain = 1045.590
+Finished IO Insertion : Time (s): cpu = 00:01:20 ; elapsed = 00:01:22 . Memory (MB): peak = 2566.484 ; gain = 1042.574
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Instances
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Instances : Time (s): cpu = 00:01:29 ; elapsed = 00:01:31 . Memory (MB): peak = 2515.730 ; gain = 1045.590
+Finished Renaming Generated Instances : Time (s): cpu = 00:01:20 ; elapsed = 00:01:22 . Memory (MB): peak = 2566.484 ; gain = 1042.574
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Rebuilding User Hierarchy
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Rebuilding User Hierarchy : Time (s): cpu = 00:01:29 ; elapsed = 00:01:31 . Memory (MB): peak = 2515.730 ; gain = 1045.590
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:01:20 ; elapsed = 00:01:22 . Memory (MB): peak = 2566.484 ; gain = 1042.574
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Ports
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Ports : Time (s): cpu = 00:01:29 ; elapsed = 00:01:31 . Memory (MB): peak = 2515.730 ; gain = 1045.590
+Finished Renaming Generated Ports : Time (s): cpu = 00:01:20 ; elapsed = 00:01:22 . Memory (MB): peak = 2566.484 ; gain = 1042.574
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:01:29 ; elapsed = 00:01:31 . Memory (MB): peak = 2515.730 ; gain = 1045.590
+Finished Handling Custom Attributes : Time (s): cpu = 00:01:20 ; elapsed = 00:01:23 . Memory (MB): peak = 2566.484 ; gain = 1042.574
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Nets
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Nets : Time (s): cpu = 00:01:29 ; elapsed = 00:01:31 . Memory (MB): peak = 2515.730 ; gain = 1045.590
+Finished Renaming Generated Nets : Time (s): cpu = 00:01:20 ; elapsed = 00:01:23 . Memory (MB): peak = 2566.484 ; gain = 1042.574
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start ROM, RAM, DSP, Shift Register and Retiming Reporting
@@ -1639,60 +1620,62 @@ Report BlackBoxes:
 +------+----------------+----------+
 |      |BlackBox name   |Instances |
 +------+----------------+----------+
-|1     |DDR3LController |         1|
+|1     |AFEemu          |         1|
+|2     |AFEemu_ila      |         1|
+|3     |DDR3LController |         1|
 +------+----------------+----------+
 
 Report Cell Usage: 
 +------+---------------------+------+
 |      |Cell                 |Count |
 +------+---------------------+------+
-|1     |DDR3LController_bbox |     1|
-|2     |BUFG                 |     3|
-|3     |CARRY4               |   184|
-|4     |LUT1                 |   297|
-|5     |LUT2                 |   904|
-|6     |LUT3                 |   291|
-|7     |LUT4                 |   544|
-|8     |LUT5                 |   596|
-|9     |LUT6                 |  1240|
-|10    |MUXCY                |    80|
-|11    |MUXF7                |    96|
-|12    |RAMB18E1             |    17|
-|14    |RAMB36E1             |     4|
-|15    |SRL16E               |     2|
-|16    |FDCE                 |  1985|
-|17    |FDPE                 |    63|
-|18    |FDRE                 |   544|
-|19    |FDSE                 |    49|
-|20    |LD                   |     1|
-|21    |IBUF                 |    36|
-|22    |IBUFDS               |     1|
-|23    |OBUF                 |    18|
+|1     |AFEemu_bbox          |     1|
+|2     |AFEemu_ila_bbox      |     1|
+|3     |DDR3LController_bbox |     1|
+|4     |BUFG                 |     3|
+|5     |CARRY4               |    32|
+|6     |LUT1                 |   144|
+|7     |LUT2                 |    69|
+|8     |LUT3                 |   142|
+|9     |LUT4                 |   198|
+|10    |LUT5                 |   126|
+|11    |LUT6                 |   144|
+|12    |MUXCY                |    80|
+|13    |RAMB18E1             |     2|
+|15    |RAMB36E1             |     1|
+|16    |SRL16E               |     2|
+|17    |FDCE                 |   357|
+|18    |FDPE                 |    18|
+|19    |FDRE                 |   304|
+|20    |FDSE                 |    49|
+|21    |LD                   |     1|
+|22    |IBUF                 |    36|
+|23    |IBUFDS               |     1|
+|24    |OBUF                 |    18|
 +------+---------------------+------+
 ---------------------------------------------------------------------------------
-Finished Writing Synthesis Report : Time (s): cpu = 00:01:29 ; elapsed = 00:01:31 . Memory (MB): peak = 2515.730 ; gain = 1045.590
+Finished Writing Synthesis Report : Time (s): cpu = 00:01:20 ; elapsed = 00:01:23 . Memory (MB): peak = 2566.484 ; gain = 1042.574
 ---------------------------------------------------------------------------------
-Synthesis finished with 0 errors, 0 critical warnings and 2619 warnings.
-Synthesis Optimization Runtime : Time (s): cpu = 00:00:31 ; elapsed = 00:01:24 . Memory (MB): peak = 2515.730 ; gain = 1045.590
-Synthesis Optimization Complete : Time (s): cpu = 00:01:29 ; elapsed = 00:01:31 . Memory (MB): peak = 2515.730 ; gain = 1045.590
+Synthesis finished with 0 errors, 0 critical warnings and 2514 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:26 ; elapsed = 00:01:15 . Memory (MB): peak = 2566.484 ; gain = 1042.574
+Synthesis Optimization Complete : Time (s): cpu = 00:01:20 ; elapsed = 00:01:23 . Memory (MB): peak = 2566.484 ; gain = 1042.574
 INFO: [Project 1-571] Translating synthesized netlist
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.177 . Memory (MB): peak = 2515.730 ; gain = 0.000
-INFO: [Netlist 29-17] Analyzing 383 Unisim elements for replacement
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.045 . Memory (MB): peak = 2566.484 ; gain = 0.000
+INFO: [Netlist 29-17] Analyzing 117 Unisim elements for replacement
 INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
-WARNING: [Netlist 29-101] Netlist 'FEB_fabric' is not ideal for floorplanning, since the cellview 'AFE_DataPath' contains a large number of primitives.  Please consider enabling hierarchy in synthesis if you want to do floorplanning.
 INFO: [Project 1-570] Preparing netlist for logic optimization
 INFO: [Opt 31-138] Pushed 1 inverter(s) to 1 load pin(s).
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.002 . Memory (MB): peak = 2515.730 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2566.484 ; gain = 0.000
 INFO: [Project 1-111] Unisim Transformation Summary:
   A total of 33 instances were transformed.
   (MUXCY,XORCY) => CARRY4: 32 instances
   LD => LDCE (inverted pins: G): 1 instance 
 
-Synth Design complete, checksum: d03372f1
+Synth Design complete, checksum: 12924616
 INFO: [Common 17-83] Releasing license: Synthesis
-252 Infos, 259 Warnings, 0 Critical Warnings and 0 Errors encountered.
+239 Infos, 256 Warnings, 0 Critical Warnings and 0 Errors encountered.
 synth_design completed successfully
-synth_design: Time (s): cpu = 00:01:35 ; elapsed = 00:01:45 . Memory (MB): peak = 2515.730 ; gain = 1416.449
+synth_design: Time (s): cpu = 00:01:25 ; elapsed = 00:01:34 . Memory (MB): peak = 2566.484 ; gain = 1415.637
 INFO: [Common 17-1381] The checkpoint 'C:/v22.2/FEB_fabric/FEB_fabric.runs/synth_1/FEB_fabric.dcp' has been generated.
 INFO: [runtcl-4] Executing : report_utilization -file FEB_fabric_utilization_synth.rpt -pb FEB_fabric_utilization_synth.pb
-INFO: [Common 17-206] Exiting Vivado at Wed Mar 29 09:17:42 2023...
+INFO: [Common 17-206] Exiting Vivado at Mon Apr 10 17:47:09 2023...

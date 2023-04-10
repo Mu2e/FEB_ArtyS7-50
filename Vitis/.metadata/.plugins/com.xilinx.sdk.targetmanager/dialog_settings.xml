@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <section name="Workbench">
-	<item key="Datapath_system-bitFile" value="C:\v22.2\Vitis\Datapath\_ide\bitstream\uController_wrapper_iuCD.bit"/>
-	<item key="Datapath_system-bmmFile" value="C:\v22.2\Vitis\Datapath\_ide\bitstream\uController_wrapper_iuCD.mmi"/>
+	<item key="Datapath_system-bitFile" value="C:\v22.2\Vitis\Datapath\_ide\bitstream\uController_wrapper_dummy.bit"/>
+	<item key="Datapath_system-bmmFile" value="C:\v22.2\Vitis\Datapath\_ide\bitstream\uController_wrapper_dummy.mmi"/>
 	<item key="Datapath_system-target" value="Local"/>
 	<item key="Datapath_system-device" value="Auto Detect"/>
 	<item key="Datapath_system-partial_bit" value="false"/>

@@ -8,7 +8,11 @@
     "gen_directory": "../../../../../../FEB_AXI_test.gen/sources_1/bd/ARTY_test/ip/ARTY_test_FEB_test_0_0",
     "parameters": {
       "component_parameters": {
+        "generateILA": [ { "value": "true", "resolve_type": "user", "format": "bool", "usage": "all" } ],
         "Component_Name": [ { "value": "ARTY_test_FEB_test_0_0", "resolve_type": "user", "usage": "all" } ]
+      },
+      "model_parameters": {
+        "generateILA": [ { "value": "true", "resolve_type": "generated", "format": "bool", "usage": "all" } ]
       },
       "project_parameters": {
         "ARCHITECTURE": [ { "value": "spartan7" } ],

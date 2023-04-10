@@ -1,10 +1,10 @@
 // Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
 // --------------------------------------------------------------------------------
 // Tool Version: Vivado v.2022.2 (win64) Build 3671981 Fri Oct 14 05:00:03 MDT 2022
-// Date        : Wed Mar 29 17:57:03 2023
+// Date        : Wed Mar 29 17:57:02 2023
 // Host        : CD-135239 running 64-bit major release  (build 9200)
-// Command     : write_verilog -force -mode synth_stub
-//               c:/v22.2/FEB_AXI_test/FEB_AXI_test.gen/sources_1/bd/ARTY_test/ip/ARTY_test_xbar_0/ARTY_test_xbar_0_stub.v
+// Command     : write_verilog -force -mode synth_stub -rename_top ARTY_test_xbar_0 -prefix
+//               ARTY_test_xbar_0_ ARTY_test_xbar_0_stub.v
 // Design      : ARTY_test_xbar_0
 // Purpose     : Stub declaration of top-level module interface
 // Device      : xc7s50csga324-1

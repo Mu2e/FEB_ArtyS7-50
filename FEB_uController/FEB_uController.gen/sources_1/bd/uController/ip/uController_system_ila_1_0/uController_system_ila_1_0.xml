@@ -174,10 +174,6 @@
             <spirit:name>outputProductCRC</spirit:name>
             <spirit:value>9:0c388b4e</spirit:value>
           </spirit:parameter>
-          <spirit:parameter>
-            <spirit:name>sim_type</spirit:name>
-            <spirit:value>rtl</spirit:value>
-          </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
       <spirit:view>
@@ -198,10 +194,6 @@
             <spirit:name>outputProductCRC</spirit:name>
             <spirit:value>9:0c388b4e</spirit:value>
           </spirit:parameter>
-          <spirit:parameter>
-            <spirit:name>sim_type</spirit:name>
-            <spirit:value>rtl</spirit:value>
-          </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
       <spirit:view>
@@ -214,11 +206,11 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>GENtimestamp</spirit:name>
-            <spirit:value>Tue Mar 28 21:33:46 UTC 2023</spirit:value>
+            <spirit:value>Wed Mar 29 14:17:01 UTC 2023</spirit:value>
           </spirit:parameter>
           <spirit:parameter>
             <spirit:name>outputProductCRC</spirit:name>
-            <spirit:value>9:409fb784</spirit:value>
+            <spirit:value>9:d36b86cd</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -35252,7 +35244,6 @@
   <spirit:vendorExtensions>
     <xilinx:coreExtensions>
       <xilinx:displayName>System ILA</xilinx:displayName>
-      <xilinx:supportsDeferredElaboration>true</xilinx:supportsDeferredElaboration>
       <xilinx:coreRevision>13</xilinx:coreRevision>
       <xilinx:tags>
         <xilinx:tag xilinx:name="xilinx.com:ip:system_ila:1.0_ARCHIVE_LOCATION">/proj/xhdhdstaff/niloyr/debug_tools/IP3_niloyr_cs/DEV/output/internal/vivado/data/ip/xilinx</xilinx:tag>

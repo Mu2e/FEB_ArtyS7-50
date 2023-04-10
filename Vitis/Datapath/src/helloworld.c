@@ -70,11 +70,13 @@ int main()
     ResetCpld();
     sleep(2);
 
-    ResetAFEemu();
-//    sleep(2);
-    FillAFEemu(1024);
-//    StartAFEemu();
+//    ResetAFEemu();
 
+    StartAFEemu(10);
+
+//    sleep(1);
+    ReadAFEemu();
+    StopAFEemu();
 /*
 	// Diff_Reg(i)(k) <= signed(din_AFE(i)(k)) - Ped_Reg(i)(k);
 	PedReg(0);
@@ -94,7 +96,7 @@ int main()
 
 
 	int prova = 1111;
-	for (int i = 0; i < 10; i++)
+	for (int i = 0; i < 1000; i++)
 		{prova = iuCD();
 		//xil_printf("%d\n", prova);
 		if (prova != 0)
@@ -102,9 +104,9 @@ int main()
 
 		}
 	xil_printf("Test finished!\n\n\r");
-
-
 */
+
+
    	colorLED(VIOLET);
     cleanup_platform();
     return 0;

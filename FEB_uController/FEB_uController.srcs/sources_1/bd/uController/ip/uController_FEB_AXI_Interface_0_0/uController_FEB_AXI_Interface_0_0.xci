@@ -4,7 +4,7 @@
     "xci_name": "uController_FEB_AXI_Interface_0_0",
     "cell_name": "FEB_AXI_Interface_0",
     "component_reference": "fnal.gov:user:FEB_AXI_Interface:1.0",
-    "ip_revision": "14",
+    "ip_revision": "15",
     "gen_directory": "../../../../../../FEB_uController.gen/sources_1/bd/uController/ip/uController_FEB_AXI_Interface_0_0",
     "parameters": {
       "component_parameters": {
@@ -35,7 +35,7 @@
       },
       "runtime_parameters": {
         "IPCONTEXT": [ { "value": "IP_Integrator" } ],
-        "IPREVISION": [ { "value": "14" } ],
+        "IPREVISION": [ { "value": "15" } ],
         "MANAGED": [ { "value": "TRUE" } ],
         "OUTPUTDIR": [ { "value": "../../../../../../FEB_uController.gen/sources_1/bd/uController/ip/uController_FEB_AXI_Interface_0_0" } ],
         "SELECTEDSIMMODEL": [ { "value": "" } ],

@@ -9,25 +9,33 @@
 #include "Proj_Def.h"
 
 //============= AFE Interface SIM ==============
-void FillAFEemu(int data)
-{
-	SetWRDL();
-    uCA(FillAFEemuAd);
-	for (int i = 0; i < data; i++)
-	{	uCD(i);}
-    ClearWRDL();
-}
-void StartAFEemu()
-{
-	SetWRDL();
-    uCA(StartAFEemuAd);
-    ClearWRDL();
-}
 void ResetAFEemu()
 {
-	SetWRDL();
+	//SetWRDL();
     uCA(ResetAFEemuAd);
-    ClearWRDL();
+    //ClearWRDL();
+}
+void StartAFEemu(int data)
+{
+	//SetWRDL();
+    uCA(StartAFEemuAd);
+	for (int i = 0; i < data; i++)
+		{int offset = 0xA0;
+			offset = offset + i;
+			uCD(offset);}
+    //ClearWRDL();
+}
+void StopAFEemu()
+{
+	//SetWRDL();
+    uCA(StopAFEemuAd);
+    //ClearWRDL();
+}
+void ReadAFEemu()
+{
+	//SetWRDL();
+    uCA(ReadAFEemuAd);
+    //ClearWRDL();
 }
 
 //============= TRIGGER LOGIC ==============

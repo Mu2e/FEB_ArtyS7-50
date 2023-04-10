@@ -7,8 +7,7 @@
       "name": "ARTY_test",
       "rev_ctrl_bd_flag": "RevCtrlBdOff",
       "synth_flow_mode": "Hierarchical",
-      "tool_version": "2022.2",
-      "validated": "true"
+      "tool_version": "2022.2"
     },
     "design_tree": {
       "axi_gpio_0": "",
@@ -33,6 +32,7 @@
       "FEB_AXI_Interface_0": "",
       "clk_wiz_0": "",
       "clk_wiz_1": "",
+      "system_ila_0": "",
       "FEB_test_0": ""
     },
     "interface_ports": {
@@ -70,20 +70,8 @@
         "type": "clk",
         "direction": "I",
         "parameters": {
-          "CLK_DOMAIN": {
-            "value": "ARTY_test_ddr_clock",
-            "value_src": "default"
-          },
           "FREQ_HZ": {
             "value": "100000000"
-          },
-          "FREQ_TOLERANCE_HZ": {
-            "value": "0",
-            "value_src": "default"
-          },
-          "INSERT_VIP": {
-            "value": "0",
-            "value_src": "default"
           },
           "PHASE": {
             "value": "0.0"
@@ -94,20 +82,8 @@
         "type": "clk",
         "direction": "I",
         "parameters": {
-          "CLK_DOMAIN": {
-            "value": "ARTY_test_sys_clock",
-            "value_src": "default"
-          },
           "FREQ_HZ": {
             "value": "12000000"
-          },
-          "FREQ_TOLERANCE_HZ": {
-            "value": "0",
-            "value_src": "default"
-          },
-          "INSERT_VIP": {
-            "value": "0",
-            "value_src": "default"
           },
           "PHASE": {
             "value": "0.0"
@@ -118,10 +94,6 @@
         "type": "rst",
         "direction": "I",
         "parameters": {
-          "INSERT_VIP": {
-            "value": "0",
-            "value_src": "default"
-          },
           "POLARITY": {
             "value": "ACTIVE_LOW"
           }
@@ -990,6 +962,41 @@
           }
         }
       },
+      "system_ila_0": {
+        "vlnv": "xilinx.com:ip:system_ila:1.1",
+        "xci_name": "ARTY_test_system_ila_0_0",
+        "xci_path": "ip\\ARTY_test_system_ila_0_0\\ARTY_test_system_ila_0_0.xci",
+        "inst_hier_path": "system_ila_0",
+        "parameters": {
+          "C_MON_TYPE": {
+            "value": "NATIVE"
+          },
+          "C_NUM_OF_PROBES": {
+            "value": "8"
+          },
+          "C_PROBE0_TYPE": {
+            "value": "0"
+          },
+          "C_PROBE1_TYPE": {
+            "value": "0"
+          },
+          "C_PROBE2_TYPE": {
+            "value": "0"
+          },
+          "C_PROBE3_TYPE": {
+            "value": "0"
+          },
+          "C_PROBE4_TYPE": {
+            "value": "0"
+          },
+          "C_PROBE5_TYPE": {
+            "value": "0"
+          },
+          "C_PROBE6_TYPE": {
+            "value": "0"
+          }
+        }
+      },
       "FEB_test_0": {
         "vlnv": "xilinx.com:module_ref:FEB_test:1.0",
         "xci_name": "ARTY_test_FEB_test_0_0",
@@ -1002,72 +1009,16 @@
         },
         "ports": {
           "Clk_80MHz": {
-            "direction": "I",
-            "parameters": {
-              "FREQ_HZ": {
-                "value": "80000000",
-                "value_src": "ip_prop"
-              },
-              "PHASE": {
-                "value": "0.0",
-                "value_src": "ip_prop"
-              },
-              "CLK_DOMAIN": {
-                "value": "/clk_wiz_0_clk_out1",
-                "value_src": "ip_prop"
-              }
-            }
+            "direction": "I"
           },
           "Clk_100MHz": {
-            "direction": "I",
-            "parameters": {
-              "FREQ_HZ": {
-                "value": "100000000",
-                "value_src": "user_prop"
-              },
-              "PHASE": {
-                "value": "0.0",
-                "value_src": "user_prop"
-              },
-              "CLK_DOMAIN": {
-                "value": "ARTY_test_ddr_clock",
-                "value_src": "default_prop"
-              }
-            }
+            "direction": "I"
           },
           "Clk_200MHz": {
-            "direction": "I",
-            "parameters": {
-              "FREQ_HZ": {
-                "value": "200000000",
-                "value_src": "ip_prop"
-              },
-              "PHASE": {
-                "value": "0.0",
-                "value_src": "ip_prop"
-              },
-              "CLK_DOMAIN": {
-                "value": "/clk_wiz_0_clk_out1",
-                "value_src": "ip_prop"
-              }
-            }
+            "direction": "I"
           },
           "SysClk": {
-            "direction": "I",
-            "parameters": {
-              "FREQ_HZ": {
-                "value": "160000000",
-                "value_src": "ip_prop"
-              },
-              "PHASE": {
-                "value": "0.0",
-                "value_src": "ip_prop"
-              },
-              "CLK_DOMAIN": {
-                "value": "/clk_wiz_1_clk_out1",
-                "value_src": "ip_prop"
-              }
-            }
+            "direction": "I"
           },
           "CpldRst": {
             "direction": "I"
@@ -1164,50 +1115,122 @@
       "FEB_AXI_Interface_0_CpldCS": {
         "ports": [
           "FEB_AXI_Interface_0/CpldCS",
+          "system_ila_0/probe0",
           "FEB_test_0/CpldCS"
-        ]
+        ],
+        "hdl_attributes": {
+          "DEBUG": {
+            "value": "true"
+          },
+          "MARK_DEBUG": {
+            "value": "true"
+          }
+        }
       },
       "FEB_AXI_Interface_0_CpldRst": {
         "ports": [
           "FEB_AXI_Interface_0/CpldRst",
+          "system_ila_0/probe1",
           "FEB_test_0/CpldRst"
-        ]
+        ],
+        "hdl_attributes": {
+          "DEBUG": {
+            "value": "true"
+          },
+          "MARK_DEBUG": {
+            "value": "true"
+          }
+        }
       },
       "FEB_AXI_Interface_0_GA": {
         "ports": [
           "FEB_AXI_Interface_0/GA",
+          "system_ila_0/probe2",
           "FEB_test_0/GA"
-        ]
+        ],
+        "hdl_attributes": {
+          "DEBUG": {
+            "value": "true"
+          },
+          "MARK_DEBUG": {
+            "value": "true"
+          }
+        }
       },
       "FEB_AXI_Interface_0_uCA": {
         "ports": [
           "FEB_AXI_Interface_0/uCA",
+          "system_ila_0/probe3",
           "FEB_test_0/uCA"
-        ]
+        ],
+        "hdl_attributes": {
+          "DEBUG": {
+            "value": "true"
+          },
+          "MARK_DEBUG": {
+            "value": "true"
+          }
+        }
       },
       "FEB_AXI_Interface_0_uCD": {
         "ports": [
           "FEB_AXI_Interface_0/uCD",
+          "system_ila_0/probe4",
           "FEB_test_0/uCD"
-        ]
+        ],
+        "hdl_attributes": {
+          "DEBUG": {
+            "value": "true"
+          },
+          "MARK_DEBUG": {
+            "value": "true"
+          }
+        }
       },
       "FEB_AXI_Interface_0_uCRd": {
         "ports": [
           "FEB_AXI_Interface_0/uCRd",
+          "system_ila_0/probe5",
           "FEB_test_0/uCRd"
-        ]
+        ],
+        "hdl_attributes": {
+          "DEBUG": {
+            "value": "true"
+          },
+          "MARK_DEBUG": {
+            "value": "true"
+          }
+        }
       },
       "FEB_AXI_Interface_0_uCWr": {
         "ports": [
           "FEB_AXI_Interface_0/uCWr",
+          "system_ila_0/probe6",
           "FEB_test_0/uCWr"
-        ]
+        ],
+        "hdl_attributes": {
+          "DEBUG": {
+            "value": "true"
+          },
+          "MARK_DEBUG": {
+            "value": "true"
+          }
+        }
       },
       "FEB_test_0_iuCD": {
         "ports": [
           "FEB_test_0/iuCD",
-          "FEB_AXI_Interface_0/iuCD"
-        ]
+          "FEB_AXI_Interface_0/iuCD",
+          "system_ila_0/probe7"
+        ],
+        "hdl_attributes": {
+          "DEBUG": {
+            "value": "true"
+          },
+          "MARK_DEBUG": {
+            "value": "true"
+          }
+        }
       },
       "clk_wiz_0_clk_out1": {
         "ports": [
@@ -1229,7 +1252,8 @@
           "microblaze_0_local_memory/LMB_Clk",
           "axi_gpio_0/s_axi_aclk",
           "axi_uartlite_0/s_axi_aclk",
-          "rst_clk_wiz_0_100M/slowest_sync_clk"
+          "rst_clk_wiz_0_100M/slowest_sync_clk",
+          "system_ila_0/clk"
         ]
       },
       "clk_wiz_0_clk_out3": {

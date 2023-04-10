@@ -70,6 +70,9 @@ proc create_report { reportName command } {
   }
 }
 OPTRACE "AFEemu_synth_1" START { ROLLUP_AUTO }
+set_param tcl.collectionResultDisplayLimit 0
+set_param chipscope.maxJobs 4
+set_param xicom.use_bs_reader 1
 set_param simulator.modelsimInstallPath C:/intelFPGA/20.1/modelsim_ae/win32aloem
 set_param project.vivado.isBlockSynthRun true
 set_msg_config -msgmgr_mode ooc_run

@@ -8,9 +8,10 @@
 #include "Proj_Def.h"
 
 //============= AFE Interface SIM ==============
-void FillAFEemu(int data);
-void StartAFEemu();
 void ResetAFEemu();
+void StartAFEemu(int data);
+void StopAFEemu();
+void ReadAFEemu();
 
 //============= TRIGGER LOGIC ==============
 // Flash gate enable bit: FlashEn <= uCD(0);

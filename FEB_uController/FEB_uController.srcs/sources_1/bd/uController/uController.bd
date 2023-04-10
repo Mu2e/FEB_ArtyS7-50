@@ -33,8 +33,8 @@
       },
       "clk_wiz_1": "",
       "system_ila_0": "",
-      "FEB_AXI_Interface_0": "",
       "system_ila_1": "",
+      "FEB_AXI_Interface_0": "",
       "FEB_fabric_0": ""
     },
     "interface_ports": {
@@ -1134,12 +1134,6 @@
           }
         }
       },
-      "FEB_AXI_Interface_0": {
-        "vlnv": "fnal.gov:user:FEB_AXI_Interface:1.0",
-        "xci_name": "uController_FEB_AXI_Interface_0_0",
-        "xci_path": "ip\\uController_FEB_AXI_Interface_0_0\\uController_FEB_AXI_Interface_0_0.xci",
-        "inst_hier_path": "FEB_AXI_Interface_0"
-      },
       "system_ila_1": {
         "vlnv": "xilinx.com:ip:system_ila:1.1",
         "xci_name": "uController_system_ila_1_0",
@@ -1156,6 +1150,12 @@
             "value": "0"
           }
         }
+      },
+      "FEB_AXI_Interface_0": {
+        "vlnv": "fnal.gov:user:FEB_AXI_Interface:1.0",
+        "xci_name": "uController_FEB_AXI_Interface_0_0",
+        "xci_path": "ip\\uController_FEB_AXI_Interface_0_0\\uController_FEB_AXI_Interface_0_0.xci",
+        "inst_hier_path": "FEB_AXI_Interface_0"
       },
       "FEB_fabric_0": {
         "vlnv": "fnal.gov:user:FEB_fabric:1.0",
@@ -1404,8 +1404,8 @@
       "FEB_fabric_0_iuCD": {
         "ports": [
           "FEB_fabric_0/iuCD",
-          "FEB_AXI_Interface_0/iuCD",
-          "system_ila_1/probe0"
+          "system_ila_1/probe0",
+          "FEB_AXI_Interface_0/iuCD"
         ],
         "hdl_attributes": {
           "DEBUG": {
@@ -1500,8 +1500,8 @@
           "axi_gpio_0/s_axi_aclk",
           "microblaze_0_local_memory/LMB_Clk",
           "system_ila_0/clk",
-          "FEB_AXI_Interface_0/s00_axi_aclk",
-          "system_ila_1/clk"
+          "system_ila_1/clk",
+          "FEB_AXI_Interface_0/s00_axi_aclk"
         ]
       },
       "clk_wiz_0_clk_out3": {

@@ -1,7 +1,7 @@
 --Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
 ----------------------------------------------------------------------------------
 --Tool Version: Vivado v.2022.2 (win64) Build 3671981 Fri Oct 14 05:00:03 MDT 2022
---Date        : Wed Mar 29 09:17:01 2023
+--Date        : Mon Apr 10 17:53:23 2023
 --Host        : CD-135239 running 64-bit major release  (build 9200)
 --Command     : generate_target uController.bd
 --Design      : uController
@@ -1807,6 +1807,12 @@ architecture STRUCTURE of uController is
     probe6 : in STD_LOGIC_VECTOR ( 15 downto 0 )
   );
   end component uController_system_ila_0_0;
+  component uController_system_ila_1_0 is
+  port (
+    clk : in STD_LOGIC;
+    probe0 : in STD_LOGIC_VECTOR ( 15 downto 0 )
+  );
+  end component uController_system_ila_1_0;
   component uController_FEB_AXI_Interface_0_0 is
   port (
     CpldRst : out STD_LOGIC;
@@ -1840,12 +1846,6 @@ architecture STRUCTURE of uController is
     s00_axi_rready : in STD_LOGIC
   );
   end component uController_FEB_AXI_Interface_0_0;
-  component uController_system_ila_1_0 is
-  port (
-    clk : in STD_LOGIC;
-    probe0 : in STD_LOGIC_VECTOR ( 15 downto 0 )
-  );
-  end component uController_system_ila_1_0;
   component uController_FEB_fabric_0_0 is
   port (
     Clk_80MHz : in STD_LOGIC;

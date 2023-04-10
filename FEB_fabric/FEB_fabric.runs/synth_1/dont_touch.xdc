@@ -17,6 +17,9 @@ set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==DPRAM_1Kx16
 # IP: ip/AFE_DP_Pipeline/AFE_DP_Pipeline.xci
 set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==AFE_DP_Pipeline || ORIG_REF_NAME==AFE_DP_Pipeline} -quiet] -quiet
 
+# IP: ip/Trigger_ila/Trigger_ila.xci
+set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==Trigger_ila || ORIG_REF_NAME==Trigger_ila} -quiet] -quiet
+
 # XDC: c:/v22.2/FEB_fabric/feb_arty.tmp/feb_fabric_v1_0_project/FEB_fabric_v1_0_project.gen/sources_1/ip/SCFIFO_1Kx16/SCFIFO_1Kx16.xdc
 set_property KEEP_HIERARCHY SOFT [get_cells [split [join [get_cells -hier -filter {REF_NAME==SCFIFO_1Kx16 || ORIG_REF_NAME==SCFIFO_1Kx16} -quiet] {/U0 } ]/U0 ] -quiet] -quiet
 
