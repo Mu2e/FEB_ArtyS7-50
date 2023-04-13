@@ -1,47 +1,94 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<GenRun Id="impl_1" LaunchPart="xc7s50csga324-1" LaunchTime="1681159655">
-  <File Type="PA-TCL" Name="ARTY_test_wrapper.tcl"/>
-  <File Type="REPORTS-TCL" Name="ARTY_test_wrapper_reports.tcl"/>
-  <File Type="BITSTR-MSK" Name="ARTY_test_wrapper.msk"/>
-  <File Type="RDI-RDI" Name="ARTY_test_wrapper.vdi"/>
-  <File Type="PA-DCP" Name="ARTY_test_wrapper.dcp"/>
-  <File Type="BG-BIT" Name="ARTY_test_wrapper.bit"/>
-  <File Type="BG-DRC" Name="ARTY_test_wrapper.drc"/>
-  <File Type="BG-BGN" Name="ARTY_test_wrapper.bgn"/>
-  <File Type="BG-BIN" Name="ARTY_test_wrapper.bin"/>
-  <File Type="BITSTR-RBT" Name="ARTY_test_wrapper.rbt"/>
-  <File Type="BITSTR-NKY" Name="ARTY_test_wrapper.nky"/>
-  <File Type="BITSTR-BMM" Name="ARTY_test_wrapper_bd.bmm"/>
-  <File Type="BITSTR-MMI" Name="ARTY_test_wrapper.mmi"/>
-  <File Type="BITSTR-SYSDEF" Name="ARTY_test_wrapper.sysdef"/>
-  <File Type="BITSTR-LTX" Name="debug_nets.ltx"/>
-  <File Type="BITSTR-LTX" Name="ARTY_test_wrapper.ltx"/>
-  <File Type="WBT-USG" Name="usage_statistics_webtalk.html"/>
+<GenRun Id="impl_1" LaunchPart="xc7s50csga324-1" LaunchTime="1681247305">
   <File Type="OPT-HWDEF" Name="ARTY_test_wrapper.hwdef"/>
-  <File Type="PLACE-PRE-SIMILARITY" Name="ARTY_test_wrapper_incremental_reuse_pre_placed.rpt"/>
-  <File Type="ROUTE-DCP" Name="ARTY_test_wrapper_routed.dcp"/>
-  <File Type="ROUTE-ERROR-DCP" Name="ARTY_test_wrapper_routed_error.dcp"/>
-  <File Type="ROUTE-BLACKBOX-DCP" Name="ARTY_test_wrapper_routed_bb.dcp"/>
-  <File Type="ROUTE-TIMING-PB" Name="ARTY_test_wrapper_timing_summary_routed.pb"/>
+  <File Type="ROUTE-BUS-SKEW" Name="ARTY_test_wrapper_bus_skew_routed.rpt"/>
+  <File Type="PA-DCP" Name="ARTY_test_wrapper.dcp"/>
+  <File Type="ROUTE-PWR" Name="ARTY_test_wrapper_power_routed.rpt"/>
+  <File Type="PA-TCL" Name="ARTY_test_wrapper.tcl"/>
+  <File Type="BITSTR-MMI" Name="ARTY_test_wrapper.mmi"/>
+  <File Type="OPT-METHODOLOGY-DRC" Name="ARTY_test_wrapper_methodology_drc_opted.rpt"/>
+  <File Type="INIT-TIMING" Name="ARTY_test_wrapper_timing_summary_init.rpt"/>
+  <File Type="ROUTE-PWR-SUM" Name="ARTY_test_wrapper_power_summary_routed.pb"/>
+  <File Type="REPORTS-TCL" Name="ARTY_test_wrapper_reports.tcl"/>
+  <File Type="OPT-TIMING" Name="ARTY_test_wrapper_timing_summary_opted.rpt"/>
   <File Type="OPT-DCP" Name="ARTY_test_wrapper_opt.dcp"/>
-  <File Type="PLACE-DCP" Name="ARTY_test_wrapper_placed.dcp"/>
+  <File Type="OPT-DRC" Name="ARTY_test_wrapper_drc_opted.rpt"/>
   <File Type="PWROPT-DCP" Name="ARTY_test_wrapper_pwropt.dcp"/>
+  <File Type="PWROPT-DRC" Name="ARTY_test_wrapper_drc_pwropted.rpt"/>
+  <File Type="PWROPT-TIMING" Name="ARTY_test_wrapper_timing_summary_pwropted.rpt"/>
+  <File Type="PLACE-DCP" Name="ARTY_test_wrapper_placed.dcp"/>
+  <File Type="PLACE-IO" Name="ARTY_test_wrapper_io_placed.rpt"/>
+  <File Type="PLACE-CLK" Name="ARTY_test_wrapper_clock_utilization_placed.rpt"/>
+  <File Type="PLACE-UTIL" Name="ARTY_test_wrapper_utilization_placed.rpt"/>
+  <File Type="PLACE-UTIL-PB" Name="ARTY_test_wrapper_utilization_placed.pb"/>
+  <File Type="PLACE-CTRL" Name="ARTY_test_wrapper_control_sets_placed.rpt"/>
+  <File Type="PLACE-SIMILARITY" Name="ARTY_test_wrapper_incremental_reuse_placed.rpt"/>
+  <File Type="PLACE-PRE-SIMILARITY" Name="ARTY_test_wrapper_incremental_reuse_pre_placed.rpt"/>
+  <File Type="BG-BIN" Name="ARTY_test_wrapper.bin"/>
+  <File Type="PLACE-TIMING" Name="ARTY_test_wrapper_timing_summary_placed.rpt"/>
   <File Type="POSTPLACE-PWROPT-DCP" Name="ARTY_test_wrapper_postplace_pwropt.dcp"/>
+  <File Type="BITSTR-MSK" Name="ARTY_test_wrapper.msk"/>
+  <File Type="POSTPLACE-PWROPT-TIMING" Name="ARTY_test_wrapper_timing_summary_postplace_pwropted.rpt"/>
   <File Type="PHYSOPT-DCP" Name="ARTY_test_wrapper_physopt.dcp"/>
+  <File Type="PHYSOPT-DRC" Name="ARTY_test_wrapper_drc_physopted.rpt"/>
+  <File Type="BITSTR-RBT" Name="ARTY_test_wrapper.rbt"/>
+  <File Type="PHYSOPT-TIMING" Name="ARTY_test_wrapper_timing_summary_physopted.rpt"/>
+  <File Type="ROUTE-ERROR-DCP" Name="ARTY_test_wrapper_routed_error.dcp"/>
+  <File Type="ROUTE-DCP" Name="ARTY_test_wrapper_routed.dcp"/>
+  <File Type="ROUTE-BLACKBOX-DCP" Name="ARTY_test_wrapper_routed_bb.dcp"/>
+  <File Type="ROUTE-DRC" Name="ARTY_test_wrapper_drc_routed.rpt"/>
+  <File Type="ROUTE-DRC-PB" Name="ARTY_test_wrapper_drc_routed.pb"/>
+  <File Type="ROUTE-DRC-RPX" Name="ARTY_test_wrapper_drc_routed.rpx"/>
+  <File Type="ROUTE-METHODOLOGY-DRC" Name="ARTY_test_wrapper_methodology_drc_routed.rpt"/>
+  <File Type="ROUTE-METHODOLOGY-DRC-RPX" Name="ARTY_test_wrapper_methodology_drc_routed.rpx"/>
+  <File Type="ROUTE-METHODOLOGY-DRC-PB" Name="ARTY_test_wrapper_methodology_drc_routed.pb"/>
+  <File Type="ROUTE-PWR-RPX" Name="ARTY_test_wrapper_power_routed.rpx"/>
+  <File Type="ROUTE-STATUS" Name="ARTY_test_wrapper_route_status.rpt"/>
+  <File Type="ROUTE-STATUS-PB" Name="ARTY_test_wrapper_route_status.pb"/>
+  <File Type="ROUTE-TIMINGSUMMARY" Name="ARTY_test_wrapper_timing_summary_routed.rpt"/>
+  <File Type="ROUTE-TIMING-PB" Name="ARTY_test_wrapper_timing_summary_routed.pb"/>
+  <File Type="ROUTE-TIMING-RPX" Name="ARTY_test_wrapper_timing_summary_routed.rpx"/>
+  <File Type="ROUTE-SIMILARITY" Name="ARTY_test_wrapper_incremental_reuse_routed.rpt"/>
+  <File Type="ROUTE-CLK" Name="ARTY_test_wrapper_clock_utilization_routed.rpt"/>
+  <File Type="ROUTE-BUS-SKEW-PB" Name="ARTY_test_wrapper_bus_skew_routed.pb"/>
+  <File Type="ROUTE-BUS-SKEW-RPX" Name="ARTY_test_wrapper_bus_skew_routed.rpx"/>
   <File Type="POSTROUTE-PHYSOPT-DCP" Name="ARTY_test_wrapper_postroute_physopt.dcp"/>
   <File Type="POSTROUTE-PHYSOPT-BLACKBOX-DCP" Name="ARTY_test_wrapper_postroute_physopt_bb.dcp"/>
+  <File Type="POSTROUTE-PHYSOPT-TIMING" Name="ARTY_test_wrapper_timing_summary_postroute_physopted.rpt"/>
+  <File Type="POSTROUTE-PHYSOPT-TIMING-PB" Name="ARTY_test_wrapper_timing_summary_postroute_physopted.pb"/>
+  <File Type="POSTROUTE-PHYSOPT-TIMING-RPX" Name="ARTY_test_wrapper_timing_summary_postroute_physopted.rpx"/>
+  <File Type="POSTROUTE-PHYSOPT-BUS-SKEW" Name="ARTY_test_wrapper_bus_skew_postroute_physopted.rpt"/>
+  <File Type="BG-BIT" Name="ARTY_test_wrapper.bit"/>
+  <File Type="POSTROUTE-PHYSOPT-BUS-SKEW-PB" Name="ARTY_test_wrapper_bus_skew_postroute_physopted.pb"/>
+  <File Type="POSTROUTE-PHYSOPT-BUS-SKEW-RPX" Name="ARTY_test_wrapper_bus_skew_postroute_physopted.rpx"/>
+  <File Type="BITSTR-NKY" Name="ARTY_test_wrapper.nky"/>
+  <File Type="BITSTR-BMM" Name="ARTY_test_wrapper_bd.bmm"/>
   <File Type="PDI-FILE" Name="ARTY_test_wrapper.pdi"/>
   <File Type="RCFI_FILE" Name="ARTY_test_wrapper.rcfi"/>
   <File Type="CFI_FILE" Name="ARTY_test_wrapper.cfi"/>
   <File Type="RNPI_FILE" Name="ARTY_test_wrapper.rnpi"/>
   <File Type="NPI_FILE" Name="ARTY_test_wrapper.npi"/>
   <File Type="RBD_FILE" Name="ARTY_test_wrapper.rbd"/>
+  <File Type="BITSTR-LTX" Name="debug_nets.ltx"/>
+  <File Type="BITSTR-LTX" Name="ARTY_test_wrapper.ltx"/>
+  <File Type="BITSTR-SYSDEF" Name="ARTY_test_wrapper.sysdef"/>
+  <File Type="BG-BGN" Name="ARTY_test_wrapper.bgn"/>
+  <File Type="BG-DRC" Name="ARTY_test_wrapper.drc"/>
+  <File Type="RDI-RDI" Name="ARTY_test_wrapper.vdi"/>
+  <File Type="WBT-USG" Name="usage_statistics_webtalk.html"/>
   <File Type="ROUTE-RQS" Name="ARTY_test_wrapper_routed.rqs"/>
   <File Type="POSTROUTE-PHYSOPT-RQS" Name="ARTY_test_wrapper_postroute_physopted.rqs"/>
   <File Type="ROUTE-RQS-RPT" Name="route_report_qor_suggestions_0.rpt"/>
   <File Type="POSTROUTE-PHYSOPT-RQS-RPT" Name="postroute_physopt_report_qor_suggestions_0.rpt"/>
   <FileSet Name="sources" Type="DesignSrcs" RelSrcDir="$PSRCDIR/sources_1" RelGenDir="$PGENDIR/sources_1">
     <Filter Type="Srcs"/>
+    <File Path="$PSRCDIR/sources_1/ip/iuCD_FIFO/iuCD_FIFO.xci">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
     <File Path="$PSRCDIR/sources_1/new/Proj_Def.vhd">
       <FileInfo>
         <Attr Name="Library" Val="work"/>
@@ -126,13 +173,12 @@
     <Step Id="route_design"/>
     <Step Id="post_route_phys_opt_design"/>
     <Step Id="write_bitstream"/>
-    <Step Id="write_device_image"/>
   </Strategy>
   <BlockFileSet Type="BlockSrcs" Name="ARTY_test_ilmb_v10_0"/>
-  <BlockFileSet Type="BlockSrcs" Name="ARTY_test_axi_uartlite_0_0"/>
   <BlockFileSet Type="BlockSrcs" Name="ARTY_test_lmb_bram_0"/>
-  <BlockFileSet Type="BlockSrcs" Name="ARTY_test_dlmb_v10_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="ARTY_test_axi_uartlite_0_0"/>
   <BlockFileSet Type="BlockSrcs" Name="ARTY_test_rst_clk_wiz_0_100M_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="ARTY_test_dlmb_v10_0"/>
   <BlockFileSet Type="BlockSrcs" Name="ARTY_test_microblaze_0_0"/>
   <BlockFileSet Type="BlockSrcs" Name="ARTY_test_mdm_1_0"/>
   <BlockFileSet Type="BlockSrcs" Name="ARTY_test_axi_gpio_0_0"/>
@@ -140,8 +186,8 @@
   <BlockFileSet Type="BlockSrcs" Name="ARTY_test_dlmb_bram_if_cntlr_0"/>
   <BlockFileSet Type="BlockSrcs" Name="ARTY_test_xbar_0"/>
   <BlockFileSet Type="BlockSrcs" Name="ARTY_test_FEB_AXI_Interface_0_0"/>
-  <BlockFileSet Type="BlockSrcs" Name="ARTY_test_clk_wiz_1_1"/>
   <BlockFileSet Type="BlockSrcs" Name="ARTY_test_clk_wiz_0_2"/>
+  <BlockFileSet Type="BlockSrcs" Name="ARTY_test_clk_wiz_1_1"/>
   <BlockFileSet Type="BlockSrcs" Name="AFEemu"/>
   <BlockFileSet Type="BlockSrcs" Name="AFEemu_ila"/>
   <BlockFileSet Type="BlockSrcs" Name="ARTY_test_FEB_test_0_0"/>

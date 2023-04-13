@@ -74,6 +74,7 @@ set_param tcl.collectionResultDisplayLimit 0
 set_param chipscope.maxJobs 4
 set_param xicom.use_bs_reader 1
 set_param simulator.modelsimInstallPath C:/intelFPGA/20.1/modelsim_ae/win32aloem
+set_msg_config -id {Common 17-41} -limit 10000000
 OPTRACE "Creating in-memory project" START { }
 create_project -in_memory -part xc7s50csga324-1
 
@@ -95,6 +96,8 @@ set_property ip_cache_permissions {read write} [current_project]
 OPTRACE "Creating in-memory project" END { }
 OPTRACE "Adding files" START { }
 add_files C:/v22.2/FEB_AXI_test/FEB_AXI_test.srcs/sources_1/ip/AFEemu.coe
+add_files -quiet c:/v22.2/FEB_AXI_test/FEB_AXI_test.gen/sources_1/ip/iuCD_FIFO/iuCD_FIFO.dcp
+set_property used_in_implementation false [get_files c:/v22.2/FEB_AXI_test/FEB_AXI_test.gen/sources_1/ip/iuCD_FIFO/iuCD_FIFO.dcp]
 read_vhdl -library xil_defaultlib C:/v22.2/FEB_AXI_test/FEB_AXI_test.gen/sources_1/bd/ARTY_test/hdl/ARTY_test_wrapper.vhd
 add_files C:/v22.2/FEB_AXI_test/FEB_AXI_test.srcs/sources_1/bd/ARTY_test/ARTY_test.bd
 set_property used_in_implementation false [get_files -all c:/v22.2/FEB_AXI_test/FEB_AXI_test.gen/sources_1/bd/ARTY_test/ip/ARTY_test_axi_gpio_0_0/ARTY_test_axi_gpio_0_0_board.xdc]

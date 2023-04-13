@@ -115,7 +115,6 @@ proc step_failed { step } {
 OPTRACE "impl_1" END { }
 }
 
-set_msg_config -id {Common 17-41} -limit 10000000
 
 OPTRACE "impl_1" START { ROLLUP_1 }
 OPTRACE "Phase: Init Design" START { ROLLUP_AUTO }
@@ -127,14 +126,8 @@ set rc [catch {
   set_param chipscope.maxJobs 4
   set_param xicom.use_bs_reader 1
   set_param simulator.modelsimInstallPath C:/intelFPGA/20.1/modelsim_ae/win32aloem
-OPTRACE "create in-memory project" START { }
-  create_project -in_memory -part xc7s50csga324-1
-  set_property board_part_repo_paths {C:/Users/mrigatti/AppData/Roaming/Xilinx/Vivado/2022.2/xhub/board_store/xilinx_board_store} [current_project]
-  set_property board_part digilentinc.com:arty-s7-50:part0:1.1 [current_project]
-  set_property design_mode GateLvl [current_fileset]
-  set_param project.singleFileAddWarning.threshold 0
-OPTRACE "create in-memory project" END { }
-OPTRACE "set parameters" START { }
+  reset_param project.defaultXPMLibraries 
+  open_checkpoint C:/v22.2/FEB_uController/FEB_uController.runs/impl_1/uController_wrapper.dcp
   set_property webtalk.parent_dir C:/v22.2/FEB_uController/FEB_uController.cache/wt [current_project]
   set_property parent.project_path C:/v22.2/FEB_uController/FEB_uController.xpr [current_project]
   set_property ip_repo_paths {
@@ -145,24 +138,6 @@ OPTRACE "set parameters" START { }
   set_property ip_output_repo C:/v22.2/FEB_uController/FEB_uController.cache/ip [current_project]
   set_property ip_cache_permissions {read write} [current_project]
   set_property XPM_LIBRARIES {XPM_CDC XPM_MEMORY} [current_project]
-OPTRACE "set parameters" END { }
-OPTRACE "add files" START { }
-  add_files -quiet C:/v22.2/FEB_uController/FEB_uController.runs/synth_1/uController_wrapper.dcp
-  set_msg_config -source 4 -id {BD 41-1661} -limit 0
-  set_param project.isImplRun true
-  add_files C:/v22.2/FEB_uController/FEB_uController.srcs/sources_1/bd/uController/uController.bd
-  set_param project.isImplRun false
-OPTRACE "read constraints: implementation" START { }
-  read_xdc C:/v22.2/FEB_uController/FEB_uController.srcs/constrs_1/new/uController_wrapper.xdc
-OPTRACE "read constraints: implementation" END { }
-OPTRACE "add files" END { }
-OPTRACE "link_design" START { }
-  set_param project.isImplRun true
-  link_design -top uController_wrapper -part xc7s50csga324-1 
-OPTRACE "link_design" END { }
-  set_param project.isImplRun false
-OPTRACE "gray box cells" START { }
-OPTRACE "gray box cells" END { }
 OPTRACE "init_design_reports" START { REPORT }
 OPTRACE "init_design_reports" END { }
 OPTRACE "init_design_write_hwdef" START { }

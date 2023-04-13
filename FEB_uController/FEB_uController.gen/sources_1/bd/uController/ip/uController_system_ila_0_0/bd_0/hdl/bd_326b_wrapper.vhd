@@ -17,7 +17,8 @@ entity bd_326b_wrapper is
     probe3 : in STD_LOGIC_VECTOR ( 11 downto 0 );
     probe4 : in STD_LOGIC_VECTOR ( 0 to 0 );
     probe5 : in STD_LOGIC_VECTOR ( 0 to 0 );
-    probe6 : in STD_LOGIC_VECTOR ( 15 downto 0 )
+    probe6 : in STD_LOGIC_VECTOR ( 15 downto 0 );
+    probe7 : in STD_LOGIC_VECTOR ( 15 downto 0 )
   );
 end bd_326b_wrapper;
 
@@ -31,7 +32,8 @@ architecture STRUCTURE of bd_326b_wrapper is
     probe3 : in STD_LOGIC_VECTOR ( 11 downto 0 );
     probe4 : in STD_LOGIC_VECTOR ( 0 to 0 );
     probe5 : in STD_LOGIC_VECTOR ( 0 to 0 );
-    probe6 : in STD_LOGIC_VECTOR ( 15 downto 0 )
+    probe6 : in STD_LOGIC_VECTOR ( 15 downto 0 );
+    probe7 : in STD_LOGIC_VECTOR ( 15 downto 0 )
   );
   end component bd_326b;
 begin
@@ -44,6 +46,7 @@ bd_326b_i: component bd_326b
       probe3(11 downto 0) => probe3(11 downto 0),
       probe4(0) => probe4(0),
       probe5(0) => probe5(0),
-      probe6(15 downto 0) => probe6(15 downto 0)
+      probe6(15 downto 0) => probe6(15 downto 0),
+      probe7(15 downto 0) => probe7(15 downto 0)
     );
 end STRUCTURE;

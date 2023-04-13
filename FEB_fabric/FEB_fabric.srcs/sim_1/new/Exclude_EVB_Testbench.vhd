@@ -210,7 +210,7 @@ read_EvBuff: process
 begin
 	wait until rising_edge(asp);
 	WRDL <= "01";
-	uCA(9 downto 0) <= "11" & X"AD";
+	uCA(9 downto 0) <= "11" & X"AA";
 end process;
 
 

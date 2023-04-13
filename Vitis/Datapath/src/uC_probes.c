@@ -86,7 +86,7 @@ void uCD(int write_data)
 
 int iuCD()
 {
-	int read_data = 0xAAAA;
+	int read_data;
 	read_data = FEB_AXI_INTERFACE_mReadReg (BASEADDR, REG3);
 	return read_data;
 

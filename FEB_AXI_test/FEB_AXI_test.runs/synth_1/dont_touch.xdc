@@ -3,6 +3,9 @@
 
 # XDC: new/pinout.xdc
 
+# IP: ip/iuCD_FIFO/iuCD_FIFO.xci
+set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==iuCD_FIFO || ORIG_REF_NAME==iuCD_FIFO} -quiet] -quiet
+
 # Block Designs: bd/ARTY_test/ARTY_test.bd
 set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==ARTY_test || ORIG_REF_NAME==ARTY_test} -quiet] -quiet
 
@@ -62,5 +65,8 @@ set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==AFEemu_ila 
 
 # IP: ip/AFEemu/AFEemu.xci
 set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==AFEemu || ORIG_REF_NAME==AFEemu} -quiet] -quiet
+
+# IP: ip/iuCD_FIFO/iuCD_FIFO.xci
+#dup# set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==iuCD_FIFO || ORIG_REF_NAME==iuCD_FIFO} -quiet] -quiet
 
 # XDC: c:/v22.2/FEB_AXI_test/FEB_AXI_test.gen/sources_1/bd/ARTY_test/ARTY_test_ooc.xdc

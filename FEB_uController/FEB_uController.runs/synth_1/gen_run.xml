@@ -1,11 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<GenRun Id="synth_1" LaunchPart="xc7s50csga324-1" LaunchTime="1680100616" LaunchIncrCheckpoint="$PSRCDIR/utils_1/imports/synth_1/uController_wrapper.dcp">
+<GenRun Id="synth_1" LaunchPart="xc7s50csga324-1" LaunchTime="1681393947" LaunchIncrCheckpoint="$PSRCDIR/utils_1/imports/synth_1/uController_wrapper.dcp">
   <File Type="PA-TCL" Name="uController_wrapper.tcl"/>
+  <File Type="RDS-PROPCONSTRS" Name="uController_wrapper_drc_synth.rpt"/>
   <File Type="REPORTS-TCL" Name="uController_wrapper_reports.tcl"/>
   <File Type="RDS-RDS" Name="uController_wrapper.vds"/>
   <File Type="RDS-UTIL" Name="uController_wrapper_utilization_synth.rpt"/>
   <File Type="RDS-UTIL-PB" Name="uController_wrapper_utilization_synth.pb"/>
   <File Type="RDS-DCP" Name="uController_wrapper.dcp"/>
+  <File Type="VDS-TIMINGSUMMARY" Name="uController_wrapper_timing_summary_synth.rpt"/>
+  <File Type="VDS-TIMING-PB" Name="uController_wrapper_timing_summary_synth.pb"/>
   <FileSet Name="sources" Type="DesignSrcs" RelSrcDir="$PSRCDIR/sources_1" RelGenDir="$PGENDIR/sources_1">
     <Filter Type="Srcs"/>
     <File Path="$PGENDIR/sources_1/bd/uController/hdl/uController_wrapper.vhd">

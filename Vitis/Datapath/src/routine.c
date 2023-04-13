@@ -20,9 +20,8 @@ void StartAFEemu(int data)
 	//SetWRDL();
     uCA(StartAFEemuAd);
 	for (int i = 0; i < data; i++)
-		{int offset = 0xA0;
-			offset = offset + i;
-			uCD(offset);}
+		{uCD(i);}
+
     //ClearWRDL();
 }
 void StopAFEemu()
@@ -37,6 +36,11 @@ void ReadAFEemu()
     uCA(ReadAFEemuAd);
     //ClearWRDL();
 }
+
+// when reset => state = 0
+// when start => state= 1
+// when stop => state = 2
+// when readback => state = 3
 
 //============= TRIGGER LOGIC ==============
 // Flash gate enable bit: FlashEn <= uCD(0);
@@ -169,7 +173,7 @@ void SetADCSmplCntrAd(int ADCSmplCntr)
     ClearWRDL();
 }
 
-void SetCrtlNPortN(int ControllerNo, int PortNo)
+void SetCrtlNPortN(int ControllerNo, int PortNo) //21,12 = AB
 {
 	int write_data = 0;
 	write_data = ControllerNo << 8 | PortNo;

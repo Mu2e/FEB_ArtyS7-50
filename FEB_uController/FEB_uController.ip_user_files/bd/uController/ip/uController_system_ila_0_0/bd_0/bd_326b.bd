@@ -1,7 +1,7 @@
 {
   "design": {
     "design_info": {
-      "boundary_crc": "0x5DEE87189A5FBC6D",
+      "boundary_crc": "0xEC79C83405DC6BE8",
       "design_src": "SBD",
       "device": "xc7s50csga324-1",
       "name": "bd_326b",
@@ -75,6 +75,11 @@
         "direction": "I",
         "left": "15",
         "right": "0"
+      },
+      "probe7": {
+        "direction": "I",
+        "left": "15",
+        "right": "0"
       }
     },
     "components": {
@@ -112,7 +117,7 @@
             "value": "Native"
           },
           "C_NUM_OF_PROBES": {
-            "value": "7"
+            "value": "8"
           },
           "C_PROBE0_MU_CNT": {
             "value": "1"
@@ -177,6 +182,15 @@
           "C_PROBE6_WIDTH": {
             "value": "16"
           },
+          "C_PROBE7_MU_CNT": {
+            "value": "1"
+          },
+          "C_PROBE7_TYPE": {
+            "value": "0"
+          },
+          "C_PROBE7_WIDTH": {
+            "value": "16"
+          },
           "C_TIME_TAG_WIDTH": {
             "value": "32"
           },
@@ -239,6 +253,12 @@
         "ports": [
           "probe6",
           "ila_lib/probe6"
+        ]
+      },
+      "probe7_1": {
+        "ports": [
+          "probe7",
+          "ila_lib/probe7"
         ]
       }
     }

@@ -1,7 +1,7 @@
 --Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
 ----------------------------------------------------------------------------------
 --Tool Version: Vivado v.2022.2 (win64) Build 3671981 Fri Oct 14 05:00:03 MDT 2022
---Date        : Mon Apr 10 17:53:23 2023
+--Date        : Wed Apr 12 17:18:22 2023
 --Host        : CD-135239 running 64-bit major release  (build 9200)
 --Command     : generate_target uController.bd
 --Design      : uController
@@ -1637,7 +1637,7 @@ entity uController is
     usb_uart_txd : out STD_LOGIC
   );
   attribute CORE_GENERATION_INFO : string;
-  attribute CORE_GENERATION_INFO of uController : entity is "uController,IP_Integrator,{x_ipVendor=xilinx.com,x_ipLibrary=BlockDiagram,x_ipName=uController,x_ipVersion=1.00.a,x_ipLanguage=VHDL,numBlks=23,numReposBlks=17,numNonXlnxBlks=2,numHierBlks=6,maxHierDepth=1,numSysgenBlks=0,numHlsBlks=0,numHdlrefBlks=0,numPkgbdBlks=0,bdsource=USER,da_axi4_cnt=3,da_board_cnt=6,da_clkrst_cnt=4,da_mb_cnt=1,synth_mode=OOC_per_BD}";
+  attribute CORE_GENERATION_INFO of uController : entity is "uController,IP_Integrator,{x_ipVendor=xilinx.com,x_ipLibrary=BlockDiagram,x_ipName=uController,x_ipVersion=1.00.a,x_ipLanguage=VHDL,numBlks=22,numReposBlks=16,numNonXlnxBlks=2,numHierBlks=6,maxHierDepth=1,numSysgenBlks=0,numHlsBlks=0,numHdlrefBlks=0,numPkgbdBlks=0,bdsource=USER,da_axi4_cnt=3,da_board_cnt=6,da_clkrst_cnt=4,da_mb_cnt=1,synth_mode=OOC_per_BD}";
   attribute HW_HANDOFF : string;
   attribute HW_HANDOFF of uController : entity is "uController.hwdef";
 end uController;
@@ -1804,15 +1804,10 @@ architecture STRUCTURE of uController is
     probe3 : in STD_LOGIC_VECTOR ( 11 downto 0 );
     probe4 : in STD_LOGIC_VECTOR ( 0 to 0 );
     probe5 : in STD_LOGIC_VECTOR ( 0 to 0 );
-    probe6 : in STD_LOGIC_VECTOR ( 15 downto 0 )
+    probe6 : in STD_LOGIC_VECTOR ( 15 downto 0 );
+    probe7 : in STD_LOGIC_VECTOR ( 15 downto 0 )
   );
   end component uController_system_ila_0_0;
-  component uController_system_ila_1_0 is
-  port (
-    clk : in STD_LOGIC;
-    probe0 : in STD_LOGIC_VECTOR ( 15 downto 0 )
-  );
-  end component uController_system_ila_1_0;
   component uController_FEB_AXI_Interface_0_0 is
   port (
     CpldRst : out STD_LOGIC;
@@ -2425,11 +2420,7 @@ system_ila_0: component uController_system_ila_0_0
       probe3(11 downto 0) => FEB_AXI_Interface_0_uCA(11 downto 0),
       probe4(0) => FEB_AXI_Interface_0_uCRd,
       probe5(0) => FEB_AXI_Interface_0_uCWr,
-      probe6(15 downto 0) => Net(15 downto 0)
-    );
-system_ila_1: component uController_system_ila_1_0
-     port map (
-      clk => clk_wiz_0_clk_out2,
-      probe0(15 downto 0) => FEB_fabric_0_iuCD(15 downto 0)
+      probe6(15 downto 0) => Net(15 downto 0),
+      probe7(15 downto 0) => FEB_fabric_0_iuCD(15 downto 0)
     );
 end STRUCTURE;

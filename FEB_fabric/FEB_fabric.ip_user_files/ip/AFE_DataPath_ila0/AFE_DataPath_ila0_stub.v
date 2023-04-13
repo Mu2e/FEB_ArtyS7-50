@@ -1,7 +1,7 @@
 // Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
 // --------------------------------------------------------------------------------
 // Tool Version: Vivado v.2022.2 (win64) Build 3671981 Fri Oct 14 05:00:03 MDT 2022
-// Date        : Mon Apr 10 16:47:55 2023
+// Date        : Wed Apr 12 16:52:30 2023
 // Host        : CD-135239 running 64-bit major release  (build 9200)
 // Command     : write_verilog -force -mode synth_stub
 //               c:/v22.2/FEB_fabric/FEB_fabric.gen/sources_1/ip/AFE_DataPath_ila0/AFE_DataPath_ila0_stub.v
@@ -16,7 +16,7 @@
 (* x_core_info = "ila,Vivado 2022.2" *)
 module AFE_DataPath_ila0(clk, probe0, probe1, probe2, probe3, probe4, probe5, 
   probe6, probe7, probe8, probe9, probe10, probe11, probe12)
-/* synthesis syn_black_box black_box_pad_pin="clk,probe0[15:0],probe1[0:0],probe2[9:0],probe3[9:0],probe4[9:0],probe5[9:0],probe6[3:0],probe7[7:0],probe8[9:0],probe9[1:0],probe10[13:0],probe11[13:0],probe12[13:0]" */;
+/* synthesis syn_black_box black_box_pad_pin="clk,probe0[15:0],probe1[0:0],probe2[9:0],probe3[9:0],probe4[9:0],probe5[9:0],probe6[3:0],probe7[3:0],probe8[9:0],probe9[1:0],probe10[13:0],probe11[13:0],probe12[13:0]" */;
   input clk;
   input [15:0]probe0;
   input [0:0]probe1;
@@ -25,7 +25,7 @@ module AFE_DataPath_ila0(clk, probe0, probe1, probe2, probe3, probe4, probe5,
   input [9:0]probe4;
   input [9:0]probe5;
   input [3:0]probe6;
-  input [7:0]probe7;
+  input [3:0]probe7;
   input [9:0]probe8;
   input [1:0]probe9;
   input [13:0]probe10;

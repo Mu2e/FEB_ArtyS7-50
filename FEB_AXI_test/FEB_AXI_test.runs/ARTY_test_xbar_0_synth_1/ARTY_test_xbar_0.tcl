@@ -71,6 +71,7 @@ proc create_report { reportName command } {
 }
 OPTRACE "ARTY_test_xbar_0_synth_1" START { ROLLUP_AUTO }
 set_param simulator.modelsimInstallPath C:/intelFPGA/20.1/modelsim_ae/win32aloem
+set_msg_config -id {Common 17-41} -limit 10000000
 set_param project.vivado.isBlockSynthRun true
 set_msg_config -msgmgr_mode ooc_run
 OPTRACE "Creating in-memory project" START { }

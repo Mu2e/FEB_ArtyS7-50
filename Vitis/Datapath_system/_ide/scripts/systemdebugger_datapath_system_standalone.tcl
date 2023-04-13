@@ -13,7 +13,7 @@ connect -url tcp:127.0.0.1:3121
 targets -set -filter {jtag_cable_name =~ "Digilent Arty S7 - 50 210352B59CF7A" && level==0 && jtag_device_ctx=="jsn-Arty S7 - 50-210352B59CF7A-0362f093-0"}
 fpga -file C:/v22.2/Vitis/Datapath/_ide/bitstream/download.bit
 targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
-loadhw -hw C:/v22.2/Vitis/uController_wrapper/export/uController_wrapper/hw/ARTY_test_wrapper3.xsa -regs
+loadhw -hw C:/v22.2/Vitis/uController_wrapper/export/uController_wrapper/hw/ARTY_test_wrapper1.xsa -regs
 configparams mdm-detect-bscan-mask 2
 targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
 rst -system

@@ -151,7 +151,7 @@
 
 
 #define ReadEventBuffAd 0b1110101011
-#define ReadAFEBuffAd 0b1110101101
+#define ReadAFEBuffAd 0b1110101010
 
 #define StopAFEemuAd 0b1110101100
 #define StartAFEemuAd 0b1110101101

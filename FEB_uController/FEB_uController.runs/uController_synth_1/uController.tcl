@@ -70,6 +70,9 @@ proc create_report { reportName command } {
   }
 }
 OPTRACE "uController_synth_1" START { ROLLUP_AUTO }
+set_param tcl.collectionResultDisplayLimit 0
+set_param chipscope.maxJobs 4
+set_param xicom.use_bs_reader 1
 set_param simulator.modelsimInstallPath C:/intelFPGA/20.1/modelsim_ae/win32aloem
 set_param project.vivado.isBlockSynthRun true
 OPTRACE "Creating in-memory project" START { }
@@ -121,12 +124,6 @@ set_property used_in_implementation false [get_files -all c:/v22.2/FEB_uControll
 set_property used_in_implementation false [get_files -all c:/v22.2/FEB_uController/FEB_uController.gen/sources_1/bd/uController/ip/uController_system_ila_0_0/bd_0/ip/ip_0/bd_326b_ila_lib_0_ooc.xdc]
 set_property used_in_implementation false [get_files -all c:/v22.2/FEB_uController/FEB_uController.gen/sources_1/bd/uController/ip/uController_system_ila_0_0/bd_0/bd_326b_ooc.xdc]
 set_property used_in_implementation false [get_files -all c:/v22.2/FEB_uController/FEB_uController.gen/sources_1/bd/uController/ip/uController_system_ila_0_0/uController_system_ila_0_0_ooc.xdc]
-set_property used_in_synthesis false [get_files -all c:/v22.2/FEB_uController/FEB_uController.gen/sources_1/bd/uController/ip/uController_system_ila_1_0/bd_0/ip/ip_0/ila_v6_2/constraints/ila_impl.xdc]
-set_property used_in_implementation false [get_files -all c:/v22.2/FEB_uController/FEB_uController.gen/sources_1/bd/uController/ip/uController_system_ila_1_0/bd_0/ip/ip_0/ila_v6_2/constraints/ila_impl.xdc]
-set_property used_in_implementation false [get_files -all c:/v22.2/FEB_uController/FEB_uController.gen/sources_1/bd/uController/ip/uController_system_ila_1_0/bd_0/ip/ip_0/ila_v6_2/constraints/ila.xdc]
-set_property used_in_implementation false [get_files -all c:/v22.2/FEB_uController/FEB_uController.gen/sources_1/bd/uController/ip/uController_system_ila_1_0/bd_0/ip/ip_0/bd_f23a_ila_lib_0_ooc.xdc]
-set_property used_in_implementation false [get_files -all c:/v22.2/FEB_uController/FEB_uController.gen/sources_1/bd/uController/ip/uController_system_ila_1_0/bd_0/bd_f23a_ooc.xdc]
-set_property used_in_implementation false [get_files -all c:/v22.2/FEB_uController/FEB_uController.gen/sources_1/bd/uController/ip/uController_system_ila_1_0/uController_system_ila_1_0_ooc.xdc]
 set_property used_in_implementation false [get_files -all c:/v22.2/FEB_uController/FEB_uController.gen/sources_1/bd/uController/ip/uController_FEB_fabric_0_0/FEB_fabric.srcs/sources_1/ip/DDR3LController/DDR3LController/user_design/constraints/DDR3LController.xdc]
 set_property used_in_implementation false [get_files -all c:/v22.2/FEB_uController/FEB_uController.gen/sources_1/bd/uController/ip/uController_FEB_fabric_0_0/FEB_fabric.srcs/sources_1/ip/DDR3LController/DDR3LController/user_design/constraints/DDR3LController_ooc.xdc]
 set_property used_in_implementation false [get_files -all c:/v22.2/FEB_uController/FEB_uController.gen/sources_1/bd/uController/ip/uController_FEB_fabric_0_0/FEB_fabric.srcs/sources_1/ip/AFEemu/AFEemu_ooc.xdc]
@@ -140,6 +137,8 @@ set_property used_in_implementation false [get_files -all c:/v22.2/FEB_uControll
 set_property used_in_implementation false [get_files -all c:/v22.2/FEB_uController/FEB_uController.gen/sources_1/bd/uController/ip/uController_FEB_fabric_0_0/FEB_fabric.srcs/sources_1/ip/AFE_DataPath_ila2/AFE_DataPath_ila2_ooc.xdc]
 set_property used_in_implementation false [get_files -all c:/v22.2/FEB_uController/FEB_uController.gen/sources_1/bd/uController/ip/uController_FEB_fabric_0_0/FEB_fabric.srcs/sources_1/ip/AFE_DataPath_ila3/ila_v6_2/constraints/ila.xdc]
 set_property used_in_implementation false [get_files -all c:/v22.2/FEB_uController/FEB_uController.gen/sources_1/bd/uController/ip/uController_FEB_fabric_0_0/FEB_fabric.srcs/sources_1/ip/AFE_DataPath_ila3/AFE_DataPath_ila3_ooc.xdc]
+set_property used_in_implementation false [get_files -all c:/v22.2/FEB_uController/FEB_uController.gen/sources_1/bd/uController/ip/uController_FEB_fabric_0_0/FEB_fabric.srcs/sources_1/ip/iuCD_FIFO/iuCD_FIFO.xdc]
+set_property used_in_implementation false [get_files -all c:/v22.2/FEB_uController/FEB_uController.gen/sources_1/bd/uController/ip/uController_FEB_fabric_0_0/FEB_fabric.srcs/sources_1/ip/iuCD_FIFO/iuCD_FIFO_clocks.xdc]
 set_property used_in_implementation false [get_files -all c:/v22.2/FEB_uController/FEB_uController.gen/sources_1/bd/uController/ip/uController_FEB_fabric_0_0/FEB_fabric.srcs/sources_1/ip/SCFIFO_1Kx16/SCFIFO_1Kx16.xdc]
 set_property used_in_implementation false [get_files -all c:/v22.2/FEB_uController/FEB_uController.gen/sources_1/bd/uController/ip/uController_FEB_fabric_0_0/FEB_fabric.srcs/sources_1/ip/SCFIFO_32x256/SCFIFO_32x256.xdc]
 set_property used_in_implementation false [get_files -all c:/v22.2/FEB_uController/FEB_uController.gen/sources_1/bd/uController/ip/uController_FEB_fabric_0_0/FEB_fabric.srcs/sources_1/ip/DPRAM_1Kx16/DPRAM_1Kx16_ooc.xdc]

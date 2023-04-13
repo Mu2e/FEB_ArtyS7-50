@@ -162,6 +162,11 @@ set_property used_in_implementation false [get_files -all c:/v22.2/FEB_fabric/FE
 set_property used_in_implementation false [get_files -all c:/v22.2/FEB_fabric/FEB_fabric.gen/sources_1/ip/AFE_DataPath_ila3/ila_v6_2/constraints/ila.xdc]
 set_property used_in_implementation false [get_files -all c:/v22.2/FEB_fabric/FEB_fabric.gen/sources_1/ip/AFE_DataPath_ila3/AFE_DataPath_ila3_ooc.xdc]
 
+read_ip -quiet c:/v22.2/FEB_fabric/FEB_fabric.srcs/sources_1/ip/iuCD_FIFO/iuCD_FIFO.xci
+set_property used_in_implementation false [get_files -all c:/v22.2/FEB_fabric/FEB_fabric.gen/sources_1/ip/iuCD_FIFO/iuCD_FIFO.xdc]
+set_property used_in_implementation false [get_files -all c:/v22.2/FEB_fabric/FEB_fabric.gen/sources_1/ip/iuCD_FIFO/iuCD_FIFO_clocks.xdc]
+set_property used_in_implementation false [get_files -all c:/v22.2/FEB_fabric/FEB_fabric.gen/sources_1/ip/iuCD_FIFO/iuCD_FIFO_ooc.xdc]
+
 OPTRACE "Adding files" END { }
 # Mark all dcp files as not used in implementation to prevent them from being
 # stitched into the results of this synthesis run. Any black boxes in the

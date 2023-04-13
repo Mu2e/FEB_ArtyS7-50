@@ -61,20 +61,20 @@
     <Option Name="IPStaticSourceDir" Val="$PIPUSERFILESDIR/ipstatic"/>
     <Option Name="EnableBDX" Val="FALSE"/>
     <Option Name="DSABoardId" Val="arty-s7-50"/>
-    <Option Name="WTXSimLaunchSim" Val="239"/>
+    <Option Name="WTXSimLaunchSim" Val="281"/>
     <Option Name="WTModelSimLaunchSim" Val="0"/>
     <Option Name="WTQuestaLaunchSim" Val="0"/>
     <Option Name="WTIesLaunchSim" Val="0"/>
     <Option Name="WTVcsLaunchSim" Val="0"/>
     <Option Name="WTRivieraLaunchSim" Val="0"/>
     <Option Name="WTActivehdlLaunchSim" Val="0"/>
-    <Option Name="WTXSimExportSim" Val="9"/>
-    <Option Name="WTModelSimExportSim" Val="9"/>
-    <Option Name="WTQuestaExportSim" Val="9"/>
+    <Option Name="WTXSimExportSim" Val="15"/>
+    <Option Name="WTModelSimExportSim" Val="15"/>
+    <Option Name="WTQuestaExportSim" Val="15"/>
     <Option Name="WTIesExportSim" Val="0"/>
-    <Option Name="WTVcsExportSim" Val="9"/>
-    <Option Name="WTRivieraExportSim" Val="9"/>
-    <Option Name="WTActivehdlExportSim" Val="9"/>
+    <Option Name="WTVcsExportSim" Val="15"/>
+    <Option Name="WTRivieraExportSim" Val="15"/>
+    <Option Name="WTActivehdlExportSim" Val="15"/>
     <Option Name="GenerateIPUpgradeLog" Val="TRUE"/>
     <Option Name="XSimRadix" Val="hex"/>
     <Option Name="XSimTimeUnit" Val="ns"/>
@@ -92,6 +92,13 @@
   <FileSets Version="1" Minor="31">
     <FileSet Name="sources_1" Type="DesignSrcs" RelSrcDir="$PSRCDIR/sources_1" RelGenDir="$PGENDIR/sources_1">
       <Filter Type="Srcs"/>
+      <File Path="$PSRCDIR/sources_1/ip/iuCD_FIFO/iuCD_FIFO.xci">
+        <FileInfo>
+          <Attr Name="UsedIn" Val="synthesis"/>
+          <Attr Name="UsedIn" Val="implementation"/>
+          <Attr Name="UsedIn" Val="simulation"/>
+        </FileInfo>
+      </File>
       <File Path="$PSRCDIR/sources_1/new/Proj_Def.vhd">
         <FileInfo>
           <Attr Name="Library" Val="work"/>
@@ -108,11 +115,13 @@
       </File>
       <File Path="$PSRCDIR/sources_1/bd/ARTY_test/ARTY_test.bd">
         <FileInfo>
-          <Attr Name="AutoDisabled" Val="1"/>
           <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="implementation"/>
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
+        <CompFileExtendedInfo CompFileName="ARTY_test.bd" FileRelPathName="ip/ARTY_test_FEB_test_0_0/ARTY_test_FEB_test_0_0.xci">
+          <Proxy FileSetName="ARTY_test_FEB_test_0_0"/>
+        </CompFileExtendedInfo>
         <CompFileExtendedInfo CompFileName="ARTY_test.bd" FileRelPathName="ip/ARTY_test_FEB_AXI_Interface_0_0/ARTY_test_FEB_AXI_Interface_0_0.xci">
           <Proxy FileSetName="ARTY_test_FEB_AXI_Interface_0_0"/>
         </CompFileExtendedInfo>
@@ -158,7 +167,6 @@
       </File>
       <File Path="$PGENDIR/sources_1/bd/ARTY_test/hdl/ARTY_test_wrapper.vhd">
         <FileInfo>
-          <Attr Name="AutoDisabled" Val="1"/>
           <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
@@ -179,7 +187,7 @@
       </File>
       <Config>
         <Option Name="DesignMode" Val="RTL"/>
-        <Option Name="TopModule" Val="FEB_test"/>
+        <Option Name="TopModule" Val="ARTY_test_wrapper"/>
       </Config>
     </FileSet>
     <FileSet Name="constrs_1" Type="Constrs" RelSrcDir="$PSRCDIR/constrs_1" RelGenDir="$PGENDIR/constrs_1">
@@ -347,16 +355,9 @@
         <Option Name="UseBlackboxStub" Val="1"/>
       </Config>
     </FileSet>
-    <FileSet Name="iuCD_FIFO" Type="BlockSrcs" RelSrcDir="$PSRCDIR/iuCD_FIFO" RelGenDir="$PGENDIR/iuCD_FIFO">
-      <File Path="$PSRCDIR/sources_1/ip/iuCD_FIFO/iuCD_FIFO.xci">
-        <FileInfo>
-          <Attr Name="UsedIn" Val="synthesis"/>
-          <Attr Name="UsedIn" Val="implementation"/>
-          <Attr Name="UsedIn" Val="simulation"/>
-        </FileInfo>
-      </File>
+    <FileSet Name="ARTY_test_FEB_test_0_0" Type="BlockSrcs" RelSrcDir="$PSRCDIR/ARTY_test_FEB_test_0_0" RelGenDir="$PGENDIR/ARTY_test_FEB_test_0_0">
       <Config>
-        <Option Name="TopModule" Val="iuCD_FIFO"/>
+        <Option Name="TopModule" Val="ARTY_test_FEB_test_0_0"/>
         <Option Name="UseBlackboxStub" Val="1"/>
       </Config>
     </FileSet>
@@ -550,9 +551,11 @@
       <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
       <RQSFiles/>
     </Run>
-    <Run Id="iuCD_FIFO_synth_1" Type="Ft3:Synth" SrcSet="iuCD_FIFO" Part="xc7s50csga324-1" ConstrsSet="iuCD_FIFO" Description="Vivado Synthesis Defaults" AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" Dir="$PRUNDIR/iuCD_FIFO_synth_1" IncludeInArchive="true" IsChild="false" AutoIncrementalDir="$PSRCDIR/utils_1/imports/iuCD_FIFO_synth_1" AutoRQSDir="$PSRCDIR/utils_1/imports/iuCD_FIFO_synth_1">
+    <Run Id="ARTY_test_FEB_test_0_0_synth_1" Type="Ft3:Synth" SrcSet="ARTY_test_FEB_test_0_0" Part="xc7s50csga324-1" ConstrsSet="ARTY_test_FEB_test_0_0" Description="Vivado Synthesis Defaults" AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" Dir="$PRUNDIR/ARTY_test_FEB_test_0_0_synth_1" IncludeInArchive="true" IsChild="false" AutoIncrementalDir="$PSRCDIR/utils_1/imports/ARTY_test_FEB_test_0_0_synth_1" AutoRQSDir="$PSRCDIR/utils_1/imports/ARTY_test_FEB_test_0_0_synth_1">
       <Strategy Version="1" Minor="2">
-        <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2022"/>
+        <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2022">
+          <Desc>Vivado Synthesis Defaults</Desc>
+        </StratHandle>
         <Step Id="synth_design"/>
       </Strategy>
       <GeneratedRun Dir="$PRUNDIR" File="gen_run.xml"/>
@@ -850,9 +853,11 @@
       <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
       <RQSFiles/>
     </Run>
-    <Run Id="iuCD_FIFO_impl_1" Type="Ft2:EntireDesign" Part="xc7s50csga324-1" ConstrsSet="iuCD_FIFO" Description="Default settings for Implementation." AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" SynthRun="iuCD_FIFO_synth_1" IncludeInArchive="false" IsChild="false" GenFullBitstream="true" AutoIncrementalDir="$PSRCDIR/utils_1/imports/iuCD_FIFO_impl_1" AutoRQSDir="$PSRCDIR/utils_1/imports/iuCD_FIFO_impl_1">
+    <Run Id="ARTY_test_FEB_test_0_0_impl_1" Type="Ft2:EntireDesign" Part="xc7s50csga324-1" ConstrsSet="ARTY_test_FEB_test_0_0" Description="Default settings for Implementation." AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" SynthRun="ARTY_test_FEB_test_0_0_synth_1" IncludeInArchive="false" IsChild="false" GenFullBitstream="true" AutoIncrementalDir="$PSRCDIR/utils_1/imports/ARTY_test_FEB_test_0_0_impl_1" AutoRQSDir="$PSRCDIR/utils_1/imports/ARTY_test_FEB_test_0_0_impl_1">
       <Strategy Version="1" Minor="2">
-        <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2022"/>
+        <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2022">
+          <Desc>Default settings for Implementation.</Desc>
+        </StratHandle>
         <Step Id="init_design"/>
         <Step Id="opt_design"/>
         <Step Id="power_opt_design"/>

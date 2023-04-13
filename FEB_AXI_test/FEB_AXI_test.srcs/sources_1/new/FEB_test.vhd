@@ -37,7 +37,6 @@ entity FEB_test is
 	Clk_100MHz			: in std_logic;
 	Clk_200MHz			: in std_logic;
 	SysClk				: in std_logic;  -- 160 MHz
-
 -- Microcontroller strobes
 	CpldRst				: in std_logic;
 	CpldCS				: in std_logic;
@@ -89,9 +88,7 @@ port (
     rd_en 	: in std_logic;
     dout 	: out std_logic_vector(15 downto 0);
     full 	: out std_logic;
-    empty 	: out std_logic;
-    wr_rst_busy : out std_logic;
-    rd_rst_busy : out std_logic
+    empty 	: out std_logic
   );
 end component;
 
@@ -107,7 +104,7 @@ signal dout_AFE0			: Array_8x14;
 signal dout_AFE1			: Array_8x14;
 signal done					: std_logic_vector(1 downto 0); -- status of automatic alignment FSM
 
-signal Clk_1MHz				: std_logic;
+signal Clk_2MHz				: std_logic;
 signal count				: std_logic_vector(11 downto 0);
 signal tmp 					: std_logic := '0';
 signal counter				: std_logic_vector(15 downto 0);
@@ -121,6 +118,7 @@ signal AFEemuRDaddr			: std_logic_vector(9 downto 0);
 signal AFEemudin            : std_logic_vector(13 downto 0);
 signal AFEemudout           : std_logic_vector(13 downto 0);
 
+signal iuCD_rst				: std_logic;
 signal iuCD_FIFOwre			: std_logic;
 signal iuCD_FIFOrde			: std_logic;
 signal iuCD_FIFOdin         : std_logic_vector(15 downto 0);
@@ -158,15 +156,15 @@ begin
 	if CpldRst = '0' then
 		count <= x"001";
 		tmp <= '0';
-	elsif rising_edge (Clk_100MHz) then
+	elsif falling_edge (Clk_100MHz) then
 		count <= count + x"001";
-	if (count = x"64") then
+	if (count = x"19") then
 		tmp <= NOT tmp;
 		count <= x"001";
 	end if;
 end if;
 
-Clk_1MHz <= tmp;
+Clk_2MHz <= tmp;
 end process;
 
 Addr: process(Clk_80MHz, CpldRst, state)
@@ -217,19 +215,18 @@ port map (
     doutb   => AFEemudout
     );
 
+iuCD_rst <= not CpldRst;
 iuCD_sync: iuCD_FIFO 
 port map(
-    rst 	=> CpldRst,
+    rst 	=> iuCD_rst,
     wr_clk  => Clk_80MHz,
-    rd_clk  => Clk_1MHz,
+    rd_clk  => Clk_2MHz,
     din 	=> iuCD_FIFOdin,
     wr_en 	=> iuCD_FIFOwre,
     rd_en 	=> iuCD_FIFOrde,
     dout 	=> iuCD_FIFOdout,
     full 	=> iuCD_FIFOfull,
-    empty 	=> iuCD_FIFOempty,
-    wr_rst_busy => open,
-    rd_rst_busy => open
+    empty 	=> iuCD_FIFOempty
   );
 
 
@@ -294,7 +291,6 @@ begin
 		AFEemuWRaddr	<= (others => '0');
 		AFEemuRDaddr	<= (others => '0');
 		AFEemudin    	<= (others => '0');
-		iuCD			<= (others => '0');
 		dout_AFE0(0)	<= (others => '0');
 		dout_AFE0(1)	<= (others => '0');
 		dout_AFE0(2)	<= (others => '0');
@@ -358,18 +354,15 @@ begin
 	if CpldRst = '0' then
 		iuCD_FIFOrde	<= '0';
 	elsif rising_edge (Clk_80MHz) then
-
-	if iuCD_FIFOempty = '0' then
-		iuCD_FIFOrde 	<= '1';
-		iuCD			<= iuCD_FIFOdout;
-	else 
-		iuCD_FIFOrde 	<= '0';
-		iuCD			<= (others => '0');
-	end if;
+		if iuCD_FIFOempty = '0' then
+			iuCD_FIFOrde 	<= '1';
+		else 
+			iuCD_FIFOrde 	<= '0';
+		end if;
 end if;
-
-Clk_1MHz <= tmp;
 end process;
+
+iuCD <= iuCD_FIFOdout;
 
 generatedILA: if generateILA = true generate
 

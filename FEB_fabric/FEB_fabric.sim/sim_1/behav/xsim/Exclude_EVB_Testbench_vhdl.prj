@@ -1,0 +1,32 @@
+# compile vhdl design source files
+vhdl xil_defaultlib  \
+"../../../../FEB_fabric.gen/sources_1/ip/AFEemu_ila/sim/AFEemu_ila.vhd" \
+"../../../../FEB_fabric.gen/sources_1/ip/AFE_DataPath_ila0/sim/AFE_DataPath_ila0.vhd" \
+"../../../../FEB_fabric.gen/sources_1/ip/AFE_DataPath_ila1/sim/AFE_DataPath_ila1.vhd" \
+"../../../../FEB_fabric.gen/sources_1/ip/AFE_DataPath_ila2/sim/AFE_DataPath_ila2.vhd" \
+"../../../../FEB_fabric.gen/sources_1/ip/AFE_DataPath_ila3/sim/AFE_DataPath_ila3.vhd" \
+
+vhdl work  \
+"../../../../FEB_fabric.srcs/sources_1/new/Proj_Def.vhd" \
+"../../../../FEB_fabric.srcs/sources_1/new/AFE_DataPath.vhd" \
+"../../../../FEB_fabric.srcs/sources_1/new/AFE_Interface_Sim.vhd" \
+"../../../../FEB_fabric.srcs/sources_1/new/AFE_Pipeline.vhd" \
+"../../../../FEB_fabric.srcs/sources_1/new/DDR_Interface .vhd" \
+"../../../../FEB_fabric.srcs/sources_1/new/EventBuilder.vhd" \
+"../../../../FEB_fabric.srcs/sources_1/new/Exclude_EVB.vhd" \
+"../../../../FEB_fabric.srcs/sources_1/new/Trigger.vhd" \
+"../../../../FEB_fabric.srcs/sources_1/new/FEB_top_ARTY.vhd" \
+"../../../../FEB_fabric.srcs/sources_1/new/Exclude_DDR.vhd" \
+"../../../../FEB_fabric.srcs/sources_1/new/FM_Deserializer.vhd" \
+"../../../../FEB_fabric.srcs/sources_1/new/FM_Serializer.vhd" \
+
+vhdl xil_defaultlib  \
+"../../../../FEB_fabric.gen/sources_1/ip/Trigger_ila/sim/Trigger_ila.vhd" \
+
+vhdl work  \
+"../../../../FEB_fabric.srcs/sim_1/new/Datapath_Testbench.vhd" \
+"../../../../FEB_fabric.srcs/sim_1/new/Exclude_EVB_Testbench.vhd" \
+"../../../../FEB_fabric.srcs/sim_1/new/Exclude_DDR_Testbench.vhd" \
+
+# Do not sort compile order
+nosort

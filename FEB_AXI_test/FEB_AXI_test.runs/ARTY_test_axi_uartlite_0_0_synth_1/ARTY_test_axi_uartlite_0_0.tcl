@@ -70,7 +70,11 @@ proc create_report { reportName command } {
   }
 }
 OPTRACE "ARTY_test_axi_uartlite_0_0_synth_1" START { ROLLUP_AUTO }
+set_param tcl.collectionResultDisplayLimit 0
+set_param chipscope.maxJobs 4
+set_param xicom.use_bs_reader 1
 set_param simulator.modelsimInstallPath C:/intelFPGA/20.1/modelsim_ae/win32aloem
+set_msg_config -id {Common 17-41} -limit 10000000
 set_param project.vivado.isBlockSynthRun true
 set_msg_config -msgmgr_mode ooc_run
 OPTRACE "Creating in-memory project" START { }
@@ -87,11 +91,13 @@ set_property default_lib xil_defaultlib [current_project]
 set_property target_language VHDL [current_project]
 set_property board_part_repo_paths {C:/Users/mrigatti/AppData/Roaming/Xilinx/Vivado/2022.2/xhub/board_store/xilinx_board_store} [current_project]
 set_property board_part digilentinc.com:arty-s7-50:part0:1.1 [current_project]
+set_property ip_repo_paths c:/v22.2/ip_repo/FEB_AXI_Interface_1_0 [current_project]
+update_ip_catalog
 set_property ip_output_repo c:/v22.2/FEB_AXI_test/FEB_AXI_test.cache/ip [current_project]
 set_property ip_cache_permissions {read write} [current_project]
 OPTRACE "Creating in-memory project" END { }
 OPTRACE "Adding files" START { }
-read_ip -quiet c:/v22.2/FEB_AXI_test/FEB_AXI_test.srcs/sources_1/bd/ARTY_test/ip/ARTY_test_axi_uartlite_0_0/ARTY_test_axi_uartlite_0_0.xci
+read_ip -quiet C:/v22.2/FEB_AXI_test/FEB_AXI_test.srcs/sources_1/bd/ARTY_test/ip/ARTY_test_axi_uartlite_0_0/ARTY_test_axi_uartlite_0_0.xci
 set_property used_in_implementation false [get_files -all c:/v22.2/FEB_AXI_test/FEB_AXI_test.gen/sources_1/bd/ARTY_test/ip/ARTY_test_axi_uartlite_0_0/ARTY_test_axi_uartlite_0_0_board.xdc]
 set_property used_in_implementation false [get_files -all c:/v22.2/FEB_AXI_test/FEB_AXI_test.gen/sources_1/bd/ARTY_test/ip/ARTY_test_axi_uartlite_0_0/ARTY_test_axi_uartlite_0_0_ooc.xdc]
 set_property used_in_implementation false [get_files -all c:/v22.2/FEB_AXI_test/FEB_AXI_test.gen/sources_1/bd/ARTY_test/ip/ARTY_test_axi_uartlite_0_0/ARTY_test_axi_uartlite_0_0.xdc]

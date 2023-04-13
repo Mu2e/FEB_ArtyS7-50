@@ -58,15 +58,6 @@ set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==bd_326b_ila
 # IP: C:/v22.2/FEB_uController/FEB_uController.srcs/sources_1/bd/uController/ip/uController_FEB_AXI_Interface_0_0/uController_FEB_AXI_Interface_0_0.xci
 set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==uController_FEB_AXI_Interface_0_0 || ORIG_REF_NAME==uController_FEB_AXI_Interface_0_0} -quiet] -quiet
 
-# IP: C:/v22.2/FEB_uController/FEB_uController.srcs/sources_1/bd/uController/ip/uController_system_ila_1_0/uController_system_ila_1_0.xci
-set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==uController_system_ila_1_0 || ORIG_REF_NAME==uController_system_ila_1_0} -quiet] -quiet
-
-# Block Designs: c:/v22.2/FEB_uController/FEB_uController.gen/sources_1/bd/uController/ip/uController_system_ila_1_0/bd_0/bd_f23a.bd
-set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==bd_f23a || ORIG_REF_NAME==bd_f23a} -quiet] -quiet
-
-# IP: c:/v22.2/FEB_uController/FEB_uController.gen/sources_1/bd/uController/ip/uController_system_ila_1_0/bd_0/ip/ip_0/bd_f23a_ila_lib_0.xci
-set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==bd_f23a_ila_lib_0 || ORIG_REF_NAME==bd_f23a_ila_lib_0} -quiet] -quiet
-
 # IP: C:/v22.2/FEB_uController/FEB_uController.srcs/sources_1/bd/uController/ip/uController_FEB_fabric_0_0/uController_FEB_fabric_0_0.xci
 set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==uController_FEB_fabric_0_0 || ORIG_REF_NAME==uController_FEB_fabric_0_0} -quiet] -quiet
 
@@ -90,6 +81,9 @@ set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==AFE_DataPat
 
 # IP: c:/v22.2/FEB_uController/FEB_uController.gen/sources_1/bd/uController/ip/uController_FEB_fabric_0_0/FEB_fabric.srcs/sources_1/ip/AFE_DataPath_ila3/AFE_DataPath_ila3.xci
 set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==AFE_DataPath_ila3 || ORIG_REF_NAME==AFE_DataPath_ila3} -quiet] -quiet
+
+# IP: c:/v22.2/FEB_uController/FEB_uController.gen/sources_1/bd/uController/ip/uController_FEB_fabric_0_0/FEB_fabric.srcs/sources_1/ip/iuCD_FIFO/iuCD_FIFO.xci
+set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==iuCD_FIFO || ORIG_REF_NAME==iuCD_FIFO} -quiet] -quiet
 
 # IP: c:/v22.2/FEB_uController/FEB_uController.gen/sources_1/bd/uController/ip/uController_FEB_fabric_0_0/FEB_fabric.srcs/sources_1/ip/SCFIFO_1Kx16/SCFIFO_1Kx16.xci
 set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==SCFIFO_1Kx16 || ORIG_REF_NAME==SCFIFO_1Kx16} -quiet] -quiet
@@ -168,18 +162,6 @@ set_property KEEP_HIERARCHY SOFT [get_cells [split [join [get_cells -hier -filte
 
 # XDC: c:/v22.2/FEB_uController/FEB_uController.gen/sources_1/bd/uController/ip/uController_system_ila_0_0/uController_system_ila_0_0_ooc.xdc
 
-# XDC: c:/v22.2/FEB_uController/FEB_uController.gen/sources_1/bd/uController/ip/uController_system_ila_1_0/bd_0/ip/ip_0/ila_v6_2/constraints/ila_impl.xdc
-set_property KEEP_HIERARCHY SOFT [get_cells [split [join [get_cells -hier -filter {REF_NAME==bd_f23a_ila_lib_0 || ORIG_REF_NAME==bd_f23a_ila_lib_0} -quiet] {/U0 } ]/U0 ] -quiet] -quiet
-
-# XDC: c:/v22.2/FEB_uController/FEB_uController.gen/sources_1/bd/uController/ip/uController_system_ila_1_0/bd_0/ip/ip_0/ila_v6_2/constraints/ila.xdc
-#dup# set_property KEEP_HIERARCHY SOFT [get_cells [split [join [get_cells -hier -filter {REF_NAME==bd_f23a_ila_lib_0 || ORIG_REF_NAME==bd_f23a_ila_lib_0} -quiet] {/U0 } ]/U0 ] -quiet] -quiet
-
-# XDC: c:/v22.2/FEB_uController/FEB_uController.gen/sources_1/bd/uController/ip/uController_system_ila_1_0/bd_0/ip/ip_0/bd_f23a_ila_lib_0_ooc.xdc
-
-# XDC: c:/v22.2/FEB_uController/FEB_uController.gen/sources_1/bd/uController/ip/uController_system_ila_1_0/bd_0/bd_f23a_ooc.xdc
-
-# XDC: c:/v22.2/FEB_uController/FEB_uController.gen/sources_1/bd/uController/ip/uController_system_ila_1_0/uController_system_ila_1_0_ooc.xdc
-
 # XDC: c:/v22.2/FEB_uController/FEB_uController.gen/sources_1/bd/uController/ip/uController_FEB_fabric_0_0/FEB_fabric.srcs/sources_1/ip/DDR3LController/DDR3LController/user_design/constraints/DDR3LController.xdc
 #dup# set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==DDR3LController || ORIG_REF_NAME==DDR3LController} -quiet] -quiet
 
@@ -211,6 +193,12 @@ set_property KEEP_HIERARCHY SOFT [get_cells [split [join [get_cells -hier -filte
 set_property KEEP_HIERARCHY SOFT [get_cells [split [join [get_cells -hier -filter {REF_NAME==AFE_DataPath_ila3 || ORIG_REF_NAME==AFE_DataPath_ila3} -quiet] {/U0 } ]/U0 ] -quiet] -quiet
 
 # XDC: c:/v22.2/FEB_uController/FEB_uController.gen/sources_1/bd/uController/ip/uController_FEB_fabric_0_0/FEB_fabric.srcs/sources_1/ip/AFE_DataPath_ila3/AFE_DataPath_ila3_ooc.xdc
+
+# XDC: c:/v22.2/FEB_uController/FEB_uController.gen/sources_1/bd/uController/ip/uController_FEB_fabric_0_0/FEB_fabric.srcs/sources_1/ip/iuCD_FIFO/iuCD_FIFO.xdc
+set_property KEEP_HIERARCHY SOFT [get_cells [split [join [get_cells -hier -filter {REF_NAME==iuCD_FIFO || ORIG_REF_NAME==iuCD_FIFO} -quiet] {/U0 } ]/U0 ] -quiet] -quiet
+
+# XDC: c:/v22.2/FEB_uController/FEB_uController.gen/sources_1/bd/uController/ip/uController_FEB_fabric_0_0/FEB_fabric.srcs/sources_1/ip/iuCD_FIFO/iuCD_FIFO_clocks.xdc
+#dup# set_property KEEP_HIERARCHY SOFT [get_cells [split [join [get_cells -hier -filter {REF_NAME==iuCD_FIFO || ORIG_REF_NAME==iuCD_FIFO} -quiet] {/U0 } ]/U0 ] -quiet] -quiet
 
 # XDC: c:/v22.2/FEB_uController/FEB_uController.gen/sources_1/bd/uController/ip/uController_FEB_fabric_0_0/FEB_fabric.srcs/sources_1/ip/SCFIFO_1Kx16/SCFIFO_1Kx16.xdc
 set_property KEEP_HIERARCHY SOFT [get_cells [split [join [get_cells -hier -filter {REF_NAME==SCFIFO_1Kx16 || ORIG_REF_NAME==SCFIFO_1Kx16} -quiet] {/U0 } ]/U0 ] -quiet] -quiet
@@ -293,15 +281,6 @@ set_property KEEP_HIERARCHY SOFT [get_cells [split [join [get_cells -hier -filte
 # IP: C:/v22.2/FEB_uController/FEB_uController.srcs/sources_1/bd/uController/ip/uController_FEB_AXI_Interface_0_0/uController_FEB_AXI_Interface_0_0.xci
 #dup# set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==uController_FEB_AXI_Interface_0_0 || ORIG_REF_NAME==uController_FEB_AXI_Interface_0_0} -quiet] -quiet
 
-# IP: C:/v22.2/FEB_uController/FEB_uController.srcs/sources_1/bd/uController/ip/uController_system_ila_1_0/uController_system_ila_1_0.xci
-#dup# set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==uController_system_ila_1_0 || ORIG_REF_NAME==uController_system_ila_1_0} -quiet] -quiet
-
-# Block Designs: c:/v22.2/FEB_uController/FEB_uController.gen/sources_1/bd/uController/ip/uController_system_ila_1_0/bd_0/bd_f23a.bd
-#dup# set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==bd_f23a || ORIG_REF_NAME==bd_f23a} -quiet] -quiet
-
-# IP: c:/v22.2/FEB_uController/FEB_uController.gen/sources_1/bd/uController/ip/uController_system_ila_1_0/bd_0/ip/ip_0/bd_f23a_ila_lib_0.xci
-#dup# set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==bd_f23a_ila_lib_0 || ORIG_REF_NAME==bd_f23a_ila_lib_0} -quiet] -quiet
-
 # IP: C:/v22.2/FEB_uController/FEB_uController.srcs/sources_1/bd/uController/ip/uController_FEB_fabric_0_0/uController_FEB_fabric_0_0.xci
 #dup# set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==uController_FEB_fabric_0_0 || ORIG_REF_NAME==uController_FEB_fabric_0_0} -quiet] -quiet
 
@@ -325,6 +304,9 @@ set_property KEEP_HIERARCHY SOFT [get_cells [split [join [get_cells -hier -filte
 
 # IP: c:/v22.2/FEB_uController/FEB_uController.gen/sources_1/bd/uController/ip/uController_FEB_fabric_0_0/FEB_fabric.srcs/sources_1/ip/AFE_DataPath_ila3/AFE_DataPath_ila3.xci
 #dup# set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==AFE_DataPath_ila3 || ORIG_REF_NAME==AFE_DataPath_ila3} -quiet] -quiet
+
+# IP: c:/v22.2/FEB_uController/FEB_uController.gen/sources_1/bd/uController/ip/uController_FEB_fabric_0_0/FEB_fabric.srcs/sources_1/ip/iuCD_FIFO/iuCD_FIFO.xci
+#dup# set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==iuCD_FIFO || ORIG_REF_NAME==iuCD_FIFO} -quiet] -quiet
 
 # IP: c:/v22.2/FEB_uController/FEB_uController.gen/sources_1/bd/uController/ip/uController_FEB_fabric_0_0/FEB_fabric.srcs/sources_1/ip/SCFIFO_1Kx16/SCFIFO_1Kx16.xci
 #dup# set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==SCFIFO_1Kx16 || ORIG_REF_NAME==SCFIFO_1Kx16} -quiet] -quiet
@@ -403,18 +385,6 @@ set_property KEEP_HIERARCHY SOFT [get_cells [split [join [get_cells -hier -filte
 
 # XDC: c:/v22.2/FEB_uController/FEB_uController.gen/sources_1/bd/uController/ip/uController_system_ila_0_0/uController_system_ila_0_0_ooc.xdc
 
-# XDC: c:/v22.2/FEB_uController/FEB_uController.gen/sources_1/bd/uController/ip/uController_system_ila_1_0/bd_0/ip/ip_0/ila_v6_2/constraints/ila_impl.xdc
-#dup# set_property KEEP_HIERARCHY SOFT [get_cells [split [join [get_cells -hier -filter {REF_NAME==bd_f23a_ila_lib_0 || ORIG_REF_NAME==bd_f23a_ila_lib_0} -quiet] {/U0 } ]/U0 ] -quiet] -quiet
-
-# XDC: c:/v22.2/FEB_uController/FEB_uController.gen/sources_1/bd/uController/ip/uController_system_ila_1_0/bd_0/ip/ip_0/ila_v6_2/constraints/ila.xdc
-#dup# set_property KEEP_HIERARCHY SOFT [get_cells [split [join [get_cells -hier -filter {REF_NAME==bd_f23a_ila_lib_0 || ORIG_REF_NAME==bd_f23a_ila_lib_0} -quiet] {/U0 } ]/U0 ] -quiet] -quiet
-
-# XDC: c:/v22.2/FEB_uController/FEB_uController.gen/sources_1/bd/uController/ip/uController_system_ila_1_0/bd_0/ip/ip_0/bd_f23a_ila_lib_0_ooc.xdc
-
-# XDC: c:/v22.2/FEB_uController/FEB_uController.gen/sources_1/bd/uController/ip/uController_system_ila_1_0/bd_0/bd_f23a_ooc.xdc
-
-# XDC: c:/v22.2/FEB_uController/FEB_uController.gen/sources_1/bd/uController/ip/uController_system_ila_1_0/uController_system_ila_1_0_ooc.xdc
-
 # XDC: c:/v22.2/FEB_uController/FEB_uController.gen/sources_1/bd/uController/ip/uController_FEB_fabric_0_0/FEB_fabric.srcs/sources_1/ip/DDR3LController/DDR3LController/user_design/constraints/DDR3LController.xdc
 #dup# set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==DDR3LController || ORIG_REF_NAME==DDR3LController} -quiet] -quiet
 
@@ -446,6 +416,12 @@ set_property KEEP_HIERARCHY SOFT [get_cells [split [join [get_cells -hier -filte
 #dup# set_property KEEP_HIERARCHY SOFT [get_cells [split [join [get_cells -hier -filter {REF_NAME==AFE_DataPath_ila3 || ORIG_REF_NAME==AFE_DataPath_ila3} -quiet] {/U0 } ]/U0 ] -quiet] -quiet
 
 # XDC: c:/v22.2/FEB_uController/FEB_uController.gen/sources_1/bd/uController/ip/uController_FEB_fabric_0_0/FEB_fabric.srcs/sources_1/ip/AFE_DataPath_ila3/AFE_DataPath_ila3_ooc.xdc
+
+# XDC: c:/v22.2/FEB_uController/FEB_uController.gen/sources_1/bd/uController/ip/uController_FEB_fabric_0_0/FEB_fabric.srcs/sources_1/ip/iuCD_FIFO/iuCD_FIFO.xdc
+#dup# set_property KEEP_HIERARCHY SOFT [get_cells [split [join [get_cells -hier -filter {REF_NAME==iuCD_FIFO || ORIG_REF_NAME==iuCD_FIFO} -quiet] {/U0 } ]/U0 ] -quiet] -quiet
+
+# XDC: c:/v22.2/FEB_uController/FEB_uController.gen/sources_1/bd/uController/ip/uController_FEB_fabric_0_0/FEB_fabric.srcs/sources_1/ip/iuCD_FIFO/iuCD_FIFO_clocks.xdc
+#dup# set_property KEEP_HIERARCHY SOFT [get_cells [split [join [get_cells -hier -filter {REF_NAME==iuCD_FIFO || ORIG_REF_NAME==iuCD_FIFO} -quiet] {/U0 } ]/U0 ] -quiet] -quiet
 
 # XDC: c:/v22.2/FEB_uController/FEB_uController.gen/sources_1/bd/uController/ip/uController_FEB_fabric_0_0/FEB_fabric.srcs/sources_1/ip/SCFIFO_1Kx16/SCFIFO_1Kx16.xdc
 #dup# set_property KEEP_HIERARCHY SOFT [get_cells [split [join [get_cells -hier -filter {REF_NAME==SCFIFO_1Kx16 || ORIG_REF_NAME==SCFIFO_1Kx16} -quiet] {/U0 } ]/U0 ] -quiet] -quiet
