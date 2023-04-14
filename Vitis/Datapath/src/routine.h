@@ -55,6 +55,7 @@ void SetThreshReg00(int treshold);
 
 //============= Exclude Event Builder LOGIC ==============
 void ReadAFEBuff();
+void readSerial();
 
 //============= Exclude DDR LOGIC ==============
 void ReadEventBuff();

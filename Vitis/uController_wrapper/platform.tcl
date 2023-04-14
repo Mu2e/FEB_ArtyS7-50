@@ -142,3 +142,9 @@ platform config -updatehw {C:/v22.2/FEB_AXI_test/ARTY_test_wrapper2.xsa}
 platform generate -domains 
 platform config -updatehw {C:/v22.2/FEB_uController/uController_wrapperNEW2.xsa}
 platform generate -domains 
+platform config -updatehw {C:/v22.2/FEB_uController/uController_wrapperNEW3.xsa}
+platform generate -domains 
+platform config -updatehw {C:/v22.2/FEB_uController/uController_wrapperNEW4.xsa}
+platform generate -domains 
+platform config -updatehw {C:/v22.2/FEB_uController/uController_wrapperEVB.xsa}
+platform generate -domains 

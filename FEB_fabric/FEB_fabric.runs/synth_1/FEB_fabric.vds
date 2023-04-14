@@ -2,8 +2,8 @@
 # Vivado v2022.2 (64-bit)
 # SW Build 3671981 on Fri Oct 14 05:00:03 MDT 2022
 # IP Build 3669848 on Fri Oct 14 08:30:02 MDT 2022
-# Start of session at: Wed Apr 12 17:17:24 2023
-# Process ID: 155480
+# Start of session at: Fri Apr 14 14:02:12 2023
+# Process ID: 371640
 # Current directory: C:/v22.2/FEB_fabric/FEB_fabric.runs/synth_1
 # Command line: vivado.exe -log FEB_fabric.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source FEB_fabric.tcl
 # Log file: C:/v22.2/FEB_fabric/FEB_fabric.runs/synth_1/FEB_fabric.vds
@@ -11,7 +11,7 @@
 # Running On: CD-135239, OS: Windows, CPU Frequency: 3600 MHz, CPU Physical cores: 8, Host memory: 34287 MB
 #-----------------------------------------------------------
 source FEB_fabric.tcl -notrace
-create_project: Time (s): cpu = 00:00:06 ; elapsed = 00:00:06 . Memory (MB): peak = 1040.133 ; gain = 156.582
+create_project: Time (s): cpu = 00:00:05 ; elapsed = 00:00:06 . Memory (MB): peak = 1040.141 ; gain = 154.547
 INFO: [IP_Flow 19-234] Refreshing IP repositories
 INFO: [IP_Flow 19-1700] Loaded user IP repository 'c:/v22.2/feb_fabric'.
 INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'C:/Xilinx/Vivado/2022.2/data/ip'.
@@ -28,10 +28,10 @@ INFO: [Designutils 20-5440] No compile time benefit to using incremental synthes
 INFO: [Designutils 20-4379] Flow is switching to default flow due to incremental criteria not met. If you would like to alter this behaviour and have the flow terminate instead, please set the following parameter config_implementation {autoIncr.Synth.RejectBehavior Terminate}
 INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 2 processes.
 INFO: [Synth 8-7078] Launching helper process for spawning children vivado processes
-INFO: [Synth 8-7075] Helper process launched with PID 153596
+INFO: [Synth 8-7075] Helper process launched with PID 373232
 INFO: [Synth 8-11241] undeclared symbol 'REGCCE', assumed default net type 'wire' [C:/Xilinx/Vivado/2022.2/data/verilog/src/unimacro/BRAM_SINGLE_MACRO.v:2170]
 ---------------------------------------------------------------------------------
-Starting RTL Elaboration : Time (s): cpu = 00:00:07 ; elapsed = 00:00:08 . Memory (MB): peak = 1935.059 ; gain = 410.289
+Starting RTL Elaboration : Time (s): cpu = 00:00:07 ; elapsed = 00:00:08 . Memory (MB): peak = 1934.629 ; gain = 410.488
 ---------------------------------------------------------------------------------
 INFO: [Synth 8-638] synthesizing module 'FEB_fabric' [C:/v22.2/FEB_fabric/FEB_fabric.srcs/sources_1/new/FEB_top_ARTY.vhd:95]
 	Parameter DIFF_TERM bound to: 1 - type: bool 
@@ -40,12 +40,12 @@ INFO: [Synth 8-638] synthesizing module 'FEB_fabric' [C:/v22.2/FEB_fabric/FEB_fa
 INFO: [Synth 8-113] binding component instance 'GPI0DiffIn' to cell 'IBUFDS' [C:/v22.2/FEB_fabric/FEB_fabric.srcs/sources_1/new/FEB_top_ARTY.vhd:227]
 INFO: [Synth 8-3491] module 'AFE_Interface_Sim' declared at 'C:/v22.2/FEB_fabric/FEB_fabric.srcs/sources_1/new/AFE_Interface_Sim.vhd:10' bound to instance 'AFE_Interface' of component 'AFE_Interface_Sim' [C:/v22.2/FEB_fabric/FEB_fabric.srcs/sources_1/new/FEB_top_ARTY.vhd:274]
 INFO: [Synth 8-638] synthesizing module 'AFE_Interface_Sim' [C:/v22.2/FEB_fabric/FEB_fabric.srcs/sources_1/new/AFE_Interface_Sim.vhd:36]
-INFO: [Synth 8-3491] module 'AFEemu' declared at 'C:/v22.2/FEB_fabric/FEB_fabric.runs/synth_1/.Xil/Vivado-155480-CD-135239/realtime/AFEemu_stub.vhdl:5' bound to instance 'AFE' of component 'AFEemu' [C:/v22.2/FEB_fabric/FEB_fabric.srcs/sources_1/new/AFE_Interface_Sim.vhd:129]
-INFO: [Synth 8-638] synthesizing module 'AFEemu' [C:/v22.2/FEB_fabric/FEB_fabric.runs/synth_1/.Xil/Vivado-155480-CD-135239/realtime/AFEemu_stub.vhdl:18]
+INFO: [Synth 8-3491] module 'AFEemu' declared at 'C:/v22.2/FEB_fabric/FEB_fabric.runs/synth_1/.Xil/Vivado-371640-CD-135239/realtime/AFEemu_stub.vhdl:5' bound to instance 'AFE' of component 'AFEemu' [C:/v22.2/FEB_fabric/FEB_fabric.srcs/sources_1/new/AFE_Interface_Sim.vhd:129]
+INFO: [Synth 8-638] synthesizing module 'AFEemu' [C:/v22.2/FEB_fabric/FEB_fabric.runs/synth_1/.Xil/Vivado-371640-CD-135239/realtime/AFEemu_stub.vhdl:18]
 WARNING: [Synth 8-614] signal 'uCD' is read in the process but is not in the sensitivity list [C:/v22.2/FEB_fabric/FEB_fabric.srcs/sources_1/new/AFE_Interface_Sim.vhd:196]
 WARNING: [Synth 8-614] signal 'AFEemudout' is read in the process but is not in the sensitivity list [C:/v22.2/FEB_fabric/FEB_fabric.srcs/sources_1/new/AFE_Interface_Sim.vhd:196]
-INFO: [Synth 8-3491] module 'AFEemu_ila' declared at 'C:/v22.2/FEB_fabric/FEB_fabric.runs/synth_1/.Xil/Vivado-155480-CD-135239/realtime/AFEemu_ila_stub.vhdl:5' bound to instance 'AFEemu_ila_inst' of component 'AFEemu_ila' [C:/v22.2/FEB_fabric/FEB_fabric.srcs/sources_1/new/AFE_Interface_Sim.vhd:266]
-INFO: [Synth 8-638] synthesizing module 'AFEemu_ila' [C:/v22.2/FEB_fabric/FEB_fabric.runs/synth_1/.Xil/Vivado-155480-CD-135239/realtime/AFEemu_ila_stub.vhdl:18]
+INFO: [Synth 8-3491] module 'AFEemu_ila' declared at 'C:/v22.2/FEB_fabric/FEB_fabric.runs/synth_1/.Xil/Vivado-371640-CD-135239/realtime/AFEemu_ila_stub.vhdl:5' bound to instance 'AFEemu_ila_inst' of component 'AFEemu_ila' [C:/v22.2/FEB_fabric/FEB_fabric.srcs/sources_1/new/AFE_Interface_Sim.vhd:266]
+INFO: [Synth 8-638] synthesizing module 'AFEemu_ila' [C:/v22.2/FEB_fabric/FEB_fabric.runs/synth_1/.Xil/Vivado-371640-CD-135239/realtime/AFEemu_ila_stub.vhdl:18]
 INFO: [Synth 8-256] done synthesizing module 'AFE_Interface_Sim' (0#1) [C:/v22.2/FEB_fabric/FEB_fabric.srcs/sources_1/new/AFE_Interface_Sim.vhd:36]
 INFO: [Synth 8-3491] module 'AFE_DataPath' declared at 'C:/v22.2/FEB_fabric/FEB_fabric.srcs/sources_1/new/AFE_DataPath.vhd:36' bound to instance 'AFE_DataPath_inst' of component 'AFE_DataPath' [C:/v22.2/FEB_fabric/FEB_fabric.srcs/sources_1/new/FEB_top_ARTY.vhd:298]
 INFO: [Synth 8-638] synthesizing module 'AFE_DataPath' [C:/v22.2/FEB_fabric/FEB_fabric.srcs/sources_1/new/AFE_DataPath.vhd:73]
@@ -226,18 +226,12 @@ INFO: [Synth 8-3491] module 'DPRAM_1Kx16' declared at 'c:/v22.2/FEB_fabric/feb_a
 INFO: [Synth 8-3491] module 'DPRAM_1Kx16' declared at 'c:/v22.2/FEB_fabric/feb_arty.tmp/feb_fabric_v1_0_project/FEB_fabric_v1_0_project.gen/sources_1/ip/DPRAM_1Kx16/synth/DPRAM_1Kx16.vhd:59' bound to instance 'AFEBuff' of component 'DPRAM_1Kx16' [C:/v22.2/FEB_fabric/FEB_fabric.srcs/sources_1/new/AFE_DataPath.vhd:318]
 INFO: [Synth 8-3491] module 'DPRAM_1Kx16' declared at 'c:/v22.2/FEB_fabric/feb_arty.tmp/feb_fabric_v1_0_project/FEB_fabric_v1_0_project.gen/sources_1/ip/DPRAM_1Kx16/synth/DPRAM_1Kx16.vhd:59' bound to instance 'AFEBuff' of component 'DPRAM_1Kx16' [C:/v22.2/FEB_fabric/FEB_fabric.srcs/sources_1/new/AFE_DataPath.vhd:318]
 INFO: [Synth 8-3491] module 'DPRAM_1Kx16' declared at 'c:/v22.2/FEB_fabric/feb_arty.tmp/feb_fabric_v1_0_project/FEB_fabric_v1_0_project.gen/sources_1/ip/DPRAM_1Kx16/synth/DPRAM_1Kx16.vhd:59' bound to instance 'AFEBuff' of component 'DPRAM_1Kx16' [C:/v22.2/FEB_fabric/FEB_fabric.srcs/sources_1/new/AFE_DataPath.vhd:318]
-INFO: [Synth 8-3491] module 'AFE_DataPath_ila0' declared at 'C:/v22.2/FEB_fabric/FEB_fabric.runs/synth_1/.Xil/Vivado-155480-CD-135239/realtime/AFE_DataPath_ila0_stub.vhdl:5' bound to instance 'AFE_DataPath_ila_inst0' of component 'AFE_DataPath_ila0' [C:/v22.2/FEB_fabric/FEB_fabric.srcs/sources_1/new/AFE_DataPath.vhd:530]
-INFO: [Synth 8-638] synthesizing module 'AFE_DataPath_ila0' [C:/v22.2/FEB_fabric/FEB_fabric.runs/synth_1/.Xil/Vivado-155480-CD-135239/realtime/AFE_DataPath_ila0_stub.vhdl:25]
+INFO: [Synth 8-3491] module 'AFE_DataPath_ila0' declared at 'C:/v22.2/FEB_fabric/FEB_fabric.runs/synth_1/.Xil/Vivado-371640-CD-135239/realtime/AFE_DataPath_ila0_stub.vhdl:5' bound to instance 'AFE_DataPath_ila_inst0' of component 'AFE_DataPath_ila0' [C:/v22.2/FEB_fabric/FEB_fabric.srcs/sources_1/new/AFE_DataPath.vhd:530]
+INFO: [Synth 8-638] synthesizing module 'AFE_DataPath_ila0' [C:/v22.2/FEB_fabric/FEB_fabric.runs/synth_1/.Xil/Vivado-371640-CD-135239/realtime/AFE_DataPath_ila0_stub.vhdl:25]
 INFO: [Synth 8-256] done synthesizing module 'AFE_DataPath' (0#1) [C:/v22.2/FEB_fabric/FEB_fabric.srcs/sources_1/new/AFE_DataPath.vhd:73]
 INFO: [Synth 8-3491] module 'Trigger' declared at 'C:/v22.2/FEB_fabric/FEB_fabric.srcs/sources_1/new/Trigger.vhd:10' bound to instance 'Trigger_logic' of component 'Trigger' [C:/v22.2/FEB_fabric/FEB_fabric.srcs/sources_1/new/FEB_top_ARTY.vhd:343]
 INFO: [Synth 8-638] synthesizing module 'Trigger' [C:/v22.2/FEB_fabric/FEB_fabric.srcs/sources_1/new/Trigger.vhd:42]
 INFO: [Synth 8-256] done synthesizing module 'Trigger' (0#1) [C:/v22.2/FEB_fabric/FEB_fabric.srcs/sources_1/new/Trigger.vhd:42]
-INFO: [Synth 8-3491] module 'Exclude_EVB' declared at 'C:/v22.2/FEB_fabric/FEB_fabric.srcs/sources_1/new/Exclude_EVB.vhd:10' bound to instance 'data_back_AFE' of component 'Exclude_EVB' [C:/v22.2/FEB_fabric/FEB_fabric.srcs/sources_1/new/FEB_top_ARTY.vhd:376]
-INFO: [Synth 8-638] synthesizing module 'Exclude_EVB' [C:/v22.2/FEB_fabric/FEB_fabric.srcs/sources_1/new/Exclude_EVB.vhd:34]
-WARNING: [Synth 8-614] signal 'tmp' is read in the process but is not in the sensitivity list [C:/v22.2/FEB_fabric/FEB_fabric.srcs/sources_1/new/Exclude_EVB.vhd:76]
-INFO: [Synth 8-3491] module 'iuCD_FIFO' declared at 'C:/v22.2/FEB_fabric/FEB_fabric.runs/synth_1/.Xil/Vivado-155480-CD-135239/realtime/iuCD_FIFO_stub.vhdl:5' bound to instance 'iuCD_sync' of component 'iuCD_FIFO' [C:/v22.2/FEB_fabric/FEB_fabric.srcs/sources_1/new/Exclude_EVB.vhd:93]
-INFO: [Synth 8-638] synthesizing module 'iuCD_FIFO' [C:/v22.2/FEB_fabric/FEB_fabric.runs/synth_1/.Xil/Vivado-155480-CD-135239/realtime/iuCD_FIFO_stub.vhdl:20]
-INFO: [Synth 8-256] done synthesizing module 'Exclude_EVB' (0#1) [C:/v22.2/FEB_fabric/FEB_fabric.srcs/sources_1/new/Exclude_EVB.vhd:34]
 INFO: [Synth 8-3491] module 'EventBuilder' declared at 'C:/v22.2/FEB_fabric/FEB_fabric.srcs/sources_1/new/EventBuilder.vhd:26' bound to instance 'EventBuilder_logic' of component 'EventBuilder' [C:/v22.2/FEB_fabric/FEB_fabric.srcs/sources_1/new/FEB_top_ARTY.vhd:399]
 INFO: [Synth 8-638] synthesizing module 'EventBuilder' [C:/v22.2/FEB_fabric/FEB_fabric.srcs/sources_1/new/EventBuilder.vhd:48]
 WARNING: [Synth 8-5640] Port 'wr_rst_busy' is missing in component declaration [C:/v22.2/FEB_fabric/FEB_fabric.srcs/sources_1/new/Proj_Def.vhd:756]
@@ -659,6 +653,12 @@ INFO: [Synth 8-638] synthesizing module 'SCFIFO_1Kx16' [c:/v22.2/FEB_fabric/feb_
 INFO: [Synth 8-3491] module 'fifo_generator_v13_2_7' declared at 'c:/v22.2/FEB_fabric/feb_arty.tmp/feb_fabric_v1_0_project/FEB_fabric_v1_0_project.gen/sources_1/ip/SCFIFO_1Kx16/hdl/fifo_generator_v13_2_vhsyn_rfs.vhd:38604' bound to instance 'U0' of component 'fifo_generator_v13_2_7' [c:/v22.2/FEB_fabric/feb_arty.tmp/feb_fabric_v1_0_project/FEB_fabric_v1_0_project.gen/sources_1/ip/SCFIFO_1Kx16/synth/SCFIFO_1Kx16.vhd:543]
 INFO: [Synth 8-256] done synthesizing module 'SCFIFO_1Kx16' (0#1) [c:/v22.2/FEB_fabric/feb_arty.tmp/feb_fabric_v1_0_project/FEB_fabric_v1_0_project.gen/sources_1/ip/SCFIFO_1Kx16/synth/SCFIFO_1Kx16.vhd:75]
 INFO: [Synth 8-256] done synthesizing module 'EventBuilder' (0#1) [C:/v22.2/FEB_fabric/FEB_fabric.srcs/sources_1/new/EventBuilder.vhd:48]
+INFO: [Synth 8-3491] module 'Exclude_DDR' declared at 'C:/v22.2/FEB_fabric/FEB_fabric.srcs/sources_1/new/Exclude_DDR.vhd:10' bound to instance 'data_back_EVB' of component 'Exclude_DDR' [C:/v22.2/FEB_fabric/FEB_fabric.srcs/sources_1/new/FEB_top_ARTY.vhd:420]
+INFO: [Synth 8-638] synthesizing module 'Exclude_DDR' [C:/v22.2/FEB_fabric/FEB_fabric.srcs/sources_1/new/Exclude_DDR.vhd:34]
+WARNING: [Synth 8-614] signal 'tmp' is read in the process but is not in the sensitivity list [C:/v22.2/FEB_fabric/FEB_fabric.srcs/sources_1/new/Exclude_DDR.vhd:77]
+INFO: [Synth 8-3491] module 'iuCD_FIFO' declared at 'C:/v22.2/FEB_fabric/FEB_fabric.runs/synth_1/.Xil/Vivado-371640-CD-135239/realtime/iuCD_FIFO_stub.vhdl:5' bound to instance 'iuCD_sync' of component 'iuCD_FIFO' [C:/v22.2/FEB_fabric/FEB_fabric.srcs/sources_1/new/Exclude_DDR.vhd:93]
+INFO: [Synth 8-638] synthesizing module 'iuCD_FIFO' [C:/v22.2/FEB_fabric/FEB_fabric.runs/synth_1/.Xil/Vivado-371640-CD-135239/realtime/iuCD_FIFO_stub.vhdl:20]
+INFO: [Synth 8-256] done synthesizing module 'Exclude_DDR' (0#1) [C:/v22.2/FEB_fabric/FEB_fabric.srcs/sources_1/new/Exclude_DDR.vhd:34]
 	Parameter DATA_WIDTH bound to: 16 - type: integer 
 	Parameter DDR3L_ADDR bound to: 14 - type: integer 
 	Parameter APP_ADDR bound to: 28 - type: integer 
@@ -673,8 +673,8 @@ INFO: [Synth 8-3491] module 'SCFIFO_32x256' declared at 'c:/v22.2/FEB_fabric/feb
 WARNING: [Synth 8-5640] Port 'wr_rst_busy' is missing in component declaration [C:/v22.2/FEB_fabric/FEB_fabric.srcs/sources_1/new/Proj_Def.vhd:765]
 WARNING: [Synth 8-5640] Port 'rd_rst_busy' is missing in component declaration [C:/v22.2/FEB_fabric/FEB_fabric.srcs/sources_1/new/Proj_Def.vhd:765]
 INFO: [Synth 8-3491] module 'SCFIFO_1Kx16' declared at 'c:/v22.2/FEB_fabric/feb_arty.tmp/feb_fabric_v1_0_project/FEB_fabric_v1_0_project.gen/sources_1/ip/SCFIFO_1Kx16/synth/SCFIFO_1Kx16.vhd:59' bound to instance 'DDRRdBuff' of component 'SCFIFO_1kx16' [C:/v22.2/FEB_fabric/FEB_fabric.srcs/sources_1/new/DDR_Interface .vhd:167]
-INFO: [Synth 8-3491] module 'DDR3LController' declared at 'C:/v22.2/FEB_fabric/FEB_fabric.runs/synth_1/.Xil/Vivado-155480-CD-135239/realtime/DDR3LController_stub.vhdl:5' bound to instance 'DDR_Controller' of component 'DDR3LController' [C:/v22.2/FEB_fabric/FEB_fabric.srcs/sources_1/new/DDR_Interface .vhd:201]
-INFO: [Synth 8-638] synthesizing module 'DDR3LController' [C:/v22.2/FEB_fabric/FEB_fabric.runs/synth_1/.Xil/Vivado-155480-CD-135239/realtime/DDR3LController_stub.vhdl:51]
+INFO: [Synth 8-3491] module 'DDR3LController' declared at 'C:/v22.2/FEB_fabric/FEB_fabric.runs/synth_1/.Xil/Vivado-371640-CD-135239/realtime/DDR3LController_stub.vhdl:5' bound to instance 'DDR_Controller' of component 'DDR3LController' [C:/v22.2/FEB_fabric/FEB_fabric.srcs/sources_1/new/DDR_Interface .vhd:201]
+INFO: [Synth 8-638] synthesizing module 'DDR3LController' [C:/v22.2/FEB_fabric/FEB_fabric.runs/synth_1/.Xil/Vivado-371640-CD-135239/realtime/DDR3LController_stub.vhdl:51]
 INFO: [Synth 8-256] done synthesizing module 'DDR_Interface' (0#1) [C:/v22.2/FEB_fabric/FEB_fabric.srcs/sources_1/new/DDR_Interface .vhd:80]
 INFO: [Synth 8-256] done synthesizing module 'FEB_fabric' (0#1) [C:/v22.2/FEB_fabric/FEB_fabric.srcs/sources_1/new/FEB_top_ARTY.vhd:95]
 WARNING: [Synth 8-3848] Net iuCD in module/entity AFE_Interface_Sim does not have driver. [C:/v22.2/FEB_fabric/FEB_fabric.srcs/sources_1/new/AFE_Interface_Sim.vhd:27]
@@ -705,30 +705,12 @@ WARNING: [Synth 8-6014] Unused sequential element Gen_Two_AFEs[1].Gen_Eight_Chan
 WARNING: [Synth 8-6014] Unused sequential element Gen_Two_AFEs[1].Gen_Eight_Chans[7].In_Seq_Stat_reg[1][7] was removed.  [C:/v22.2/FEB_fabric/FEB_fabric.srcs/sources_1/new/AFE_DataPath.vhd:340]
 INFO: [Synth 8-6071] Mark debug on the nets applies keep_hierarchy on instance 'Trigger_logic'. This will prevent further optimization [C:/v22.2/FEB_fabric/FEB_fabric.srcs/sources_1/new/FEB_top_ARTY.vhd:343]
 WARNING: [Synth 8-6014] Unused sequential element RxIn_reg[Clr_Err] was removed.  [C:/v22.2/FEB_fabric/FEB_fabric.srcs/sources_1/new/Trigger.vhd:108]
-INFO: [Synth 8-6071] Mark debug on the nets applies keep_hierarchy on instance 'data_back_AFE'. This will prevent further optimization [C:/v22.2/FEB_fabric/FEB_fabric.srcs/sources_1/new/FEB_top_ARTY.vhd:376]
-WARNING: [Synth 8-3848] Net BufferRdAdd[0][1] in module/entity Exclude_EVB does not have driver. [C:/v22.2/FEB_fabric/FEB_fabric.srcs/sources_1/new/Exclude_EVB.vhd:17]
-WARNING: [Synth 8-3848] Net BufferRdAdd[0][2] in module/entity Exclude_EVB does not have driver. [C:/v22.2/FEB_fabric/FEB_fabric.srcs/sources_1/new/Exclude_EVB.vhd:17]
-WARNING: [Synth 8-3848] Net BufferRdAdd[0][3] in module/entity Exclude_EVB does not have driver. [C:/v22.2/FEB_fabric/FEB_fabric.srcs/sources_1/new/Exclude_EVB.vhd:17]
-WARNING: [Synth 8-3848] Net BufferRdAdd[0][4] in module/entity Exclude_EVB does not have driver. [C:/v22.2/FEB_fabric/FEB_fabric.srcs/sources_1/new/Exclude_EVB.vhd:17]
-WARNING: [Synth 8-3848] Net BufferRdAdd[0][5] in module/entity Exclude_EVB does not have driver. [C:/v22.2/FEB_fabric/FEB_fabric.srcs/sources_1/new/Exclude_EVB.vhd:17]
-WARNING: [Synth 8-3848] Net BufferRdAdd[0][6] in module/entity Exclude_EVB does not have driver. [C:/v22.2/FEB_fabric/FEB_fabric.srcs/sources_1/new/Exclude_EVB.vhd:17]
-WARNING: [Synth 8-3848] Net BufferRdAdd[0][7] in module/entity Exclude_EVB does not have driver. [C:/v22.2/FEB_fabric/FEB_fabric.srcs/sources_1/new/Exclude_EVB.vhd:17]
-WARNING: [Synth 8-3848] Net BufferRdAdd[1][0] in module/entity Exclude_EVB does not have driver. [C:/v22.2/FEB_fabric/FEB_fabric.srcs/sources_1/new/Exclude_EVB.vhd:17]
-WARNING: [Synth 8-3848] Net BufferRdAdd[1][1] in module/entity Exclude_EVB does not have driver. [C:/v22.2/FEB_fabric/FEB_fabric.srcs/sources_1/new/Exclude_EVB.vhd:17]
-WARNING: [Synth 8-3848] Net BufferRdAdd[1][2] in module/entity Exclude_EVB does not have driver. [C:/v22.2/FEB_fabric/FEB_fabric.srcs/sources_1/new/Exclude_EVB.vhd:17]
-WARNING: [Synth 8-3848] Net BufferRdAdd[1][3] in module/entity Exclude_EVB does not have driver. [C:/v22.2/FEB_fabric/FEB_fabric.srcs/sources_1/new/Exclude_EVB.vhd:17]
-WARNING: [Synth 8-3848] Net BufferRdAdd[1][4] in module/entity Exclude_EVB does not have driver. [C:/v22.2/FEB_fabric/FEB_fabric.srcs/sources_1/new/Exclude_EVB.vhd:17]
-WARNING: [Synth 8-3848] Net BufferRdAdd[1][5] in module/entity Exclude_EVB does not have driver. [C:/v22.2/FEB_fabric/FEB_fabric.srcs/sources_1/new/Exclude_EVB.vhd:17]
-WARNING: [Synth 8-3848] Net BufferRdAdd[1][6] in module/entity Exclude_EVB does not have driver. [C:/v22.2/FEB_fabric/FEB_fabric.srcs/sources_1/new/Exclude_EVB.vhd:17]
-WARNING: [Synth 8-3848] Net BufferRdAdd[1][7] in module/entity Exclude_EVB does not have driver. [C:/v22.2/FEB_fabric/FEB_fabric.srcs/sources_1/new/Exclude_EVB.vhd:17]
 INFO: [Synth 8-6071] Mark debug on the nets applies keep_hierarchy on instance 'EventBuilder_logic'. This will prevent further optimization [C:/v22.2/FEB_fabric/FEB_fabric.srcs/sources_1/new/FEB_top_ARTY.vhd:399]
 INFO: [Synth 8-6071] Mark debug on the nets applies keep_hierarchy on instance 'EventBuff'. This will prevent further optimization [C:/v22.2/FEB_fabric/FEB_fabric.srcs/sources_1/new/EventBuilder.vhd:112]
-WARNING: [Synth 8-3848] Net uBunchRd in module/entity EventBuilder does not have driver. [C:/v22.2/FEB_fabric/FEB_fabric.srcs/sources_1/new/EventBuilder.vhd:57]
 WARNING: [Synth 8-3848] Net rstDDRRdBuff in module/entity DDR_Interface does not have driver. [C:/v22.2/FEB_fabric/FEB_fabric.srcs/sources_1/new/DDR_Interface .vhd:131]
 WARNING: [Synth 8-6014] Unused sequential element uWRDL_reg was removed.  [C:/v22.2/FEB_fabric/FEB_fabric.srcs/sources_1/new/FEB_top_ARTY.vhd:210]
 WARNING: [Synth 8-6014] Unused sequential element uRDDL_reg was removed.  [C:/v22.2/FEB_fabric/FEB_fabric.srcs/sources_1/new/FEB_top_ARTY.vhd:211]
 WARNING: [Synth 8-6014] Unused sequential element uAddrReg_reg was removed.  [C:/v22.2/FEB_fabric/FEB_fabric.srcs/sources_1/new/FEB_top_ARTY.vhd:212]
-WARNING: [Synth 8-3848] Net EvBuffRd in module/entity FEB_fabric does not have driver. [C:/v22.2/FEB_fabric/FEB_fabric.srcs/sources_1/new/FEB_top_ARTY.vhd:165]
 WARNING: [Synth 8-7129] Port ALMOST_FULL_I in module output_blk__parameterized0 is either unconnected or has no load
 WARNING: [Synth 8-7129] Port PROG_FULL_I in module output_blk__parameterized0 is either unconnected or has no load
 WARNING: [Synth 8-7129] Port ALMOST_EMPTY_I in module output_blk__parameterized0 is either unconnected or has no load
@@ -831,18 +813,18 @@ WARNING: [Synth 8-7129] Port SAFETY_CKT_RD_RST in module rd_status_flags_ss is e
 WARNING: [Synth 8-7129] Port RD_PNTR_PLUS2[9] in module rd_status_flags_ss is either unconnected or has no load
 INFO: [Common 17-14] Message 'Synth 8-7129' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
 ---------------------------------------------------------------------------------
-Finished RTL Elaboration : Time (s): cpu = 00:00:48 ; elapsed = 00:00:49 . Memory (MB): peak = 2568.105 ; gain = 1043.336
+Finished RTL Elaboration : Time (s): cpu = 00:00:47 ; elapsed = 00:00:48 . Memory (MB): peak = 2568.664 ; gain = 1044.523
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:48 ; elapsed = 00:00:50 . Memory (MB): peak = 2568.105 ; gain = 1043.336
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:47 ; elapsed = 00:00:49 . Memory (MB): peak = 2568.664 ; gain = 1044.523
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:48 ; elapsed = 00:00:50 . Memory (MB): peak = 2568.105 ; gain = 1043.336
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:47 ; elapsed = 00:00:49 . Memory (MB): peak = 2568.664 ; gain = 1044.523
 ---------------------------------------------------------------------------------
-Netlist sorting complete. Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.367 . Memory (MB): peak = 2568.105 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.393 . Memory (MB): peak = 2568.664 ; gain = 0.000
 INFO: [Netlist 29-17] Analyzing 105 Unisim elements for replacement
 INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
 INFO: [Project 1-570] Preparing netlist for logic optimization
@@ -857,8 +839,8 @@ Parsing XDC File [c:/v22.2/FEB_fabric/FEB_fabric.gen/sources_1/ip/AFEemu_ila/AFE
 Finished Parsing XDC File [c:/v22.2/FEB_fabric/FEB_fabric.gen/sources_1/ip/AFEemu_ila/AFEemu_ila/AFEemu_ila_in_context.xdc] for cell 'AFE_Interface/generateILA.AFEemu_ila_inst'
 Parsing XDC File [c:/v22.2/FEB_fabric/FEB_fabric.gen/sources_1/ip/AFE_DataPath_ila0/AFE_DataPath_ila0/AFE_DataPath_ila0_in_context.xdc] for cell 'AFE_DataPath_inst/generateILA0.AFE_DataPath_ila_inst0'
 Finished Parsing XDC File [c:/v22.2/FEB_fabric/FEB_fabric.gen/sources_1/ip/AFE_DataPath_ila0/AFE_DataPath_ila0/AFE_DataPath_ila0_in_context.xdc] for cell 'AFE_DataPath_inst/generateILA0.AFE_DataPath_ila_inst0'
-Parsing XDC File [c:/v22.2/FEB_fabric/FEB_fabric.gen/sources_1/ip/iuCD_FIFO/iuCD_FIFO/iuCD_FIFO_in_context.xdc] for cell 'data_back_AFE/iuCD_sync'
-Finished Parsing XDC File [c:/v22.2/FEB_fabric/FEB_fabric.gen/sources_1/ip/iuCD_FIFO/iuCD_FIFO/iuCD_FIFO_in_context.xdc] for cell 'data_back_AFE/iuCD_sync'
+Parsing XDC File [c:/v22.2/FEB_fabric/FEB_fabric.gen/sources_1/ip/iuCD_FIFO/iuCD_FIFO/iuCD_FIFO_in_context.xdc] for cell 'data_back_EVB/iuCD_sync'
+Finished Parsing XDC File [c:/v22.2/FEB_fabric/FEB_fabric.gen/sources_1/ip/iuCD_FIFO/iuCD_FIFO/iuCD_FIFO_in_context.xdc] for cell 'data_back_EVB/iuCD_sync'
 Parsing XDC File [c:/v22.2/FEB_fabric/feb_arty.tmp/feb_fabric_v1_0_project/FEB_fabric_v1_0_project.gen/sources_1/ip/SCFIFO_1Kx16/SCFIFO_1Kx16.xdc] for cell 'DDR_Interface_inst/DDRRdBuff/U0'
 Finished Parsing XDC File [c:/v22.2/FEB_fabric/feb_arty.tmp/feb_fabric_v1_0_project/FEB_fabric_v1_0_project.gen/sources_1/ip/SCFIFO_1Kx16/SCFIFO_1Kx16.xdc] for cell 'DDR_Interface_inst/DDRRdBuff/U0'
 Parsing XDC File [c:/v22.2/FEB_fabric/feb_arty.tmp/feb_fabric_v1_0_project/FEB_fabric_v1_0_project.gen/sources_1/ip/SCFIFO_1Kx16/SCFIFO_1Kx16.xdc] for cell 'EventBuilder_logic/EventBuff/U0'
@@ -887,11 +869,11 @@ Resolution: To avoid this warning, move constraints listed in [.Xil/FEB_fabric_p
 INFO: [Project 1-1714] 4 XPM XDC files have been applied to the design.
 Completed Processing XDC Constraints
 
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.003 . Memory (MB): peak = 2568.105 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.004 . Memory (MB): peak = 2568.664 ; gain = 0.000
 INFO: [Project 1-111] Unisim Transformation Summary:
 No Unisim elements were transformed.
 
-Constraint Validation Runtime : Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.340 . Memory (MB): peak = 2568.105 ; gain = 0.000
+Constraint Validation Runtime : Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.343 . Memory (MB): peak = 2568.664 ; gain = 0.000
 WARNING: [Timing 38-316] Clock period '10.000' specified during out-of-context synthesis of instance 'AFE_DataPath_inst/generateILA0.AFE_DataPath_ila_inst0' at clock pin 'clk' is different from the actual clock period '6.250', this can lead to different synthesis results.
 WARNING: [Timing 38-316] Clock period '20.000' specified during out-of-context synthesis of instance 'AFE_Interface/AFE' at clock pin 'clkb' is different from the actual clock period '6.250', this can lead to different synthesis results.
 WARNING: [Timing 38-316] Clock period '10.000' specified during out-of-context synthesis of instance 'AFE_Interface/generateILA.AFEemu_ila_inst' at clock pin 'clk' is different from the actual clock period '6.250', this can lead to different synthesis results.
@@ -899,14 +881,14 @@ INFO: [Designutils 20-5440] No compile time benefit to using incremental synthes
 INFO: [Designutils 20-4379] Flow is switching to default flow due to incremental criteria not met. If you would like to alter this behaviour and have the flow terminate instead, please set the following parameter config_implementation {autoIncr.Synth.RejectBehavior Terminate}
 INFO: [Synth 8-11241] undeclared symbol 'REGCCE', assumed default net type 'wire' [C:/Xilinx/Vivado/2022.2/data/verilog/src/unimacro/BRAM_SINGLE_MACRO.v:2170]
 ---------------------------------------------------------------------------------
-Finished Constraint Validation : Time (s): cpu = 00:01:01 ; elapsed = 00:01:03 . Memory (MB): peak = 2568.105 ; gain = 1043.336
+Finished Constraint Validation : Time (s): cpu = 00:01:00 ; elapsed = 00:01:02 . Memory (MB): peak = 2568.664 ; gain = 1044.523
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Loading Part and Timing Information
 ---------------------------------------------------------------------------------
 Loading part: xc7s50csga324-1
 ---------------------------------------------------------------------------------
-Finished Loading Part and Timing Information : Time (s): cpu = 00:01:01 ; elapsed = 00:01:03 . Memory (MB): peak = 2568.105 ; gain = 1043.336
+Finished Loading Part and Timing Information : Time (s): cpu = 00:01:00 ; elapsed = 00:01:02 . Memory (MB): peak = 2568.664 ; gain = 1044.523
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Applying 'set_property' XDC Constraints
@@ -1039,13 +1021,13 @@ Applied set_property KEEP_HIERARCHY = SOFT for DDR_Interface_inst/DDR_Controller
 Applied set_property KEEP_HIERARCHY = SOFT for AFE_Interface/AFE. (constraint file  auto generated constraint).
 Applied set_property KEEP_HIERARCHY = SOFT for AFE_Interface/\generateILA.AFEemu_ila_inst . (constraint file  auto generated constraint).
 Applied set_property KEEP_HIERARCHY = SOFT for AFE_DataPath_inst/\generateILA0.AFE_DataPath_ila_inst0 . (constraint file  auto generated constraint).
-Applied set_property KEEP_HIERARCHY = SOFT for data_back_AFE/iuCD_sync. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for data_back_EVB/iuCD_sync. (constraint file  auto generated constraint).
 Applied set_property KEEP_HIERARCHY = SOFT for EventBuilder_logic/uBunchBuffer/U0/inst_fifo_gen/\gconvfifo.rf /\grf.rf /rstblk/\ngwrdrst.grst.g7serrst.gsckt_wrst.xpm_cdc_sync_rst_inst_wrst . (constraint file  auto generated constraint).
 Applied set_property KEEP_HIERARCHY = SOFT for EventBuilder_logic/EventBuff/U0/inst_fifo_gen/\gconvfifo.rf /\grf.rf /rstblk/\ngwrdrst.grst.g7serrst.gsckt_wrst.xpm_cdc_sync_rst_inst_wrst . (constraint file  auto generated constraint).
 Applied set_property KEEP_HIERARCHY = SOFT for DDR_Interface_inst/DDRAddrBuff/U0/inst_fifo_gen/\gconvfifo.rf /\grf.rf /rstblk/\ngwrdrst.grst.g7serrst.gsckt_wrst.xpm_cdc_sync_rst_inst_wrst . (constraint file  auto generated constraint).
 Applied set_property KEEP_HIERARCHY = SOFT for DDR_Interface_inst/DDRRdBuff/U0/inst_fifo_gen/\gconvfifo.rf /\grf.rf /rstblk/\ngwrdrst.grst.g7serrst.gsckt_wrst.xpm_cdc_sync_rst_inst_wrst . (constraint file  auto generated constraint).
 ---------------------------------------------------------------------------------
-Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:01:01 ; elapsed = 00:01:03 . Memory (MB): peak = 2568.105 ; gain = 1043.336
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:01:00 ; elapsed = 00:01:02 . Memory (MB): peak = 2568.664 ; gain = 1044.523
 ---------------------------------------------------------------------------------
 INFO: [Synth 8-802] inferred FSM for state register 'prev_state_reg' in module 'AFE_Interface_Sim'
 INFO: [Synth 8-802] inferred FSM for state register 'Gen_Two_AFEs[0].Gen_Eight_Chans[0].Input_Seqs_reg[0][0]' in module 'AFE_DataPath'
@@ -1065,6 +1047,8 @@ INFO: [Synth 8-802] inferred FSM for state register 'Gen_Two_AFEs[1].Gen_Eight_C
 INFO: [Synth 8-802] inferred FSM for state register 'Gen_Two_AFEs[1].Gen_Eight_Chans[6].Input_Seqs_reg[1][6]' in module 'AFE_DataPath'
 INFO: [Synth 8-802] inferred FSM for state register 'Gen_Two_AFEs[1].Gen_Eight_Chans[7].Input_Seqs_reg[1][7]' in module 'AFE_DataPath'
 INFO: [Synth 8-802] inferred FSM for state register 'gpregsm1.curr_fwft_state_reg' in module 'rd_fwft'
+INFO: [Synth 8-802] inferred FSM for state register 'Event_Builder_reg' in module 'EventBuilder'
+INFO: [Synth 8-802] inferred FSM for state register 'prev_state_reg' in module 'Exclude_DDR'
 INFO: [Synth 8-6159] Found Keep on FSM register 'next_state_reg' in module 'AFE_Interface_Sim', re-encoding will not be performed
 ---------------------------------------------------------------------------------------------------
                    State |                     New Encoding |                Previous Encoding 
@@ -1284,78 +1268,110 @@ INFO: [Synth 8-6159] Found Keep on FSM register 'gpregsm1.curr_fwft_state_reg' i
        both_stages_valid |                               11 |                               11
             stage2_valid |                               01 |                               01
 ---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-6159] Found Keep on FSM register 'Event_Builder_reg' in module 'EventBuilder', re-encoding will not be performed
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+*
+                    idle |                             0000 |                             0000
+             check_mask0 |                             0100 |                             0100
+               check_ovf |                             0001 |                             0001
+            add_wd_count |                             0010 |                             0010
+              incr_chan0 |                             0011 |                             0011
+              wdcountwrt |                             0101 |                             0101
+             wrtubunchhi |                             0110 |                             0110
+             wrtubunchlo |                             0111 |                             0111
+             check_mask1 |                             1001 |                             1001
+                   wait1 |                             1010 |                             1010
+                   wait2 |                             1011 |                             1011
+                 wrtdata |                             1100 |                             1100
+              incr_chan1 |                             1000 |                             1000
+---------------------------------------------------------------------------------------------------
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+                   reset |                               00 |                               00
+                    stop |                               01 |                               10
+                   start |                               10 |                               01
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 'prev_state_reg' using encoding 'sequential' in module 'Exclude_DDR'
+WARNING: [Synth 8-327] inferring latch for variable 'iuCD_FIFOdin_reg' [C:/v22.2/FEB_fabric/FEB_fabric.srcs/sources_1/new/Exclude_DDR.vhd:98]
 WARNING: [Synth 8-327] inferring latch for variable 'DDR3_addr_reg' [C:/v22.2/FEB_fabric/FEB_fabric.srcs/sources_1/new/DDR_Interface .vhd:222]
 WARNING: [Synth 8-327] inferring latch for variable 'DDR3_cmd_reg' [C:/v22.2/FEB_fabric/FEB_fabric.srcs/sources_1/new/DDR_Interface .vhd:223]
 WARNING: [Synth 8-327] inferring latch for variable 'DDR3_en_reg' [C:/v22.2/FEB_fabric/FEB_fabric.srcs/sources_1/new/DDR_Interface .vhd:159]
 WARNING: [Synth 8-327] inferring latch for variable 'DDR3_wrt_data_reg' [C:/v22.2/FEB_fabric/FEB_fabric.srcs/sources_1/new/DDR_Interface .vhd:226]
 WARNING: [Synth 8-327] inferring latch for variable 'DRAMRdBuffDat_reg' [C:/v22.2/FEB_fabric/FEB_fabric.srcs/sources_1/new/DDR_Interface .vhd:173]
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 2 : Time (s): cpu = 00:01:05 ; elapsed = 00:01:07 . Memory (MB): peak = 2568.105 ; gain = 1043.336
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:01:04 ; elapsed = 00:01:07 . Memory (MB): peak = 2568.664 ; gain = 1044.523
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start RTL Component Statistics 
 ---------------------------------------------------------------------------------
 Detailed RTL Component Info : 
 +---Adders : 
-	   2 Input   16 Bit       Adders := 1     
+	   2 Input   16 Bit       Adders := 2     
 	   3 Input   14 Bit       Adders := 16    
 	   2 Input   12 Bit       Adders := 3     
 	   2 Input   11 Bit       Adders := 2     
 	   2 Input   10 Bit       Adders := 42    
-	   2 Input    9 Bit       Adders := 2     
+	   3 Input   10 Bit       Adders := 1     
+	   2 Input    9 Bit       Adders := 4     
 	   2 Input    8 Bit       Adders := 4     
 	   2 Input    5 Bit       Adders := 2     
 	   2 Input    4 Bit       Adders := 17    
-	   2 Input    3 Bit       Adders := 1     
+	   2 Input    3 Bit       Adders := 2     
 +---XORs : 
 	   2 Input      1 Bit         XORs := 170   
 +---Registers : 
 	               32 Bit    Registers := 3     
 	               24 Bit    Registers := 2     
-	               16 Bit    Registers := 21    
+	               16 Bit    Registers := 23    
 	               14 Bit    Registers := 48    
 	               12 Bit    Registers := 6     
 	               11 Bit    Registers := 2     
-	               10 Bit    Registers := 82    
-	                9 Bit    Registers := 4     
-	                8 Bit    Registers := 3     
+	               10 Bit    Registers := 113   
+	                9 Bit    Registers := 6     
+	                8 Bit    Registers := 7     
 	                5 Bit    Registers := 16    
-	                4 Bit    Registers := 22    
-	                3 Bit    Registers := 1     
-	                2 Bit    Registers := 20    
-	                1 Bit    Registers := 128   
+	                4 Bit    Registers := 23    
+	                3 Bit    Registers := 2     
+	                2 Bit    Registers := 21    
+	                1 Bit    Registers := 131   
 +---Muxes : 
 	   2 Input   32 Bit        Muxes := 4     
 	   2 Input   24 Bit        Muxes := 2     
 	   2 Input   20 Bit        Muxes := 1     
-	   2 Input   16 Bit        Muxes := 4     
+	   2 Input   16 Bit        Muxes := 14    
 	   7 Input   16 Bit        Muxes := 1     
 	   6 Input   16 Bit        Muxes := 15    
+	   4 Input   16 Bit        Muxes := 1     
 	   4 Input   14 Bit        Muxes := 2     
 	   2 Input   14 Bit        Muxes := 16    
-	   2 Input   12 Bit        Muxes := 7     
-	   2 Input   10 Bit        Muxes := 19    
+	   2 Input   12 Bit        Muxes := 4     
+	   2 Input   10 Bit        Muxes := 44    
 	   4 Input   10 Bit        Muxes := 5     
 	   5 Input   10 Bit        Muxes := 16    
 	   3 Input   10 Bit        Muxes := 1     
 	   6 Input   10 Bit        Muxes := 1     
-	   2 Input    9 Bit        Muxes := 1     
-	   2 Input    8 Bit        Muxes := 4     
+	   2 Input    9 Bit        Muxes := 11    
+	   2 Input    8 Bit        Muxes := 16    
 	   2 Input    5 Bit        Muxes := 2     
 	   3 Input    4 Bit        Muxes := 1     
 	   7 Input    4 Bit        Muxes := 1     
-	   2 Input    4 Bit        Muxes := 16    
+	   2 Input    4 Bit        Muxes := 20    
+	  14 Input    4 Bit        Muxes := 1     
 	   7 Input    3 Bit        Muxes := 16    
-	   2 Input    3 Bit        Muxes := 82    
+	   2 Input    3 Bit        Muxes := 85    
 	   4 Input    2 Bit        Muxes := 8     
-	   2 Input    2 Bit        Muxes := 58    
+	   2 Input    2 Bit        Muxes := 68    
 	   7 Input    2 Bit        Muxes := 1     
 	   5 Input    2 Bit        Muxes := 4     
+	   3 Input    2 Bit        Muxes := 1     
 	   4 Input    1 Bit        Muxes := 9     
-	   2 Input    1 Bit        Muxes := 84    
+	   2 Input    1 Bit        Muxes := 218   
 	   7 Input    1 Bit        Muxes := 30    
 	   5 Input    1 Bit        Muxes := 30    
-	   3 Input    1 Bit        Muxes := 49    
+	   3 Input    1 Bit        Muxes := 51    
 	   6 Input    1 Bit        Muxes := 15    
 ---------------------------------------------------------------------------------
 Finished RTL Component Statistics 
@@ -1373,48 +1389,31 @@ Finished Part Resource Summary
 Start Cross Boundary and Area Optimization
 ---------------------------------------------------------------------------------
 WARNING: [Synth 8-7080] Parallel synthesis criteria is not met
-WARNING: [Synth 8-3332] Sequential element (FSM_sequential_Gen_Two_AFEs[1].Gen_Eight_Chans[0].Input_Seqs_reg[1][0][2]) is unused and will be removed from module AFE_DataPath.
-WARNING: [Synth 8-3332] Sequential element (FSM_sequential_Gen_Two_AFEs[1].Gen_Eight_Chans[0].Input_Seqs_reg[1][0][1]) is unused and will be removed from module AFE_DataPath.
-WARNING: [Synth 8-3332] Sequential element (FSM_sequential_Gen_Two_AFEs[1].Gen_Eight_Chans[0].Input_Seqs_reg[1][0][0]) is unused and will be removed from module AFE_DataPath.
-WARNING: [Synth 8-3332] Sequential element (FSM_sequential_Gen_Two_AFEs[1].Gen_Eight_Chans[1].Input_Seqs_reg[1][1][2]) is unused and will be removed from module AFE_DataPath.
-WARNING: [Synth 8-3332] Sequential element (FSM_sequential_Gen_Two_AFEs[1].Gen_Eight_Chans[1].Input_Seqs_reg[1][1][1]) is unused and will be removed from module AFE_DataPath.
-WARNING: [Synth 8-3332] Sequential element (FSM_sequential_Gen_Two_AFEs[1].Gen_Eight_Chans[1].Input_Seqs_reg[1][1][0]) is unused and will be removed from module AFE_DataPath.
-WARNING: [Synth 8-3332] Sequential element (FSM_sequential_Gen_Two_AFEs[1].Gen_Eight_Chans[2].Input_Seqs_reg[1][2][2]) is unused and will be removed from module AFE_DataPath.
-WARNING: [Synth 8-3332] Sequential element (FSM_sequential_Gen_Two_AFEs[1].Gen_Eight_Chans[2].Input_Seqs_reg[1][2][1]) is unused and will be removed from module AFE_DataPath.
-WARNING: [Synth 8-3332] Sequential element (FSM_sequential_Gen_Two_AFEs[1].Gen_Eight_Chans[2].Input_Seqs_reg[1][2][0]) is unused and will be removed from module AFE_DataPath.
-WARNING: [Synth 8-3332] Sequential element (FSM_sequential_Gen_Two_AFEs[1].Gen_Eight_Chans[3].Input_Seqs_reg[1][3][2]) is unused and will be removed from module AFE_DataPath.
-WARNING: [Synth 8-3332] Sequential element (FSM_sequential_Gen_Two_AFEs[1].Gen_Eight_Chans[3].Input_Seqs_reg[1][3][1]) is unused and will be removed from module AFE_DataPath.
-WARNING: [Synth 8-3332] Sequential element (FSM_sequential_Gen_Two_AFEs[1].Gen_Eight_Chans[3].Input_Seqs_reg[1][3][0]) is unused and will be removed from module AFE_DataPath.
-WARNING: [Synth 8-3332] Sequential element (FSM_sequential_Gen_Two_AFEs[1].Gen_Eight_Chans[4].Input_Seqs_reg[1][4][2]) is unused and will be removed from module AFE_DataPath.
-WARNING: [Synth 8-3332] Sequential element (FSM_sequential_Gen_Two_AFEs[1].Gen_Eight_Chans[4].Input_Seqs_reg[1][4][1]) is unused and will be removed from module AFE_DataPath.
-WARNING: [Synth 8-3332] Sequential element (FSM_sequential_Gen_Two_AFEs[1].Gen_Eight_Chans[4].Input_Seqs_reg[1][4][0]) is unused and will be removed from module AFE_DataPath.
-WARNING: [Synth 8-3332] Sequential element (FSM_sequential_Gen_Two_AFEs[1].Gen_Eight_Chans[5].Input_Seqs_reg[1][5][2]) is unused and will be removed from module AFE_DataPath.
-WARNING: [Synth 8-3332] Sequential element (FSM_sequential_Gen_Two_AFEs[1].Gen_Eight_Chans[5].Input_Seqs_reg[1][5][1]) is unused and will be removed from module AFE_DataPath.
-WARNING: [Synth 8-3332] Sequential element (FSM_sequential_Gen_Two_AFEs[1].Gen_Eight_Chans[5].Input_Seqs_reg[1][5][0]) is unused and will be removed from module AFE_DataPath.
-WARNING: [Synth 8-3332] Sequential element (FSM_sequential_Gen_Two_AFEs[1].Gen_Eight_Chans[6].Input_Seqs_reg[1][6][2]) is unused and will be removed from module AFE_DataPath.
-WARNING: [Synth 8-3332] Sequential element (FSM_sequential_Gen_Two_AFEs[1].Gen_Eight_Chans[6].Input_Seqs_reg[1][6][1]) is unused and will be removed from module AFE_DataPath.
-WARNING: [Synth 8-3332] Sequential element (FSM_sequential_Gen_Two_AFEs[1].Gen_Eight_Chans[6].Input_Seqs_reg[1][6][0]) is unused and will be removed from module AFE_DataPath.
-WARNING: [Synth 8-3332] Sequential element (FSM_sequential_Gen_Two_AFEs[1].Gen_Eight_Chans[7].Input_Seqs_reg[1][7][2]) is unused and will be removed from module AFE_DataPath.
-WARNING: [Synth 8-3332] Sequential element (FSM_sequential_Gen_Two_AFEs[1].Gen_Eight_Chans[7].Input_Seqs_reg[1][7][1]) is unused and will be removed from module AFE_DataPath.
-WARNING: [Synth 8-3332] Sequential element (FSM_sequential_Gen_Two_AFEs[1].Gen_Eight_Chans[7].Input_Seqs_reg[1][7][0]) is unused and will be removed from module AFE_DataPath.
 ---------------------------------------------------------------------------------
-Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:01:12 ; elapsed = 00:01:15 . Memory (MB): peak = 2568.105 ; gain = 1043.336
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:01:19 ; elapsed = 00:01:22 . Memory (MB): peak = 2568.664 ; gain = 1044.523
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Applying XDC Timing Constraints
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Applying XDC Timing Constraints : Time (s): cpu = 00:01:17 ; elapsed = 00:01:20 . Memory (MB): peak = 2568.105 ; gain = 1043.336
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:01:24 ; elapsed = 00:01:27 . Memory (MB): peak = 2568.664 ; gain = 1044.523
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Timing Optimization
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Timing Optimization : Time (s): cpu = 00:01:17 ; elapsed = 00:01:20 . Memory (MB): peak = 2568.105 ; gain = 1043.336
+Finished Timing Optimization : Time (s): cpu = 00:01:28 ; elapsed = 00:01:31 . Memory (MB): peak = 2568.664 ; gain = 1044.523
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Technology Mapping
 ---------------------------------------------------------------------------------
+INFO: [Synth 8-4765] Removing register instance (\Gen_Two_AFEs[1].Gen_Eight_Chans[0].PipelineWrtEn_reg[1] ) from module (AFE_Pipeline) as it is equivalent to (\Gen_Two_AFEs[1].Gen_Eight_Chans[7].PipelineWrtEn_reg[1] ) and driving same net [C:/v22.2/FEB_fabric/FEB_fabric.srcs/sources_1/new/AFE_Pipeline.vhd:48]
+INFO: [Synth 8-4765] Removing register instance (\Gen_Two_AFEs[1].Gen_Eight_Chans[1].PipelineWrtEn_reg[1] ) from module (AFE_Pipeline) as it is equivalent to (\Gen_Two_AFEs[1].Gen_Eight_Chans[7].PipelineWrtEn_reg[1] ) and driving same net [C:/v22.2/FEB_fabric/FEB_fabric.srcs/sources_1/new/AFE_Pipeline.vhd:77]
+INFO: [Synth 8-4765] Removing register instance (\Gen_Two_AFEs[1].Gen_Eight_Chans[2].PipelineWrtEn_reg[1] ) from module (AFE_Pipeline) as it is equivalent to (\Gen_Two_AFEs[1].Gen_Eight_Chans[7].PipelineWrtEn_reg[1] ) and driving same net [C:/v22.2/FEB_fabric/FEB_fabric.srcs/sources_1/new/AFE_Pipeline.vhd:77]
+INFO: [Synth 8-4765] Removing register instance (\Gen_Two_AFEs[1].Gen_Eight_Chans[3].PipelineWrtEn_reg[1] ) from module (AFE_Pipeline) as it is equivalent to (\Gen_Two_AFEs[1].Gen_Eight_Chans[7].PipelineWrtEn_reg[1] ) and driving same net [C:/v22.2/FEB_fabric/FEB_fabric.srcs/sources_1/new/AFE_Pipeline.vhd:77]
+INFO: [Synth 8-4765] Removing register instance (\Gen_Two_AFEs[1].Gen_Eight_Chans[4].PipelineWrtEn_reg[1] ) from module (AFE_Pipeline) as it is equivalent to (\Gen_Two_AFEs[1].Gen_Eight_Chans[7].PipelineWrtEn_reg[1] ) and driving same net [C:/v22.2/FEB_fabric/FEB_fabric.srcs/sources_1/new/AFE_Pipeline.vhd:77]
+INFO: [Synth 8-4765] Removing register instance (\Gen_Two_AFEs[1].Gen_Eight_Chans[5].PipelineWrtEn_reg[1] ) from module (AFE_Pipeline) as it is equivalent to (\Gen_Two_AFEs[1].Gen_Eight_Chans[7].PipelineWrtEn_reg[1] ) and driving same net [C:/v22.2/FEB_fabric/FEB_fabric.srcs/sources_1/new/AFE_Pipeline.vhd:77]
+INFO: [Synth 8-4765] Removing register instance (\Gen_Two_AFEs[1].Gen_Eight_Chans[6].PipelineWrtEn_reg[1] ) from module (AFE_Pipeline) as it is equivalent to (\Gen_Two_AFEs[1].Gen_Eight_Chans[7].PipelineWrtEn_reg[1] ) and driving same net [C:/v22.2/FEB_fabric/FEB_fabric.srcs/sources_1/new/AFE_Pipeline.vhd:77]
 INFO: [Synth 8-4765] Removing register instance (\Gen_Two_AFEs[0].Gen_Eight_Chans[0].PipelineWrtEn_reg[0] ) from module (AFE_Pipeline) as it is equivalent to (\Gen_Two_AFEs[0].Gen_Eight_Chans[7].PipelineWrtEn_reg[0] ) and driving same net [C:/v22.2/FEB_fabric/FEB_fabric.srcs/sources_1/new/AFE_Pipeline.vhd:48]
 INFO: [Synth 8-4765] Removing register instance (\Gen_Two_AFEs[0].Gen_Eight_Chans[1].PipelineWrtEn_reg[0] ) from module (AFE_Pipeline) as it is equivalent to (\Gen_Two_AFEs[0].Gen_Eight_Chans[7].PipelineWrtEn_reg[0] ) and driving same net [C:/v22.2/FEB_fabric/FEB_fabric.srcs/sources_1/new/AFE_Pipeline.vhd:77]
 INFO: [Synth 8-4765] Removing register instance (\Gen_Two_AFEs[0].Gen_Eight_Chans[2].PipelineWrtEn_reg[0] ) from module (AFE_Pipeline) as it is equivalent to (\Gen_Two_AFEs[0].Gen_Eight_Chans[7].PipelineWrtEn_reg[0] ) and driving same net [C:/v22.2/FEB_fabric/FEB_fabric.srcs/sources_1/new/AFE_Pipeline.vhd:77]
@@ -1508,16 +1507,9 @@ INFO: [Synth 8-4765] Removing register instance (\Gen_Two_AFEs[0].Gen_Eight_Chan
 INFO: [Synth 8-4765] Removing register instance (\Gen_Two_AFEs[0].Gen_Eight_Chans[6].PipelineRdAdd_reg[0][4] ) from module (AFE_Pipeline) as it is equivalent to (\Gen_Two_AFEs[0].Gen_Eight_Chans[7].PipelineRdAdd_reg[0][4] ) and driving same net [C:/v22.2/FEB_fabric/FEB_fabric.srcs/sources_1/new/AFE_Pipeline.vhd:79]
 INFO: [Synth 8-4765] Removing register instance (\Gen_Two_AFEs[0].Gen_Eight_Chans[0].PipelineRdAdd_reg[0][3] ) from module (AFE_Pipeline) as it is equivalent to (\Gen_Two_AFEs[0].Gen_Eight_Chans[7].PipelineRdAdd_reg[0][3] ) and driving same net [C:/v22.2/FEB_fabric/FEB_fabric.srcs/sources_1/new/AFE_Pipeline.vhd:61]
 INFO: [Synth 8-4765] Removing register instance (\Gen_Two_AFEs[0].Gen_Eight_Chans[1].PipelineRdAdd_reg[0][3] ) from module (AFE_Pipeline) as it is equivalent to (\Gen_Two_AFEs[0].Gen_Eight_Chans[7].PipelineRdAdd_reg[0][3] ) and driving same net [C:/v22.2/FEB_fabric/FEB_fabric.srcs/sources_1/new/AFE_Pipeline.vhd:79]
-INFO: [Synth 8-4765] Removing register instance (\Gen_Two_AFEs[0].Gen_Eight_Chans[2].PipelineRdAdd_reg[0][3] ) from module (AFE_Pipeline) as it is equivalent to (\Gen_Two_AFEs[0].Gen_Eight_Chans[7].PipelineRdAdd_reg[0][3] ) and driving same net [C:/v22.2/FEB_fabric/FEB_fabric.srcs/sources_1/new/AFE_Pipeline.vhd:79]
-INFO: [Synth 8-4765] Removing register instance (\Gen_Two_AFEs[0].Gen_Eight_Chans[3].PipelineRdAdd_reg[0][3] ) from module (AFE_Pipeline) as it is equivalent to (\Gen_Two_AFEs[0].Gen_Eight_Chans[7].PipelineRdAdd_reg[0][3] ) and driving same net [C:/v22.2/FEB_fabric/FEB_fabric.srcs/sources_1/new/AFE_Pipeline.vhd:79]
-INFO: [Synth 8-4765] Removing register instance (\Gen_Two_AFEs[0].Gen_Eight_Chans[4].PipelineRdAdd_reg[0][3] ) from module (AFE_Pipeline) as it is equivalent to (\Gen_Two_AFEs[0].Gen_Eight_Chans[7].PipelineRdAdd_reg[0][3] ) and driving same net [C:/v22.2/FEB_fabric/FEB_fabric.srcs/sources_1/new/AFE_Pipeline.vhd:79]
-INFO: [Synth 8-4765] Removing register instance (\Gen_Two_AFEs[0].Gen_Eight_Chans[5].PipelineRdAdd_reg[0][3] ) from module (AFE_Pipeline) as it is equivalent to (\Gen_Two_AFEs[0].Gen_Eight_Chans[7].PipelineRdAdd_reg[0][3] ) and driving same net [C:/v22.2/FEB_fabric/FEB_fabric.srcs/sources_1/new/AFE_Pipeline.vhd:79]
-INFO: [Synth 8-4765] Removing register instance (\Gen_Two_AFEs[0].Gen_Eight_Chans[6].PipelineRdAdd_reg[0][3] ) from module (AFE_Pipeline) as it is equivalent to (\Gen_Two_AFEs[0].Gen_Eight_Chans[7].PipelineRdAdd_reg[0][3] ) and driving same net [C:/v22.2/FEB_fabric/FEB_fabric.srcs/sources_1/new/AFE_Pipeline.vhd:79]
-INFO: [Synth 8-4765] Removing register instance (\Gen_Two_AFEs[0].Gen_Eight_Chans[0].PipelineRdAdd_reg[0][2] ) from module (AFE_Pipeline) as it is equivalent to (\Gen_Two_AFEs[0].Gen_Eight_Chans[7].PipelineRdAdd_reg[0][2] ) and driving same net [C:/v22.2/FEB_fabric/FEB_fabric.srcs/sources_1/new/AFE_Pipeline.vhd:61]
-INFO: [Synth 8-4765] Removing register instance (\Gen_Two_AFEs[0].Gen_Eight_Chans[1].PipelineRdAdd_reg[0][2] ) from module (AFE_Pipeline) as it is equivalent to (\Gen_Two_AFEs[0].Gen_Eight_Chans[7].PipelineRdAdd_reg[0][2] ) and driving same net [C:/v22.2/FEB_fabric/FEB_fabric.srcs/sources_1/new/AFE_Pipeline.vhd:79]
 INFO: [Common 17-14] Message 'Synth 8-4765' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
 ---------------------------------------------------------------------------------
-Finished Technology Mapping : Time (s): cpu = 00:01:18 ; elapsed = 00:01:21 . Memory (MB): peak = 2568.105 ; gain = 1043.336
+Finished Technology Mapping : Time (s): cpu = 00:01:30 ; elapsed = 00:01:33 . Memory (MB): peak = 2568.664 ; gain = 1044.523
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start IO Insertion
@@ -1534,88 +1526,39 @@ Start Final Netlist Cleanup
 ---------------------------------------------------------------------------------
 Finished Final Netlist Cleanup
 ---------------------------------------------------------------------------------
-WARNING: [Synth 8-3295] tying undriven pin iuCD_FIFOwre_inferred:in0 to constant 0
-WARNING: [Synth 8-3295] tying undriven pin uBunchBuffer:rd_en to constant 0
-WARNING: [Synth 8-3295] tying undriven pin EvBuffDat_inferred:in0[15] to constant 0
-WARNING: [Synth 8-3295] tying undriven pin EvBuffDat_inferred:in0[14] to constant 0
-WARNING: [Synth 8-3295] tying undriven pin EvBuffDat_inferred:in0[13] to constant 0
-WARNING: [Synth 8-3295] tying undriven pin EvBuffDat_inferred:in0[12] to constant 0
-WARNING: [Synth 8-3295] tying undriven pin EvBuffDat_inferred:in0[11] to constant 0
-WARNING: [Synth 8-3295] tying undriven pin EvBuffDat_inferred:in0[10] to constant 0
-WARNING: [Synth 8-3295] tying undriven pin EvBuffDat_inferred:in0[9] to constant 0
-WARNING: [Synth 8-3295] tying undriven pin EvBuffDat_inferred:in0[8] to constant 0
-WARNING: [Synth 8-3295] tying undriven pin EvBuffDat_inferred:in0[7] to constant 0
-WARNING: [Synth 8-3295] tying undriven pin EvBuffDat_inferred:in0[6] to constant 0
-WARNING: [Synth 8-3295] tying undriven pin EvBuffDat_inferred:in0[5] to constant 0
-WARNING: [Synth 8-3295] tying undriven pin EvBuffDat_inferred:in0[4] to constant 0
-WARNING: [Synth 8-3295] tying undriven pin EvBuffDat_inferred:in0[3] to constant 0
-WARNING: [Synth 8-3295] tying undriven pin EvBuffDat_inferred:in0[2] to constant 0
-WARNING: [Synth 8-3295] tying undriven pin EvBuffDat_inferred:in0[1] to constant 0
-WARNING: [Synth 8-3295] tying undriven pin EvBuffDat_inferred:in0[0] to constant 0
-WARNING: [Synth 8-3295] tying undriven pin EvBuffWrt_inferred:in0 to constant 0
-WARNING: [Synth 8-3295] tying undriven pin Read_Seq_Stat_inferred:in0[3] to constant 0
-WARNING: [Synth 8-3295] tying undriven pin Read_Seq_Stat_inferred:in0[2] to constant 0
-WARNING: [Synth 8-3295] tying undriven pin Read_Seq_Stat_inferred:in0[1] to constant 0
-WARNING: [Synth 8-3295] tying undriven pin Read_Seq_Stat_inferred:in0[0] to constant 0
-WARNING: [Synth 8-3295] tying undriven pin EventWdCnt_inferred:in0[15] to constant 0
-WARNING: [Synth 8-3295] tying undriven pin EventWdCnt_inferred:in0[14] to constant 0
-WARNING: [Synth 8-3295] tying undriven pin EventWdCnt_inferred:in0[13] to constant 0
-WARNING: [Synth 8-3295] tying undriven pin EventWdCnt_inferred:in0[12] to constant 0
-WARNING: [Synth 8-3295] tying undriven pin EventWdCnt_inferred:in0[11] to constant 0
-WARNING: [Synth 8-3295] tying undriven pin EventWdCnt_inferred:in0[10] to constant 0
-WARNING: [Synth 8-3295] tying undriven pin EventWdCnt_inferred:in0[9] to constant 0
-WARNING: [Synth 8-3295] tying undriven pin EventWdCnt_inferred:in0[8] to constant 0
-WARNING: [Synth 8-3295] tying undriven pin EventWdCnt_inferred:in0[7] to constant 0
-WARNING: [Synth 8-3295] tying undriven pin EventWdCnt_inferred:in0[6] to constant 0
-WARNING: [Synth 8-3295] tying undriven pin EventWdCnt_inferred:in0[5] to constant 0
-WARNING: [Synth 8-3295] tying undriven pin EventWdCnt_inferred:in0[4] to constant 0
-WARNING: [Synth 8-3295] tying undriven pin EventWdCnt_inferred:in0[3] to constant 0
-WARNING: [Synth 8-3295] tying undriven pin EventWdCnt_inferred:in0[2] to constant 0
-WARNING: [Synth 8-3295] tying undriven pin EventWdCnt_inferred:in0[1] to constant 0
-WARNING: [Synth 8-3295] tying undriven pin EventWdCnt_inferred:in0[0] to constant 0
-WARNING: [Synth 8-3295] tying undriven pin SampleCount_inferred:in0[8] to constant 0
-WARNING: [Synth 8-3295] tying undriven pin SampleCount_inferred:in0[7] to constant 0
-WARNING: [Synth 8-3295] tying undriven pin SampleCount_inferred:in0[6] to constant 0
-WARNING: [Synth 8-3295] tying undriven pin SampleCount_inferred:in0[5] to constant 0
-WARNING: [Synth 8-3295] tying undriven pin SampleCount_inferred:in0[4] to constant 0
-WARNING: [Synth 8-3295] tying undriven pin SampleCount_inferred:in0[3] to constant 0
-WARNING: [Synth 8-3295] tying undriven pin SampleCount_inferred:in0[2] to constant 0
-WARNING: [Synth 8-3295] tying undriven pin SampleCount_inferred:in0[1] to constant 0
-WARNING: [Synth 8-3295] tying undriven pin SampleCount_inferred:in0[0] to constant 0
-WARNING: [Synth 8-3295] tying undriven pin EventBuilder_logic:EvBuffRd to constant 0
 WARNING: [Synth 8-3295] tying undriven pin DDR_Interface_inst/DDRRdBuff:rst to constant 0
 ---------------------------------------------------------------------------------
-Finished IO Insertion : Time (s): cpu = 00:01:22 ; elapsed = 00:01:25 . Memory (MB): peak = 2568.105 ; gain = 1043.336
+Finished IO Insertion : Time (s): cpu = 00:01:34 ; elapsed = 00:01:37 . Memory (MB): peak = 2568.664 ; gain = 1044.523
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Instances
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Instances : Time (s): cpu = 00:01:22 ; elapsed = 00:01:25 . Memory (MB): peak = 2568.105 ; gain = 1043.336
+Finished Renaming Generated Instances : Time (s): cpu = 00:01:34 ; elapsed = 00:01:37 . Memory (MB): peak = 2568.664 ; gain = 1044.523
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Rebuilding User Hierarchy
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Rebuilding User Hierarchy : Time (s): cpu = 00:01:22 ; elapsed = 00:01:26 . Memory (MB): peak = 2568.105 ; gain = 1043.336
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:01:35 ; elapsed = 00:01:38 . Memory (MB): peak = 2568.664 ; gain = 1044.523
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Ports
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Ports : Time (s): cpu = 00:01:22 ; elapsed = 00:01:26 . Memory (MB): peak = 2568.105 ; gain = 1043.336
+Finished Renaming Generated Ports : Time (s): cpu = 00:01:35 ; elapsed = 00:01:38 . Memory (MB): peak = 2568.664 ; gain = 1044.523
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:01:22 ; elapsed = 00:01:26 . Memory (MB): peak = 2568.105 ; gain = 1043.336
+Finished Handling Custom Attributes : Time (s): cpu = 00:01:35 ; elapsed = 00:01:38 . Memory (MB): peak = 2568.664 ; gain = 1044.523
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Nets
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Nets : Time (s): cpu = 00:01:22 ; elapsed = 00:01:26 . Memory (MB): peak = 2568.105 ; gain = 1043.336
+Finished Renaming Generated Nets : Time (s): cpu = 00:01:35 ; elapsed = 00:01:38 . Memory (MB): peak = 2568.664 ; gain = 1044.523
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start ROM, RAM, DSP, Shift Register and Retiming Reporting
@@ -1640,10 +1583,10 @@ Report BlackBoxes:
 |      |BlackBox name     |Instances |
 +------+------------------+----------+
 |1     |AFE_DataPath_ila0 |         1|
-|2     |iuCD_FIFO         |         1|
-|3     |AFEemu            |         1|
-|4     |AFEemu_ila        |         1|
-|5     |DDR3LController   |         1|
+|2     |AFEemu            |         1|
+|3     |AFEemu_ila        |         1|
+|4     |DDR3LController   |         1|
+|5     |iuCD_FIFO         |         1|
 +------+------------------+----------+
 
 Report Cell Usage: 
@@ -1656,49 +1599,52 @@ Report Cell Usage:
 |4     |DDR3LController_bbox   |     1|
 |5     |iuCD_FIFO_bbox         |     1|
 |6     |BUFG                   |     3|
-|7     |CARRY4                 |   103|
-|8     |LUT1                   |   149|
-|9     |LUT2                   |   322|
-|10    |LUT3                   |   304|
-|11    |LUT4                   |   329|
-|12    |LUT5                   |   141|
-|13    |LUT6                   |   309|
+|7     |CARRY4                 |   200|
+|8     |LUT1                   |   124|
+|9     |LUT2                   |   694|
+|10    |LUT3                   |   746|
+|11    |LUT4                   |   487|
+|12    |LUT5                   |   501|
+|13    |LUT6                   |  1076|
 |14    |MUXCY                  |    80|
-|15    |RAMB18E1               |     2|
-|17    |RAMB36E1               |     1|
-|18    |SRL16E                 |     2|
-|19    |FDCE                   |   791|
-|20    |FDPE                   |    47|
-|21    |FDRE                   |   304|
-|22    |FDSE                   |    49|
-|23    |LD                     |     1|
-|24    |IBUF                   |    36|
-|25    |IBUFDS                 |     1|
-|26    |OBUF                   |    18|
+|15    |MUXF7                  |    67|
+|16    |MUXF8                  |    29|
+|17    |RAMB18E1               |    17|
+|19    |RAMB36E1               |     5|
+|21    |SRL16E                 |     2|
+|22    |FDCE                   |  2373|
+|23    |FDPE                   |    96|
+|24    |FDRE                   |   559|
+|25    |FDSE                   |    50|
+|26    |LD                     |    17|
+|27    |IBUF                   |    36|
+|28    |IBUFDS                 |     1|
+|29    |OBUF                   |    18|
 +------+-----------------------+------+
 ---------------------------------------------------------------------------------
-Finished Writing Synthesis Report : Time (s): cpu = 00:01:22 ; elapsed = 00:01:26 . Memory (MB): peak = 2568.105 ; gain = 1043.336
+Finished Writing Synthesis Report : Time (s): cpu = 00:01:35 ; elapsed = 00:01:38 . Memory (MB): peak = 2568.664 ; gain = 1044.523
 ---------------------------------------------------------------------------------
-Synthesis finished with 0 errors, 0 critical warnings and 2926 warnings.
-Synthesis Optimization Runtime : Time (s): cpu = 00:00:27 ; elapsed = 00:01:18 . Memory (MB): peak = 2568.105 ; gain = 1043.336
-Synthesis Optimization Complete : Time (s): cpu = 00:01:23 ; elapsed = 00:01:26 . Memory (MB): peak = 2568.105 ; gain = 1043.336
+Synthesis finished with 0 errors, 0 critical warnings and 2420 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:40 ; elapsed = 00:01:30 . Memory (MB): peak = 2568.664 ; gain = 1044.523
+Synthesis Optimization Complete : Time (s): cpu = 00:01:35 ; elapsed = 00:01:38 . Memory (MB): peak = 2568.664 ; gain = 1044.523
 INFO: [Project 1-571] Translating synthesized netlist
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.067 . Memory (MB): peak = 2568.105 ; gain = 0.000
-INFO: [Netlist 29-17] Analyzing 188 Unisim elements for replacement
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.180 . Memory (MB): peak = 2568.664 ; gain = 0.000
+INFO: [Netlist 29-17] Analyzing 416 Unisim elements for replacement
 INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
 INFO: [Project 1-570] Preparing netlist for logic optimization
 INFO: [Opt 31-138] Pushed 1 inverter(s) to 1 load pin(s).
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 2568.105 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.002 . Memory (MB): peak = 2568.664 ; gain = 0.000
 INFO: [Project 1-111] Unisim Transformation Summary:
-  A total of 33 instances were transformed.
+  A total of 49 instances were transformed.
   (MUXCY,XORCY) => CARRY4: 32 instances
+  LD => LDCE: 16 instances
   LD => LDCE (inverted pins: G): 1 instance 
 
-Synth Design complete, checksum: 3a3647ef
+Synth Design complete, checksum: edc9269d
 INFO: [Common 17-83] Releasing license: Synthesis
-255 Infos, 237 Warnings, 0 Critical Warnings and 0 Errors encountered.
+258 Infos, 148 Warnings, 0 Critical Warnings and 0 Errors encountered.
 synth_design completed successfully
-synth_design: Time (s): cpu = 00:01:27 ; elapsed = 00:01:37 . Memory (MB): peak = 2568.105 ; gain = 1416.688
+synth_design: Time (s): cpu = 00:01:42 ; elapsed = 00:01:51 . Memory (MB): peak = 2568.664 ; gain = 1416.004
 INFO: [Common 17-1381] The checkpoint 'C:/v22.2/FEB_fabric/FEB_fabric.runs/synth_1/FEB_fabric.dcp' has been generated.
 INFO: [runtcl-4] Executing : report_utilization -file FEB_fabric_utilization_synth.rpt -pb FEB_fabric_utilization_synth.pb
-INFO: [Common 17-206] Exiting Vivado at Wed Apr 12 17:19:21 2023...
+INFO: [Common 17-206] Exiting Vivado at Fri Apr 14 14:04:24 2023...

@@ -19,8 +19,14 @@ void StartAFEemu(int data)
 {
 	//SetWRDL();
     uCA(StartAFEemuAd);
-	for (int i = 0; i < data; i++)
-		{uCD(i);}
+    for (int k = 0; k < 4; k++)
+    {
+    	for (int m = 0; m < 128; m++)
+		{uCD(m);}
+
+    	for (int n = 128; n > 0; n--)
+		{uCD(n);}
+	}
 
     //ClearWRDL();
 }

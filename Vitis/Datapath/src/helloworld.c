@@ -73,7 +73,8 @@ int main()
     ResetAFEemu();
     StartAFEemu(1024);
     ReadAFEemu();
-//    StopAFEemu();
+//    sleep(10);
+
 
 	// Diff_Reg(i)(k) <= signed(din_AFE(i)(k)) - Ped_Reg(i)(k);
 	PedReg(0);
@@ -88,21 +89,23 @@ int main()
 
 
 	colorLED(BLUE);
-    //sleep(5);
-	ReadAFEBuff();
 
-
-	int prova[1024];
+	ReadEventBuff();
+    sleep(1);
+    StopAFEemu();
+	int buffer[1024];
 	for (int i = 0; i < 1024; i++)
 	{
-		prova[i] = FEB_AXI_INTERFACE_mReadReg (BASEADDR, REG3);
-
+		//if (FEB_AXI_INTERFACE_mReadReg(BASEADDR, REG3) != 0)
+		{
+			buffer[i] = FEB_AXI_INTERFACE_mReadReg(BASEADDR, REG3);
+			//k++;
+		}
 	}
 	for (int i = 0; i < 1024; i++)
 	{
-		if (i > 0)
-
-		xil_printf("%d\n", prova[i]);
+		if (buffer[i] != 0)
+			xil_printf("%4x\n", buffer[i]);
 	}
 
 	xil_printf("Test finished!\n\n\r");
