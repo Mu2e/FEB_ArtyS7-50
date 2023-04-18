@@ -45,6 +45,7 @@ entity AFE_DataPath is
 	MaskReg				: buffer Array_2x8;
 	BufferRdAdd			: in Array_2x8x10;
 	BufferOut 			: out Array_2x8x16;
+	startEVB			: out Array_2x8;
 -- Data output from the deserializer for AFE0 and AFE1 synchronized to 80 MHz clock
     din_AFE0			: in Array_8x14; 
     din_AFE1			: in Array_8x14;
@@ -347,7 +348,7 @@ if CpldRst = '0' then
 	Ped_Avg(i)(k) 		  <= (others => '0');
 	Avg_En(i)(k) 		  <= '0';
 	IntTrgThresh(i)(k) 	  <= "00000000001100"; -- X"00C"
-
+	startEVB(i)(k)		  <= '0';
 	
 elsif rising_edge (Clk_80MHz) then
 ---------------------------------------------------------------------
@@ -460,17 +461,20 @@ end if;
 -- geo address (2 bits of which FPGA on a FEB) + channel (4 bits)
 
 if Input_Seqs(i)(k) = Idle 
-then 
+then
+	startEVB(i)(k)	  <= '0';
 	In_Seq_Stat(i)(k) <= x"0";
 	InWdCnt(i)(k) <= (others => '0');
 	BufferIn(i)(k) <= "00" & dout_AFE(i)(k);
 elsif Input_Seqs(i)(k) = Increment 
-then 
+then
+	startEVB(i)(k)	  <= '0'; 
 	WrtCrrntWdCntAd(i)(k) <= BufferWrtAdd(i)(k); -- Store present write pointer so a leading word count can be stored at the end of the microbunch
 	In_Seq_Stat(i)(k) <= x"1";
 	BufferIn(i)(k) <= "00" & dout_AFE(i)(k);
 elsif Input_Seqs(i)(k) = WrtChanNo 
-then 	
+then
+	startEVB(i)(k)	  <= '0'; 	
 	In_Seq_Stat(i)(k) <= x"2";
 	ADCSmplCntr(i)(k) <= ADCSmplCntReg;	
 	WrtCrrntWdCntAd(i)(k) <= WrtCrrntWdCntAd(i)(k);
@@ -480,19 +484,22 @@ then
 			 BufferWrtAdd(i)(k) <= BufferWrtAdd(i)(k) + 1; -- Increment Writing Address
 	end if;
 elsif Input_Seqs(i)(k) = WrtTimeStamp 
-then 		
+then
+	startEVB(i)(k)	  <= '0'; 		
 	In_Seq_Stat(i)(k) <= x"3";
 	BufferWrtAdd(i)(k) <= BufferWrtAdd(i)(k) + 1; -- Increment Writing Address
 	InWdCnt(i)(k) <= InWdCnt(i)(k) + 1;			  -- Increment Event word counter
 	BufferIn(i)(k) <= ADCSmplCntReg & uBunchOffset(i);
 elsif Input_Seqs(i)(k) = WrtHitWdCnt 
-then 
+then
+	startEVB(i)(k)	  <= '0'; 
 	In_Seq_Stat(i)(k) <= x"4";		
 	WrtNxtWdCntAd(i)(k) <= BufferWrtAdd(i)(k) + 1; -- After writing the leading word count the pointer needs to go to the end of the event
 	BufferWrtAdd(i)(k) <= WrtCrrntWdCntAd(i)(k);
 	BufferIn(i)(k) <= X"0" & "00" & InWdCnt(i)(k);
 elsif Input_Seqs(i)(k) = WrtHits 
-then 		
+then
+	startEVB(i)(k)	  <= '0';
 	In_Seq_Stat(i)(k) <= x"5";
 	BufferWrtAdd(i)(k) <= BufferWrtAdd(i)(k) + 1; -- Increment Writing Address
 	ADCSmplCntr(i)(k) <= ADCSmplCntr(i)(k) - 1;	  -- Decrement ADC Sample Counter
@@ -500,9 +507,11 @@ then
 	BufferIn(i)(k) <= "00" & dout_AFE(i)(k);
 elsif Input_Seqs(i)(k) = LdNxtWrtAd 
 then 
+	startEVB(i)(k)	  <= '1';
 	In_Seq_Stat(i)(k) <= x"6";
 	BufferWrtAdd(i)(k) <= WrtNxtWdCntAd(i)(k);
 else 
+	startEVB(i)(k)	  <= '0';
 	In_Seq_Stat(i)(k) <= x"7";
 	BufferIn(i)(k) <= "00" & dout_AFE(i)(k);
 	WrtCrrntWdCntAd(i)(k) <= WrtCrrntWdCntAd(i)(k);

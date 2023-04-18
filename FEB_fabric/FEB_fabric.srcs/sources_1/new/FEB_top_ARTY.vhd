@@ -161,6 +161,7 @@ signal GateReq 				  : std_logic_vector (1 downto 0);
 signal MaskReg				  : Array_2x8;
 signal BufferRdAdd			  : Array_2x8x10;
 signal BufferOut 			  : Array_2x8x16;
+signal startEVB				  : Array_2x8;
 -- Signals Event Builder
 signal EvBuffRd				  : std_logic;
 signal EvBuffOut	          : std_logic_vector(15 downto 0);
@@ -307,6 +308,7 @@ port map (
 	MaskReg			=> MaskReg,			
 	BufferRdAdd		=> BufferRdAdd,		
 	BufferOut 		=> BufferOut, 		
+	startEVB		=> startEVB,
 -- Data output from the deserializer for AFE0 and AFE1 synchronized to 80 MHz clock
     din_AFE0		=> dout_AFE0,
     din_AFE1		=> dout_AFE1,
@@ -405,6 +407,7 @@ port map(
 	MaskReg			=> MaskReg,
 	BufferRdAdd		=> BufferRdAdd,	
 	BufferOut 		=> BufferOut, 	
+	startEVB		=> startEVB,
 -- Signals from Trigger Logic
 	SlfTrgEn		=> SlfTrgEn,
 	uBunchWrt		=> uBunchWrt,

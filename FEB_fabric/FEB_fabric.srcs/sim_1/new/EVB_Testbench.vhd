@@ -40,8 +40,9 @@ component EventBuilder is
 	ResetHi				: in std_logic;
 -- Signals from/to AFE Buffer
 	MaskReg				: in Array_2x8;
-	BufferRdAdd			: buffer Array_2x8x10;
+	BufferRdAdd			: buffer Array_2x8x10; -- Micol: sistemare
 	BufferOut 			: in Array_2x8x16;
+	startEVB			: in Array_2x8;
 -- Signals from Trigger Logic
 	SlfTrgEn 			: in std_logic;
 	uBunchWrt			: in std_logic;
@@ -124,12 +125,7 @@ component AFE_DataPath is
 	MaskReg				: buffer Array_2x8;
 	BufferRdAdd			: in Array_2x8x10;
 	BufferOut 			: out Array_2x8x16;
--- Signals from uC
---	ControllerNo 		: in std_logic_vector (4 downto 0);
---	PortNo 				: in std_logic_vector (4 downto 0);
---	BeamOnLength 		: in std_logic_vector (11 downto 0);
---	BeamOffLength 		: in std_logic_vector (11 downto 0);
---	ADCSmplCntReg 		: in std_logic_vector (3 downto 0);
+	startEVB			: out Array_2x8;
 -- Data output from the deserializer for AFE0 and AFE1 synchronized to 80 MHz clock
     din_AFE0			: in Array_8x14; 
     din_AFE1			: in Array_8x14;
@@ -209,6 +205,7 @@ signal GateReq 				  : std_logic_vector (1 downto 0);
 signal MaskReg				  : Array_2x8;
 signal BufferRdAdd			  : Array_2x8x10;
 signal BufferOut 			  : Array_2x8x16;
+signal startEVB				  : Array_2x8;
 -- Signals Event Builder
 signal EvBuffRd				  : std_logic;
 signal EvBuffOut	          : std_logic_vector(15 downto 0);
@@ -250,7 +247,7 @@ signal uCWr 				  : std_logic := '0';
 signal uCA 	  				  : std_logic_vector(11 downto 0);
 signal uCD 	  				  : std_logic_vector(15 downto 0);
 signal iuCD 	  			  : std_logic_vector(15 downto 0);
-signal GA 					  : std_logic_vector(1 downto 0);
+signal GA 					  : std_logic_vector(1 downto 0):=(others => '0');
 	
 constant StopAFEemu : AddrPtr := "11" & X"AC";
 constant StartAFEemu : AddrPtr := "11" & X"AD";
@@ -352,7 +349,8 @@ port map (
 -- Signals for EventBuilder
 	MaskReg			=> MaskReg,			
 	BufferRdAdd		=> BufferRdAdd,		
-	BufferOut 		=> BufferOut, 		
+	BufferOut 		=> BufferOut, 
+	startEVB		=> startEVB,	
 -- Data output from the deserializer for AFE0 and AFE1 synchronized to 80 MHz clock
     din_AFE0		=> dout_AFE0,
     din_AFE1		=> dout_AFE1,
@@ -415,7 +413,8 @@ port map(
 -- Signals from/to AFE Buffer in AFE_DataPath
 	MaskReg			=> MaskReg,
 	BufferRdAdd		=> BufferRdAdd,	
-	BufferOut 		=> BufferOut, 	
+	BufferOut 		=> BufferOut, 
+	startEVB		=> startEVB,	
 -- Signals from Trigger Logic
 	SlfTrgEn		=> SlfTrgEn,
 	uBunchWrt		=> uBunchWrt,
@@ -441,7 +440,7 @@ begin
 		WRDL <= "00";	
 		counter <= 0;	
 		up <= (others => '0');	
-
+		GA <= (others => '0');	
 	else
 		counter <= counter + 1;
 		if (counter < 1024) then 
@@ -465,9 +464,10 @@ begin
 		elsif (counter = 1027) then -- 	SetCrtlNPortN(21, 12);
 		WRDL <= "01";	
 		uCA <= b"001100010100";
-		uCD(15 downto 8) <= x"0A";
-		uCD(3 downto 0)  <= x"B"; 
-		uCD(7 downto 4)  <= x"0";	
+		uCD(15 downto 13) <= b"000";
+		uCD(7 downto 5)  <= b"000";	
+		uCD(12 downto 8) <= b"10101";
+		uCD(4 downto 0)  <= b"01100"; 
 		elsif (counter = 1028) then  --SetTrigReq
 		WRDL <= "01";
 		uCA<= b"000001111000";

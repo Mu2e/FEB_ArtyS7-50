@@ -378,12 +378,7 @@ component AFE_DataPath is
 	MaskReg				: buffer Array_2x8;
 	BufferRdAdd			: in Array_2x8x10;
 	BufferOut 			: out Array_2x8x16;
--- Signals from uC
---	ControllerNo 		: in std_logic_vector (4 downto 0);
---	PortNo 				: in std_logic_vector (4 downto 0);
---	BeamOnLength 		: in std_logic_vector (11 downto 0);
---	BeamOffLength 		: in std_logic_vector (11 downto 0);
---	ADCSmplCntReg 		: in std_logic_vector (3 downto 0);
+	startEVB			: out Array_2x8;
 -- Data output from the deserializer for AFE0 and AFE1 synchronized to 80 MHz clock
     din_AFE0			: in Array_8x14; 
     din_AFE1			: in Array_8x14;
@@ -504,6 +499,7 @@ end component;
  	MaskReg				: in Array_2x8;
  	BufferRdAdd			: buffer Array_2x8x10;
  	BufferOut 			: in Array_2x8x16;
+	startEVB			: in Array_2x8;
  -- Signals from Trigger Logic
  	SlfTrgEn 			: in std_logic;
  	uBunchWrt			: in std_logic;
