@@ -2,8 +2,8 @@
 # Vivado v2022.2 (64-bit)
 # SW Build 3671981 on Fri Oct 14 05:00:03 MDT 2022
 # IP Build 3669848 on Fri Oct 14 08:30:02 MDT 2022
-# Start of session at: Fri Apr 14 14:07:06 2023
-# Process ID: 374724
+# Start of session at: Mon Apr 17 09:55:19 2023
+# Process ID: 737120
 # Current directory: C:/v22.2/FEB_uController/FEB_uController.runs/uController_synth_1
 # Command line: vivado.exe -log uController.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source uController.tcl
 # Log file: C:/v22.2/FEB_uController/FEB_uController.runs/uController_synth_1/uController.vds
@@ -11,7 +11,7 @@
 # Running On: CD-135239, OS: Windows, CPU Frequency: 3600 MHz, CPU Physical cores: 8, Host memory: 34287 MB
 #-----------------------------------------------------------
 source uController.tcl -notrace
-create_project: Time (s): cpu = 00:00:06 ; elapsed = 00:00:06 . Memory (MB): peak = 1039.945 ; gain = 155.836
+create_project: Time (s): cpu = 00:00:05 ; elapsed = 00:00:06 . Memory (MB): peak = 1039.715 ; gain = 154.371
 INFO: [IP_Flow 19-234] Refreshing IP repositories
 INFO: [IP_Flow 19-1700] Loaded user IP repository 'c:/v22.2/FEB_fabric'.
 INFO: [IP_Flow 19-1700] Loaded user IP repository 'c:/v22.2/ip_repo/FEB_AXI_Interface_1_0'.
@@ -22,7 +22,7 @@ WARNING: [BD 41-2576] File 'c:/v22.2/FEB_uController/FEB_uController.gen/sources
 WARNING: [BD 41-2576] File 'c:/v22.2/FEB_uController/FEB_uController.gen/sources_1/bd/uController/uController_stub.vhdl' referenced by design 'uController' could not be found.
 WARNING: [BD 41-2576] File 'c:/v22.2/FEB_uController/FEB_uController.gen/sources_1/bd/uController/uController_stub.v' referenced by design 'uController' could not be found.
 WARNING: [BD 41-2576] File 'c:/v22.2/FEB_uController/FEB_uController.gen/sources_1/bd/uController/uController.dcp' referenced by design 'uController' could not be found.
-add_files: Time (s): cpu = 00:00:08 ; elapsed = 00:00:08 . Memory (MB): peak = 1193.438 ; gain = 123.734
+add_files: Time (s): cpu = 00:00:08 ; elapsed = 00:00:08 . Memory (MB): peak = 1192.844 ; gain = 123.387
 Command: synth_design -top uController -part xc7s50csga324-1 -incremental_mode off -mode out_of_context
 Starting synth_design
 WARNING: [Vivado_Tcl 4-393] The 'Synthesis' target of the following IPs are stale, please generate the output products using the generate_target or synth_ip command before running synth_design.
@@ -36,7 +36,7 @@ INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7s50'
 INFO: [Device 21-403] Loading part xc7s50csga324-1
 INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 2 processes.
 INFO: [Synth 8-7078] Launching helper process for spawning children vivado processes
-INFO: [Synth 8-7075] Helper process launched with PID 374740
+INFO: [Synth 8-7075] Helper process launched with PID 737024
 INFO: [Synth 8-11241] undeclared symbol 'REGCCE', assumed default net type 'wire' [C:/Xilinx/Vivado/2022.2/data/verilog/src/unimacro/BRAM_SINGLE_MACRO.v:2170]
 INFO: [Synth 8-11241] undeclared symbol 'rddata_rst_i', assumed default net type 'wire' [c:/v22.2/FEB_uController/FEB_uController.srcs/sources_1/bd/uController/ipshared/b205/hdl/xsdbm_v3_0_vl_rfs.v:2188]
 INFO: [Synth 8-11241] undeclared symbol 'datard_overflow', assumed default net type 'wire' [c:/v22.2/FEB_uController/FEB_uController.srcs/sources_1/bd/uController/ipshared/b205/hdl/xsdbm_v3_0_vl_rfs.v:2235]
@@ -150,7 +150,7 @@ WARNING: [Synth 8-10294] parameter declaration is not allowed here in this mode 
 WARNING: [Synth 8-10294] parameter declaration is not allowed here in this mode of Verilog [c:/v22.2/FEB_uController/FEB_uController.srcs/sources_1/bd/uController/ipshared/fd26/hdl/ila_v6_2_syn_rfs.v:5486]
 WARNING: [Synth 8-10515] begin/end is required for generate-for in this mode of Verilog [c:/v22.2/FEB_uController/FEB_uController.gen/sources_1/bd/uController/ip/uController_FEB_fabric_0_0/FEB_fabric.srcs/sources_1/ip/DDR3LController/DDR3LController/user_design/rtl/controller/mig_7series_v4_2_arb_row_col.v:253]
 ---------------------------------------------------------------------------------
-Starting RTL Elaboration : Time (s): cpu = 00:00:14 ; elapsed = 00:00:15 . Memory (MB): peak = 2009.992 ; gain = 442.836
+Starting RTL Elaboration : Time (s): cpu = 00:00:14 ; elapsed = 00:00:15 . Memory (MB): peak = 2009.680 ; gain = 442.301
 ---------------------------------------------------------------------------------
 INFO: [Synth 8-638] synthesizing module 'uController' [c:/v22.2/FEB_uController/FEB_uController.gen/sources_1/bd/uController/synth/uController.vhd:1645]
 INFO: [Synth 8-3491] module 'uController_FEB_AXI_Interface_0_0' declared at 'c:/v22.2/FEB_uController/FEB_uController.gen/sources_1/bd/uController/ip/uController_FEB_AXI_Interface_0_0/synth/uController_FEB_AXI_Interface_0_0.vhd:59' bound to instance 'FEB_AXI_Interface_0' of component 'uController_FEB_AXI_Interface_0_0' [c:/v22.2/FEB_uController/FEB_uController.gen/sources_1/bd/uController/synth/uController.vhd:2091]
@@ -12145,21 +12145,21 @@ WARNING: [Synth 8-7129] Port DOUTA[1] in module blk_mem_gen_v8_4_5_blk_mem_gen_p
 WARNING: [Synth 8-7129] Port DOUTA[0] in module blk_mem_gen_v8_4_5_blk_mem_gen_prim_wrapper__parameterized19 is either unconnected or has no load
 INFO: [Common 17-14] Message 'Synth 8-7129' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
 ---------------------------------------------------------------------------------
-Finished RTL Elaboration : Time (s): cpu = 00:02:07 ; elapsed = 00:02:16 . Memory (MB): peak = 3527.914 ; gain = 1960.758
+Finished RTL Elaboration : Time (s): cpu = 00:02:08 ; elapsed = 00:02:16 . Memory (MB): peak = 3526.520 ; gain = 1959.141
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:02:09 ; elapsed = 00:02:17 . Memory (MB): peak = 3527.914 ; gain = 1960.758
+Finished Handling Custom Attributes : Time (s): cpu = 00:02:09 ; elapsed = 00:02:17 . Memory (MB): peak = 3526.520 ; gain = 1959.141
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 1 : Time (s): cpu = 00:02:09 ; elapsed = 00:02:17 . Memory (MB): peak = 3527.914 ; gain = 1960.758
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:02:09 ; elapsed = 00:02:17 . Memory (MB): peak = 3526.520 ; gain = 1959.141
 ---------------------------------------------------------------------------------
-Netlist sorting complete. Time (s): cpu = 00:00:01 ; elapsed = 00:00:02 . Memory (MB): peak = 3527.914 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:02 ; elapsed = 00:00:02 . Memory (MB): peak = 3526.520 ; gain = 0.000
 INFO: [Netlist 29-17] Analyzing 2509 Unisim elements for replacement
 WARNING: [Netlist 29-432] The IBUFG primitive 'FEB_fabric_0/U0/DDR_Interface_inst/DDR_Controller/u_DDR3LController_mig/u_ddr3_clk_ibuf/se_input_clk.u_ibufg_sys_clk' has been retargeted to an IBUF primitive only. No BUFG will be added. If a global buffer is intended, please instantiate an available global clock primitive from the current architecture.
-INFO: [Netlist 29-28] Unisim Transformation completed in 1 CPU seconds
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
 INFO: [Project 1-570] Preparing netlist for logic optimization
 
 Processing XDC Constraints
@@ -12392,7 +12392,7 @@ Finished Parsing XDC File [c:/v22.2/FEB_uController/FEB_uController.gen/sources_
 INFO: [Project 1-1714] 4 XPM XDC files have been applied to the design.
 Completed Processing XDC Constraints
 
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.054 . Memory (MB): peak = 3527.914 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.055 . Memory (MB): peak = 3526.520 ; gain = 0.000
 INFO: [Project 1-111] Unisim Transformation Summary:
   A total of 1827 instances were transformed.
   BUFGCE_1 => BUFGCTRL: 1 instance 
@@ -12416,17 +12416,17 @@ INFO: [Project 1-111] Unisim Transformation Summary:
   RAM32X1D => RAM32X1D (RAMD32(x2)): 64 instances
   SRL16 => SRL16E: 1 instance 
 
-Constraint Validation Runtime : Time (s): cpu = 00:00:01 ; elapsed = 00:00:01 . Memory (MB): peak = 3527.914 ; gain = 0.000
+Constraint Validation Runtime : Time (s): cpu = 00:00:02 ; elapsed = 00:00:01 . Memory (MB): peak = 3526.520 ; gain = 0.000
 INFO: [Designutils 20-5008] Incremental synthesis strategy off
 ---------------------------------------------------------------------------------
-Finished Constraint Validation : Time (s): cpu = 00:02:55 ; elapsed = 00:03:03 . Memory (MB): peak = 3527.914 ; gain = 1960.758
+Finished Constraint Validation : Time (s): cpu = 00:02:55 ; elapsed = 00:03:04 . Memory (MB): peak = 3526.520 ; gain = 1959.141
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Loading Part and Timing Information
 ---------------------------------------------------------------------------------
 Loading part: xc7s50csga324-1
 ---------------------------------------------------------------------------------
-Finished Loading Part and Timing Information : Time (s): cpu = 00:02:55 ; elapsed = 00:03:03 . Memory (MB): peak = 3527.914 ; gain = 1960.758
+Finished Loading Part and Timing Information : Time (s): cpu = 00:02:55 ; elapsed = 00:03:04 . Memory (MB): peak = 3526.520 ; gain = 1959.141
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Applying 'set_property' XDC Constraints
@@ -12506,7 +12506,7 @@ Applied set_property KEEP = true for sys_clock. (constraint file  auto generated
 Applied set_property KEEP = true for usb_uart_rxd. (constraint file  auto generated constraint).
 Applied set_property KEEP = true for axi_uartlite_0/U0/UARTLITE_CORE_I/UARTLITE_TX_I/TX. (constraint file  auto generated constraint).
 ---------------------------------------------------------------------------------
-Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:02:56 ; elapsed = 00:03:04 . Memory (MB): peak = 3527.914 ; gain = 1960.758
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:02:56 ; elapsed = 00:03:05 . Memory (MB): peak = 3526.520 ; gain = 1959.141
 ---------------------------------------------------------------------------------
 INFO: [Synth 8-802] inferred FSM for state register 'current_state_reg' in module 'xsdbs_v1_0_2_reg_p2s'
 INFO: [Synth 8-802] inferred FSM for state register 'current_state_reg' in module 'xsdbs_v1_0_2_reg_p2s__parameterized0'
@@ -13660,7 +13660,7 @@ INFO: [Synth 8-3354] encoded FSM with state register 'state_reg' using encoding 
 ---------------------------------------------------------------------------------------------------
 INFO: [Synth 8-3898] No Re-encoding of one hot register 'current_state_reg' in module 'ltlib_v1_0_0_generic_memrd__parameterized1'
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 2 : Time (s): cpu = 00:03:17 ; elapsed = 00:03:28 . Memory (MB): peak = 3527.914 ; gain = 1960.758
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:03:18 ; elapsed = 00:03:29 . Memory (MB): peak = 3526.520 ; gain = 1959.141
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start RTL Component Statistics 
@@ -13987,7 +13987,7 @@ WARNING: [Synth 8-3332] Sequential element (EXT_LPF/ACTIVE_LOW_AUX.ACT_LO_AUX/GE
 WARNING: [Synth 8-3332] Sequential element (ACTIVE_LOW_BSR_OUT_DFF[0].FDRE_BSR_N) is unused and will be removed from module proc_sys_reset.
 WARNING: [Synth 8-3332] Sequential element (PR_OUT_DFF[0].FDRE_PER) is unused and will be removed from module proc_sys_reset.
 ---------------------------------------------------------------------------------
-Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:04:22 ; elapsed = 00:04:34 . Memory (MB): peak = 3527.914 ; gain = 1960.758
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:04:24 ; elapsed = 00:04:36 . Memory (MB): peak = 3526.520 ; gain = 1959.141
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Applying XDC Timing Constraints
@@ -14001,13 +14001,13 @@ WARNING: [Synth 8-565] redefining clock 'sys_clock'
 WARNING: [Synth 8-565] redefining clock 'ddr_clock'
 INFO: [Synth 8-5819] Moved 4 constraints on hierarchical pins to their respective driving/loading pins
 ---------------------------------------------------------------------------------
-Finished Applying XDC Timing Constraints : Time (s): cpu = 00:04:39 ; elapsed = 00:04:51 . Memory (MB): peak = 3527.914 ; gain = 1960.758
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:04:41 ; elapsed = 00:04:54 . Memory (MB): peak = 3526.520 ; gain = 1959.141
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Timing Optimization
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Timing Optimization : Time (s): cpu = 00:04:43 ; elapsed = 00:04:56 . Memory (MB): peak = 3527.914 ; gain = 1960.758
+Finished Timing Optimization : Time (s): cpu = 00:04:46 ; elapsed = 00:04:58 . Memory (MB): peak = 3526.520 ; gain = 1959.141
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Technology Mapping
@@ -14115,7 +14115,7 @@ INFO: [Synth 8-4765] Removing register instance (\Gen_Two_AFEs[0].Gen_Eight_Chan
 INFO: [Common 17-14] Message 'Synth 8-4765' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
 INFO: [Common 17-14] Message 'Synth 8-4765' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
 ---------------------------------------------------------------------------------
-Finished Technology Mapping : Time (s): cpu = 00:04:54 ; elapsed = 00:05:18 . Memory (MB): peak = 3527.914 ; gain = 1960.758
+Finished Technology Mapping : Time (s): cpu = 00:04:57 ; elapsed = 00:05:21 . Memory (MB): peak = 3526.520 ; gain = 1959.141
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start IO Insertion
@@ -14234,37 +14234,37 @@ WARNING: [Synth 8-3295] tying undriven pin U0:sl_iport0[8] to constant 0
 WARNING: [Synth 8-3295] tying undriven pin U0:sl_iport0[7] to constant 0
 INFO: [Common 17-14] Message 'Synth 8-3295' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
 ---------------------------------------------------------------------------------
-Finished IO Insertion : Time (s): cpu = 00:05:02 ; elapsed = 00:05:27 . Memory (MB): peak = 3527.914 ; gain = 1960.758
+Finished IO Insertion : Time (s): cpu = 00:05:05 ; elapsed = 00:05:30 . Memory (MB): peak = 3526.520 ; gain = 1959.141
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Instances
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Instances : Time (s): cpu = 00:05:02 ; elapsed = 00:05:27 . Memory (MB): peak = 3527.914 ; gain = 1960.758
+Finished Renaming Generated Instances : Time (s): cpu = 00:05:05 ; elapsed = 00:05:30 . Memory (MB): peak = 3526.520 ; gain = 1959.141
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Rebuilding User Hierarchy
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Rebuilding User Hierarchy : Time (s): cpu = 00:05:06 ; elapsed = 00:05:31 . Memory (MB): peak = 3527.914 ; gain = 1960.758
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:05:09 ; elapsed = 00:05:34 . Memory (MB): peak = 3526.520 ; gain = 1959.141
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Ports
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Ports : Time (s): cpu = 00:05:06 ; elapsed = 00:05:31 . Memory (MB): peak = 3527.914 ; gain = 1960.758
+Finished Renaming Generated Ports : Time (s): cpu = 00:05:09 ; elapsed = 00:05:35 . Memory (MB): peak = 3526.520 ; gain = 1959.141
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:05:08 ; elapsed = 00:05:33 . Memory (MB): peak = 3527.914 ; gain = 1960.758
+Finished Handling Custom Attributes : Time (s): cpu = 00:05:10 ; elapsed = 00:05:36 . Memory (MB): peak = 3526.520 ; gain = 1959.141
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Nets
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Nets : Time (s): cpu = 00:05:08 ; elapsed = 00:05:33 . Memory (MB): peak = 3527.914 ; gain = 1960.758
+Finished Renaming Generated Nets : Time (s): cpu = 00:05:10 ; elapsed = 00:05:36 . Memory (MB): peak = 3526.520 ; gain = 1959.141
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Writing Synthesis Report
@@ -14354,22 +14354,22 @@ Report Cell Usage:
 |75    |OBUFT                 |     2|
 +------+----------------------+------+
 ---------------------------------------------------------------------------------
-Finished Writing Synthesis Report : Time (s): cpu = 00:05:08 ; elapsed = 00:05:33 . Memory (MB): peak = 3527.914 ; gain = 1960.758
+Finished Writing Synthesis Report : Time (s): cpu = 00:05:10 ; elapsed = 00:05:36 . Memory (MB): peak = 3526.520 ; gain = 1959.141
 ---------------------------------------------------------------------------------
 Synthesis finished with 0 errors, 0 critical warnings and 370 warnings.
-Synthesis Optimization Runtime : Time (s): cpu = 00:02:21 ; elapsed = 00:04:56 . Memory (MB): peak = 3527.914 ; gain = 1960.758
-Synthesis Optimization Complete : Time (s): cpu = 00:05:08 ; elapsed = 00:05:34 . Memory (MB): peak = 3527.914 ; gain = 1960.758
+Synthesis Optimization Runtime : Time (s): cpu = 00:02:23 ; elapsed = 00:04:59 . Memory (MB): peak = 3526.520 ; gain = 1959.141
+Synthesis Optimization Complete : Time (s): cpu = 00:05:11 ; elapsed = 00:05:37 . Memory (MB): peak = 3526.520 ; gain = 1959.141
 INFO: [Project 1-571] Translating synthesized netlist
-Netlist sorting complete. Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.828 . Memory (MB): peak = 3527.914 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.828 . Memory (MB): peak = 3526.520 ; gain = 0.000
 INFO: [Netlist 29-17] Analyzing 3235 Unisim elements for replacement
 WARNING: [Netlist 29-432] The IBUFG primitive 'FEB_fabric_0/U0/DDR_Interface_inst/DDR_Controller/u_DDR3LController_mig/u_ddr3_clk_ibuf/se_input_clk.u_ibufg_sys_clk' has been retargeted to an IBUF primitive only. No BUFG will be added. If a global buffer is intended, please instantiate an available global clock primitive from the current architecture.
-INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Netlist 29-28] Unisim Transformation completed in 1 CPU seconds
 INFO: [Project 1-570] Preparing netlist for logic optimization
 WARNING: [Opt 31-32] Removing redundant IBUF since it is not being driven by a top-level port. clk_wiz_1/inst/clkin1_ibufg 
 Resolution: The tool has removed redundant IBUF. To resolve this warning, check for redundant IBUF in the input design.
 INFO: [Opt 31-138] Pushed 3 inverter(s) to 17 load pin(s).
 Generating merged BMM file for the design top 'uController'...
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.030 . Memory (MB): peak = 3527.914 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.032 . Memory (MB): peak = 3526.520 ; gain = 0.000
 INFO: [Project 1-111] Unisim Transformation Summary:
   A total of 1825 instances were transformed.
   (MUXCY,XORCY) => CARRY4: 67 instances
@@ -14399,12 +14399,12 @@ Synth Design complete, checksum: ebb63603
 INFO: [Common 17-83] Releasing license: Synthesis
 1344 Infos, 461 Warnings, 78 Critical Warnings and 0 Errors encountered.
 synth_design completed successfully
-synth_design: Time (s): cpu = 00:05:27 ; elapsed = 00:06:03 . Memory (MB): peak = 3527.914 ; gain = 2334.477
+synth_design: Time (s): cpu = 00:05:30 ; elapsed = 00:06:06 . Memory (MB): peak = 3526.520 ; gain = 2333.676
 INFO: [Common 17-600] The following parameters have non-default value.
 tcl.collectionResultDisplayLimit
 INFO: [Coretcl 2-1174] Renamed 2584 cell refs.
 INFO: [Common 17-1381] The checkpoint 'C:/v22.2/FEB_uController/FEB_uController.runs/uController_synth_1/uController.dcp' has been generated.
-write_checkpoint: Time (s): cpu = 00:00:08 ; elapsed = 00:00:06 . Memory (MB): peak = 3527.914 ; gain = 0.000
+write_checkpoint: Time (s): cpu = 00:00:08 ; elapsed = 00:00:07 . Memory (MB): peak = 3526.520 ; gain = 0.000
 INFO: [runtcl-4] Executing : report_utilization -file uController_utilization_synth.rpt -pb uController_utilization_synth.pb
-write_vhdl: Time (s): cpu = 00:00:08 ; elapsed = 00:00:08 . Memory (MB): peak = 3527.914 ; gain = 0.000
-INFO: [Common 17-206] Exiting Vivado at Fri Apr 14 14:13:48 2023...
+write_vhdl: Time (s): cpu = 00:00:08 ; elapsed = 00:00:08 . Memory (MB): peak = 3526.520 ; gain = 0.000
+INFO: [Common 17-206] Exiting Vivado at Mon Apr 17 10:02:06 2023...

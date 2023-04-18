@@ -413,8 +413,7 @@ port map(
 	EvBuffRd		=> EvBuffRd,		
 	EvBuffOut		=> EvBuffOut,			
 	EvBuffEmpty		=> EvBuffEmpty,			
-	EvBuffWdsUsed	=> EvBuffWdsUsed,
-	asp 			=> asp
+	EvBuffWdsUsed	=> EvBuffWdsUsed
 	);
 
 data_back_EVB:  Exclude_DDR 

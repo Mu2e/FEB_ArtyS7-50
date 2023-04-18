@@ -19,10 +19,10 @@
       <Properties Property="CORE_REFRESH_RATE_MS" value="500"/>
     </Object>
     <Object name="uController_i/FEB_fabric_0/U0/AFE_DataPath_inst/generateILA0.AFE_DataPath_ila_inst0" gui_info="">
-      <Properties Property="CONTROL.DATA_DEPTH" value="256"/>
+      <Properties Property="CONTROL.DATA_DEPTH" value="32"/>
       <Properties Property="CONTROL.TRIGGER_CONDITION" value="AND"/>
-      <Properties Property="CONTROL.TRIGGER_POSITION" value="60"/>
-      <Properties Property="CONTROL.WINDOW_COUNT" value="3"/>
+      <Properties Property="CONTROL.TRIGGER_POSITION" value="3"/>
+      <Properties Property="CONTROL.WINDOW_COUNT" value="20"/>
       <Properties Property="CORE_REFRESH_RATE_MS" value="500"/>
     </Object>
     <Object name="uController_i/FEB_fabric_0/U0/AFE_Interface/generateILA.AFEemu_ila_inst" gui_info="">
@@ -65,10 +65,11 @@
     <Object name="uController_i/FEB_fabric_0/U0/AFE_DataPath_inst/BufferIn[0][0][15:0]" gui_info=""/>
     <Object name="uController_i/FEB_fabric_0/U0/AFE_DataPath_inst/BufferOut[0][0][15:0]" gui_info=""/>
     <Object name="uController_i/FEB_fabric_0/U0/AFE_DataPath_inst/BufferRdAdd[0][0][9:0]" gui_info=""/>
+    <Object name="uController_i/FEB_fabric_0/U0/AFE_DataPath_inst/BufferWE[0][0:0]" gui_info="Trigger Setup=0"/>
     <Object name="uController_i/FEB_fabric_0/U0/AFE_DataPath_inst/BufferWE[0][7:0]" gui_info=""/>
     <Object name="uController_i/FEB_fabric_0/U0/AFE_DataPath_inst/BufferWrtAdd[0][0][9:0]" gui_info=""/>
     <Object name="uController_i/FEB_fabric_0/U0/AFE_DataPath_inst/InWdCnt[0][0][9:0]" gui_info=""/>
-    <Object name="uController_i/FEB_fabric_0/U0/AFE_DataPath_inst/In_Seq_Stat[0][0][3:0]" gui_info="Trigger Setup=0"/>
+    <Object name="uController_i/FEB_fabric_0/U0/AFE_DataPath_inst/In_Seq_Stat[0][0][3:0]" gui_info=""/>
     <Object name="uController_i/FEB_fabric_0/U0/AFE_DataPath_inst/In_Seq_Stat[0][7:0]" gui_info=""/>
     <Object name="uController_i/FEB_fabric_0/U0/AFE_DataPath_inst/Input_Seqs[0][0][2:0]" gui_info=""/>
     <Object name="uController_i/FEB_fabric_0/U0/AFE_DataPath_inst/IntTrgThresh[0][0][13:0]" gui_info=""/>
@@ -82,8 +83,9 @@
     <Object name="uController_i/FEB_fabric_0/U0/AFE_Interface/delay[15:0]" gui_info=""/>
     <Object name="uController_i/FEB_fabric_0/U0/AFE_Interface/start" gui_info=""/>
     <Object name="uController_i/FEB_fabric_0/U0/AFE_Interface/state[3:0]" gui_info="Trigger Setup=0"/>
+    <Object name="uController_i/FEB_fabric_0/U0/EventBuilder_logic/EvBuffDat[15:0]" gui_info=""/>
     <Object name="uController_i/FEB_fabric_0/U0/EventBuilder_logic/Event_Builder[3:0]" gui_info=""/>
-    <Object name="uController_i/FEB_fabric_0/U0/EventBuilder_logic/Read_Seq_Stat[3:0]" gui_info=""/>
+    <Object name="uController_i/FEB_fabric_0/U0/EventBuilder_logic/Read_Seq_Stat[3:0]" gui_info="Trigger Setup=0"/>
     <Object name="uController_i/FEB_fabric_0/U0/Trigger_logic/BeamOn" gui_info=""/>
     <Object name="uController_i/FEB_fabric_0/U0/Trigger_logic/FlashEn" gui_info=""/>
     <Object name="uController_i/FEB_fabric_0/U0/Trigger_logic/GateCounter[8:0]" gui_info=""/>
@@ -102,8 +104,8 @@
     <Object name="uController_i/system_ila_0/U0/probe3_1[11:0]" gui_info=""/>
     <Object name="uController_i/system_ila_0/U0/probe4_1" gui_info=""/>
     <Object name="uController_i/system_ila_0/U0/probe5_1" gui_info=""/>
-    <Object name="uController_i/system_ila_0/U0/probe6_1[15:0]" gui_info="Trigger Setup=0"/>
-    <Object name="uController_i/system_ila_0/U0/probe7_1[15:0]" gui_info=""/>
+    <Object name="uController_i/system_ila_0/U0/probe6_1[15:0]" gui_info=""/>
+    <Object name="uController_i/system_ila_0/U0/probe7_1[15:0]" gui_info="Trigger Setup=0"/>
     <Object name="uController_i/system_ila_1/U0/probe0_1[15:0]" gui_info="Trigger Setup=0"/>
   </ObjectList>
   <probeset name="hw project" active="false">
@@ -408,7 +410,7 @@
     <probe type="ila" busType="bus" source="netlist" spec="ILA_V2_RT">
       <probeOptions Id="DebugProbeParams">
         <Option Id="CAPTURE_COMPARE_VALUE" value="eq1&apos;bX"/>
-        <Option Id="COMPARE_VALUE.0" value="eq1&apos;bX"/>
+        <Option Id="COMPARE_VALUE.0" value="eq1&apos;b1"/>
         <Option Id="DISPLAY_AS_ENUM" value="1"/>
         <Option Id="DISPLAY_HINT" value=""/>
         <Option Id="DISPLAY_RADIX" value="HEX"/>
@@ -419,7 +421,7 @@
         <Option Id="NAME.CUSTOM" value=""/>
         <Option Id="NAME.SELECT" value="Short"/>
         <Option Id="SOURCE" value="netlist"/>
-        <Option Id="TRIGGER_COMPARE_VALUE" value="eq1&apos;bX"/>
+        <Option Id="TRIGGER_COMPARE_VALUE" value="eq1&apos;b1"/>
         <Option Id="WAVEFORM_STYLE" value="Digital"/>
       </probeOptions>
       <nets>
@@ -608,7 +610,7 @@
     <probe type="ila" busType="bus" source="netlist" spec="ILA_V2_RT">
       <probeOptions Id="DebugProbeParams">
         <Option Id="CAPTURE_COMPARE_VALUE" value="eq4&apos;hX"/>
-        <Option Id="COMPARE_VALUE.0" value="eq4&apos;h3"/>
+        <Option Id="COMPARE_VALUE.0" value="eq4&apos;hX"/>
         <Option Id="DISPLAY_AS_ENUM" value="1"/>
         <Option Id="DISPLAY_HINT" value=""/>
         <Option Id="DISPLAY_RADIX" value="HEX"/>
@@ -619,7 +621,7 @@
         <Option Id="NAME.CUSTOM" value=""/>
         <Option Id="NAME.SELECT" value="Long"/>
         <Option Id="SOURCE" value="netlist"/>
-        <Option Id="TRIGGER_COMPARE_VALUE" value="eq4&apos;h3"/>
+        <Option Id="TRIGGER_COMPARE_VALUE" value="eq4&apos;hX"/>
         <Option Id="WAVEFORM_STYLE" value="Digital"/>
       </probeOptions>
       <nets>
@@ -1447,7 +1449,7 @@
         <Option Id="DISPLAY_VISIBILITY" value=""/>
         <Option Id="HW_ILA" value="hw_ila_4"/>
         <Option Id="LINK_TO_WAVEFORM" value="1"/>
-        <Option Id="MAP" value="probe5[15:0]"/>
+        <Option Id="MAP" value="probe2[15:0]"/>
         <Option Id="NAME.CUSTOM" value=""/>
         <Option Id="NAME.SELECT" value="Short"/>
         <Option Id="SOURCE" value="netlist"/>
@@ -1483,7 +1485,7 @@
         <Option Id="DISPLAY_VISIBILITY" value=""/>
         <Option Id="HW_ILA" value="hw_ila_4"/>
         <Option Id="LINK_TO_WAVEFORM" value="1"/>
-        <Option Id="MAP" value="probe3[15:0]"/>
+        <Option Id="MAP" value="probe5[15:0]"/>
         <Option Id="NAME.CUSTOM" value=""/>
         <Option Id="NAME.SELECT" value="Short"/>
         <Option Id="SOURCE" value="netlist"/>
@@ -1540,7 +1542,7 @@
         <Option Id="DISPLAY_VISIBILITY" value=""/>
         <Option Id="HW_ILA" value="hw_ila_4"/>
         <Option Id="LINK_TO_WAVEFORM" value="1"/>
-        <Option Id="MAP" value="probe2[10:0]"/>
+        <Option Id="MAP" value="probe6[10:0]"/>
         <Option Id="NAME.CUSTOM" value=""/>
         <Option Id="NAME.SELECT" value="Short"/>
         <Option Id="SOURCE" value="netlist"/>
@@ -1592,7 +1594,7 @@
         <Option Id="DISPLAY_VISIBILITY" value=""/>
         <Option Id="HW_ILA" value="hw_ila_4"/>
         <Option Id="LINK_TO_WAVEFORM" value="1"/>
-        <Option Id="MAP" value="probe6[15:0]"/>
+        <Option Id="MAP" value="probe4[15:0]"/>
         <Option Id="NAME.CUSTOM" value=""/>
         <Option Id="NAME.SELECT" value="Short"/>
         <Option Id="SOURCE" value="netlist"/>
@@ -1628,7 +1630,7 @@
         <Option Id="DISPLAY_VISIBILITY" value=""/>
         <Option Id="HW_ILA" value="hw_ila_4"/>
         <Option Id="LINK_TO_WAVEFORM" value="1"/>
-        <Option Id="MAP" value="probe4[3:0]"/>
+        <Option Id="MAP" value="probe3[3:0]"/>
         <Option Id="NAME.CUSTOM" value=""/>
         <Option Id="NAME.SELECT" value="Short"/>
         <Option Id="SOURCE" value="netlist"/>
@@ -1658,18 +1660,18 @@
     <probe type="ila" busType="bus" source="netlist" spec="ILA_V2_RT">
       <probeOptions Id="DebugProbeParams">
         <Option Id="CAPTURE_COMPARE_VALUE" value="eq4&apos;hX"/>
-        <Option Id="COMPARE_VALUE.0" value="eq4&apos;hX"/>
+        <Option Id="COMPARE_VALUE.0" value="eq4&apos;h1"/>
         <Option Id="DISPLAY_AS_ENUM" value="1"/>
         <Option Id="DISPLAY_HINT" value=""/>
         <Option Id="DISPLAY_RADIX" value="HEX"/>
         <Option Id="DISPLAY_VISIBILITY" value=""/>
         <Option Id="HW_ILA" value="hw_ila_4"/>
         <Option Id="LINK_TO_WAVEFORM" value="1"/>
-        <Option Id="MAP" value="probe8[3:0]"/>
+        <Option Id="MAP" value="probe7[3:0]"/>
         <Option Id="NAME.CUSTOM" value=""/>
         <Option Id="NAME.SELECT" value="Short"/>
         <Option Id="SOURCE" value="netlist"/>
-        <Option Id="TRIGGER_COMPARE_VALUE" value="eq4&apos;hX"/>
+        <Option Id="TRIGGER_COMPARE_VALUE" value="eq4&apos;h1"/>
         <Option Id="WAVEFORM_STYLE" value="Digital"/>
       </probeOptions>
       <nets>
@@ -1689,7 +1691,7 @@
         <Option Id="DISPLAY_VISIBILITY" value=""/>
         <Option Id="HW_ILA" value="hw_ila_4"/>
         <Option Id="LINK_TO_WAVEFORM" value="1"/>
-        <Option Id="MAP" value="probe7[8:0]"/>
+        <Option Id="MAP" value="probe8[8:0]"/>
         <Option Id="NAME.CUSTOM" value=""/>
         <Option Id="NAME.SELECT" value="Short"/>
         <Option Id="SOURCE" value="netlist"/>
@@ -2602,7 +2604,7 @@
     <probe type="ila" busType="bus" source="netlist" spec="ILA_V2_RT">
       <probeOptions Id="DebugProbeParams">
         <Option Id="CAPTURE_COMPARE_VALUE" value="eq16&apos;hXXXX"/>
-        <Option Id="COMPARE_VALUE.0" value="eq16&apos;hDEAD"/>
+        <Option Id="COMPARE_VALUE.0" value="eq16&apos;hXXXX"/>
         <Option Id="DISPLAY_AS_ENUM" value="1"/>
         <Option Id="DISPLAY_HINT" value=""/>
         <Option Id="DISPLAY_RADIX" value="HEX"/>
@@ -2613,7 +2615,7 @@
         <Option Id="NAME.CUSTOM" value="Net"/>
         <Option Id="NAME.SELECT" value="Custom"/>
         <Option Id="SOURCE" value="netlist"/>
-        <Option Id="TRIGGER_COMPARE_VALUE" value="eq16&apos;hDEAD"/>
+        <Option Id="TRIGGER_COMPARE_VALUE" value="eq16&apos;hXXXX"/>
         <Option Id="WAVEFORM_STYLE" value="Digital"/>
       </probeOptions>
       <nets>
@@ -2638,7 +2640,7 @@
     <probe type="ila" busType="bus" source="netlist" spec="ILA_V2_RT">
       <probeOptions Id="DebugProbeParams">
         <Option Id="CAPTURE_COMPARE_VALUE" value="eq16&apos;hXXXX"/>
-        <Option Id="COMPARE_VALUE.0" value="eq16&apos;hXXXX"/>
+        <Option Id="COMPARE_VALUE.0" value="neq16&apos;h0000"/>
         <Option Id="DISPLAY_AS_ENUM" value="1"/>
         <Option Id="DISPLAY_HINT" value=""/>
         <Option Id="DISPLAY_RADIX" value="HEX"/>
@@ -2649,7 +2651,7 @@
         <Option Id="NAME.CUSTOM" value="FEB_fabric_0_iuCD"/>
         <Option Id="NAME.SELECT" value="Custom"/>
         <Option Id="SOURCE" value="netlist"/>
-        <Option Id="TRIGGER_COMPARE_VALUE" value="eq16&apos;hXXXX"/>
+        <Option Id="TRIGGER_COMPARE_VALUE" value="neq16&apos;h0000"/>
         <Option Id="WAVEFORM_STYLE" value="Digital"/>
       </probeOptions>
       <nets>

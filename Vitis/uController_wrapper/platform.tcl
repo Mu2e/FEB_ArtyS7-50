@@ -148,3 +148,5 @@ platform config -updatehw {C:/v22.2/FEB_uController/uController_wrapperNEW4.xsa}
 platform generate -domains 
 platform config -updatehw {C:/v22.2/FEB_uController/uController_wrapperEVB.xsa}
 platform generate -domains 
+platform config -updatehw {C:/v22.2/FEB_uController/uController_wrapper_RECAP.xsa}
+platform generate -domains 
