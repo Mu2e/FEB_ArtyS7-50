@@ -447,15 +447,24 @@ end component;
 -- 	Tx_Out 					: buffer TxOutRec);
 -- end component;
  
+ component GPIO_emu is
+  Port (
+	SysClk				: in std_logic;
+	CpldRst				: in std_logic;
+ 	GPI0 				: out std_logic
+	);
+end component;
+ 
  component FM_Rx is
  generic (Pwidth : positive);
  port (
- 	SysClk					: in std_logic;
- 	RxClk					: in std_logic;
- 	reset 					: in std_logic;
- 	Rx_In 					: in RxInRec;
-     Data 					: buffer std_logic_vector (Pwidth - 1 downto 0);
-     Rx_Out 					: buffer RxOutRec);
+ 	SysClk				: in std_logic;
+ 	RxClk				: in std_logic;
+ 	reset 				: in std_logic;
+ 	Rx_In 				: in RxInRec;
+    data 				: buffer std_logic_vector (Pwidth - 1 downto 0);
+    Rx_Out 					: buffer RxOutRec
+	);
  end component;
  
  component Trigger is

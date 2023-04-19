@@ -177,6 +177,12 @@ Clk5MHz <= not Clk5MHz after Clk10MHz_period;
 
 ResetHi <= not CpldRst;
 
+GPIO_sim : GPIO_emu 
+ port map (
+	SysClk		=> SysClk,
+	CpldRst		=> CpldRst,
+ 	GPI0 		=> GPI0
+	);
 
 Trigger_logic: Trigger 
 port map(

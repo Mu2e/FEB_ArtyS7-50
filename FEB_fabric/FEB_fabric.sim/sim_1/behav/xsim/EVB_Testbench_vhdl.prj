@@ -30,6 +30,7 @@ vhdl work  \
 "../../../../FEB_fabric.srcs/sim_1/new/Exclude_DDR_Testbench.vhd" \
 "../../../../FEB_fabric.srcs/sim_1/new/EVB_Testbench.vhd" \
 "../../../../FEB_fabric.srcs/sim_1/new/FMDes_Testbench.vhd" \
+"../../../../FEB_fabric.srcs/sources_1/new/GPIO_emu.vhd" \
 
 # Do not sort compile order
 nosort

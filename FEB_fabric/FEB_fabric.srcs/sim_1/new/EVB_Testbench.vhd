@@ -55,6 +55,14 @@ component EventBuilder is
 	);
 end component;
 
+ component GPIO_emu is
+  Port (
+	SysClk				: in std_logic;
+	CpldRst				: in std_logic;
+ 	GPI0 				: out std_logic
+	);
+end component;
+
  component Trigger is
    Port (
    	SysClk				: in std_logic; -- 160 MHz
@@ -253,7 +261,7 @@ constant StopAFEemu : AddrPtr := "11" & X"AC";
 constant StartAFEemu : AddrPtr := "11" & X"AD";
 constant ResetAFEemu : AddrPtr := "11" & X"AE";
 constant ReadAFEemu : AddrPtr := "11" & X"AF";
--- signal counter				: std_logic_vector(15 downto 0):=(others => '0');
+signal counterFM			: std_logic_vector(15 downto 0):=(others => '0');
 signal up					: std_logic_vector(15 downto 0):=(others => '0');
 signal down					: std_logic_vector(7 downto 0):= x"80";
 signal counter				: integer range 0 to 14;
@@ -314,6 +322,13 @@ global_signals_100MHz : process(Clk100MHz, CpldRst)
 		end if;
 	end if;
 end process;
+
+GPIO_sim : GPIO_emu 
+ port map (
+	SysClk		=> SysClk,
+	CpldRst		=> CpldRst,
+ 	GPI0 		=> GPI0
+	);
 	
 AFE_Interface : AFE_Interface_Sim
 port map (
@@ -428,7 +443,28 @@ port map(
 	
 
 
-
+--RxOut_Done: process(SysClk)
+--begin
+--
+--	if CpldRst = '0' then
+--		GPI0 <= '0';
+--		counterFM <= (others => '0');	
+--	elsif rising_edge(SysClk) then
+--
+--	for j in 0 to 20 loop
+--		counterFM <= counterFM + 1;
+--		if counterFM < 10 then 
+--			GPI0 <= '1';
+--		elsif counterFM >= 10 and counterFM < 20 then 
+--			GPI0 <= '0';
+--		elsif counterFM = 20 then
+--			counterFM <= (others => '0');	
+--		end if;
+--	end loop;
+--
+--
+--	end if;
+--end process;	
 
 
 Fill_AFE_Sim: process(HW_Clk)
@@ -440,7 +476,7 @@ begin
 		WRDL <= "00";	
 		counter <= 0;	
 		up <= (others => '0');	
-		GA <= (others => '0');	
+		--GA <= (others => '0');	
 	else
 		counter <= counter + 1;
 		if (counter < 1024) then 
@@ -468,21 +504,9 @@ begin
 		uCD(7 downto 5)  <= b"000";	
 		uCD(12 downto 8) <= b"10101";
 		uCD(4 downto 0)  <= b"01100"; 
-		elsif (counter = 1030) then -- 	uBunch;
+		elsif (counter = 1028) then  --SlfTrgEn
 		WRDL <= "01";
-		uCA<= b"000001111000";
-		uCD <= x"0005";
-		--elsif (counter = 1029) then -- 	uBunch;
-		--WRDL <= "01";
-		--uCA<= b"000001111000";
-		--uCD <= x"DEAD";
-		elsif (counter = 1028) then  --SetTrigReq
-		WRDL <= "01";
-		uCA<= b"000001111000";
-		uCD <= x"0001";
-		elsif (counter = 1029) then  --Tr(FM)
-		WRDL <= "01";
-		uCA <= b"001100001110";
+		uCA(9 downto 0) <= IntTrgEnAddr;
 		uCD <= x"0002";
 		end if;
 

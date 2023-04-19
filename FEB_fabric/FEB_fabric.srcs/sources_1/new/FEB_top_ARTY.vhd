@@ -235,6 +235,12 @@ port map (
 	IB => GPI0_N, -- Diff_n buffer input (connect directly to top-level port)
 	O  => GPI0);	  -- Buffer output
 	
+GPIO_sim : GPIO_emu 
+ port map (
+	SysClk		=> SysClk,
+	CpldRst		=> CpldRst,
+ 	GPI0 		=> GPI0
+	);
 
 --AFE_Interface_inst : AFE_Interface
 --port map(
