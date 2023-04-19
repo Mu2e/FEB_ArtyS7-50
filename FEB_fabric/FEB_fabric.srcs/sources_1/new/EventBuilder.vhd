@@ -48,7 +48,7 @@ end EventBuilder;
 architecture Behavioral of EventBuilder is
 
 Type Event_Builder_FSM is (Reset, Idle, SyncWait, HitCountRead, WdCountWrt, WrtuBunchHi,WrtuBunchLo,
-							Check_Mask, Check_Ovf, WrtData, Incr_Chan, Incr_Chan_Wrt);
+							Check_Mask, BufferOutDelay, Check_Ovf, WrtData, Incr_Chan, Incr_Chan_Wrt);
 signal prev_state, Event_Builder : Event_Builder_FSM;
 signal Read_Seq_Stat : std_logic_vector(3 downto 0);
 
@@ -65,18 +65,20 @@ signal EvBuffFull			: std_logic;
 
 signal AFE_Num  			: integer range 0 to 2; 
 signal Chan_Num 			: integer range 0 to 7;
-signal RdDone				: std_logic;
-signal EvOvf 				: Array_2x8;
+
+signal EvOvf 				: Array_2x8;  -- To be implemented 
 signal NoHIts 				: Array_2x8;
-signal NextEvAddr			: Array_2x8x10;
+signal NextEvAddr			: Array_2x8x10;  -- To be implemented 
 signal synctime				: integer range 0 to 2; 
 -- Event word count
 signal EventWdCnt			: std_logic_vector (15 downto 0);
+signal EvBuffWdWritten		: std_logic_vector (15 downto 0);
 signal HitWdCnt				: Array_2x8x16;
-signal NxtWdCount 			: std_logic_vector (15 downto 0);
+signal NxtWdCount 			: std_logic_vector (15 downto 0); -- To be implemented 
+signal SampleCount			: std_logic_vector(15 downto 0);
 -- Signals for DDR write sequencer
 signal BuffRdCount 			: std_logic_vector(8 downto 0);
-signal SampleCount			: std_logic_vector(15 downto 0);
+
 
 attribute mark_debug : string;
 attribute mark_debug of Event_Builder : signal is "true";
@@ -134,8 +136,8 @@ end process;
 -- 1 round: read all the hit count to know how many words in the event and store the number (Event word count) at the beginning of the 
 -- EventFIFO
 -- 2 round: read the words from AFEBuffer and write them in the EventFIFO
-transition_table: process(prev_state, SlfTrgEn, startEVB, SampleCount)
-begin   	
+transition_table: process(SysClk, prev_state, SlfTrgEn, startEVB, SampleCount)
+begin
 	case prev_state is
 	when Reset =>
 			Event_Builder 			<= Idle;
@@ -146,7 +148,7 @@ begin
 			Event_Builder 			<= Idle;
 		end if;		
 	when SyncWait =>
-		if synctime = 0 then 
+		if synctime = 1 then 
 			Event_Builder 			<= HitCountRead;
 		else 
 			Event_Builder 			<= SyncWait;
@@ -167,35 +169,28 @@ begin
 			Event_Builder 			<= Check_Mask;			
 	when Check_Mask =>
 		if MaskReg(AFE_Num)(Chan_Num) = '1' and EvOvf(AFE_Num)(Chan_Num) = '0' then 
-			Event_Builder 			<= WrtData;
+			Event_Builder 			<= BufferOutDelay;
 		else 
 			Event_Builder 			<= Incr_Chan;
 		end if; 
-	
---	when Check_Ovf =>
---		if EvOvf(AFE_Num)(Chan_Num) = '0' then 
---			Event_Builder 			<= WrtData;
---		else
---			Event_Builder 			<= Incr_Chan;
---		end if; 
-	when WrtData =>
-		if SampleCount = 0 then 
-			Event_Builder 			<= Incr_Chan_Wrt;
-		else
+	when BufferOutDelay =>
+		if synctime = 1 then 
 			Event_Builder 			<= WrtData;
+		else 
+			Event_Builder 			<= BufferOutDelay;
+		end if;	
+	when WrtData =>
+		if EvBuffWdWritten = EventWdCnt - 1 then 
+			Event_Builder 			<= Idle;
+		else 
+			if SampleCount = 1 then 
+				Event_Builder 			<= Incr_Chan_Wrt;
+			else
+				Event_Builder 			<= WrtData;
+			end if;
 		end if;
 	when Incr_Chan_Wrt =>
 			Event_Builder 			<= Check_Mask;
-
-
-		
---	when Incr_Chan =>
---		if (AFE_Num = 1 and Chan_Num = 7) then 
---			Event_Builder 			<= Idle;
---			test					<= '1';
---		else
---			Event_Builder 			<= Check_Mask;
---		end if; 
 	when others =>
 			Event_Builder 			<= Idle;
 	end case;
@@ -210,7 +205,8 @@ if rising_edge(SysClk) then
 		EvBuffWrt     <= '0';
 		EvBuffDat 	  <= BufferOut(AFE_Num)(Chan_Num);
 		synctime	  <= 0;
-		NxtWdCount 	  <= EventWdCnt + BufferOut(AFE_Num)(Chan_Num);
+		--NxtWdCount 	  <= EventWdCnt + BufferOut(AFE_Num)(Chan_Num);
+		NxtWdCount 	  <= (others => '0');
 		NextEvAddr(AFE_Num)(Chan_Num) <= BufferRdAdd(AFE_Num)(Chan_Num) + BufferOut(AFE_Num)(Chan_Num)(9 downto 0) + 1;
 
 		for i in 0 to 1 loop
@@ -227,6 +223,7 @@ if rising_edge(SysClk) then
 		AFE_Num 	  	<= 0; 
 		Chan_Num 	 	<= 0;		
 		EventWdCnt 	  	<= (others => '0');
+		EvBuffWdWritten	<= (others => '0'); -- number of word written in the EvBuff per uB
 		BufferRdAdd(0)	<= (others => (others => '0'));
 		BufferRdAdd(1)  <= (others => (others => '0'));
 		NextEvAddr(0)   <= (others => (others => '0'));
@@ -242,7 +239,10 @@ if rising_edge(SysClk) then
 		Read_Seq_Stat 	<= X"1";
 		EventWdCnt 		<= X"0003";
 		EvOvf 			<= (others => X"00");
-		synctime	  	<= 1;
+		AFE_Num 	  	<= 0; 
+		Chan_Num 	 	<= 0;
+		EvBuffWdWritten	<= (others => '0');		
+		synctime	  	<= 2;
 		when SyncWait => -- wait for alignement between 80MHz domain and 160 MHz domain
 		Read_Seq_Stat 	<= X"2";
 		synctime <= synctime - 1;
@@ -262,104 +262,51 @@ if rising_edge(SysClk) then
 				AFE_Num <= 0;
 			end if;
 		EventWdCnt <= EventWdCnt + HitWdCnt(AFE_Num)(Chan_Num); -- Hit words count 
-		when WdCountWrt => -- Sum up all the Hit words count to have the Event words count 
+				when WdCountWrt => -- Sum up all the Hit words count to have the Event words count 
 		Read_Seq_Stat 	<= X"5";		
 		EvBuffDat 		<= EventWdCnt;
-		EvBuffWrt 		<= '1'; 		
+		EvBuffWrt 		<= '1'; 
+		EvBuffWdWritten	<= EvBuffWdWritten + 1;		
 		when WrtuBunchHi => 
 		Read_Seq_Stat 	<= X"6"; 
 		EvBuffDat 		<= uBunchBuffOut(31 downto 16);
 		EvBuffWrt 		<= '1'; 
+		EvBuffWdWritten	<= EvBuffWdWritten + 1;
 		when WrtuBunchLo => 
 		Read_Seq_Stat 	<= X"7";
 		EvBuffDat 		<= uBunchBuffOut(15 downto 0);
 		EvBuffWrt		<= '1'; 
+		EvBuffWdWritten	<= EvBuffWdWritten + 1;
 		uBunchRd 		<= '1'; -- Micol: I think this needs to be asserted on WrtuBunchHi
 		when Check_Mask =>
 		Read_Seq_Stat 	<= X"8"; 
+		synctime	  	<= 2;
 		SampleCount 	<= HitWdCnt(AFE_Num)(Chan_Num);
 			if NxtWdCount >= PageSize then -- PageSize(15 downto 0) := X"FFFF";
 				-- If the channel has an overflow, skip ahead to the next channel
 				-- and advance the pointer on this channel to the next event
 				BufferRdAdd(AFE_Num)(Chan_Num) <= NextEvAddr(AFE_Num)(Chan_Num);
+				EvOvf(AFE_Num)(Chan_Num) <= '1';
 			else
 				BufferRdAdd(AFE_Num)(Chan_Num) <= BufferRdAdd(AFE_Num)(Chan_Num) + 1; 	 -- Micol: IDK why there is a delay in BufferOut			
 			end if; 
+		when BufferOutDelay =>
+		Read_Seq_Stat 	<= X"9"; 
+		synctime <= synctime - 1;
+		BufferRdAdd(AFE_Num)(Chan_Num) <= BufferRdAdd(AFE_Num)(Chan_Num) + 1;
 
---		when Incr_Chan0 =>   -- Increment AFE number after eight channels have been read out
---		Read_Seq_Stat 	<= X"2"; 		
---			if Chan_Num /= 7 then 
---				Chan_Num <= Chan_Num + 1;
---			else 
---				Chan_Num <= 0; 
---			end if;
---			if Chan_Num = 7 and AFE_Num = 0 then 
---				AFE_Num <= AFE_Num + 1;
---			elsif Chan_Num = 7 and AFE_Num = 1 then 
---				AFE_Num <= 0;
---			end if;
---	
---			if MaskReg(AFE_Num)(Chan_Num) = '1' then 
---				if EvOvf(AFE_Num)(Chan_Num) = '1' then 
---				-- If the channel has an overflow, skip ahead to the next channel
---				-- and advance the pointer on this channel to the next event
---					BufferRdAdd(AFE_Num)(Chan_Num) <= NextEvAddr(AFE_Num)(Chan_Num);
---				elsif EvOvf(AFE_Num)(Chan_Num) = '0' then
---					HitWdCnt(AFE_Num)(Chan_Num)  <= BufferOut(AFE_Num)(Chan_Num); -- Hit words count
---					EventWdCnt <= EventWdCnt + HitWdCnt(AFE_Num)(Chan_Num); -- Hit words count 
---				end if;	
---			end if; 
---			
---		when Add_Wd_Count => -- Used for the DDR
---		Read_Seq_Stat 	<= X"4"; 
---
-
---		when Check_Mask1 =>   -- Count down the words stored in the uBunch event for this channel (addr 0 of AFEBuffer)
---		Read_Seq_Stat 	<= X"8"; 
---			if MaskReg(AFE_Num)(Chan_Num) = '1' and EvOvf(AFE_Num)(Chan_Num) = '0' then 
---				BufferRdAdd(AFE_Num)(Chan_Num) <= BufferRdAdd(AFE_Num)(Chan_Num) + 1;
---				SampleCount 				   <= HitWdCnt(AFE_Num)(Chan_Num)(8 downto 0);
---				BuffRdCount 				   <= HitWdCnt(AFE_Num)(Chan_Num)(8 downto 0); 
---			end if;	
---		when Incr_Chan1 => 
---		Read_Seq_Stat 	<= X"9";
---			if Chan_Num /= 7 then 
---				Chan_Num <= Chan_Num + 1;
---			else 
---				Chan_Num <= 0; 
---			end if;
---			if Chan_Num = 7 and AFE_Num = 0 then 
---				AFE_Num <= AFE_Num + 1;
---			elsif Chan_Num = 7 and AFE_Num = 1 then 
---				AFE_Num <= 0;
---			end if;
---			  -- Flag used to signal end of read out across clock domains
---			if AFE_Num = 1 and Chan_Num = 7 then 
---				 RdDone <= '1';
---			end if;
---			
---		when Wait1 => 
---		Read_Seq_Stat 	<= X"A"; 
---			if BuffRdCount /= 0 then 
---				BuffRdCount <= BuffRdCount - 1;
---			end if;
---		when Wait2 => 
---		Read_Seq_Stat 	<= X"B";
---			if BuffRdCount /= 0 then 
---				BuffRdCount <= BuffRdCount - 1;
---			end if;		
 		when WrtData => 
-		Read_Seq_Stat 	<= X"9";	
+		Read_Seq_Stat 	<= X"A";	
 		EvBuffWrt 		<= '1'; 
-		BufferRdAdd(AFE_Num)(Chan_Num) <= BufferRdAdd(AFE_Num)(Chan_Num) + 1; 
+		EvBuffWdWritten	<= EvBuffWdWritten + 1;
+			if SampleCount > 2 then 
+				BufferRdAdd(AFE_Num)(Chan_Num) <= BufferRdAdd(AFE_Num)(Chan_Num) + 1;
+			end if;
 			if SampleCount /= 0 then 
 				 SampleCount <= SampleCount - 1;
 			end if;
-			if BuffRdCount /= 0 then 
-				BuffRdCount <= BuffRdCount - 1;
-			end if;
 		when Incr_Chan_Wrt =>
-		Read_Seq_Stat 	<= X"A";
+		Read_Seq_Stat 	<= X"B";
 			if Chan_Num /= 7 then 
 				Chan_Num <= Chan_Num + 1;
 			else 
@@ -376,18 +323,7 @@ if rising_edge(SysClk) then
 end if;
 end process;
 
---counter : process (SysClk)
---begin 
---    if Read_Seq_Stat = x"9" then
---		if SampleCount /= 0 then 
---			SampleCount <= SampleCount - 1;
---		end if;
---		--BufferRdAdd(AFE_Num)(Chan_Num) <= BufferRdAdd(AFE_Num)(Chan_Num) + 1; 	
---	end if; 
---end process; 
 end Behavioral;
 
--- Credo che check mask e check ovf possa essere fatto in uno stato solo 
--- Add wd count secondo me non serve a niente
--- Round 0 serve a controllare tutti gli overflow (condizionati sulle maschere)
--- Se gli overflow sono ok, si passa a round 1
+-- Inserire il meccanismo di OVF
+
