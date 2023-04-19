@@ -37,14 +37,13 @@ signal RxBitWdth : std_logic_vector (3 downto 0);
 signal RxDl : std_logic_vector (1 downto 0);
 -- Transmitted FM data, running parity bit
 signal RxParity,Rx_NRZ : std_logic;
-
+signal RxBtCnt_sig : integer range 0 to 23;
 begin
 
 FM_Decode : process(RxClk, reset)
 
 -- Frame bit counter
 variable RxBtCnt : integer range 0 to Pwidth-1;
-
 begin
  if reset = '1' then 
 
@@ -56,7 +55,7 @@ begin
 	RxBtCnt 	:= 0; 
 	Rx_NRZ 		<= '0'; 
 	RxBitWdth	<= "0000";
-
+	RxBtCnt_sig <= 0; 
 elsif rising_edge(RxClk) then
 
 -- Synchronous edge detector for input
@@ -76,24 +75,33 @@ end if;
 -- RxIdle,RxStrt,RxShift,ParityRx 
 Case Rx_State is
     When RxIdle =>
-      if RxBitWdth = 8 then Rx_State <= RxStrt;
-       else Rx_State <= RxIdle;
+      if RxBitWdth = 8 then 
+		Rx_State <= RxStrt;
+      else 
+		Rx_State <= RxIdle;
       end if;
     When RxStrt =>
-     if RxBitWdth = 8 then Rx_State <= RxShift;
+     if RxBitWdth = 8 then 
+		Rx_State <= RxShift;
 	  elsif ((RxDl(1) = '1' xor RxDl(0) = '1') and RxBitWdth < 8)
-		  or RxBitWdth = 15 then Rx_State <= RxIdle;
-      else Rx_State <= RxStrt;
+		  or RxBitWdth = 15 then 
+		Rx_State <= RxIdle;
+      else 
+		Rx_State <= RxStrt;
      end if;
     When RxShift =>
-      if RxBtCnt = 0 and RxBitWdth = 6 then Rx_State <= ParityRx;
-	   elsif RxBitWdth = 15 then Rx_State <= RxIdle;
-      else Rx_State <= RxShift;
+      if RxBtCnt = 0 and RxBitWdth = 6 then 
+		Rx_State <= ParityRx;
+	   elsif RxBitWdth = 15 then 
+		Rx_State <= RxIdle;
+      else 
+		Rx_State <= RxShift;
       end if;
      When ParityRx =>
-      if RxBitWdth = 6 or RxBitWdth = 15
-		then Rx_State <= RxIdle;
-     else Rx_State <= ParityRx;
+      if RxBitWdth = 6 or RxBitWdth = 15 then 
+		Rx_State <= RxIdle;
+     else 
+		Rx_State <= ParityRx;
       end if;
 end case;
 
@@ -107,11 +115,18 @@ else Rx_NRZ <= Rx_NRZ;
 end if;
 
 -- Serial data frame is "width" bits long
-   if Rx_State = RxStrt and RxBitWdth = 8 then RxBtCnt := (Pwidth-1);
-elsif Rx_State = RxIdle then RxBtCnt := 0;
-elsif Rx_State = RxShift and RxBitWdth = 6 and RxBtCnt /= 0 
-then RxBtCnt := RxBtCnt - 1;
-else RxBtCnt := RxBtCnt;
+if Rx_State = RxStrt and RxBitWdth = 8 then 
+	RxBtCnt := (Pwidth-1);
+	RxBtCnt_sig <= 23;
+elsif Rx_State = RxIdle then 
+	RxBtCnt := 0;
+	RxBtCnt_sig <= 0;
+elsif Rx_State = RxShift and RxBitWdth = 6 and RxBtCnt /= 0 then 
+	RxBtCnt := RxBtCnt - 1;
+	RxBtCnt_sig <= RxBtCnt_sig -1;
+else 
+	RxBtCnt := RxBtCnt;
+	RxBtCnt_sig <= RxBtCnt_sig;
 end if;
 
 -- Shift register

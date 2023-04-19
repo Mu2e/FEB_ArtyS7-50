@@ -77,23 +77,16 @@ signal HitWdCnt				: Array_2x8x16;
 signal NxtWdCount 			: std_logic_vector (15 downto 0); -- To be implemented 
 signal SampleCount			: std_logic_vector(15 downto 0);
 -- Signals for DDR write sequencer
-signal BuffRdCount 			: std_logic_vector(8 downto 0);
+signal BuffRdCount 			: std_logic_vector(8 downto 0); -- Unused right now
 
 
 attribute mark_debug : string;
 attribute mark_debug of Event_Builder : signal is "true";
-attribute mark_debug of EvBuffWrt	  : signal is "true";
-attribute mark_debug of EvBuffRd	  : signal is "true";
-attribute mark_debug of EvBuffDat	  : signal is "true";
 attribute mark_debug of EvBuffOut	  : signal is "true";
 attribute mark_debug of EvBuffWdsUsed : signal is "true";
 attribute mark_debug of AFE_Num	  	  : signal is "true";
 attribute mark_debug of Chan_Num 	  : signal is "true";
-attribute mark_debug of Read_Seq_Stat : signal is "true";
-attribute mark_debug of EventWdCnt 	  : signal is "true";
-attribute mark_debug of SampleCount	  : signal is "true";
 
-signal test				: std_logic := '0';
 
 begin
 
@@ -322,6 +315,33 @@ if rising_edge(SysClk) then
 		end case;
 end if;
 end process;
+-- =========================================================================
+-- =========================== END OF FSM ==================================
+-- =========================================================================
+
+
+-- =========================================================================
+-- ===========================     ILA    ==================================
+-- =========================================================================
+generateILA0: if false generate
+
+	EVB_ila_inst0: EVB_ila0
+	port map(
+	clk    		=> SysClk, 	
+	probe0(0) 	=> uBunchWrt, -- 1 bit
+    probe1(0) 	=> uBunchRd, 	-- 1 bit
+    probe2	 	=> uBunch, 		-- 32 bits
+    probe3	 	=> uBunchBuffOut,  -- 32 bits
+    probe4(0)	=> EvBuffWrt, 	-- 1 bit
+    probe5(0)	=> EvBuffRd, -- 1 bit
+	probe6		=> EvBuffDat, -- 16 bits 
+	probe7		=> Read_Seq_Stat, -- 4 bits
+	probe8	 	=> EventWdCnt, -- 16 bits 
+	probe9	 	=> SampleCount -- 16 bits 
+);
+
+end GENERATE; 
+
 
 end Behavioral;
 

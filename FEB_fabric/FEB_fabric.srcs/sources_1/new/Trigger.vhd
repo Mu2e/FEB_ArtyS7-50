@@ -108,16 +108,16 @@ begin
 RxIn.FM <= GPI0; 
 
 -- FM Receiver for microbunch number
---FMRx1 : FM_Rx 
---generic map(Pwidth => 24)
---port map(
---	SysClk => SysClk, 
---	RxClk  => SysClk, 
---	reset  => ResetHi,
---	Rx_In  => RxIn,
---	Data   => Rx1Dat, 
---	Rx_Out => RxOut
---);
+FMRx1 : FM_Rx 
+generic map(Pwidth => 24)
+port map(
+	SysClk => SysClk, 
+	RxClk  => SysClk, 
+	reset  => ResetHi,
+	Rx_In  => RxIn,
+	Data   => Rx1Dat, 
+	Rx_Out => RxOut
+);
 
 
 main : process(SysClk, CpldRst)
@@ -146,41 +146,41 @@ if CpldRst = '0' then
 	uBunchWrt 	<= '0'; 
 	Rx1DatReg 	<= (others => '0');
 	Rx1Dat20LSB <= '0';
--------------------------------------
---------- ONLY ARTY -----------------
-----------  START	------------------
-	RxOut.Done <= '0';
-	Rx1Dat(20) <= '0';
-	Rx1Dat(21) <= '0';
-	Rx1Dat20LSB <= '0';
-	Rx1Dat(19 downto 0) <= X"00000";
--------------------------------------
---------- ONLY ARTY -----------------
-----------  FINISH	------------------
-
+---------------------------------------
+----------- ONLY ARTY -----------------
+------------  START	------------------
+--	RxOut.Done <= '0';
+--	Rx1Dat(20) <= '0';
+--	Rx1Dat(21) <= '0';
+--	Rx1Dat20LSB <= '0';
+--	Rx1Dat(19 downto 0) <= X"00000";
+---------------------------------------
+----------- ONLY ARTY -----------------
+------------  FINISH	------------------
+--
 elsif rising_edge (SysClk) then
--------------------------------------
---------- ONLY ARTY -----------------
-----------  START	------------------
-if WRDL = 1 and uCA(9 downto 0) = FMSim 
-
-then RxOut.Done <= uCD(0);
-	 Rx1Dat(20) <= uCD(1);
-	 Rx1Dat(21) <= uCD(2);
-	 Rx1Dat20LSB <= uCD(3);
-else RxOut.Done <= RxOut.Done;
-	 Rx1Dat(20) <= Rx1Dat(20);
-	 Rx1Dat(21) <= Rx1Dat(21);
-	 Rx1Dat20LSB <= Rx1Dat20LSB;	 
-end if;
-
-if Rx1Dat20LSB = '0' then 
-	Rx1Dat(19 downto 0) <= X"00000";
-else Rx1Dat(19 downto 0) <= uCD(11 downto 4) & uCD(15 downto 4);
-end if; 
--------------------------------------
---------- ONLY ARTY -----------------
-----------  FINISH	------------------
+---------------------------------------
+----------- ONLY ARTY -----------------
+------------  START	------------------
+--if uCA(9 downto 0) = FMSim 
+--
+--then RxOut.Done <= uCD(0);
+--	 Rx1Dat(20) <= uCD(1);
+--	 Rx1Dat(21) <= uCD(2);
+--	 Rx1Dat20LSB <= uCD(3);
+--else RxOut.Done <= RxOut.Done;
+--	 Rx1Dat(20) <= Rx1Dat(20);
+--	 Rx1Dat(21) <= Rx1Dat(21);
+--	 Rx1Dat20LSB <= Rx1Dat20LSB;	 
+--end if;
+--
+--if Rx1Dat20LSB = '0' then 
+--	Rx1Dat(19 downto 0) <= X"00000";
+--else Rx1Dat(19 downto 0) <= uCD(11 downto 4) & uCD(15 downto 4);
+--end if; 
+---------------------------------------
+----------- ONLY ARTY -----------------
+------------  FINISH	------------------
  
 if WRDL = 1 and uCA(9 downto 0) = FlashCtrlAddr 
 -- Flash gate enable bit

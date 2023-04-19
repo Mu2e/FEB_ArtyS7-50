@@ -419,28 +419,28 @@ port map(
 	EvBuffWdsUsed	=> EvBuffWdsUsed
 	);
 
-data_back_EVB:  Exclude_DDR 
-port map (
-  	SysClk			=> SysClk, -- 160 MHz
--- Signals for the EventBuff
-	EvBuffRd		=> EvBuffRd,	
-	EvBuffOut		=> EvBuffOut,	
-	EvBuffEmpty		=> EvBuffEmpty,	
-	EvBuffWdsUsed	=> EvBuffWdsUsed,
--- Microcontroller strobes
-	CpldRst			=> CpldRst,	
-	CpldCS			=> CpldCS,	
-	uCRd			=> uCRd,
-	uCWr 			=> uCWr, 	
--- Microcontroller data and address buses	
-	uCA 			=> uCA,
-	uCD 			=> uCD,
-	iuCD 			=> iuCD,
--- Geographic address pins
-	GA 				=> GA,
--- Synchronous edge detectors of uC read and write strobes
-	WRDL 			=> WRDL
-	);
+--data_back_EVB:  Exclude_DDR 
+--port map (
+--  	SysClk			=> SysClk, -- 160 MHz
+---- Signals for the EventBuff
+--	EvBuffRd		=> EvBuffRd,	
+--	EvBuffOut		=> EvBuffOut,	
+--	EvBuffEmpty		=> EvBuffEmpty,	
+--	EvBuffWdsUsed	=> EvBuffWdsUsed,
+---- Microcontroller strobes
+--	CpldRst			=> CpldRst,	
+--	CpldCS			=> CpldCS,	
+--	uCRd			=> uCRd,
+--	uCWr 			=> uCWr, 	
+---- Microcontroller data and address buses	
+--	uCA 			=> uCA,
+--	uCD 			=> uCD,
+--	iuCD 			=> iuCD,
+---- Geographic address pins
+--	GA 				=> GA,
+---- Synchronous edge detectors of uC read and write strobes
+--	WRDL 			=> WRDL
+--	);
 
 
 DDR_Interface_inst : DDR_Interface
@@ -477,10 +477,10 @@ port map(
 	UDQS_N 		    => UDQS_N, 	 	
 	RESET_N			=> DDR_RESET_N,
 -- Signals for the DDR	
---	EvBuffRd		=> EvBuffRd,	
---	EvBuffOut		=> EvBuffOut,	
---	EvBuffEmpty		=> EvBuffEmpty,	
---	EvBuffWdsUsed	=> EvBuffWdsUsed,
+	EvBuffRd		=> EvBuffRd,	
+	EvBuffOut		=> EvBuffOut,	
+	EvBuffEmpty		=> EvBuffEmpty,	
+	EvBuffWdsUsed	=> EvBuffWdsUsed,
 -- Signals from Trigger Logic
 	SlfTrgEn 		=> SlfTrgEn, 	
 	uBunchWrt		=> uBunchWrt,	

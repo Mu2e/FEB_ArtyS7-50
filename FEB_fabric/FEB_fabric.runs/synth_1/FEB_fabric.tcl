@@ -70,7 +70,6 @@ proc create_report { reportName command } {
   }
 }
 OPTRACE "synth_1" START { ROLLUP_AUTO }
-set_param chipscope.maxJobs 4
 set_param simulator.modelsimInstallPath C:/intelFPGA/20.1/modelsim_ae/win32aloem
 OPTRACE "Creating in-memory project" START { }
 create_project -in_memory -part xc7s50csga324-1
@@ -132,40 +131,46 @@ set_property used_in_implementation false [get_files -all c:/v22.2/FEB_fabric/AR
 read_ip -quiet C:/v22.2/FEB_fabric/FEB_fabric.srcs/sources_1/ip/AFEemu/AFEemu.xci
 set_property used_in_implementation false [get_files -all c:/v22.2/FEB_fabric/FEB_fabric.gen/sources_1/ip/AFEemu/AFEemu_ooc.xdc]
 
-read_ip -quiet c:/v22.2/FEB_fabric/FEB_fabric.srcs/sources_1/ip/AFEemu_ila/AFEemu_ila.xci
+read_ip -quiet C:/v22.2/FEB_fabric/FEB_fabric.srcs/sources_1/ip/AFEemu_ila/AFEemu_ila.xci
 set_property used_in_synthesis false [get_files -all c:/v22.2/FEB_fabric/FEB_fabric.gen/sources_1/ip/AFEemu_ila/ila_v6_2/constraints/ila_impl.xdc]
 set_property used_in_implementation false [get_files -all c:/v22.2/FEB_fabric/FEB_fabric.gen/sources_1/ip/AFEemu_ila/ila_v6_2/constraints/ila_impl.xdc]
 set_property used_in_implementation false [get_files -all c:/v22.2/FEB_fabric/FEB_fabric.gen/sources_1/ip/AFEemu_ila/ila_v6_2/constraints/ila.xdc]
 set_property used_in_implementation false [get_files -all c:/v22.2/FEB_fabric/FEB_fabric.gen/sources_1/ip/AFEemu_ila/AFEemu_ila_ooc.xdc]
 
-read_ip -quiet c:/v22.2/FEB_fabric/FEB_fabric.srcs/sources_1/ip/AFE_DataPath_ila0/AFE_DataPath_ila0.xci
+read_ip -quiet C:/v22.2/FEB_fabric/FEB_fabric.srcs/sources_1/ip/AFE_DataPath_ila0/AFE_DataPath_ila0.xci
 set_property used_in_synthesis false [get_files -all c:/v22.2/FEB_fabric/FEB_fabric.gen/sources_1/ip/AFE_DataPath_ila0/ila_v6_2/constraints/ila_impl.xdc]
 set_property used_in_implementation false [get_files -all c:/v22.2/FEB_fabric/FEB_fabric.gen/sources_1/ip/AFE_DataPath_ila0/ila_v6_2/constraints/ila_impl.xdc]
 set_property used_in_implementation false [get_files -all c:/v22.2/FEB_fabric/FEB_fabric.gen/sources_1/ip/AFE_DataPath_ila0/ila_v6_2/constraints/ila.xdc]
 set_property used_in_implementation false [get_files -all c:/v22.2/FEB_fabric/FEB_fabric.gen/sources_1/ip/AFE_DataPath_ila0/AFE_DataPath_ila0_ooc.xdc]
 
-read_ip -quiet c:/v22.2/FEB_fabric/FEB_fabric.srcs/sources_1/ip/AFE_DataPath_ila1/AFE_DataPath_ila1.xci
+read_ip -quiet C:/v22.2/FEB_fabric/FEB_fabric.srcs/sources_1/ip/AFE_DataPath_ila1/AFE_DataPath_ila1.xci
 set_property used_in_synthesis false [get_files -all c:/v22.2/FEB_fabric/FEB_fabric.gen/sources_1/ip/AFE_DataPath_ila1/ila_v6_2/constraints/ila_impl.xdc]
 set_property used_in_implementation false [get_files -all c:/v22.2/FEB_fabric/FEB_fabric.gen/sources_1/ip/AFE_DataPath_ila1/ila_v6_2/constraints/ila_impl.xdc]
 set_property used_in_implementation false [get_files -all c:/v22.2/FEB_fabric/FEB_fabric.gen/sources_1/ip/AFE_DataPath_ila1/ila_v6_2/constraints/ila.xdc]
 set_property used_in_implementation false [get_files -all c:/v22.2/FEB_fabric/FEB_fabric.gen/sources_1/ip/AFE_DataPath_ila1/AFE_DataPath_ila1_ooc.xdc]
 
-read_ip -quiet c:/v22.2/FEB_fabric/FEB_fabric.srcs/sources_1/ip/AFE_DataPath_ila2/AFE_DataPath_ila2.xci
+read_ip -quiet C:/v22.2/FEB_fabric/FEB_fabric.srcs/sources_1/ip/AFE_DataPath_ila2/AFE_DataPath_ila2.xci
 set_property used_in_synthesis false [get_files -all c:/v22.2/FEB_fabric/FEB_fabric.gen/sources_1/ip/AFE_DataPath_ila2/ila_v6_2/constraints/ila_impl.xdc]
 set_property used_in_implementation false [get_files -all c:/v22.2/FEB_fabric/FEB_fabric.gen/sources_1/ip/AFE_DataPath_ila2/ila_v6_2/constraints/ila_impl.xdc]
 set_property used_in_implementation false [get_files -all c:/v22.2/FEB_fabric/FEB_fabric.gen/sources_1/ip/AFE_DataPath_ila2/ila_v6_2/constraints/ila.xdc]
 set_property used_in_implementation false [get_files -all c:/v22.2/FEB_fabric/FEB_fabric.gen/sources_1/ip/AFE_DataPath_ila2/AFE_DataPath_ila2_ooc.xdc]
 
-read_ip -quiet c:/v22.2/FEB_fabric/FEB_fabric.srcs/sources_1/ip/AFE_DataPath_ila3/AFE_DataPath_ila3.xci
+read_ip -quiet C:/v22.2/FEB_fabric/FEB_fabric.srcs/sources_1/ip/AFE_DataPath_ila3/AFE_DataPath_ila3.xci
 set_property used_in_synthesis false [get_files -all c:/v22.2/FEB_fabric/FEB_fabric.gen/sources_1/ip/AFE_DataPath_ila3/ila_v6_2/constraints/ila_impl.xdc]
 set_property used_in_implementation false [get_files -all c:/v22.2/FEB_fabric/FEB_fabric.gen/sources_1/ip/AFE_DataPath_ila3/ila_v6_2/constraints/ila_impl.xdc]
 set_property used_in_implementation false [get_files -all c:/v22.2/FEB_fabric/FEB_fabric.gen/sources_1/ip/AFE_DataPath_ila3/ila_v6_2/constraints/ila.xdc]
 set_property used_in_implementation false [get_files -all c:/v22.2/FEB_fabric/FEB_fabric.gen/sources_1/ip/AFE_DataPath_ila3/AFE_DataPath_ila3_ooc.xdc]
 
-read_ip -quiet c:/v22.2/FEB_fabric/FEB_fabric.srcs/sources_1/ip/iuCD_FIFO/iuCD_FIFO.xci
+read_ip -quiet C:/v22.2/FEB_fabric/FEB_fabric.srcs/sources_1/ip/iuCD_FIFO/iuCD_FIFO.xci
 set_property used_in_implementation false [get_files -all c:/v22.2/FEB_fabric/FEB_fabric.gen/sources_1/ip/iuCD_FIFO/iuCD_FIFO.xdc]
 set_property used_in_implementation false [get_files -all c:/v22.2/FEB_fabric/FEB_fabric.gen/sources_1/ip/iuCD_FIFO/iuCD_FIFO_clocks.xdc]
 set_property used_in_implementation false [get_files -all c:/v22.2/FEB_fabric/FEB_fabric.gen/sources_1/ip/iuCD_FIFO/iuCD_FIFO_ooc.xdc]
+
+read_ip -quiet c:/v22.2/FEB_fabric/FEB_fabric.srcs/sources_1/ip/EVB_ila0/EVB_ila0.xci
+set_property used_in_synthesis false [get_files -all c:/v22.2/FEB_fabric/FEB_fabric.gen/sources_1/ip/EVB_ila0/ila_v6_2/constraints/ila_impl.xdc]
+set_property used_in_implementation false [get_files -all c:/v22.2/FEB_fabric/FEB_fabric.gen/sources_1/ip/EVB_ila0/ila_v6_2/constraints/ila_impl.xdc]
+set_property used_in_implementation false [get_files -all c:/v22.2/FEB_fabric/FEB_fabric.gen/sources_1/ip/EVB_ila0/ila_v6_2/constraints/ila.xdc]
+set_property used_in_implementation false [get_files -all c:/v22.2/FEB_fabric/FEB_fabric.gen/sources_1/ip/EVB_ila0/EVB_ila0_ooc.xdc]
 
 OPTRACE "Adding files" END { }
 # Mark all dcp files as not used in implementation to prevent them from being

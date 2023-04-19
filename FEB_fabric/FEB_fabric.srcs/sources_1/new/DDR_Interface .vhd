@@ -52,10 +52,10 @@ port (
 	UDQS_P, UDQS_N 		: inout std_logic;
 	RESET_N				: out std_logic;
 -- Signals for the DDR	
---	EvBuffRd			: buffer std_logic;
---	EvBuffOut			: in std_logic_vector(15 downto 0);
---	EvBuffEmpty			: in std_logic;
---	EvBuffWdsUsed		: in std_logic_vector(10 downto 0);
+	EvBuffRd			: buffer std_logic;
+	EvBuffOut			: in std_logic_vector(15 downto 0);
+	EvBuffEmpty			: in std_logic;
+	EvBuffWdsUsed		: in std_logic_vector(10 downto 0);
 -- Signals from Trigger Logic
 	SlfTrgEn 			: in std_logic;
 	uBunchWrt			: in std_logic;

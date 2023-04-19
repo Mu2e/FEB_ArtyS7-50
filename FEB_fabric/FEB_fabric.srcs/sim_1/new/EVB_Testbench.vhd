@@ -468,19 +468,19 @@ begin
 		uCD(7 downto 5)  <= b"000";	
 		uCD(12 downto 8) <= b"10101";
 		uCD(4 downto 0)  <= b"01100"; 
-		elsif (counter = 1028) then -- 	uBunch;
+		elsif (counter = 1030) then -- 	uBunch;
 		WRDL <= "01";
 		uCA<= b"000001111000";
-		uCD <= x"0009";
-		elsif (counter = 1029) then -- 	uBunch;
-		WRDL <= "01";
-		uCA<= b"000001111000";
-		uCD <= x"DEAD";
-		elsif (counter = 1030) then  --SetTrigReq
+		uCD <= x"0005";
+		--elsif (counter = 1029) then -- 	uBunch;
+		--WRDL <= "01";
+		--uCA<= b"000001111000";
+		--uCD <= x"DEAD";
+		elsif (counter = 1028) then  --SetTrigReq
 		WRDL <= "01";
 		uCA<= b"000001111000";
 		uCD <= x"0001";
-		elsif (counter = 1031) then  --Tr(FM)
+		elsif (counter = 1029) then  --Tr(FM)
 		WRDL <= "01";
 		uCA <= b"001100001110";
 		uCD <= x"0002";
@@ -493,3 +493,12 @@ end process;
 
 
 end Behavioral;
+
+-- FM
+-- 		uCD <= x"0005"; =====> RxOut.Done = '1' and Rx1Dat(21) = '1' Rx1Dat(20) = '0' and Rx1Dat(19 downto 0) = X"00000"
+-- 
+-- 
+-- 
+-- 
+-- 
+-- 
