@@ -52,7 +52,7 @@ port (
 	UDQS_P, UDQS_N 		: inout std_logic;
 	RESET_N				: out std_logic;
 -- Signals for the DDR	
-	EvBuffRd			: buffer std_logic;
+	EvBuffRd			: out std_logic;
 	EvBuffOut			: in std_logic_vector(15 downto 0);
 	EvBuffEmpty			: in std_logic;
 	EvBuffWdsUsed		: in std_logic_vector(10 downto 0);
@@ -79,10 +79,9 @@ end DDR_Interface;
 
 architecture Behavioral of DDR_Interface is
 
--- Signals for the DDR3 Controller 
 signal Buff_Rst		  	  : std_logic;
-signal clk 				  : std_logic;
-signal reset 			  : std_logic;
+
+-- Signals for the DDR3 Controller 
 signal DDR3_addr          : std_logic_vector(APP_ADDR-1 downto 0); 
 signal DDR3_cmd           : std_logic_vector(2 downto 0);
 signal DDR3_en            : std_logic;
@@ -104,8 +103,8 @@ signal app_zq_req         : std_logic;
 signal app_sr_active      : std_logic;
 signal app_ref_ack        : std_logic;
 signal app_zq_ack         : std_logic;
-signal ui_clk             : std_logic;
-signal ui_clk_sync_rst    : std_logic;
+signal ui_clk             : std_logic; -- out from the MIG
+signal ui_clk_sync_rst    : std_logic; -- out from the MIG
 signal init_calib_complete: std_logic;
 -- System Clock Ports
 signal sys_clk_p          : std_logic;
@@ -134,17 +133,15 @@ signal DRAMRdBuffOut 	  : std_logic_vector(15 downto 0);
 signal DRAMRdBuffWdsUsed  : std_logic_vector(10 downto 0);
 
 -- Signals for DDR FSM
-Type DDR_FSM is (Idle, SetWrt, WrtData1, WrtData2, WrtData3, WrtData4, 
+Type DDR_FSM is (Reset, Idle, SetWrt, WrtData, WrtData1, WrtData2, WrtData3, WrtData4, 
 					SetRd, RdWdCount, RdData1, RdData2, RdData3, RdData4);
-signal DDR_Seq 	  : DDR_FSM;
+signal prev_state, DDR_Seq 	  : DDR_FSM;
 signal DDRSeqStat 	 	  : std_logic_vector(3 downto 0);
 signal DDRWrtCount 		  : std_logic_vector(10 downto 0);
 signal PageRdReq		  : std_logic;
 signal PageWdCount 		  : std_logic_vector(10 downto 0);
 signal DDRRdPtr  		  : std_logic_vector(28 downto 0);
 signal DDR3_rd_addr       : std_logic_vector(28 downto 0);
-
-
 signal DDRRd_Mux 		  : std_logic_vector(15 downto 0);
 
 
@@ -240,8 +237,8 @@ port map(
     app_sr_active     => app_sr_active, -- This output is reserved.     
     app_ref_ack       => app_ref_ack, -- This active-High output indicates that the Memory Controller has sent the requested refresh command to the PHY interface.               
     app_zq_ack        => app_zq_ack,  -- This active-High output indicates that the Memory Controller has sent the requested ZQ calibration command to the PHY interface.              
-    ui_clk            => clk,  -- This UI clock must be a half or quarter of the DRAM clock.      
-    ui_clk_sync_rst   => reset,  -- This is the active-High UI reset.         
+    ui_clk            => ui_clk,  -- This UI clock must be a half or quarter of the DRAM clock.      
+    ui_clk_sync_rst   => ui_clk_sync_rst,  -- This is the active-High UI reset.         
     init_calib_complete => init_calib_complete,  -- PHY asserts init_calib_complete when calibration is finished.
     -- System Clock Ports
     sys_clk_i         => Clk_100MHz,
@@ -251,44 +248,83 @@ port map(
     sys_rst           => ResetHi     
 );
 
-main : process(SysClk, CpldRst)
+
+state_memory : process (SysClk, CpldRst)
 begin 
-if CpldRst = '0' then
+    if CpldRst = '0' then
+		prev_state 		<= Reset;
+	elsif rising_edge (SysClk) then
+		prev_state		<= DDR_Seq;
+	end if; 
+end process; 
 
-	--RESET_N			<= '0';		  
+transition_table: process(SysClk, prev_state)
+begin 
+	case prev_state is
+	when Reset =>
+			DDR_Seq 			<= Idle;
+	when Idle =>
+		if SlfTrgEn = '1' and EvBuffWdsUsed >= EvBuffOut(10 downto 0) and EvBuffEmpty = '0' and DDR3_rdy ='1' and DDR3_wrt_rdy ='1' then 
+			DDR_Seq 			<= WrtData;
+		else 
+			DDR_Seq 			<= Idle;
+		end if;		
 	
-	DDR3_addr		<= (others => '0');         
-	DDR3_cmd    	<= (others => '0');       
-	DDR3_en     	<= '0';	       
-	DDR3_wrt_data   <= (others => '0');   
-	DDR3_wrt_end    <= '0';   
-	DDR3_wrt_en     <= '0';      
-	clk_ref_p       <= '0';        
-	clk_ref_n       <= '0';  
-	
---	Buff_Rst 		<= '0';
+	when others =>
+			DDR_Seq 			<= Idle;
+	end case;
+end process;
 
-	
-	-- Write DDR Signals
-	DDR_Seq			<= Idle;
-	DDRSeqStat 		<= "0000";
-	DDRWrtCount 	<= (others => '0');
---	EvBuffRd 		<= '0';
-	DDR_Seq 		<= Idle; 
-	DDRAddrRd 		<= '0';
 
-	-- Read DDR Signals
-	PageRdReq 		<= '0';
-	PageWdCount 	<= (others => '0');
-	DRAMRdBuffWrt	<= '0';
-	DRAMRdBuffRd 	<= '0';
-	DRAMRdBuffDat 	<= (others => '0');
-	DDRRdPtr 		<= (others => '0');
-	DDR3_rd_addr	<= (others => '0');
-	
-elsif rising_edge (SysClk) then
+output_table : process(SysClk, prev_state, CpldRst)
+begin
+if rising_edge(SysClk) then
+	-- Default value of the output 
+		DDRSeqStat	  	<= X"0";
+		clk_ref_p       <= '0';        
+		clk_ref_n       <= '0';
+		
+	case prev_state is
+		when Reset =>  
+		DDRSeqStat	  	<= X"0";
+		DDR3_addr		<= (others => '0');         
+		DDR3_cmd    	<= (others => '0');       
+		DDR3_en     	<= '0';	       
+		DDR3_wrt_data   <= (others => '0');   
+		DDR3_wrt_end    <= '0';   
+		DDR3_wrt_en     <= '0'; 
+		DDR3_rd_addr	<= (others => '0');
 
-	--RESET_N			<= '1';	
+		EvBuffRd 		<= '0';
+		DDRAddrRd 		<= '0';
+
+		when Idle =>
+		DDRSeqStat	  	<= X"1";
+		
+		when others =>
+			
+		end case;
+end if;
+end process;
+
+
+--main : process(SysClk, CpldRst)
+--begin 
+--if CpldRst = '0' then
+----	Buff_Rst 		<= '0';
+--	-- Write DDR Signals
+--	DDRWrtCount 	<= (others => '0');
+--	-- Read DDR Signals
+--	PageRdReq 		<= '0';
+--	PageWdCount 	<= (others => '0');
+--	DRAMRdBuffWrt	<= '0';
+--	DRAMRdBuffRd 	<= '0';
+--	DRAMRdBuffDat 	<= (others => '0');
+--	DDRRdPtr 		<= (others => '0');
+--	
+--elsif rising_edge (SysClk) then
+
+--RESET_N			<= '1';	
 -- Global reset term
 --if WRDL = 1 and uCD(5) = '1' and ((uCA(11 downto 10) = GA and uCA(9 downto 0) = CSRRegAddr)
 --	or uCA(9 downto 0) = CSRBroadCastAd)
@@ -574,7 +610,7 @@ elsif rising_edge (SysClk) then
 -- end if;
 --
 --
-end if;
-end process;
+--end if;
+--end process;
 
 end Behavioral;

@@ -2,10 +2,10 @@
 <Root MajorVersion="0" MinorVersion="40">
   <CompositeFile CompositeFileTopName="uController" CanBeSetAsTop="false" CanDisplayChildGraph="true">
     <Description>Composite Fileset</Description>
-    <Generation Name="SYNTHESIS" State="GENERATED" Timestamp="1681743310"/>
-    <Generation Name="IMPLEMENTATION" State="GENERATED" Timestamp="1681743310"/>
-    <Generation Name="SIMULATION" State="GENERATED" Timestamp="1681743310"/>
-    <Generation Name="HW_HANDOFF" State="GENERATED" Timestamp="1681743310"/>
+    <Generation Name="SYNTHESIS" State="GENERATED" Timestamp="1683056256"/>
+    <Generation Name="IMPLEMENTATION" State="GENERATED" Timestamp="1683056256"/>
+    <Generation Name="SIMULATION" State="STALE" Timestamp="1683056252"/>
+    <Generation Name="HW_HANDOFF" State="GENERATED" Timestamp="1683056256"/>
     <FileCollection Name="SOURCES" Type="SOURCES">
       <File Name="uController_sim_netlist.vhdl" Type="VHDL">
         <Properties IsEditable="true" IsVisible="true" IsNetlistSimulation="false" Timestamp="0" IsTrackable="true" IsStatusTracked="false"/>
@@ -52,6 +52,12 @@
         <UsedIn Val="SIMULATION"/>
         <ProcessingOrder Val="NORMAL"/>
       </File>
+      <File Name="sim\uController.protoinst">
+        <Properties IsEditable="false" IsVisible="true" IsNetlistSimulation="false" Timestamp="0" IsTrackable="false" IsStatusTracked="false"/>
+        <Library Name="xil_defaultlib"/>
+        <UsedIn Val="SIMULATION"/>
+        <ProcessingOrder Val="NORMAL"/>
+      </File>
       <File Name="uController.bmm" Type="BMM">
         <Properties IsEditable="false" IsVisible="true" IsNetlistSimulation="false" Timestamp="0" IsTrackable="false" IsStatusTracked="false"/>
         <Library Name="xil_defaultlib"/>
@@ -83,12 +89,6 @@
         <Properties IsEditable="false" IsVisible="true" IsNetlistSimulation="false" Timestamp="0" IsTrackable="false" IsStatusTracked="false"/>
         <Library Name="xil_defaultlib"/>
         <UsedIn Val="HW_HANDOFF"/>
-        <ProcessingOrder Val="NORMAL"/>
-      </File>
-      <File Name="sim\uController.protoinst">
-        <Properties IsEditable="false" IsVisible="true" IsNetlistSimulation="false" Timestamp="0" IsTrackable="false" IsStatusTracked="false"/>
-        <Library Name="xil_defaultlib"/>
-        <UsedIn Val="SIMULATION"/>
         <ProcessingOrder Val="NORMAL"/>
       </File>
     </FileCollection>

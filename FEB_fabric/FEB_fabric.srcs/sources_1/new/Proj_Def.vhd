@@ -421,31 +421,32 @@ end component;
  	);
  end component;
  	
--- component Phase_Detector is
--- port (
--- 	SysClk				    : in std_logic;   -- 160 Mhz
--- 	-- Microcontroller strobes
--- 	CpldRst					: in std_logic; 
--- 	-- Geographic address pins
--- 	GA 						: in std_logic_vector(1 downto 0);
--- 	-- Chip dependent I/O functions
--- 	A7		 				: buffer std_logic;
--- 	GPI0					: in std_logic;
--- 	-- Trigger Logic
--- 	TrgSrc					: in std_logic;
--- 	GPO						: in std_logic
--- );
--- end component;
--- 
--- component FM_Tx is
--- generic (Pwidth : positive);
--- port(
--- 	clock					: in std_logic;
--- 	reset					: in std_logic;
--- 	Enable 					: in std_logic;
--- 	Data 					: in std_logic_vector(Pwidth - 1 downto 0);
--- 	Tx_Out 					: buffer TxOutRec);
--- end component;
+component Phase_Detector is
+port (
+	SysClk				    : in std_logic;   -- 160 Mhz
+	-- Microcontroller strobes
+	CpldRst					: in std_logic; 
+	-- Geographic address pins
+	GA 						: in std_logic_vector(1 downto 0);
+	-- Chip dependent I/O functions
+	A7		 				: out std_logic;
+	GPI0					: in std_logic;
+	-- Trigger Logic
+	TrgSrc					: in std_logic;
+	GPO						: in std_logic
+);
+end component;
+
+component FM_Tx is
+generic (Pwidth : positive);
+port(
+	clock					: in std_logic;
+	reset					: in std_logic;
+	Enable 					: in std_logic;
+	Data 					: in std_logic_vector(Pwidth - 1 downto 0);
+	Tx_Out 					: buffer TxOutRec
+);
+end component;
  
  component GPIO_emu is
   Port (
@@ -491,7 +492,7 @@ end component;
  -- Synchronous edge detectors of uC read and write strobes
  	WRDL 				: in std_logic_vector(1 downto 0);
  -- LED/Flash Gate select line
- 	PulseSel 			: buffer std_logic;
+ 	PulseSel 			: inout std_logic;
  -- LED pulser/Flash Gate
  	Pulse 				: out std_logic;
  	LEDSrc				: buffer std_logic;
@@ -568,42 +569,36 @@ component Exclude_DDR is
 	WRDL 				: in std_logic_vector(1 downto 0)
 	);
 end component; 
--- component One_Wire is
--- port(
--- 	clock  				: in std_logic;
--- 	reset  				: in std_logic;
--- 	CpldCS  			: in std_logic;
--- 	uCWr  				: in std_logic;
--- 	GA  				: in std_logic_vector(1 downto 0);
--- 	uCA 				: in std_logic_vector(11 downto 0);
--- 	uCD 				: in std_logic_vector(15 downto 0);
--- 	Temp 				: in  std_logic_vector(3 downto 0);
--- 	TempEn 				: buffer std_logic;
--- 	TempCtrl 			: buffer std_logic_vector(3 downto 0);
--- 	One_Wire_Out 		: buffer std_logic_vector(15 downto 0));
--- end component;
--- 
--- component LVDS_TX is
--- port (
--- 	Clk_100MHz			: in std_logic;
--- 	ResetHi				: in std_logic; 
--- 	-- Microcontroller data and address buses
--- 	uCA 				: in std_logic_vector(11 downto 0);
--- 	uCD 				: inout std_logic_vector(15 downto 0);
--- 	-- Microcontroller strobes
--- 	CpldRst				: in std_logic;
--- 	CpldCS				: in std_logic;
--- 	uCRd				: in std_logic;
--- 	uCWr 				: in std_logic;
--- 	-- Geographic address pins
--- 	GA 					: in std_logic_vector(1 downto 0);
--- 	-- Chip dipendent I/O functions 
--- 	LVDSTX 				: buffer std_logic;
--- 	-- Other Logic 
--- 	FMTxBuff_wreq			: in std_logic;
--- 	uWRDL 					: in std_logic_vector(1 downto 0)
--- );
--- end component;
+
+component One_Wire is
+ port(
+ 	clock  				: in std_logic;
+ 	reset  				: in std_logic;
+
+ 	Temp 				: inout  std_logic_vector(3 downto 0);
+ 	One_Wire_Out 		: buffer std_logic_vector(15 downto 0);
+-- Microcontroller data and address buses	
+	uCA 				: in std_logic_vector(11 downto 0);
+	uCD 				: in std_logic_vector(15 downto 0);
+	iuCD 				: out std_logic_vector(15 downto 0);
+-- Geographic address pins
+	GA 					: in std_logic_vector(1 downto 0);
+-- Synchronous edge detectors of uC read and write strobes
+	WRDL 				: in std_logic_vector(1 downto 0)
+);
+end component;
+ 
+component LVDS_TX is
+port (
+	Clk_100MHz			: in std_logic;
+	ResetHi				: in std_logic; 
+	-- Microcontroller data 
+	uCD 				: in std_logic_vector(15 downto 0);
+	LVDSTX 				: out std_logic;
+	-- Other Logic 
+	FMTxBuff_wreq		: in std_logic
+);
+end component;
 
 component DDR_Interface is
 generic(
@@ -634,7 +629,7 @@ port (
 	UDQS_P, UDQS_N 		: inout std_logic;
 	RESET_N				: out std_logic;
 -- Signals for the DDR	
-	EvBuffRd			: buffer std_logic;
+	EvBuffRd			: out std_logic;
 	EvBuffOut			: in std_logic_vector(15 downto 0);
 	EvBuffEmpty			: in std_logic;
 	EvBuffWdsUsed		: in std_logic_vector(10 downto 0);
@@ -660,28 +655,28 @@ port (
 end component;
 
 
---component Histogram is
---port(
---	Clk_80MHz	 			: in std_logic;
---	Clk_100MHz	 			: in std_logic;	
---	ResetHi	 				: in std_logic;
---	-- Microcontroller strobes
---	CpldRst					: in std_logic;
---	-- Microcontroller data and address buses
---	uCA 					: in std_logic_vector(11 downto 0);
---	uCD 					: inout std_logic_vector(15 downto 0);
---	-- Geographic address pins
---	GA 						: in std_logic_vector(1 downto 0);
---	
---	uAddrReg 				: in std_logic_vector(11 downto 0);	
---	Diff_Reg				: inout Arrays_8x2x14;
---	GateWidth	    		: inout Array_2x12;
---	GateReq 				: inout std_logic_vector (1 downto 0);	
---	uWRDL 					: in std_logic_vector(1 downto 0);
---	uRDDL 					: in std_logic_vector(1 downto 0)
---);
---end component;
---
+component Histogram is
+port(
+	Clk_80MHz	 			: in std_logic;
+	Clk_100MHz	 			: in std_logic;	
+	ResetHi	 				: in std_logic;
+	-- Microcontroller strobes
+	CpldRst					: in std_logic;
+	-- Microcontroller data and address buses
+	uCA 					: in std_logic_vector(11 downto 0);
+	uCD 					: in std_logic_vector(15 downto 0);
+	-- Geographic address pins
+	GA 						: in std_logic_vector(1 downto 0);
+	
+	uAddrReg 				: in std_logic_vector(11 downto 0);	
+	Diff_Reg				: inout Arrays_8x2x14;
+	GateWidth	    		: in Array_2x12;
+	GateReq 				: in std_logic_vector (1 downto 0);	
+	uWRDL 					: in std_logic_vector(1 downto 0);
+	uRDDL 					: in std_logic_vector(1 downto 0)
+);
+end component;
+
 --component uControllerRegister is
 --port(
 --	Clk_100MHz	 			: in std_logic;	
@@ -776,14 +771,14 @@ port (
 );
 end component;
 
---component LVDSTxBuff
---port (
---	rst,clk,wr_en,rd_en : in std_logic;
---    din 				: in std_logic_vector(15 downto 0);
---    dout 				: out std_logic_vector(15 downto 0);
---	full,empty 			: out std_logic
---);
---end component;
+component LVDSTxBuff
+port (
+	rst,clk,wr_en,rd_en : in std_logic;
+    din 				: in std_logic_vector(15 downto 0);
+    dout 				: out std_logic_vector(15 downto 0);
+	full,empty 			: out std_logic
+);
+end component;
 
 component DDR3LController is
   port (
@@ -832,20 +827,20 @@ component DDR3LController is
   );
 end component;
 
----- Histogrammer memory 512x32
---component Hist_Ram
---  port (
---    rsta,rstb,clka,clkb : in std_logic;
---    wea,web 			: in std_logic_vector(0 downto 0);
---    addra 				: in std_logic_vector(9 downto 0);
---	addrb 				: in std_logic_vector(10 downto 0);
---    dina  				: in std_logic_vector(31 downto 0);
---	dinb  				: in std_logic_vector(15 downto 0);
---    douta 				: out std_logic_vector(31 downto 0);
---	doutb 				: out std_logic_vector(15 downto 0)
---  );
---end component;
---
+-- Histogrammer memory 512x32
+component Hist_Ram
+  port (
+    rsta,rstb,clka,clkb : in std_logic;
+    wea,web 			: in std_logic_vector(0 downto 0);
+    addra 				: in std_logic_vector(9 downto 0);
+	addrb 				: in std_logic_vector(10 downto 0);
+    dina  				: in std_logic_vector(31 downto 0);
+	dinb  				: in std_logic_vector(15 downto 0);
+    douta 				: out std_logic_vector(31 downto 0);
+	doutb 				: out std_logic_vector(15 downto 0)
+  );
+end component;
+
 ---- Fifo for queueing serial data. With this, the processor doesn't need to
 ---- check for serial transmits being done before sending the next data word 
 --component Cmd_FIFO 

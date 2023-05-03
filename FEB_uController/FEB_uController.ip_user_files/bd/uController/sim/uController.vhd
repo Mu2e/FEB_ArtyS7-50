@@ -1,7 +1,7 @@
 --Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
 ----------------------------------------------------------------------------------
 --Tool Version: Vivado v.2022.2 (win64) Build 3671981 Fri Oct 14 05:00:03 MDT 2022
---Date        : Mon Apr 17 09:51:03 2023
+--Date        : Tue May  2 14:22:36 2023
 --Host        : CD-135239 running 64-bit major release  (build 9200)
 --Command     : generate_target uController.bd
 --Design      : uController
@@ -1872,11 +1872,14 @@ architecture STRUCTURE of uController is
     uCD : in STD_LOGIC_VECTOR ( 15 downto 0 );
     iuCD : out STD_LOGIC_VECTOR ( 15 downto 0 );
     GA : in STD_LOGIC_VECTOR ( 1 downto 0 );
+    A7 : out STD_LOGIC;
+    LVDSTX : out STD_LOGIC;
     GPI0_N : in STD_LOGIC;
     GPI0_P : in STD_LOGIC;
     GPI1 : in STD_LOGIC;
     PulseSel : out STD_LOGIC;
-    Pulse : out STD_LOGIC
+    Pulse : out STD_LOGIC;
+    Temp : inout STD_LOGIC_VECTOR ( 3 downto 0 )
   );
   end component uController_FEB_fabric_0_0;
   signal FEB_AXI_Interface_0_CpldCS : STD_LOGIC;
@@ -2043,6 +2046,9 @@ architecture STRUCTURE of uController is
   signal rst_clk_wiz_0_100M_mb_reset : STD_LOGIC;
   signal rst_clk_wiz_0_100M_peripheral_aresetn : STD_LOGIC_VECTOR ( 0 to 0 );
   signal sys_clock_1 : STD_LOGIC;
+  signal NLW_FEB_fabric_0_A7_UNCONNECTED : STD_LOGIC;
+  signal NLW_FEB_fabric_0_LVDSTX_UNCONNECTED : STD_LOGIC;
+  signal NLW_FEB_fabric_0_Temp_UNCONNECTED : STD_LOGIC_VECTOR ( 3 downto 0 );
   signal NLW_axi_uartlite_0_interrupt_UNCONNECTED : STD_LOGIC;
   signal NLW_microblaze_0_Interrupt_Ack_UNCONNECTED : STD_LOGIC_VECTOR ( 0 to 1 );
   signal NLW_rst_clk_wiz_0_100M_interconnect_aresetn_UNCONNECTED : STD_LOGIC_VECTOR ( 0 to 0 );
@@ -2122,6 +2128,7 @@ FEB_AXI_Interface_0: component uController_FEB_AXI_Interface_0_0
     );
 FEB_fabric_0: component uController_FEB_fabric_0_0
      port map (
+      A7 => NLW_FEB_fabric_0_A7_UNCONNECTED,
       BA(2 downto 0) => FEB_fabric_0_BA(2 downto 0),
       CAS => FEB_fabric_0_CAS,
       CS(0) => FEB_fabric_0_CS(0),
@@ -2144,11 +2151,13 @@ FEB_fabric_0: component uController_FEB_fabric_0_0
       GPI1 => GPI1_0_1,
       LDQS_N => LDQS_N_0,
       LDQS_P => LDQS_P_0,
+      LVDSTX => NLW_FEB_fabric_0_LVDSTX_UNCONNECTED,
       ODT(0) => FEB_fabric_0_ODT(0),
       Pulse => FEB_fabric_0_Pulse,
       PulseSel => FEB_fabric_0_PulseSel,
       RAS => FEB_fabric_0_RAS,
       SysClk => clk_wiz_1_clk_out1,
+      Temp(3 downto 0) => NLW_FEB_fabric_0_Temp_UNCONNECTED(3 downto 0),
       UDQS_N => UDQS_N_0,
       UDQS_P => UDQS_P_0,
       iuCD(15 downto 0) => FEB_fabric_0_iuCD(15 downto 0),

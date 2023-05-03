@@ -1,7 +1,7 @@
 {
   "design": {
     "design_info": {
-      "boundary_crc": "0x879EA57423CEBC72",
+      "boundary_crc": "0xF58CCE060263EEA1",
       "device": "xc7s50csga324-1",
       "gen_directory": "../../../../FEB_uController.gen/sources_1/bd/uController",
       "name": "uController",
@@ -224,6 +224,17 @@
       },
       "GPI0_N_0": {
         "direction": "I"
+      },
+      "A7_0": {
+        "direction": "O"
+      },
+      "LVDSTX_0": {
+        "direction": "O"
+      },
+      "Temp_0": {
+        "direction": "IO",
+        "left": "3",
+        "right": "0"
       }
     },
     "components": {
@@ -1299,6 +1310,12 @@
           }
         }
       },
+      "FEB_fabric_0_A7": {
+        "ports": [
+          "FEB_fabric_0/A7",
+          "A7_0"
+        ]
+      },
       "FEB_fabric_0_BA": {
         "ports": [
           "FEB_fabric_0/BA",
@@ -1357,6 +1374,12 @@
         "ports": [
           "FEB_fabric_0/DM",
           "DM_0"
+        ]
+      },
+      "FEB_fabric_0_LVDSTX": {
+        "ports": [
+          "FEB_fabric_0/LVDSTX",
+          "LVDSTX_0"
         ]
       },
       "FEB_fabric_0_ODT": {
@@ -1459,6 +1482,12 @@
         "ports": [
           "UDQS_P_0",
           "FEB_fabric_0/UDQS_P"
+        ]
+      },
+      "Net6": {
+        "ports": [
+          "Temp_0",
+          "FEB_fabric_0/Temp"
         ]
       },
       "clk_wiz_0_clk_out1": {

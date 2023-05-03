@@ -85,6 +85,15 @@ set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==AFE_DataPat
 # IP: c:/v22.2/FEB_uController/FEB_uController.gen/sources_1/bd/uController/ip/uController_FEB_fabric_0_0/FEB_fabric.srcs/sources_1/ip/iuCD_FIFO/iuCD_FIFO.xci
 set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==iuCD_FIFO || ORIG_REF_NAME==iuCD_FIFO} -quiet] -quiet
 
+# IP: c:/v22.2/FEB_uController/FEB_uController.gen/sources_1/bd/uController/ip/uController_FEB_fabric_0_0/FEB_fabric.srcs/sources_1/ip/EVB_ila0/EVB_ila0.xci
+set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==EVB_ila0 || ORIG_REF_NAME==EVB_ila0} -quiet] -quiet
+
+# IP: c:/v22.2/FEB_uController/FEB_uController.gen/sources_1/bd/uController/ip/uController_FEB_fabric_0_0/FEB_fabric.srcs/sources_1/ip/LVDSTxBuff/LVDSTxBuff.xci
+set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==LVDSTxBuff || ORIG_REF_NAME==LVDSTxBuff} -quiet] -quiet
+
+# IP: c:/v22.2/FEB_uController/FEB_uController.gen/sources_1/bd/uController/ip/uController_FEB_fabric_0_0/FEB_fabric.srcs/sources_1/ip/Hist_Ram/Hist_Ram.xci
+set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==Hist_Ram || ORIG_REF_NAME==Hist_Ram} -quiet] -quiet
+
 # IP: c:/v22.2/FEB_uController/FEB_uController.gen/sources_1/bd/uController/ip/uController_FEB_fabric_0_0/FEB_fabric.srcs/sources_1/ip/SCFIFO_1Kx16/SCFIFO_1Kx16.xci
 set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==SCFIFO_1Kx16 || ORIG_REF_NAME==SCFIFO_1Kx16} -quiet] -quiet
 
@@ -200,6 +209,16 @@ set_property KEEP_HIERARCHY SOFT [get_cells [split [join [get_cells -hier -filte
 # XDC: c:/v22.2/FEB_uController/FEB_uController.gen/sources_1/bd/uController/ip/uController_FEB_fabric_0_0/FEB_fabric.srcs/sources_1/ip/iuCD_FIFO/iuCD_FIFO_clocks.xdc
 #dup# set_property KEEP_HIERARCHY SOFT [get_cells [split [join [get_cells -hier -filter {REF_NAME==iuCD_FIFO || ORIG_REF_NAME==iuCD_FIFO} -quiet] {/U0 } ]/U0 ] -quiet] -quiet
 
+# XDC: c:/v22.2/FEB_uController/FEB_uController.gen/sources_1/bd/uController/ip/uController_FEB_fabric_0_0/FEB_fabric.srcs/sources_1/ip/EVB_ila0/ila_v6_2/constraints/ila.xdc
+set_property KEEP_HIERARCHY SOFT [get_cells [split [join [get_cells -hier -filter {REF_NAME==EVB_ila0 || ORIG_REF_NAME==EVB_ila0} -quiet] {/U0 } ]/U0 ] -quiet] -quiet
+
+# XDC: c:/v22.2/FEB_uController/FEB_uController.gen/sources_1/bd/uController/ip/uController_FEB_fabric_0_0/FEB_fabric.srcs/sources_1/ip/EVB_ila0/EVB_ila0_ooc.xdc
+
+# XDC: c:/v22.2/FEB_uController/FEB_uController.gen/sources_1/bd/uController/ip/uController_FEB_fabric_0_0/FEB_fabric.srcs/sources_1/ip/LVDSTxBuff/LVDSTxBuff.xdc
+set_property KEEP_HIERARCHY SOFT [get_cells [split [join [get_cells -hier -filter {REF_NAME==LVDSTxBuff || ORIG_REF_NAME==LVDSTxBuff} -quiet] {/U0 } ]/U0 ] -quiet] -quiet
+
+# XDC: c:/v22.2/FEB_uController/FEB_uController.gen/sources_1/bd/uController/ip/uController_FEB_fabric_0_0/FEB_fabric.srcs/sources_1/ip/Hist_Ram/Hist_Ram_ooc.xdc
+
 # XDC: c:/v22.2/FEB_uController/FEB_uController.gen/sources_1/bd/uController/ip/uController_FEB_fabric_0_0/FEB_fabric.srcs/sources_1/ip/SCFIFO_1Kx16/SCFIFO_1Kx16.xdc
 set_property KEEP_HIERARCHY SOFT [get_cells [split [join [get_cells -hier -filter {REF_NAME==SCFIFO_1Kx16 || ORIG_REF_NAME==SCFIFO_1Kx16} -quiet] {/U0 } ]/U0 ] -quiet] -quiet
 
@@ -307,6 +326,15 @@ set_property KEEP_HIERARCHY SOFT [get_cells [split [join [get_cells -hier -filte
 
 # IP: c:/v22.2/FEB_uController/FEB_uController.gen/sources_1/bd/uController/ip/uController_FEB_fabric_0_0/FEB_fabric.srcs/sources_1/ip/iuCD_FIFO/iuCD_FIFO.xci
 #dup# set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==iuCD_FIFO || ORIG_REF_NAME==iuCD_FIFO} -quiet] -quiet
+
+# IP: c:/v22.2/FEB_uController/FEB_uController.gen/sources_1/bd/uController/ip/uController_FEB_fabric_0_0/FEB_fabric.srcs/sources_1/ip/EVB_ila0/EVB_ila0.xci
+#dup# set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==EVB_ila0 || ORIG_REF_NAME==EVB_ila0} -quiet] -quiet
+
+# IP: c:/v22.2/FEB_uController/FEB_uController.gen/sources_1/bd/uController/ip/uController_FEB_fabric_0_0/FEB_fabric.srcs/sources_1/ip/LVDSTxBuff/LVDSTxBuff.xci
+#dup# set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==LVDSTxBuff || ORIG_REF_NAME==LVDSTxBuff} -quiet] -quiet
+
+# IP: c:/v22.2/FEB_uController/FEB_uController.gen/sources_1/bd/uController/ip/uController_FEB_fabric_0_0/FEB_fabric.srcs/sources_1/ip/Hist_Ram/Hist_Ram.xci
+#dup# set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==Hist_Ram || ORIG_REF_NAME==Hist_Ram} -quiet] -quiet
 
 # IP: c:/v22.2/FEB_uController/FEB_uController.gen/sources_1/bd/uController/ip/uController_FEB_fabric_0_0/FEB_fabric.srcs/sources_1/ip/SCFIFO_1Kx16/SCFIFO_1Kx16.xci
 #dup# set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==SCFIFO_1Kx16 || ORIG_REF_NAME==SCFIFO_1Kx16} -quiet] -quiet
@@ -422,6 +450,16 @@ set_property KEEP_HIERARCHY SOFT [get_cells [split [join [get_cells -hier -filte
 
 # XDC: c:/v22.2/FEB_uController/FEB_uController.gen/sources_1/bd/uController/ip/uController_FEB_fabric_0_0/FEB_fabric.srcs/sources_1/ip/iuCD_FIFO/iuCD_FIFO_clocks.xdc
 #dup# set_property KEEP_HIERARCHY SOFT [get_cells [split [join [get_cells -hier -filter {REF_NAME==iuCD_FIFO || ORIG_REF_NAME==iuCD_FIFO} -quiet] {/U0 } ]/U0 ] -quiet] -quiet
+
+# XDC: c:/v22.2/FEB_uController/FEB_uController.gen/sources_1/bd/uController/ip/uController_FEB_fabric_0_0/FEB_fabric.srcs/sources_1/ip/EVB_ila0/ila_v6_2/constraints/ila.xdc
+#dup# set_property KEEP_HIERARCHY SOFT [get_cells [split [join [get_cells -hier -filter {REF_NAME==EVB_ila0 || ORIG_REF_NAME==EVB_ila0} -quiet] {/U0 } ]/U0 ] -quiet] -quiet
+
+# XDC: c:/v22.2/FEB_uController/FEB_uController.gen/sources_1/bd/uController/ip/uController_FEB_fabric_0_0/FEB_fabric.srcs/sources_1/ip/EVB_ila0/EVB_ila0_ooc.xdc
+
+# XDC: c:/v22.2/FEB_uController/FEB_uController.gen/sources_1/bd/uController/ip/uController_FEB_fabric_0_0/FEB_fabric.srcs/sources_1/ip/LVDSTxBuff/LVDSTxBuff.xdc
+#dup# set_property KEEP_HIERARCHY SOFT [get_cells [split [join [get_cells -hier -filter {REF_NAME==LVDSTxBuff || ORIG_REF_NAME==LVDSTxBuff} -quiet] {/U0 } ]/U0 ] -quiet] -quiet
+
+# XDC: c:/v22.2/FEB_uController/FEB_uController.gen/sources_1/bd/uController/ip/uController_FEB_fabric_0_0/FEB_fabric.srcs/sources_1/ip/Hist_Ram/Hist_Ram_ooc.xdc
 
 # XDC: c:/v22.2/FEB_uController/FEB_uController.gen/sources_1/bd/uController/ip/uController_FEB_fabric_0_0/FEB_fabric.srcs/sources_1/ip/SCFIFO_1Kx16/SCFIFO_1Kx16.xdc
 #dup# set_property KEEP_HIERARCHY SOFT [get_cells [split [join [get_cells -hier -filter {REF_NAME==SCFIFO_1Kx16 || ORIG_REF_NAME==SCFIFO_1Kx16} -quiet] {/U0 } ]/U0 ] -quiet] -quiet

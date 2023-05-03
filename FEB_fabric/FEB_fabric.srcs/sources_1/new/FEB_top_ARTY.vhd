@@ -29,7 +29,6 @@ port(
 	Clk_100MHz			  	: in std_logic;
 	Clk_200MHz			  	: in std_logic;
 	SysClk				  	: in std_logic;  -- 160 MHz
-
 --	-- AFE Data lines
 --	AFE0Dat_P, AFE0Dat_N    : in std_logic_vector(7 downto 0); -- LVDS pairs from an AFE chip (8 channels)
 --	AFE1Dat_P, AFE1Dat_N    : in std_logic_vector(7 downto 0);
@@ -80,28 +79,20 @@ port(
 --	DACClk 					: buffer std_logic;
 --	DACDat 					: buffer std_logic;
 --	DACLd 					: buffer std_logic;
---	-- Chip dependent I/O functions
---	A7,LVDSTX 				: buffer std_logic;
+	-- Chip dependent I/O functions
+	A7		 				: out std_logic;
+	LVDSTX 					: out std_logic;
 	GPI0_N,GPI0_P,GPI1  	: in std_logic;
 	-- LED/Flash Gate select line
-	PulseSel 				: buffer std_logic;
+	PulseSel 				: inout std_logic;
 	-- LED pulser/Flash Gate
-	Pulse 					: out std_logic
---	-- Temperature sensor lines
---	Temp					: inout std_logic_vector(3 downto 0)
+	Pulse 					: out std_logic;
+	-- Temperature sensor lines
+	Temp					: inout std_logic_vector(3 downto 0)
   );
 end FEB_fabric;
 
 architecture behavioural of FEB_fabric is
-
---attribute mark_debug : string;
---attribute mark_debug of CpldRst	 : signal is "true";
---attribute mark_debug of CpldCS	 : signal is "true";
---attribute mark_debug of uCRd	 : signal is "true";
---attribute mark_debug of uCWr 	 : signal is "true";
---attribute mark_debug of uCA 	 : signal is "true";
---attribute mark_debug of uCD 	 : signal is "true";
---attribute mark_debug of GA 		 : signal is "true";
 
 -- Clocks
 -- signal Clk_80MHz			  : std_logic;
@@ -111,16 +102,6 @@ architecture behavioural of FEB_fabric is
 -- signal SysClk				  : std_logic;   -- 160 Mhz
 signal ResetHi         		  : std_logic;
 
--- Microcontroller strobes
---signal CpldRst				  : std_logic;
---signal CpldCS				  : std_logic;
---signal uCRd					  : std_logic;
---signal uCWr 				  : std_logic;
----- Microcontroller data and address buses
---signal uCA 					  : std_logic_vector(11 downto 0);
---signal uCD 					  : std_logic_vector(15 downto 0);
----- Geographic address pins
---signal GA 					  : std_logic_vector(1 downto 0);
 
 -- Synchronous edge detectors of uC read and write strobes
 signal WRDL 				  : std_logic_vector(1 downto 0);
@@ -168,18 +149,15 @@ signal EvBuffOut	          : std_logic_vector(15 downto 0);
 signal EvBuffEmpty	          : std_logic;
 signal EvBuffWdsUsed          : std_logic_vector(10 downto 0);
 
-signal asp					  : std_logic := '0';
- 
-signal TempEn 				  : std_logic;
-signal TempCtrl 			  : std_logic_vector(3 downto 0);
+-- Signals One Wire
+-- signal TempEn 				  : std_logic;
+-- signal TempCtrl 			  : std_logic_vector(3 downto 0);
 signal One_Wire_Out 		  : std_logic_vector(15 downto 0);
 
 
 signal FMTxBuff_wreq		  : std_logic;
 
 signal iCD				  	  : std_logic_vector(15 downto 0);
-
-
 
 begin
 
@@ -225,15 +203,15 @@ global_signals_100MHz : process(Clk_100MHz, CpldRst)
 end process;
 
 -- IBUFDS: Differential Input Buffer
-GPI0DiffIn : IBUFDS
-generic map (
-	DIFF_TERM 	 => TRUE, -- Differential Termination
-	IBUF_LOW_PWR => FALSE, -- Low power (TRUE) vs. performance (FALSE) setting for referenced I/O standards
-	IOSTANDARD   => "DEFAULT")
-port map (
-	I  => GPI0_P, -- Diff_p buffer input (connect directly to top-level port)
-	IB => GPI0_N, -- Diff_n buffer input (connect directly to top-level port)
-	O  => GPI0);	  -- Buffer output
+-- GPI0DiffIn : IBUFDS
+-- generic map (
+-- 	DIFF_TERM 	 => TRUE, -- Differential Termination
+-- 	IBUF_LOW_PWR => FALSE, -- Low power (TRUE) vs. performance (FALSE) setting for referenced I/O standards
+-- 	IOSTANDARD   => "DEFAULT")
+-- port map (
+-- 	I  => GPI0_P, -- Diff_p buffer input (connect directly to top-level port)
+-- 	IB => GPI0_N, -- Diff_n buffer input (connect directly to top-level port)
+-- 	O  => GPI0);	  -- Buffer output
 	
 GPIO_sim : GPIO_emu 
  port map (
@@ -336,17 +314,17 @@ port map (
 	WRDL 			=> WRDL
 );
 
---Phase_Detector_inst: Phase_Detector
---port map(
---	SysClk 			=> SysClk,	-- 160 MHz			    
---	CpldRst			=> CpldRst,				
---	GA 				=> GA,				
---	A7		 		=> A7,			
---	GPI0			=> GPI0,
---	TrgSrc			=> TrgSrc, 					
---	GPO				=> GPO
---);
---
+Phase_Detector_inst: Phase_Detector
+port map(
+	SysClk 			=> SysClk,	-- 160 MHz			    
+	CpldRst			=> CpldRst,				
+	GA 				=> GA,				
+	A7		 		=> A7,			
+	GPI0			=> GPI0,
+	TrgSrc			=> TrgSrc, 		-- !!!!!! TrgSrc must be added 			
+	GPO				=> GPO
+);
+
 --
 Trigger_logic: Trigger 
 port map(
@@ -507,50 +485,35 @@ port map(
 	RDDL			=> RDDL
 );
 
----- Read the temperature/ID chip on the four connectoed CMBs
---OneWire : One_Wire 
---port map(
---	reset 			=> CpldRst, 
---	clock 			=> Clk_100MHz,
---	CpldCS 			=> CpldCS, 
---	uCWr 		  	=> uCWr, 
---	GA 				=> GA, 
---	uCA 			=> uCA, 
---	uCD 			=> uCD,
---	Temp 			=> Temp, 
---	TempEn 			=> TempEn, 
---	TempCtrl		=> TempCtrl, 
---	One_Wire_Out 	=> One_Wire_Out
---);
---
---Temp(0) <= '0' when TempEn = '1' and TempCtrl = "0001" else 'Z';
---Temp(1) <= '0' when TempEn = '1' and TempCtrl = "0010" else 'Z';
---Temp(2) <= '0' when TempEn = '1' and TempCtrl = "0100" else 'Z';
---Temp(3) <= '0' when TempEn = '1' and TempCtrl = "1000" else 'Z';
---
---
----- Data written from the uC to the LVDS Tx port
---uC_to_LVDSTX : LVDS_TX
---port map(
---	Clk_100MHz		=> Clk_100MHz,
---	ResetHi			=> ResetHi,
---	FMTxBuff_wreq	=> FMTxBuff_wreq,
----- Microcontroller data and address buses
---	uCA 			=> uCA,
---	uCD 			=> uCD,
----- Microcontroller strobes
---	CpldRst			=> CpldRst,		
---	CpldCS			=> CpldCS,	
---	uCRd			=> uCRd,	
---	uCWr 			=> uCWr, 		
----- Geographic address pins
---	GA 				=> GA,
----- Chip dipendent I/O functions 
---	LVDSTX 			=> LVDSTX,
----- Global signal
---	uWRDL			=> uWRDL
---);
---
+-- Read the temperature/ID chip on the four connectoed CMBs
+OneWire : One_Wire 
+port map(
+	reset 			=> CpldRst, 
+	clock 			=> Clk_100MHz,
+	
+	Temp 			=> Temp,
+	One_Wire_Out 	=> One_Wire_Out,
+-- Microcontroller data and address buses	
+	uCA 			=> uCA,
+	uCD 			=> uCD,
+-- Geographic address pins
+	GA 				=> GA,
+-- Synchronous edge detectors of uC read and write strobes
+	WRDL 			=> WRDL
+);
+
+-- Data written from the uC to the LVDS Tx port
+uC_to_LVDSTX : LVDS_TX
+port map(
+	Clk_100MHz		=> Clk_100MHz,
+	ResetHi			=> ResetHi,
+	FMTxBuff_wreq	=> FMTxBuff_wreq,    -- !! MUST CHECK ON THIS
+-- Microcontroller data and address buses
+	uCD 			=> uCD,
+-- Chip dipendent I/O functions 
+	LVDSTX 			=> LVDSTX
+);
+
 --uC : uControllerRegister 
 --port map(
 --	Clk_100MHz		=> Clk_100MHz,
@@ -595,27 +558,27 @@ port map(
 --
 --
 --
---Hist : Histogram 
---port map(
---	Clk_80MHz	 	=> Clk_80MHz,
---	Clk_100MHz	 	=> Clk_100MHz,
---	ResetHi	 		=> ResetHi, 
----- Microcontroller strobes
---	CpldRst			=> CpldRst,
----- Microcontroller data and address buses
---	uCA				=> uCA,
---	uCD				=> uCD,
----- Geographic address pins
---	GA				=> GA,
----- Signals from AFE_DataPath
---	Diff_Reg		=> Diff_Reg,	
---	GateWidth	    => GateWidth,
---	GateReq 		=> GateReq,
----- Global Signals
---	uAddrReg		=> uAddrReg,	
---	uWRDL 			=> uWRDL,
---	uRDDL 			=> uRDDL
---  );
+Hist : Histogram 
+port map(
+	Clk_80MHz	 	=> Clk_80MHz,
+	Clk_100MHz	 	=> Clk_100MHz,
+	ResetHi	 		=> ResetHi, 
+-- Microcontroller strobes
+	CpldRst			=> CpldRst,
+-- Microcontroller data and address buses
+	uCA				=> uCA,
+	uCD				=> uCD,
+-- Geographic address pins
+	GA				=> GA,
+-- Signals from AFE_DataPath
+	Diff_Reg		=> Diff_Reg,	
+	GateWidth	    => GateWidth,
+	GateReq 		=> GateReq,
+-- Global Signals
+	uAddrReg		=> uAddrReg,	
+	uWRDL 			=> uWRDL,
+	uRDDL 			=> uRDDL
+  );
 --
 -- with uCA(9 downto 0) select
 -- 

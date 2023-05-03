@@ -31,7 +31,7 @@ entity Trigger is
 -- Synchronous edge detectors of uC read and write strobes
 	WRDL 				: in std_logic_vector(1 downto 0);
 -- LED/Flash Gate select line
-	PulseSel 			: buffer std_logic;
+	PulseSel 			: inout std_logic;
 -- LED pulser/Flash Gate
 	Pulse 				: out std_logic;
 	LEDSrc				: buffer std_logic;

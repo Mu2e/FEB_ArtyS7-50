@@ -1,7 +1,7 @@
 --Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
 ----------------------------------------------------------------------------------
 --Tool Version: Vivado v.2022.2 (win64) Build 3671981 Fri Oct 14 05:00:03 MDT 2022
---Date        : Mon Apr 17 09:51:03 2023
+--Date        : Tue May  2 14:37:32 2023
 --Host        : CD-135239 running 64-bit major release  (build 9200)
 --Command     : generate_target uController.bd
 --Design      : uController
@@ -1606,6 +1606,7 @@ library UNISIM;
 use UNISIM.VCOMPONENTS.ALL;
 entity uController is
   port (
+    A7_0 : out STD_LOGIC;
     BA_0 : out STD_LOGIC_VECTOR ( 2 downto 0 );
     CAS_0 : out STD_LOGIC;
     CS_0 : out STD_LOGIC_VECTOR ( 0 to 0 );
@@ -1622,10 +1623,12 @@ entity uController is
     GPI1_0 : in STD_LOGIC;
     LDQS_N_0 : inout STD_LOGIC;
     LDQS_P_0 : inout STD_LOGIC;
+    LVDSTX_0 : out STD_LOGIC;
     ODT_0 : out STD_LOGIC_VECTOR ( 0 to 0 );
     PulseSel_0 : out STD_LOGIC;
     Pulse_0 : out STD_LOGIC;
     RAS_0 : out STD_LOGIC;
+    Temp_0 : inout STD_LOGIC_VECTOR ( 3 downto 0 );
     UDQS_N_0 : inout STD_LOGIC;
     UDQS_P_0 : inout STD_LOGIC;
     ddr_clock : in STD_LOGIC;
@@ -1872,11 +1875,14 @@ architecture STRUCTURE of uController is
     uCD : in STD_LOGIC_VECTOR ( 15 downto 0 );
     iuCD : out STD_LOGIC_VECTOR ( 15 downto 0 );
     GA : in STD_LOGIC_VECTOR ( 1 downto 0 );
+    A7 : out STD_LOGIC;
+    LVDSTX : out STD_LOGIC;
     GPI0_N : in STD_LOGIC;
     GPI0_P : in STD_LOGIC;
     GPI1 : in STD_LOGIC;
     PulseSel : out STD_LOGIC;
-    Pulse : out STD_LOGIC
+    Pulse : out STD_LOGIC;
+    Temp : inout STD_LOGIC_VECTOR ( 3 downto 0 )
   );
   end component uController_FEB_fabric_0_0;
   signal FEB_AXI_Interface_0_CpldCS : STD_LOGIC;
@@ -1899,6 +1905,7 @@ architecture STRUCTURE of uController is
   signal FEB_AXI_Interface_0_uCWr : STD_LOGIC;
   attribute DEBUG of FEB_AXI_Interface_0_uCWr : signal is "true";
   attribute MARK_DEBUG of FEB_AXI_Interface_0_uCWr : signal is std.standard.true;
+  signal FEB_fabric_0_A7 : STD_LOGIC;
   signal FEB_fabric_0_BA : STD_LOGIC_VECTOR ( 2 downto 0 );
   signal FEB_fabric_0_CAS : STD_LOGIC;
   signal FEB_fabric_0_CS : STD_LOGIC_VECTOR ( 0 to 0 );
@@ -1909,6 +1916,7 @@ architecture STRUCTURE of uController is
   signal FEB_fabric_0_DDR_RESET_N : STD_LOGIC;
   signal FEB_fabric_0_DDR_WE : STD_LOGIC;
   signal FEB_fabric_0_DM : STD_LOGIC_VECTOR ( 1 downto 0 );
+  signal FEB_fabric_0_LVDSTX : STD_LOGIC;
   signal FEB_fabric_0_ODT : STD_LOGIC_VECTOR ( 0 to 0 );
   signal FEB_fabric_0_Pulse : STD_LOGIC;
   signal FEB_fabric_0_PulseSel : STD_LOGIC;
@@ -1927,6 +1935,7 @@ architecture STRUCTURE of uController is
   signal Net3 : STD_LOGIC;
   signal Net4 : STD_LOGIC;
   signal Net5 : STD_LOGIC;
+  signal Net6 : STD_LOGIC_VECTOR ( 3 downto 0 );
   signal axi_gpio_0_GPIO2_TRI_O : STD_LOGIC_VECTOR ( 3 downto 0 );
   signal axi_gpio_0_GPIO_TRI_O : STD_LOGIC_VECTOR ( 5 downto 0 );
   signal axi_uartlite_0_UART_RxD : STD_LOGIC;
@@ -2064,6 +2073,7 @@ architecture STRUCTURE of uController is
   attribute X_INTERFACE_INFO of led_4bits_tri_o : signal is "xilinx.com:interface:gpio:1.0 led_4bits TRI_O";
   attribute X_INTERFACE_INFO of rgb_led_tri_o : signal is "xilinx.com:interface:gpio:1.0 rgb_led TRI_O";
 begin
+  A7_0 <= FEB_fabric_0_A7;
   BA_0(2 downto 0) <= FEB_fabric_0_BA(2 downto 0);
   CAS_0 <= FEB_fabric_0_CAS;
   CS_0(0) <= FEB_fabric_0_CS(0);
@@ -2077,6 +2087,7 @@ begin
   GPI0_N_0_1 <= GPI0_N_0;
   GPI0_P_0_1 <= GPI0_P_0;
   GPI1_0_1 <= GPI1_0;
+  LVDSTX_0 <= FEB_fabric_0_LVDSTX;
   ODT_0(0) <= FEB_fabric_0_ODT(0);
   PulseSel_0 <= FEB_fabric_0_PulseSel;
   Pulse_0 <= FEB_fabric_0_Pulse;
@@ -2122,6 +2133,7 @@ FEB_AXI_Interface_0: component uController_FEB_AXI_Interface_0_0
     );
 FEB_fabric_0: component uController_FEB_fabric_0_0
      port map (
+      A7 => FEB_fabric_0_A7,
       BA(2 downto 0) => FEB_fabric_0_BA(2 downto 0),
       CAS => FEB_fabric_0_CAS,
       CS(0) => FEB_fabric_0_CS(0),
@@ -2144,11 +2156,13 @@ FEB_fabric_0: component uController_FEB_fabric_0_0
       GPI1 => GPI1_0_1,
       LDQS_N => LDQS_N_0,
       LDQS_P => LDQS_P_0,
+      LVDSTX => FEB_fabric_0_LVDSTX,
       ODT(0) => FEB_fabric_0_ODT(0),
       Pulse => FEB_fabric_0_Pulse,
       PulseSel => FEB_fabric_0_PulseSel,
       RAS => FEB_fabric_0_RAS,
       SysClk => clk_wiz_1_clk_out1,
+      Temp(3 downto 0) => Temp_0(3 downto 0),
       UDQS_N => UDQS_N_0,
       UDQS_P => UDQS_P_0,
       iuCD(15 downto 0) => FEB_fabric_0_iuCD(15 downto 0),

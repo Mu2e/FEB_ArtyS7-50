@@ -1,7 +1,7 @@
 --Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
 ----------------------------------------------------------------------------------
 --Tool Version: Vivado v.2022.2 (win64) Build 3671981 Fri Oct 14 05:00:03 MDT 2022
---Date        : Mon Apr 17 09:51:04 2023
+--Date        : Tue May  2 14:37:32 2023
 --Host        : CD-135239 running 64-bit major release  (build 9200)
 --Command     : generate_target uController_wrapper.bd
 --Design      : uController_wrapper
@@ -13,6 +13,7 @@ library UNISIM;
 use UNISIM.VCOMPONENTS.ALL;
 entity uController_wrapper is
   port (
+    A7_0 : out STD_LOGIC;
     BA_0 : out STD_LOGIC_VECTOR ( 2 downto 0 );
     CAS_0 : out STD_LOGIC;
     CS_0 : out STD_LOGIC_VECTOR ( 0 to 0 );
@@ -29,10 +30,12 @@ entity uController_wrapper is
     GPI1_0 : in STD_LOGIC;
     LDQS_N_0 : inout STD_LOGIC;
     LDQS_P_0 : inout STD_LOGIC;
+    LVDSTX_0 : out STD_LOGIC;
     ODT_0 : out STD_LOGIC_VECTOR ( 0 to 0 );
     PulseSel_0 : out STD_LOGIC;
     Pulse_0 : out STD_LOGIC;
     RAS_0 : out STD_LOGIC;
+    Temp_0 : inout STD_LOGIC_VECTOR ( 3 downto 0 );
     UDQS_N_0 : inout STD_LOGIC;
     UDQS_P_0 : inout STD_LOGIC;
     ddr_clock : in STD_LOGIC;
@@ -76,12 +79,16 @@ architecture STRUCTURE of uController_wrapper is
     Pulse_0 : out STD_LOGIC;
     GPI1_0 : in STD_LOGIC;
     GPI0_P_0 : in STD_LOGIC;
-    GPI0_N_0 : in STD_LOGIC
+    GPI0_N_0 : in STD_LOGIC;
+    A7_0 : out STD_LOGIC;
+    LVDSTX_0 : out STD_LOGIC;
+    Temp_0 : inout STD_LOGIC_VECTOR ( 3 downto 0 )
   );
   end component uController;
 begin
 uController_i: component uController
      port map (
+      A7_0 => A7_0,
       BA_0(2 downto 0) => BA_0(2 downto 0),
       CAS_0 => CAS_0,
       CS_0(0) => CS_0(0),
@@ -98,10 +105,12 @@ uController_i: component uController
       GPI1_0 => GPI1_0,
       LDQS_N_0 => LDQS_N_0,
       LDQS_P_0 => LDQS_P_0,
+      LVDSTX_0 => LVDSTX_0,
       ODT_0(0) => ODT_0(0),
       PulseSel_0 => PulseSel_0,
       Pulse_0 => Pulse_0,
       RAS_0 => RAS_0,
+      Temp_0(3 downto 0) => Temp_0(3 downto 0),
       UDQS_N_0 => UDQS_N_0,
       UDQS_P_0 => UDQS_P_0,
       ddr_clock => ddr_clock,

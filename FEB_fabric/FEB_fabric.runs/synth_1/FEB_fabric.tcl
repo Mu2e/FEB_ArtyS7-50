@@ -71,6 +71,8 @@ proc create_report { reportName command } {
 }
 OPTRACE "synth_1" START { ROLLUP_AUTO }
 set_param simulator.modelsimInstallPath C:/intelFPGA/20.1/modelsim_ae/win32aloem
+set_msg_config -id {HDL 9-1061} -limit 100000
+set_msg_config -id {HDL 9-1654} -limit 100000
 OPTRACE "Creating in-memory project" START { }
 create_project -in_memory -part xc7s50csga324-1
 
@@ -105,6 +107,11 @@ read_vhdl -library work {
   C:/v22.2/FEB_fabric/FEB_fabric.srcs/sources_1/new/Exclude_DDR.vhd
   C:/v22.2/FEB_fabric/FEB_fabric.srcs/sources_1/new/FM_Deserializer.vhd
   C:/v22.2/FEB_fabric/FEB_fabric.srcs/sources_1/new/FM_Serializer.vhd
+  C:/v22.2/FEB_fabric/FEB_fabric.srcs/sources_1/new/Phase_Detector.vhd
+  C:/v22.2/FEB_fabric/FEB_fabric.srcs/sources_1/new/One_Wire.vhd
+  C:/v22.2/FEB_fabric/FEB_fabric.srcs/sources_1/new/Histogram.vhd
+  C:/v22.2/FEB_fabric/FEB_fabric.srcs/sources_1/new/GPIO_emu.vhd
+  C:/v22.2/FEB_fabric/FEB_fabric.srcs/sources_1/new/LVDS_TX.vhd
 }
 read_ip -quiet C:/v22.2/FEB_fabric/FEB_fabric.srcs/sources_1/ip/SCFIFO_1Kx16/SCFIFO_1Kx16.xci
 set_property used_in_implementation false [get_files -all c:/v22.2/FEB_fabric/feb_arty.tmp/feb_fabric_v1_0_project/FEB_fabric_v1_0_project.gen/sources_1/ip/SCFIFO_1Kx16/SCFIFO_1Kx16.xdc]
@@ -166,11 +173,18 @@ set_property used_in_implementation false [get_files -all c:/v22.2/FEB_fabric/FE
 set_property used_in_implementation false [get_files -all c:/v22.2/FEB_fabric/FEB_fabric.gen/sources_1/ip/iuCD_FIFO/iuCD_FIFO_clocks.xdc]
 set_property used_in_implementation false [get_files -all c:/v22.2/FEB_fabric/FEB_fabric.gen/sources_1/ip/iuCD_FIFO/iuCD_FIFO_ooc.xdc]
 
-read_ip -quiet c:/v22.2/FEB_fabric/FEB_fabric.srcs/sources_1/ip/EVB_ila0/EVB_ila0.xci
+read_ip -quiet C:/v22.2/FEB_fabric/FEB_fabric.srcs/sources_1/ip/EVB_ila0/EVB_ila0.xci
 set_property used_in_synthesis false [get_files -all c:/v22.2/FEB_fabric/FEB_fabric.gen/sources_1/ip/EVB_ila0/ila_v6_2/constraints/ila_impl.xdc]
 set_property used_in_implementation false [get_files -all c:/v22.2/FEB_fabric/FEB_fabric.gen/sources_1/ip/EVB_ila0/ila_v6_2/constraints/ila_impl.xdc]
 set_property used_in_implementation false [get_files -all c:/v22.2/FEB_fabric/FEB_fabric.gen/sources_1/ip/EVB_ila0/ila_v6_2/constraints/ila.xdc]
 set_property used_in_implementation false [get_files -all c:/v22.2/FEB_fabric/FEB_fabric.gen/sources_1/ip/EVB_ila0/EVB_ila0_ooc.xdc]
+
+read_ip -quiet c:/v22.2/FEB_fabric/FEB_fabric.srcs/sources_1/ip/LVDSTxBuff/LVDSTxBuff.xci
+set_property used_in_implementation false [get_files -all c:/v22.2/FEB_fabric/FEB_fabric.gen/sources_1/ip/LVDSTxBuff/LVDSTxBuff.xdc]
+set_property used_in_implementation false [get_files -all c:/v22.2/FEB_fabric/FEB_fabric.gen/sources_1/ip/LVDSTxBuff/LVDSTxBuff_ooc.xdc]
+
+read_ip -quiet c:/v22.2/FEB_fabric/FEB_fabric.srcs/sources_1/ip/Hist_Ram/Hist_Ram.xci
+set_property used_in_implementation false [get_files -all c:/v22.2/FEB_fabric/FEB_fabric.gen/sources_1/ip/Hist_Ram/Hist_Ram_ooc.xdc]
 
 OPTRACE "Adding files" END { }
 # Mark all dcp files as not used in implementation to prevent them from being

@@ -1,13 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <section name="Workbench">
 	<section name="org.eclipse.ui.texteditor.FindReplaceDialog">
-		<item key="selection" value="SetThreshReg00"/>
+		<item key="selection" value="IntTrgEnAddr"/>
 		<item key="wrap" value="true"/>
 		<item key="casesensitive" value="false"/>
 		<item key="wholeword" value="false"/>
 		<item key="incremental" value="false"/>
 		<item key="isRegEx" value="false"/>
 		<list key="findhistory">
+			<item value="IntTrgEnAddr"/>
+			<item value="FEBAddresRegAd"/>
+			<item value="SetCrtlNPortN"/>
 			<item value="ThreshRegAddr00"/>
 			<item value="SetThreshReg00"/>
 			<item value="ThreshRegAddr"/>
@@ -15,7 +18,6 @@
 			<item value="InputMaskAddr"/>
 			<item value="Pipe"/>
 			<item value="BeamOnLengthAd"/>
-			<item value="FEBAddresRegAd"/>
 			<item value="ADCSmplCntrAd"/>
 			<item value="CSRBroadCastAd"/>
 			<item value="0b0001110111"/>

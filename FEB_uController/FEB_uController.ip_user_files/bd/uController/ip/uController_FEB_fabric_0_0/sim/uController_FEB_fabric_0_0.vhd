@@ -47,7 +47,7 @@
 -- DO NOT MODIFY THIS FILE.
 
 -- IP VLNV: fnal.gov:user:FEB_fabric:1.0
--- IP Revision: 20
+-- IP Revision: 21
 
 LIBRARY ieee;
 USE ieee.std_logic_1164.ALL;
@@ -87,11 +87,14 @@ ENTITY uController_FEB_fabric_0_0 IS
     uCD : IN STD_LOGIC_VECTOR(15 DOWNTO 0);
     iuCD : OUT STD_LOGIC_VECTOR(15 DOWNTO 0);
     GA : IN STD_LOGIC_VECTOR(1 DOWNTO 0);
+    A7 : OUT STD_LOGIC;
+    LVDSTX : OUT STD_LOGIC;
     GPI0_N : IN STD_LOGIC;
     GPI0_P : IN STD_LOGIC;
     GPI1 : IN STD_LOGIC;
     PulseSel : OUT STD_LOGIC;
-    Pulse : OUT STD_LOGIC
+    Pulse : OUT STD_LOGIC;
+    Temp : INOUT STD_LOGIC_VECTOR(3 DOWNTO 0)
   );
 END uController_FEB_fabric_0_0;
 
@@ -129,11 +132,14 @@ ARCHITECTURE uController_FEB_fabric_0_0_arch OF uController_FEB_fabric_0_0 IS
       uCD : IN STD_LOGIC_VECTOR(15 DOWNTO 0);
       iuCD : OUT STD_LOGIC_VECTOR(15 DOWNTO 0);
       GA : IN STD_LOGIC_VECTOR(1 DOWNTO 0);
+      A7 : OUT STD_LOGIC;
+      LVDSTX : OUT STD_LOGIC;
       GPI0_N : IN STD_LOGIC;
       GPI0_P : IN STD_LOGIC;
       GPI1 : IN STD_LOGIC;
       PulseSel : OUT STD_LOGIC;
-      Pulse : OUT STD_LOGIC
+      Pulse : OUT STD_LOGIC;
+      Temp : INOUT STD_LOGIC_VECTOR(3 DOWNTO 0)
     );
   END COMPONENT FEB_fabric;
 BEGIN
@@ -168,10 +174,13 @@ BEGIN
       uCD => uCD,
       iuCD => iuCD,
       GA => GA,
+      A7 => A7,
+      LVDSTX => LVDSTX,
       GPI0_N => GPI0_N,
       GPI0_P => GPI0_P,
       GPI1 => GPI1,
       PulseSel => PulseSel,
-      Pulse => Pulse
+      Pulse => Pulse,
+      Temp => Temp
     );
 END uController_FEB_fabric_0_0_arch;
