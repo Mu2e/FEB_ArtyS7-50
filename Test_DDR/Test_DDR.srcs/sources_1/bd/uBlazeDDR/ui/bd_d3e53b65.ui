@@ -1,0 +1,33 @@
+{
+   "ActiveEmotionalView":"Default View",
+   "Default View_ScaleFactor":"0.831522",
+   "Default View_TopLeft":"-107,-78",
+   "ExpandedHierarchyInLayout":"",
+   "guistr":"# # String gsaved with Nlview 7.0r6  2020-01-29 bk=1.5227 VDI=41 GEI=36 GUI=JA:10.0 non-TLS
+#  -string -flagsOSRD
+preplace port ddr3_sdram -pg 1 -lvl 5 -x 1250 -y 250 -defaultsOSRD
+preplace port port-id_clk_ref_i -pg 1 -lvl 0 -x 0 -y 310 -defaultsOSRD
+preplace port port-id_sys_clk_i -pg 1 -lvl 0 -x 0 -y 330 -defaultsOSRD
+preplace port port-id_reset -pg 1 -lvl 0 -x 0 -y 350 -defaultsOSRD
+preplace inst mig_7series_0 -pg 1 -lvl 2 -x 420 -y 300 -defaultsOSRD
+preplace inst axi_traffic_gen_0 -pg 1 -lvl 1 -x 140 -y 110 -defaultsOSRD
+preplace inst axi_smc -pg 1 -lvl 4 -x 1090 -y 110 -defaultsOSRD
+preplace inst rst_mig_7series_0_81M -pg 1 -lvl 3 -x 780 -y 350 -defaultsOSRD
+preplace netloc clk_ref_i_1 1 0 2 N 310 N
+preplace netloc sys_clk_i_1 1 0 2 N 330 N
+preplace netloc reset_1 1 0 2 20 290 N
+preplace netloc mig_7series_0_ui_clk 1 0 4 30 20 NJ 20 610 110 NJ
+preplace netloc mig_7series_0_mmcm_locked 1 2 1 580 330n
+preplace netloc mig_7series_0_ui_clk_sync_rst 1 2 1 590 270n
+preplace netloc rst_mig_7series_0_81M_peripheral_aresetn 1 0 4 30 340 250 410 600J 240 950
+preplace netloc mig_7series_0_DDR3 1 2 3 N 250 N 250 N
+preplace netloc axi_traffic_gen_0_M_AXI 1 1 3 NJ 90 NJ 90 N
+preplace netloc axi_smc_M00_AXI 1 1 4 250 30 NJ 30 NJ 30 1230
+levelinfo -pg 1 0 140 420 780 1090 1250
+pagesize -pg 1 -db -bbox -sgen -110 0 1380 450
+"
+}
+{
+   "da_axi4_cnt":"1",
+   "da_board_cnt":"1"
+}
