@@ -24,24 +24,25 @@ vhdl xil_defaultlib  \
 "../../../bd/uController/ip/uController_FEB_fabric_0_0/FEB_fabric.srcs/sources_1/ip/AFE_DataPath_ila2/sim/AFE_DataPath_ila2.vhd" \
 "../../../bd/uController/ip/uController_FEB_fabric_0_0/FEB_fabric.srcs/sources_1/ip/AFE_DataPath_ila3/sim/AFE_DataPath_ila3.vhd" \
 "../../../bd/uController/ip/uController_FEB_fabric_0_0/FEB_fabric.srcs/sources_1/ip/EVB_ila0/sim/EVB_ila0.vhd" \
+"../../../bd/uController/ip/uController_FEB_fabric_0_0/FEB_fabric.srcs/sources_1/ip/DDR_ila_0/sim/DDR_ila_0.vhd" \
 "../../../bd/uController/ip/uController_FEB_fabric_0_0/FEB_fabric.srcs/sources_1/ip/Trigger_ila/sim/Trigger_ila.vhd" \
-"../../../bd/uController/ipshared/cd9e/FEB_fabric.srcs/sources_1/new/Proj_Def.vhd" \
-"../../../bd/uController/ipshared/cd9e/FEB_fabric.srcs/sources_1/new/AFE_DataPath.vhd" \
-"../../../bd/uController/ipshared/cd9e/FEB_fabric.srcs/sources_1/new/AFE_Interface_Sim.vhd" \
-"../../../bd/uController/ipshared/cd9e/FEB_fabric.srcs/sources_1/new/AFE_Pipeline.vhd" \
-"../../../bd/uController/ipshared/cd9e/FEB_fabric.srcs/sources_1/new/DDR_Interface .vhd" \
-"../../../bd/uController/ipshared/cd9e/FEB_fabric.srcs/sources_1/new/EventBuilder.vhd" \
-"../../../bd/uController/ipshared/cd9e/FEB_fabric.srcs/sources_1/new/Exclude_EVB.vhd" \
-"../../../bd/uController/ipshared/cd9e/FEB_fabric.srcs/sources_1/new/Trigger.vhd" \
-"../../../bd/uController/ipshared/cd9e/FEB_fabric.srcs/sources_1/new/FEB_top_ARTY.vhd" \
-"../../../bd/uController/ipshared/cd9e/FEB_fabric.srcs/sources_1/new/Exclude_DDR.vhd" \
-"../../../bd/uController/ipshared/cd9e/FEB_fabric.srcs/sources_1/new/FM_Deserializer.vhd" \
-"../../../bd/uController/ipshared/cd9e/FEB_fabric.srcs/sources_1/new/FM_Serializer.vhd" \
-"../../../bd/uController/ipshared/cd9e/FEB_fabric.srcs/sources_1/new/Phase_Detector.vhd" \
-"../../../bd/uController/ipshared/cd9e/FEB_fabric.srcs/sources_1/new/One_Wire.vhd" \
-"../../../bd/uController/ipshared/cd9e/FEB_fabric.srcs/sources_1/new/Histogram.vhd" \
-"../../../bd/uController/ipshared/cd9e/FEB_fabric.srcs/sources_1/new/GPIO_emu.vhd" \
-"../../../bd/uController/ipshared/cd9e/FEB_fabric.srcs/sources_1/new/LVDS_TX.vhd" \
+"../../../bd/uController/ipshared/a420/FEB_fabric.srcs/sources_1/new/Proj_Def.vhd" \
+"../../../bd/uController/ipshared/a420/FEB_fabric.srcs/sources_1/new/AFE_DataPath.vhd" \
+"../../../bd/uController/ipshared/a420/FEB_fabric.srcs/sources_1/new/AFE_Interface_Sim.vhd" \
+"../../../bd/uController/ipshared/a420/FEB_fabric.srcs/sources_1/new/AFE_Pipeline.vhd" \
+"../../../bd/uController/ipshared/a420/FEB_fabric.srcs/sources_1/new/DDR_Interface .vhd" \
+"../../../bd/uController/ipshared/a420/FEB_fabric.srcs/sources_1/new/EventBuilder.vhd" \
+"../../../bd/uController/ipshared/a420/FEB_fabric.srcs/sources_1/new/Exclude_EVB.vhd" \
+"../../../bd/uController/ipshared/a420/FEB_fabric.srcs/sources_1/new/Trigger.vhd" \
+"../../../bd/uController/ipshared/a420/FEB_fabric.srcs/sources_1/new/FEB_top_ARTY.vhd" \
+"../../../bd/uController/ipshared/a420/FEB_fabric.srcs/sources_1/new/Exclude_DDR.vhd" \
+"../../../bd/uController/ipshared/a420/FEB_fabric.srcs/sources_1/new/FM_Deserializer.vhd" \
+"../../../bd/uController/ipshared/a420/FEB_fabric.srcs/sources_1/new/FM_Serializer.vhd" \
+"../../../bd/uController/ipshared/a420/FEB_fabric.srcs/sources_1/new/Phase_Detector.vhd" \
+"../../../bd/uController/ipshared/a420/FEB_fabric.srcs/sources_1/new/One_Wire.vhd" \
+"../../../bd/uController/ipshared/a420/FEB_fabric.srcs/sources_1/new/Histogram.vhd" \
+"../../../bd/uController/ipshared/a420/FEB_fabric.srcs/sources_1/new/GPIO_emu.vhd" \
+"../../../bd/uController/ipshared/a420/FEB_fabric.srcs/sources_1/new/LVDS_TX.vhd" \
 "../../../bd/uController/ip/uController_FEB_fabric_0_0/sim/uController_FEB_fabric_0_0.vhd" \
 "../../../bd/uController/sim/uController.vhd" \
 

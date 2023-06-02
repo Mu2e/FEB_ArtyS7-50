@@ -91,7 +91,7 @@ entity DDR3LController_mig is
                                      -- # of unique CS outputs per rank for phy
    CKE_WIDTH             : integer := 1;
                                      -- # of CKE outputs to memory.
-   DATA_BUF_ADDR_WIDTH   : integer := 4;
+   DATA_BUF_ADDR_WIDTH   : integer := 5;
    DQ_CNT_WIDTH          : integer := 4;
                                      -- = ceil(log2(DQ_WIDTH))
    DQ_PER_DM             : integer := 8;
@@ -222,9 +222,9 @@ entity DDR3LController_mig is
    -- The following parameters are multiplier and divisor factors for PLLE2.
    -- Based on the selected design frequency these parameters vary.
    --***************************************************************************
-   CLKIN_PERIOD          : integer := 10000;
+   CLKIN_PERIOD          : integer := 3077;
                                      -- Input Clock Period
-   CLKFBOUT_MULT         : integer := 13;
+   CLKFBOUT_MULT         : integer := 4;
                                      -- write PLL VCO multiplier
    DIVCLK_DIVIDE         : integer := 1;
                                      -- write PLL VCO divisor
@@ -236,11 +236,11 @@ entity DDR3LController_mig is
                                      -- VCO output divisor for PLL output clock (CLKOUT1)
    CLKOUT2_DIVIDE        : integer := 64;
                                      -- VCO output divisor for PLL output clock (CLKOUT2)
-   CLKOUT3_DIVIDE        : integer := 8;
+   CLKOUT3_DIVIDE        : integer := 16;
                                      -- VCO output divisor for PLL output clock (CLKOUT3)
    MMCM_VCO              : integer := 649;
                                      -- Max Freq (MHz) of MMCM VCO
-   MMCM_MULT_F           : integer := 4;
+   MMCM_MULT_F           : integer := 8;
                                      -- write MMCM VCO multiplier
    MMCM_DIVCLK_DIVIDE    : integer := 1;
                                      -- write MMCM VCO divisor
@@ -453,7 +453,7 @@ entity DDR3LController_mig is
    tCK                   : integer := 3077;
                                      -- memory tCK paramter.
                                      -- # = Clock Period in pS.
-   nCK_PER_CLK           : integer := 2;
+   nCK_PER_CLK           : integer := 4;
                                      -- # of memory CKs per fabric CLK
    DIFF_TERM_SYSCLK      : string  := "FALSE";
                                      -- Differential Termination for System

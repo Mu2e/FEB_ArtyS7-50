@@ -280,7 +280,9 @@ begin
 				up <= up - 1;
 			end if; 
 		elsif (counter = 1024) then
-		uCA(9 downto 0) <= ReadAFEemu;		
+		uCA(9 downto 0) <= ReadAFEemu;
+		uCWR <= '1';
+		CpldCS <= '0';		
 		elsif (counter = 1025) then --	PedReg(0);
 		WRDL <= "01";	
 		uCA <= b"000010000000";

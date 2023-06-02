@@ -1396,8 +1396,8 @@
       },
       "FEB_fabric_0_PulseSel": {
         "ports": [
-          "FEB_fabric_0/PulseSel",
-          "PulseSel_0"
+          "PulseSel_0",
+          "FEB_fabric_0/PulseSel"
         ]
       },
       "FEB_fabric_0_RAS": {

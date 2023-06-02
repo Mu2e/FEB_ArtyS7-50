@@ -30,7 +30,7 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>viewChecksum</spirit:name>
-            <spirit:value>90974830</spirit:value>
+            <spirit:value>c8c80843</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -58,7 +58,7 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>viewChecksum</spirit:name>
-            <spirit:value>10abf4d9</spirit:value>
+            <spirit:value>6c3abb9d</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -80,14 +80,14 @@
         <spirit:name>xilinx_testbench</spirit:name>
         <spirit:displayName>Test Bench</spirit:displayName>
         <spirit:envIdentifier>:vivado.xilinx.com:simulation.testbench</spirit:envIdentifier>
-        <spirit:modelName>EVB_Testbench</spirit:modelName>
+        <spirit:modelName>Datapath_Testbench</spirit:modelName>
         <spirit:fileSetRef>
           <spirit:localName>xilinx_testbench_view_fileset</spirit:localName>
         </spirit:fileSetRef>
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>viewChecksum</spirit:name>
-            <spirit:value>244826a8</spirit:value>
+            <spirit:value>4e0b4475</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -590,7 +590,7 @@
       <spirit:port>
         <spirit:name>PulseSel</spirit:name>
         <spirit:wire>
-          <spirit:direction>out</spirit:direction>
+          <spirit:direction>inout</spirit:direction>
           <spirit:wireTypeDefs>
             <spirit:wireTypeDef>
               <spirit:typeName>std_logic</spirit:typeName>
@@ -636,7 +636,7 @@
     <spirit:fileSet>
       <spirit:name>xilinx_anylanguagesynthesis_view_fileset</spirit:name>
       <spirit:file>
-        <spirit:name>FEB_fabric.srcs/sources_1/ip/DDR3LController/mig_b.prj</spirit:name>
+        <spirit:name>FEB_fabric.srcs/sources_1/ip/DDR3LController/mig_a.prj</spirit:name>
         <spirit:userFileType>prj</spirit:userFileType>
         <spirit:userFileType>SCOPED_TO_CELLS_DDR3LController</spirit:userFileType>
       </spirit:file>
@@ -694,6 +694,14 @@
       </spirit:file>
       <spirit:file>
         <spirit:name>FEB_fabric.srcs/sources_1/ip/Hist_Ram/Hist_Ram.xci</spirit:name>
+        <spirit:userFileType>xci</spirit:userFileType>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>FEB_fabric.srcs/sources_1/ip/FIFO_128x128/FIFO_128x128.xci</spirit:name>
+        <spirit:userFileType>xci</spirit:userFileType>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>FEB_fabric.srcs/sources_1/ip/DDR_ila_0/DDR_ila_0.xci</spirit:name>
         <spirit:userFileType>xci</spirit:userFileType>
       </spirit:file>
       <spirit:file>
@@ -777,6 +785,11 @@
         <spirit:logicalName>work</spirit:logicalName>
       </spirit:file>
       <spirit:file>
+        <spirit:name>FEB_fabric.srcs/sources_1/ip/DDR3LController/mig_b.prj</spirit:name>
+        <spirit:userFileType>prj</spirit:userFileType>
+        <spirit:userFileType>SCOPED_TO_CELLS_DDR3LController</spirit:userFileType>
+      </spirit:file>
+      <spirit:file>
         <spirit:name>FEB_fabric.srcs/sources_1/new/FM_Serializer.vhd</spirit:name>
         <spirit:fileType>vhdlSource</spirit:fileType>
         <spirit:logicalName>work</spirit:logicalName>
@@ -851,7 +864,7 @@
     <spirit:fileSet>
       <spirit:name>xilinx_anylanguagebehavioralsimulation_view_fileset</spirit:name>
       <spirit:file>
-        <spirit:name>FEB_fabric.srcs/sources_1/ip/DDR3LController/mig_b.prj</spirit:name>
+        <spirit:name>FEB_fabric.srcs/sources_1/ip/DDR3LController/mig_a.prj</spirit:name>
         <spirit:userFileType>prj</spirit:userFileType>
       </spirit:file>
       <spirit:file>
@@ -900,6 +913,14 @@
       </spirit:file>
       <spirit:file>
         <spirit:name>FEB_fabric.srcs/sources_1/ip/Hist_Ram/Hist_Ram.xci</spirit:name>
+        <spirit:userFileType>xci</spirit:userFileType>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>FEB_fabric.srcs/sources_1/ip/FIFO_128x128/FIFO_128x128.xci</spirit:name>
+        <spirit:userFileType>xci</spirit:userFileType>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>FEB_fabric.srcs/sources_1/ip/DDR_ila_0/DDR_ila_0.xci</spirit:name>
         <spirit:userFileType>xci</spirit:userFileType>
       </spirit:file>
       <spirit:file>
@@ -1134,13 +1155,13 @@
         <xilinx:xpmLibrary>XPM_CDC</xilinx:xpmLibrary>
         <xilinx:xpmLibrary>XPM_MEMORY</xilinx:xpmLibrary>
       </xilinx:xpmLibraries>
-      <xilinx:coreRevision>21</xilinx:coreRevision>
-      <xilinx:coreCreationDateTime>2023-05-02T19:22:03Z</xilinx:coreCreationDateTime>
+      <xilinx:coreRevision>22</xilinx:coreRevision>
+      <xilinx:coreCreationDateTime>2023-06-02T15:17:06Z</xilinx:coreCreationDateTime>
     </xilinx:coreExtensions>
     <xilinx:packagingInfo>
       <xilinx:xilinxVersion>2022.2</xilinx:xilinxVersion>
-      <xilinx:checksum xilinx:scope="fileGroups" xilinx:value="bd4c24db"/>
-      <xilinx:checksum xilinx:scope="ports" xilinx:value="09bfef57"/>
+      <xilinx:checksum xilinx:scope="fileGroups" xilinx:value="aca2078e"/>
+      <xilinx:checksum xilinx:scope="ports" xilinx:value="766e0d86"/>
       <xilinx:checksum xilinx:scope="parameters" xilinx:value="0c9f42be"/>
     </xilinx:packagingInfo>
   </spirit:vendorExtensions>

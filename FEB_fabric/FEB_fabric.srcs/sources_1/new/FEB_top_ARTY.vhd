@@ -466,9 +466,9 @@ port map(
 	EvBuffEmpty		=> EvBuffEmpty,	
 	EvBuffWdsUsed	=> EvBuffWdsUsed,
 -- Signals from Trigger Logic
-	SlfTrgEn 		=> SlfTrgEn, 	
-	uBunchWrt		=> uBunchWrt,	
-	uBunch			=> uBunch,		
+--	SlfTrgEn 		=> SlfTrgEn, 	
+--	uBunchWrt		=> uBunchWrt,	
+--	uBunch			=> uBunch,		
 -- Microcontroller strobes
 	CpldRst			=> CpldRst,	
 	CpldCS			=> CpldCS,	

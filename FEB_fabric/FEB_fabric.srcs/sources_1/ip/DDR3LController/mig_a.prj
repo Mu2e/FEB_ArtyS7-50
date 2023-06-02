@@ -11,7 +11,7 @@
 
   <dci_inputs>1</dci_inputs>
 
-  <Debug_En>ON</Debug_En>
+  <Debug_En>OFF</Debug_En>
 
   <DataDepth_En>1024</DataDepth_En>
 
@@ -45,8 +45,8 @@
     <MemoryDevice>DDR3_SDRAM/Components/MT41K128M16XX-15E</MemoryDevice>
     <TimePeriod>3077</TimePeriod>
     <VccAuxIO>1.8V</VccAuxIO>
-    <PHYRatio>2:1</PHYRatio>
-    <InputClkFreq>99.997</InputClkFreq>
+    <PHYRatio>4:1</PHYRatio>
+    <InputClkFreq>324.991</InputClkFreq>
     <UIExtraClocks>0</UIExtraClocks>
     <MMCM_VCO>649</MMCM_VCO>
     <MMCMClkOut0> 1.000</MMCMClkOut0>

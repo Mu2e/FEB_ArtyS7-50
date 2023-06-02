@@ -179,12 +179,23 @@ set_property used_in_implementation false [get_files -all c:/v22.2/FEB_fabric/FE
 set_property used_in_implementation false [get_files -all c:/v22.2/FEB_fabric/FEB_fabric.gen/sources_1/ip/EVB_ila0/ila_v6_2/constraints/ila.xdc]
 set_property used_in_implementation false [get_files -all c:/v22.2/FEB_fabric/FEB_fabric.gen/sources_1/ip/EVB_ila0/EVB_ila0_ooc.xdc]
 
-read_ip -quiet c:/v22.2/FEB_fabric/FEB_fabric.srcs/sources_1/ip/LVDSTxBuff/LVDSTxBuff.xci
+read_ip -quiet C:/v22.2/FEB_fabric/FEB_fabric.srcs/sources_1/ip/LVDSTxBuff/LVDSTxBuff.xci
 set_property used_in_implementation false [get_files -all c:/v22.2/FEB_fabric/FEB_fabric.gen/sources_1/ip/LVDSTxBuff/LVDSTxBuff.xdc]
 set_property used_in_implementation false [get_files -all c:/v22.2/FEB_fabric/FEB_fabric.gen/sources_1/ip/LVDSTxBuff/LVDSTxBuff_ooc.xdc]
 
-read_ip -quiet c:/v22.2/FEB_fabric/FEB_fabric.srcs/sources_1/ip/Hist_Ram/Hist_Ram.xci
+read_ip -quiet C:/v22.2/FEB_fabric/FEB_fabric.srcs/sources_1/ip/Hist_Ram/Hist_Ram.xci
 set_property used_in_implementation false [get_files -all c:/v22.2/FEB_fabric/FEB_fabric.gen/sources_1/ip/Hist_Ram/Hist_Ram_ooc.xdc]
+
+read_ip -quiet c:/v22.2/FEB_fabric/FEB_fabric.srcs/sources_1/ip/FIFO_128x128/FIFO_128x128.xci
+set_property used_in_implementation false [get_files -all c:/v22.2/FEB_fabric/FEB_fabric.gen/sources_1/ip/FIFO_128x128/FIFO_128x128.xdc]
+set_property used_in_implementation false [get_files -all c:/v22.2/FEB_fabric/FEB_fabric.gen/sources_1/ip/FIFO_128x128/FIFO_128x128_clocks.xdc]
+set_property used_in_implementation false [get_files -all c:/v22.2/FEB_fabric/FEB_fabric.gen/sources_1/ip/FIFO_128x128/FIFO_128x128_ooc.xdc]
+
+read_ip -quiet c:/v22.2/FEB_fabric/FEB_fabric.srcs/sources_1/ip/DDR_ila_0/DDR_ila_0.xci
+set_property used_in_synthesis false [get_files -all c:/v22.2/FEB_fabric/FEB_fabric.gen/sources_1/ip/DDR_ila_0/ila_v6_2/constraints/ila_impl.xdc]
+set_property used_in_implementation false [get_files -all c:/v22.2/FEB_fabric/FEB_fabric.gen/sources_1/ip/DDR_ila_0/ila_v6_2/constraints/ila_impl.xdc]
+set_property used_in_implementation false [get_files -all c:/v22.2/FEB_fabric/FEB_fabric.gen/sources_1/ip/DDR_ila_0/ila_v6_2/constraints/ila.xdc]
+set_property used_in_implementation false [get_files -all c:/v22.2/FEB_fabric/FEB_fabric.gen/sources_1/ip/DDR_ila_0/DDR_ila_0_ooc.xdc]
 
 OPTRACE "Adding files" END { }
 # Mark all dcp files as not used in implementation to prevent them from being

@@ -6,7 +6,14 @@
 	<item key="Datapath_system-device" value="Auto Detect"/>
 	<item key="Datapath_system-partial_bit" value="false"/>
 	<item key="Datapath_system-skip_rev_check" value="false"/>
-	<item key="programfpga.sdxproject" value="Datapath_system"/>
+	<item key="programfpga.sdxproject" value="DDR_Test_system"/>
 	<item key="Datapath_system-microblaze_0-initElf" value="bootloop"/>
 	<item key="devices_info_Local" value="{&quot;cables&quot;:[{&quot;name&quot;:&quot;Digilent Arty S7 - 50 210352B59CF7A&quot;,&quot;indexContextMap&quot;:{&quot;2&quot;:&quot;jsn-Arty S7 - 50-210352B59CF7A-0362f093-0&quot;}}]}"/>
+	<item key="DDR_Test_system-bitFile" value="${project_loc:DDR_Test}/_ide/bitstream/design_1_wrapper_micol.bit"/>
+	<item key="DDR_Test_system-bmmFile" value=""/>
+	<item key="DDR_Test_system-target" value="Local"/>
+	<item key="DDR_Test_system-device" value="Auto Detect"/>
+	<item key="DDR_Test_system-partial_bit" value="false"/>
+	<item key="DDR_Test_system-skip_rev_check" value="false"/>
+	<item key="DDR_Test_system-microblaze_0-initElf" value="bootloop"/>
 </section>

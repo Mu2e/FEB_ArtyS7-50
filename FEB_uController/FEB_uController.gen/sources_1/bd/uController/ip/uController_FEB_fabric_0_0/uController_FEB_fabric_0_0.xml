@@ -17,11 +17,11 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>GENtimestamp</spirit:name>
-            <spirit:value>Tue May 02 19:22:37 UTC 2023</spirit:value>
+            <spirit:value>Fri Jun 02 15:18:42 UTC 2023</spirit:value>
           </spirit:parameter>
           <spirit:parameter>
             <spirit:name>outputProductCRC</spirit:name>
-            <spirit:value>9:33e1da2c</spirit:value>
+            <spirit:value>9:54f76dd9</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -32,7 +32,7 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>outputProductCRC</spirit:name>
-            <spirit:value>9:33e1da2c</spirit:value>
+            <spirit:value>9:54f76dd9</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -48,11 +48,11 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>GENtimestamp</spirit:name>
-            <spirit:value>Tue May 02 19:22:37 UTC 2023</spirit:value>
+            <spirit:value>Fri Jun 02 15:18:42 UTC 2023</spirit:value>
           </spirit:parameter>
           <spirit:parameter>
             <spirit:name>outputProductCRC</spirit:name>
-            <spirit:value>9:33e1da2c</spirit:value>
+            <spirit:value>9:54f76dd9</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -67,11 +67,11 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>GENtimestamp</spirit:name>
-            <spirit:value>Tue May 02 19:22:37 UTC 2023</spirit:value>
+            <spirit:value>Fri Jun 02 15:18:42 UTC 2023</spirit:value>
           </spirit:parameter>
           <spirit:parameter>
             <spirit:name>outputProductCRC</spirit:name>
-            <spirit:value>9:ded3166f</spirit:value>
+            <spirit:value>9:4deabdb1</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -87,11 +87,11 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>GENtimestamp</spirit:name>
-            <spirit:value>Tue May 02 19:22:37 UTC 2023</spirit:value>
+            <spirit:value>Fri Jun 02 15:18:42 UTC 2023</spirit:value>
           </spirit:parameter>
           <spirit:parameter>
             <spirit:name>outputProductCRC</spirit:name>
-            <spirit:value>9:ded3166f</spirit:value>
+            <spirit:value>9:4deabdb1</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -594,7 +594,7 @@
       <spirit:port>
         <spirit:name>PulseSel</spirit:name>
         <spirit:wire>
-          <spirit:direction>out</spirit:direction>
+          <spirit:direction>inout</spirit:direction>
           <spirit:wireTypeDefs>
             <spirit:wireTypeDef>
               <spirit:typeName>std_logic</spirit:typeName>
@@ -640,7 +640,7 @@
     <spirit:fileSet>
       <spirit:name>xilinx_anylanguagesynthesis_view_fileset</spirit:name>
       <spirit:file>
-        <spirit:name>FEB_fabric.srcs/sources_1/ip/DDR3LController/mig_b.prj</spirit:name>
+        <spirit:name>FEB_fabric.srcs/sources_1/ip/DDR3LController/mig_a.prj</spirit:name>
         <spirit:userFileType>prj</spirit:userFileType>
         <spirit:userFileType>SCOPED_TO_CELLS_DDR3LController</spirit:userFileType>
       </spirit:file>
@@ -701,6 +701,14 @@
         <spirit:userFileType>xci</spirit:userFileType>
       </spirit:file>
       <spirit:file>
+        <spirit:name>FEB_fabric.srcs/sources_1/ip/FIFO_128x128/FIFO_128x128.xci</spirit:name>
+        <spirit:userFileType>xci</spirit:userFileType>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>FEB_fabric.srcs/sources_1/ip/DDR_ila_0/DDR_ila_0.xci</spirit:name>
+        <spirit:userFileType>xci</spirit:userFileType>
+      </spirit:file>
+      <spirit:file>
         <spirit:name>FEB_fabric.srcs/sources_1/ip/SCFIFO_1Kx16/SCFIFO_1Kx16.xci</spirit:name>
         <spirit:userFileType>xci</spirit:userFileType>
         <spirit:userFileType>CELL_NAME_EventBuilder_logic/EventBuff</spirit:userFileType>
@@ -726,87 +734,92 @@
         <spirit:userFileType>CELL_NAME_Trigger_logic/trigger_ila</spirit:userFileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>../../ipshared/cd9e/FEB_fabric.srcs/sources_1/new/Proj_Def.vhd</spirit:name>
+        <spirit:name>../../ipshared/a420/FEB_fabric.srcs/sources_1/new/Proj_Def.vhd</spirit:name>
         <spirit:fileType>vhdlSource</spirit:fileType>
         <spirit:logicalName>work</spirit:logicalName>
       </spirit:file>
       <spirit:file>
-        <spirit:name>../../ipshared/cd9e/FEB_fabric.srcs/sources_1/new/AFE_DataPath.vhd</spirit:name>
+        <spirit:name>../../ipshared/a420/FEB_fabric.srcs/sources_1/new/AFE_DataPath.vhd</spirit:name>
         <spirit:fileType>vhdlSource</spirit:fileType>
         <spirit:logicalName>work</spirit:logicalName>
       </spirit:file>
       <spirit:file>
-        <spirit:name>../../ipshared/cd9e/FEB_fabric.srcs/sources_1/new/AFE_Interface_Sim.vhd</spirit:name>
+        <spirit:name>../../ipshared/a420/FEB_fabric.srcs/sources_1/new/AFE_Interface_Sim.vhd</spirit:name>
         <spirit:fileType>vhdlSource</spirit:fileType>
         <spirit:logicalName>work</spirit:logicalName>
       </spirit:file>
       <spirit:file>
-        <spirit:name>../../ipshared/cd9e/FEB_fabric.srcs/sources_1/new/AFE_Pipeline.vhd</spirit:name>
+        <spirit:name>../../ipshared/a420/FEB_fabric.srcs/sources_1/new/AFE_Pipeline.vhd</spirit:name>
         <spirit:fileType>vhdlSource</spirit:fileType>
         <spirit:logicalName>work</spirit:logicalName>
       </spirit:file>
       <spirit:file>
-        <spirit:name>../../ipshared/cd9e/FEB_fabric.srcs/sources_1/new/DDR_Interface .vhd</spirit:name>
+        <spirit:name>../../ipshared/a420/FEB_fabric.srcs/sources_1/new/DDR_Interface .vhd</spirit:name>
         <spirit:fileType>vhdlSource</spirit:fileType>
         <spirit:logicalName>work</spirit:logicalName>
       </spirit:file>
       <spirit:file>
-        <spirit:name>../../ipshared/cd9e/FEB_fabric.srcs/sources_1/new/EventBuilder.vhd</spirit:name>
+        <spirit:name>../../ipshared/a420/FEB_fabric.srcs/sources_1/new/EventBuilder.vhd</spirit:name>
         <spirit:fileType>vhdlSource</spirit:fileType>
         <spirit:logicalName>work</spirit:logicalName>
       </spirit:file>
       <spirit:file>
-        <spirit:name>../../ipshared/cd9e/FEB_fabric.srcs/sources_1/new/Exclude_EVB.vhd</spirit:name>
+        <spirit:name>../../ipshared/a420/FEB_fabric.srcs/sources_1/new/Exclude_EVB.vhd</spirit:name>
         <spirit:fileType>vhdlSource</spirit:fileType>
         <spirit:logicalName>work</spirit:logicalName>
       </spirit:file>
       <spirit:file>
-        <spirit:name>../../ipshared/cd9e/FEB_fabric.srcs/sources_1/new/Trigger.vhd</spirit:name>
+        <spirit:name>../../ipshared/a420/FEB_fabric.srcs/sources_1/new/Trigger.vhd</spirit:name>
         <spirit:fileType>vhdlSource</spirit:fileType>
         <spirit:logicalName>work</spirit:logicalName>
       </spirit:file>
       <spirit:file>
-        <spirit:name>../../ipshared/cd9e/FEB_fabric.srcs/sources_1/new/FEB_top_ARTY.vhd</spirit:name>
+        <spirit:name>../../ipshared/a420/FEB_fabric.srcs/sources_1/new/FEB_top_ARTY.vhd</spirit:name>
         <spirit:fileType>vhdlSource</spirit:fileType>
         <spirit:logicalName>work</spirit:logicalName>
       </spirit:file>
       <spirit:file>
-        <spirit:name>../../ipshared/cd9e/FEB_fabric.srcs/sources_1/new/Exclude_DDR.vhd</spirit:name>
+        <spirit:name>../../ipshared/a420/FEB_fabric.srcs/sources_1/new/Exclude_DDR.vhd</spirit:name>
         <spirit:fileType>vhdlSource</spirit:fileType>
         <spirit:logicalName>work</spirit:logicalName>
       </spirit:file>
       <spirit:file>
-        <spirit:name>../../ipshared/cd9e/FEB_fabric.srcs/sources_1/new/FM_Deserializer.vhd</spirit:name>
+        <spirit:name>../../ipshared/a420/FEB_fabric.srcs/sources_1/new/FM_Deserializer.vhd</spirit:name>
         <spirit:fileType>vhdlSource</spirit:fileType>
         <spirit:logicalName>work</spirit:logicalName>
       </spirit:file>
       <spirit:file>
-        <spirit:name>../../ipshared/cd9e/FEB_fabric.srcs/sources_1/new/FM_Serializer.vhd</spirit:name>
+        <spirit:name>FEB_fabric.srcs/sources_1/ip/DDR3LController/mig_b.prj</spirit:name>
+        <spirit:userFileType>prj</spirit:userFileType>
+        <spirit:userFileType>SCOPED_TO_CELLS_DDR3LController</spirit:userFileType>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>../../ipshared/a420/FEB_fabric.srcs/sources_1/new/FM_Serializer.vhd</spirit:name>
         <spirit:fileType>vhdlSource</spirit:fileType>
         <spirit:logicalName>work</spirit:logicalName>
       </spirit:file>
       <spirit:file>
-        <spirit:name>../../ipshared/cd9e/FEB_fabric.srcs/sources_1/new/Phase_Detector.vhd</spirit:name>
+        <spirit:name>../../ipshared/a420/FEB_fabric.srcs/sources_1/new/Phase_Detector.vhd</spirit:name>
         <spirit:fileType>vhdlSource</spirit:fileType>
         <spirit:logicalName>work</spirit:logicalName>
       </spirit:file>
       <spirit:file>
-        <spirit:name>../../ipshared/cd9e/FEB_fabric.srcs/sources_1/new/One_Wire.vhd</spirit:name>
+        <spirit:name>../../ipshared/a420/FEB_fabric.srcs/sources_1/new/One_Wire.vhd</spirit:name>
         <spirit:fileType>vhdlSource</spirit:fileType>
         <spirit:logicalName>work</spirit:logicalName>
       </spirit:file>
       <spirit:file>
-        <spirit:name>../../ipshared/cd9e/FEB_fabric.srcs/sources_1/new/Histogram.vhd</spirit:name>
+        <spirit:name>../../ipshared/a420/FEB_fabric.srcs/sources_1/new/Histogram.vhd</spirit:name>
         <spirit:fileType>vhdlSource</spirit:fileType>
         <spirit:logicalName>work</spirit:logicalName>
       </spirit:file>
       <spirit:file>
-        <spirit:name>../../ipshared/cd9e/FEB_fabric.srcs/sources_1/new/GPIO_emu.vhd</spirit:name>
+        <spirit:name>../../ipshared/a420/FEB_fabric.srcs/sources_1/new/GPIO_emu.vhd</spirit:name>
         <spirit:fileType>vhdlSource</spirit:fileType>
         <spirit:logicalName>work</spirit:logicalName>
       </spirit:file>
       <spirit:file>
-        <spirit:name>../../ipshared/cd9e/FEB_fabric.srcs/sources_1/new/LVDS_TX.vhd</spirit:name>
+        <spirit:name>../../ipshared/a420/FEB_fabric.srcs/sources_1/new/LVDS_TX.vhd</spirit:name>
         <spirit:fileType>vhdlSource</spirit:fileType>
         <spirit:logicalName>work</spirit:logicalName>
       </spirit:file>
@@ -822,7 +835,7 @@
     <spirit:fileSet>
       <spirit:name>xilinx_anylanguagebehavioralsimulation_view_fileset</spirit:name>
       <spirit:file>
-        <spirit:name>FEB_fabric.srcs/sources_1/ip/DDR3LController/mig_b.prj</spirit:name>
+        <spirit:name>FEB_fabric.srcs/sources_1/ip/DDR3LController/mig_a.prj</spirit:name>
         <spirit:userFileType>prj</spirit:userFileType>
       </spirit:file>
       <spirit:file>
@@ -874,6 +887,14 @@
         <spirit:userFileType>xci</spirit:userFileType>
       </spirit:file>
       <spirit:file>
+        <spirit:name>FEB_fabric.srcs/sources_1/ip/FIFO_128x128/FIFO_128x128.xci</spirit:name>
+        <spirit:userFileType>xci</spirit:userFileType>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>FEB_fabric.srcs/sources_1/ip/DDR_ila_0/DDR_ila_0.xci</spirit:name>
+        <spirit:userFileType>xci</spirit:userFileType>
+      </spirit:file>
+      <spirit:file>
         <spirit:name>FEB_fabric.srcs/sources_1/ip/SCFIFO_1Kx16/SCFIFO_1Kx16.xci</spirit:name>
         <spirit:userFileType>xci</spirit:userFileType>
         <spirit:userFileType>CELL_NAME_EventBuilder_logic/EventBuff</spirit:userFileType>
@@ -899,87 +920,87 @@
         <spirit:userFileType>CELL_NAME_Trigger_logic/trigger_ila</spirit:userFileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>../../ipshared/cd9e/FEB_fabric.srcs/sources_1/new/Proj_Def.vhd</spirit:name>
+        <spirit:name>../../ipshared/a420/FEB_fabric.srcs/sources_1/new/Proj_Def.vhd</spirit:name>
         <spirit:fileType>vhdlSource</spirit:fileType>
         <spirit:logicalName>work</spirit:logicalName>
       </spirit:file>
       <spirit:file>
-        <spirit:name>../../ipshared/cd9e/FEB_fabric.srcs/sources_1/new/AFE_DataPath.vhd</spirit:name>
+        <spirit:name>../../ipshared/a420/FEB_fabric.srcs/sources_1/new/AFE_DataPath.vhd</spirit:name>
         <spirit:fileType>vhdlSource</spirit:fileType>
         <spirit:logicalName>work</spirit:logicalName>
       </spirit:file>
       <spirit:file>
-        <spirit:name>../../ipshared/cd9e/FEB_fabric.srcs/sources_1/new/AFE_Interface_Sim.vhd</spirit:name>
+        <spirit:name>../../ipshared/a420/FEB_fabric.srcs/sources_1/new/AFE_Interface_Sim.vhd</spirit:name>
         <spirit:fileType>vhdlSource</spirit:fileType>
         <spirit:logicalName>work</spirit:logicalName>
       </spirit:file>
       <spirit:file>
-        <spirit:name>../../ipshared/cd9e/FEB_fabric.srcs/sources_1/new/AFE_Pipeline.vhd</spirit:name>
+        <spirit:name>../../ipshared/a420/FEB_fabric.srcs/sources_1/new/AFE_Pipeline.vhd</spirit:name>
         <spirit:fileType>vhdlSource</spirit:fileType>
         <spirit:logicalName>work</spirit:logicalName>
       </spirit:file>
       <spirit:file>
-        <spirit:name>../../ipshared/cd9e/FEB_fabric.srcs/sources_1/new/DDR_Interface .vhd</spirit:name>
+        <spirit:name>../../ipshared/a420/FEB_fabric.srcs/sources_1/new/DDR_Interface .vhd</spirit:name>
         <spirit:fileType>vhdlSource</spirit:fileType>
         <spirit:logicalName>work</spirit:logicalName>
       </spirit:file>
       <spirit:file>
-        <spirit:name>../../ipshared/cd9e/FEB_fabric.srcs/sources_1/new/EventBuilder.vhd</spirit:name>
+        <spirit:name>../../ipshared/a420/FEB_fabric.srcs/sources_1/new/EventBuilder.vhd</spirit:name>
         <spirit:fileType>vhdlSource</spirit:fileType>
         <spirit:logicalName>work</spirit:logicalName>
       </spirit:file>
       <spirit:file>
-        <spirit:name>../../ipshared/cd9e/FEB_fabric.srcs/sources_1/new/Exclude_EVB.vhd</spirit:name>
+        <spirit:name>../../ipshared/a420/FEB_fabric.srcs/sources_1/new/Exclude_EVB.vhd</spirit:name>
         <spirit:fileType>vhdlSource</spirit:fileType>
         <spirit:logicalName>work</spirit:logicalName>
       </spirit:file>
       <spirit:file>
-        <spirit:name>../../ipshared/cd9e/FEB_fabric.srcs/sources_1/new/Trigger.vhd</spirit:name>
+        <spirit:name>../../ipshared/a420/FEB_fabric.srcs/sources_1/new/Trigger.vhd</spirit:name>
         <spirit:fileType>vhdlSource</spirit:fileType>
         <spirit:logicalName>work</spirit:logicalName>
       </spirit:file>
       <spirit:file>
-        <spirit:name>../../ipshared/cd9e/FEB_fabric.srcs/sources_1/new/FEB_top_ARTY.vhd</spirit:name>
+        <spirit:name>../../ipshared/a420/FEB_fabric.srcs/sources_1/new/FEB_top_ARTY.vhd</spirit:name>
         <spirit:fileType>vhdlSource</spirit:fileType>
         <spirit:logicalName>work</spirit:logicalName>
       </spirit:file>
       <spirit:file>
-        <spirit:name>../../ipshared/cd9e/FEB_fabric.srcs/sources_1/new/Exclude_DDR.vhd</spirit:name>
+        <spirit:name>../../ipshared/a420/FEB_fabric.srcs/sources_1/new/Exclude_DDR.vhd</spirit:name>
         <spirit:fileType>vhdlSource</spirit:fileType>
         <spirit:logicalName>work</spirit:logicalName>
       </spirit:file>
       <spirit:file>
-        <spirit:name>../../ipshared/cd9e/FEB_fabric.srcs/sources_1/new/FM_Deserializer.vhd</spirit:name>
+        <spirit:name>../../ipshared/a420/FEB_fabric.srcs/sources_1/new/FM_Deserializer.vhd</spirit:name>
         <spirit:fileType>vhdlSource</spirit:fileType>
         <spirit:logicalName>work</spirit:logicalName>
       </spirit:file>
       <spirit:file>
-        <spirit:name>../../ipshared/cd9e/FEB_fabric.srcs/sources_1/new/FM_Serializer.vhd</spirit:name>
+        <spirit:name>../../ipshared/a420/FEB_fabric.srcs/sources_1/new/FM_Serializer.vhd</spirit:name>
         <spirit:fileType>vhdlSource</spirit:fileType>
         <spirit:logicalName>work</spirit:logicalName>
       </spirit:file>
       <spirit:file>
-        <spirit:name>../../ipshared/cd9e/FEB_fabric.srcs/sources_1/new/Phase_Detector.vhd</spirit:name>
+        <spirit:name>../../ipshared/a420/FEB_fabric.srcs/sources_1/new/Phase_Detector.vhd</spirit:name>
         <spirit:fileType>vhdlSource</spirit:fileType>
         <spirit:logicalName>work</spirit:logicalName>
       </spirit:file>
       <spirit:file>
-        <spirit:name>../../ipshared/cd9e/FEB_fabric.srcs/sources_1/new/One_Wire.vhd</spirit:name>
+        <spirit:name>../../ipshared/a420/FEB_fabric.srcs/sources_1/new/One_Wire.vhd</spirit:name>
         <spirit:fileType>vhdlSource</spirit:fileType>
         <spirit:logicalName>work</spirit:logicalName>
       </spirit:file>
       <spirit:file>
-        <spirit:name>../../ipshared/cd9e/FEB_fabric.srcs/sources_1/new/Histogram.vhd</spirit:name>
+        <spirit:name>../../ipshared/a420/FEB_fabric.srcs/sources_1/new/Histogram.vhd</spirit:name>
         <spirit:fileType>vhdlSource</spirit:fileType>
         <spirit:logicalName>work</spirit:logicalName>
       </spirit:file>
       <spirit:file>
-        <spirit:name>../../ipshared/cd9e/FEB_fabric.srcs/sources_1/new/GPIO_emu.vhd</spirit:name>
+        <spirit:name>../../ipshared/a420/FEB_fabric.srcs/sources_1/new/GPIO_emu.vhd</spirit:name>
         <spirit:fileType>vhdlSource</spirit:fileType>
         <spirit:logicalName>work</spirit:logicalName>
       </spirit:file>
       <spirit:file>
-        <spirit:name>../../ipshared/cd9e/FEB_fabric.srcs/sources_1/new/LVDS_TX.vhd</spirit:name>
+        <spirit:name>../../ipshared/a420/FEB_fabric.srcs/sources_1/new/LVDS_TX.vhd</spirit:name>
         <spirit:fileType>vhdlSource</spirit:fileType>
         <spirit:logicalName>work</spirit:logicalName>
       </spirit:file>
@@ -1008,12 +1029,12 @@
         <xilinx:xpmLibrary>XPM_CDC</xilinx:xpmLibrary>
         <xilinx:xpmLibrary>XPM_MEMORY</xilinx:xpmLibrary>
       </xilinx:xpmLibraries>
-      <xilinx:coreRevision>21</xilinx:coreRevision>
+      <xilinx:coreRevision>22</xilinx:coreRevision>
     </xilinx:coreExtensions>
     <xilinx:packagingInfo>
       <xilinx:xilinxVersion>2022.2</xilinx:xilinxVersion>
-      <xilinx:checksum xilinx:scope="fileGroups" xilinx:value="bd4c24db"/>
-      <xilinx:checksum xilinx:scope="ports" xilinx:value="09bfef57"/>
+      <xilinx:checksum xilinx:scope="fileGroups" xilinx:value="aca2078e"/>
+      <xilinx:checksum xilinx:scope="ports" xilinx:value="766e0d86"/>
       <xilinx:checksum xilinx:scope="parameters" xilinx:value="0c9f42be"/>
     </xilinx:packagingInfo>
   </spirit:vendorExtensions>

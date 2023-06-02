@@ -47,7 +47,7 @@
 -- DO NOT MODIFY THIS FILE.
 
 -- IP VLNV: fnal.gov:user:FEB_fabric:1.0
--- IP Revision: 21
+-- IP Revision: 22
 
 LIBRARY ieee;
 USE ieee.std_logic_1164.ALL;
@@ -92,7 +92,7 @@ ENTITY uController_FEB_fabric_0_0 IS
     GPI0_N : IN STD_LOGIC;
     GPI0_P : IN STD_LOGIC;
     GPI1 : IN STD_LOGIC;
-    PulseSel : OUT STD_LOGIC;
+    PulseSel : INOUT STD_LOGIC;
     Pulse : OUT STD_LOGIC;
     Temp : INOUT STD_LOGIC_VECTOR(3 DOWNTO 0)
   );
@@ -137,7 +137,7 @@ ARCHITECTURE uController_FEB_fabric_0_0_arch OF uController_FEB_fabric_0_0 IS
       GPI0_N : IN STD_LOGIC;
       GPI0_P : IN STD_LOGIC;
       GPI1 : IN STD_LOGIC;
-      PulseSel : OUT STD_LOGIC;
+      PulseSel : INOUT STD_LOGIC;
       Pulse : OUT STD_LOGIC;
       Temp : INOUT STD_LOGIC_VECTOR(3 DOWNTO 0)
     );

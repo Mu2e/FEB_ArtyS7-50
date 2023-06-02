@@ -605,7 +605,7 @@ generic(
 	-- DDR3L parameters
 	DATA_WIDTH			: integer := 16;  -- 16 Both ARTY and FEB
 	DDR3L_ADDR			: integer := 14;  -- 14: ARTY 15: FEB
-	APP_ADDR			: integer := 28  -- 28: ARTY 29: FEB
+	APP_ADDR			: integer := 27  -- 27: ARTY 28: FEB
 );
 port (
 --	ClkB_P,ClkB_N  		: in std_logic; 
@@ -634,9 +634,9 @@ port (
 	EvBuffEmpty			: in std_logic;
 	EvBuffWdsUsed		: in std_logic_vector(10 downto 0);
 -- Signals from Trigger Logic
-	SlfTrgEn 			: in std_logic;
-	uBunchWrt			: in std_logic;
-	uBunch				: in std_logic_vector(31 downto 0);
+--	SlfTrgEn 			: in std_logic;
+--	uBunchWrt			: in std_logic;
+--	uBunch				: in std_logic_vector(31 downto 0);
 -- Microcontroller strobes
 	CpldRst				: in std_logic;
 	CpldCS				: in std_logic;
@@ -771,6 +771,24 @@ port (
 );
 end component;
 
+component FIFO_128x128 is
+port (
+    rst 	: in std_logic;
+    wr_clk  : in std_logic;
+    rd_clk  : in std_logic;	
+    din 	: in std_logic_vector(127 downto 0);
+    wr_en 	: in std_logic;
+    rd_en 	: in std_logic;
+    dout 	: out std_logic_vector(127 downto 0);
+    full 	: out std_logic;
+    empty 	: out std_logic;
+	wr_rst_busy : out std_logic;
+    rd_rst_busy : out std_logic;
+	rd_data_count : out std_logic_vector(7 downto 0);
+    wr_data_count : out std_logic_vector(7 downto 0)
+  );
+end component;
+
 component LVDSTxBuff
 port (
 	rst,clk,wr_en,rd_en : in std_logic;
@@ -800,11 +818,11 @@ component DDR3LController is
       app_addr          : in    std_logic_vector(APP_ADDR-1 downto 0);
       app_cmd           : in    std_logic_vector(2 downto 0);
       app_en            : in    std_logic;
-      app_wdf_data      : in    std_logic_vector(63 downto 0);
+      app_wdf_data      : in    std_logic_vector(127 downto 0);
       app_wdf_end       : in    std_logic;
-      app_wdf_mask      : in    std_logic_vector(7 downto 0);
+      app_wdf_mask      : in    std_logic_vector(15 downto 0);
       app_wdf_wren      : in    std_logic;
-      app_rd_data       : out   std_logic_vector(63 downto 0);
+      app_rd_data       : out   std_logic_vector(127 downto 0);
       app_rd_data_end   : out   std_logic;
       app_rd_data_valid : out   std_logic;
       app_rdy           : out   std_logic;
@@ -818,6 +836,7 @@ component DDR3LController is
       ui_clk            : out   std_logic;
       ui_clk_sync_rst   : out   std_logic;
       init_calib_complete: out   std_logic;
+	  --device_temp_i     : in  std_logic_vector(11 downto 0);
       -- System Clock Ports
       sys_clk_i          : in    std_logic;
       -- Reference Clock Ports
@@ -979,4 +998,22 @@ port (
 );
 end component;
 
+component DDR_ila_0 is
+port (
+	clk 	: in std_logic;
+	probe0 	: in std_logic_vector(27 downto 0);
+    probe1 	: in std_logic_vector(2 downto 0);
+    probe2 	: in std_logic_vector(0 downto 0);
+    probe3 	: in std_logic_vector(127 downto 0);
+    probe4 	: in std_logic_vector(0 downto 0);
+    probe5 	: in std_logic_vector(15 downto 0);
+    probe6 	: in std_logic_vector(0 downto 0);
+    probe7 	: in std_logic_vector(127 downto 0);
+    probe8 	: in std_logic_vector(0 downto 0);
+    probe9 	: in std_logic_vector(0 downto 0);
+    probe10 : in std_logic_vector(0 downto 0);
+	probe11 : in std_logic_vector(0 downto 0);
+	probe12 : in std_logic_vector(3 downto 0)
+);
+end component;
 end package;

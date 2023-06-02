@@ -1,7 +1,7 @@
 --Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
 ----------------------------------------------------------------------------------
 --Tool Version: Vivado v.2022.2 (win64) Build 3671981 Fri Oct 14 05:00:03 MDT 2022
---Date        : Tue May  2 14:37:32 2023
+--Date        : Fri Jun  2 10:18:40 2023
 --Host        : CD-135239 running 64-bit major release  (build 9200)
 --Command     : generate_target uController.bd
 --Design      : uController
@@ -1880,7 +1880,7 @@ architecture STRUCTURE of uController is
     GPI0_N : in STD_LOGIC;
     GPI0_P : in STD_LOGIC;
     GPI1 : in STD_LOGIC;
-    PulseSel : out STD_LOGIC;
+    PulseSel : inout STD_LOGIC;
     Pulse : out STD_LOGIC;
     Temp : inout STD_LOGIC_VECTOR ( 3 downto 0 )
   );
@@ -1919,7 +1919,6 @@ architecture STRUCTURE of uController is
   signal FEB_fabric_0_LVDSTX : STD_LOGIC;
   signal FEB_fabric_0_ODT : STD_LOGIC_VECTOR ( 0 to 0 );
   signal FEB_fabric_0_Pulse : STD_LOGIC;
-  signal FEB_fabric_0_PulseSel : STD_LOGIC;
   signal FEB_fabric_0_RAS : STD_LOGIC;
   signal FEB_fabric_0_iuCD : STD_LOGIC_VECTOR ( 15 downto 0 );
   attribute DEBUG of FEB_fabric_0_iuCD : signal is "true";
@@ -2052,6 +2051,7 @@ architecture STRUCTURE of uController is
   signal rst_clk_wiz_0_100M_mb_reset : STD_LOGIC;
   signal rst_clk_wiz_0_100M_peripheral_aresetn : STD_LOGIC_VECTOR ( 0 to 0 );
   signal sys_clock_1 : STD_LOGIC;
+  signal NLW_FEB_fabric_0_PulseSel_UNCONNECTED : STD_LOGIC;
   signal NLW_axi_uartlite_0_interrupt_UNCONNECTED : STD_LOGIC;
   signal NLW_microblaze_0_Interrupt_Ack_UNCONNECTED : STD_LOGIC_VECTOR ( 0 to 1 );
   signal NLW_rst_clk_wiz_0_100M_interconnect_aresetn_UNCONNECTED : STD_LOGIC_VECTOR ( 0 to 0 );
@@ -2089,7 +2089,6 @@ begin
   GPI1_0_1 <= GPI1_0;
   LVDSTX_0 <= FEB_fabric_0_LVDSTX;
   ODT_0(0) <= FEB_fabric_0_ODT(0);
-  PulseSel_0 <= FEB_fabric_0_PulseSel;
   Pulse_0 <= FEB_fabric_0_Pulse;
   RAS_0 <= FEB_fabric_0_RAS;
   axi_uartlite_0_UART_RxD <= usb_uart_rxd;
@@ -2099,6 +2098,7 @@ begin
   rgb_led_tri_o(5 downto 0) <= axi_gpio_0_GPIO_TRI_O(5 downto 0);
   sys_clock_1 <= sys_clock;
   usb_uart_txd <= axi_uartlite_0_UART_TxD;
+  PulseSel_0 <= 'Z';
 FEB_AXI_Interface_0: component uController_FEB_AXI_Interface_0_0
      port map (
       CpldCS => FEB_AXI_Interface_0_CpldCS,
@@ -2159,7 +2159,7 @@ FEB_fabric_0: component uController_FEB_fabric_0_0
       LVDSTX => FEB_fabric_0_LVDSTX,
       ODT(0) => FEB_fabric_0_ODT(0),
       Pulse => FEB_fabric_0_Pulse,
-      PulseSel => FEB_fabric_0_PulseSel,
+      PulseSel => NLW_FEB_fabric_0_PulseSel_UNCONNECTED,
       RAS => FEB_fabric_0_RAS,
       SysClk => clk_wiz_1_clk_out1,
       Temp(3 downto 0) => Temp_0(3 downto 0),

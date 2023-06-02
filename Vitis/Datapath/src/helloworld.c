@@ -65,6 +65,7 @@
 
 int main()
 {
+	xil_printf("Test finished!\n\n\r");
 	colorLED(YELLOW);
     init_platform(); // Needed for the UART setup
     ResetCpld();
