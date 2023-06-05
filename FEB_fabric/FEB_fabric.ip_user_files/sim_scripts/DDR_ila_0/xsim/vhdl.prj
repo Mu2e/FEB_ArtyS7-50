@@ -1,0 +1,4 @@
+vhdl xil_defaultlib  \
+"../../../../FEB_fabric.gen/sources_1/ip/DDR_ila_0/sim/DDR_ila_0.vhd" \
+
+nosort
