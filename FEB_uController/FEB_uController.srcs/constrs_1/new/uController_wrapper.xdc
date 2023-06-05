@@ -103,60 +103,25 @@ connect_debug_port u_ila_0/probe4 [get_nets [list uController_i/FEB_fabric_0/U0/
 connect_debug_port u_ila_0/probe5 [get_nets [list uController_i/FEB_fabric_0/U0/data_back_AFE/iuCD_FIFOwre]]
 
 
-create_debug_core u_ila_0 ila
-set_property ALL_PROBE_SAME_MU true [get_debug_cores u_ila_0]
-set_property ALL_PROBE_SAME_MU_CNT 4 [get_debug_cores u_ila_0]
-set_property C_ADV_TRIGGER true [get_debug_cores u_ila_0]
-set_property C_DATA_DEPTH 1024 [get_debug_cores u_ila_0]
-set_property C_EN_STRG_QUAL true [get_debug_cores u_ila_0]
-set_property C_INPUT_PIPE_STAGES 0 [get_debug_cores u_ila_0]
-set_property C_TRIGIN_EN false [get_debug_cores u_ila_0]
-set_property C_TRIGOUT_EN false [get_debug_cores u_ila_0]
-set_property port_width 1 [get_debug_ports u_ila_0/clk]
-connect_debug_port u_ila_0/clk [get_nets [list uController_i/clk_wiz_1/inst/clk_out1]]
-set_property PROBE_TYPE DATA_AND_TRIGGER [get_debug_ports u_ila_0/probe0]
-set_property port_width 2 [get_debug_ports u_ila_0/probe0]
-connect_debug_port u_ila_0/probe0 [get_nets [list {uController_i/FEB_fabric_0/U0/EventBuilder_logic/AFE_Num[0]} {uController_i/FEB_fabric_0/U0/EventBuilder_logic/AFE_Num[1]}]]
-create_debug_port u_ila_0 probe
-set_property PROBE_TYPE DATA_AND_TRIGGER [get_debug_ports u_ila_0/probe1]
-set_property port_width 3 [get_debug_ports u_ila_0/probe1]
-connect_debug_port u_ila_0/probe1 [get_nets [list {uController_i/FEB_fabric_0/U0/EventBuilder_logic/Chan_Num[0]} {uController_i/FEB_fabric_0/U0/EventBuilder_logic/Chan_Num[1]} {uController_i/FEB_fabric_0/U0/EventBuilder_logic/Chan_Num[2]}]]
-create_debug_port u_ila_0 probe
-set_property PROBE_TYPE DATA_AND_TRIGGER [get_debug_ports u_ila_0/probe2]
-set_property port_width 16 [get_debug_ports u_ila_0/probe2]
-connect_debug_port u_ila_0/probe2 [get_nets [list {uController_i/FEB_fabric_0/U0/EventBuilder_logic/EvBuffDat[0]} {uController_i/FEB_fabric_0/U0/EventBuilder_logic/EvBuffDat[1]} {uController_i/FEB_fabric_0/U0/EventBuilder_logic/EvBuffDat[2]} {uController_i/FEB_fabric_0/U0/EventBuilder_logic/EvBuffDat[3]} {uController_i/FEB_fabric_0/U0/EventBuilder_logic/EvBuffDat[4]} {uController_i/FEB_fabric_0/U0/EventBuilder_logic/EvBuffDat[5]} {uController_i/FEB_fabric_0/U0/EventBuilder_logic/EvBuffDat[6]} {uController_i/FEB_fabric_0/U0/EventBuilder_logic/EvBuffDat[7]} {uController_i/FEB_fabric_0/U0/EventBuilder_logic/EvBuffDat[8]} {uController_i/FEB_fabric_0/U0/EventBuilder_logic/EvBuffDat[9]} {uController_i/FEB_fabric_0/U0/EventBuilder_logic/EvBuffDat[10]} {uController_i/FEB_fabric_0/U0/EventBuilder_logic/EvBuffDat[11]} {uController_i/FEB_fabric_0/U0/EventBuilder_logic/EvBuffDat[12]} {uController_i/FEB_fabric_0/U0/EventBuilder_logic/EvBuffDat[13]} {uController_i/FEB_fabric_0/U0/EventBuilder_logic/EvBuffDat[14]} {uController_i/FEB_fabric_0/U0/EventBuilder_logic/EvBuffDat[15]}]]
-create_debug_port u_ila_0 probe
-set_property PROBE_TYPE DATA_AND_TRIGGER [get_debug_ports u_ila_0/probe3]
-set_property port_width 4 [get_debug_ports u_ila_0/probe3]
-connect_debug_port u_ila_0/probe3 [get_nets [list {uController_i/FEB_fabric_0/U0/EventBuilder_logic/Event_Builder[0]} {uController_i/FEB_fabric_0/U0/EventBuilder_logic/Event_Builder[1]} {uController_i/FEB_fabric_0/U0/EventBuilder_logic/Event_Builder[2]} {uController_i/FEB_fabric_0/U0/EventBuilder_logic/Event_Builder[3]}]]
-create_debug_port u_ila_0 probe
-set_property PROBE_TYPE DATA_AND_TRIGGER [get_debug_ports u_ila_0/probe4]
-set_property port_width 16 [get_debug_ports u_ila_0/probe4]
 connect_debug_port u_ila_0/probe4 [get_nets [list {uController_i/FEB_fabric_0/U0/EventBuilder_logic/EventWdCnt[0]} {uController_i/FEB_fabric_0/U0/EventBuilder_logic/EventWdCnt[1]} {uController_i/FEB_fabric_0/U0/EventBuilder_logic/EventWdCnt[2]} {uController_i/FEB_fabric_0/U0/EventBuilder_logic/EventWdCnt[3]} {uController_i/FEB_fabric_0/U0/EventBuilder_logic/EventWdCnt[4]} {uController_i/FEB_fabric_0/U0/EventBuilder_logic/EventWdCnt[5]} {uController_i/FEB_fabric_0/U0/EventBuilder_logic/EventWdCnt[6]} {uController_i/FEB_fabric_0/U0/EventBuilder_logic/EventWdCnt[7]} {uController_i/FEB_fabric_0/U0/EventBuilder_logic/EventWdCnt[8]} {uController_i/FEB_fabric_0/U0/EventBuilder_logic/EventWdCnt[9]} {uController_i/FEB_fabric_0/U0/EventBuilder_logic/EventWdCnt[10]} {uController_i/FEB_fabric_0/U0/EventBuilder_logic/EventWdCnt[11]} {uController_i/FEB_fabric_0/U0/EventBuilder_logic/EventWdCnt[12]} {uController_i/FEB_fabric_0/U0/EventBuilder_logic/EventWdCnt[13]} {uController_i/FEB_fabric_0/U0/EventBuilder_logic/EventWdCnt[14]} {uController_i/FEB_fabric_0/U0/EventBuilder_logic/EventWdCnt[15]}]]
-create_debug_port u_ila_0 probe
-set_property PROBE_TYPE DATA_AND_TRIGGER [get_debug_ports u_ila_0/probe5]
-set_property port_width 16 [get_debug_ports u_ila_0/probe5]
-connect_debug_port u_ila_0/probe5 [get_nets [list {uController_i/FEB_fabric_0/U0/EventBuilder_logic/EvBuffOut[0]} {uController_i/FEB_fabric_0/U0/EventBuilder_logic/EvBuffOut[1]} {uController_i/FEB_fabric_0/U0/EventBuilder_logic/EvBuffOut[2]} {uController_i/FEB_fabric_0/U0/EventBuilder_logic/EvBuffOut[3]} {uController_i/FEB_fabric_0/U0/EventBuilder_logic/EvBuffOut[4]} {uController_i/FEB_fabric_0/U0/EventBuilder_logic/EvBuffOut[5]} {uController_i/FEB_fabric_0/U0/EventBuilder_logic/EvBuffOut[6]} {uController_i/FEB_fabric_0/U0/EventBuilder_logic/EvBuffOut[7]} {uController_i/FEB_fabric_0/U0/EventBuilder_logic/EvBuffOut[8]} {uController_i/FEB_fabric_0/U0/EventBuilder_logic/EvBuffOut[9]} {uController_i/FEB_fabric_0/U0/EventBuilder_logic/EvBuffOut[10]} {uController_i/FEB_fabric_0/U0/EventBuilder_logic/EvBuffOut[11]} {uController_i/FEB_fabric_0/U0/EventBuilder_logic/EvBuffOut[12]} {uController_i/FEB_fabric_0/U0/EventBuilder_logic/EvBuffOut[13]} {uController_i/FEB_fabric_0/U0/EventBuilder_logic/EvBuffOut[14]} {uController_i/FEB_fabric_0/U0/EventBuilder_logic/EvBuffOut[15]}]]
-create_debug_port u_ila_0 probe
-set_property PROBE_TYPE DATA_AND_TRIGGER [get_debug_ports u_ila_0/probe6]
-set_property port_width 11 [get_debug_ports u_ila_0/probe6]
-connect_debug_port u_ila_0/probe6 [get_nets [list {uController_i/FEB_fabric_0/U0/EventBuilder_logic/EvBuffWdsUsed[0]} {uController_i/FEB_fabric_0/U0/EventBuilder_logic/EvBuffWdsUsed[1]} {uController_i/FEB_fabric_0/U0/EventBuilder_logic/EvBuffWdsUsed[2]} {uController_i/FEB_fabric_0/U0/EventBuilder_logic/EvBuffWdsUsed[3]} {uController_i/FEB_fabric_0/U0/EventBuilder_logic/EvBuffWdsUsed[4]} {uController_i/FEB_fabric_0/U0/EventBuilder_logic/EvBuffWdsUsed[5]} {uController_i/FEB_fabric_0/U0/EventBuilder_logic/EvBuffWdsUsed[6]} {uController_i/FEB_fabric_0/U0/EventBuilder_logic/EvBuffWdsUsed[7]} {uController_i/FEB_fabric_0/U0/EventBuilder_logic/EvBuffWdsUsed[8]} {uController_i/FEB_fabric_0/U0/EventBuilder_logic/EvBuffWdsUsed[9]} {uController_i/FEB_fabric_0/U0/EventBuilder_logic/EvBuffWdsUsed[10]}]]
-create_debug_port u_ila_0 probe
-set_property PROBE_TYPE DATA_AND_TRIGGER [get_debug_ports u_ila_0/probe7]
-set_property port_width 4 [get_debug_ports u_ila_0/probe7]
 connect_debug_port u_ila_0/probe7 [get_nets [list {uController_i/FEB_fabric_0/U0/EventBuilder_logic/Read_Seq_Stat[0]} {uController_i/FEB_fabric_0/U0/EventBuilder_logic/Read_Seq_Stat[1]} {uController_i/FEB_fabric_0/U0/EventBuilder_logic/Read_Seq_Stat[2]} {uController_i/FEB_fabric_0/U0/EventBuilder_logic/Read_Seq_Stat[3]}]]
-create_debug_port u_ila_0 probe
-set_property PROBE_TYPE DATA_AND_TRIGGER [get_debug_ports u_ila_0/probe8]
-set_property port_width 9 [get_debug_ports u_ila_0/probe8]
-connect_debug_port u_ila_0/probe8 [get_nets [list {uController_i/FEB_fabric_0/U0/EventBuilder_logic/SampleCount[0]} {uController_i/FEB_fabric_0/U0/EventBuilder_logic/SampleCount[1]} {uController_i/FEB_fabric_0/U0/EventBuilder_logic/SampleCount[2]} {uController_i/FEB_fabric_0/U0/EventBuilder_logic/SampleCount[3]} {uController_i/FEB_fabric_0/U0/EventBuilder_logic/SampleCount[4]} {uController_i/FEB_fabric_0/U0/EventBuilder_logic/SampleCount[5]} {uController_i/FEB_fabric_0/U0/EventBuilder_logic/SampleCount[6]} {uController_i/FEB_fabric_0/U0/EventBuilder_logic/SampleCount[7]} {uController_i/FEB_fabric_0/U0/EventBuilder_logic/SampleCount[8]}]]
-create_debug_port u_ila_0 probe
-set_property PROBE_TYPE DATA_AND_TRIGGER [get_debug_ports u_ila_0/probe9]
-set_property port_width 1 [get_debug_ports u_ila_0/probe9]
-connect_debug_port u_ila_0/probe9 [get_nets [list uController_i/FEB_fabric_0/U0/EventBuilder_logic/EvBuffRd]]
-create_debug_port u_ila_0 probe
-set_property PROBE_TYPE DATA_AND_TRIGGER [get_debug_ports u_ila_0/probe10]
-set_property port_width 1 [get_debug_ports u_ila_0/probe10]
-connect_debug_port u_ila_0/probe10 [get_nets [list uController_i/FEB_fabric_0/U0/EventBuilder_logic/EvBuffWrt]]
+
+set_property PACKAGE_PIN U15 [get_ports {Temp_0[3]}]
+set_property IOSTANDARD LVCMOS33 [get_ports {Temp_0[3]}]
+set_property IOSTANDARD LVCMOS33 [get_ports {Temp_0[2]}]
+set_property IOSTANDARD LVCMOS33 [get_ports {Temp_0[1]}]
+set_property IOSTANDARD LVCMOS33 [get_ports {Temp_0[0]}]
+set_property PACKAGE_PIN V16 [get_ports {Temp_0[2]}]
+set_property PACKAGE_PIN U17 [get_ports {Temp_0[1]}]
+set_property PACKAGE_PIN U18 [get_ports {Temp_0[0]}]
+set_property PACKAGE_PIN U16 [get_ports A7_0]
+set_property IOSTANDARD LVCMOS33 [get_ports A7_0]
+set_property PACKAGE_PIN P13 [get_ports GPI0_N_0]
+set_property PACKAGE_PIN R13 [get_ports GPI0_P_0]
+set_property IOSTANDARD LVCMOS33 [get_ports GPI0_N_0]
+set_property IOSTANDARD LVCMOS33 [get_ports GPI0_P_0]
+set_property PACKAGE_PIN V14 [get_ports LVDSTX_0]
+set_property IOSTANDARD LVCMOS33 [get_ports LVDSTX_0]
 set_property C_CLK_INPUT_FREQ_HZ 300000000 [get_debug_cores dbg_hub]
 set_property C_ENABLE_CLK_DIVIDER false [get_debug_cores dbg_hub]
 set_property C_USER_SCAN_CHAIN 1 [get_debug_cores dbg_hub]
